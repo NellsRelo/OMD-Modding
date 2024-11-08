@@ -1,0 +1,61 @@
+---@meta
+
+---@class ABP_Courtyard_Castle_Top_B_C : AActor
+---@field StainedGlassWindowSmall4 UStaticMeshComponent
+---@field StainedGlassWindowSmall5 UStaticMeshComponent
+---@field StainedGlassWindowSmall3 UStaticMeshComponent
+---@field StainedGlassWindowSmall2 UStaticMeshComponent
+---@field StainedGlassWindowSmall1 UStaticMeshComponent
+---@field StainedGlassWindowSmall UStaticMeshComponent
+---@field Crenellation_Coastal_5x_SM12 UStaticMeshComponent
+---@field Crenellation_Coastal_5x_SM11 UStaticMeshComponent
+---@field Window_Pointed_2x_SansDetail_SM9 UStaticMeshComponent
+---@field ColumnB_CastStone_2Story2 UStaticMeshComponent
+---@field Window_Pointed_2x_SansDetail_SM8 UStaticMeshComponent
+---@field Archway_Stone_Castle_Courtyard_4x1_A_SM8 UStaticMeshComponent
+---@field Column_Square_Stone_Castle_Courtyard_1x2_A_SM2 UStaticMeshComponent
+---@field Archway_Stone_Castle_Courtyard_4x1_A_SM7 UStaticMeshComponent
+---@field Crenellation_Coastal_5x_SM9 UStaticMeshComponent
+---@field Crenellation_Coastal_5x_SM3 UStaticMeshComponent
+---@field Column_Square_Stone_Castle_Courtyard_1x2_A_SM1 UStaticMeshComponent
+---@field Window_Pointed_2x_SansDetail_SM7 UStaticMeshComponent
+---@field ColumnB_CastStone_2Story1 UStaticMeshComponent
+---@field Window_Pointed_2x_SansDetail_SM6 UStaticMeshComponent
+---@field Archway_Stone_Castle_Courtyard_4x1_A_SM6 UStaticMeshComponent
+---@field Archway_Stone_Castle_Courtyard_4x1_A_SM5 UStaticMeshComponent
+---@field Courtyard_Column_OctoTaper_4x4_A_SM7 UStaticMeshComponent
+---@field Column_Octo_Stone_Castle_Courtyard_1x4_A_SM6 UStaticMeshComponent
+---@field Courtyard_Column_OctoTaper_4x4_A_SM5 UStaticMeshComponent
+---@field Column_Octo_Stone_Castle_Courtyard_1x4_A_SM8 UStaticMeshComponent
+---@field Column_Square_Stone_Castle_Courtyard_1x2_A_SM UStaticMeshComponent
+---@field ColumnB_CastStone_2Story UStaticMeshComponent
+---@field Window_Pointed_2x_SansDetail_SM5 UStaticMeshComponent
+---@field Window_Pointed_2x_SansDetail_SM4 UStaticMeshComponent
+---@field Archway_Stone_Castle_Courtyard_4x1_A_SM4 UStaticMeshComponent
+---@field Crenellation_Coastal_5x_SM8 UStaticMeshComponent
+---@field Crenellation_Coastal_5x_SM7 UStaticMeshComponent
+---@field Crenellation_Coastal_5x_SM6 UStaticMeshComponent
+---@field Crenellation_Coastal_5x_SM5 UStaticMeshComponent
+---@field Crenellation_Coastal_5x_SM4 UStaticMeshComponent
+---@field Archway_Stone_Castle_Courtyard_4x1_A_SM3 UStaticMeshComponent
+---@field Crenellation_Coastal_5x_SM2 UStaticMeshComponent
+---@field Column_Octo_Stone_Castle_Courtyard_1x4_A_SM7 UStaticMeshComponent
+---@field Courtyard_Column_OctoTaper_4x4_A_SM6 UStaticMeshComponent
+---@field Column_Octo_Stone_Castle_Courtyard_1x4_A_SM5 UStaticMeshComponent
+---@field Courtyard_Column_OctoTaper_4x4_A_SM4 UStaticMeshComponent
+---@field Column_Octo_Stone_Castle_Courtyard_1x4_A_SM4 UStaticMeshComponent
+---@field Archway_Stone_Castle_Courtyard_4x1_A_SM1 UStaticMeshComponent
+---@field Courtyard_Column_OctoTaper_4x4_A_SM3 UStaticMeshComponent
+---@field Courtyard_Column_OctoTaper_4x4_A_SM2 UStaticMeshComponent
+---@field Column_Octo_Stone_Castle_Courtyard_1x4_A_SM2 UStaticMeshComponent
+---@field Column_Octo_Stone_Castle_Courtyard_1x4_A_SM1 UStaticMeshComponent
+---@field Courtyard_Column_OctoTaper_4x4_A_SM1 UStaticMeshComponent
+---@field Column_Octo_Stone_Castle_Courtyard_1x4_A_SM UStaticMeshComponent
+---@field Courtyard_Column_OctoTaper_4x4_A_SM UStaticMeshComponent
+---@field Window_Pointed_2x_SansDetail_SM UStaticMeshComponent
+---@field Tower_Hollow_Stone_Castle_Courtyard_A_SM UStaticMeshComponent
+---@field DefaultSceneRoot USceneComponent
+ABP_Courtyard_Castle_Top_B_C = {}
+
+
+

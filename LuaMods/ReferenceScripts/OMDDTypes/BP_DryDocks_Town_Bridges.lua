@@ -1,0 +1,53 @@
+---@meta
+
+---@class ABP_DryDocks_Town_Bridges_C : ABP_OMDTrapGrid_C
+---@field NavPowerExclusion UNavPowerExclusionComponent
+---@field Wood_Plank_600W_A_Light_BendK5 UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light_BendK4 UStaticMeshComponent
+---@field RailingA14_StaticMeshComponent2 UStaticMeshComponent
+---@field Floor_4x3_StoneBlock8_Floor00 URSTTrapGridBoxComponent
+---@field Rope_BendC1 UStaticMeshComponent
+---@field Wood_Platform_300x300_A_Light1 UStaticMeshComponent
+---@field Wood_Platform_300x300_A_Light3 UStaticMeshComponent
+---@field Wood_Platform_300x300_A_Light5 UStaticMeshComponent
+---@field Wood_Platform_300x300_A_Light6 UStaticMeshComponent
+---@field RailingA14_StaticMeshComponent0 UStaticMeshComponent
+---@field BP_Dock_2x2_Straight_D_MERGED UStaticMeshComponent
+---@field Wood_Log_300W_A7 UStaticMeshComponent
+---@field Wood_Log_300W_A9 UStaticMeshComponent
+---@field Wood_Platform_300x300_A_Light12 UStaticMeshComponent
+---@field Wood_Platform_300x300_A_Light9 UStaticMeshComponent
+---@field Wood_Platform_300x300_A_Light10 UStaticMeshComponent
+---@field Wood_Platform_300x300_A_Light11 UStaticMeshComponent
+---@field Wood_Log_300W_A UStaticMeshComponent
+---@field Wood_Log_300W_A1 UStaticMeshComponent
+---@field Wood_Log_300W_A2 UStaticMeshComponent
+---@field Wood_Log_300W_A3 UStaticMeshComponent
+---@field Rope_BendC UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper_BendI1 UStaticMeshComponent
+---@field Wood_Deco_B UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper_BendI3 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper_BendI2 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper_BendI7 UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light_BendK3 UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light_BendK10 UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light_BendK11 UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light_BendK12 UStaticMeshComponent
+---@field Wood_Log_300W_A10 UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light_BendK2 UStaticMeshComponent
+---@field Wood_Log_300W_A12 UStaticMeshComponent
+---@field Wood_Log_300W_A13 UStaticMeshComponent
+---@field BP_Dock_2x2_Straight_D_Merged2 UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light_BendK13 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper_BendI4 UStaticMeshComponent
+---@field Wood_Deco_B1 UStaticMeshComponent
+---@field Wood_Deco_B2 UStaticMeshComponent
+---@field Wood_Deco_B3 UStaticMeshComponent
+---@field Wood_Log_300W_A11 UStaticMeshComponent
+---@field TrapGrid USceneComponent
+---@field Geo USceneComponent
+---@field SharedRoot USceneComponent
+ABP_DryDocks_Town_Bridges_C = {}
+
+
+

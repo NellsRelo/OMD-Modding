@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "C:\\OMD\\LuaMods\\OMDD\\DoubleJump",
+			"name": "OMDLib"
+		},
+		{
+			"path": "C:\\OMD\\LuaMods\\ReferenceScripts",
+			"name": "ReferenceScripts"
+		}
+	],
+	"settings": {
+		"search.exclude": {},
+		"Lua.workspace.library": [
+			"C:\\OMD\\LuaMods\\ReferenceScripts"
+		],
+		"Lua.diagnostics.libraryFiles": "Disable",
+		"Lua.diagnostics.workspaceRate": 25,
+		"Lua.diagnostics.workspaceDelay": 5000,
+		"Lua.workspace.preloadFileSize": 10000,
+		"Lua.diagnostics.globals": [
+			"OMDLib"
+		]
+	}
+}

@@ -1,0 +1,63 @@
+---@meta
+
+---@class ABP_Garden_Wall_Ivy_A_Merged_C : ABP_OMDTrapGrid_C
+---@field SM_bush_03 UStaticMeshComponent
+---@field SM_Bush_02 UStaticMeshComponent
+---@field Ivy_01B8 UStaticMeshComponent
+---@field Ivy_01A8 UStaticMeshComponent
+---@field Ivy_01C6 UStaticMeshComponent
+---@field Ivy_01A9 UStaticMeshComponent
+---@field SM_bush_012 UStaticMeshComponent
+---@field SM_bush_011 UStaticMeshComponent
+---@field SM_bush_010 UStaticMeshComponent
+---@field SM_bush_09 UStaticMeshComponent
+---@field SM_bush_08 UStaticMeshComponent
+---@field SM_bush_07 UStaticMeshComponent
+---@field Ivy_01B10 UStaticMeshComponent
+---@field Ivy_01B9 UStaticMeshComponent
+---@field Ivy_01C8 UStaticMeshComponent
+---@field Ivy_01C7 UStaticMeshComponent
+---@field Ivy_01A10 UStaticMeshComponent
+---@field Ivy_01A11 UStaticMeshComponent
+---@field SM_bush_06 UStaticMeshComponent
+---@field SM_bush_05 UStaticMeshComponent
+---@field Ivy_01C9 UStaticMeshComponent
+---@field Ivy_01A13 UStaticMeshComponent
+---@field Ivy_01A12 UStaticMeshComponent
+---@field Ivy_01A1 UStaticMeshComponent
+---@field Ivy_01B1 UStaticMeshComponent
+---@field SM_bush_01 UStaticMeshComponent
+---@field Ivy_01A UStaticMeshComponent
+---@field Ivy_01C UStaticMeshComponent
+---@field Ivy_01B UStaticMeshComponent
+---@field Ivy_01C1 UStaticMeshComponent
+---@field Ivy_01B7 UStaticMeshComponent
+---@field Ivy_01B4 UStaticMeshComponent
+---@field Ivy_01B6 UStaticMeshComponent
+---@field Ivy_01B5 UStaticMeshComponent
+---@field Ivy_01A7 UStaticMeshComponent
+---@field Ivy_01C4 UStaticMeshComponent
+---@field Ivy_01C3 UStaticMeshComponent
+---@field Ivy_01B2 UStaticMeshComponent
+---@field Ivy_01A2 UStaticMeshComponent
+---@field Ivy_01C2 UStaticMeshComponent
+---@field Ivy_01C5 UStaticMeshComponent
+---@field Ivy_01B3 UStaticMeshComponent
+---@field Ivy_01A6 UStaticMeshComponent
+---@field Ivy_01A5 UStaticMeshComponent
+---@field Ivy_01A4 UStaticMeshComponent
+---@field Ivy_01A3 UStaticMeshComponent
+---@field Box_Collision1 UBoxComponent
+---@field SM_MERGED_Garden_Wall_Ivy_Wood_A UStaticMeshComponent
+---@field Wall03 URSTTrapGridBoxComponent
+---@field Wall02 URSTTrapGridBoxComponent
+---@field Wall01 URSTTrapGridBoxComponent
+---@field Wall00 URSTTrapGridBoxComponent
+---@field Box_Collision UBoxComponent
+---@field Collision USceneComponent
+---@field Geometry USceneComponent
+---@field TrapGrid USceneComponent
+ABP_Garden_Wall_Ivy_A_Merged_C = {}
+
+
+

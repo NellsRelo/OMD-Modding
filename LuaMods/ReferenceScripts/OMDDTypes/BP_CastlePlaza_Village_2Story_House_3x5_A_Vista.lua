@@ -1,0 +1,61 @@
+---@meta
+
+---@class ABP_CastlePlaza_Village_2Story_House_3x5_A_Vista_C : ABP_OMDTrapGrid_C
+---@field NavPowerExclusion UNavPowerExclusionComponent
+---@field Window_Wood16 UStaticMeshComponent
+---@field Window_Wood15 UStaticMeshComponent
+---@field Window_Wood14 UStaticMeshComponent
+---@field Window_Wood13 UStaticMeshComponent
+---@field Window_Wood12 UStaticMeshComponent
+---@field Window_Wood11 UStaticMeshComponent
+---@field Ceiling_5x05_PlasterWood_SM_Union1 UStaticMeshComponent
+---@field ['Wall_2x1_WhiteBrick_SM_Union-Brick-Seablue_SM_Door-Window_Union_-Wood_Window_SM_Union1'] UStaticMeshComponent
+---@field Wall_4x05_A_WhiteBrick_SM_Union UStaticMeshComponent
+---@field Wall_2x2_WhiteBrick_SM_Window_Union1 UStaticMeshComponent
+---@field Wall_4x2_Wainscot_Wood_SM_Deco_Counter_Union3 UStaticMeshComponent
+---@field Wood_Square_600W_A_NoTaper_Light4 UStaticMeshComponent
+---@field Wood_Square_600W_A_NoTaper_Light3 UStaticMeshComponent
+---@field Wall_3x15_WhiteBrick_SM_Window_Union_A UStaticMeshComponent
+---@field Window_Wood10 UStaticMeshComponent
+---@field Wood_Square_600W_A_NoTaper_Light2 UStaticMeshComponent
+---@field Wood_Cantilever_Support1 UStaticMeshComponent
+---@field Wood_Cantilever_Support UStaticMeshComponent
+---@field Ceiling_5x05_PlasterWood_SM_Union UStaticMeshComponent
+---@field Wood_Door_B_Light2 UStaticMeshComponent
+---@field Wood_Square_600W_A_NoTaper_Light1 UStaticMeshComponent
+---@field Wood_Square_600W_A_NoTaper_Light UStaticMeshComponent
+---@field Window_Wood9 UStaticMeshComponent
+---@field Window_Wood8 UStaticMeshComponent
+---@field Window_Wood7 UStaticMeshComponent
+---@field RSTTrapGridBox14 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox13 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox11 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox12 URSTTrapGridBoxComponent
+---@field TrapGrid USceneComponent
+---@field Wood_Door_B_Light UStaticMeshComponent
+---@field ['Roof_4x3x3_Blue_SM_End_UnionDormer_B_1x3_Blue-Wood-White_SM_UnionWood_Window_SM_Union14'] UStaticMeshComponent
+---@field ['Roof_4x3x3_Blue_SM_End_UnionDormer_B_1x3_Blue-Wood-White_SM_UnionWood_Window_SM_Union13'] UStaticMeshComponent
+---@field ['Roof_4x3x3_Blue_SM_End_UnionDormer_B_1x3_Blue-Wood-White_SM_UnionWood_Window_SM_Union12'] UStaticMeshComponent
+---@field Wall_2x2_WhiteBrick_SM_Window_Union UStaticMeshComponent
+---@field Wall_4x2_Wainscot_Wood_SM_Deco_Counter_Union2 UStaticMeshComponent
+---@field ['Wall_4x15_Wainscot_BrickWhite-Wood'] UStaticMeshComponent
+---@field ['Gable_5x4_A_WhiteBrick_SM_Merge-Wood_Window_SM_Union7'] UStaticMeshComponent
+---@field ['Roof_4x3x3_Blue_SM_End_Union-Wood_Window_SM_Union8'] UStaticMeshComponent
+---@field ['Roof_4x3x3_Blue_SM_End_Union-Wood_Window_SM_Union7'] UStaticMeshComponent
+---@field ['Gable_5x4_A_WhiteBrick_SM_Merge-Wood_Window_SM_Union6'] UStaticMeshComponent
+---@field ['Wall_3x05_Wood_SM_Cut_Union-Wood_Window_SM_Union9'] UStaticMeshComponent
+---@field ['Wall_3x05_Wood_SM_Cut_Union-Wood_Window_SM_Union8'] UStaticMeshComponent
+---@field ['Wall_3x05_Wood_SM_Cut_Union-Wood_Window_SM_Union7'] UStaticMeshComponent
+---@field ['Wall_3x05_Wood_SM_Cut_Union-Wood_Window_SM_Union6'] UStaticMeshComponent
+---@field BP_Wood_Pillar_Support_600W_A_COrner3 UChildActorComponent
+---@field BP_Wood_Pillar_Support_600W_A_COrner2 UChildActorComponent
+---@field BP_Wood_Pillar_Support_600W_A_COrner1 UChildActorComponent
+---@field BP_Wood_Pillar_Support_600W_A_Corner UChildActorComponent
+---@field BP USceneComponent
+---@field ['Wall_4x15_Wainscot_BrickWhite-Wood_Window_SM_Union4'] UStaticMeshComponent
+---@field ['Wall_4x2_Wainscot_White-Brick-Seablue_SM_Door-Window_Union_-Wood_Window_SM_Union'] UStaticMeshComponent
+---@field Geo USceneComponent
+ABP_CastlePlaza_Village_2Story_House_3x5_A_Vista_C = {}
+
+
+

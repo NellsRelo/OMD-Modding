@@ -1,0 +1,60 @@
+---@meta
+
+---@class ABP_DryDocks_GateHouse_Cannon_C : ABP_OMDTrapGrid_C
+---@field RSTTrapGridBox11 URSTTrapGridBoxComponent
+---@field Arch_1x1x4_StoneWall_SM4 UStaticMeshComponent
+---@field RSTTrapGridBox10 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox9 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox8 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox7 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox6 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox5 URSTTrapGridBoxComponent
+---@field Cren_Stepped_Group_Three_CS2 UStaticMeshComponent
+---@field RSTTrapGridBox4 URSTTrapGridBoxComponent
+---@field Cren_Stepped_Group_Three_CS UStaticMeshComponent
+---@field Cren_Stepped_Group_Three_CS1 UStaticMeshComponent
+---@field Cren_Stepped_Group_Three_CS3 UStaticMeshComponent
+---@field ColumnTrim_CastStone_1200W3 UStaticMeshComponent
+---@field ColumnTrim_CastStone_1200W2 UStaticMeshComponent
+---@field ColumnTrim_CastStone_1200W1 UStaticMeshComponent
+---@field ColumnTrim_CastStone_1200W UStaticMeshComponent
+---@field Cren_Stepped_Group_Three_CS4 UStaticMeshComponent
+---@field RSTTrapGridBox3 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox2 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox1 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox URSTTrapGridBoxComponent
+---@field Floor_2x2_Plaza_PatternD_SM23 UStaticMeshComponent
+---@field Floor_2x2_Plaza_PatternD_SM22 UStaticMeshComponent
+---@field Fortress_Coastal_GateTower_Foundation_SM6 UStaticMeshComponent
+---@field Fortress_Coastal_GateTower_Foundation_SM8 UStaticMeshComponent
+---@field ColumnTrim_CastStone_300W UStaticMeshComponent
+---@field Floor_2x2_Plaza_PatternD_SM21 UStaticMeshComponent
+---@field Floor_2x2_Plaza_PatternD_SM20 UStaticMeshComponent
+---@field Column_Square_2_4_StoneWall_SM_Door_Union1 UStaticMeshComponent
+---@field Column_Square_2_4_StoneWall_SM_Door_Union UStaticMeshComponent
+---@field Arch_1x1x4_StoneWall_SM3 UStaticMeshComponent
+---@field Crenellation_Coastal_5x_SM29 UStaticMeshComponent
+---@field Fortress_Coastal_GateTower_Base_SM6 UStaticMeshComponent
+---@field Arch_1x1x4_StoneWall_SM2 UStaticMeshComponent
+---@field Arch_1x1x4_StoneWall_SM1 UStaticMeshComponent
+---@field Arch_1x1x4_StoneWall_SM UStaticMeshComponent
+---@field Crenellation_Coastal_5x_SM28 UStaticMeshComponent
+---@field Floor_2x2_Plaza_PatternD_SM19 UStaticMeshComponent
+---@field Crenellation_Coastal_5x_SM27 UStaticMeshComponent
+---@field Floor_2x2_Plaza_PatternD_SM18 UStaticMeshComponent
+---@field Floor_2x2_Plaza_PatternD_SM17 UStaticMeshComponent
+---@field Crenellation_Coastal_5x_SM26 UStaticMeshComponent
+---@field Crenellation_Coastal_5x_SM25 UStaticMeshComponent
+---@field Crenellation_Coastal_5x_SM24 UStaticMeshComponent
+---@field Crenellation_Coastal_5x_SM23 UStaticMeshComponent
+---@field Floor_2x2_Plaza_PatternD_SM16 UStaticMeshComponent
+---@field Fortress_Coastal_GateTower_Base_SM5 UStaticMeshComponent
+---@field Fortress_Coastal_GateTower_Base_SM4 UStaticMeshComponent
+---@field Floor_2x2_Plaza_PatternD_SM14 UStaticMeshComponent
+---@field Geo_BridgeCourtyard USceneComponent
+---@field TrapGrid USceneComponent
+---@field Geo_GateWall USceneComponent
+ABP_DryDocks_GateHouse_Cannon_C = {}
+
+
+

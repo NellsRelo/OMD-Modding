@@ -1,0 +1,72 @@
+---@meta
+
+---@class ABP_GiantRiftTree_C : ABP_OMDTrapGrid_C
+---@field GiantRiftLeaves_H_SM23 UStaticMeshComponent
+---@field GiantRiftLeaves_H_SM21 UStaticMeshComponent
+---@field GiantRiftLeaves_H_SM19 UStaticMeshComponent
+---@field GiantRiftLeaves_H_SM17 UStaticMeshComponent
+---@field GiantRiftLeaves_C_SM21 UStaticMeshComponent
+---@field GiantRiftLeaves_C_SM22 UStaticMeshComponent
+---@field GiantRiftLeaves_H_SM4 UStaticMeshComponent
+---@field GiantRiftLeaves_H_SM14 UStaticMeshComponent
+---@field GiantRiftLeaves_G_SM8 UStaticMeshComponent
+---@field GiantRiftLeaves_C_SM17 UStaticMeshComponent
+---@field GiantRiftLeaves_G_SM9 UStaticMeshComponent
+---@field GiantRiftLeaves_C_SM19 UStaticMeshComponent
+---@field GiantRiftLeaves_H_SM13 UStaticMeshComponent
+---@field GiantRiftLeaves_C_SM20 UStaticMeshComponent
+---@field GiantRiftLeaves_H_SM18 UStaticMeshComponent
+---@field GiantRiftLeaves_H_SM20 UStaticMeshComponent
+---@field GiantRiftLeaves_C_SM18 UStaticMeshComponent
+---@field GiantRiftLeaves_C_SM25 UStaticMeshComponent
+---@field GiantRiftLeaves_C_SM27 UStaticMeshComponent
+---@field GiantRiftLeaves_C_SM28 UStaticMeshComponent
+---@field GiantRiftLeaves_H_SM22 UStaticMeshComponent
+---@field GiantRiftLeaves_G_SM11 UStaticMeshComponent
+---@field GiantRiftLeaves_H_SM16 UStaticMeshComponent
+---@field GiantRiftLeaves_C_SM16 UStaticMeshComponent
+---@field GiantRiftLeaves_H_SM9 UStaticMeshComponent
+---@field GiantRiftLeaves_H_SM10 UStaticMeshComponent
+---@field GiantRiftLeaves_H_SM11 UStaticMeshComponent
+---@field GiantRiftLeaves_C_SM UStaticMeshComponent
+---@field GiantRiftLeaves_C_SM1 UStaticMeshComponent
+---@field GiantRiftLeaves_C_SM2 UStaticMeshComponent
+---@field GiantRiftLeaves_C_SM3 UStaticMeshComponent
+---@field GiantRiftLeaves_H_SM8 UStaticMeshComponent
+---@field GiantRiftLeaves_A_SM UStaticMeshComponent
+---@field GiantRiftLeaves_C_SM10 UStaticMeshComponent
+---@field GiantRiftLeaves_H_SM3 UStaticMeshComponent
+---@field GiantRiftLeaves_H_SM2 UStaticMeshComponent
+---@field GiantRiftLeaves_H_SM5 UStaticMeshComponent
+---@field GiantRiftLeaves_C_SM5 UStaticMeshComponent
+---@field GiantRiftLeaves_C_SM12 UStaticMeshComponent
+---@field GiantRiftLeaves_H_SM12 UStaticMeshComponent
+---@field GiantRiftLeaves_C_SM13 UStaticMeshComponent
+---@field GiantRiftLeaves_G_SM7 UStaticMeshComponent
+---@field GiantRiftLeaves_C_SM14 UStaticMeshComponent
+---@field GiantRiftLeaves_C_SM15 UStaticMeshComponent
+---@field GiantRiftLeaves_G_SM10 UStaticMeshComponent
+---@field GiantRiftLeaves_C_SM11 UStaticMeshComponent
+---@field GiantRiftLeaves_C_SM6 UStaticMeshComponent
+---@field GiantRiftLeaves_C_SM7 UStaticMeshComponent
+---@field GiantRiftLeaves_H_SM6 UStaticMeshComponent
+---@field GiantRiftLeaves_H_SM7 UStaticMeshComponent
+---@field GiantRiftLeaves_C_SM8 UStaticMeshComponent
+---@field GiantRiftLeaves_C_SM9 UStaticMeshComponent
+---@field GiantRiftLeaves_C_SM24 UStaticMeshComponent
+---@field GiantRiftLeaves_C_SM26 UStaticMeshComponent
+---@field GiantRiftLeaves_G_SM13 UStaticMeshComponent
+---@field GiantRiftLeaves_C_SM23 UStaticMeshComponent
+---@field GiantRiftLeaves_H_SM15 UStaticMeshComponent
+---@field GiantRiftLeaves_G_SM17 UStaticMeshComponent
+---@field Leaves USceneComponent
+---@field GiantRiftBranch_C_SM1 UStaticMeshComponent
+---@field GiantRiftBranch_B_SM2 UStaticMeshComponent
+---@field GiantRiftBranch_B_SM1 UStaticMeshComponent
+---@field GiantRiftTree_SM UStaticMeshComponent
+---@field GiantRiftTree_Crystal_SM UStaticMeshComponent
+---@field Geometry USceneComponent
+ABP_GiantRiftTree_C = {}
+
+
+

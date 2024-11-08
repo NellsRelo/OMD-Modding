@@ -1,0 +1,72 @@
+---@meta
+
+---@class ABP_FishVendorStall_Platform_B_Merged_C : ABP_OMDTrapGrid_C
+---@field FishVendorStall_Platform_B_WoodStructure_SM UStaticMeshComponent
+---@field RSTTrapGridBox52 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox51 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox50 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox49 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox48 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox47 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox46 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox45 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox44 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox43 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox30 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox29 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox42 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox41 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox17 URSTTrapGridBoxComponent
+---@field Wall_Bottom_1x2_StoneWalls_SM UStaticMeshComponent
+---@field Wall_Bottom_2x2_StoneWalls_SM UStaticMeshComponent
+---@field Wall_Bottom_4x2_StoneWalls_SM UStaticMeshComponent
+---@field Column_BaseD_CastStone8 UStaticMeshComponent
+---@field Column_BaseD_CastStone9 UStaticMeshComponent
+---@field Column_BaseD_CastStone15 UStaticMeshComponent
+---@field Column_BaseD_CastStone10 UStaticMeshComponent
+---@field Column_BaseD_CastStone12 UStaticMeshComponent
+---@field Column_BaseD_CastStone13 UStaticMeshComponent
+---@field Column_BaseD_CastStone14 UStaticMeshComponent
+---@field Column_BaseD_CastStone11 UStaticMeshComponent
+---@field Wall_Corner_Bottom_2x2_StoneWalls_SM UStaticMeshComponent
+---@field Wall_Bottom_1x05_StoneWalls_SM1 UStaticMeshComponent
+---@field Wall_Bottom_2x05_StoneWalls_SM4 UStaticMeshComponent
+---@field Wall_Bottom_2x05_StoneWalls_SM3 UStaticMeshComponent
+---@field Wall_Bottom_2x05_StoneWalls_SM2 UStaticMeshComponent
+---@field Wall_Bottom_2x05_StoneWalls_SM1 UStaticMeshComponent
+---@field Wall_Bottom_2x05_StoneWalls_SM UStaticMeshComponent
+---@field RSTTrapGridBox22 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox20 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox40 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox39 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox38 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox37 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox36 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox35 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox34 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox33 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox32 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox31 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox28 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox27 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox21 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox19 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox11 URSTTrapGridBoxComponent
+---@field Column_Sec_1_2_RB10 UStaticMeshComponent
+---@field Column_Sec_1_2_RB9 UStaticMeshComponent
+---@field RSTTrapGridBox18 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox16 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox10 URSTTrapGridBoxComponent
+---@field Column_Sec_1_2_RB8 UStaticMeshComponent
+---@field Column_Sec_1_2_RB7 UStaticMeshComponent
+---@field Column_Sec_1_2_RB6 UStaticMeshComponent
+---@field Column_Sec_1_2_RB5 UStaticMeshComponent
+---@field Column_Sec_1_2_RB4 UStaticMeshComponent
+---@field Column_Sec_1_2_RB3 UStaticMeshComponent
+---@field Geo USceneComponent
+---@field TrapGrid USceneComponent
+---@field Collision USceneComponent
+ABP_FishVendorStall_Platform_B_Merged_C = {}
+
+
+

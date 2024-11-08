@@ -1,0 +1,52 @@
+---@meta
+
+---@class ABP_Library_Doorway_3x2_Wall_C_C : ABP_OMDTrapGrid_C
+---@field ColumnTileB_CastStone_Mid5 UStaticMeshComponent
+---@field ColumnTileB_CastStone_Mid4 UStaticMeshComponent
+---@field Column_BaseD_CastStone7 UStaticMeshComponent
+---@field Column_BaseD_CastStone6 UStaticMeshComponent
+---@field Column_BaseD_CastStone5 UStaticMeshComponent
+---@field Window_Pointed_1x_Trim7 UStaticMeshComponent
+---@field Window_Pointed_1x_Trim1 UStaticMeshComponent
+---@field Window_Pointed_1x_Trim5 UStaticMeshComponent
+---@field Window_Pointed_Sil_SM5 UStaticMeshComponent
+---@field Window_Pointed_1x_Trim4 UStaticMeshComponent
+---@field Window_Pointed_1x_Trim UStaticMeshComponent
+---@field Window_Pointed_1x_Trim8 UStaticMeshComponent
+---@field Column_BaseD_CastStone4 UStaticMeshComponent
+---@field ColumnTileB_CastStone_Mid3 UStaticMeshComponent
+---@field Arch_1x1x4_StoneWall_SM UStaticMeshComponent
+---@field Column_Sec_1_2_FB1 UStaticMeshComponent
+---@field Cren_Stepped_Short_Five_CS2 UStaticMeshComponent
+---@field Window_Pointed_1x_Trim3 UStaticMeshComponent
+---@field Column_BaseD_CastStone3 UStaticMeshComponent
+---@field ColumnTileB_CastStone_Mid2 UStaticMeshComponent
+---@field Window_Pointed_1x_Trim9 UStaticMeshComponent
+---@field Cren_Stepped_Short_Five_CS UStaticMeshComponent
+---@field Cren_Stepped_Short_Five_CS1 UStaticMeshComponent
+---@field Window_Pointed_Sil_SM6 UStaticMeshComponent
+---@field Window_Pointed_Sil_SM7 UStaticMeshComponent
+---@field Column_BaseD_CastStone8 UStaticMeshComponent
+---@field Window_Pointed_1x_Trim10 UStaticMeshComponent
+---@field Column_Sec_1_2_FB UStaticMeshComponent
+---@field Column_Sec_1_2_FB2 UStaticMeshComponent
+---@field Window_Pointed_1x_Trim2 UStaticMeshComponent
+---@field Window_Pointed_1x_Trim12 UStaticMeshComponent
+---@field Column_BaseD_CastStone2 UStaticMeshComponent
+---@field Column_BaseD_CastStone1 UStaticMeshComponent
+---@field Geo USceneComponent
+---@field Box_Collision_Middle1 UBoxComponent
+---@field RSTTrapGridBox06 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox05 URSTTrapGridBoxComponent
+---@field Box_Collision_Columns1 UBoxComponent
+---@field Box_Collision_Columns UBoxComponent
+---@field Box_Collision_Middle UBoxComponent
+---@field RSTTrapGridBox04 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox03 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox02 URSTTrapGridBoxComponent
+---@field TrapGrid USceneComponent
+---@field Collision USceneComponent
+ABP_Library_Doorway_3x2_Wall_C_C = {}
+
+
+

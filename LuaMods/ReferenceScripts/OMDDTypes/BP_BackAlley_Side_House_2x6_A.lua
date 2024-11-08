@@ -1,0 +1,60 @@
+---@meta
+
+---@class ABP_BackAlley_Side_House_2x6_A_C : ABP_OMDTrapGrid_C
+---@field Wood_Support_A3 UStaticMeshComponent
+---@field Wood_Support_A9 UStaticMeshComponent
+---@field Wood_Support_A8 UStaticMeshComponent
+---@field Wood_Support_A7 UStaticMeshComponent
+---@field Wood_Support_A5 UStaticMeshComponent
+---@field Wood_Support_A4 UStaticMeshComponent
+---@field Wood_Support_A2 UStaticMeshComponent
+---@field Wood_Support_A1 UStaticMeshComponent
+---@field Wood_Support_A UStaticMeshComponent
+---@field RSTTrapGridBox1 URSTTrapGridBoxComponent
+---@field Wood_Square_1200W_A_Light_NoTaper22 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper21 UStaticMeshComponent
+---@field RSTTrapGridBox URSTTrapGridBoxComponent
+---@field Wood_Grid_600C_A1 UStaticMeshComponent
+---@field Wood_Grid_600C_A2 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper2 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper3 UStaticMeshComponent
+---@field Wood_Grid_600C_A UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper5 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper6 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper7 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper1 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper4 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper11 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper12 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper13 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper14 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper9 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper15 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper10 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper18 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper19 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper20 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper16 UStaticMeshComponent
+---@field Wood_Grid_600C_A3 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper8 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper17 UStaticMeshComponent
+---@field Wall_2x15_WhiteBrick_SM_Union1 UStaticMeshComponent
+---@field Wall_2x15_WhiteBrick_SM_Union UStaticMeshComponent
+---@field ['Wall_2x1_WhiteBrick_SM_Union-Brick-Seablue_SM_Door-Window_Union_-Wood_Window_SM_Union6'] UStaticMeshComponent
+---@field ['Wall_2x1_WhiteBrick_SM_Union-Brick-Seablue_SM_Door-Window_Union_-Wood_Window_SM_Union7'] UStaticMeshComponent
+---@field ['Wall_3x05_Wood_SM_Cut_Union-Wood_Window_SM_Union12'] UStaticMeshComponent
+---@field ['Wall_3x05_Wood_SM_Cut_Union-Wood_Window_SM_Union11'] UStaticMeshComponent
+---@field Wall_3x15_WhiteBrick_SM_Window_Union_A1 UStaticMeshComponent
+---@field ['Wall_3x05_Wood_SM_Cut_Union-Wood_Window_SM_Union10'] UStaticMeshComponent
+---@field ['Wall_2x1_WhiteBrick_SM_Union-Brick-Seablue_SM_Door-Window_Union_-Wood_Window_SM_Union5'] UStaticMeshComponent
+---@field Roof_2x2x2_Half_Blue_SM_Union1 UStaticMeshComponent
+---@field Roof_2x2x2_Half_Blue_SM_Union UStaticMeshComponent
+---@field TrapGrid USceneComponent
+---@field ['Wall_3x05_Wood_SM_Cut_Union-Wood_Window_SM_Union9'] UStaticMeshComponent
+---@field BP USceneComponent
+---@field Geo USceneComponent
+ABP_BackAlley_Side_House_2x6_A_C = {}
+
+
+

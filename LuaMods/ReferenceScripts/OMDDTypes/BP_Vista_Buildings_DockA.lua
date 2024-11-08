@@ -1,0 +1,62 @@
+---@meta
+
+---@class ABP_Vista_Buildings_DockA_C : AActor
+---@field Wood_Log_1200W_A17 UStaticMeshComponent
+---@field Wood_Log_1200W_A16 UStaticMeshComponent
+---@field Wood_Log_1200W_A15 UStaticMeshComponent
+---@field Wood_Log_1200W_A14 UStaticMeshComponent
+---@field Wood_Log_1200W_A13 UStaticMeshComponent
+---@field BP_Dock_3x3_T_A_Merged7 UStaticMeshComponent
+---@field BP_Dock_3x3_T_A_Merged6 UStaticMeshComponent
+---@field Metal_Crate_300A_A1 UStaticMeshComponent
+---@field Metal_Crate_300A_450A_B1 UStaticMeshComponent
+---@field Metal_Crate_300A_A UStaticMeshComponent
+---@field Metal_Crate_300A_450A_B UStaticMeshComponent
+---@field Wood_Log_1200W_A12 UStaticMeshComponent
+---@field Wood_Log_1200W_A11 UStaticMeshComponent
+---@field Wood_Log_1200W_A10 UStaticMeshComponent
+---@field Wood_Log_1200W_A9 UStaticMeshComponent
+---@field Wood_Log_1200W_A8 UStaticMeshComponent
+---@field Wood_Log_1200W_A7 UStaticMeshComponent
+---@field Wood_Log_1200W_A6 UStaticMeshComponent
+---@field Wood_Log_1200W_A5 UStaticMeshComponent
+---@field Wood_Log_1200W_A4 UStaticMeshComponent
+---@field Wood_Log_1200W_A3 UStaticMeshComponent
+---@field Wood_Log_1200W_A2 UStaticMeshComponent
+---@field Wood_Log_1200W_A1 UStaticMeshComponent
+---@field Wood_Log_1200W_A UStaticMeshComponent
+---@field BP_Dock_3x3_T_A_Merged5 UStaticMeshComponent
+---@field BP_Dock_3x3_T_A_Merged4 UStaticMeshComponent
+---@field BP_Dock_3x3_T_A_Merged3 UStaticMeshComponent
+---@field BP_Dock_3x3_T_A_Merged2 UStaticMeshComponent
+---@field BP_Dock_3x3_T_A_Merged1 UStaticMeshComponent
+---@field BP_Dock_3x3_T_A_MERGED UStaticMeshComponent
+---@field Stair_3x4_StoneWallBlock_SM2 UStaticMeshComponent
+---@field Crenellation_Coastal_5x_SM1 UStaticMeshComponent
+---@field Crenellation_Coastal_5x_SM UStaticMeshComponent
+---@field Floor_4x4_Plaza_PatternD_SM6 UStaticMeshComponent
+---@field Stair_3x4_StoneWallBlock_SM1 UStaticMeshComponent
+---@field Floor_4x4_Plaza_PatternD_SM5 UStaticMeshComponent
+---@field Floor_4x4_Plaza_PatternD_SM4 UStaticMeshComponent
+---@field Floor_4x4_Plaza_PatternD_SM3 UStaticMeshComponent
+---@field Floor_4x4_Plaza_PatternD_SM2 UStaticMeshComponent
+---@field Stair_3x4_StoneWallBlock_SM UStaticMeshComponent
+---@field Floor_4x4_Plaza_PatternD_SM1 UStaticMeshComponent
+---@field Floor_4x4_Plaza_PatternD_SM UStaticMeshComponent
+---@field Fortress_Coastal_BigWallEnd_B_16x5_SM8 UStaticMeshComponent
+---@field Fortress_Coastal_BigWallEnd_B_16x5_SM7 UStaticMeshComponent
+---@field Fortress_Coastal_BigWallEnd_B_16x5_SM6 UStaticMeshComponent
+---@field Fortress_Coastal_BigWallEnd_B_16x5_SM5 UStaticMeshComponent
+---@field Fortress_Coastal_BigWallEnd_B_16x5_SM4 UStaticMeshComponent
+---@field Fortress_Coastal_BigWallEnd_B_16x5_SM3 UStaticMeshComponent
+---@field Proto_Fortress_Coastal_Obelisk_SideMount_SM2 UStaticMeshComponent
+---@field Proto_TowerCap UStaticMeshComponent
+---@field Fortress_Coastal_BigWallEnd_B_16x5_SM2 UStaticMeshComponent
+---@field Fortress_Coastal_BigWallEnd_B_16x5_SM1 UStaticMeshComponent
+---@field Fortress_Coastal_TowerSquareMed_3x_Windowed_SM UStaticMeshComponent
+---@field Fortress_Coastal_BigWallEnd_B_16x5_SM UStaticMeshComponent
+---@field DefaultSceneRoot USceneComponent
+ABP_Vista_Buildings_DockA_C = {}
+
+
+

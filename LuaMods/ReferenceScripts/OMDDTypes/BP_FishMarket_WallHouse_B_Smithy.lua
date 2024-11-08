@@ -1,0 +1,76 @@
+---@meta
+
+---@class ABP_FishMarket_WallHouse_B_Smithy_C : ABP_OMDTrapGrid_C
+---@field Wood_Platform_300x900_A_Union UStaticMeshComponent
+---@field Gable_4x3_A_Wondow_ExposedBrick_SM_Merge_A UStaticMeshComponent
+---@field RSTTrapGridBox38 URSTTrapGridBoxComponent
+---@field Wall_15x2_WhiteBrick_SM_Door_Union_1 UStaticMeshComponent
+---@field Floor_2x2_Wood_SM3 UStaticMeshComponent
+---@field Wall_15x2_Wood_SM_Cut_Merge UStaticMeshComponent
+---@field RSTTrapGridBox17 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox44 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox43 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox16 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox15 URSTTrapGridBoxComponent
+---@field Tool_Hammer_Smithy_SM UStaticMeshComponent
+---@field Ceiling_4x05_PlasterWood_SM_Union UStaticMeshComponent
+---@field Wall_2x2_BareBrick_SM UStaticMeshComponent
+---@field Orc_ShipIronClad_Canyon_A_Cover_SM UStaticMeshComponent
+---@field Wood_Railing_400C_A_Light1 UStaticMeshComponent
+---@field Tool_Pliers_Smithy_SM UStaticMeshComponent
+---@field Orc_ShipIronClad_Canyon_A_Cover_SM1 UStaticMeshComponent
+---@field Orc_ShipIronClad_Canyon_A_Cover_SM2 UStaticMeshComponent
+---@field Orc_ShipIronClad_A_02_Door_SM UStaticMeshComponent
+---@field Wood_Railing_400C_A_Light UStaticMeshComponent
+---@field Dormer_D_1x2_Red_SM_Merge UStaticMeshComponent
+---@field Wall_1x15_BareBrick_SM11 UStaticMeshComponent
+---@field Wall_1x15_BareBrick_SM10 UStaticMeshComponent
+---@field Wall_1x15_BareBrick_SM9 UStaticMeshComponent
+---@field Floor_2x2_Wood_SM2 UStaticMeshComponent
+---@field Floor_2x2_Wood_SM1 UStaticMeshComponent
+---@field Wall_1x15_BareBrick_SM7 UStaticMeshComponent
+---@field Orc_ShipIronClad_Canyon_A_02_SM_Bend UStaticMeshComponent
+---@field Orc_ShipIronClad_Canyon_A_02_smockStack_Connection_SM1 UStaticMeshComponent
+---@field Orc_ShipIronClad_Pipe_A_01_Smokestack_Top_SM UStaticMeshComponent
+---@field Wall_1x15_BareBrick_SM4 UStaticMeshComponent
+---@field Orc_ShipIronClad_Canyon_A_02_smockStack_Connection_SM2 UStaticMeshComponent
+---@field Orc_ShipIronClad_Pipe_A_03_SM1 UStaticMeshComponent
+---@field Orc_ShipIronClad_Pipe_A_03_SM UStaticMeshComponent
+---@field Column_BaseD_CastStone UStaticMeshComponent
+---@field Wall_1x15_BareBrick_SM2 UStaticMeshComponent
+---@field Wall_1x15_BareBrick_SM1 UStaticMeshComponent
+---@field Floor_1x2_Wood_SM UStaticMeshComponent
+---@field Wall_3x1_WhiteWood_SM UStaticMeshComponent
+---@field Wood_Square_900W_A_light_NoTaper1 UStaticMeshComponent
+---@field Wood_Square_900W_A_light_NoTaper UStaticMeshComponent
+---@field Orc_ShipIronClad_Canyon_A_02_smockStack_Connection_SM UStaticMeshComponent
+---@field Orc_ShipIronClad_Canyon_A_01_SmockStackBottom_SM UStaticMeshComponent
+---@field Roof_4x3x3_Red_SM_End_NoTrim_Union1 UStaticMeshComponent
+---@field Roof_4x3x3_Red_SM_End_NoTrim_Union UStaticMeshComponent
+---@field Wall_15x2_WhiteBrick_SM_Door_Union_ UStaticMeshComponent
+---@field Column_Sec_1_4_FB3 UStaticMeshComponent
+---@field Column_Sec_1_4_FB2 UStaticMeshComponent
+---@field Floor_2x2_Wood_SM UStaticMeshComponent
+---@field Wall_Top_4x1_Wood_SM_Union UStaticMeshComponent
+---@field Wall_2x05_Wood_SM_Counter_Tall_Union UStaticMeshComponent
+---@field Wall_4x2_Wainscot_Wood_SM_Deco_Counter_Union__ UStaticMeshComponent
+---@field Wall_2x15_Wainscot_Wood_SM UStaticMeshComponent
+---@field Weather_Mask_Brush UChildActorComponent
+---@field Tech USceneComponent
+---@field RSTTrapGridBox42 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox12 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox10 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox37 URSTTrapGridBoxComponent
+---@field Column_Sec_1_4_FB1 UStaticMeshComponent
+---@field Column_Sec_1_4_FB UStaticMeshComponent
+---@field RSTTrapGridBox24 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox23 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox8 URSTTrapGridBoxComponent
+---@field FishVendorStall_Awning3 UStaticMeshComponent
+---@field Geo USceneComponent
+---@field TrapGrid USceneComponent
+---@field Collision USceneComponent
+ABP_FishMarket_WallHouse_B_Smithy_C = {}
+
+
+

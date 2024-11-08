@@ -1,0 +1,61 @@
+---@meta
+
+---@class ABP_FishVendorStall_Cross_B_C : ABP_OMDTrapGrid_C
+---@field Wood_Plank_600W_A_Light_BendD1 UStaticMeshComponent
+---@field Vender_Stall_Awning_B_SubFrame_SM3 UStaticMeshComponent
+---@field Vender_Stall_Awning_B_SubFrame_SM2 UStaticMeshComponent
+---@field Vender_Stall_Awning_B_SubFrame_SM1 UStaticMeshComponent
+---@field Vender_Stall_Awning_B_SubFrame_SM UStaticMeshComponent
+---@field Wood_Log_300W_A8 UStaticMeshComponent
+---@field Wood_Log_300W_A7 UStaticMeshComponent
+---@field Wood_Log_300W_A6 UStaticMeshComponent
+---@field Wood_Log_300W_A UStaticMeshComponent
+---@field SM_rope_ring_020 UStaticMeshComponent
+---@field SM_rope_ring_028 UStaticMeshComponent
+---@field SM_rope_ring_027 UStaticMeshComponent
+---@field SM_rope_ring_041 UStaticMeshComponent
+---@field Wood_Log_300W_A4 UStaticMeshComponent
+---@field SM_rope_ring_039 UStaticMeshComponent
+---@field SM_rope_ring_019 UStaticMeshComponent
+---@field SM_rope_ring_029 UStaticMeshComponent
+---@field Wood_Log_300W_A5 UStaticMeshComponent
+---@field SM_rope_ring_017 UStaticMeshComponent
+---@field SM_rope_ring_040 UStaticMeshComponent
+---@field Wood_Square_600W_A_PillarB_Light3 UStaticMeshComponent
+---@field Wood_Square_600W_A_PillarB_Light2 UStaticMeshComponent
+---@field Wood_Log_300W_A2 UStaticMeshComponent
+---@field Wood_Log_300W_A1 UStaticMeshComponent
+---@field SM_rope_ring_022 UStaticMeshComponent
+---@field SM_rope_ring_018 UStaticMeshComponent
+---@field SM_rope_ring_021 UStaticMeshComponent
+---@field Wood_Log_300W_A3 UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light_BendD UStaticMeshComponent
+---@field Wood_Square_600W_A_PillarB_Light UStaticMeshComponent
+---@field Wood_Square_600W_A_PillarB_Light1 UStaticMeshComponent
+---@field Floor_2x2_Plaza_PatternA1_SM_EXHeightTest_Warp UStaticMeshComponent
+---@field Decal_Top UDecalComponent
+---@field Decal UDecalComponent
+---@field Wood_Platform_300x300_A_Light UStaticMeshComponent
+---@field Column_BaseB_CastStone UStaticMeshComponent
+---@field Column_Square_1_1_StoneWall_SM UStaticMeshComponent
+---@field Wall_Bottom_1x05_StoneWalls_SM3 UStaticMeshComponent
+---@field Wall_Bottom_1x05_StoneWalls_SM2 UStaticMeshComponent
+---@field Wall_Bottom_1x05_StoneWalls_SM1 UStaticMeshComponent
+---@field Wall_Bottom_1x05_StoneWalls_SM UStaticMeshComponent
+---@field Wall09 URSTTrapGridBoxComponent
+---@field Wall08 URSTTrapGridBoxComponent
+---@field Wall07 URSTTrapGridBoxComponent
+---@field Wall06 URSTTrapGridBoxComponent
+---@field Wall05 URSTTrapGridBoxComponent
+---@field Wall04 URSTTrapGridBoxComponent
+---@field Collision USceneComponent
+---@field Wall03 URSTTrapGridBoxComponent
+---@field Wall02 URSTTrapGridBoxComponent
+---@field Props USceneComponent
+---@field Geometry USceneComponent
+---@field TrapGrid USceneComponent
+---@field SharedRoot USceneComponent
+ABP_FishVendorStall_Cross_B_C = {}
+
+
+

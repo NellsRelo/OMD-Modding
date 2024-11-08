@@ -1,0 +1,53 @@
+---@meta
+
+---@class ABP_BackAlley_Sewer+Alley_C : ABP_OMDTrapGrid_C
+---@field Cren_Stepped_Short_CS1 UStaticMeshComponent
+---@field Cren_Stepped_Short_CS UStaticMeshComponent
+---@field Fencing_1x4_RodIron_Garden2 UStaticMeshComponent
+---@field Fencing_1x4_RodIron_Garden1 UStaticMeshComponent
+---@field Fencing_1x4_RodIron_Garden UStaticMeshComponent
+---@field Crenel_BaseD_CastStone_SubC UStaticMeshComponent
+---@field WallTile_4x4_Sewer_SM7 UStaticMeshComponent
+---@field Wall_Bottom_4x4_Sewer_SM7 UStaticMeshComponent
+---@field Ceiling_4x4_Sewer_A_SM7 UStaticMeshComponent
+---@field Ceiling_4x4_Sewer_A_SM12 UStaticMeshComponent
+---@field Ceiling_4x4_Sewer_A_SM10 UStaticMeshComponent
+---@field Wall_Bottom_4x4_Sewer_SM6 UStaticMeshComponent
+---@field WallTile_4x4_Sewer_SM6 UStaticMeshComponent
+---@field WallTile_4x4_Sewer_SM5 UStaticMeshComponent
+---@field WallTile_4x4_Sewer_SM4 UStaticMeshComponent
+---@field WallTile_4x4_Sewer_SM3 UStaticMeshComponent
+---@field Wall_Bottom_4x4_Sewer_SM5 UStaticMeshComponent
+---@field Wall_Bottom_4x4_Sewer_SM4 UStaticMeshComponent
+---@field Wall_Bottom_4x4_Sewer_SM3 UStaticMeshComponent
+---@field Ceiling_4x4_Sewer_A_SM11 UStaticMeshComponent
+---@field Ceiling_4x4_Sewer_A_SM9 UStaticMeshComponent
+---@field Ceiling_4x4_Sewer_A_SM6 UStaticMeshComponent
+---@field Ceiling_4x4_Sewer_A_SM5 UStaticMeshComponent
+---@field Ceiling_4x4_Sewer_A_SM4 UStaticMeshComponent
+---@field Ceiling_4x4_Sewer_A_SM3 UStaticMeshComponent
+---@field Ceiling_4x4_Sewer_A_SM2 UStaticMeshComponent
+---@field Ceiling_4x4_Sewer_A_SM1 UStaticMeshComponent
+---@field Ceiling_4x4_Sewer_A_SM UStaticMeshComponent
+---@field WallTile_4x15_Sewer_SM8 UStaticMeshComponent
+---@field WallTile_4x15_Sewer_SM7 UStaticMeshComponent
+---@field WallTile_4x15_Sewer_SM6 UStaticMeshComponent
+---@field WallTile_4x15_Sewer_SM5 UStaticMeshComponent
+---@field WallTile_4x15_Sewer_SM4 UStaticMeshComponent
+---@field WallTile_4x15_Sewer_SM3 UStaticMeshComponent
+---@field WallTile_4x15_Sewer_SM2 UStaticMeshComponent
+---@field WallTile_4x15_Sewer_SM1 UStaticMeshComponent
+---@field WallTile_4x15_Sewer_SM UStaticMeshComponent
+---@field Wall_Bottom_4x4_Sewer_SM2 UStaticMeshComponent
+---@field WallTile_4x4_Sewer_SM2 UStaticMeshComponent
+---@field Wall_Bottom_4x4_Sewer_SM1 UStaticMeshComponent
+---@field WallTile_4x4_Sewer_SM1 UStaticMeshComponent
+---@field WallTile_4x4_Sewer_SM UStaticMeshComponent
+---@field Wall_Bottom_4x4_Sewer_SM UStaticMeshComponent
+---@field RSTTrapGridBox7 URSTTrapGridBoxComponent
+---@field TrapGrid USceneComponent
+---@field Geo USceneComponent
+ABP_BackAlley_Sewer+Alley_C = {}
+
+
+

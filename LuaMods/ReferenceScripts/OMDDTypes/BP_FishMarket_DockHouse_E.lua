@@ -1,0 +1,58 @@
+---@meta
+
+---@class ABP_FishMarket_DockHouse_E_C : ABP_OMDTrapGrid_C
+---@field Wood_Window_G_Shutter_Right UStaticMeshComponent
+---@field Wood_Window_G_Shutter_Left UStaticMeshComponent
+---@field Wood_Door_B_Light UStaticMeshComponent
+---@field ['Wall_4x2_Wainscot_White-Brick-Seablue_SM_Door-Window_Union'] UStaticMeshComponent
+---@field Floor_Squarebrick_4x6 UStaticMeshComponent
+---@field Wall_15x2_Wainscot_ExposedBrick_SM_Merge11 UStaticMeshComponent
+---@field Wall_15x2_Wainscot_ExposedBrick_SM_Merge10 UStaticMeshComponent
+---@field Wall_15x2_Wainscot_ExposedBrick_SM_Merge9 UStaticMeshComponent
+---@field Wall_15x2_Wainscot_ExposedBrick_SM_Merge8 UStaticMeshComponent
+---@field Wall_15x2_Wainscot_ExposedBrick_SM_Merge7 UStaticMeshComponent
+---@field Box UBoxComponent
+---@field Wood_Platform_300x300_A_Light5 UStaticMeshComponent
+---@field Wood_Square_900W_A_light_NoTaper3 UStaticMeshComponent
+---@field Wood_Platform_300x300_A_Light3 UStaticMeshComponent
+---@field Wood_Platform_300x300_A_Light4 UStaticMeshComponent
+---@field Wood_Square_900W_A_light_NoTaper4 UStaticMeshComponent
+---@field Wood_Square_900W_A_light_NoTaper5 UStaticMeshComponent
+---@field Wood_Square_900W_A_light_NoTaper8 UStaticMeshComponent
+---@field Wood_Square_900W_A_light_NoTaper9 UStaticMeshComponent
+---@field Floor_Squarebrick_4x5 UStaticMeshComponent
+---@field Wall_15x2_Wainscot_ExposedBrick_SM_Merge UStaticMeshComponent
+---@field Wood_Platform_300x300_A_Light6 UStaticMeshComponent
+---@field Wall_15x2_Wainscot_ExposedBrick_SM_Merge1 UStaticMeshComponent
+---@field Wood_Square_900W_A_light_NoTaper7 UStaticMeshComponent
+---@field Wall_15x2_Wainscot_ExposedBrick_SM_Merge4 UStaticMeshComponent
+---@field Wall_15x2_Wainscot_ExposedBrick_SM_Merge5 UStaticMeshComponent
+---@field Wood_Square_900W_A_light_NoTaper10 UStaticMeshComponent
+---@field Wood_Square_900W_A_light_NoTaper11 UStaticMeshComponent
+---@field Wall_15x2_Wainscot_ExposedBrick_SM_Merge2 UStaticMeshComponent
+---@field Wood_Square_900W_A_light_NoTaper6 UStaticMeshComponent
+---@field Wall_15x2_Wainscot_ExposedBrick_SM_Merge3 UStaticMeshComponent
+---@field RSTTrapGridBox7 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox6 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox5 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox4 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox3 URSTTrapGridBoxComponent
+---@field Wall_4x2_Wainscot_Wood_SM_Deco_Counter_Merged1 UStaticMeshComponent
+---@field RSTTrapGridBox2 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox1 URSTTrapGridBoxComponent
+---@field Wall_4x2_Wainscot_Wood_SM_Deco_Counter_Merged UStaticMeshComponent
+---@field Chain_Short1 UStaticMeshComponent
+---@field WhaleSign1 UStaticMeshComponent
+---@field Chain_Short UStaticMeshComponent
+---@field SM_MERGED_WoodPlanks_v2 UStaticMeshComponent
+---@field WhaleSign UStaticMeshComponent
+---@field BP USceneComponent
+---@field RSTTrapGridBox URSTTrapGridBoxComponent
+---@field Props USceneComponent
+---@field TrapGrid USceneComponent
+---@field Collision USceneComponent
+---@field Geo USceneComponent
+ABP_FishMarket_DockHouse_E_C = {}
+
+
+

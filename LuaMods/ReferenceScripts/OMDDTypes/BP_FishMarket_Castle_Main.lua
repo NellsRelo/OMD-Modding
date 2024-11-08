@@ -1,0 +1,71 @@
+---@meta
+
+---@class ABP_FishMarket_Castle_Main_C : ABP_OMDTrapGrid_C
+---@field ColumnB_05x2_StoneBase_Merged3 UStaticMeshComponent
+---@field ColumnB_05x2_StoneBase_Merged2 UStaticMeshComponent
+---@field ColumnB_05x2_StoneBase_Merged1 UStaticMeshComponent
+---@field ColumnB_05x2_StoneBase_Merged UStaticMeshComponent
+---@field Crenellation_Coastal_Dome_SM1 UStaticMeshComponent
+---@field ColumnTrim_CastStone_900W6 UStaticMeshComponent
+---@field ColumnTrim_CastStone_900W5 UStaticMeshComponent
+---@field ColumnTrim_CastStone_900W4 UStaticMeshComponent
+---@field Proto_Crenellation_Coastal_SM1 UStaticMeshComponent
+---@field Proto_TowerCap_A_Short_Union1 UStaticMeshComponent
+---@field Tower_OctoHollow_2x2_StoneWall_SM_Union1 UStaticMeshComponent
+---@field Column_Octo_2x4_StoneWall_SM12 UStaticMeshComponent
+---@field Crenel_TrimA_SM_Octo5 UStaticMeshComponent
+---@field Column_Octo_2x4_StoneWall_SM11 UStaticMeshComponent
+---@field Crenel_TrimA_SM_Octo4 UStaticMeshComponent
+---@field Column_Octo_2x4_StoneWall_SM10 UStaticMeshComponent
+---@field Crenel_TrimA_SM_Octo3 UStaticMeshComponent
+---@field Column_Octo_2x4_StoneWall_SM9 UStaticMeshComponent
+---@field Column_Octo_2x4_StoneWall_SM8 UStaticMeshComponent
+---@field ColumnTrim_CastStone_900W3 UStaticMeshComponent
+---@field Wall_StoneWall_Castle_2x2_SM35 UStaticMeshComponent
+---@field Wall_StoneWall_Castle_2x2_SM34 UStaticMeshComponent
+---@field Wall_StoneWall_Castle_2x2_SM33 UStaticMeshComponent
+---@field Wall_StoneWall_Castle_2x2_SM32 UStaticMeshComponent
+---@field Wall_StoneWall_Castle_2x2_SM31 UStaticMeshComponent
+---@field Wall_StoneWall_Castle_2x2_SM30 UStaticMeshComponent
+---@field Wall_StoneWall_Castle_2x2_SM29 UStaticMeshComponent
+---@field Wall_StoneWall_Castle_2x2_SM28 UStaticMeshComponent
+---@field Wall_StoneWall_Castle_2x2_SM27 UStaticMeshComponent
+---@field Wall_StoneWall_Castle_2x2_SM26 UStaticMeshComponent
+---@field Wall_StoneWall_Castle_2x2_SM25 UStaticMeshComponent
+---@field Wall_StoneWall_Castle_2x2_SM24 UStaticMeshComponent
+---@field Wall_StoneWall_Castle_2x2_SM23 UStaticMeshComponent
+---@field Wall_StoneWall_Castle_2x2_SM22 UStaticMeshComponent
+---@field Wall_StoneWall_Castle_2x2_SM21 UStaticMeshComponent
+---@field Wall_StoneWall_Castle_2x2_SM20 UStaticMeshComponent
+---@field Wall_StoneWall_Castle_2x2_SM19 UStaticMeshComponent
+---@field Wall_StoneWall_Castle_2x2_SM18 UStaticMeshComponent
+---@field Wall_StoneWall_Castle_2x2_SM17 UStaticMeshComponent
+---@field Wall_StoneWall_Castle_2x2_SM16 UStaticMeshComponent
+---@field Wall_StoneWall_Castle_2x2_SM15 UStaticMeshComponent
+---@field Wall_StoneWall_Castle_2x2_SM8 UStaticMeshComponent
+---@field Proto_Crenellation_Coastal_SM UStaticMeshComponent
+---@field ColumnTrim_CastStone_1200W_Deco UStaticMeshComponent
+---@field Proto_TowerCap_A_Short_Union UStaticMeshComponent
+---@field Tower_OctoHollow_2x2_StoneWall_SM_Union UStaticMeshComponent
+---@field Crenel_TrimA_SM_Octo2 UStaticMeshComponent
+---@field Crenel_TrimA_SM_Octo1 UStaticMeshComponent
+---@field Crenel_TrimA_SM_Octo UStaticMeshComponent
+---@field Column_Octo_2x4_StoneWall_SM7 UStaticMeshComponent
+---@field Column_Octo_2x4_StoneWall_SM6 UStaticMeshComponent
+---@field Column_Octo_2x4_StoneWall_SM5 UStaticMeshComponent
+---@field Column_Octo_2x4_StoneWall_SM4 UStaticMeshComponent
+---@field Column_Octo_2x4_StoneWall_SM3 UStaticMeshComponent
+---@field Metal_Window_C1 UStaticMeshComponent
+---@field Metal_Window_C UStaticMeshComponent
+---@field Window_Pointed_2xB1 UStaticMeshComponent
+---@field Window_Pointed_2xB UStaticMeshComponent
+---@field TrapGrid USceneComponent
+---@field Crenellation_Coastal_Dome_SM UStaticMeshComponent
+---@field Foliage USceneComponent
+---@field Proto_Fortress_TowerRoundLarge_Top_SM UStaticMeshComponent
+---@field Ceiling_ArchTileBig_Straight_2x4_Fortress_Coastal_SM UStaticMeshComponent
+---@field Geo USceneComponent
+ABP_FishMarket_Castle_Main_C = {}
+
+
+

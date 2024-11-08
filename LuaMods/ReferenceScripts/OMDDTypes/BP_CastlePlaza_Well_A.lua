@@ -1,0 +1,73 @@
+---@meta
+
+---@class ABP_CastlePlaza_Well_A_C : ABP_OMDTrapGrid_C
+---@field Water UStaticMeshComponent
+---@field Floor_Stone_Herringbone_2x4_SM_MERGED UStaticMeshComponent
+---@field Wall_1_2_FB3 UStaticMeshComponent
+---@field Wall_1_2_FB2 UStaticMeshComponent
+---@field Wall_1_2_FB1 UStaticMeshComponent
+---@field Wall_1_2_FB UStaticMeshComponent
+---@field ColumnTrim_CastStone_300W3 UStaticMeshComponent
+---@field ColumnTrim_CastStone_300W2 UStaticMeshComponent
+---@field ColumnTrim_CastStone_300W1 UStaticMeshComponent
+---@field ColumnTrim_CastStone_300W UStaticMeshComponent
+---@field Archway_Inner_SM1 UStaticMeshComponent
+---@field Archway_Inner_SM UStaticMeshComponent
+---@field Wood_Plank_900W_A_Light_BendC1 UStaticMeshComponent
+---@field Wood_Plank_900W_A_Light_BendC UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper_BendH1 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper_BendH UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper_BendC1 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper_BendC UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light_BendA3 UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light_BendA2 UStaticMeshComponent
+---@field Wood_Plank_300W_A_Light1 UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light_BendA1 UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light_BendA UStaticMeshComponent
+---@field Wood_Plank_300W_A_Light UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light5 UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light4 UStaticMeshComponent
+---@field Wood_Square_600W_A3 UStaticMeshComponent
+---@field Wood_Square_600W_A2 UStaticMeshComponent
+---@field Wood_Square_600W_A1 UStaticMeshComponent
+---@field Wood_Deco_A7 UStaticMeshComponent
+---@field Wood_Deco_A6 UStaticMeshComponent
+---@field Wood_Deco_A10 UStaticMeshComponent
+---@field ColumnTrim_CastStone_600W3 UStaticMeshComponent
+---@field ColumnTrim_CastStone_600W2 UStaticMeshComponent
+---@field ColumnTrim_CastStone_600W1 UStaticMeshComponent
+---@field ColumnTrim_CastStone_600W UStaticMeshComponent
+---@field Wood_Square_600W_A UStaticMeshComponent
+---@field Wood_Plank_300W_A_Light_BendA3 UStaticMeshComponent
+---@field Wood_Plank_300W_A_Light_BendA2 UStaticMeshComponent
+---@field Wood_Plank_300W_A_Light_BendA1 UStaticMeshComponent
+---@field Wood_Plank_300W_A_Light_BendA UStaticMeshComponent
+---@field Wood_Plank_900W_C_Cut_Temp7 UStaticMeshComponent
+---@field Wood_Plank_900W_C_Cut_Temp6 UStaticMeshComponent
+---@field Wood_Plank_900W_C_Cut_Temp5 UStaticMeshComponent
+---@field Wood_Plank_900W_C_Cut_Temp4 UStaticMeshComponent
+---@field Wood_Plank_900W_C_Cut_Temp3 UStaticMeshComponent
+---@field Wood_Plank_900W_C_Cut_Temp2 UStaticMeshComponent
+---@field Wood_Plank_900W_C_Cut_Temp UStaticMeshComponent
+---@field Wood_Plank_900W_C_Cut_Temp1 UStaticMeshComponent
+---@field Wood_Deco_A5 UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light9 UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light8 UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light7 UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light6 UStaticMeshComponent
+---@field SM_MERGED_Turret_Square_TiledEdge2 UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light3 UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light2 UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light1 UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light UStaticMeshComponent
+---@field RSTTrapGridBox3 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox2 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox1 URSTTrapGridBoxComponent
+---@field TrapGrid USceneComponent
+---@field Collision USceneComponent
+---@field Box UBoxComponent
+---@field RSTTrapGridBox URSTTrapGridBoxComponent
+ABP_CastlePlaza_Well_A_C = {}
+
+
+

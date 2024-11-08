@@ -1,0 +1,53 @@
+---@meta
+
+---@class ABP_Crane_DryDocks_Large_C : ABP_OMDTrapGrid_C
+---@field NavPowerExclusion UNavPowerExclusionComponent
+---@field RSTTrapGridBox32 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox31 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox30 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox29 URSTTrapGridBoxComponent
+---@field Wood_Plank_300W_A2 UStaticMeshComponent
+---@field Wood_Plank_300W_A18 UStaticMeshComponent
+---@field Wood_Plank_300W_A17 UStaticMeshComponent
+---@field Wood_Plank_300W_A16 UStaticMeshComponent
+---@field Wood_Platform_300x600_A_Bend_Light2 UStaticMeshComponent
+---@field Wood_Platform_300x600_A_Bend_Light1 UStaticMeshComponent
+---@field Wood_Platform_300x600_A_Bend_Light UStaticMeshComponent
+---@field Column_Octo_2x2_Sewer_SM UStaticMeshComponent
+---@field Wood_Plank_300W_A15 UStaticMeshComponent
+---@field Wood_Plank_300W_A14 UStaticMeshComponent
+---@field Wood_Plank_300W_A13 UStaticMeshComponent
+---@field Wood_Plank_300W_A12 UStaticMeshComponent
+---@field Wood_Plank_300W_A11 UStaticMeshComponent
+---@field Wood_Plank_300W_A10 UStaticMeshComponent
+---@field Wood_Support_A5 UStaticMeshComponent
+---@field Wood_Plank_300W_A9 UStaticMeshComponent
+---@field Wood_Support_A2 UStaticMeshComponent
+---@field Wood_Plank_300W_A8 UStaticMeshComponent
+---@field Wood_Support_A1 UStaticMeshComponent
+---@field Wood_Support_A UStaticMeshComponent
+---@field Wood_Plank_300W_A7 UStaticMeshComponent
+---@field Wood_Plank_300W_A6 UStaticMeshComponent
+---@field Wood_Plank_300W_A5 UStaticMeshComponent
+---@field Wood_Square_300W_A3 UStaticMeshComponent
+---@field Wood_Square_300W_A2 UStaticMeshComponent
+---@field Wood_Square_300W_A1 UStaticMeshComponent
+---@field Wood_Plank_300W_A4 UStaticMeshComponent
+---@field Wood_Plank_300W_A1 UStaticMeshComponent
+---@field Wood_Plank_300W_A UStaticMeshComponent
+---@field Wood_Square_600W_A3 UStaticMeshComponent
+---@field Wood_Square_600W_A2 UStaticMeshComponent
+---@field Wood_Square_600W_A1 UStaticMeshComponent
+---@field Wood_Square_600W_A UStaticMeshComponent
+---@field Wood_Square_300W_A UStaticMeshComponent
+---@field RSTTrapGridBox28 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox27 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox26 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox25 URSTTrapGridBoxComponent
+---@field Collision USceneComponent
+---@field Geo USceneComponent
+---@field TrapGrid USceneComponent
+ABP_Crane_DryDocks_Large_C = {}
+
+
+

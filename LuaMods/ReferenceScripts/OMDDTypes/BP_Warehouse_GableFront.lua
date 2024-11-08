@@ -1,0 +1,64 @@
+---@meta
+
+---@class ABP_Warehouse_GableFront_C : ABP_OMDTrapGrid_C
+---@field RSTTrapGridBox7 URSTTrapGridBoxComponent
+---@field Dormer_C_2x2_Lightblue_SM_Cap_Union1 UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light4 UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light5 UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light12 UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light13 UStaticMeshComponent
+---@field Warehouse_4x4_WallArch_WoodWork_SM_StaticMeshComponent1 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper4_StaticMeshComponent2 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper4_StaticMeshComponent3 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper4_StaticMeshComponent4 UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light3 UStaticMeshComponent
+---@field Dormer_C_2x2_Lightblue_SM_Cap_Union UStaticMeshComponent
+---@field Warehouse_4x4_WallArch_WoodWork_SM5_StaticMeshComponent1 UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light6 UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light7 UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light9 UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light8 UStaticMeshComponent
+---@field Ceiling_05x2_Wood_SM_Union UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper4_StaticMeshComponent1 UStaticMeshComponent
+---@field RSTTrapGridBox5 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox6 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox8 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox9 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox3 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox URSTTrapGridBoxComponent
+---@field RSTTrapGridBox1 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox4 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox2 URSTTrapGridBoxComponent
+---@field Wood_Plank_600W_A1 UStaticMeshComponent
+---@field Wood_Plank_600W_A UStaticMeshComponent
+---@field Warehouse_4x4_WallArch_WoodWork_SM5_StaticMeshComponent0 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper4_StaticMeshComponent0 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper5_StaticMeshComponent0 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper11_StaticMeshComponent0 UStaticMeshComponent
+---@field Wood_Plank_600W_A10_StaticMeshComponent0 UStaticMeshComponent
+---@field Wood_Plank_300W_A_Light31_StaticMeshComponent0 UStaticMeshComponent
+---@field Wood_Plank_900W_B_Light13_StaticMeshComponent0 UStaticMeshComponent
+---@field Warehouse_4x4_WallArch_WoodWork_SM_StaticMeshComponent0 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper10_StaticMeshComponent0 UStaticMeshComponent
+---@field Wood_Plank_600W_A9_StaticMeshComponent0 UStaticMeshComponent
+---@field Wood_Square_300W_A_NoTaper_light_Pillar1 UStaticMeshComponent
+---@field Metal_Cap_D2 UStaticMeshComponent
+---@field Wood_Square_300W_A_NoTaper_light_Pillar2 UStaticMeshComponent
+---@field Metal_Cap_D UStaticMeshComponent
+---@field Wood_Square_300W_A_NoTaper_light_Pillar3 UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light1 UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light2 UStaticMeshComponent
+---@field Wood_Plank_300W_A_Light38_StaticMeshComponent0 UStaticMeshComponent
+---@field Wood_Plank_900W_B_Light14_StaticMeshComponent0 UStaticMeshComponent
+---@field Metal_Cap_D3 UStaticMeshComponent
+---@field Wood_Square_300W_A_NoTaper_light_Pillar UStaticMeshComponent
+---@field Metal_Cap_D1 UStaticMeshComponent
+---@field Wood_Plank_300W_A_Light32_StaticMeshComponent0 UStaticMeshComponent
+---@field TrapGrid USceneComponent
+---@field Geo USceneComponent
+---@field SharedRoot USceneComponent
+ABP_Warehouse_GableFront_C = {}
+
+
+

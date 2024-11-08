@@ -1,0 +1,17 @@
+---@meta
+
+---@class FUDW_WeatherState_Structure
+---@field CloudCoverage_27_31BA899D45A8A1B84FBCC7AEA870954F double
+---@field Rain_4_4019C4FF4CE970F8CF06F99779966140 double
+---@field Snow_6_4DF1B106404D7B2DA02FBBB54BEB004A double
+---@field ThunderLightning_8_6C3109794B58BE8BE4D0D39E9247D947 double
+---@field WindIntensity_28_7D0941E340035FB4BC9CD196CE7AA58B double
+---@field Fog_22_4B6E454642665C025DADA1BD443B667A double
+---@field Dust_23_4639102D44077B805735A6BC027AF7ED double
+---@field MaterialWetness_29_2CE413784192D57B1FA486B8BF605372 double
+---@field MaterialSnowCoverage_30_10F93D3F42158AD6D1D5B7A58EB30E28 double
+---@field MaterialDustCoverage_31_4C9DA3A1430CCB4B92BCAB95AB03CAA9 double
+FUDW_WeatherState_Structure = {}
+
+
+

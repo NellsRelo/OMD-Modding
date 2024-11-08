@@ -1,0 +1,52 @@
+---@meta
+
+---@class ABP_CastlePlaza_AlleyShop_A_C : ABP_OMDTrapGrid_C
+---@field NavPowerExclusion UNavPowerExclusionComponent
+---@field Metal_FloorGrate_x3 UStaticMeshComponent
+---@field ['Wall_2x15_Wainscot_BlueBrick-Wood1'] UStaticMeshComponent
+---@field Wood_Door_B_Light UStaticMeshComponent
+---@field RSTTrapGridBox15 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox14 URSTTrapGridBoxComponent
+---@field Waning_Merged UStaticMeshComponent
+---@field Wall_3x05_Wood_SM3 UStaticMeshComponent
+---@field Wall_3x05_Wood_SM2 UStaticMeshComponent
+---@field Wood_Square_600W_A_NoTaper_Light4 UStaticMeshComponent
+---@field Wall_2x2_Window_ExposedBrick_SM9 UStaticMeshComponent
+---@field Wall_2x2_Window_ExposedBrick_SM8 UStaticMeshComponent
+---@field Wood_Square_600W_A_NoTaper_Light2 UStaticMeshComponent
+---@field Wood_Square_600W_A_NoTaper_Light1 UStaticMeshComponent
+---@field Wood_Square_600W_A_NoTaper_Light UStaticMeshComponent
+---@field Wall_2x2_Window_ExposedBrick_SM7 UStaticMeshComponent
+---@field Wall_2x2_Window_ExposedBrick_SM6 UStaticMeshComponent
+---@field Wall_2x2_Window_ExposedBrick_SM5 UStaticMeshComponent
+---@field Wall_2x2_Window_ExposedBrick_SM4 UStaticMeshComponent
+---@field Wall_1_3_V2_RB11 UStaticMeshComponent
+---@field Wall_3x05_Wood_SM1 UStaticMeshComponent
+---@field Wall_3x05_Wood_SM UStaticMeshComponent
+---@field Wood_Door_D_Light UStaticMeshComponent
+---@field Wood_Square_600W_A_NoTaper1 UStaticMeshComponent
+---@field Wood_Square_600W_A_NoTaper UStaticMeshComponent
+---@field Wall_2x2_Window_ExposedBrick_SM1 UStaticMeshComponent
+---@field Wall_3x1_WhiteWood_SM_Counter UStaticMeshComponent
+---@field Wall_2x2_Window_ExposedBrick_SM3 UStaticMeshComponent
+---@field Wood_Table_C1 UStaticMeshComponent
+---@field Wall_2x2_Window_ExposedBrick_SM2 UStaticMeshComponent
+---@field ['Wall_2x15_Wainscot_BlueBrick-Wood'] UStaticMeshComponent
+---@field Wood_Square_1200W_A3 UStaticMeshComponent
+---@field Wood_Square_1200W_A2 UStaticMeshComponent
+---@field Wood_Square_1200W_A1 UStaticMeshComponent
+---@field Wood_Square_1200W_A UStaticMeshComponent
+---@field WoodPlank_4x1_Floor_A UStaticMeshComponent
+---@field SM_MERGED_Platform_300x603 UStaticMeshComponent
+---@field Metal_Base_PlateB1 UStaticMeshComponent
+---@field Metal_Base_PlateB UStaticMeshComponent
+---@field Wall_1_3_V2_RB16 UStaticMeshComponent
+---@field Wall_1_3_V2_RB15 UStaticMeshComponent
+---@field Wall_2x2_Window_ExposedBrick_SM UStaticMeshComponent
+---@field WoodPlank_4x4_Floor_A UStaticMeshComponent
+---@field TrapGrid USceneComponent
+---@field Geo USceneComponent
+ABP_CastlePlaza_AlleyShop_A_C = {}
+
+
+

@@ -1,0 +1,14 @@
+
+BPMods/OMD3/*
+BPMods/OMDD/*
+PakMods/OMD3/*
+PakMods/OMDD/*
+UHT/OMD3/**
+UHT/OMDD/**
+*.exe
+*.bat
+*.ini
+**.cpp
+**.h
+**.Build.cs
+.vscode

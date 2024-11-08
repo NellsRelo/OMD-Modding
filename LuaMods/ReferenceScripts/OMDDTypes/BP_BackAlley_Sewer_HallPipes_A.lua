@@ -1,0 +1,71 @@
+---@meta
+
+---@class ABP_BackAlley_Sewer_HallPipes_A_C : ABP_OMDTrapGrid_C
+---@field Metal_Trim_Join_Long_Rivet3 UStaticMeshComponent
+---@field Metal_Trim_Join_Long_Rivet2 UStaticMeshComponent
+---@field Metal_Trim_Join_Long_Rivet1 UStaticMeshComponent
+---@field Pipe_300A_SM_Union2 UStaticMeshComponent
+---@field Pipe_Elbow_150x150_SM_Union11 UStaticMeshComponent
+---@field Pipe_900_SM_Union2 UStaticMeshComponent
+---@field Pipe_T_300x150_SM_Union6 UStaticMeshComponent
+---@field Pipe_600_SM_Union UStaticMeshComponent
+---@field Pipe_Elbow_150x150_SM_Union10 UStaticMeshComponent
+---@field Pipe_300A_SM_Union3 UStaticMeshComponent
+---@field Pipe_ValveA_SM2 UStaticMeshComponent
+---@field Pipe_300A_SM_Union12 UStaticMeshComponent
+---@field Pipe_300A_SM_Union1 UStaticMeshComponent
+---@field Pipe_300A_SM_Union UStaticMeshComponent
+---@field Pipe_Elbow_300x300_SM_Union UStaticMeshComponent
+---@field Pipe_Elbow_150x150_SM_Union UStaticMeshComponent
+---@field Pipe_T_300x150_SM_Union UStaticMeshComponent
+---@field Pipe_ValveA_SM1 UStaticMeshComponent
+---@field Pipe_T_300x150_SM_Union5 UStaticMeshComponent
+---@field Pipe_Elbow_150x150_SM_Union9 UStaticMeshComponent
+---@field Pipe_300A_SM_Union9 UStaticMeshComponent
+---@field Pipe_300A_SM_Union7 UStaticMeshComponent
+---@field Pipe_300A_SM_Union10 UStaticMeshComponent
+---@field Pipe_300A_SM_Union8 UStaticMeshComponent
+---@field Pipe_Elbow_150x150_SM_Union2 UStaticMeshComponent
+---@field Pipe_Elbow_150x150_SM_Union1 UStaticMeshComponent
+---@field Pipe_900_SM_Union1 UStaticMeshComponent
+---@field Pipe_300A_SM_Union4 UStaticMeshComponent
+---@field Chain_Short1 UStaticMeshComponent
+---@field Chain_Ring_End3 UStaticMeshComponent
+---@field Chain_Ring_End2 UStaticMeshComponent
+---@field Chain_Short2 UStaticMeshComponent
+---@field Chain_Ring_End1 UStaticMeshComponent
+---@field Chain_Short UStaticMeshComponent
+---@field Pipe_Elbow_150x150_SM_Union12 UStaticMeshComponent
+---@field Pipe_X_300x300_SM_Union UStaticMeshComponent
+---@field Chain_Ring_End UStaticMeshComponent
+---@field Pipe_900_NoEnds_Bend_60_SM UStaticMeshComponent
+---@field Chain_Short3 UStaticMeshComponent
+---@field Pipe_300A_SM_Union11 UStaticMeshComponent
+---@field Pipe_Elbow_150x150_SM_Union14 UStaticMeshComponent
+---@field Pipe_Elbow_150x150_SM_Union13 UStaticMeshComponent
+---@field Metal_Trim_Join_Long_Rivet UStaticMeshComponent
+---@field Pipe_UT_Valve_300x600_SM_Union UStaticMeshComponent
+---@field Pipe_T_300x150_SM_Union2 UStaticMeshComponent
+---@field Pipe_Elbow_150x150_SM_Union3 UStaticMeshComponent
+---@field Pipe_T_300x150_SM_Union3 UStaticMeshComponent
+---@field Pipe_X_300x300_SM_Union2 UStaticMeshComponent
+---@field Pipe_Elbow_150x150_SM_Union4 UStaticMeshComponent
+---@field Pipe_Elbow_150x150_SM_Union5 UStaticMeshComponent
+---@field Pipe_Elbow_150x150_SM_Union6 UStaticMeshComponent
+---@field Pipe_Elbow_150x150_SM_Union8 UStaticMeshComponent
+---@field Pipe_T_300x150_SM_Union1 UStaticMeshComponent
+---@field Pipe_300A_SM_Union6 UStaticMeshComponent
+---@field Pipe_EndcapB_SM UStaticMeshComponent
+---@field Pipe_EndcapB_SM1 UStaticMeshComponent
+---@field Pipe_900_SM_Union UStaticMeshComponent
+---@field Pipe_T_300x150_SM_Union4 UStaticMeshComponent
+---@field Pipe_ValveA_SM UStaticMeshComponent
+---@field Pipe_300A_SM_Union5 UStaticMeshComponent
+---@field Pipe_Elbow_150x150_SM_Union7 UStaticMeshComponent
+---@field Box UBoxComponent
+---@field TrapGrid USceneComponent
+---@field Geo USceneComponent
+ABP_BackAlley_Sewer_HallPipes_A_C = {}
+
+
+

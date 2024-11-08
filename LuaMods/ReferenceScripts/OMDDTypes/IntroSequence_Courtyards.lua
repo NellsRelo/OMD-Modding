@@ -1,0 +1,20 @@
+---@meta
+
+---@class UIntroSequence_Courtyards_DirectorBP_C : ULevelSequenceDirector
+---@field UberGraphFrame FPointerToUberGraphFrame
+---@field LevelIntro UW_LevelIntro_C
+UIntroSequence_Courtyards_DirectorBP_C = {}
+
+function UIntroSequence_Courtyards_DirectorBP_C:SequenceEvent__ENTRYPOINTIntroSequence_Courtyards_DirectorBP_0() end
+function UIntroSequence_Courtyards_DirectorBP_C:SequenceEvent__ENTRYPOINTIntroSequence_Courtyards_DirectorBP() end
+---@param UserWidget UCommonActivatableWidget
+function UIntroSequence_Courtyards_DirectorBP_C:AfterPush_426F4EB746EF0F9CE30BCAA21FC4A453(UserWidget) end
+---@param UserWidget UCommonActivatableWidget
+function UIntroSequence_Courtyards_DirectorBP_C:BeforePush_426F4EB746EF0F9CE30BCAA21FC4A453(UserWidget) end
+function UIntroSequence_Courtyards_DirectorBP_C:ShowWidget() end
+function UIntroSequence_Courtyards_DirectorBP_C:HideWidget() end
+function UIntroSequence_Courtyards_DirectorBP_C:HideTheWidget() end
+---@param EntryPoint int32
+function UIntroSequence_Courtyards_DirectorBP_C:ExecuteUbergraph_IntroSequence_Courtyards_DirectorBP(EntryPoint) end
+
+

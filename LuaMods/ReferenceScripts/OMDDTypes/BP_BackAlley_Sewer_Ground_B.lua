@@ -1,0 +1,52 @@
+---@meta
+
+---@class ABP_BackAlley_Sewer_Ground_B_C : ABP_OMDTrapGrid_C
+---@field Floor_2x2_CobbleStone_SM16 UStaticMeshComponent
+---@field Floor_2x2_CobbleStone_SM15 UStaticMeshComponent
+---@field Floor_4x4_CobbleStone_SM14 UStaticMeshComponent
+---@field Floor_4x4_CobbleStone_SM13 UStaticMeshComponent
+---@field Floor_4x4_CobbleStone_SM12 UStaticMeshComponent
+---@field Floor_4x4_CobbleStone_SM11 UStaticMeshComponent
+---@field Floor_2x2_CobbleStone_SM27 UStaticMeshComponent
+---@field Floor_2x2_CobbleStone_SM26 UStaticMeshComponent
+---@field Floor_4x4_CobbleStone_SM4 UStaticMeshComponent
+---@field Floor_2x2_CobbleStone_SM32 UStaticMeshComponent
+---@field Floor_2x2_CobbleStone_SM31 UStaticMeshComponent
+---@field Floor_Tile_Straight_Sewer_SM UStaticMeshComponent
+---@field Floor_Tile_Straight_Sewer_SM10 UStaticMeshComponent
+---@field Floor_Tile_Straight_Sewer_SM9 UStaticMeshComponent
+---@field Floor_Tile_Straight_Sewer_SM8 UStaticMeshComponent
+---@field Floor_Tile_Straight_Sewer_SM7 UStaticMeshComponent
+---@field Floor_Tile_Straight_Sewer_SM5 UStaticMeshComponent
+---@field Floor_Tile_Straight_Sewer_SM6 UStaticMeshComponent
+---@field Floor_Tile_Straight_Sewer_SM4 UStaticMeshComponent
+---@field Floor_Tile_Straight_Sewer_SM2 UStaticMeshComponent
+---@field Floor_Tile_Straight_Sewer_SM1 UStaticMeshComponent
+---@field RSTTrapGridBox6 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox5 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox4 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox3 URSTTrapGridBoxComponent
+---@field Floor_Sewer_Dirt_4x4_SM4 UStaticMeshComponent
+---@field Floor_2x2_CobbleStone_SM30 UStaticMeshComponent
+---@field Floor_2x2_CobbleStone_SM29 UStaticMeshComponent
+---@field Floor_2x2_CobbleStone_SM25 UStaticMeshComponent
+---@field Floor_Sewer_Dirt_4x4_SM3 UStaticMeshComponent
+---@field Floor_2x2_CobbleStone_SM24 UStaticMeshComponent
+---@field Floor_Sewer_Dirt_4x4_SM2 UStaticMeshComponent
+---@field Floor_4x4_CobbleStone_SM10 UStaticMeshComponent
+---@field Floor_4x4_CobbleStone_SM9 UStaticMeshComponent
+---@field Floor_4x4_CobbleStone_SM8 UStaticMeshComponent
+---@field RSTTrapGridBox2 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox1 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox URSTTrapGridBoxComponent
+---@field Floor_Sewer_Dirt_4x4_SM1 UStaticMeshComponent
+---@field Floor_Sewer_Dirt_4x4_SM UStaticMeshComponent
+---@field Floor_2x2_CobbleStone_SM13 UStaticMeshComponent
+---@field Floor_2x2_CobbleStone_SM14 UStaticMeshComponent
+---@field Floor_2x2_CobbleStone_SM11 UStaticMeshComponent
+---@field TrapGrid USceneComponent
+---@field Geo USceneComponent
+ABP_BackAlley_Sewer_Ground_B_C = {}
+
+
+

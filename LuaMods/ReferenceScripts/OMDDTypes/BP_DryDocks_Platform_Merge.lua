@@ -1,0 +1,58 @@
+---@meta
+
+---@class ABP_DryDocks_Platform_Merge_C : ABP_OMDTrapGrid_C
+---@field RSTTrapGridBox14 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox13 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox12 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox11 URSTTrapGridBoxComponent
+---@field DryDocks_Platform_Large_SM UStaticMeshComponent
+---@field RSTTrapGridBox10 URSTTrapGridBoxComponent
+---@field Wood_Square_300W_A_NoTaper_light_Pillar13 UStaticMeshComponent
+---@field Wood_Square_300W_A_NoTaper_light_Pillar12 UStaticMeshComponent
+---@field Wood_Square_300W_A_NoTaper_light_Pillar11 UStaticMeshComponent
+---@field Wood_Square_300W_A_NoTaper_light_Pillar10 UStaticMeshComponent
+---@field Wood_Square_300W_A_NoTaper_light_Pillar9 UStaticMeshComponent
+---@field Wood_Square_300W_A_NoTaper_light_Pillar1 UStaticMeshComponent
+---@field Wood_Square_300W_A_NoTaper_light_Pillar8 UStaticMeshComponent
+---@field Wood_Square_300W_A_NoTaper_light_Pillar5 UStaticMeshComponent
+---@field Wood_Square_300W_A_NoTaper_light_Pillar4 UStaticMeshComponent
+---@field Wood_Square_300W_A_NoTaper_light_Pillar3 UStaticMeshComponent
+---@field Wood_Square_300W_A_NoTaper_light_Pillar7 UStaticMeshComponent
+---@field Wood_Square_300W_A_NoTaper_light_Pillar15 UStaticMeshComponent
+---@field Wood_Square_300W_A_NoTaper_light_Pillar25 UStaticMeshComponent
+---@field Wood_Square_300W_A_NoTaper_light_Pillar24 UStaticMeshComponent
+---@field Wood_Square_300W_A_NoTaper_light_Pillar23 UStaticMeshComponent
+---@field Wood_Square_300W_A_NoTaper_light_Pillar22 UStaticMeshComponent
+---@field Wood_Square_300W_A_NoTaper_light_Pillar21 UStaticMeshComponent
+---@field Wood_Square_300W_A_NoTaper_light_Pillar20 UStaticMeshComponent
+---@field Wood_Square_300W_A_NoTaper_light_Pillar16 UStaticMeshComponent
+---@field Wood_Square_300W_A_NoTaper_light_Pillar19 UStaticMeshComponent
+---@field Wood_Railing_400C_B_Light6 UStaticMeshComponent
+---@field Wood_Railing_400C_C_Light8 UStaticMeshComponent
+---@field Wood_Railing_400C_B_Light5 UStaticMeshComponent
+---@field Wood_Railing_400C_C_Light7 UStaticMeshComponent
+---@field Wood_Square_300W_A_NoTaper_light_Pillar17 UStaticMeshComponent
+---@field Wood_Square_300W_A_NoTaper_light_Pillar18 UStaticMeshComponent
+---@field Wood_Railing_400C_B_Light4 UStaticMeshComponent
+---@field Wood_Square_300W_A_NoTaper_light_Pillar14 UStaticMeshComponent
+---@field Wood_Railing_400C_B_Light1 UStaticMeshComponent
+---@field Wood_Railing_400C_C_Light1 UStaticMeshComponent
+---@field Wood_Railing_400C_C_Light UStaticMeshComponent
+---@field Wood_Railing_400C_A_Light UStaticMeshComponent
+---@field Wood_Railing_400C_C_Light6 UStaticMeshComponent
+---@field Wood_Railing_400C_B_Light3 UStaticMeshComponent
+---@field Wood_Railing_400C_C_Light5 UStaticMeshComponent
+---@field Wood_Railing_400C_C_Light4 UStaticMeshComponent
+---@field Wood_Railing_400C_C_Light3 UStaticMeshComponent
+---@field Wood_Railing_400C_C_Light2 UStaticMeshComponent
+---@field Wood_Railing_400C_A_Light2 UStaticMeshComponent
+---@field Wood_Square_300W_A_NoTaper_light_Pillar UStaticMeshComponent
+---@field Props USceneComponent
+---@field RSTTrapGridBox9 URSTTrapGridBoxComponent
+---@field Geo USceneComponent
+---@field TrapGrid USceneComponent
+---@field Collision USceneComponent
+ABP_DryDocks_Platform_Merge_C = {}
+
+
+

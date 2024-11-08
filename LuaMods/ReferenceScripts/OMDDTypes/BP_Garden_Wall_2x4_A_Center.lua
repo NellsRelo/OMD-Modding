@@ -1,0 +1,60 @@
+---@meta
+
+---@class ABP_Garden_Wall_2x4_A_Center_C : ABP_OMDTrapGrid_C
+---@field ColumnTrim_CastStone_600W4 UStaticMeshComponent
+---@field ColumnTrim_CastStone_600W3 UStaticMeshComponent
+---@field ColumnTrim_CastStone_600W2 UStaticMeshComponent
+---@field Floor_Arabic_2x2_SM7 UStaticMeshComponent
+---@field Floor_Arabic_2x2_SM6 UStaticMeshComponent
+---@field Floor_Arabic_2x2_SM5 UStaticMeshComponent
+---@field Floor_Arabic_2x2_SM3 UStaticMeshComponent
+---@field Floor_Arabic_2x2_SM2 UStaticMeshComponent
+---@field Floor_Arabic_2x2_SM1 UStaticMeshComponent
+---@field Floor_Arabic_2x2_SM UStaticMeshComponent
+---@field Floor_Arabic_2x2_SM4 UStaticMeshComponent
+---@field ColumnTrim_CastStone_600W1 UStaticMeshComponent
+---@field SM_wooden_beam_010 UStaticMeshComponent
+---@field SM_wooden_beam_09 UStaticMeshComponent
+---@field SM_wooden_beam_08 UStaticMeshComponent
+---@field SM_wooden_beam_07 UStaticMeshComponent
+---@field SM_wooden_beam_06 UStaticMeshComponent
+---@field SM_wooden_beam_05 UStaticMeshComponent
+---@field Wall08 URSTTrapGridBoxComponent
+---@field Wall05 URSTTrapGridBoxComponent
+---@field Box_Collision2 UBoxComponent
+---@field SM_wooden_grid_012 UStaticMeshComponent
+---@field SM_wooden_grid_011 UStaticMeshComponent
+---@field SM_wooden_grid_010 UStaticMeshComponent
+---@field SM_wooden_grid_09 UStaticMeshComponent
+---@field SM_wooden_grid_08 UStaticMeshComponent
+---@field SM_wooden_grid_07 UStaticMeshComponent
+---@field SM_wooden_grid_06 UStaticMeshComponent
+---@field SM_wooden_grid_05 UStaticMeshComponent
+---@field SM_wooden_border_08 UStaticMeshComponent
+---@field SM_wooden_border_05 UStaticMeshComponent
+---@field ColumnTrim_CastStone_600W UStaticMeshComponent
+---@field SM_wooden_beam_04 UStaticMeshComponent
+---@field SM_wooden_beam_03 UStaticMeshComponent
+---@field SM_wooden_beam_02 UStaticMeshComponent
+---@field SM_wooden_beam_01 UStaticMeshComponent
+---@field Cren_Stepped_Short_CS53 UStaticMeshComponent
+---@field Cren_Stepped_Short_CS46 UStaticMeshComponent
+---@field SM_wooden_border_04 UStaticMeshComponent
+---@field SM_wooden_border_02 UStaticMeshComponent
+---@field Window_Pointed_2x_Trim1 UStaticMeshComponent
+---@field Window_Pointed_2x_Trim UStaticMeshComponent
+---@field Cren_Stepped_Short_CS52 UStaticMeshComponent
+---@field SupportBlock22 UStaticMeshComponent
+---@field SupportBlock17 UStaticMeshComponent
+---@field SupportBlock16 UStaticMeshComponent
+---@field SupportBlock15 UStaticMeshComponent
+---@field ColumnTrim_CastStone_300W18 UStaticMeshComponent
+---@field Cren_Stepped_Short_CS45 UStaticMeshComponent
+---@field ColumnTrim_CastStone_600W29 UStaticMeshComponent
+---@field Collision USceneComponent
+---@field Geometry USceneComponent
+---@field TrapGrid USceneComponent
+ABP_Garden_Wall_2x4_A_Center_C = {}
+
+
+

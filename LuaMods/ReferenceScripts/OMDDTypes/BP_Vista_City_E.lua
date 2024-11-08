@@ -1,0 +1,75 @@
+---@meta
+
+---@class ABP_Vista_City_E_C : ABP_OMDTrapGrid_C
+---@field Wall_Bottom_2x05_StoneWalls_SM5 UStaticMeshComponent
+---@field Wall_Bottom_2x05_StoneWalls_SM4 UStaticMeshComponent
+---@field Wall_Bottom_2x05_StoneWalls_SM3 UStaticMeshComponent
+---@field Wall_Bottom_2x05_StoneWalls_SM2 UStaticMeshComponent
+---@field Wall_Bottom_2x05_StoneWalls_SM1 UStaticMeshComponent
+---@field Wall_Bottom_2x05_StoneWalls_SM UStaticMeshComponent
+---@field Wall_3x05_WhiteWood_SM2 UStaticMeshComponent
+---@field Wall_3x05_Wood_SM_Union2 UStaticMeshComponent
+---@field Wood_Square_900W_A12 UStaticMeshComponent
+---@field Wall_4x1_WhiteWood_SM2 UStaticMeshComponent
+---@field Wood_Square_900W_A11 UStaticMeshComponent
+---@field ['Wall_3x15_Wainscot_Half_WhiteBrick-BlueBrick_SM_Union_1'] UStaticMeshComponent
+---@field ['Wall_3x15_Wainscot_Half_WhiteBrick-BlueBrick_SM_Union_'] UStaticMeshComponent
+---@field Wall_3x05_Wood_SM_Union1 UStaticMeshComponent
+---@field Wall_1x05_Wood_SM_Beam_Union2 UStaticMeshComponent
+---@field Wall_1x05_Wood_SM_Beam_Union UStaticMeshComponent
+---@field Wall_1x05_Wood_SM_Beam_Union1 UStaticMeshComponent
+---@field Wood_Square_300W_A_NoTaper_light7 UStaticMeshComponent
+---@field Wood_Cantilever_Support1 UStaticMeshComponent
+---@field Wood_Cantilever_Support UStaticMeshComponent
+---@field Wood_Square_300W_A_NoTaper_light6 UStaticMeshComponent
+---@field Wood_Square_300W_A_NoTaper_light4 UStaticMeshComponent
+---@field Wood_Square_300W_A_NoTaper_light2 UStaticMeshComponent
+---@field Wood_Square_300W_A_NoTaper_light UStaticMeshComponent
+---@field Wall_3x05_Wood_SM_Union UStaticMeshComponent
+---@field FishSign1 UStaticMeshComponent
+---@field FishSign UStaticMeshComponent
+---@field CrabSign UStaticMeshComponent
+---@field SM_signboard_02 UStaticMeshComponent
+---@field Props USceneComponent
+---@field Floor_05x1_SM UStaticMeshComponent
+---@field Floor_05x1_SM1 UStaticMeshComponent
+---@field Chimney_C_SM UStaticMeshComponent
+---@field Floor_4x4_StoneFloor_A_SM1 UStaticMeshComponent
+---@field Floor_4x4_StoneFloor_A_SM2 UStaticMeshComponent
+---@field Ceiling_2x2_Wood_SM UStaticMeshComponent
+---@field Wall_1x1_Whitewood_SM3 UStaticMeshComponent
+---@field Wall_1x1_Whitewood_SM UStaticMeshComponent
+---@field Wall_1x1_Whitewood_SM1 UStaticMeshComponent
+---@field Wall_1x1_Whitewood_SM2 UStaticMeshComponent
+---@field Floor_1x2_V_Wood_SM UStaticMeshComponent
+---@field Gable_5x4_ExposedBrick_SM1 UStaticMeshComponent
+---@field Gable_5x4_ExposedBrick_SM UStaticMeshComponent
+---@field Ceiling_5x05_PlasterWood_SM_Union UStaticMeshComponent
+---@field Wall_5x1_WhiteWood_SM2 UStaticMeshComponent
+---@field Wall_5x1_WhiteWood_SM1 UStaticMeshComponent
+---@field Awning_Roof_SM UStaticMeshComponent
+---@field Roof_2x4x2_Cut_Half_Blue_SM3 UStaticMeshComponent
+---@field Roof_2x4x2_Cut_Half_Blue_SM2 UStaticMeshComponent
+---@field Roof_2x4x2_Cut_Half_Blue_SM1 UStaticMeshComponent
+---@field Roof_2x4x2_Cut_Half_Blue_SM UStaticMeshComponent
+---@field Roof_3x2x3_Cut_Half_Blue_SM4 UStaticMeshComponent
+---@field Roof_3x2x3_Cut_Half_Blue_SM3 UStaticMeshComponent
+---@field Roof_3x2x3_Cut_Half_Blue_SM2 UStaticMeshComponent
+---@field Roof_3x2x3_Cut_Half_Blue_SM UStaticMeshComponent
+---@field ['Dormer_1x2_Blue-Wood-White_SM2'] UStaticMeshComponent
+---@field ['Dormer_1x2_Blue-Wood-White_SM1'] UStaticMeshComponent
+---@field Roof_5x4x2_CapB_Slant_Blue_SM UStaticMeshComponent
+---@field Wall_4x1_WhiteWood_SM1 UStaticMeshComponent
+---@field Wall_3x05_WhiteWood_SM1 UStaticMeshComponent
+---@field Wall_5x1_WhiteWood_SM UStaticMeshComponent
+---@field Wall_4x1_WhiteWood_SM UStaticMeshComponent
+---@field Wall_3x05_WhiteWood_SM UStaticMeshComponent
+---@field Wall_2x2_Wainscot_Wood_SM UStaticMeshComponent
+---@field Wall_1x2_Wood_SM3 UStaticMeshComponent
+---@field Wall_1x2_Wood_SM2 UStaticMeshComponent
+---@field ['Wall_2x2_Wainscot_WhiteBrick-Wood_SM'] UStaticMeshComponent
+---@field Geo USceneComponent
+ABP_Vista_City_E_C = {}
+
+
+
