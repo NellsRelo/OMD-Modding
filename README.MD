@@ -5,7 +5,7 @@ This repo contains a variety of useful tools and links for modding the Orcs Must
 ## Folder Structure
 
 ### BPMods
-This folder is where you would place BP Mods - that is, mods using a custom blueprint built out in Unreal Engine, to be loaded into the game.
+This folder is where you would place BP Mods - that is, mods using a custom blueprint built out in Unreal Engine, to be loaded into the game. Also included is OMD3's OMDLib Blueprint Mod, a Blueprint helper to be used with OMDLib itself.
 
 ### LuaMods
 This folder is where you would place mods that utilize Lua. A few mods are present(many unfinished), to provide examples. Also included is OMDLib - an in-progress library of useful methods to retrieve common asset types, as well as reference scripts that enable autocompletion.

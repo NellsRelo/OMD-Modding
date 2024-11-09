@@ -19,7 +19,7 @@
 		"Lua.diagnostics.workspaceDelay": 5000,
 		"Lua.workspace.preloadFileSize": 10000,
 		"Lua.diagnostics.globals": [
-			"OMDLib"
+			"OMDLib", "ModRef"
 		]
 	}
 }

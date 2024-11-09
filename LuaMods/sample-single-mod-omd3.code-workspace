@@ -1,25 +1,25 @@
 {
 	"folders": [
 		{
-			"path": "C:\\OMD\\LuaMods\\OMDD\\DoubleJump",
+			"path": "C:\\OMD\\LuaMods\\Mods\\OMD3\\UnstableRifts",
 			"name": "OMDLib"
 		},
 		{
-			"path": "C:\\OMD\\LuaMods\\ReferenceScripts",
+			"path": "C:\\OMD\\LuaMods\\ReferenceScripts\\OMD3",
 			"name": "ReferenceScripts"
 		}
 	],
 	"settings": {
 		"search.exclude": {},
 		"Lua.workspace.library": [
-			"C:\\OMD\\LuaMods\\ReferenceScripts"
+			"C:\\OMD\\LuaMods\\ReferenceScripts\\OMD3"
 		],
 		"Lua.diagnostics.libraryFiles": "Disable",
 		"Lua.diagnostics.workspaceRate": 25,
 		"Lua.diagnostics.workspaceDelay": 5000,
 		"Lua.workspace.preloadFileSize": 10000,
 		"Lua.diagnostics.globals": [
-			"OMDLib"
+			"OMDLib", "ModRef"
 		]
 	}
 }

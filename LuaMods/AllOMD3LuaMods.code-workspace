@@ -1,17 +1,17 @@
 {
   "folders": [
     {
-      "path": "C:\\OMD\\LuaMods\\Mods\\",
-      "name": "OMD Lua Mods"
+      "path": "C:\\OMD\\LuaMods\\Mods\\OMD3",
+      "name": "OMD3 Lua Mods"
     },
     {
-      "path": "C:\\OMD\\LuaMods\\ReferenceScripts",
+      "path": "C:\\OMD\\LuaMods\\ReferenceScripts\\OMD3",
       "name": "ReferenceScripts"
     }
   ],
   "settings": {
     "search.exclude": {},
-    "Lua.workspace.library": ["C:\\OMD\\LuaMods\\ReferenceScripts"],
+    "Lua.workspace.library": ["C:\\OMD\\LuaMods\\ReferenceScripts\\OMD3"],
     "Lua.diagnostics.libraryFiles": "Disable",
     "Lua.diagnostics.workspaceRate": 25,
     "Lua.diagnostics.workspaceDelay": 5000,
