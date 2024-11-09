@@ -60,6 +60,7 @@ function Utils.GetAllActorsOfClass(WorldContextObject, Class, OutArray)
   return OutArray
 end
 
+
 --- Finds the first valid instance of the specified class.
 -- If the 'ShowCount' parameter is true, prints the number of found instances.
 -- @param class The class type to search for.
@@ -78,7 +79,6 @@ Utils.findInstanceOf = function(class, ShowCount)
   end
 
   for _, v in pairs(instances or {}) do
-    print(v:GetFullName())
     if v:IsValid() then
       return v
     else
@@ -86,7 +86,6 @@ Utils.findInstanceOf = function(class, ShowCount)
     end
   end
 end
-
 
 
 function Utils.CacheDefaultObject(ObjectFullName, VariableName, ForceInvalidateCache)
