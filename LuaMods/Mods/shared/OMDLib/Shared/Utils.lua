@@ -60,17 +60,34 @@ function Utils.GetAllActorsOfClass(WorldContextObject, Class, OutArray)
   return OutArray
 end
 
-function Utils.findInstanceOf(class)
+--- Finds the first valid instance of the specified class.
+-- If the 'ShowCount' parameter is true, prints the number of found instances.
+-- @param class The class type to search for.
+-- @param ShowCount Optional. Boolean to control display of the count of instances (default: false).
+-- @return Returns the first valid instance found, or nil if no valid instance exists.
+Utils.findInstanceOf = function(class, ShowCount)
+  ShowCount = ShowCount or false  -- Default value for ShowCount is false if not provided
+
   local instances = FindAllOf(class)
-  if not instances then return print("No " .. class .. "s found\n") end
+  if not instances then
+    return print("No " .. class .. "s found\n")
+  end
+
+  if ShowCount then
+    print("Found " .. #instances .. " " .. class .. "s\n")
+  end
+
   for _, v in pairs(instances or {}) do
+    print(v:GetFullName())
     if v:IsValid() then
       return v
     else
-      error("No " .. class .. "found")
+      error("No valid " .. class .. " found")
     end
   end
 end
+
+
 
 function Utils.CacheDefaultObject(ObjectFullName, VariableName, ForceInvalidateCache)
   local DefaultObject
