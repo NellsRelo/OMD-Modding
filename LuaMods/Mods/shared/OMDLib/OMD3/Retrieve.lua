@@ -1,4 +1,4 @@
-local SharedUtils = require("OMDLib.Shared.Utils")
+local SharedUtils = require("OMDLib.Shared.Utils._init")
 local Retrieve = {}
 
 --- Retrieve Inventory
