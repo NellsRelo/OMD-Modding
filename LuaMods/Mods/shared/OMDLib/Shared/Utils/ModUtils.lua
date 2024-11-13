@@ -1,4 +1,5 @@
 local Utils = {}
+local json = require("OMDLib.lib.json")
 local UEUtils = require("OMDLib.Shared.Utils.UEUtils")
 --- Return a given Mod's ModActor by Name
 --- @param modName string Name of mod
@@ -21,9 +22,24 @@ Utils.GetModPath = function (ModName)
   return Utils.GetContainerPath(path)
 end
 
-Utils.GetOMDLibPath = function (ModName)
+Utils.GetOMDLibPath = function ()
   local path = package.searchpath("OMDLib", package.path)
   return Utils.GetContainerPath(path)
+end
+
+Utils.RegisterMod = function (ModName)
+  local f = assert(io.open(OMDLib.Shared.Utils.GetModPath(ModName) .. "/info.json", "r"))
+  local content = f:read("*a")
+  f:close()
+  print("Json data loaded")
+  local config = json.decode(content)
+
+  Mods[config.ModTableKey] = {
+    Author = config.Author,
+    Name = config.Name,
+    Description = config.Description,
+    Version = config.Version
+  }
 end
 
 return Utils

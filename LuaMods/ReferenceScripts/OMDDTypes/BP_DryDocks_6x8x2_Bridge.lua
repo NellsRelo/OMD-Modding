@@ -1,6 +1,26 @@
 ---@meta
 
 ---@class ABP_DryDocks_6x8x2_Bridge_C : ABP_OMDTrapGrid_C
+---@field RSTTrapGridBox53 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox52 URSTTrapGridBoxComponent
+---@field Wood_Railing_400D_Light30 UStaticMeshComponent
+---@field Wood_Plank_600W_A_Light UStaticMeshComponent
+---@field Wood_Plank_1200W_B_Light UStaticMeshComponent
+---@field RSTTrapGridBox51 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox50 URSTTrapGridBoxComponent
+---@field Wood_Railing_400D_Light1 UStaticMeshComponent
+---@field RSTTrapGridBox49 URSTTrapGridBoxComponent
+---@field Wall_4x15_Stone_SM_DoorWindow_Union9 UStaticMeshComponent
+---@field Wood_Platform_600x450_A_Light_CutA1 UStaticMeshComponent
+---@field Wood_Platform_600x450_A_Light_CutA UStaticMeshComponent
+---@field Wood_BeamBarrier_600_B2 UStaticMeshComponent
+---@field RSTTrapGridBox48 URSTTrapGridBoxComponent
+---@field Wood_Platform_300x600_A_Light UStaticMeshComponent
+---@field Warehouse_Wood_Captial21 UStaticMeshComponent
+---@field Warehouse_Wood_Captial20 UStaticMeshComponent
+---@field RSTTrapGridBox47 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox46 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox39 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox45 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox44 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox43 URSTTrapGridBoxComponent
@@ -53,8 +73,6 @@
 ---@field Warehouse_Wood_Captial16 UStaticMeshComponent
 ---@field Warehouse_Wood_Captial15 UStaticMeshComponent
 ---@field Warehouse_Wood_Captial14 UStaticMeshComponent
----@field Wall_4x15_Stone_SM_DoorWindow_Union10 UStaticMeshComponent
----@field Wall_4x15_Stone_SM_DoorWindow_Union9 UStaticMeshComponent
 ---@field Column_Bottom_Square_1_2_Stone_SM9 UStaticMeshComponent
 ---@field Column_Bottom_Square_1_2_Stone_SM8 UStaticMeshComponent
 ---@field Wood_Railing_400D_Light29 UStaticMeshComponent
@@ -106,7 +124,6 @@
 ---@field Wood_Railing_400D_Light2 UStaticMeshComponent
 ---@field Wood_Plank_300W_A_Light3 UStaticMeshComponent
 ---@field Wood_Plank_300W_A_Light2 UStaticMeshComponent
----@field Wood_Railing_400D_Light8 UStaticMeshComponent
 ---@field Wood_Plank_900W_C_Cut_Temp1 UStaticMeshComponent
 ---@field RSTTrapGridBox16 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox15 URSTTrapGridBoxComponent

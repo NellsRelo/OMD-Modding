@@ -9,8 +9,11 @@
 ---@field Image_HoverHighlight UImage
 ---@field Image_RolloverGlow1 UImage
 ---@field Image_Thread UImage
+---@field Portrait UImage
+---@field PortraitMask URetainerBox
 ---@field RespecBox UScaleBox
 ---@field RespecText UCommonTextBlock
+---@field ScaleBox_927 UScaleBox
 ---@field Text_Description UCommonTextBlock
 ---@field Text_Title UCommonTextBlock
 ---@field W_ButtonBasic UW_ButtonBasic_C
@@ -19,8 +22,10 @@
 ---@field ThreadDefinition URSTMetaThreadDefinition
 ---@field bIsNew boolean
 ---@field bNotInLoadout boolean
+---@field ['Option 0'] FGameplayTag
 UW_ThreadDisplay_Base_C = {}
 
+function UW_ThreadDisplay_Base_C:SetPortrait() end
 function UW_ThreadDisplay_Base_C:Finished_CD0782D841AC76F00A2859AB27A644AD() end
 ---@param Button UCommonButtonBase
 function UW_ThreadDisplay_Base_C:BndEvt__W_ThreadDisplay_Base_W_ButtonBasic_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(Button) end

@@ -1,11 +1,10 @@
 ---@meta
 
 ---@class ABP_Kitchen_Dining_Stove_C_C : ABP_OMDTrapGrid_C
----@field Brimstone_SKM6_SkeletalMeshComponent0 USkeletalMeshComponent
----@field CopperPot3_SkeletalMeshComponent0 USkeletalMeshComponent
----@field Brimstone_SKM5_SkeletalMeshComponent0 USkeletalMeshComponent
+---@field Brimstone_SM UStaticMeshComponent
+---@field CopperPot_SM UStaticMeshComponent
+---@field Brimstone_SM1 UStaticMeshComponent
 ---@field Metal_Trim_Beam_Support3_StaticMeshComponent0 UStaticMeshComponent
----@field SkeletalMesh USceneComponent
 ---@field P_Oven_Embers6_ParticleSystemComponent0 UParticleSystemComponent
 ---@field P_Oven_Embers7_ParticleSystemComponent0 UParticleSystemComponent
 ---@field FX USceneComponent

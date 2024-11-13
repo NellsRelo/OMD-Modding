@@ -7,6 +7,8 @@
 ---@field HorizontalBox_DevHeroDmgRaw UHorizontalBox
 ---@field HorizontalBox_DevTrapDmgRaw UHorizontalBox
 ---@field Image_Background UImage
+---@field Image_Disconnected UImage
+---@field Image_PlatformIcon UW_PlayerPlatformIcon_C
 ---@field LocalPlayerIcon UImage
 ---@field LocalPlayerPartyLeaderSpacer USpacer
 ---@field MuteImage UImage
@@ -68,6 +70,14 @@ UW_MissionStats_Entry_C['Set Party Leader Display'] = function() end
 ---@param InputPin URSTPawnUserFacingData
 UW_MissionStats_Entry_C['Set Pawn Icon'] = function(InputPin) end
 function UW_MissionStats_Entry_C:Destruct() end
+function UW_MissionStats_Entry_C:BindCallbacks() end
+function UW_MissionStats_Entry_C:OnDisconnectedChanged() end
+function UW_MissionStats_Entry_C:UnbindCallbacks() end
+function UW_MissionStats_Entry_C:UpdatePawnDefinition() end
+---@param PlayerState ARSTPlayerState
+function UW_MissionStats_Entry_C:OnPawnDefinitionChanged(PlayerState) end
+---@param PlayerState APlayerState
+function UW_MissionStats_Entry_C:UpdatePlatformIcon(PlayerState) end
 ---@param EntryPoint int32
 function UW_MissionStats_Entry_C:ExecuteUbergraph_W_MissionStats_Entry(EntryPoint) end
 ---@param Widget UW_MissionStats_Entry_C

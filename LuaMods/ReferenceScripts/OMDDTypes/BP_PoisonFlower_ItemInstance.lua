@@ -5,6 +5,7 @@
 ---@field StatusEffectDuration double
 ---@field StatusEffectDamage double
 ---@field CloudDuration double
+---@field ['Critical Hit Chance'] double
 ABP_PoisonFlower_ItemInstance_C = {}
 
 

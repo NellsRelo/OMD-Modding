@@ -39,6 +39,9 @@ function ABP_BoomBarrel_C:BndEvt__BP_BoomBarrel_PhysicsHandler_K2Node_ComponentB
 ---@param bFromSweep boolean
 ---@param SweepResult FHitResult
 function ABP_BoomBarrel_C:BndEvt__BP_BoomBarrel_PhysicsHandler_K2Node_ComponentBoundEvent_8_ComponentBeginOverlapSignature__DelegateSignature(OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex, bFromSweep, SweepResult) end
+---@param EndPlayReason EEndPlayReason::Type
+function ABP_BoomBarrel_C:ReceiveEndPlay(EndPlayReason) end
+function ABP_BoomBarrel_C:BroadcastDestruction() end
 ---@param EntryPoint int32
 function ABP_BoomBarrel_C:ExecuteUbergraph_BP_BoomBarrel(EntryPoint) end
 

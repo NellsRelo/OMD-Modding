@@ -30,6 +30,8 @@ function ABP_Sentinel_Cannoneer_Trap_C:GetSentinelCoinSpent() end
 function ABP_Sentinel_Cannoneer_Trap_C:GetSentinelSummonCost() end
 ---@return int32
 function ABP_Sentinel_Cannoneer_Trap_C:GetSentinelContributionAmount() end
+---@return FText
+function ABP_Sentinel_Cannoneer_Trap_C:GetPingDisplayName() end
 ---@param Player APlayerState
 ---@param bSucceeded boolean
 function ABP_Sentinel_Cannoneer_Trap_C:OnPlayerInteracted(Player, bSucceeded) end

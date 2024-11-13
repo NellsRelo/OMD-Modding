@@ -372,6 +372,7 @@ function UEnhancedInputLibrary:BreakInputActionValue(InActionValue, X, Y, Z, Typ
 
 ---@class UEnhancedInputLocalPlayerSubsystem : ULocalPlayerSubsystem
 ---@field ControlMappingsRebuiltDelegate FEnhancedInputLocalPlayerSubsystemControlMappingsRebuiltDelegate
+---@field ControlMappingsClearedDelegate FEnhancedInputLocalPlayerSubsystemControlMappingsClearedDelegate
 ---@field UserSettings UEnhancedInputUserSettings
 UEnhancedInputLocalPlayerSubsystem = {}
 

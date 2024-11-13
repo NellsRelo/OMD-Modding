@@ -8,7 +8,6 @@
 ---@field Image_Pointer UImage
 ---@field ScaleBox_51 UScaleBox
 ---@field Text_Center UCommonTextBlock
----@field W_CommunicationWheelLine UW_CommunicationWheelLine_C
 ---@field w_WheelSelectLineBase Uw_WheelSelectLineBase_C
 ---@field CommunicationWheelAbility URSTGameplayAbility_CommunicationWheel
 ---@field NumWheelOptions int32

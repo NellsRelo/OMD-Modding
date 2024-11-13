@@ -6,6 +6,7 @@
 ---@field Duration double
 ---@field StatusEffectDamage double
 ---@field StatusEffectDuration double
+---@field ['Critical Hit Chance'] double
 ABP_WallScorcher_ItemInstance_C = {}
 
 

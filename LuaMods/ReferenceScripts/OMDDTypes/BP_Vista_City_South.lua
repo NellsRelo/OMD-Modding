@@ -86,7 +86,6 @@
 ---@field Floor_4x4_Plaza_PatternA_Cross_SM1 UStaticMeshComponent
 ---@field Stair_05x4_StoneWallBlock_SM UStaticMeshComponent
 ---@field SM_MERGED_Garden_Railing_EndCap UStaticMeshComponent
----@field SM_lamppost_02 UStaticMeshComponent
 ---@field Wood_Barrel_A2 UStaticMeshComponent
 ---@field Wood_Barrel_A UStaticMeshComponent
 ---@field Metal_Crate_300A_A UStaticMeshComponent

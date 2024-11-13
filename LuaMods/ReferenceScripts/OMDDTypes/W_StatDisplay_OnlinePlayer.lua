@@ -19,6 +19,7 @@
 ---@field Image_223 UImage
 ---@field Image_IsReady UImage
 ---@field Image_Mute UImage
+---@field Image_PlatformIcon UW_PlayerPlatformIcon_C
 ---@field Image_VoiceActive UImage
 ---@field Image_VoiceEnabled UImage
 ---@field InvalidationBox_0 UInvalidationBox
@@ -124,6 +125,9 @@ function UW_StatDisplay_OnlinePlayer_C:BP_SynchronizeProperties() end
 UW_StatDisplay_OnlinePlayer_C['On Conditional Tick'] = function(MyGeometry, InDeltaTime) end
 UW_StatDisplay_OnlinePlayer_C['Tick Downed Display'] = function() end
 function UW_StatDisplay_OnlinePlayer_C:OnInitialized() end
+---@param PlayerState APlayerState
+function UW_StatDisplay_OnlinePlayer_C:UpdatePlatformIcon(PlayerState) end
+function UW_StatDisplay_OnlinePlayer_C:OnPlayerStateChanged() end
 ---@param EntryPoint int32
 function UW_StatDisplay_OnlinePlayer_C:ExecuteUbergraph_W_StatDisplay_OnlinePlayer(EntryPoint) end
 

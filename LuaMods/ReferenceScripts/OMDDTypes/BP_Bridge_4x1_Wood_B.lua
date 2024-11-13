@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABP_Bridge_4x1_Wood_B_C : ABP_OMDTrapGrid_C
+---@field Box UBoxComponent
 ---@field RSTTrapGridBox2 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox1 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox URSTTrapGridBoxComponent

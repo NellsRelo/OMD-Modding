@@ -13,10 +13,8 @@
 ---@field Wall_15x2_Wainscot_ExposedBrick_SM_Merge7 UStaticMeshComponent
 ---@field Box UBoxComponent
 ---@field Wood_Platform_300x300_A_Light5 UStaticMeshComponent
----@field Wood_Square_900W_A_light_NoTaper3 UStaticMeshComponent
 ---@field Wood_Platform_300x300_A_Light3 UStaticMeshComponent
 ---@field Wood_Platform_300x300_A_Light4 UStaticMeshComponent
----@field Wood_Square_900W_A_light_NoTaper4 UStaticMeshComponent
 ---@field Wood_Square_900W_A_light_NoTaper5 UStaticMeshComponent
 ---@field Wood_Square_900W_A_light_NoTaper8 UStaticMeshComponent
 ---@field Wood_Square_900W_A_light_NoTaper9 UStaticMeshComponent
@@ -34,8 +32,6 @@
 ---@field Wall_15x2_Wainscot_ExposedBrick_SM_Merge3 UStaticMeshComponent
 ---@field RSTTrapGridBox7 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox6 URSTTrapGridBoxComponent
----@field RSTTrapGridBox5 URSTTrapGridBoxComponent
----@field RSTTrapGridBox4 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox3 URSTTrapGridBoxComponent
 ---@field Wall_4x2_Wainscot_Wood_SM_Deco_Counter_Merged1 UStaticMeshComponent
 ---@field RSTTrapGridBox2 URSTTrapGridBoxComponent

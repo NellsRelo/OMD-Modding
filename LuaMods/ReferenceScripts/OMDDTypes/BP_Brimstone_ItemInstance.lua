@@ -6,6 +6,7 @@
 ---@field MaxCharges int32
 ---@field StatusEffectDamage double
 ---@field StatusEffectDuration double
+---@field ['Critical Hit Chance'] double
 ABP_Brimstone_ItemInstance_C = {}
 
 

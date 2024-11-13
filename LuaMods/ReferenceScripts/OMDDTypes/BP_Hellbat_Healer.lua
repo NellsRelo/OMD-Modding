@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABP_Hellbat_Healer_C : ABP_EnemyBase_C
+---@field RSTAttackLocations URSTAttackLocationsComponent
 ---@field NS_Hellbat_Healer_Back UNiagaraComponent
 ---@field RSTAimAssistTargetHead URSTAimAssistTargetComponent
 ---@field RSTAimAssistTargetPelvis URSTAimAssistTargetComponent

@@ -67,7 +67,7 @@
 ---@field ['Sun Scale'] double
 ---@field ['Cloud Shadows MID'] UMaterialInstanceDynamic
 ---@field ['Use Cloud Shadows'] boolean
----@field ['Cloud Shadows Intensity when Sunny'] double
+---@field ['Cloud Shadows Intensity When Sunny'] double
 ---@field ['Stars Speed'] double
 ---@field ['New Moon Light Brightness'] double
 ---@field ['Moon Source Angle Scale'] double
@@ -77,7 +77,7 @@
 ---@field ['Aurora Intensity'] double
 ---@field ['Aurora Speed'] double
 ---@field ['Cloud Shadows Intensity When Overcast'] double
----@field ['Cloud Shadows Softness when Sunny'] double
+---@field ['Cloud Shadows Softness When Sunny'] double
 ---@field ['Cloud Shadows Softness When Overcast'] double
 ---@field ['Cloud Tiling'] double
 ---@field ['Soften Horizon'] double
@@ -98,10 +98,10 @@
 ---@field ['Apply Exposure Settings'] boolean
 ---@field ['Exposure Metering Mode'] EAutoExposureMethod
 ---@field ['Exposure Compensation Curve'] UCurveFloat
----@field ['Animate Time Of Day'] boolean
+---@field ['Animate Time of Day'] boolean
 ---@field ['Day Length'] double
 ---@field ['Night Length'] double
----@field ['Extend Dawn And Dusk'] double
+---@field ['Extend Dawn and Dusk'] double
 ---@field ['Base Fog Density'] double
 ---@field ['Foggy Density Contribution'] double
 ---@field ['Cloudy Density Contribution'] double
@@ -130,7 +130,7 @@
 ---@field ['Real Time Capture Uses Time Slicing'] boolean
 ---@field ['Static/Stationary Sky Light Casts Shadows'] boolean
 ---@field ['Movable Sky Light Casts Shadows (Enable DFAO)'] boolean
----@field ['Recapture Sky Light Periodically'] boolean
+---@field ['Recapture Sky light Periodically'] boolean
 ---@field ['Sky Light Recapture Period (Seconds)'] double
 ---@field ['Random Starting Time'] boolean
 ---@field ['Sunrise Event Offset'] double
@@ -156,10 +156,10 @@
 ---@field ['Shine Intensity Curve'] UCurveFloat
 ---@field ['Sun Highlight Intensity Curve'] UCurveFloat
 ---@field ['Sun Highlight Radius Curve'] UCurveFloat
----@field ['Adjust For Path Tracer'] boolean
+---@field ['Adjust for Path Tracer'] boolean
 ---@field ['Lights Update Period'] double
 ---@field ['Lights Update Degree Threshold'] double
----@field ['Dim Directional Lights With Cloud Coverage'] boolean
+---@field ['Dim Directional Lights with Cloud Coverage'] boolean
 ---@field ['Extra Night Brightness when Cloudy'] double
 ---@field ['Directional Lights Absent Brightness'] double
 ---@field ['Vol Clouds MID Complex'] UMaterialInstanceDynamic
@@ -201,7 +201,7 @@
 ---@field ['Vol Clouds MID Simple'] UMaterialInstanceDynamic
 ---@field ['Scale Fog Density'] double
 ---@field ['Fog Start Distance when Clear'] double
----@field ['Fog Density Where Start Distance Reaches Zero'] double
+---@field ['Fog Density where Start Distance Reaches Zero'] double
 ---@field ['Formation Change Speed'] float
 ---@field ['Randomize Cloud Formation on Run'] boolean
 ---@field ['3D Noise Vertical Movement'] double
@@ -293,7 +293,7 @@
 ---@field ['Lunar Inclination Calibration'] double
 ---@field ['Daylight Savings Time'] boolean
 ---@field ['Total Days Elapsed'] int32
----@field ['Clouds Move With Time Of Day'] boolean
+---@field ['Clouds Move with Time of Day'] boolean
 ---@field ['Time of Day Movement Multiplier'] double
 ---@field ['Sky MID Parent Instances'] TMap<FString, TSoftObjectPtr<UMaterialInstance>>
 ---@field ['Fog Shadows'] double
@@ -303,7 +303,7 @@
 ---@field ['Disable Directional Light Shadows when Fully Shadowed by Clouds'] boolean
 ---@field ['Custom Light Function Material'] UMaterialInterface
 ---@field ['Force Light Functions On'] boolean
----@field ['Time Of Day Replication Period'] double
+---@field ['Time of Day Replication Period'] double
 ---@field ['Replicated Time of Day'] double
 ---@field ['Render Moon Directional Light'] boolean
 ---@field ['Custom Moon Light Actor'] ADirectionalLight
@@ -318,14 +318,14 @@
 ---@field ['Change to Simplified Material when Overcast'] boolean
 ---@field ['Simplified Material Cloud Coverage Threshold'] double
 ---@field ['Simplified Material Fade Length'] double
----@field ['Scale View Samples When Overcast'] double
+---@field ['Scale View Samples when Overcast'] double
 ---@field ['Current Volumetric Clouds MID'] int32
 ---@field ['Clouds Position'] FVector
 ---@field ['Cloud Phase Vector Multiplier'] FVector
 ---@field ['Rayleigh Scattering Color (Day)'] FLinearColor
 ---@field ['Rayleigh Scattering Color (Dawn/Dusk)'] FLinearColor
 ---@field ['Rayleigh Scattering Color (Night)'] FLinearColor
----@field ['Desaturate Rayleigh Scattering When Cloudy'] double
+---@field ['Desaturate Rayleigh Scattering when Cloudy'] double
 ---@field ['Current Time of Day Offset'] double
 ---@field ['Last Frame Time of Day'] double
 ---@field ['Time of Day Change Speed'] double
@@ -361,7 +361,7 @@
 ---@field ['Local Overcast 0-1'] double
 ---@field ['Override with New Changes'] boolean
 ---@field ['Overcast Turbulence MID'] UMaterialInstanceDynamic
----@field ['Scale View Samples When Camera Is in Cloud Layer'] double
+---@field ['Scale View Samples when Camera is In Cloud Layer'] double
 ---@field ['Low Material Quality Sample Count Scale'] double
 ---@field ['Medium Material Quality Sample Count Scale'] double
 ---@field ['Epic Material Quality Sample Count Scale'] double
@@ -445,13 +445,13 @@
 ---@field ['Exposure Brightness Range'] FFloatRange
 ---@field ['Apply Interior Adjustments'] boolean
 ---@field ['Extra Fog Start Distance in Interior'] double
----@field ['Fog Density Multiplier In Interior'] double
----@field ['Exposure Bias In Interior'] double
----@field ['Sky Light Intensity Multiplier In Interiors'] double
+---@field ['Fog Density Multiplier in Interior'] double
+---@field ['Exposure Bias in Interior'] double
+---@field ['Sky Light Intensity Multiplier in Interiors'] double
 ---@field ['Sun Light Intensity Multiplier in Interiors'] double
 ---@field ['Moon Light Intensity Multiplier in Interiors'] double
 ---@field ['Extra Sun Volumetric Scattering In Interiors'] double
----@field ['Extra Moon Volumetric Scattering in Interiors'] double
+---@field ['Extra Moon Volumetric Scattering In Interiors'] double
 ---@field ['Cached Inverted Global Occlusion'] double
 ---@field ['Occlusion Settings'] UUDS_OcclusionSettings_C
 ---@field ['Cloud Shadow Disable Threshold'] double
@@ -490,14 +490,14 @@
 ---@field ['Custom Sun Light Actor'] ADirectionalLight
 ---@field ['Max Sun Source Angle Scale'] double
 ---@field ['Sun Source Angle Softness'] double
----@field ['Scale Sun Radius As It Nears Horizon'] double
+---@field ['Scale Sun Radius as it Nears Horizon'] double
 ---@field ['Fade Down High Sun Light Intensity Below Horizon'] boolean
 ---@field ['Support Sky Atmo Affecting Height Fog'] boolean
 ---@field ['UDS Version'] FString
 ---@field ['UDS Version Info'] UUDS_VersionInfo_C
 ---@field ['Clouds B Time'] double
 ---@field ['Sky Atmosphere Overcast Luminance'] double
----@field ['Keep Planet Top at Camera XY Location'] boolean
+---@field ['Keep Planet Top At Camera XY Location'] boolean
 ---@field ['Control Sky Atmosphere Settings'] boolean
 ---@field ['Old Composite Weather'] FVector
 ---@field ['Old Composite Context'] FVector
@@ -645,7 +645,7 @@
 ---@field ['Cache Group 2D Clouds'] TArray<UDS_CachedProperties::Type>
 ---@field ['Wind Speed Multiplier'] double
 ---@field ['Fog Vertical Velocity'] double
----@field ['Volumetric Aurora Fade Distance (km)'] double
+---@field ['Volumetric Aurora Fade Distance (Km)'] double
 ---@field ['Cinematic Clouds View Sample Scale'] double
 ---@field ['Cinematic Clouds Shadow Sample Scale'] double
 ---@field ['Cinematic Clouds Tracing Max Distance'] double
@@ -655,12 +655,12 @@
 ---@field ['Modifier Targets'] TArray<double>
 ---@field ['Modifier Speeds'] TArray<double>
 ---@field ['Starting Modifiers'] TArray<UUDS_Modifier_C>
----@field ['Preview Starting Modifiers in Editor'] boolean
+---@field ['Preview Starting Modifiers In Editor'] boolean
 ---@field ['Replicate Modifiers to Clients'] boolean
 ---@field ['Using Volumetric Light Rays'] boolean
 ---@field ['Last Material Quality Level'] int32
 ---@field ['Last Effects Quality Level'] int32
----@field ['Instant Exposure Adjustment On Begin Play'] boolean
+---@field ['Instant Exposure Adjustment on Begin Play'] boolean
 ---@field ['Instant Exposure Post Process'] UPostProcessComponent
 ---@field ['Editor Tick Handler'] UObject
 ---@field ['Tick Delta Seconds'] double
@@ -673,7 +673,7 @@
 ---@field ['Custom Sky Sphere Static Mesh'] UStaticMesh
 ---@field ['Fallback Cloud Layer Altitude'] double
 ---@field ['Level Editor Tick'] boolean
----@field ['Time of Last Cloud Cache'] double
+---@field ['Time Of Last Cloud Cache'] double
 ---@field ['Occlusion State'] UUDS_OcclusionState_C
 ---@field ['Last Static Clouds Update Time'] double
 ---@field ['Static Clouds Dynamic Rotation'] double
@@ -735,7 +735,7 @@
 ---@field ['Path Tracer Fog Parent Mat'] TSoftObjectPtr<UMaterialInterface>
 ---@field ['Path Tracer Fog MID'] UMaterialInstanceDynamic
 ---@field ['Path Tracer Fog WB'] FWeightedBlendable
----@field ['Render Height Fog in Path Tracer using Post Process'] boolean
+---@field ['Render Height Fog In Path Tracer Using Post Process'] boolean
 ---@field ['Cloud Profile LUT Preview'] UTexture
 ---@field ['Previewing Cloud Profile Editor'] boolean
 ---@field ['Alternate Tick'] boolean

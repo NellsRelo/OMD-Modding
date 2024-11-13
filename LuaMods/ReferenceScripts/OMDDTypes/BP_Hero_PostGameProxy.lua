@@ -1,6 +1,6 @@
 ---@meta
 
----@class ABP_Hero_PostGameProxy_C : ARSTCinematicProxyActor
+---@class ABP_Hero_PostGameProxy_C : ARSTPostGameProxyActor
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field Arrow UArrowComponent
 ---@field SkeletalMesh USkeletalMeshComponent
@@ -26,6 +26,9 @@ function ABP_Hero_PostGameProxy_C:ReceiveBeginPlay() end
 ---@param bPrimary boolean
 ---@param bVictory boolean
 ABP_Hero_PostGameProxy_C['Init Proxy'] = function(bPrimary, bVictory) end
+---@param Skin URSTSkinDefinition
+ABP_Hero_PostGameProxy_C['Process Skin Data'] = function(Skin) end
+ABP_Hero_PostGameProxy_C['Process Attachment Data'] = function() end
 ---@param EntryPoint int32
 function ABP_Hero_PostGameProxy_C:ExecuteUbergraph_BP_Hero_PostGameProxy(EntryPoint) end
 

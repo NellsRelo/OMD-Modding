@@ -1,6 +1,8 @@
 ---@meta
 
 ---@class AClassroom_Boards_C : AActor
+---@field Posters_OMDT_10 UStaticMeshComponent
+---@field Posters_OMDT_06 UStaticMeshComponent
 ---@field ClassRoom_Board_02 UStaticMeshComponent
 ---@field ClassRoom_Board_03 UStaticMeshComponent
 ---@field Posters_OMDT_09 UStaticMeshComponent

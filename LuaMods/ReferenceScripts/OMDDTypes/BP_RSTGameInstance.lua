@@ -2,14 +2,11 @@
 
 ---@class UBP_RSTGameInstance_C : URSTGameInstance
 ---@field UberGraphFrame FPointerToUberGraphFrame
----@field SelectedExperience URSTUserFacingExperienceDef
 ---@field bCustomDisconnectHandled boolean
 ---@field PasswordModal URSTModal_TextPrompt
 ---@field InvalidPasswordModal URSTModal_OneChoice
 UBP_RSTGameInstance_C = {}
 
----@return UCommonSession_HostSessionRequest
-function UBP_RSTGameInstance_C:CreateHostingRequest() end
 function UBP_RSTGameInstance_C:ReceiveInit() end
 function UBP_RSTGameInstance_C:BP_RequestPasswordForSession() end
 ---@param Text FText

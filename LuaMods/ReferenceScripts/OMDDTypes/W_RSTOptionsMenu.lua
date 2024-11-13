@@ -4,16 +4,12 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field OnHide UWidgetAnimation
 ---@field OnShow UWidgetAnimation
----@field ButtonBack UW_ButtonBasic_C
----@field HorizontalBox_Tabs UHorizontalBox
 ---@field Image_109 UImage
 ---@field Image_Background UImage
----@field Image_TabBg UImage
----@field InputAction_TabLeft UW_RSTInputActionWidget_C
----@field InputAction_TabRight UW_RSTInputActionWidget_C
+---@field NavigationBar UW_TopBar_Generic_C
 ---@field OptionsBox UScrollBox
 ---@field Overlay_AllOptions UOverlay
----@field TabBar UHorizontalBox
+---@field ScrollBarSlider USlider
 ---@field TitleText UCommonTextBlock
 ---@field W_ExitMenuButton UW_ExitMenuButton_C
 ---@field TabDefinitions TArray<FStruct_OptionsTabInfo>
@@ -34,13 +30,25 @@
 ---@field AntiAliasing UW_RSTOption_ComboBox_C
 ---@field LocalizationComboBox UW_RSTOption_ComboBox_C
 ---@field TabContentMap TMap<Enum_OptionsTab::Type, UW_RSTOptionsTab_C>
----@field TabButtonMap TMap<UCommonButtonBase, UW_RSTOptionsTab_C>
 ---@field TabTypeMap TMap<int32, Enum_OptionsTab::Type>
 ---@field DependentOptionSpacerSize FVector2D
 ---@field GraphicsQualityBox UW_RSTOption_ComboBox_C
 ---@field MapKeybindingCategoryToWidget TMap<FString, UW_RSTOption_Category_C>
+---@field CurrentModal URSTModal_TwoChoices
+---@field bNoScrollUpdate boolean
+---@field SessionVisibilityComboBox UW_RSTOption_ComboBox_C
 UW_RSTOptionsMenu_C = {}
 
+---@param Array TArray<FString>
+function UW_RSTOptionsMenu_C:MakeSessionVisibilityOptions(Array) end
+---@param bIsChecked boolean
+function UW_RSTOptionsMenu_C:OnCrossplayToggleChanged(bIsChecked) end
+function UW_RSTOptionsMenu_C:ResetAllKeymappingSettings() end
+function UW_RSTOptionsMenu_C:ResetAllOptimizationSettings() end
+function UW_RSTOptionsMenu_C:ResetAllGameplaySettings() end
+function UW_RSTOptionsMenu_C:ResetAllGraphicsSettings() end
+function UW_RSTOptionsMenu_C:ResetAllControlsSettings() end
+function UW_RSTOptionsMenu_C:ResetAllAudioSettings() end
 ---@param MapPlayerKeyArgs FMapPlayerKeyArgs
 ---@param CallingWidget UW_RSTOption_KeyRemap_C
 UW_RSTOptionsMenu_C['On Key Selected'] = function(MapPlayerKeyArgs, CallingWidget) end
@@ -102,10 +110,12 @@ function UW_RSTOptionsMenu_C:ResetAntiAliasing(Settings, ApplyImmediately) end
 function UW_RSTOptionsMenu_C:ResetResolution(Settings, ApplyImmediately) end
 ---@param Settings URSTSettingsLocal
 function UW_RSTOptionsMenu_C:ResetWindowMode(Settings) end
-function UW_RSTOptionsMenu_C:ResetGraphicsAllSettings() end
 ---@param SelectedItem FString
 ---@param SelectionType ESelectInfo::Type
 function UW_RSTOptionsMenu_C:OnFrameRateLimitChanged(SelectedItem, SelectionType) end
+---@param SelectedItem FString
+---@param SelectionType ESelectInfo::Type
+function UW_RSTOptionsMenu_C:OnSessionVisibilityChanged(SelectedItem, SelectionType) end
 ---@param bIsChecked boolean
 function UW_RSTOptionsMenu_C:OnVSyncChanged(bIsChecked) end
 ---@param SelectedItem FString
@@ -281,8 +291,10 @@ function UW_RSTOptionsMenu_C:BP_GetDesiredFocusTarget() end
 ---@param SliderMin double
 ---@param SliderMax double
 ---@param ValueChangedEvent FSetupSliderValueChangedEvent
+---@param bHasResetButton boolean
+---@param DefaultValue double
 ---@param Slider UW_RSTOption_Slider_C
-function UW_RSTOptionsMenu_C:SetupSlider(Name, InitialValue, SliderMin, SliderMax, ValueChangedEvent, Slider) end
+function UW_RSTOptionsMenu_C:SetupSlider(Name, InitialValue, SliderMin, SliderMax, ValueChangedEvent, bHasResetButton, DefaultValue, Slider) end
 ---@param Name FText
 ---@param Options TArray<FString>
 ---@param InitialSelection FString
@@ -309,22 +321,29 @@ function UW_RSTOptionsMenu_C:ClearContent() end
 function UW_RSTOptionsMenu_C:AddContent_KeyMapping_Gamepad() end
 function UW_RSTOptionsMenu_C:AddContent_KeyMapping_Keyboard() end
 function UW_RSTOptionsMenu_C:AddContent_Optimization() end
-function UW_RSTOptionsMenu_C:AddContent_Gameplay() end
+---@param bCanUseCrossplay boolean
+function UW_RSTOptionsMenu_C:AddContent_Gameplay(bCanUseCrossplay) end
 function UW_RSTOptionsMenu_C:AddContent_Graphics_DLSS() end
 function UW_RSTOptionsMenu_C:AddContent_Graphics() end
 function UW_RSTOptionsMenu_C:AddContent_Controls() end
 function UW_RSTOptionsMenu_C:AddContent_Audio() end
 function UW_RSTOptionsMenu_C:Construct() end
 function UW_RSTOptionsMenu_C:Destruct() end
-function UW_RSTOptionsMenu_C:OnInitialized() end
----@param NewTabID int32
-function UW_RSTOptionsMenu_C:BP_OnTabIDSet(NewTabID) end
-function UW_RSTOptionsMenu_C:ResetTabColors() end
----@param Button UCommonButtonBase
-function UW_RSTOptionsMenu_C:BndEvt__W_RSTOptionsMenu_W_ButtonBasic_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(Button) end
 function UW_RSTOptionsMenu_C:OnClickedResetHUDNPE() end
----@param Button UCommonButtonBase
-function UW_RSTOptionsMenu_C:TabButtonClicked(Button) end
+UW_RSTOptionsMenu_C['BndEvt__W_RSTOptionsMenu_W_ExitMenuButton_K2Node_ComponentBoundEvent_1_On Button Clicked__DelegateSignature'] = function() end
+function UW_RSTOptionsMenu_C:OnResetGraphicsClicked() end
+function UW_RSTOptionsMenu_C:OnResetAudioClicked() end
+function UW_RSTOptionsMenu_C:OnResetGameplayClicked() end
+function UW_RSTOptionsMenu_C:OnResetOptimizationClicked() end
+function UW_RSTOptionsMenu_C:OnResetKeymappingClicked() end
+function UW_RSTOptionsMenu_C:ClearModal() end
+---@param Value float
+function UW_RSTOptionsMenu_C:BndEvt__W_RSTOptionsMenu_ScrollbarSlider_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature(Value) end
+---@param CurrentOffset float
+function UW_RSTOptionsMenu_C:BndEvt__W_RSTOptionsMenu_OptionsBox_K2Node_ComponentBoundEvent_2_OnUserScrolledEvent__DelegateSignature(CurrentOffset) end
+function UW_RSTOptionsMenu_C:RefreshScrollbar() end
+---@param Index int32
+UW_RSTOptionsMenu_C['BndEvt__W_RSTOptionsMenu_NavigationBar_K2Node_ComponentBoundEvent_3_On Tab Selected__DelegateSignature'] = function(Index) end
 ---@param EntryPoint int32
 function UW_RSTOptionsMenu_C:ExecuteUbergraph_W_RSTOptionsMenu(EntryPoint) end
 

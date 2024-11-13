@@ -1,6 +1,18 @@
 ---@meta
 
 ---@class ABP_Museum_Dome_Connection_WestWing_C : ABP_OMDTrapGrid_C
+---@field ColumnTrim_CastStone_1200W_Deco3 UStaticMeshComponent
+---@field Column_Square_2_4_StoneWall_TrimA_SM1 UStaticMeshComponent
+---@field Column_Square_2_4_StoneWall_TrimA_SM UStaticMeshComponent
+---@field Floor_4x4_StoneBlock_SM16 UStaticMeshComponent
+---@field Garden_Railing_EndCap_SM_Merged12 UStaticMeshComponent
+---@field Lionhead_SM UStaticMeshComponent
+---@field Floor_4x4_StoneBlock_SM27 UStaticMeshComponent
+---@field SM_MERGED_Garden_Railing_B10 UStaticMeshComponent
+---@field ColumnTrim_CastStone_1200W_Deco2 UStaticMeshComponent
+---@field ColumnTrim_CastStone_1200W_Deco1 UStaticMeshComponent
+---@field ColumnTrim_CastStone_1200W_Deco UStaticMeshComponent
+---@field Stair_2x4_StoneWallBlock_SM1 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM29 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM35 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM34 UStaticMeshComponent
@@ -12,7 +24,6 @@
 ---@field Wall_4x4x05_Stonewall_SM26 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM28 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM25 UStaticMeshComponent
----@field Floor_4x4_StoneBlock_SM30 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM29 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM15 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM24 UStaticMeshComponent
@@ -42,7 +53,6 @@
 ---@field Wall_4x4x05_Stonewall_SM15 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM14 UStaticMeshComponent
 ---@field RSTTrapGridBox URSTTrapGridBoxComponent
----@field Wall_4x4x05_Stonewall_SM13 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM12 UStaticMeshComponent
 ---@field Proto_Dome_D_Tile_FrontFace_Glass_Full1 UStaticMeshComponent
 ---@field Proto_Dome_D_FrontFace_Full1 UStaticMeshComponent
@@ -51,7 +61,6 @@
 ---@field Garden_Railing_EndCap_SM_Merged10 UStaticMeshComponent
 ---@field Garden_Railing_EndCap_SM_Merged9 UStaticMeshComponent
 ---@field Garden_Railing_EndCap_SM_Merged7 UStaticMeshComponent
----@field SM_MERGED_Garden_Railing_B5 UStaticMeshComponent
 ---@field SM_MERGED_Garden_Railing_B4 UStaticMeshComponent
 ---@field SM_MERGED_Garden_Railing_B3 UStaticMeshComponent
 ---@field SM_MERGED_Garden_Railing_B2 UStaticMeshComponent
@@ -64,8 +73,6 @@
 ---@field Garden_Railing_EndCap_SM_Merged3 UStaticMeshComponent
 ---@field Garden_Railing_EndCap_SM_Merged2 UStaticMeshComponent
 ---@field Garden_Railing_EndCap_SM_Merged1 UStaticMeshComponent
----@field ASN_ChangE_Statue UStaticMeshComponent
----@field Garden_Railing_EndCap_SM_Merged UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM22 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM21 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM11 UStaticMeshComponent

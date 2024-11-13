@@ -2,6 +2,7 @@
 
 ---@class ABP_MaxMirror_C : ARSTInteractableActor
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field Magic_MirrorClassroom_01 UStaticMeshComponent
 ---@field Scene USceneComponent
 ---@field InteractVolume UCapsuleComponent
 ---@field Root USceneComponent
@@ -11,7 +12,6 @@
 ---@field Mirror_Shard_2 UStaticMeshComponent
 ---@field Mirror_Shard_1 UStaticMeshComponent
 ---@field Mirror_Shard_0 UStaticMeshComponent
----@field Mirror_Frame UStaticMeshComponent
 ---@field ShardMap TMap<FGameplayTag, UStaticMeshComponent>
 ---@field KeyGrantListener UAsyncAction_ListenForGameplayMessage
 ---@field VideoNPC ARSTCharacter

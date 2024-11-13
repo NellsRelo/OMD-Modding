@@ -3,7 +3,6 @@
 ---@class UW_LoadingScreen_Container_C : UCommonUserWidget
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field MapSpecificWidgetSlot UNamedSlot
----@field W_LoadingScreen_Level UW_LoadingScreen_Level_C
 ---@field ContentWidgetClass TSubclassOf<UUserWidget>
 UW_LoadingScreen_Container_C = {}
 

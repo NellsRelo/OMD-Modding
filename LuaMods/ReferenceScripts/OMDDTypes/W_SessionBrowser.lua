@@ -24,7 +24,7 @@
 ---@field bSearchDisableCrossplay boolean
 ---@field CachedResults TArray<UCommonSession_SearchResult>
 ---@field AllText FString
----@field bCanUseCrossPlay boolean
+---@field bCanUseCrossplay boolean
 ---@field bWaitingOnPermissionCheck boolean
 ---@field bSearchPending boolean
 UW_SessionBrowser_C = {}
@@ -51,8 +51,6 @@ function UW_SessionBrowser_C:UpdateInteractableInternals() end
 function UW_SessionBrowser_C:BP_OnDeactivated() end
 UW_SessionBrowser_C['BndEvt__W_SessionBrowser_W_ExitMenuButton_K2Node_ComponentBoundEvent_3_On Button Clicked__DelegateSignature'] = function() end
 function UW_SessionBrowser_C:OnPendingJoinSessionChanged() end
----@param Result FOnlineResultInformation
-function UW_SessionBrowser_C:OnJoiningSessionComplete(Result) end
 ---@param bIsChecked boolean
 function UW_SessionBrowser_C:BndEvt__W_SessionBrowser_PasswordProtectedCheckbox_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature(bIsChecked) end
 ---@param bIsChecked boolean

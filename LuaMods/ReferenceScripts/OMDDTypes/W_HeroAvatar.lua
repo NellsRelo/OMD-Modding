@@ -3,12 +3,14 @@
 ---@class UW_HeroAvatar_C : URSTUserWidget
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field HeroImage UImage
+---@field LoadingIndicator UImage
 ---@field HeroActor AWidgetActor_C
 ---@field HeroActorClass TSubclassOf<AActor>
 ---@field HeroSelectWidget UW_HeroSelection_C
 ---@field OnActorSpawned FW_HeroAvatar_COnActorSpawned
 UW_HeroAvatar_C = {}
 
+UW_HeroAvatar_C['On Hero Load Finished'] = function() end
 function UW_HeroAvatar_C:ResumeSceneCapture() end
 function UW_HeroAvatar_C:PauseSceneCapture() end
 ---@param Pawn_Tag FGameplayTag

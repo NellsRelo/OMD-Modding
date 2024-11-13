@@ -5,6 +5,7 @@
 ---@field NumUnitsToSpawn int32
 ---@field SourceActorTransform FTransform
 ---@field PawnDefinitionToSpawn URSTPawnDefinitionEnemy
+---@field DeathGameplayCueTag FGameplayTag
 UGA_Death_Elemental_Water_C = {}
 
 ---@param EventData FGameplayEventData

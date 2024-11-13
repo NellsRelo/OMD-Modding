@@ -25,6 +25,11 @@
 ---@field ['Granted Persistent Bonus Effects'] TArray<FActiveGameplayEffectHandle>
 UGA_Wand_Reload_C = {}
 
+---@param ActorInfo FGameplayAbilityActorInfo
+---@param Handle FGameplayAbilitySpecHandle
+---@param RelevantTags FGameplayTagContainer
+---@return boolean
+function UGA_Wand_Reload_C:K2_CanActivateAbility(ActorInfo, Handle, RelevantTags) end
 ---@param Cue FGameplayTag
 UGA_Wand_Reload_C['Get Reload Cue'] = function(Cue) end
 UGA_Wand_Reload_C['Calculate Time Windows'] = function() end
@@ -52,6 +57,7 @@ UGA_Wand_Reload_C['Clear Input Task'] = function() end
 function UGA_Wand_Reload_C:BP_PerformTaggedPrediction(Tag) end
 UGA_Wand_Reload_C['Apply Bonus Effects'] = function() end
 UGA_Wand_Reload_C['Clear Additional Effects'] = function() end
+UGA_Wand_Reload_C['Record Bonus Stat'] = function() end
 ---@param EntryPoint int32
 function UGA_Wand_Reload_C:ExecuteUbergraph_GA_Wand_Reload(EntryPoint) end
 

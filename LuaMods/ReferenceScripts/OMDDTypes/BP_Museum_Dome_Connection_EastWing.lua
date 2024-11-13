@@ -1,10 +1,16 @@
 ---@meta
 
 ---@class ABP_Museum_Dome_Connection_EastWing_C : ABP_OMDTrapGrid_C
+---@field SM_MERGED_Garden_Railing_B17 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM30 UStaticMeshComponent
+---@field SM_MERGED_Garden_Railing_B16 UStaticMeshComponent
+---@field RSTTrapGridBox10 URSTTrapGridBoxComponent
+---@field Wall_4x4x05_Stonewall_SM29 UStaticMeshComponent
+---@field SM_MERGED_Garden_Railing_B15 UStaticMeshComponent
+---@field Floor_4x4_StoneBlock_SM35 UStaticMeshComponent
+---@field Floor_4x4_StoneBlock_SM27 UStaticMeshComponent
 ---@field Column_Square_1_6_StoneWall_SM8 UStaticMeshComponent
 ---@field Column_Square_1_6_StoneWall_SM7 UStaticMeshComponent
----@field RSTTrapGridBox9 URSTTrapGridBoxComponent
----@field RSTTrapGridBox8 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox7 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox6 URSTTrapGridBoxComponent
 ---@field SM_MERGED_Garden_Railing_B14 UStaticMeshComponent
@@ -31,7 +37,6 @@
 ---@field Floor_4x4_StoneBlock_SM30 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM26 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM25 UStaticMeshComponent
----@field Column_Square_1_6_StoneWall_SM6 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM29 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM28 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM24 UStaticMeshComponent
@@ -50,7 +55,6 @@
 ---@field Proto_Dome_E_Tile_Corner_Glass2 UStaticMeshComponent
 ---@field Proto_Dome_E_Tile_Corner2 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM18 UStaticMeshComponent
----@field Stair_1x4_StoneWallBlock_SM UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM5 UStaticMeshComponent
 ---@field RSTTrapGridBox5 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox4 URSTTrapGridBoxComponent
@@ -96,8 +100,6 @@
 ---@field Wall_4x4x05_Stonewall_SM8 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM16 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM15 UStaticMeshComponent
----@field Floor_4x4_StoneBlock_SM13 UStaticMeshComponent
----@field Floor_4x4_StoneBlock_SM12 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM7 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM6 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM4 UStaticMeshComponent

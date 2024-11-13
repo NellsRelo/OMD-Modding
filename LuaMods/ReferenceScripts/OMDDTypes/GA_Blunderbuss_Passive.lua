@@ -4,8 +4,11 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field SpawnedPet ARSTBlunderbussPet
 ---@field PetSlotTag FName
+---@field DefaultPetClass TSubclassOf<AActor>
 UGA_Blunderbuss_Passive_C = {}
 
+---@param PetClass TSubclassOf<AActor>
+UGA_Blunderbuss_Passive_C['Get Pet Class'] = function(PetClass) end
 ---@param Output USceneComponent
 UGA_Blunderbuss_Passive_C['Get Pet Attach Component'] = function(Output) end
 ---@param SpawnedActor AActor

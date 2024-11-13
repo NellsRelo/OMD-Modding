@@ -38,6 +38,7 @@ ARSTAIAttachmentStatic = {}
 ---@field AbilitySystemComponent URSTAbilitySystemComponent
 ---@field GrantedAbilityHandles TArray<FRSTAbilitySet_GrantedHandles>
 ---@field GrantedTagHandles TArray<FRSTLooseTagHandle>
+---@field VoiceIndexMax int32
 ---@field InteractionOption FRSTInteractionOption
 ---@field ImpactBloodGameplayCueTagMap TMap<FGameplayTag, FGameplayTag>
 ---@field ComboFlyoffClass TSubclassOf<ARSTFlyoff>
@@ -262,6 +263,7 @@ ARSTAIPath = {}
 ---@field DistortionBlacklistedCharacters TArray<URSTPawnDefinition>
 ---@field SpawnDirection UArrowComponent
 ---@field bActivateAtStart boolean
+---@field bAllowRespawn boolean
 ---@field bSpawnAtCenter boolean
 ---@field MinSpawnCount int32
 ---@field MaxSpawnCount int32
@@ -277,6 +279,7 @@ ARSTAIPath = {}
 ---@field StartingDoor TSoftObjectPtr<ARSTDoor>
 ARSTAISpawner = {}
 
+function ARSTAISpawner:OnRespawnTimer() end
 function ARSTAISpawner:OnDelayedSpawnTimer() end
 ---@return int32
 function ARSTAISpawner:GetCurrentAliveCount() end
@@ -414,6 +417,7 @@ ARSTBlunderbussPetUltimate = {}
 ---@field HomingTargetSocketName FName
 ---@field AirborneRecoveryTags FGameplayTagContainer
 ---@field ComponentCollisionOverrides TArray<FRSTComponentCollisionOverride>
+---@field CueCooldownTimes TMap<FGameplayTag, float>
 ARSTCharacter = {}
 
 function ARSTCharacter:StartAdvance() end
@@ -497,7 +501,6 @@ function ARSTCharacter:GetRiftPointCost() end
 ---@return URSTPawnDefinition
 function ARSTCharacter:GetPawnDefinition() end
 function ARSTCharacter:FinishAdvance() end
-function ARSTCharacter:DestroyDueToRift() end
 function ARSTCharacter:BP_OnDeathStarted() end
 function ARSTCharacter:BP_OnDeathFinished() end
 ---@param Damage float
@@ -673,6 +676,7 @@ function ARSTFlyoff:GetFlyoffLifeSpan() end
 ---@field bAllowJoinInProgress boolean
 ---@field ModifierComponent URSTModifierComponent
 ---@field HubMapName FString
+---@field HostKeyFilter FGameplayTagContainer
 ---@field bProcessAddModifiers boolean
 ---@field OnHotbarSlotCountChanged FRSTGameModeBaseOnHotbarSlotCountChanged
 ---@field InactivePlayerArray TArray<APlayerState>
@@ -818,6 +822,7 @@ ARSTGameSession = {}
 ---@field bIsHotbarRandomized boolean
 ---@field DraftOrder TArray<int32>
 ---@field OnTeamCompositionChanged FRSTGameStateBaseOnTeamCompositionChanged
+---@field CinematicInvulnEffect TSubclassOf<UGameplayEffect>
 ARSTGameStateBase = {}
 
 ---@param isTimedBreakActive boolean
@@ -839,6 +844,8 @@ function ARSTGameStateBase:SetPickupDropChanceAddition(NewValue) end
 function ARSTGameStateBase:SetGoBreakActive(IsActive, BreakTag) end
 ---@param NewPhase ERSTGamePhase
 function ARSTGameStateBase:SetGamePhase(NewPhase) end
+---@param bInCinematicMode boolean
+function ARSTGameStateBase:SetCinematicMode(bInCinematicMode) end
 ---@param LocationToSpawnAt FVector
 ---@param PickupTableTag FGameplayTag
 function ARSTGameStateBase:Server_SpawnPickupAtLocation(LocationToSpawnAt, PickupTableTag) end
@@ -862,6 +869,10 @@ function ARSTGameStateBase:RSTMissionChoiceDelegate__DelegateSignature(GameState
 ---@param BossCharacter ARSTCharacter
 function ARSTGameStateBase:RSTBossDelegate__DelegateSignature(BossCharacter) end
 function ARSTGameStateBase:RSTAccoladesUpdated__DelegateSignature() end
+---@param Target AActor
+function ARSTGameStateBase:ReleaseSpecialTarget(Target) end
+---@param NewTarget AActor
+function ARSTGameStateBase:RegisterSpecialTarget(NewTarget) end
 ---@param Character ARSTCharacter
 function ARSTGameStateBase:ProcessBossDied(Character) end
 ---@param PreviousBoss ARSTCharacter
@@ -953,6 +964,10 @@ function ARSTGameStateBase:GetRiftPoints() end
 function ARSTGameStateBase:GetRiftIsProtectedForReason(Reason) end
 ---@return boolean
 function ARSTGameStateBase:GetRiftIsProtected() end
+---@param Location FVector
+---@param Radius float
+---@param OutActors TArray<AActor>
+function ARSTGameStateBase:GetPossibleTargetsInRange(Location, Radius, OutActors) end
 ---@param InStatTags FGameplayTagContainer
 ---@param InSubStatTag FGameplayTag
 ---@param bRunStats boolean
@@ -1056,6 +1071,7 @@ function ARSTHammerDecoy:GetTeam() end
 ---@class ARSTHeroSelectProxyActor : AActor
 ---@field SkeletalMeshComp USkeletalMeshComponentBudgeted
 ---@field AttachmentManager URSTAttachmentManagerComponent
+---@field SkinDefinition URSTSkinDefinition
 ARSTHeroSelectProxyActor = {}
 
 
@@ -1346,6 +1362,7 @@ function ARSTOnslaughtCoordinator:GetAllPawns() end
 ---@param ActionName FString
 function ARSTOnslaughtCoordinator:DoOnslaughtAction(ActionName) end
 function ARSTOnslaughtCoordinator:ClearOnslaught() end
+function ARSTOnslaughtCoordinator:CheckOnslaughtModifiersCompleted() end
 ---@param modifier URSTModifierBase
 function ARSTOnslaughtCoordinator:CheckOnslaughtModifier(modifier) end
 ---@param spawnedEntity ARSTAICharacter
@@ -1425,6 +1442,7 @@ ARSTPlayerCameraManager = {}
 ---@field NearbyActorsRadius float
 ---@field DeathCameraMode TSubclassOf<URSTCameraMode>
 ---@field bSpawningFromRejoin boolean
+---@field CurrentlyAppliedSkin URSTSkinDefinition
 ARSTPlayerCharacter = {}
 
 function ARSTPlayerCharacter:RecallNearbyActorsBP() end
@@ -1433,6 +1451,8 @@ function ARSTPlayerCharacter:RecallNearbyActorsBP() end
 function ARSTPlayerCharacter:OnTrapPlacementFailed(Trap, FailureReason) end
 ---@param Trap ARSTTrap
 function ARSTPlayerCharacter:OnTrapPlaced(Trap) end
+---@param RSTPlayerState ARSTPlayerState
+function ARSTPlayerCharacter:OnSkinDefinitionChanged(RSTPlayerState) end
 ---@param Data FRSTReviveData
 function ARSTPlayerCharacter:OnReviveDataChanged(Data) end
 ---@param PRSTag FGameplayTag
@@ -1484,6 +1504,8 @@ function ARSTPlayerCharacter:BP_OnInteract(ActorInfo) end
 ---@field OnPlayerHeroSelected FRSTPlayerControllerOnPlayerHeroSelected
 ARSTPlayerController = {}
 
+---@param LevelName FName
+function ARSTPlayerController:UnloadStreamLevel(LevelName) end
 ---@param DefinitionId FPrimaryAssetId
 function ARSTPlayerController:SkinDefinitionLoaded(DefinitionId) end
 ---@param bEnabled boolean
@@ -1497,6 +1519,8 @@ function ARSTPlayerController:ServerCheat(Msg) end
 function ARSTPlayerController:Server_SetUnlockedHeroes(UnlockedHeroes) end
 ---@param Upgrades TArray<URSTUpgradeDefinition>
 function ARSTPlayerController:Server_SetSelectedUpgrades(Upgrades) end
+---@param SelectedSkins TArray<FRSTSelectedSkinRepl>
+function ARSTPlayerController:Server_SetSelectedSkins(SelectedSkins) end
 ---@param HotbarItems TArray<URSTInventoryItemDefinition>
 function ARSTPlayerController:Server_SetHotbarItems(HotbarItems) end
 ---@param SelectedHeroTag FGameplayTag
@@ -1537,8 +1561,12 @@ function ARSTPlayerController:RefreshHotbarSlotCount() end
 ---@param DefinitionId FPrimaryAssetId
 function ARSTPlayerController:PawnDefinitionLoaded(DefinitionId) end
 function ARSTPlayerController:OnToggleTabWidget() end
+function ARSTPlayerController:OnSkinSelectionUpdated() end
 ---@param shouldForceSelect boolean
 function ARSTPlayerController:OnRemoveThreadSelection(shouldForceSelect) end
+---@param InTag FGameplayTag
+---@param NewCount int32
+function ARSTPlayerController:OnHideHUDChanged(InTag, NewCount) end
 function ARSTPlayerController:OnHeroUnlocksUpdated() end
 ---@param SelectedHeroes TArray<FGameplayTag>
 function ARSTPlayerController:OnHeroDraftSelectedHeroes(SelectedHeroes) end
@@ -1551,6 +1579,10 @@ function ARSTPlayerController:OnDisplayHeroDraftSelectedHeroes(SelectedHeroes) e
 ---@param DesiredHeroes TArray<FGameplayTag>
 function ARSTPlayerController:OnDisplayHeroDraftDesiredHeroes(DesiredHeroes) end
 function ARSTPlayerController:LockInHero() end
+---@param LevelName FName
+function ARSTPlayerController:LoadStreamLevel(LevelName) end
+---@param PlayerToKick ARSTPlayerState
+function ARSTPlayerController:KickPlayer(PlayerToKick) end
 function ARSTPlayerController:K2_OnStartAutoRun() end
 function ARSTPlayerController:K2_OnEndAutoRun() end
 ---@return ARSTPlayerState
@@ -1566,6 +1598,8 @@ function ARSTPlayerController:GetCachedPawnDefinitionTag() end
 ---@param bIsInteracting boolean
 ---@param InteractingNPC AActor
 function ARSTPlayerController:DoNPCInteraction(bIsInteracting, InteractingNPC) end
+---@param BanReason FText
+function ARSTPlayerController:ClientWasBanned(BanReason) end
 ---@param shouldForceSelect boolean
 function ARSTPlayerController:Client_RemoveThreadSelection(shouldForceSelect) end
 function ARSTPlayerController:Client_NotifyHubStarted() end
@@ -1581,6 +1615,10 @@ function ARSTPlayerController:Client_FlushGameStats(FlushStats) end
 function ARSTPlayerController:Client_EndGame(bDidWin, PostGameStats) end
 ---@param threadIndex int32
 function ARSTPlayerController:Client_DisplayThreadSelection(threadIndex) end
+---@param PlayerToBan ARSTPlayerState
+function ARSTPlayerController:BanPlayer(PlayerToBan) end
+---@param SuggestedTarget AActor
+function ARSTPlayerController:AutoManageActiveCameraTarget(SuggestedTarget) end
 
 
 ---@class ARSTPlayerStart : APlayerStart
@@ -1595,6 +1633,7 @@ ARSTPlayerStart = {}
 ---@field OnUniqueNetIdWasSet FRSTPlayerStateOnUniqueNetIdWasSet
 ---@field OnPlayerIndexSet FRSTPlayerStateOnPlayerIndexSet
 ---@field PlatformOSS FString
+---@field CrossplayPlatform FString
 ---@field RawUniqueNetIdStr FString
 ---@field AbilitySystemComponent URSTAbilitySystemComponent
 ---@field OnPawnDefinitionChanged FRSTPlayerStateOnPawnDefinitionChanged
@@ -1642,6 +1681,7 @@ ARSTPlayerStart = {}
 ---@field OnVoiceEnabledUpdated FRSTPlayerStateOnVoiceEnabledUpdated
 ---@field bVoiceEnabled boolean
 ---@field UnlockedHeroes FGameplayTagContainer
+---@field SelectedSkins TArray<FRSTSelectedSkinRepl>
 ---@field PlayerReadyGameplayEffectClass TSubclassOf<UGameplayEffect>
 ---@field PRSReadyEffectHandles TMap<FGameplayTag, FActiveGameplayEffectHandle>
 ---@field bAllowUltimateChargeWhileActive boolean
@@ -1742,6 +1782,11 @@ function ARSTPlayerState:GetTagIdentifier() end
 ---@param bRunStats boolean
 ---@return int32
 function ARSTPlayerState:GetStatValue(InStatTag, InSubStatTag, bRunStats) end
+---@param OutSkins TMap<FGameplayTag, FGameplayTag>
+function ARSTPlayerState:GetSelectedSkins(OutSkins) end
+---@param HeroTag FGameplayTag
+---@return FGameplayTag
+function ARSTPlayerState:GetSelectedSkin(HeroTag) end
 ---@return URSTAbilitySystemComponent
 function ARSTPlayerState:GetRSTAbilitySystemComponent() end
 ---@param PlacementLimitGroup FGameplayTag
@@ -1756,6 +1801,8 @@ function ARSTPlayerState:GetPlayerIndex() end
 function ARSTPlayerState:GetLoadoutThreadCount() end
 ---@return int32
 function ARSTPlayerState:GetGeneralThreadCount() end
+---@return FString
+function ARSTPlayerState:GetCrossplayPlatform() end
 ---@param Tag FGameplayTag
 ---@return TSoftObjectPtr<URSTAbilityUIData>
 function ARSTPlayerState:GetAbilityUIData(Tag) end
@@ -1784,6 +1831,7 @@ function ARSTPlayerState:AddUltimateCharge(amount) end
 ---@class ARSTPostGameLevelSequenceActor : AActor
 ---@field OnProxyActorReady FRSTPostGameLevelSequenceActorOnProxyActorReady
 ---@field SpawnedProxies TArray<AActor>
+---@field ProxyHeroData TArray<FRSTPostGameHeroData>
 ---@field OnSequenceReady FRSTPostGameLevelSequenceActorOnSequenceReady
 ---@field OnSequenceFinished FRSTPostGameLevelSequenceActorOnSequenceFinished
 ---@field OnSequencePlaying FRSTPostGameLevelSequenceActorOnSequencePlaying
@@ -1792,9 +1840,6 @@ function ARSTPlayerState:AddUltimateCharge(amount) end
 ---@field CurrentSequenceActor ALevelSequenceActor
 ARSTPostGameLevelSequenceActor = {}
 
----@param HeroTags TArray<FGameplayTag>
----@param bVictory boolean
-function ARSTPostGameLevelSequenceActor:SpawnHeroProxies(HeroTags, bVictory) end
 function ARSTPostGameLevelSequenceActor:SequencePlaying() end
 function ARSTPostGameLevelSequenceActor:SequenceFinished() end
 ---@param ProxyActor AActor
@@ -1819,6 +1864,12 @@ function ARSTPostGameLevelSequenceActor:K2_InitSpawnedProxyPawn(SpawnedProxy, In
 ---@param bVictory boolean
 function ARSTPostGameLevelSequenceActor:InitPostGameSequence(bVictory) end
 function ARSTPostGameLevelSequenceActor:CancelLevelSequence() end
+
+
+---@class ARSTPostGameProxyActor : ARSTCinematicProxyActor
+---@field SkinDefinition URSTSkinDefinition
+ARSTPostGameProxyActor = {}
+
 
 
 ---@class ARSTProjectile : ARNetworkProxyActor
@@ -1853,6 +1904,7 @@ function ARSTPostGameLevelSequenceActor:CancelLevelSequence() end
 ---@field OnDormancyChanged FRSTProjectileOnDormancyChanged
 ---@field bIsDormant boolean
 ---@field TaggedMetadata TMap<FGameplayTag, float>
+---@field BouncesAcknowledged int32
 ---@field HomingContinuousDetectionRange float
 ---@field HomingContinuousUpdateFrequency float
 ---@field bUpdateHomingTargetImmediately boolean
@@ -1911,6 +1963,7 @@ function ARSTProjectile:RSTProjectileDormancyChanged__DelegateSignature(Projecti
 ---@param TargetSocket FName
 function ARSTProjectile:RegisterHomingTarget(TargetComponent, TargetSocket) end
 function ARSTProjectile:OnRep_IsDormant() end
+function ARSTProjectile:OnRep_BouncesAcknowledged() end
 ---@param ImpactResult FHitResult
 ---@param ImpactVelocity FVector
 function ARSTProjectile:OnProjectileBounce(ImpactResult, ImpactVelocity) end
@@ -2030,6 +2083,8 @@ ARSTRift = {}
 function ARSTRift:RiftEnterBeginOverlap(OverlappedComp, OtherActor, OtherComp, OtherBodyIndex, bFromSweep, SweepResult) end
 ---@return FTransform
 function ARSTRift:GetRiftTeleportTransform() end
+---@return FVector
+function ARSTRift:GetRiftFXLocation() end
 ---@param ActorInfo FGameplayAbilityActorInfo
 function ARSTRift:BP_OnInteract(ActorInfo) end
 ---@return FTransform
@@ -2657,6 +2712,20 @@ FRSTAttachmentCueData = {}
 
 
 
+---@class FRSTAttachmentSkinMaterialOverride
+---@field SlotIdentifiers TArray<FGameplayTag>
+---@field MaterialOverride URSTSkinFragment_MaterialOverride
+FRSTAttachmentSkinMaterialOverride = {}
+
+
+
+---@class FRSTAttachmentSkinMeshReplacement
+---@field SlotIdentifiers TArray<FGameplayTag>
+---@field MeshOverride URSTSkinFragment_MeshReplacement
+FRSTAttachmentSkinMeshReplacement = {}
+
+
+
 ---@class FRSTAttachmentTransactionData
 FRSTAttachmentTransactionData = {}
 
@@ -2750,6 +2819,7 @@ FRSTBuffVolumeConditions = {}
 
 
 ---@class FRSTBuffVolumeData
+---@field ExcludeTags FGameplayTagContainer
 ---@field bAggregateParents boolean
 ---@field Effects TArray<FRSTBuffVolumeElement_GameplayEffect>
 ---@field Events TArray<FRSTBuffVolumeElement_BlueprintEvent>
@@ -2821,6 +2891,13 @@ FRSTCharacterHitParams = {}
 ---@field bResetOnStart boolean
 ---@field bResetOnRejoin boolean
 FRSTChargeConfigData = {}
+
+
+
+---@class FRSTChatMessage
+---@field MessageType ERSTChatMessageType
+---@field Message FString
+FRSTChatMessage = {}
 
 
 
@@ -3601,9 +3678,28 @@ FRSTPingTrackerData = {}
 
 
 
+---@class FRSTPlayerNameData
+FRSTPlayerNameData = {}
+
+
 ---@class FRSTPlayerNotificationData
 ---@field MessageTag FGameplayTag
 FRSTPlayerNotificationData = {}
+
+
+
+---@class FRSTPlayerNotificationPriorityData
+---@field SharedTag FGameplayTag
+---@field TagUserFacingDataList TArray<FRSTPlayerNotificationUserFacingData>
+FRSTPlayerNotificationPriorityData = {}
+
+
+
+---@class FRSTPlayerNotificationUserFacingData
+---@field MessageTag FGameplayTag
+---@field MessageTitle FText
+---@field MessageDescription FText
+FRSTPlayerNotificationUserFacingData = {}
 
 
 
@@ -3637,6 +3733,10 @@ FRSTPlayerProfileMessage_KeysChanged = {}
 
 ---@class FRSTPlayerProfileMessage_SkinChanged : FRSTPlayerProfileMessage
 FRSTPlayerProfileMessage_SkinChanged = {}
+
+
+---@class FRSTPlayerProfileMessage_SkinUnlocksChanged : FRSTPlayerProfileMessage
+FRSTPlayerProfileMessage_SkinUnlocksChanged = {}
 
 
 ---@class FRSTPlayerProfileMessage_SkullsChanged : FRSTPlayerProfileMessage
@@ -3678,6 +3778,10 @@ FRSTPlayerStatusEffectData = {}
 ---@field Duration float
 FRSTPlayerStatusEffectDataRepl = {}
 
+
+
+---@class FRSTPostGameHeroData
+FRSTPostGameHeroData = {}
 
 
 ---@class FRSTPostGameSequence
@@ -3887,6 +3991,13 @@ FRSTSavedSubStatEntry = {}
 FRSTScalabilitySnapshot = {}
 
 
+---@class FRSTSelectedSkinRepl
+---@field HeroTag FGameplayTag
+---@field SkinTag FGameplayTag
+FRSTSelectedSkinRepl = {}
+
+
+
 ---@class FRSTSelectedUpgradeData
 ---@field SelectedUpgrades TArray<URSTUpgradeDefinition>
 FRSTSelectedUpgradeData = {}
@@ -3895,6 +4006,14 @@ FRSTSelectedUpgradeData = {}
 
 ---@class FRSTSellTrapAbilityRequest
 FRSTSellTrapAbilityRequest = {}
+
+
+---@class FRSTSkinFragment_MaterialOverride_ReferenceMeshes
+---@field ReferenceSkeletalMesh USkeletalMesh
+---@field ReferenceStaticMesh UStaticMesh
+---@field ReferenceMaterials TArray<UMaterialInterface>
+FRSTSkinFragment_MaterialOverride_ReferenceMeshes = {}
+
 
 
 ---@class FRSTSpawnGroupOnDeathParameters
@@ -3930,6 +4049,7 @@ FRSTSpellbookOperationMessage = {}
 ---@field Frozen boolean
 ---@field Launched boolean
 ---@field Pulled boolean
+---@field EnteringRift boolean
 FRSTStatusEffectCategoryBools = {}
 
 
@@ -4042,6 +4162,13 @@ FRSTTrapPlacementRequest = {}
 ---@class FRSTUnstableRiftMissionProperties
 ---@field UnstableRiftDistortion URSTMetaDistortionDefinition
 FRSTUnstableRiftMissionProperties = {}
+
+
+
+---@class FRSTUpgradeLinkData
+---@field Key FGameplayTag
+---@field Value FGameplayTag
+FRSTUpgradeLinkData = {}
 
 
 
@@ -4265,6 +4392,13 @@ IRSTRangedCombatAbilityInterface = {}
 
 ---@class IRSTRangedCombatInterface : IInterface
 IRSTRangedCombatInterface = {}
+
+
+---@class IRSTSkinnable : IInterface
+IRSTSkinnable = {}
+
+---@return UMeshComponent
+function IRSTSkinnable:GetSkinnableMeshComponent() end
 
 
 ---@class IRSTTagIdentifierInterface : IInterface
@@ -5521,6 +5655,8 @@ function URSTAchievementHelpers:GetAllThreadMilestones(OutTags) end
 ---@field GameMouseCaptureMode EMouseCaptureMode
 URSTActivatableWidget = {}
 
+---@param Action UInputAction
+function URSTActivatableWidget:UnregisterInputAction(Action) end
 function URSTActivatableWidget:StartNPE() end
 ---@return boolean
 function URSTActivatableWidget:ShouldStartNPE() end
@@ -5528,6 +5664,11 @@ function URSTActivatableWidget:ShouldStartNPE() end
 function URSTActivatableWidget:SetNPEStep(Step) end
 ---@param Enabled boolean
 function URSTActivatableWidget:SetInteractableInternals(Enabled) end
+function URSTActivatableWidget:RSTWidgetInputActionDelegate__DelegateSignature() end
+function URSTActivatableWidget:ReregisterMappingContext() end
+---@param Action UInputAction
+---@param Delegate FRegisterInputActionDelegate
+function URSTActivatableWidget:RegisterInputAction(Action, Delegate) end
 ---@param bBypassAnimations boolean
 function URSTActivatableWidget:PopSelfFromLayer(bBypassAnimations) end
 function URSTActivatableWidget:OnUnPossess() end
@@ -5880,6 +6021,9 @@ function URSTAttachmentManagerComponent:ShowExclusiveGroups(Groups, Ignore) end
 function URSTAttachmentManagerComponent:SetGroupVisibility(Groups, bVisible) end
 function URSTAttachmentManagerComponent:RSTAttachmentManagerCallback__DelegateSignature() end
 function URSTAttachmentManagerComponent:ResetAttachmentStack() end
+---@param Skin URSTSkinDefinition
+---@return boolean
+function URSTAttachmentManagerComponent:RemoveSkinVisuals(Skin) end
 ---@param InOutHandle FRSTAttachmentTransactionHandle
 function URSTAttachmentManagerComponent:RemoveAttachmentTransactionByHandle(InOutHandle) end
 ---@param AttachmentDefinition URSTAttachmentDefinition
@@ -5920,6 +6064,9 @@ function URSTAttachmentManagerComponent:GetAttachmentDefinitionForSlot(SlotIdent
 ---@param Actor AActor
 ---@return URSTAttachmentManagerComponent
 function URSTAttachmentManagerComponent:FindAttachmentManagerComponent(Actor) end
+---@param Skin URSTSkinDefinition
+---@return boolean
+function URSTAttachmentManagerComponent:ApplySkinVisuals(Skin) end
 ---@param AttachmentDefinition URSTAttachmentDefinition
 ---@param bWarnDuplicates boolean
 ---@param bReplicate boolean
@@ -6643,6 +6790,9 @@ URSTDeathEvent_DeathFinished = {}
 
 ---@class URSTDeathEvent_DeathStarted : URSTDeathEvent
 ---@field Instigator AActor
+---@field InstigatorTags FGameplayTagContainer
+---@field TargetTags FGameplayTagContainer
+---@field DeathSourceTags FGameplayTagContainer
 URSTDeathEvent_DeathStarted = {}
 
 
@@ -6690,6 +6840,7 @@ function URSTDelayedInvalidationBox:OnTimeElapsed() end
 ---@field bSkipLoadingCosmeticBackgroundsInPIE boolean
 ---@field CheatsToRun TArray<FRSTCheatToRun>
 ---@field EntitlementsToGrant FGameplayTagContainer
+---@field TransitionsToSkip FGameplayTagContainer
 ---@field LogGameplayMessages boolean
 ---@field UIInputMappingContext TSoftObjectPtr<UInputMappingContext>
 URSTDeveloperSettings = {}
@@ -6809,6 +6960,12 @@ function URSTEntitlementSubsystem:HasEntitlement(Identifier) end
 ---@param RequestedPrivilege ECommonUserPrivilege
 ---@param OnlineContext ECommonUserOnlineContext
 function URSTEntitlementSubsystem:HandlerUserInitialized(UserInfo, bSuccess, Error, RequestedPrivilege, OnlineContext) end
+---@param Identifier FGameplayTag
+---@return URSTEntitlementDefinition
+function URSTEntitlementSubsystem:GetEntitlementForSkin(Identifier) end
+---@param Identifier FGameplayTag
+---@return URSTEntitlementDefinition
+function URSTEntitlementSubsystem:GetEntitlementForHero(Identifier) end
 
 
 ---@class URSTEquipmentManagerComponent : UPawnComponent
@@ -6881,6 +7038,7 @@ function URSTFlyoffComponent:RequestDamageFlyoff(NewRequest) end
 
 
 ---@class URSTFrontEndStateComponent : URSTGameStateComponent
+---@field RobotLogoScreenClass TSoftClassPtr<UCommonActivatableWidget>
 ---@field PressStartScreenClass TSoftClassPtr<UCommonActivatableWidget>
 ---@field MainScreenClass TSoftClassPtr<UCommonActivatableWidget>
 ---@field AnalyticsModalClass TSoftClassPtr<UCommonActivatableWidget>
@@ -6910,6 +7068,7 @@ function URSTGMMC_Threads:GetSessionMissionSubsystem(Spec) end
 ---@class URSTGameData : UPrimaryDataAsset
 ---@field DamageFlyoffIconCollection TArray<FRSTFlyoffIconData>
 ---@field MinimumCombo int32
+---@field ComboCoinMultiplier float
 ---@field LargeCombo int32
 ---@field DamageGameplayEffect_SetByCaller TSoftClassPtr<UGameplayEffect>
 ---@field HealGameplayEffect_SetByCaller TSoftClassPtr<UGameplayEffect>
@@ -6965,6 +7124,9 @@ function URSTGMMC_Threads:GetSessionMissionSubsystem(Spec) end
 ---@field NPEInitialSpawnTag FGameplayTag
 ---@field NPEInputMappingContext UInputMappingContext
 ---@field SupportedRegions TArray<FString>
+---@field MainMenuMusicActorClass TSoftClassPtr<AActor>
+---@field HubMusicActorClass TSoftClassPtr<AActor>
+---@field CrossplatformWarning FString
 URSTGameData = {}
 
 ---@return URSTGameData
@@ -7003,23 +7165,37 @@ URSTGameFeatureAction_WorldBase = {}
 ---@field OnRejoinStatusUpdatedDelegate FRSTGameInstanceOnRejoinStatusUpdatedDelegate
 ---@field PasswordSalt FString
 ---@field WhiteListedPlayers TArray<FString>
+---@field BlackListedPlayers TArray<FString>
+---@field SelectedExperience URSTUserFacingExperienceDef
 ---@field OnGameStateSetDelegate FRSTGameInstanceOnGameStateSetDelegate
+---@field VoiceManager URVoiceManager
 URSTGameInstance = {}
 
+---@param bShown boolean
+function URSTGameInstance:SetHasShownStartupVideo(bShown) end
 function URSTGameInstance:RSTOnRejoinStatusUpdated__DelegateSignature() end
 function URSTGameInstance:RSTGameStateSetDelegate__DelegateSignature() end
 ---@param bRecordRejoin boolean
 function URSTGameInstance:RejoinLastSession(bRecordRejoin) end
 ---@param MessageTag FGameplayTag
 function URSTGameInstance:RecreateSession(MessageTag) end
+---@param Result FOnlineResultInformation
+function URSTGameInstance:OnJoinSessionComplete(Result) end
 ---@param GameState AGameStateBase
 function URSTGameInstance:OnGameStateSet(GameState) end
+---@param Result FOnlineResultInformation
+function URSTGameInstance:OnCreateSessionComplete(Result) end
 ---@param Password FString
 function URSTGameInstance:JoinRequestedSessionWithPassword(Password) end
 ---@return boolean
 function URSTGameInstance:IsRejoinPending() end
----@return UCommonSession_HostSessionRequest
-function URSTGameInstance:CreateHostingRequest() end
+---@return boolean
+function URSTGameInstance:HasShownStartupVideo() end
+---@param HostingPlayer APlayerController
+---@param OnlineMode ECommonSessionOnlineMode
+---@param bCanUseCrossplay boolean
+---@return URSTCommonSession_HostSessionRequest
+function URSTGameInstance:CreateHostingRequest(HostingPlayer, OnlineMode, bCanUseCrossplay) end
 function URSTGameInstance:CheckRejoinStatus() end
 ---@return boolean
 function URSTGameInstance:CanRejoinLastSession() end
@@ -7125,6 +7301,7 @@ URSTGameViewportClient = {}
 
 ---@class URSTGameplayAbility : UGameplayAbility
 ---@field ActivationStatTag FGameplayTag
+---@field StatIdentifierTags FGameplayTagContainer
 ---@field PropertyMappings FRSTInheritableGameplayTagPropertyMap
 ---@field ActivationPolicy ERSTAbilityActivationPolicy
 ---@field bResetOnSpawn boolean
@@ -7138,6 +7315,10 @@ URSTGameViewportClient = {}
 ---@field bUseSetByCallerCooldown boolean
 ---@field OverrideSetByCallerTag FGameplayTag
 ---@field SetByCallerCooldownDuration float
+---@field bUseTagCooldown boolean
+---@field bClientOnlyCooldown boolean
+---@field TagCooldownDuration float
+---@field TagCooldownIdentifier FGameplayTag
 ---@field AppliedLooseTags TArray<FRSTLooseTagHandle>
 ---@field bReleaseLooseTagsOnAbilityEnd boolean
 ---@field InterruptImmunityHandle FRSTLooseTagHandle
@@ -7374,6 +7555,8 @@ function URSTGameplayAbility_BuffVolume:BP_GetDuration() end
 
 
 ---@class URSTGameplayAbility_CombatBase : URSTGameplayAbility
+---@field bUseCloseDistance boolean
+---@field CloseDistance float
 ---@field bHasIgnoredLookInput boolean
 ---@field bSupportsMoveCancelling boolean
 ---@field MoveCancelThreshold float
@@ -7430,6 +7613,8 @@ function URSTGameplayAbility_CombatBase:IsRanged() end
 function URSTGameplayAbility_CombatBase:InitAIVariables(bIncludeTarget) end
 ---@param OutRange FRSTRange
 function URSTGameplayAbility_CombatBase:GetRange(OutRange) end
+---@return float
+function URSTGameplayAbility_CombatBase:GetCloseDistance() end
 ---@return float
 function URSTGameplayAbility_CombatBase:GetAIWeight() end
 function URSTGameplayAbility_CombatBase:ClearAimSlowing() end
@@ -7575,7 +7760,9 @@ URSTGameplayAbility_DeferDeath = {}
 
 
 ---@class URSTGameplayAbility_EnterRift : URSTGameplayAbility
+---@field InstigatorRift AActor
 URSTGameplayAbility_EnterRift = {}
+
 
 
 ---@class URSTGameplayAbility_FindInteractions : URSTGameplayAbility
@@ -7891,6 +8078,8 @@ function URSTGameplayAbility_Placement:BP_OnMontageFinished() end
 function URSTGameplayAbility_Placement:BP_InitializeSpawnedActor(SpawnedPlaceableActor) end
 ---@param PreviewActor ARSTPlacementPreview
 function URSTGameplayAbility_Placement:BP_InitializePreviewActor(PreviewActor) end
+---@return UClass
+function URSTGameplayAbility_Placement:BP_GetPlaceableClass() end
 ---@return TArray<AActor>
 function URSTGameplayAbility_Placement:BP_GetIgnoreActors() end
 function URSTGameplayAbility_Placement:BP_FailedPlacement() end
@@ -8342,6 +8531,7 @@ function URSTGameplayStatics:IsSkinUnlocked(WorldContextObject, Skin) end
 ---@param HeroTag FGameplayTag
 ---@return boolean
 function URSTGameplayStatics:IsHeroValidForProfile(WorldContextObject, Profile, HeroTag) end
+function URSTGameplayStatics:InvalidateAllWidgets() end
 ---@param Trait FGameplayTag
 ---@return boolean
 function URSTGameplayStatics:HasPlatformTrait(Trait) end
@@ -8475,6 +8665,7 @@ function URSTGameplayStatics:ConvertStringToTag(Leaf, Root) end
 
 
 ---@class URSTGauntletController : UGauntletTestController
+---@field missionsToTest TArray<FString>
 URSTGauntletController = {}
 
 function URSTGauntletController:StopTesting() end
@@ -8586,6 +8777,18 @@ function URSTGetPawnUserFacingDataAsync:GetPawnUserFacingDataAsyncPD(PawnDefinit
 ---@return URSTGetPawnUserFacingDataAsync
 function URSTGetPawnUserFacingDataAsync:GetPawnUserFacingDataAsync(PawnExtension, InBundles, OwningWidget) end
 function URSTGetPawnUserFacingDataAsync:ExecuteAfterStreamableFinished() end
+
+
+---@class URSTGetSkinDefinitionAsync : UBlueprintAsyncActionBase
+---@field OnStreamableFinished FRSTGetSkinDefinitionAsyncOnStreamableFinished
+URSTGetSkinDefinitionAsync = {}
+
+---@param Tag FGameplayTag
+---@param InBundles TArray<FName>
+---@param OwningWidget UCommonActivatableWidget
+---@return URSTGetSkinDefinitionAsync
+function URSTGetSkinDefinitionAsync:GetSkinDefinitionAsyncTag(Tag, InBundles, OwningWidget) end
+function URSTGetSkinDefinitionAsync:ExecuteAfterStreamableFinished() end
 
 
 ---@class URSTGetSkinUserFacingDataAsync : UBlueprintAsyncActionBase
@@ -9360,9 +9563,11 @@ URSTMetaSessionMissionOption = {}
 ---@field TrapPlacementTypeFilter uint8
 ---@field bNonLoadoutValid boolean
 ---@field bAllowInSinglePlayer boolean
+---@field bAllowInMultiplayer boolean
 ---@field SkullCost int32
 ---@field LinkedMilestoneUnlock FGameplayTag
 ---@field DisplayType EThreadDisplayType
+---@field SelectedStatTags FGameplayTagContainer
 URSTMetaThreadDefinition = {}
 
 ---@return boolean
@@ -9433,6 +9638,10 @@ URSTMilestoneOperationNested = {}
 
 
 
+---@class URSTMilestoneOperationNumSubstats : URSTMilestoneOperationStat
+URSTMilestoneOperationNumSubstats = {}
+
+
 ---@class URSTMilestoneOperationRequireKey : URSTMilestoneOperationBase
 ---@field RequiredKeys FGameplayTagContainer
 URSTMilestoneOperationRequireKey = {}
@@ -9454,33 +9663,44 @@ URSTMilestoneOperationStat = {}
 ---@class URSTMilestoneSubsystem : UGameInstanceSubsystem
 ---@field OnNewThreadsUnlocked FRSTMilestoneSubsystemOnNewThreadsUnlocked
 ---@field OnNewHeroesUnlocked FRSTMilestoneSubsystemOnNewHeroesUnlocked
+---@field OnNewSkinsUnlocked FRSTMilestoneSubsystemOnNewSkinsUnlocked
 URSTMilestoneSubsystem = {}
 
 ---@param PlayerProfile URSTPlayerProfile
 function URSTMilestoneSubsystem:UpdateMilestones(PlayerProfile) end
 function URSTMilestoneSubsystem:RSTMilestoneThreadUnlockDelegate__DelegateSignature() end
+function URSTMilestoneSubsystem:RSTMilestoneSkinUnlockDelegate__DelegateSignature() end
 function URSTMilestoneSubsystem:RSTMilestoneHeroUnlockDelegate__DelegateSignature() end
 ---@param LocalPlayer ULocalPlayer
 function URSTMilestoneSubsystem:OnLocalPlayerAdded(LocalPlayer) end
 ---@return boolean
 function URSTMilestoneSubsystem:HasAnyNewlyUnlockedThreads() end
 ---@return boolean
+function URSTMilestoneSubsystem:HasAnyNewlyUnlockedSkins() end
+---@return boolean
 function URSTMilestoneSubsystem:HasAnyNewlyUnlockedHeroes() end
 ---@return int32
 function URSTMilestoneSubsystem:GetNumNewlyUnlockedThreads() end
+---@return int32
+function URSTMilestoneSubsystem:GetNumNewlyUnlockedSkins() end
 ---@return int32
 function URSTMilestoneSubsystem:GetNumNewlyUnlockedHeroes() end
 ---@return TArray<URSTMetaThreadDefinition>
 function URSTMilestoneSubsystem:GetNewlyUnlockedThreads() end
 ---@return FGameplayTagContainer
+function URSTMilestoneSubsystem:GetNewlyUnlockedSkins() end
+---@return FGameplayTagContainer
 function URSTMilestoneSubsystem:GetNewlyUnlockedHeroes() end
 function URSTMilestoneSubsystem:ClearNewUnlockCache() end
+---@param SkinTag FGameplayTag
+function URSTMilestoneSubsystem:AcknowledgeNewSkinUnlock(SkinTag) end
 ---@param HeroTag FGameplayTag
 function URSTMilestoneSubsystem:AcknowledgeNewHeroUnlock(HeroTag) end
 
 
 ---@class URSTMissionDefinition : URSTMetaSessionMissionOption
 ---@field MissionTag FGameplayTag
+---@field MissionWonStatTags FGameplayTagContainer
 ---@field HeaderBGIcon UTexture2D
 ---@field MissionTypeIcon UTexture2D
 ---@field MapID FPrimaryAssetId
@@ -9488,6 +9708,7 @@ function URSTMilestoneSubsystem:AcknowledgeNewHeroUnlock(HeroTag) end
 ---@field UnstableRiftProperties FRSTUnstableRiftMissionProperties
 ---@field ChestProperties FRSTChestMissionProperties
 ---@field BossSpawnChance float
+---@field MusicActorClass TSoftClassPtr<AActor>
 ---@field LoadingScreenWidget TSoftClassPtr<UUserWidget>
 ---@field MissionDistortions TArray<URSTMetaDistortionDefinition>
 ---@field bUseOnslaughtCoordinatorOverride boolean
@@ -9531,6 +9752,8 @@ function URSTModal_OneChoice:OnChoiceClickedOne() end
 ---@field ChoiceTwoDynamicDelegate FRSTModal_TextPromptChoiceTwoDynamicDelegate
 URSTModal_TextPrompt = {}
 
+---@param bInIsPasswordField boolean
+function URSTModal_TextPrompt:SetIsPasswordField(bInIsPasswordField) end
 ---@param Text FText
 function URSTModal_TextPrompt:OnTextChanged(Text) end
 function URSTModal_TextPrompt:OnChoiceClickedTwo() end
@@ -9740,6 +9963,10 @@ function URSTMovementAttributeSet:OnRep_FallingLateralFriction(OldValue) end
 function URSTMovementAttributeSet:OnRep_AirControl(OldValue) end
 
 
+---@class URSTMusicWorldSubsystem : UWorldSubsystem
+URSTMusicWorldSubsystem = {}
+
+
 ---@class URSTNameplateManagerComponent : UControllerComponent
 ---@field IndicatorMap TMap<AActor, URSTIndicatorDescriptor>
 URSTNameplateManagerComponent = {}
@@ -9773,6 +10000,12 @@ URSTOnlineBlueprintLibrary = {}
 function URSTOnlineBlueprintLibrary:ResolveUserPrivilegeWithUI(WorldContextObject, LatentInfo, Player, Privilege, bOutSuccess) end
 ---@return boolean
 function URSTOnlineBlueprintLibrary:IsNetworkOnline() end
+---@param WorldContextObject UObject
+---@param LatentInfo FLatentActionInfo
+---@param Player APlayerController
+---@param Privilege ECommonUserPrivilege
+---@param OutResult ECommonUserPrivilegeResult
+function URSTOnlineBlueprintLibrary:GetUserPrivilegeWithResolveUI(WorldContextObject, LatentInfo, Player, Privilege, OutResult) end
 ---@param WorldContextObject UObject
 ---@param LatentInfo FLatentActionInfo
 ---@param Player APlayerController
@@ -10017,6 +10250,12 @@ function URSTPlatformEmulationSettings:GetKnownPlatformIds() end
 function URSTPlatformEmulationSettings:GetKnownDeviceProfiles() end
 
 
+---@class URSTPlatformSharedIconSettings : UPlatformSettings
+---@field NativePlatformIcon TSoftObjectPtr<UTexture2D>
+URSTPlatformSharedIconSettings = {}
+
+
+
 ---@class URSTPlatformSpecificRenderingSettings : UPlatformSettings
 ---@field DefaultDeviceProfileSuffix FString
 ---@field UserFacingDeviceProfileOptions TArray<FRSTQualityDeviceProfileVariant>
@@ -10114,9 +10353,14 @@ function URSTPlayerModifierComponent:OnPawnSet(PlayerState, NewPawn, OldPawn) en
 function URSTPlayerModifierComponent:OnPawnDefinitionChanged(RSTPlayerState) end
 
 
+---@class URSTPlayerNameSubsystem : UWorldSubsystem
+URSTPlayerNameSubsystem = {}
+
+
 ---@class URSTPlayerNotificationSubsystem : UGameInstanceSubsystem
----@field QueuedMessages TArray<FRSTPlayerNotificationData>
+---@field QueuedMessages TArray<FRSTPlayerNotificationUserFacingData>
 ---@field OnMessageQueueChanged FRSTPlayerNotificationSubsystemOnMessageQueueChanged
+---@field NotificationPriorityList TArray<FRSTPlayerNotificationPriorityData>
 URSTPlayerNotificationSubsystem = {}
 
 function URSTPlayerNotificationSubsystem:RSTNoMessagesDelegate__DelegateSignature() end
@@ -10127,7 +10371,7 @@ function URSTPlayerNotificationSubsystem:EnqueueMessage(PlayerNotificationData) 
 ---@param LocalPlayer ULocalPlayer
 function URSTPlayerNotificationSubsystem:DisplayTopMessage(LocalPlayer) end
 ---@param LocalPlayer ULocalPlayer
----@param Message FRSTPlayerNotificationData
+---@param Message FRSTPlayerNotificationUserFacingData
 function URSTPlayerNotificationSubsystem:BP_DisplayTopMessage(LocalPlayer, Message) end
 
 
@@ -10159,9 +10403,15 @@ function URSTPlayerNotificationSubsystem:BP_DisplayTopMessage(LocalPlayer, Messa
 ---@field SavedRun FRSTSavedRun
 ---@field PendingHeroUnlocks FGameplayTagContainer
 ---@field HeroUnlocks FGameplayTagContainer
+---@field PendingSkinUnlocks FGameplayTagContainer
+---@field SkinUnlocks FGameplayTagContainer
 ---@field DifficultyScaling int32
 URSTPlayerProfile = {}
 
+---@param TagContainer FGameplayTagContainer
+function URSTPlayerProfile:UnlockSkins(TagContainer) end
+---@param Tag FGameplayTag
+function URSTPlayerProfile:UnlockSkin(Tag) end
 ---@param TagContainer FGameplayTagContainer
 function URSTPlayerProfile:UnlockHeroes(TagContainer) end
 ---@param Tag FGameplayTag
@@ -10192,6 +10442,8 @@ function URSTPlayerProfile:SaveCurrentRun(WorldContextObject) end
 function URSTPlayerProfile:RevokeKey(KeyToRevoke) end
 function URSTPlayerProfile:ResetKeys() end
 ---@param TagContainer FGameplayTagContainer
+function URSTPlayerProfile:ProcessSkinUnlocks(TagContainer) end
+---@param TagContainer FGameplayTagContainer
 function URSTPlayerProfile:ProcessHeroUnlocks(TagContainer) end
 ---@param WorldContextObject UObject
 function URSTPlayerProfile:LoadSavedRun(WorldContextObject) end
@@ -10201,6 +10453,9 @@ function URSTPlayerProfile:IsThreadOwnedByTag(Tag) end
 ---@param Thread URSTMetaThreadDefinition
 ---@return boolean
 function URSTPlayerProfile:IsThreadOwned(Thread) end
+---@param Tag FGameplayTag
+---@return boolean
+function URSTPlayerProfile:IsSkinUnlocked(Tag) end
 ---@return boolean
 function URSTPlayerProfile:IsQuicksaveAllowed() end
 ---@param OutError FText
@@ -10236,11 +10491,17 @@ function URSTPlayerProfile:GrantKey(KeyToGrant) end
 ---@return boolean
 function URSTPlayerProfile:GrantGoldSkulls(amount) end
 ---@return FGameplayTagContainer
+function URSTPlayerProfile:GetUnlockedSkins() end
+---@return TArray<FGameplayTag>
+function URSTPlayerProfile:GetUnlockedSkinArray() end
+---@return FGameplayTagContainer
 function URSTPlayerProfile:GetUnlockedHeroes() end
 ---@return TArray<FGameplayTag>
 function URSTPlayerProfile:GetUnlockedHeroArray() end
 ---@return int32
 function URSTPlayerProfile:GetSkulls() end
+---@return TMap<FGameplayTag, FGameplayTag>
+function URSTPlayerProfile:GetSkinSelections() end
 ---@param InCharacter FGameplayTag
 ---@return FGameplayTag
 function URSTPlayerProfile:GetSkin(InCharacter) end
@@ -11447,6 +11708,8 @@ URSTSettingBasedScalar = {}
 ---@field PreferredRegion FString
 ---@field bHasSeenRegionPopup boolean
 ---@field LastSeenPatchNotesVersion FString
+---@field SessionVisibility ECommonSessionVisibility
+---@field bCrossplayEnabled boolean
 URSTSettingsLocal = {}
 
 ---@return boolean
@@ -11486,6 +11749,8 @@ function URSTSettingsLocal:SetSplitLookSensitivityY(Sens) end
 function URSTSettingsLocal:SetSplitLookSensitivityX(Sens) end
 ---@param InVolume float
 function URSTSettingsLocal:SetSoundFXVolume(InVolume) end
+---@param InSessionVisibility ECommonSessionVisibility
+function URSTSettingsLocal:SetSessionVisiblity(InSessionVisibility) end
 ---@param InScreenPercentage float
 function URSTSettingsLocal:SetScreenPercentage(InScreenPercentage) end
 ---@param Value float
@@ -11570,6 +11835,8 @@ function URSTSettingsLocal:SetDisplayGamma(InGamma) end
 function URSTSettingsLocal:SetDialogueVolume(InVolume) end
 ---@param InDesiredSuffix FString
 function URSTSettingsLocal:SetDesiredDeviceProfileQualitySuffix(InDesiredSuffix) end
+---@param bInCrossplayEnabled boolean
+function URSTSettingsLocal:SetCrossplayEnabled(bInCrossplayEnabled) end
 ---@param InControllerPlatform FName
 function URSTSettingsLocal:SetControllerPlatform(InControllerPlatform) end
 ---@param bCanCollect boolean
@@ -11626,6 +11893,8 @@ function URSTSettingsLocal:GetSplitLookSensivityY() end
 function URSTSettingsLocal:GetSplitLookSensivityX() end
 ---@return float
 function URSTSettingsLocal:GetSoundFXVolume() end
+---@return ECommonSessionVisibility
+function URSTSettingsLocal:GetSessionVisibility() end
 ---@return float
 function URSTSettingsLocal:GetScreenPercentage() end
 ---@return float
@@ -11715,6 +11984,8 @@ function URSTSettingsLocal:GetDisplayGamma() end
 function URSTSettingsLocal:GetDialogueVolume() end
 ---@return FString
 function URSTSettingsLocal:GetDesiredDeviceProfileQualitySuffix() end
+---@return boolean
+function URSTSettingsLocal:GetCrossplayEnabled() end
 ---@return FName
 function URSTSettingsLocal:GetControllerPlatform() end
 ---@return FString
@@ -11862,6 +12133,29 @@ function URSTSettingsShared:GetColorBlindMode() end
 function URSTSettingsShared:GetAllowAudioInBackgroundSetting() end
 
 
+---@class URSTSharedIconBlueprintLibrary : UBlueprintFunctionLibrary
+URSTSharedIconBlueprintLibrary = {}
+
+---@param WorldContextObject UObject
+---@param LatentInfo FLatentActionInfo
+---@param Player APlayerState
+---@param OutTexture UTexture2D
+function URSTSharedIconBlueprintLibrary:GetPlayerPlatformIcon(WorldContextObject, LatentInfo, Player, OutTexture) end
+---@param WorldContextObject UObject
+---@param LatentInfo FLatentActionInfo
+---@param CrossplayPlatform FString
+---@param OutTexture UTexture2D
+function URSTSharedIconBlueprintLibrary:GetCrossplayPlatformIcon(WorldContextObject, LatentInfo, CrossplayPlatform, OutTexture) end
+
+
+---@class URSTSharedIconSettings : UDeveloperSettingsBackedByCVars
+---@field GenericDesktopIcon TSoftObjectPtr<UTexture2D>
+---@field GenericConsoleIcon TSoftObjectPtr<UTexture2D>
+---@field PlatformSettings FPerPlatformSettings
+URSTSharedIconSettings = {}
+
+
+
 ---@class URSTShieldExecution : UGameplayEffectExecutionCalculation
 URSTShieldExecution = {}
 
@@ -11871,15 +12165,98 @@ URSTShieldExecution = {}
 ---@field PawnClass TSoftClassPtr<APawn>
 ---@field LinkedHero FGameplayTag
 ---@field bEnabled boolean
+---@field LinkedMilestone FGameplayTag
 ---@field bRequiresEntitlement boolean
+---@field bHideWhenLocked boolean
+---@field Fragments TArray<URSTSkinFragment>
 URSTSkinDefinition = {}
 
+---@param Tag FGameplayTag
+---@return boolean
+function URSTSkinDefinition:ShouldHideWhenLocked(Tag) end
 ---@param Tag FGameplayTag
 ---@return boolean
 function URSTSkinDefinition:IsSkinEnabled(Tag) end
 ---@param Tag FGameplayTag
 ---@return boolean
 function URSTSkinDefinition:IsEntitlementRequired(Tag) end
+---@param Tag FGameplayTag
+---@return FGameplayTag
+function URSTSkinDefinition:GetUnlockMilestone(Tag) end
+---@param Tag FGameplayTag
+---@return FGameplayTag
+function URSTSkinDefinition:GetLinkedHero(Tag) end
+---@param FragmentClass TSubclassOf<URSTSkinFragment>
+---@param bOutSuccess boolean
+---@return URSTSkinFragment
+function URSTSkinDefinition:GetFragmentByClass(FragmentClass, bOutSuccess) end
+
+
+---@class URSTSkinFragment : UObject
+URSTSkinFragment = {}
+
+
+---@class URSTSkinFragment_ActorBinding : URSTSkinFragment
+---@field ActorClasses TMap<FGameplayTag, TSubclassOf<AActor>>
+URSTSkinFragment_ActorBinding = {}
+
+---@param Identifier FGameplayTag
+---@param bOutSuccess boolean
+---@return TSubclassOf<AActor>
+function URSTSkinFragment_ActorBinding:GetActorClass(Identifier, bOutSuccess) end
+
+
+---@class URSTSkinFragment_AttachmentMaterialOverride : URSTSkinFragment
+---@field Overrides TArray<FRSTAttachmentSkinMaterialOverride>
+URSTSkinFragment_AttachmentMaterialOverride = {}
+
+---@param AttachmentComp URSTAttachmentManagerComponent
+function URSTSkinFragment_AttachmentMaterialOverride:RemoveMaterialOverrides(AttachmentComp) end
+---@param AttachmentComp URSTAttachmentManagerComponent
+function URSTSkinFragment_AttachmentMaterialOverride:ApplyMaterialOverrides(AttachmentComp) end
+
+
+---@class URSTSkinFragment_AttachmentMeshReplacement : URSTSkinFragment
+---@field Overrides TArray<FRSTAttachmentSkinMeshReplacement>
+URSTSkinFragment_AttachmentMeshReplacement = {}
+
+---@param AttachmentComp URSTAttachmentManagerComponent
+function URSTSkinFragment_AttachmentMeshReplacement:RemoveMeshOverrides(AttachmentComp) end
+---@param AttachmentComp URSTAttachmentManagerComponent
+function URSTSkinFragment_AttachmentMeshReplacement:ApplyMeshOverrides(AttachmentComp) end
+
+
+---@class URSTSkinFragment_MaterialOverride : URSTSkinFragment
+---@field MaterialOverrides TArray<UMaterialInterface>
+URSTSkinFragment_MaterialOverride = {}
+
+---@param Mesh UMeshComponent
+---@param DefaultMesh UMeshComponent
+function URSTSkinFragment_MaterialOverride:RemoveMaterialOverrides(Mesh, DefaultMesh) end
+---@param Mesh UMeshComponent
+function URSTSkinFragment_MaterialOverride:ApplyMaterialOverrides(Mesh) end
+
+
+---@class URSTSkinFragment_MeshReplacement : URSTSkinFragment
+URSTSkinFragment_MeshReplacement = {}
+
+---@param MeshComponent UMeshComponent
+---@param DefaultMeshComponent UMeshComponent
+function URSTSkinFragment_MeshReplacement:RemoveMeshOverride(MeshComponent, DefaultMeshComponent) end
+---@param MeshComponent UMeshComponent
+function URSTSkinFragment_MeshReplacement:ApplyMeshOverride(MeshComponent) end
+
+
+---@class URSTSkinFragment_MeshReplacement_Skeletal : URSTSkinFragment_MeshReplacement
+---@field MeshReplacement USkeletalMesh
+URSTSkinFragment_MeshReplacement_Skeletal = {}
+
+
+
+---@class URSTSkinFragment_MeshReplacement_Static : URSTSkinFragment_MeshReplacement
+---@field MeshReplacement UStaticMesh
+URSTSkinFragment_MeshReplacement_Static = {}
+
 
 
 ---@class URSTSkinUserFacingData : UPrimaryDataAsset
@@ -12420,10 +12797,11 @@ function URSTUIExtensions:CreateModal_TwoChoices(LocalPlayer, textTitle, textDes
 ---@param actionOneText FText
 ---@param actionTwoText FText
 ---@param CharacterLimit int32
+---@param bIsPasswordField boolean
 ---@param delegateOne FCreateModal_TextPromptDelegateOne
 ---@param delegateTwo FCreateModal_TextPromptDelegateTwo
 ---@return URSTModal_TextPrompt
-function URSTUIExtensions:CreateModal_TextPrompt(LocalPlayer, textTitle, textDescription, HintText, actionOneText, actionTwoText, CharacterLimit, delegateOne, delegateTwo) end
+function URSTUIExtensions:CreateModal_TextPrompt(LocalPlayer, textTitle, textDescription, HintText, actionOneText, actionTwoText, CharacterLimit, bIsPasswordField, delegateOne, delegateTwo) end
 ---@param LocalPlayer ULocalPlayer
 ---@param textTitle FText
 ---@param textDescription FText
@@ -12460,7 +12838,6 @@ function URSTUltimateChargeAttributeSet:OnRep_MaxUltimateCharge(OldValue) end
 
 ---@class URSTUpgradeDefinition : UPrimaryDataAsset
 ---@field UpgradeTag FGameplayTag
----@field RequiredUpgradesAny FGameplayTagContainer
 ---@field ModifierData TArray<URSTModifierBase>
 ---@field OverrideSkullCost int32
 ---@field MinimumLevel int32
@@ -12484,6 +12861,11 @@ function URSTUpgradeDefinition:IsValidFor(SelectedHeroTag) end
 ---@field ActiveUpgradesByPlayer TMap<FUniqueNetIdRepl, FRSTSelectedUpgradeData>
 ---@field ExtensionTagToUpgradesMap TMap<FGameplayTag, FRSTExtensionTagToUpdateData>
 ---@field SkullCostCurve UCurveFloat
+---@field CurrentUpgrade FGameplayTag
+---@field ConnectedUpgrades FGameplayTagContainer
+---@field bEditLinks boolean
+---@field UpgradeLinks TArray<FRSTUpgradeLinkData>
+---@field RootNodes FGameplayTagContainer
 URSTUpgradeSubsystem = {}
 
 ---@param PlayerId FUniqueNetIdRepl
@@ -12539,11 +12921,6 @@ URSTUpgradeUserFacingData = {}
 ---@field MaxPlayerCount int32
 URSTUserFacingExperienceDef = {}
 
----@param WorldContextObject UObject
----@param HostingPlayer APlayerController
----@param OnlineMode ECommonSessionOnlineMode
----@return URSTCommonSession_HostSessionRequest
-function URSTUserFacingExperienceDef:CreateHostingRequest(WorldContextObject, HostingPlayer, OnlineMode) end
 
 
 ---@class URSTUserWidget : UCommonUserWidget
@@ -12628,6 +13005,10 @@ function URSTVoiceChatFunctionLibrary:GetAvailableVoiceOutputDevices(LocalPlayer
 ---@param LocalPlayer ULocalPlayer
 ---@param OutDeviceInfos TArray<FRSTVoiceChatDeviceInfo>
 function URSTVoiceChatFunctionLibrary:GetAvailableVoiceInputDevices(LocalPlayer, OutDeviceInfos) end
+---@param LocalPlayer ULocalPlayer
+---@param PlayerToCheck APlayerState
+---@return boolean
+function URSTVoiceChatFunctionLibrary:CanCommunicateWithPlayer(LocalPlayer, PlayerToCheck) end
 
 
 ---@class URSTWeaponCueNotify_Burst : UGameplayCueNotify_Burst
@@ -12681,5 +13062,17 @@ function URSTWidgetFactory:FindWidgetClassForData(Data) end
 ---@field EntryWidgetForClass TMap<TSoftClassPtr<UObject>, TSubclassOf<UUserWidget>>
 URSTWidgetFactory_Class = {}
 
+
+
+---@class URSTWorldChatSubsystem : UWorldSubsystem
+---@field ChatMessages TArray<FRSTChatMessage>
+---@field OnNewChatMessage FRSTWorldChatSubsystemOnNewChatMessage
+URSTWorldChatSubsystem = {}
+
+---@param ChatMessage FRSTChatMessage
+function URSTWorldChatSubsystem:RSTNewChatMessageDelegate__DelegateSignature(ChatMessage) end
+---@param Message FString
+---@param MessageType ERSTChatMessageType
+function URSTWorldChatSubsystem:AddChatMessage(Message, MessageType) end
 
 

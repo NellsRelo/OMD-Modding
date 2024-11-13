@@ -1,0 +1,53 @@
+---@meta
+
+---@class ABP_Dome_D_Hallway_C : AActor
+---@field ColumnA_CastStone_2Story3 UStaticMeshComponent
+---@field ColumnA_CastStone_2Story2 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Windows36 UStaticMeshComponent
+---@field Crenel_TrimB_SM17 UStaticMeshComponent
+---@field ColumnA_CastStone_2Story1 UStaticMeshComponent
+---@field ColumnA_CastStone_2Story UStaticMeshComponent
+---@field Ceiling_ArchTileBig_EndAB_2x4_StoneWall_SM_A13 UStaticMeshComponent
+---@field Crenel_TrimB_SM16 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Windows34 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Windows33 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Windows32 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Windows31 UStaticMeshComponent
+---@field Crenel_TrimB_SM15 UStaticMeshComponent
+---@field Crenel_TrimB_SM14 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Windows30 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Windows29 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Windows28 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Windows27 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Windows26 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Windows25 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Windows24 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Windows23 UStaticMeshComponent
+---@field Ceiling_ArchTileBig_EndAB_2x4_StoneWall_SM_A10 UStaticMeshComponent
+---@field Ceiling_ArchTileBig_EndAB_2x4_StoneWall_SM_A9 UStaticMeshComponent
+---@field Ceiling_ArchTileBig_EndAB_2x4_StoneWall_SM_A7 UStaticMeshComponent
+---@field Ceiling_ArchTileBig_EndAB_2x4_StoneWall_SM_A2 UStaticMeshComponent
+---@field Ceiling_ArchTileBig_EndAB_2x4_StoneWall_SM_A1 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Windows22 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Windows21 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Windows20 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Windows19 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Windows17 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Windows16 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Windows14 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Windows13 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Windows12 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Windows11 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Windows10 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Windows9 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Windows6 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Windows5 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Windows3 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Windows2 UStaticMeshComponent
+---@field Crenel_TrimB_SM13 UStaticMeshComponent
+---@field Crenel_TrimB_SM12 UStaticMeshComponent
+---@field DefaultSceneRoot USceneComponent
+ABP_Dome_D_Hallway_C = {}
+
+
+

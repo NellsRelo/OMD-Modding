@@ -3,6 +3,9 @@
 ---@class ABP_EnemyBase_C : ARSTAICharacter
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field W_HealthDisplay UWidgetComponent
+---@field EnterRiftMove_Timeline_MoveToRift_Curve_E21639874669AD90853ECE89464ADD25 float
+---@field EnterRiftMove_Timeline__Direction_E21639874669AD90853ECE89464ADD25 ETimelineDirection::Type
+---@field ['EnterRiftMove Timeline'] UTimelineComponent
 ---@field Electrified_Timeline_ElectrocutionCurve_CA48934F458F5870995D1283A3A50DA4 float
 ---@field Electrified_Timeline_SkeletonVisibility_CA48934F458F5870995D1283A3A50DA4 float
 ---@field Electrified_Timeline__Direction_CA48934F458F5870995D1283A3A50DA4 ETimelineDirection::Type
@@ -21,6 +24,9 @@
 ---@field ['Dissolve Timeline'] UTimelineComponent
 ---@field NeckBloodPS UNiagaraComponent
 ---@field NeckBloodPSTemplate UNiagaraSystem
+---@field RiftLocation FVector
+---@field ['Starting Rift Entry Location'] FVector
+---@field bWillGib boolean
 ABP_EnemyBase_C = {}
 
 ---@return USceneComponent
@@ -37,6 +43,8 @@ ABP_EnemyBase_C['Electrified Timeline__FinishedFunc'] = function() end
 ABP_EnemyBase_C['Electrified Timeline__UpdateFunc'] = function() end
 ABP_EnemyBase_C['Poisoned Timeline__FinishedFunc'] = function() end
 ABP_EnemyBase_C['Poisoned Timeline__UpdateFunc'] = function() end
+ABP_EnemyBase_C['EnterRiftMove Timeline__FinishedFunc'] = function() end
+ABP_EnemyBase_C['EnterRiftMove Timeline__UpdateFunc'] = function() end
 function ABP_EnemyBase_C:Pulled_ED64E6D249616092FEA7C6962E1C0614() end
 function ABP_EnemyBase_C:EnteredRift_ED64E6D249616092FEA7C6962E1C0614() end
 function ABP_EnemyBase_C:CustomAnimation_ED64E6D249616092FEA7C6962E1C0614() end
@@ -59,16 +67,17 @@ function ABP_EnemyBase_C:MeltingDeath() end
 ---@param Meshes TArray<USkeletalMeshComponent>
 ---@param LifeSpan double
 function ABP_EnemyBase_C:DissolveFX(Meshes, LifeSpan) end
+function ABP_EnemyBase_C:PoisonedDeath() end
+function ABP_EnemyBase_C:FrozenDeath() end
 ---@param LifeSpan float
 ---@param deathType uint8
 ---@param animationTag FGameplayTag
 function ABP_EnemyBase_C:BP_DestroyFX(LifeSpan, deathType, animationTag) end
-function ABP_EnemyBase_C:PoisonedDeath() end
-function ABP_EnemyBase_C:FrozenDeath() end
 function ABP_EnemyBase_C:ReceiveBeginPlay() end
 ---@param blood boolean
 ---@param headExploded boolean
 function ABP_EnemyBase_C:BP_Gibbed(blood, headExploded) end
+ABP_EnemyBase_C['Event OnEnteredRift'] = function() end
 ---@param EntryPoint int32
 function ABP_EnemyBase_C:ExecuteUbergraph_BP_EnemyBase(EntryPoint) end
 

@@ -2,14 +2,22 @@
 
 ---@class UW_MainMenu_PatchNotes_C : URSTActivatableWidget
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field bg_image UImage
 ---@field CommonRichTextBlock UCommonRichTextBlock
 ---@field divider UImage
+---@field InvalidationBox_0 UInvalidationBox
+---@field SafeZone_64 USafeZone
+---@field ScrollBarSlider USlider
+---@field ScrollBox UScrollBox
 ---@field TitleText UCommonTextBlock
 ---@field VerticalBox_85 UVerticalBox
 ---@field W_ExitMenuButton UW_ExitMenuButton_C
 ---@field CurrentPatchNoteIndex int32
+---@field bNoScrollUpdate boolean
 UW_MainMenu_PatchNotes_C = {}
 
+---@return UWidget
+function UW_MainMenu_PatchNotes_C:GetScrollRecipient() end
 ---@return boolean
 function UW_MainMenu_PatchNotes_C:BP_OnHandleBackAction() end
 ---@return UWidget
@@ -22,6 +30,11 @@ function UW_MainMenu_PatchNotes_C:Destruct() end
 ---@param Button UCommonButtonBase
 ---@param Selected boolean
 function UW_MainMenu_PatchNotes_C:OnButtonSelected(Button, Selected) end
+---@param Value float
+function UW_MainMenu_PatchNotes_C:BndEvt__W_MainMenu_PatchNotes_ScrollBarSlider_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature(Value) end
+---@param CurrentOffset float
+function UW_MainMenu_PatchNotes_C:BndEvt__W_MainMenu_PatchNotes_ScrollBox_K2Node_ComponentBoundEvent_1_OnUserScrolledEvent__DelegateSignature(CurrentOffset) end
+function UW_MainMenu_PatchNotes_C:RefreshScrollbar() end
 ---@param EntryPoint int32
 function UW_MainMenu_PatchNotes_C:ExecuteUbergraph_W_MainMenu_PatchNotes(EntryPoint) end
 

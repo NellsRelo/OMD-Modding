@@ -5,6 +5,7 @@
 ---@field EP_BossIndicator UUIExtensionPointWidget
 ---@field EP_BottomCenter UUIExtensionPointWidget
 ---@field EP_BottomRight UUIExtensionPointWidget
+---@field EP_ChatMessages UUIExtensionPointWidget
 ---@field EP_CoinDisplay UUIExtensionPointWidget
 ---@field EP_HeroSpecificDisplay UUIExtensionPointWidget
 ---@field EP_InnerTopCenter UUIExtensionPointWidget

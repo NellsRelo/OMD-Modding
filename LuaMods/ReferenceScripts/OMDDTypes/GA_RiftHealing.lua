@@ -8,6 +8,7 @@
 ---@field PercentMaxHealthPerSecond float
 ---@field HealingPeriod float
 ---@field ['Healing Cylinder Z Axis'] double
+---@field CollisionDefinition URSTAbilityCollisionDefinition
 UGA_RiftHealing_C = {}
 
 ---@param TargetData FGameplayAbilityTargetDataHandle

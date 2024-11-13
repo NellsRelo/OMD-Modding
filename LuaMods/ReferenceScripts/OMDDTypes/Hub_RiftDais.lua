@@ -1,6 +1,36 @@
 ---@meta
 
 ---@class AHub_RiftDais_C : AActor
+---@field Rock_B_SM4 UStaticMeshComponent
+---@field Plants_Flower_Lilypad_03_high_SM3 UStaticMeshComponent
+---@field Plants_Flower_Lilypad_03_high_SM2 UStaticMeshComponent
+---@field Plants_Flower_Lilypad_03_high_SM1 UStaticMeshComponent
+---@field Plants_Flower_Lilypad_03_high_SM UStaticMeshComponent
+---@field Rock_D_SM14 UStaticMeshComponent
+---@field Rock_D_SM13 UStaticMeshComponent
+---@field Rock_D_SM10 UStaticMeshComponent
+---@field Bricks_A_SM4 UStaticMeshComponent
+---@field Bricks_A_SM3 UStaticMeshComponent
+---@field Hub_RiftGold_01 UStaticMeshComponent
+---@field P_RiftEssence_Base4 UParticleSystemComponent
+---@field Bricks_B_SM12 UStaticMeshComponent
+---@field Bricks_B_SM7 UStaticMeshComponent
+---@field Bricks_B_SM11 UStaticMeshComponent
+---@field Bricks_B_SM10 UStaticMeshComponent
+---@field Bricks_B_SM9 UStaticMeshComponent
+---@field Bricks_B_SM8 UStaticMeshComponent
+---@field Rock_D_SM12 UStaticMeshComponent
+---@field Bricks_B_SM6 UStaticMeshComponent
+---@field Rock_D_SM11 UStaticMeshComponent
+---@field Bricks_C_SM2 UStaticMeshComponent
+---@field Bricks_C_SM1 UStaticMeshComponent
+---@field Bricks_B_SM5 UStaticMeshComponent
+---@field Bricks_B_SM4 UStaticMeshComponent
+---@field Rock_B_SM5 UStaticMeshComponent
+---@field Rock_B_SM3 UStaticMeshComponent
+---@field Bricks_B_SM3 UStaticMeshComponent
+---@field Bricks_B_SM1 UStaticMeshComponent
+---@field Bricks_A_SM2 UStaticMeshComponent
 ---@field P_RiftEssence_Base3 UParticleSystemComponent
 ---@field P_RiftEssence_Base2 UParticleSystemComponent
 ---@field P_RiftEssence_Base1 UParticleSystemComponent
@@ -19,7 +49,6 @@
 ---@field ['  2'] UStaticMeshComponent
 ---@field ['  1'] UStaticMeshComponent
 ---@field Rock_D_SM9 UStaticMeshComponent
----@field ColumnTrim_CastStone_1200W_Deco1 UStaticMeshComponent
 ---@field Rock_B_SM2 UStaticMeshComponent
 ---@field Rock_B_SM1 UStaticMeshComponent
 ---@field Bricks_B_SM UStaticMeshComponent
@@ -28,7 +57,6 @@
 ---@field Rock_G_SM UStaticMeshComponent
 ---@field Rock_A_SM UStaticMeshComponent
 ---@field Bricks_A_SM1 UStaticMeshComponent
----@field ColumnTrim_CastStone_1200W_Deco UStaticMeshComponent
 ---@field Rock_D_SM1 UStaticMeshComponent
 ---@field Rock_C_SM1 UStaticMeshComponent
 ---@field Rock_C_SM UStaticMeshComponent

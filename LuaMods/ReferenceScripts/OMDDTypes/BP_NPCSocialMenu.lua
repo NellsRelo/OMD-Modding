@@ -25,12 +25,6 @@ function ABP_NPCSocialMenu_C:GetOpacityControlledMeshes(OutObscureMeshes) end
 function ABP_NPCSocialMenu_C:GetHomingSocket() end
 ---@return FText
 function ABP_NPCSocialMenu_C:GetPingDisplayName() end
----@param UserInfo UCommonUserInfo
----@param bSuccess boolean
----@param Error FText
----@param RequestedPrivilege ECommonUserPrivilege
----@param OnlineContext ECommonUserOnlineContext
-function ABP_NPCSocialMenu_C:OnInitializationComplete_A383075248142ABE53054383A336874B(UserInfo, bSuccess, Error, RequestedPrivilege, OnlineContext) end
 ---@param ActorInfo FGameplayAbilityActorInfo
 function ABP_NPCSocialMenu_C:BP_OnInteract(ActorInfo) end
 function ABP_NPCSocialMenu_C:DismissOnlineFailureModal() end

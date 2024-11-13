@@ -6,6 +6,8 @@
 ---@field ['Ultimate Deployed Handle'] FRSTLooseTagHandle
 UGA_Daggers_Ultimate_C = {}
 
+---@return UClass
+function UGA_Daggers_Ultimate_C:BP_GetPlaceableClass() end
 ---@param bWasCancelled boolean
 function UGA_Daggers_Ultimate_C:K2_OnEndAbility(bWasCancelled) end
 ---@param SpawnedActor AActor

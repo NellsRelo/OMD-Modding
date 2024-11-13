@@ -2,6 +2,7 @@
 
 ---@class ABP_Cyclops_Druid_C : ABP_EnemyBase_C
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field NS_CyclopsDruid_Lantern UNiagaraComponent
 ---@field RSTAimAssistTargetHead URSTAimAssistTargetComponent
 ---@field RSTAimAssistTargetPelvis URSTAimAssistTargetComponent
 ---@field RSTRangedFirePoint URSTRangedFirePointComponent

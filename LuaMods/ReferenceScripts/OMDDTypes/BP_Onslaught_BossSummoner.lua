@@ -1,6 +1,6 @@
 ---@meta
 
----@class ABP_Onslaught_BossSummoner_C : ABP_OnslaughtCoordinator_RiftDefense_C
+---@class ABP_Onslaught_BossSummoner_C : ABP_OnslaughtCoordinator_CrystalDefense_C
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ABP_Onslaught_BossSummoner_C = {}
 

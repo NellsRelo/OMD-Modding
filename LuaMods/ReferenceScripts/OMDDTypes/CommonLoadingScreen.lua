@@ -33,6 +33,8 @@ function ULoadingProcessTask:CreateLoadingScreenProcessTask(WorldContextObject, 
 ---@class ULoadingScreenManager : UGameInstanceSubsystem
 ULoadingScreenManager = {}
 
+---@return boolean
+function ULoadingScreenManager:GetLoadingScreenDisplayStatus() end
 ---@return FString
 function ULoadingScreenManager:GetDebugReasonForShowingOrHidingLoadingScreen() end
 

@@ -21,7 +21,6 @@ ABP_Lizardman_LMB_C = {}
 
 function ABP_Lizardman_LMB_C:SpawnPickup() end
 function ABP_Lizardman_LMB_C:ReceiveBeginPlay() end
-function ABP_Lizardman_LMB_C:BP_OnDeathStarted() end
 ---@param HealthComponent URSTHealthComponent
 ---@param OldValue float
 ---@param NewValue float

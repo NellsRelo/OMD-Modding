@@ -39,12 +39,12 @@
 ---@field RiftPointDisplayContainer UVerticalBox
 ---@field TabButton UW_ButtonBasic_C
 ---@field TabButtonOverlay UOverlay
----@field TabImage UImage
 ---@field TOP_Left UImage
 ---@field Top_Right UImage
 ---@field W_HUD_AbilityDisplay UW_HUD_AbilityDisplay_C
 ---@field W_HUD_CoinDisplay UW_HUD_CoinDisplay_C
 ---@field W_HUD_Hotbar UW_HUD_Hotbar_C
+---@field W_RSTInputActionWidget_C_62 UW_RSTInputActionWidget_C
 ---@field TODO_ThreadCollection TArray<boolean>
 ---@field ThreadWidgetCollection TArray<UW_ThreadDisplay_Base_C>
 ---@field NumThreads int32

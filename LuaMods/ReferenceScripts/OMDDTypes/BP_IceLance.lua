@@ -2,6 +2,7 @@
 
 ---@class ABP_IceLance_C : ABP_RSTTrap_Base_C
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field NS_IceLance_Idle UNiagaraComponent
 ---@field PerceptionOrigin USceneComponent
 ---@field AIPerception UAIPerceptionComponent
 ---@field CurrentTarget AActor

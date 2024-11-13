@@ -1,6 +1,12 @@
 ---@meta
 
 ---@class ABP_FishMarket_Restaurant_C : ABP_OMDTrapGrid_C
+---@field Wall_15x15_Wainscot_Wood_SM_Door_Union UStaticMeshComponent
+---@field Wall_15x2_Wainscot_ExposedBrick_SM_Union2 UStaticMeshComponent
+---@field Wall_15x2_Wainscot_ExposedBrick_SM_Union1 UStaticMeshComponent
+---@field Wall_15x2_Wainscot_ExposedBrick_SM_Union UStaticMeshComponent
+---@field WoodPlank_4x4_Floor6 UStaticMeshComponent
+---@field WoodPlank_4x4_Floor1 UStaticMeshComponent
 ---@field Column_Bottom_Square_1_2_StoneWall_SM1 UStaticMeshComponent
 ---@field Column_Bottom_Square_1_2_StoneWall_SM UStaticMeshComponent
 ---@field Box1 UBoxComponent
@@ -72,7 +78,6 @@
 ---@field RSTTrapGridBox9 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox8 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox7 URSTTrapGridBoxComponent
----@field SM_door_02 UStaticMeshComponent
 ---@field SM_door_01 UStaticMeshComponent
 ---@field RSTTrapGridBox6 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox5 URSTTrapGridBoxComponent
@@ -81,16 +86,12 @@
 ---@field WoodPlank_4x4_Floor UStaticMeshComponent
 ---@field KitchenHutch_KitchenHutch1 UStaticMeshComponent
 ---@field KitchenHutch_KitchenHutch UStaticMeshComponent
----@field Wall_Sec_2_2_V2_RB4 UStaticMeshComponent
----@field SM_wall_door_03 UStaticMeshComponent
 ---@field BP_Kitchen_Dining_Stove UChildActorComponent
 ---@field BP_Kitchen_Dining_Oven UChildActorComponent
 ---@field BP USceneComponent
 ---@field Metal_Base_PlateB1 UStaticMeshComponent
 ---@field Metal_Base_PlateB UStaticMeshComponent
 ---@field Column_Sec_1_2_RB UStaticMeshComponent
----@field SM_wall_door_02 UStaticMeshComponent
----@field Wall_Sec_2_2_V2_RB3 UStaticMeshComponent
 ---@field RSTTrapGridBox2 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox1 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox URSTTrapGridBoxComponent

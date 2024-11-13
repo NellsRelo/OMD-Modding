@@ -1,13 +1,17 @@
 ---@meta
 
 ---@class ABP_DryDocks_Shop_4x7_C : ABP_OMDTrapGrid_C
+---@field Wood_Stairs_600W_A_B3 UStaticMeshComponent
+---@field WoodPlank_2x2_Floor_A11 UStaticMeshComponent
+---@field Gable_4x3_Wood_Grid_SM_Union_B30 UStaticMeshComponent
+---@field Gable_4x3_Wood_Grid_SM_Union_B29 UStaticMeshComponent
+---@field WoodPlank_2x2_Floor_A10 UStaticMeshComponent
+---@field WoodPlank_2x2_Floor_A8 UStaticMeshComponent
 ---@field NavPowerExclusion UNavPowerExclusionComponent
 ---@field Vendor_Stall_Awning_B_SubFrame_SM7 UStaticMeshComponent
 ---@field Vendor_Stall_Awning_B_SubFrame_SM5 UStaticMeshComponent
----@field Vendor_Stall_Awning_B_SubFrame_SM4 UStaticMeshComponent
 ---@field Vendor_Stall_Awning_B_SubFrame_SM6 UStaticMeshComponent
 ---@field Vendor_Stall_Awning_B_Fabric_SM11 UStaticMeshComponent
----@field Vendor_Stall_Awning_B_Fabric_SM9 UStaticMeshComponent
 ---@field Vendor_Stall_Awning_B_SubFrame_SM8 UStaticMeshComponent
 ---@field Vendor_Stall_Awning_B_Fabric_SM6 UStaticMeshComponent
 ---@field Vendor_Stall_Awning_B_Fabric_SM7 UStaticMeshComponent
@@ -30,7 +34,6 @@
 ---@field RSTTrapGridBox44 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox43 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox42 URSTTrapGridBoxComponent
----@field Gable_4x3_Wood_Grid_SM_Union_B58 UStaticMeshComponent
 ---@field ['Wall_2x2_Wainscot_WhiteBrick-Wood_SM14'] UStaticMeshComponent
 ---@field RSTTrapGridBox41 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox40 URSTTrapGridBoxComponent
@@ -80,7 +83,6 @@
 ---@field Wood_Railing_400C_A_Light28 UStaticMeshComponent
 ---@field WoodPlank_2x2_Floor_A13 UStaticMeshComponent
 ---@field WoodPlank_2x2_Floor_A12 UStaticMeshComponent
----@field WoodPlank_2x2_Floor_A11 UStaticMeshComponent
 ---@field WoodPlank_2x2_Floor_A9 UStaticMeshComponent
 ---@field Gable_4x3_Wood_Grid_SM_Union_B50 UStaticMeshComponent
 ---@field Gable_4x3_Wood_Grid_SM_Union_B49 UStaticMeshComponent
@@ -94,23 +96,16 @@
 ---@field Wood_Railing_400C_A_Light20 UStaticMeshComponent
 ---@field Orc_ShipLarge_01_SM_Cut_Roof UStaticMeshComponent
 ---@field Gable_4x3_Wood_Grid_SM_Union_B36 UStaticMeshComponent
----@field Gable_4x3_Wood_Grid_SM_Union_B33 UStaticMeshComponent
----@field WoodPlank_2x2_Floor_A8 UStaticMeshComponent
----@field Wood_Railing_400C_A_Light19 UStaticMeshComponent
----@field Wood_Railing_400C_A_Light10 UStaticMeshComponent
 ---@field Wood_Stairs_600W_A_B1 UStaticMeshComponent
 ---@field Gable_4x3_Wood_Grid_SM_Union_B48 UStaticMeshComponent
 ---@field Gable_4x3_Wood_Grid_SM_Union_B43 UStaticMeshComponent
 ---@field Gable_4x3_Wood_Grid_SM_Union_B35 UStaticMeshComponent
 ---@field Gable_4x3_Wood_Grid_SM_Union_B34 UStaticMeshComponent
 ---@field Gable_4x3_Wood_Grid_SM_Union_B32 UStaticMeshComponent
----@field Gable_4x3_Wood_Grid_SM_Union_B31 UStaticMeshComponent
 ---@field Warehouse_4x2_Walkway_SM3 UStaticMeshComponent
 ---@field Warehouse_4x2_Walkway_SM UStaticMeshComponent
 ---@field ['Wall_2x2_Wainscot_WhiteBrick-Wood_SM13'] UStaticMeshComponent
 ---@field ['Wall_2x2_Wainscot_WhiteBrick-Wood_SM12'] UStaticMeshComponent
----@field Gable_4x3_Wood_Grid_SM_Union_B30 UStaticMeshComponent
----@field Gable_4x3_Wood_Grid_SM_Union_B29 UStaticMeshComponent
 ---@field Wood_Stairs_600W_A_B2 UStaticMeshComponent
 ---@field ['Wall_2x2_Wainscot_WhiteBrick-Wood_SM11'] UStaticMeshComponent
 ---@field Archway_2x05x2_Stone3 UStaticMeshComponent
@@ -143,15 +138,12 @@
 ---@field Gable_4x3_Wood_Grid_SM_Union_B22 UStaticMeshComponent
 ---@field Gable_4x3_Wood_Grid_SM_Union_B21 UStaticMeshComponent
 ---@field Gable_4x3_Wood_Grid_SM_Union_B20 UStaticMeshComponent
----@field Gable_4x3_Wood_Grid_SM_Union_B19 UStaticMeshComponent
 ---@field Gable_4x3_Wood_Grid_SM_Union_B17 UStaticMeshComponent
 ---@field WoodPlank_2x2_Floor_A6 UStaticMeshComponent
 ---@field WoodPlank_2x2_Floor_A5 UStaticMeshComponent
 ---@field WoodPlank_2x2_Floor_A4 UStaticMeshComponent
 ---@field Wood_Railing_400C_A_Light9 UStaticMeshComponent
 ---@field Wood_Railing_400C_A_Light8 UStaticMeshComponent
----@field Gable_4x3_Wood_Grid_SM_Union_B15 UStaticMeshComponent
----@field Gable_4x3_Wood_Grid_SM_Union_B14 UStaticMeshComponent
 ---@field Gable_4x3_Wood_Grid_SM_Union_B13 UStaticMeshComponent
 ---@field Gable_4x3_Wood_Grid_SM_Union_B12 UStaticMeshComponent
 ---@field Gable_4x3_Wood_Grid_SM_Union_B11 UStaticMeshComponent

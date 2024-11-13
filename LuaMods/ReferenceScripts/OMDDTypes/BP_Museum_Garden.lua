@@ -1,6 +1,10 @@
 ---@meta
 
 ---@class ABP_Museum_Garden_C : ABP_OMDTrapGrid_C
+---@field Wall_Bottom_4x05_StoneWall_SM2 UStaticMeshComponent
+---@field Wall_Bottom_4x05_StoneWall_SM1 UStaticMeshComponent
+---@field Stair_1x2_Stone_RandomSize_SM10 UStaticMeshComponent
+---@field Wall_Bottom_4x05_StoneWall_SM UStaticMeshComponent
 ---@field Floor_2x2_Grass_SM55 UStaticMeshComponent
 ---@field Floor_2x2_Grass_SM48 UStaticMeshComponent
 ---@field Floor_1X1_PatternA_Mosaic_SM7 UStaticMeshComponent

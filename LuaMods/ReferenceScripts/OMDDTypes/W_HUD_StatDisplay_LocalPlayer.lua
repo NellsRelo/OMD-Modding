@@ -13,6 +13,7 @@
 ---@field HealthRoot UBorder
 ---@field HeroDisplay UImage
 ---@field Image_Mute UImage
+---@field Image_PlatformIcon UW_PlayerPlatformIcon_C
 ---@field Image_VoiceActive UImage
 ---@field Image_VoiceEnabled UImage
 ---@field InvalidationBox_0 UInvalidationBox
@@ -86,12 +87,12 @@ function UW_HUD_StatDisplay_LocalPlayer_C:OnPlayerCharacterHealthChanged(HealthC
 ---@param ProxyObject UAsyncAction_ListenForGameplayMessage
 ---@param ActualChannel FGameplayTag
 function UW_HUD_StatDisplay_LocalPlayer_C:OnMessageReceived_40CF6FFA45C158CFE3EC3FBF6EC5059B(ProxyObject, ActualChannel) end
+function UW_HUD_StatDisplay_LocalPlayer_C:OnPlayerStateChanged() end
 function UW_HUD_StatDisplay_LocalPlayer_C:Destruct() end
 ---@param PRSTag FGameplayTag
 ---@param PlayerNetID FUniqueNetIdRepl
 ---@param IsReady boolean
 function UW_HUD_StatDisplay_LocalPlayer_C:OnPlayerReadyChanged(PRSTag, PlayerNetID, IsReady) end
-function UW_HUD_StatDisplay_LocalPlayer_C:OnPlayerStateChanged() end
 function UW_HUD_StatDisplay_LocalPlayer_C:Construct() end
 function UW_HUD_StatDisplay_LocalPlayer_C:RefreshIsReady() end
 ---@param PRSTag FGameplayTag
@@ -105,6 +106,8 @@ function UW_HUD_StatDisplay_LocalPlayer_C:BP_SynchronizeProperties() end
 UW_HUD_StatDisplay_LocalPlayer_C['On Conditional Tick'] = function(MyGeometry, InDeltaTime) end
 UW_HUD_StatDisplay_LocalPlayer_C['Tick Downed Display'] = function() end
 function UW_HUD_StatDisplay_LocalPlayer_C:OnInitialized() end
+---@param PlayerState APlayerState
+function UW_HUD_StatDisplay_LocalPlayer_C:UpdatePlatformIcon(PlayerState) end
 ---@param EntryPoint int32
 function UW_HUD_StatDisplay_LocalPlayer_C:ExecuteUbergraph_W_HUD_StatDisplay_LocalPlayer(EntryPoint) end
 

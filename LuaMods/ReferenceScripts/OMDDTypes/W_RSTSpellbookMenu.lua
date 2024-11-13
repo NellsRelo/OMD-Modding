@@ -24,6 +24,13 @@ UW_RSTSpellbookMenu_C['Should Enable Contents for Element'] = function(Element, 
 ---@param Element UObject
 ---@param Should_Enable boolean
 UW_RSTSpellbookMenu_C['Should Element Be Spawned'] = function(Element, Should_Enable) end
+---@return boolean
+function UW_RSTSpellbookMenu_C:CanModifyHotbar() end
+---@param MyGeometry FGeometry
+---@param PointerEvent FPointerEvent
+---@param Operation UDragDropOperation
+---@return boolean
+function UW_RSTSpellbookMenu_C:OnDrop(MyGeometry, PointerEvent, Operation) end
 ---@param Value uint8
 ---@return ERSTTrapPlacementFlags
 function UW_RSTSpellbookMenu_C:GetPlacementTypeFromFilter(Value) end

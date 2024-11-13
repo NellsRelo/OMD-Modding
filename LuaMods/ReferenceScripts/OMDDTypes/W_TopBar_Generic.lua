@@ -51,6 +51,9 @@ UW_TopBar_Generic_C['Populate Buttons'] = function() end
 function UW_TopBar_Generic_C:BndEvt__W_TopBar_Generic_W_Button_KeyHint_C_1_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(Button) end
 ---@param Button UCommonButtonBase
 function UW_TopBar_Generic_C:BndEvt__W_TopBar_Generic_W_Button_KeyHint_C_0_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(Button) end
+---@param Options TArray<FText>
+UW_TopBar_Generic_C['Set Button Options'] = function(Options) end
+UW_TopBar_Generic_C['Init Buttons'] = function() end
 ---@param EntryPoint int32
 function UW_TopBar_Generic_C:ExecuteUbergraph_W_TopBar_Generic(EntryPoint) end
 ---@param Index int32

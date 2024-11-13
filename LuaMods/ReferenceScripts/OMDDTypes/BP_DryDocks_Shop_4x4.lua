@@ -34,7 +34,6 @@
 ---@field Geo USceneComponent
 ---@field RSTTrapGridBox6 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox18 URSTTrapGridBoxComponent
----@field RSTTrapGridBox17 URSTTrapGridBoxComponent
 ---@field TrapGrid USceneComponent
 ---@field Collision USceneComponent
 ABP_DryDocks_Shop_4x4_C = {}

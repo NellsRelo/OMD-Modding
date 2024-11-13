@@ -23,7 +23,6 @@ function UW_HeroUnlockDisplay_C:GetScrollRecipient() end
 function UW_HeroUnlockDisplay_C:OnStreamableFinished_0B3BE47340434387D61AFC80DBC1E7BB(UserFacingData, DidFind) end
 ---@param Loaded UClass
 function UW_HeroUnlockDisplay_C:OnLoaded_8C204F104A17FCE2DD76EF915E97805A(Loaded) end
-function UW_HeroUnlockDisplay_C:Construct() end
 ---@param Button UCommonButtonBase
 function UW_HeroUnlockDisplay_C:BndEvt__W_MilestoneThreadUnlocks_W_ButtonBoundAction_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(Button) end
 UW_HeroUnlockDisplay_C['Perform Back'] = function() end
@@ -35,6 +34,7 @@ function UW_HeroUnlockDisplay_C:Init(UFD) end
 UW_HeroUnlockDisplay_C['Spawn Hero Display Contents'] = function(UFD) end
 function UW_HeroUnlockDisplay_C:BP_OnFinishShow() end
 UW_HeroUnlockDisplay_C['Process Hero Display Shown'] = function() end
+function UW_HeroUnlockDisplay_C:BP_OnActivated() end
 ---@param EntryPoint int32
 function UW_HeroUnlockDisplay_C:ExecuteUbergraph_W_HeroUnlockDisplay(EntryPoint) end
 

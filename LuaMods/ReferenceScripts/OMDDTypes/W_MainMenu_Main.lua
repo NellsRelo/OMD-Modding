@@ -24,19 +24,19 @@
 ---@field Modal URSTModal
 ---@field AbandonRejoinModal URSTModal_TwoChoices
 ---@field LoadingTask ULoadingProcessTask
----@field SelectedExperience URSTUserFacingExperienceDef
 ---@field OfflineModal URSTModal_TwoChoices
 ---@field bCanPlayOnline boolean
 UW_MainMenu_Main_C = {}
 
+function UW_MainMenu_Main_C:MoveCursorToCenter() end
+---@return UWidgetAnimation
+function UW_MainMenu_Main_C:BP_GetOnShowAnimation() end
 ---@param MissionNum int32
 ---@param Skulls int32
 UW_MainMenu_Main_C['Get Saved Run Info'] = function(MissionNum, Skulls) end
 function UW_MainMenu_Main_C:PopModal() end
 ---@return UWidgetAnimation
 function UW_MainMenu_Main_C:BP_GetOnHideAnimation() end
----@return UWidgetAnimation
-function UW_MainMenu_Main_C:BP_GetOnShowAnimation() end
 ---@return boolean
 function UW_MainMenu_Main_C:BP_OnHandleBackAction() end
 ---@return UWidget
@@ -85,8 +85,6 @@ function UW_MainMenu_Main_C:AfterPush_DC90F05D4AA9DDFD66D37C87083F0759(UserWidge
 function UW_MainMenu_Main_C:BeforePush_DC90F05D4AA9DDFD66D37C87083F0759(UserWidget) end
 function UW_MainMenu_Main_C:Construct() end
 ---@param Button UCommonButtonBase
-function UW_MainMenu_Main_C:BndEvt__W_MainMenu_Main_Button_Quit_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(Button) end
----@param Button UCommonButtonBase
 function UW_MainMenu_Main_C:BndEvt__W_MainMenu_Main_Button_Settings_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(Button) end
 function UW_MainMenu_Main_C:DelgateOne() end
 function UW_MainMenu_Main_C:delegateTwo() end
@@ -132,6 +130,11 @@ function UW_MainMenu_Main_C:BeginHostingGame(OnlineMode) end
 function UW_MainMenu_Main_C:BndEvt__W_MainMenu_Main_Button_Discord_K2Node_ComponentBoundEvent_7_CommonButtonBaseClicked__DelegateSignature(Button) end
 ---@param Button UCommonButtonBase
 function UW_MainMenu_Main_C:BndEvt__W_MainMenu_Main_Button_TechnicalTest_K2Node_ComponentBoundEvent_8_CommonButtonBaseClicked__DelegateSignature(Button) end
+---@param Button UCommonButtonBase
+function UW_MainMenu_Main_C:BndEvt__W_MainMenu_Main_Button_Quit_K2Node_ComponentBoundEvent_9_CommonButtonBaseClicked__DelegateSignature(Button) end
+---@param bIsShowing boolean
+function UW_MainMenu_Main_C:OnLoadingScreenChanged(bIsShowing) end
+function UW_MainMenu_Main_C:BP_OnFinishShow() end
 ---@param EntryPoint int32
 function UW_MainMenu_Main_C:ExecuteUbergraph_W_MainMenu_Main(EntryPoint) end
 

@@ -5,6 +5,7 @@
 ---@field Damage double
 ---@field DamagePerSoul double
 ---@field MaxSoul int32
+---@field ['Critical Hit Chance'] double
 ABP_CursedGround_ItemInstance_C = {}
 
 

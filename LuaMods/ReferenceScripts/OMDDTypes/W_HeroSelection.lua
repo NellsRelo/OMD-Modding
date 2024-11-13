@@ -5,13 +5,11 @@
 ---@field AbilityList UVerticalBox
 ---@field BG_Gradient UImage
 ---@field bg_gradient1 UImage
----@field Button_Back_2 UW_ButtonBasic_C
----@field Button_Wardrobe UW_ButtonBasic_C
+---@field ControlHints UHorizontalBox
 ---@field HeroButtonsList UHorizontalBox
 ---@field HeroDescription UCommonTextBlock
 ---@field HeroName UCommonTextBlock
 ---@field HorizontalBox_AbilityDisplay UHorizontalBox
----@field HorizontalBox_DraftHeroList UHorizontalBox
 ---@field Image_126 UImage
 ---@field Image_BG_Blur UImage
 ---@field Image_BG_Draft UImage
@@ -23,23 +21,27 @@
 ---@field ProgressBar_DraftTime UProgressBar
 ---@field Right_Header_Text UCommonTextBlock
 ---@field SkinList UVerticalBox
+---@field SkinLoadingIcon UImage
+---@field SkinRoot UOverlay
 ---@field Text_PlayerName UCommonTextBlock
 ---@field VerticalBox_HeroDisplay UVerticalBox
 ---@field VerticalBox_LeftList UVerticalBox
+---@field W_Button_Hero UW_Button_Hero_C
+---@field W_Button_Hero_1 UW_Button_Hero_C
+---@field W_Button_Hero_2 UW_Button_Hero_C
+---@field W_Button_Hero_3 UW_Button_Hero_C
+---@field W_Button_Hero_4 UW_Button_Hero_C
+---@field W_Button_Hero_5 UW_Button_Hero_C
+---@field W_Button_Hero_6 UW_Button_Hero_C
+---@field W_DraftCaptureWidget UW_DraftCaptureWidget_C
+---@field W_ExitMenuButton_173 UW_ExitMenuButton_C
 ---@field W_HeroSelectAvatar UW_HeroAvatar_C
----@field W_HeroSkin_Button UW_HeroSkin_Button_C
----@field W_HeroSkin_Button_1 UW_HeroSkin_Button_C
----@field W_HeroSkin_Button_2 UW_HeroSkin_Button_C
----@field W_HeroSkin_Button_3 UW_HeroSkin_Button_C
----@field W_HeroSkin_Button_4 UW_HeroSkin_Button_C
----@field W_HeroSkin_Button_5 UW_HeroSkin_Button_C
----@field HeroSelection TArray<URSTPawnUserFacingData>
----@field HeroButtonCollection TArray<UW_Button_Hero_C>
+---@field UsedHeroButtons TArray<UW_Button_Hero_C>
 ---@field IntroAnimationDelay double
 ---@field ['Draft Order'] TArray<int32>
 ---@field ['Hero Draft Time'] float
 ---@field CurrentHeroDraftTime float
----@field DraftIndex int32
+---@field CurrentDraftIndex int32
 ---@field bInDraftMode boolean
 ---@field bIsLocalPlayerDrafting boolean
 ---@field SelectedHeroes TArray<FGameplayTag>
@@ -60,13 +62,35 @@
 ---@field bCanChangeAvatar boolean
 ---@field LockedInHero FGameplayTag
 ---@field CurrentSkinTag FGameplayTag
+---@field DraftCaptureActor ADraftCaptureActor_C
+---@field LocalPlayerIndex int32
+---@field CurrentlyHoveredButton UCommonButtonBase
+---@field SettingToSkinTag FGameplayTag
+---@field CurrentlyHoveredSkinButton UCommonButtonBase
 UW_HeroSelection_C = {}
 
+function UW_HeroSelection_C:ClearHeroButtons() end
+---@return UW_Button_Hero_C
+function UW_HeroSelection_C:FindOrGetHeroButton() end
+---@param PlayerIndex int32
+---@param HeroTag FGameplayTag
+---@param SkinTag FGameplayTag
+UW_HeroSelection_C['Get Skin Selection'] = function(PlayerIndex, HeroTag, SkinTag) end
+---@param MyGeometry FGeometry
+---@param MouseEvent FPointerEvent
+---@return FEventReply
+function UW_HeroSelection_C:OnMouseButtonDown(MyGeometry, MouseEvent) end
+---@param bIsLocalPlayerSelecting boolean
+function UW_HeroSelection_C:IsLocalPlayerSelecting(bIsLocalPlayerSelecting) end
+---@param Output int32
+function UW_HeroSelection_C:GetDraftIndexForLocalPlayerIndex(Output) end
+---@param PlayerIndex int32
+---@param Output int32
+function UW_HeroSelection_C:GetDraftIndexForPlayerIndex(PlayerIndex, Output) end
 function UW_HeroSelection_C:ResumeSceneCapture() end
 function UW_HeroSelection_C:PauseSceneCapture() end
 ---@param SelectionMode HeroSelectionMode::Type
 function UW_HeroSelection_C:GetSelectionMode(SelectionMode) end
-UW_HeroSelection_C['Update Wardrobe Button Visibility'] = function() end
 ---@param CanEnter boolean
 function UW_HeroSelection_C:CanEnterWardrobe(CanEnter) end
 ---@param Heroes TArray<FGameplayTag>
@@ -80,15 +104,16 @@ UW_HeroSelection_C['Set Selection Mode'] = function(SelectionMode) end
 ---@param OutputPin TSoftObjectPtr<URSTAbilityUIData>
 function UW_HeroSelection_C:FindAbilityMatchingTag(AbilityTag, AbilitySet, OutputPin) end
 ---@param OnlineMode ECommonSessionOnlineMode
+---@param CanUserCrossPlay boolean
 ---@param HostingRequest URSTCommonSession_HostSessionRequest
-function UW_HeroSelection_C:CreateHostingRequest(OnlineMode, HostingRequest) end
+function UW_HeroSelection_C:CreateHostingRequest(OnlineMode, CanUserCrossPlay, HostingRequest) end
 ---@param UpdatedSelectedHeroes TArray<FGameplayTag>
 ---@param UpdatedDesiredHeroes TArray<FGameplayTag>
 function UW_HeroSelection_C:UpdateDraft(UpdatedSelectedHeroes, UpdatedDesiredHeroes) end
-function UW_HeroSelection_C:UpdateHeroSelectFromSelectedHeroes() end
-function UW_HeroSelection_C:StartDraft() end
+UW_HeroSelection_C['Update Hero Select Button Visuals on Draft'] = function() end
+function UW_HeroSelection_C:StartCurrentlySelectingPlayerDraft() end
 ---@param SelectedPlayerIndex int32
-function UW_HeroSelection_C:GetDraftPlayerIndex(SelectedPlayerIndex) end
+function UW_HeroSelection_C:GetCurrentDraftPlayerIndex(SelectedPlayerIndex) end
 function UW_HeroSelection_C:EnterHeroDraft() end
 ---@return boolean
 function UW_HeroSelection_C:BP_OnHandleBackAction() end
@@ -127,10 +152,9 @@ function UW_HeroSelection_C:OnHeroButtonHovered(Button) end
 ---@param Button UCommonButtonBase
 function UW_HeroSelection_C:OnButtonUnhovered(Button) end
 ---@param PawnUFD URSTPawnUserFacingData
-function UW_HeroSelection_C:SetAvatarSelectionTo(PawnUFD) end
+---@param Skin FGameplayTag
+function UW_HeroSelection_C:SetAvatarSelectionTo(PawnUFD, Skin) end
 function UW_HeroSelection_C:SetToCurrentCharacter() end
----@param Button UCommonButtonBase
-function UW_HeroSelection_C:BndEvt__W_InHUBHeroSelection_Button_Back_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(Button) end
 function UW_HeroSelection_C:BP_OnDeactivated() end
 ---@param SelectedHeroes TArray<FGameplayTag>
 ---@param DesiredHeroes TArray<FGameplayTag>
@@ -152,17 +176,14 @@ UW_HeroSelection_C['Play Hero Button Intros'] = function() end
 UW_HeroSelection_C['Init Hero Button Display'] = function() end
 ---@param InputPin FGameplayTag
 UW_HeroSelection_C['Create Hero Button'] = function(InputPin) end
----@param Button UW_Button_Hero_C
-function UW_HeroSelection_C:OnHeroButtonAltClicked(Button) end
 UW_HeroSelection_C['Enter Wardrobe'] = function() end
 UW_HeroSelection_C['Exit Wardrobe'] = function() end
----@param Button UCommonButtonBase
-function UW_HeroSelection_C:BndEvt__W_HeroSelection_Button_Back_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(Button) end
 ---@param PawnUFD URSTPawnUserFacingData
 ---@param SetSettingToTag boolean
 function UW_HeroSelection_C:SetAvatarToFromUFD(PawnUFD, SetSettingToTag) end
 ---@param PawnTag FGameplayTag
-function UW_HeroSelection_C:SetAvatarToFromPawnTag(PawnTag) end
+---@param SettingToSkinTag FGameplayTag
+function UW_HeroSelection_C:SetAvatarToFromPawnTag(PawnTag, SettingToSkinTag) end
 function UW_HeroSelection_C:ResetAvatar() end
 ---@param HeroTag FGameplayTag
 function UW_HeroSelection_C:OnPlayerHeroSelectedNotified(HeroTag) end
@@ -173,6 +194,13 @@ UW_HeroSelection_C['On Skin Button Clicked'] = function(Button) end
 ---@param Button UCommonButtonBase
 UW_HeroSelection_C['On Skin Hovered'] = function(Button) end
 function UW_HeroSelection_C:BP_OnActivated() end
+UW_HeroSelection_C['Init Control Hints'] = function() end
+UW_HeroSelection_C['On Wardrobe Action'] = function() end
+---@param Button UCommonButtonBase
+UW_HeroSelection_C['On Skin Unhovered'] = function(Button) end
+UW_HeroSelection_C['BndEvt__W_HeroSelection_W_ExitMenuButton_173_K2Node_ComponentBoundEvent_1_On Button Clicked__DelegateSignature'] = function() end
+function UW_HeroSelection_C:ReapplyControlMappings() end
+UW_HeroSelection_C['Finish Load Skin List'] = function() end
 ---@param EntryPoint int32
 function UW_HeroSelection_C:ExecuteUbergraph_W_HeroSelection(EntryPoint) end
 function UW_HeroSelection_C:OnRejectOffline__DelegateSignature() end

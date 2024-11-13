@@ -113,7 +113,7 @@
 ---@field ['Simulate Changing Material State Over Time'] boolean
 ---@field ['Wetness Coverage Duration'] double
 ---@field ['Wetness Dry Duration'] double
----@field ['Wetness Dry Speed in Sunlight'] double
+---@field ['Wetness Dry Speed In Sunlight'] double
 ---@field ['Wetness Dry Speed Without Sunlight'] double
 ---@field ['Snow Coverage Duration'] double
 ---@field ['Snow Melt Duration'] double
@@ -224,15 +224,15 @@
 ---@field ['DLWE Recenter Offset'] FVector
 ---@field ['Cloud Reference Array'] TArray<FVector2D>
 ---@field ['DLWE Interactions Buffer'] TArray<FVector4>
----@field ['Use Occlusion To Attenuate Sounds In Interiors'] boolean
+---@field ['Use Occlusion to Attenuate Sounds in Interiors'] boolean
 ---@field ['Max Attenuation'] double
 ---@field ['Min LPF Frequency'] double
 ---@field ['Occlusion Settings'] UUDS_OcclusionSettings_C
 ---@field ['Enable Post Process Wind Fog'] boolean
 ---@field ['PPWF Intensity from Fog'] double
 ---@field ['PPWF Intensity from Rain'] double
----@field ['PPWF Intensity from Snow'] double
----@field ['PPWF Intensity From Dust'] double
+---@field ['PPWF Intensity From Snow'] double
+---@field ['PPWF Intensity from Dust'] double
 ---@field ['PPWF Intensity Scale'] double
 ---@field ['PPWF Fade Distance'] double
 ---@field ['PPWF Max Sample Distance'] double
@@ -306,8 +306,8 @@
 ---@field ED_Dusty boolean
 ---@field ['Enable Rainbow'] boolean
 ---@field ['Max Rainbow Strength'] double
----@field ['Strength from Rain'] double
----@field ['Strength from Fog'] double
+---@field ['Strength From Rain'] double
+---@field ['Strength From Fog'] double
 ---@field ['Strength In Any Weather'] double
 ---@field ['Time to Last After Rain/Fog'] double
 ---@field ['Mask Rainbow Above Clouds'] double
@@ -416,7 +416,7 @@
 ---@field ['Heat Distortion Horizon Mask'] double
 ---@field ['Heat Distortion Horizon Exponent'] double
 ---@field ['Heat Distortion Temporal Dither'] double
----@field ['Show Heat Distortion In Editor'] boolean
+---@field ['Show Heat Distortion in Editor'] boolean
 ---@field ['Target Heat Distortion Value'] double
 ---@field ['Current Heat Distortion Value'] double
 ---@field ['Heat Distortion Parent Material'] TSoftObjectPtr<UMaterialInterface>
@@ -435,9 +435,9 @@
 ---@field ['Tick Behavior Active'] boolean
 ---@field ['Editor Camera Position'] FVector
 ---@field ['Run Context'] UDS_RunContext::Type
----@field ['Sharing Occlusion With UDS'] boolean
+---@field ['Sharing Occlusion with UDS'] boolean
 ---@field ['Weather Occlusion State'] UUDS_OcclusionState_C
----@field ['Time of Last Sound Effects Cache'] double
+---@field ['Time Of Last Sound Effects Cache'] double
 ---@field ['Last Editor Tick Periodic Update'] double
 ---@field ['Last Editor Tick Sound Occlusion Update'] double
 ---@field ['Last Editor Tick Time'] double
@@ -503,8 +503,8 @@
 ---@field ['UDS Fog Vertical Velocity'] double
 ---@field ['Nearby Radial Storm Actors'] TArray<AActor>
 ---@field ['Enable Screen Frost'] boolean
----@field ['Screen Frost From Snow'] double
----@field ['Screen Frost From Material Snow'] double
+---@field ['Screen Frost from Snow'] double
+---@field ['Screen Frost from Material Snow'] double
 ---@field ['Manual Screen Frost'] double
 ---@field ['Screen Frost Multiplier In Interior'] double
 ---@field ['Screen Frost Form Duration'] double
@@ -522,7 +522,7 @@
 ---@field ['Randomize Screen Frost Texture At Runtime'] boolean
 ---@field ['Screen Frost Scatter Texture'] TSoftObjectPtr<UTexture2D>
 ---@field ['Screen Frost Normal Texture'] TSoftObjectPtr<UTexture2D>
----@field ['Show Screen Frost in Editor'] boolean
+---@field ['Show Screen Frost In Editor'] boolean
 ---@field ['Screen Frost Active'] boolean
 ---@field ['Screen Frost Strength Target'] double
 ---@field ['Current Screen Frost Strength'] double
@@ -1016,8 +1016,8 @@ function AUltra_Dynamic_Weather_C:UserConstructionScript() end
 ---@param EndPlayReason EEndPlayReason::Type
 function AUltra_Dynamic_Weather_C:ReceiveEndPlay(EndPlayReason) end
 ---@param New_Weather_Type UUDS_Weather_Settings_C
----@param Time_to_Transition_to_New_Weather__Seconds_ double
-AUltra_Dynamic_Weather_C['Change Weather'] = function(New_Weather_Type, Time_to_Transition_to_New_Weather__Seconds_) end
+---@param Time_To_Transition_To_New_Weather__Seconds_ double
+AUltra_Dynamic_Weather_C['Change Weather'] = function(New_Weather_Type, Time_To_Transition_To_New_Weather__Seconds_) end
 ---@param Duration double
 AUltra_Dynamic_Weather_C['Clients Transition Start'] = function(Duration) end
 ---@param Time_to_Transition_to_Random_Weather__Seconds_ double

@@ -1,7 +1,6 @@
 ---@meta
 
 ---@class ABP_Garden_Pillar_C_Merged_C : ABP_OMDTrapGrid_C
----@field NavPowerExclusion UNavPowerExclusionComponent
 ---@field Nav USceneComponent
 ---@field SM_MERGED_Garden_Pillar_C UStaticMeshComponent
 ---@field Wall01 URSTTrapGridBoxComponent

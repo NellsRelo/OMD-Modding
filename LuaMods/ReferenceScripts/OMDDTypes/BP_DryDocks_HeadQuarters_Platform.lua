@@ -1,11 +1,11 @@
 ---@meta
 
 ---@class ABP_DryDocks_HeadQuarters_Platform_C : ABP_OMDTrapGrid_C
+---@field BP_Column_Square_1_4_Sewer UChildActorComponent
 ---@field BP_DryDocks_Platform_Supports4 UChildActorComponent
 ---@field BP_DryDocks_Platform_Supports3 UChildActorComponent
 ---@field BP_DryDocks_Platform_Supports2 UChildActorComponent
 ---@field BP_DryDocks_Platform_Supports1 UChildActorComponent
----@field BP_DryDocks_Platform_Supports UChildActorComponent
 ---@field BP_DryDocks_Platform_Merge UChildActorComponent
 ---@field BP USceneComponent
 ---@field Props USceneComponent

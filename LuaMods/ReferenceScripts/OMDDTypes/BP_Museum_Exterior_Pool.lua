@@ -1,6 +1,8 @@
 ---@meta
 
 ---@class ABP_Museum_Exterior_Pool_C : ABP_OMDTrapGrid_C
+---@field Wall_Bottom_4x4_StoneWalls_SM31 UStaticMeshComponent
+---@field Wall_Bottom_4x4_StoneWalls_SM30 UStaticMeshComponent
 ---@field Wall_Sec_2_2_V2_RB27 UStaticMeshComponent
 ---@field Stair_2x4_StoneWallBlock_SM UStaticMeshComponent
 ---@field SM_MERGED_Garden_Railing_A11 UStaticMeshComponent

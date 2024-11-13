@@ -75,6 +75,7 @@ function ABP_RSTTrap_Base_C:BndEvt__BP_RSTTrap_Base_AbilitySystemComponent_K2Nod
 function ABP_RSTTrap_Base_C:BndEvt__BP_RSTTrap_Base_AbilitySystemComponent_K2Node_ComponentBoundEvent_1_RSTAbilityGrantDelegate__DelegateSignature(Ability) end
 ---@param Opacity double
 ABP_RSTTrap_Base_C['Sell Timeline Update'] = function(Opacity) end
+function ABP_RSTTrap_Base_C:BreakableImpulse() end
 ---@param EntryPoint int32
 function ABP_RSTTrap_Base_C:ExecuteUbergraph_BP_RSTTrap_Base(EntryPoint) end
 

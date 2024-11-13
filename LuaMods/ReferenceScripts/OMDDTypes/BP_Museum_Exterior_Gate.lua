@@ -1,10 +1,11 @@
 ---@meta
 
 ---@class ABP_Museum_Exterior_Gate_C : ABP_OMDTrapGrid_C
+---@field Floor_4x4_StoneBlock_SM13 UStaticMeshComponent
+---@field Wall_Bottom_4x4_StoneWalls_SM68 UStaticMeshComponent
 ---@field Wall_Bottom_4x4_StoneWalls_SM67 UStaticMeshComponent
 ---@field Wall_Bottom_4x4_StoneWalls_SM66 UStaticMeshComponent
 ---@field Wall_Sec_2_2_V2_RB31 UStaticMeshComponent
----@field Floor_4x4_StoneBlock_SM12 UStaticMeshComponent
 ---@field Wall_Sec_2_2_V2_RB30 UStaticMeshComponent
 ---@field Wall_Sec_2_2_V2_RB29 UStaticMeshComponent
 ---@field Crenel_BaseD_CastStone_SubD21 UStaticMeshComponent

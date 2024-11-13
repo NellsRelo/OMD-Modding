@@ -1,6 +1,47 @@
 ---@meta
 
 ---@class ABP_Museum_Dome_Connection_SouthWing_C : ABP_OMDTrapGrid_C
+---@field GuardianCroc_Statue UStaticMeshComponent
+---@field BarricadeBasherPose UStaticMeshComponent
+---@field Statue_Warhero_Knight_A1 UStaticMeshComponent
+---@field Statue_Warhero_Knight_A UStaticMeshComponent
+---@field ASN_MulanStatue1 UStaticMeshComponent
+---@field ColumnTrim_CastStone_1200W7 UStaticMeshComponent
+---@field ColumnTrim_CastStone_1200W6 UStaticMeshComponent
+---@field ColumnTrim_CastStone_1200W5 UStaticMeshComponent
+---@field ColumnTrim_CastStone_1200W4 UStaticMeshComponent
+---@field ColumnTrim_CastStone_1200W3 UStaticMeshComponent
+---@field ColumnTrim_CastStone_1200W2 UStaticMeshComponent
+---@field ColumnTrim_CastStone_1200W1 UStaticMeshComponent
+---@field ColumnTrim_CastStone_1200W UStaticMeshComponent
+---@field Floor_4x4_StoneBlock_SM76 UStaticMeshComponent
+---@field Floor_4x4_StoneBlock_SM75 UStaticMeshComponent
+---@field Floor_4x4_StoneBlock_SM74 UStaticMeshComponent
+---@field Floor_4x4_StoneBlock_SM73 UStaticMeshComponent
+---@field Proto_Dome_E1_Tile_Sides4 UStaticMeshComponent
+---@field Proto_Dome_E1_Tile_Sides3 UStaticMeshComponent
+---@field Proto_Dome_E1_Tile_Sides2 UStaticMeshComponent
+---@field Floor_4x4_StoneBlock_SM72 UStaticMeshComponent
+---@field Column_Square_1_6_StoneWall_SM8 UStaticMeshComponent
+---@field Proto_Dome_E1_Tile_Sides_Glass1 UStaticMeshComponent
+---@field Proto_Dome_E1_Tile_Sides1 UStaticMeshComponent
+---@field Proto_Dome_E1_Tile_Sides_Glass UStaticMeshComponent
+---@field Proto_Dome_E1_Tile_Sides UStaticMeshComponent
+---@field Floor_4x4_StoneBlock_SM18 UStaticMeshComponent
+---@field Wall_2x2x05_StoneWall_DoorCut_SM18 UStaticMeshComponent
+---@field Wall_2x2x05_StoneWall_DoorCut_SM17 UStaticMeshComponent
+---@field Floor_4x4_StoneBlock_SM71 UStaticMeshComponent
+---@field Wall_2x2x05_StoneWall_DoorCut_SM16 UStaticMeshComponent
+---@field Floor_4x4_StoneBlock_SM70 UStaticMeshComponent
+---@field Floor_4x4_StoneBlock_SM69 UStaticMeshComponent
+---@field Floor_4x4_StoneBlock_SM68 UStaticMeshComponent
+---@field Floor_4x4_StoneBlock_SM67 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM22 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM21 UStaticMeshComponent
+---@field Floor_4x4_StoneBlock_SM66 UStaticMeshComponent
+---@field Floor_4x4_StoneBlock_SM65 UStaticMeshComponent
+---@field RSTTrapGridBox11 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox10 URSTTrapGridBoxComponent
 ---@field Planter_Coastal_2x4x2_SM_Trim UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM64 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM63 UStaticMeshComponent
@@ -64,7 +105,6 @@
 ---@field Floor_4x4_StoneBlock_SM37 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM36 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM35 UStaticMeshComponent
----@field Floor_4x4_StoneBlock_SM33 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM31 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM28 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM27 UStaticMeshComponent

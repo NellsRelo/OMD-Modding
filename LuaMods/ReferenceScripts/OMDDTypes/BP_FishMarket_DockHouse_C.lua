@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABP_FishMarket_DockHouse_C_C : ABP_OMDTrapGrid_C
+---@field NavPowerExclusion1 UNavPowerExclusionComponent
 ---@field NavPowerExclusion UNavPowerExclusionComponent
 ---@field Nav USceneComponent
 ---@field Wood_Square_900W_A_NoTaper_Light12 UStaticMeshComponent

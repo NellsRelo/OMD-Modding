@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABP_Kitchen_Dining_Oven_C : ABP_OMDTrapGrid_C
+---@field Box UBoxComponent
 ---@field Brimstone_SM5 UStaticMeshComponent
 ---@field Brimstone_SM4 UStaticMeshComponent
 ---@field Brimstone_SM3 UStaticMeshComponent
@@ -82,7 +83,6 @@
 ---@field ColumnTrim_CastStone_300W2_StaticMeshComponent0 UStaticMeshComponent
 ---@field ColumnTrim_CastStone_300W_StaticMeshComponent0 UStaticMeshComponent
 ---@field Geo USceneComponent
----@field P_Oven_Smoke_ParticleSystemComponent0 UParticleSystemComponent
 ---@field P_Oven_Embers2_ParticleSystemComponent0 UParticleSystemComponent
 ---@field FX USceneComponent
 ABP_Kitchen_Dining_Oven_C = {}

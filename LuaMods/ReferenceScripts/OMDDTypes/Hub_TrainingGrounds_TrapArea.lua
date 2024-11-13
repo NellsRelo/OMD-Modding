@@ -1,0 +1,54 @@
+---@meta
+
+---@class AHub_TrainingGrounds_TrapArea_C : AActor
+---@field ChildActor10 UChildActorComponent
+---@field Warehouse_4x4_Wall_WoodWork_SM26 UStaticMeshComponent
+---@field Warehouse_4x4_Wall_WoodWork_SM25 UStaticMeshComponent
+---@field Warehouse_4x4_Wall_WoodWork_SM24 UStaticMeshComponent
+---@field Warehouse_4x4_Wall_WoodWork_SM23 UStaticMeshComponent
+---@field Warehouse_4x4_Wall_WoodWork_SM22 UStaticMeshComponent
+---@field Warehouse_4x4_Wall_WoodWork_SM21 UStaticMeshComponent
+---@field Warehouse_4x4_Wall_WoodWork_SM20 UStaticMeshComponent
+---@field Warehouse_4x4_Wall_WoodWork_SM19 UStaticMeshComponent
+---@field Warehouse_4x4_Wall_WoodWork_SM18 UStaticMeshComponent
+---@field Warehouse_4x4_Wall_WoodWork_SM17 UStaticMeshComponent
+---@field Warehouse_4x4_Wall_WoodWork_SM16 UStaticMeshComponent
+---@field Warehouse_4x4_Wall_WoodWork_SM15 UStaticMeshComponent
+---@field Warehouse_4x4_Wall_WoodWork_SM14 UStaticMeshComponent
+---@field Warehouse_4x4_Wall_WoodWork_SM13 UStaticMeshComponent
+---@field Warehouse_4x4_Wall_WoodWork_SM12 UStaticMeshComponent
+---@field Warehouse_4x4_Wall_WoodWork_SM11 UStaticMeshComponent
+---@field Warehouse_4x4_Wall_WoodWork_SM10 UStaticMeshComponent
+---@field Warehouse_4x4_Wall_WoodWork_SM9 UStaticMeshComponent
+---@field Warehouse_4x4_Wall_WoodWork_SM8 UStaticMeshComponent
+---@field Warehouse_4x4_Wall_WoodWork_SM7 UStaticMeshComponent
+---@field Warehouse_4x4_Wall_WoodWork_SM6 UStaticMeshComponent
+---@field Warehouse_4x4_Wall_WoodWork_SM5 UStaticMeshComponent
+---@field ChildActor20 UChildActorComponent
+---@field ChildActor19 UChildActorComponent
+---@field ChildActor18 UChildActorComponent
+---@field ChildActor17 UChildActorComponent
+---@field ChildActor16 UChildActorComponent
+---@field ChildActor15 UChildActorComponent
+---@field ChildActor9 UChildActorComponent
+---@field ChildActor14 UChildActorComponent
+---@field ChildActor13 UChildActorComponent
+---@field ChildActor8 UChildActorComponent
+---@field ChildActor12 UChildActorComponent
+---@field ChildActor11 UChildActorComponent
+---@field Warehouse_4x4_Wall_WoodWork_SM4 UStaticMeshComponent
+---@field Warehouse_4x4_Wall_WoodWork_SM3 UStaticMeshComponent
+---@field Warehouse_4x4_Wall_WoodWork_SM2 UStaticMeshComponent
+---@field ChildActor5 UChildActorComponent
+---@field ChildActor4 UChildActorComponent
+---@field Warehouse_4x4_Wall_WoodWork_SM1 UStaticMeshComponent
+---@field Warehouse_4x4_Wall_WoodWork_SM UStaticMeshComponent
+---@field ChildActor3 UChildActorComponent
+---@field ChildActor1 UChildActorComponent
+---@field ChildActor2 UChildActorComponent
+---@field ChildActor UChildActorComponent
+---@field DefaultSceneRoot USceneComponent
+AHub_TrainingGrounds_TrapArea_C = {}
+
+
+

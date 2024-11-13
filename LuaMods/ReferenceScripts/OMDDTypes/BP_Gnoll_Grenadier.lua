@@ -9,7 +9,6 @@
 ABP_Gnoll_Grenadier_C = {}
 
 function ABP_Gnoll_Grenadier_C:ReceiveBeginPlay() end
-function ABP_Gnoll_Grenadier_C:BP_OnDeathStarted() end
 ---@param EntryPoint int32
 function ABP_Gnoll_Grenadier_C:ExecuteUbergraph_BP_Gnoll_Grenadier(EntryPoint) end
 

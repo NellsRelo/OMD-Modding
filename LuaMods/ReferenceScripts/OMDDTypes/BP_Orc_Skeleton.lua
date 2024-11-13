@@ -23,6 +23,9 @@ ABP_Orc_Skeleton_C['Detach Head'] = function(bSpawnGibs) end
 function ABP_Orc_Skeleton_C:BP_AbilitySystemInitialized() end
 ---@param EndPlayReason EEndPlayReason::Type
 function ABP_Orc_Skeleton_C:ReceiveEndPlay(EndPlayReason) end
+function ABP_Orc_Skeleton_C:ReceiveBeginPlay() end
+---@param Tag FGameplayTag
+function ABP_Orc_Skeleton_C:ProcessNotify(Tag) end
 ---@param EntryPoint int32
 function ABP_Orc_Skeleton_C:ExecuteUbergraph_BP_Orc_Skeleton(EntryPoint) end
 

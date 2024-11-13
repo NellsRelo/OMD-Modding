@@ -3,7 +3,8 @@
 ---@class UBTService_CheckEnemiesRemaining_C : UBTService_BlueprintBase
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field CountThreshold int32
----@field TagToSet FGameplayTag
+---@field HuntingStatusTag FGameplayTag
+---@field EnemyTagsToExclude FGameplayTagContainer
 UBTService_CheckEnemiesRemaining_C = {}
 
 ---@param OwnerController AAIController

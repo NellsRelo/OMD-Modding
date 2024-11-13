@@ -69,13 +69,16 @@ UCommonSessionSubsystem = {}
 
 ---@param NewSessionVisibility ECommonSessionVisibility
 function UCommonSessionSubsystem:SetSessionVisibility(NewSessionVisibility) end
+---@param bInCrossplayEnabled boolean
+function UCommonSessionSubsystem:SetCrossplayEnabled(bInCrossplayEnabled) end
 ---@param JoiningOrHostingPlayer APlayerController
 ---@param Request UCommonSession_HostSessionRequest
 function UCommonSessionSubsystem:QuickPlaySession(JoiningOrHostingPlayer, Request) end
 ---@param InSearchResults TArray<UCommonSession_SearchResult>
+---@param bCanUserCrossPlay boolean
 ---@param SearchText FText
 ---@param OutSearchResults TArray<UCommonSession_SearchResult>
-function UCommonSessionSubsystem:ParseSearchResult(InSearchResults, SearchText, OutSearchResults) end
+function UCommonSessionSubsystem:ParseSearchResult(InSearchResults, bCanUserCrossPlay, SearchText, OutSearchResults) end
 ---@param JoiningPlayer APlayerController
 ---@param Request UCommonSession_SearchResult
 function UCommonSessionSubsystem:JoinSession(JoiningPlayer, Request) end
@@ -90,6 +93,8 @@ function UCommonSessionSubsystem:HostSession(HostingPlayer, Request) end
 function UCommonSessionSubsystem:GetSessionVibility() end
 ---@return FString
 function UCommonSessionSubsystem:GetCrossplayPlatform() end
+---@return boolean
+function UCommonSessionSubsystem:GetCrossplayEnabled() end
 ---@param SearchingPlayer APlayerController
 ---@param Request UCommonSession_SearchSessionRequest
 function UCommonSessionSubsystem:FindSessions(SearchingPlayer, Request) end
@@ -114,6 +119,7 @@ function UCommonSessionSubsystem:CancelFindSessions() end
 ---@field HostLevel int32
 ---@field Region FString
 ---@field PasswordSalt FString
+---@field bCrossplayEnabled boolean
 UCommonSession_HostSessionRequest = {}
 
 

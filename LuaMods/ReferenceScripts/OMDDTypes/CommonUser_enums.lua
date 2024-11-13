@@ -9,8 +9,8 @@ ECommonSessionOnlineMode = {
 ---@enum ECommonSessionVisibility
 ECommonSessionVisibility = {
     FriendsOnly = 0,
-    Public = 1,
-    Private = 2,
+    Private = 1,
+    Public = 2,
     Count = 3,
     ECommonSessionVisibility_MAX = 4,
 }

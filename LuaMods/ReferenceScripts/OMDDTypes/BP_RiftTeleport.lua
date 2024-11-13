@@ -28,14 +28,12 @@ function ABP_RiftTeleport_C:BP_IsSoldChanged() end
 ---@param ActorInfo FGameplayAbilityActorInfo
 function ABP_RiftTeleport_C:BP_OnInteract(ActorInfo) end
 function ABP_RiftTeleport_C:BP_IsBeingPlacedChanged() end
----@param RiftLocation FVector
-ABP_RiftTeleport_C['[SOUND] Teleport Sound'] = function(RiftLocation) end
 ---@param DeltaSeconds float
 function ABP_RiftTeleport_C:ReceiveTick(DeltaSeconds) end
 ---@param ActorInfo FGameplayAbilityActorInfo
 ---@param ToTransform FTransform
----@param bFromRift boolean
-function ABP_RiftTeleport_C:DoTeleport(ActorInfo, ToTransform, bFromRift) end
+---@param FromLocation FVector
+function ABP_RiftTeleport_C:DoTeleport(ActorInfo, ToTransform, FromLocation) end
 function ABP_RiftTeleport_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32
 function ABP_RiftTeleport_C:ExecuteUbergraph_BP_RiftTeleport(EntryPoint) end

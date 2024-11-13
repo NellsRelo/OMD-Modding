@@ -2,7 +2,7 @@
 
 ---@class UW_MissionStatsBase_C : URSTActivatableWidget
 ---@field UberGraphFrame FPointerToUberGraphFrame
----@field BG UBorder
+---@field bg UBorder
 ---@field Button_DevStatsToggle UW_ButtonBasic_C
 ---@field CanvasPanel_0 UCanvasPanel
 ---@field HeaderText UCommonTextBlock
@@ -63,7 +63,7 @@ UW_MissionStatsBase_C['Update Run Stats Setting'] = function() end
 UW_MissionStatsBase_C['Update Header Text'] = function() end
 UW_MissionStatsBase_C['Spawn Stat Entries'] = function() end
 UW_MissionStatsBase_C['Try Mark High Scores'] = function() end
----@param PlayerState UObject
+---@param PlayerState ARSTPlayerState
 ---@param Index int32
 UW_MissionStatsBase_C['Create Player Entry'] = function(PlayerState, Index) end
 UW_MissionStatsBase_C['Spawn Player Accolades'] = function() end
@@ -80,6 +80,10 @@ UW_MissionStatsBase_C['Unregister Accolade Listener'] = function() end
 UW_MissionStatsBase_C['On Accolades Updated'] = function() end
 ---@param IsDesignTime boolean
 function UW_MissionStatsBase_C:PreConstruct(IsDesignTime) end
+---@param PlayerState APlayerState
+function UW_MissionStatsBase_C:PlayerStateChanged(PlayerState) end
+---@param RSTPlayerState ARSTPlayerState
+function UW_MissionStatsBase_C:OnPlayerIndexSet(RSTPlayerState) end
 ---@param EntryPoint int32
 function UW_MissionStatsBase_C:ExecuteUbergraph_W_MissionStatsBase(EntryPoint) end
 

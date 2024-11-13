@@ -5,6 +5,7 @@
 ---@field Button_reset UW_ButtonBasic_C
 ---@field Image_Key UImage
 ---@field InputKeySelector_389 UInputKeySelector
+---@field Text_KeyText UTextBlock
 ---@field IsKeyboard boolean
 ---@field bIsListeningForRemap boolean
 ---@field OnKeySelected FW_RSTOption_KeyRemap_COnKeySelected

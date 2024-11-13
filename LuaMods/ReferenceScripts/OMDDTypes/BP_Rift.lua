@@ -2,6 +2,7 @@
 
 ---@class ABP_Rift_C : ARSTRift
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field TeleportSC USceneComponent
 ---@field PingQuery UCapsuleComponent
 ---@field RiftFXLocation USceneComponent
 ---@field InteractQuery UCapsuleComponent
@@ -15,6 +16,8 @@
 ---@field bAllowTeleportToTeleporter boolean
 ABP_Rift_C = {}
 
+---@return FVector
+function ABP_Rift_C:GetRiftFXLocation() end
 ---@param ActorInfo FGameplayAbilityActorInfo
 function ABP_Rift_C:BP_OnInteract(ActorInfo) end
 ---@param InteractQuery FRSTInteractionQuery

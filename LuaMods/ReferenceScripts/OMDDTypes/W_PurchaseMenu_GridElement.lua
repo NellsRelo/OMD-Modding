@@ -23,6 +23,8 @@
 ---@field ['Image Offset'] FMargin
 UW_PurchaseMenu_GridElement_C = {}
 
+---@return boolean
+function UW_PurchaseMenu_GridElement_C:IsInteractable() end
 ---@param ImageName FText
 ---@param BodyText FText
 ---@param Result FText

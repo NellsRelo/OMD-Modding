@@ -5,11 +5,14 @@
 ---@field OnHide UWidgetAnimation
 ---@field OnShow UWidgetAnimation
 ---@field Image_48 UImage
+---@field Image_164 UImage
 ---@field Image_Background UImage
 ---@field Overlay_40 UOverlay
 ---@field Slider_Difficulty USlider
 ---@field Text_CurrentDifficulty UCommonTextBlock
 ---@field Text_Skulls UCommonTextBlock
+---@field TitleText UCommonTextBlock
+---@field W_ExitMenuButton UW_ExitMenuButton_C
 ---@field BP_Interactable ABP_NPCDifficultyScalar_Skull_C
 ---@field IsHost boolean
 ---@field NewVar boolean

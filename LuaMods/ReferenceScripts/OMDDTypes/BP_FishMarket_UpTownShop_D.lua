@@ -14,7 +14,6 @@
 ---@field Wood_Plank_600W_A_Light3 UStaticMeshComponent
 ---@field Wood_Window_B2 UStaticMeshComponent
 ---@field Wall_15x15_Wainscot_Wood_SM_Door_Merge UStaticMeshComponent
----@field SpotLight USpotLightComponent
 ---@field Wall_4x05_Wood_SM1 UStaticMeshComponent
 ---@field Wood_Window_G_Light_Shutter_Left1 UStaticMeshComponent
 ---@field Wood_Plank_600W_A_Light2 UStaticMeshComponent

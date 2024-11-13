@@ -6,6 +6,7 @@
 ---@field PlayerCharacter ARSTPlayerCharacter
 ---@field DebugLevel int32
 ---@field OnPlayerPawnChangedEvent FW_StatDisplay_Base_COnPlayerPawnChangedEvent
+---@field OnPlayerStateChangedEvent FW_StatDisplay_Base_COnPlayerStateChangedEvent
 UW_StatDisplay_Base_C = {}
 
 ---@param HealthComponent URSTHealthComponent
@@ -155,6 +156,7 @@ function UW_StatDisplay_Base_C:OnInitialized() end
 UW_StatDisplay_Base_C['On Conditional Tick'] = function(MyGeometry, InDeltaTime) end
 ---@param EntryPoint int32
 function UW_StatDisplay_Base_C:ExecuteUbergraph_W_StatDisplay_Base(EntryPoint) end
+function UW_StatDisplay_Base_C:OnPlayerStateChangedEvent__DelegateSignature() end
 ---@param PlayerPawn ARSTPlayerCharacter
 function UW_StatDisplay_Base_C:OnPlayerPawnChangedEvent__DelegateSignature(PlayerPawn) end
 

@@ -9,7 +9,6 @@
 ABP_Kobold_Gas_Sapper_C = {}
 
 function ABP_Kobold_Gas_Sapper_C:ReceiveBeginPlay() end
-function ABP_Kobold_Gas_Sapper_C:BP_OnDeathStarted() end
 ---@param EntryPoint int32
 function ABP_Kobold_Gas_Sapper_C:ExecuteUbergraph_BP_Kobold_Gas_Sapper(EntryPoint) end
 

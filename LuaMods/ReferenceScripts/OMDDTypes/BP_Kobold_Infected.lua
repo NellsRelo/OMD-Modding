@@ -9,7 +9,6 @@
 ABP_Kobold_Infected_C = {}
 
 function ABP_Kobold_Infected_C:ReceiveBeginPlay() end
-function ABP_Kobold_Infected_C:BP_OnDeathStarted() end
 ---@param EntryPoint int32
 function ABP_Kobold_Infected_C:ExecuteUbergraph_BP_Kobold_Infected(EntryPoint) end
 

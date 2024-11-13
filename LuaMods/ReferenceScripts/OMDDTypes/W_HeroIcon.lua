@@ -2,7 +2,7 @@
 
 ---@class UW_HeroIcon_C : URSTUserWidget
 ---@field UberGraphFrame FPointerToUberGraphFrame
----@field BG UImage
+---@field bg UImage
 ---@field FrameBorder UImage
 ---@field Image_41 UImage
 ---@field Overlay_0 UOverlay

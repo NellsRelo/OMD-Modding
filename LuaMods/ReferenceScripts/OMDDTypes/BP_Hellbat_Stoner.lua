@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABP_Hellbat_Stoner_C : ABP_EnemyBase_C
+---@field RSTAttackLocations URSTAttackLocationsComponent
 ---@field NS_Hellbat_Stoner_Eyes1 UNiagaraComponent
 ---@field NS_Hellbat_Stoner_Eyes UNiagaraComponent
 ---@field NS_Hellbat_Stoner_Tail UNiagaraComponent

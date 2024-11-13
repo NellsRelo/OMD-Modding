@@ -2,6 +2,7 @@
 
 ---@class ABP_SentinelTrapBase_C : ABP_RSTTrap_Base_C
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field NS_Sentinal_Base UNiagaraComponent
 ---@field Sentinel_Base01_01 UStaticMeshComponent
 ---@field SpawnPoint UArrowComponent
 ---@field IteractCollision UBoxComponent

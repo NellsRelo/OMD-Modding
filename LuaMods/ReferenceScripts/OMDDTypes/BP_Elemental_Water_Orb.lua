@@ -2,6 +2,7 @@
 
 ---@class ABP_Elemental_Water_Orb_C : ABP_EnemyBase_C
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field SM_FX_Sphere_02 UStaticMeshComponent
 ---@field CombatCapsule URSTCombatCapsuleComponent
 ---@field TimeUntilChildSpawn float
 ---@field ChildClass TSubclassOf<AActor>

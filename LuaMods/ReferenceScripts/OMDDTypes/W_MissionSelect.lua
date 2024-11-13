@@ -30,6 +30,7 @@
 ---@field MissionSelectText UCommonTextBlock
 ---@field RiftEffect UImage
 ---@field RiftPoints UCommonTextBlock
+---@field SafeZone_0 USafeZone
 ---@field SkullOverlay UOverlay
 ---@field TabButton UW_ButtonBasic_C
 ---@field TabButtonOverlay UOverlay

@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABP_Museum_Corner_SouthWing_C : ABP_OMDTrapGrid_C
+---@field Wall_4x4x05_Stonewall_SM24 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM32 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM31 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM30 UStaticMeshComponent

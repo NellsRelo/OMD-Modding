@@ -9,6 +9,8 @@
 ---@field EffectsToExecute TArray<TSubclassOf<UGameplayEffect>>
 UGA_Blunderbuss_Ultimate_C = {}
 
+---@return UClass
+function UGA_Blunderbuss_Ultimate_C:BP_GetPlaceableClass() end
 function UGA_Blunderbuss_Ultimate_C:OnFinish_2BC6C6B34966742434B2E9873C26A7BD() end
 ---@param SpawnedActor AActor
 function UGA_Blunderbuss_Ultimate_C:BP_OnPlacementFinished(SpawnedActor) end

@@ -8,7 +8,6 @@
 ---@field Column_BaseD_CastStone UStaticMeshComponent
 ---@field M_Proto_Roof_SS_Cap_4Side UStaticMeshComponent
 ---@field Geometry USceneComponent
----@field PointLight UPointLightComponent
 ---@field Wall003 URSTTrapGridBoxComponent
 ---@field Wall00 URSTTrapGridBoxComponent
 ---@field Wall002 URSTTrapGridBoxComponent

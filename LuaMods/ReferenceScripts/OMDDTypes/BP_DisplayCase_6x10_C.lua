@@ -1,0 +1,56 @@
+---@meta
+
+---@class ABP_DisplayCase_6x10_C_C : ABP_OMDTrapGrid_C
+---@field Wood_BookShelves_Shelve_600C_03 UStaticMeshComponent
+---@field FireFiendMedium_ShinRight UStaticMeshComponent
+---@field FireFiendMedium_Left UStaticMeshComponent
+---@field FireFiendMedium3 UStaticMeshComponent
+---@field FireFiendMedium2 UStaticMeshComponent
+---@field FireFiendMedium1 UStaticMeshComponent
+---@field FireFiendMedium UStaticMeshComponent
+---@field FireFiend_Medium_Weapon UStaticMeshComponent
+---@field FireFiendMage_SM1 UStaticMeshComponent
+---@field FireFiendMage_SM UStaticMeshComponent
+---@field FireFiend_Mage_ATTACHMENT_Weapon_Hand_R_Skin00 UStaticMeshComponent
+---@field Cyclops_Heavy_ATTACHMENT_Armor_Lowerarm_Twist_02_R_Skin00 UStaticMeshComponent
+---@field Cyclops_Heavy_ATTACHMENT_Armor_Clavicle_L_Skin00 UStaticMeshComponent
+---@field Cyclops_Heavy_Axe_SM UStaticMeshComponent
+---@field Wood_BookShelves_Shelve_600C_02 UStaticMeshComponent
+---@field Gnoll_Dagger UStaticMeshComponent
+---@field Troll_Mountain_ATTACHMENT_Weapon_Hand_R_Skin00 UStaticMeshComponent
+---@field BP_Skeleton_Cyclops_Heavy_Attack_Nested_Breakable UChildActorComponent
+---@field BP_Skeleton_FireFiend_Mage_Nested_Breakable1 UChildActorComponent
+---@field BP_Skeleton_Cyclops_Druid_Nested_Breakable UChildActorComponent
+---@field BP_Skeleton_FireFiend_Mage_Nested_Breakable UChildActorComponent
+---@field BP_Orc_Glyph_Standing UChildActorComponent
+---@field Orc_ArchWay_SM1 UStaticMeshComponent
+---@field Orc_ArchWay_SM UStaticMeshComponent
+---@field BP_Skeleton_Gnoll_Assassin_Attack_Nested_Breakable UChildActorComponent
+---@field BP_Skeleton_Orc_Medium_Idle_Nested_Breakable UChildActorComponent
+---@field Props USceneComponent
+---@field DisplayCase_WoodFloor_2x8_SM UStaticMeshComponent
+---@field Column_BaseC_CastStone UStaticMeshComponent
+---@field Column_Square_1_2_StoneWall_SM UStaticMeshComponent
+---@field Wall_Bottom_2x05_StoneWalls_SM UStaticMeshComponent
+---@field Wall_Bottom_4x05_StoneWall_SM UStaticMeshComponent
+---@field Column_Square_1_2_StoneWall_SM5 UStaticMeshComponent
+---@field Column_Square_1_2_StoneWall_SM4 UStaticMeshComponent
+---@field Column_BaseC_CastStone3 UStaticMeshComponent
+---@field Column_BaseC_CastStone2 UStaticMeshComponent
+---@field Column_Square_1_2_StoneWall_SM6 UStaticMeshComponent
+---@field Column_BaseC_CastStone1 UStaticMeshComponent
+---@field Wall_Bottom_4x05_StoneWall_SM1 UStaticMeshComponent
+---@field Wall_Bottom_2x05_StoneWalls_SM1 UStaticMeshComponent
+---@field DisplayCase_WoodFloor_2x8_SM1 UStaticMeshComponent
+---@field Geo USceneComponent
+---@field RSTTrapGridBox12 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox2 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox3 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox URSTTrapGridBoxComponent
+---@field RSTTrapGridBox1 URSTTrapGridBoxComponent
+---@field TrapGrid USceneComponent
+---@field BP USceneComponent
+ABP_DisplayCase_6x10_C_C = {}
+
+
+

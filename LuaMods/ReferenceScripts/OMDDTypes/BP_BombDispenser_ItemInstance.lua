@@ -4,6 +4,7 @@
 ---@field Cooldown double
 ---@field Damage double
 ---@field Radius double
+---@field ['Critical Hit Chance'] double
 ABP_BombDispenser_ItemInstance_C = {}
 
 

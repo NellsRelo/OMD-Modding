@@ -158,6 +158,14 @@ ERSTCharacterWeightClass = {
     Max = 4,
 }
 
+---@enum ERSTChatMessageType
+ERSTChatMessageType = {
+    Player = 0,
+    Game = 1,
+    System = 2,
+    ERSTChatMessageType_MAX = 3,
+}
+
 ---@enum ERSTCheatExecutionTime
 ERSTCheatExecutionTime = {
     OnCheatManagerCreated = 0,
@@ -339,8 +347,9 @@ ERSTInvalidTargetReason = {
     ExceedsAcquisitionRadius = 7,
     TargetNotBlocked = 8,
     TargetMustBeDamaged = 9,
-    NoMatchingRule = 10,
-    ERSTInvalidTargetReason_MAX = 11,
+    TargetInvulnerable = 10,
+    NoMatchingRule = 11,
+    ERSTInvalidTargetReason_MAX = 12,
 }
 
 ---@enum ERSTInventoryItemFilter
@@ -358,8 +367,9 @@ ERSTInventoryItemPropertyDisplayFormat = {
     Basic = 0,
     Percentage = 1,
     InvertedPercentage = 2,
-    Time = 3,
-    ERSTInventoryItemPropertyDisplayFormat_MAX = 4,
+    CriticalHitPercentage = 3,
+    Time = 4,
+    ERSTInventoryItemPropertyDisplayFormat_MAX = 5,
 }
 
 ---@enum ERSTMilestoneComparisonMethod

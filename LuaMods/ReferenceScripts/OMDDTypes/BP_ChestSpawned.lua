@@ -2,7 +2,7 @@
 
 ---@class ABP_ChestSpawned_C : ARSTChest
 ---@field UberGraphFrame FPointerToUberGraphFrame
----@field Chest USkeletalMeshComponent
+---@field SkeletalMeshComponentBudgeted USkeletalMeshComponentBudgeted
 ---@field TextRender UTextRenderComponent
 ---@field Scene USceneComponent
 ---@field CoinCost int32

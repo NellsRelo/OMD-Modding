@@ -5,6 +5,7 @@
 ---@field ElixirIcon UImage
 ---@field ElixirNameLabel UCommonTextBlock
 ---@field ElixirRoot UHorizontalBox
+---@field Image_PlatformIcon UW_PlayerPlatformIcon_C
 ---@field LeftArrow UW_ButtonBasic_C
 ---@field ModifierList UCommonActivatableWidgetSwitcher
 ---@field PlayerIcon UImage
@@ -53,6 +54,8 @@ function UW_ThreadMenuEntry_C:BndEvt__W_ThreadMenuEntry_RightArrow_K2Node_Compon
 ---@param InputPin int32
 UW_ThreadMenuEntry_C['Set Current Page'] = function(InputPin) end
 UW_ThreadMenuEntry_C['Scroll To End'] = function() end
+---@param PlayerState APlayerState
+function UW_ThreadMenuEntry_C:UpdatePlatformIcon(PlayerState) end
 ---@param EntryPoint int32
 function UW_ThreadMenuEntry_C:ExecuteUbergraph_W_ThreadMenuEntry(EntryPoint) end
 

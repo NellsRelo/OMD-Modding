@@ -7,7 +7,6 @@
 ---@field Vendor_Stall_Awning_B_Fabric_SM UStaticMeshComponent
 ---@field Vendor_Stall_Awning_B_SubFrame_SM UStaticMeshComponent
 ---@field Wall_4x05_Wood_SM2 UStaticMeshComponent
----@field Wall_4x05_Wood_SM1 UStaticMeshComponent
 ---@field Wood_Plank_600W_A_Light8 UStaticMeshComponent
 ---@field RSTTrapGridBox9 URSTTrapGridBoxComponent
 ---@field Wall_2x05_Counter_ExposedBrick_SM_Union_3 UStaticMeshComponent
@@ -29,7 +28,6 @@
 ---@field Wood_Window_B1 UStaticMeshComponent
 ---@field Wood_Plank_600W_A_Light1 UStaticMeshComponent
 ---@field Ceiling_4x4_Wood_A_SM UStaticMeshComponent
----@field Wall_4x05_Wood_SM UStaticMeshComponent
 ---@field WoodPlank_4x4_Floor_A UStaticMeshComponent
 ---@field RSTTrapGridBox7 URSTTrapGridBoxComponent
 ---@field Props USceneComponent

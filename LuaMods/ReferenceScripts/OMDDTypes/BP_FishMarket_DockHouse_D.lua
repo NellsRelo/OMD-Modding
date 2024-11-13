@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABP_FishMarket_DockHouse_D_C : ABP_OMDTrapGrid_C
+---@field NavPowerExclusion1 UNavPowerExclusionComponent
 ---@field NavPowerExclusion UNavPowerExclusionComponent
 ---@field Nav USceneComponent
 ---@field Wood_Plank_1200W_A_Light1 UStaticMeshComponent
@@ -9,10 +10,6 @@
 ---@field Wood_Platform_300x300_A_Light1 UStaticMeshComponent
 ---@field Pennant_Far_BP UChildActorComponent
 ---@field Wood_Platform_300x300_A_Light2 UStaticMeshComponent
----@field Wood_Square_900W_A_light_NoTaper1 UStaticMeshComponent
----@field Wood_Square_900W_A_light_NoTaper3 UStaticMeshComponent
----@field Wood_Square_900W_A_light_NoTaper2 UStaticMeshComponent
----@field Wood_Square_900W_A_light_NoTaper UStaticMeshComponent
 ---@field Wood_Platform_300x300_A_Light3 UStaticMeshComponent
 ---@field Wood_Window_P_Light UStaticMeshComponent
 ---@field Props USceneComponent

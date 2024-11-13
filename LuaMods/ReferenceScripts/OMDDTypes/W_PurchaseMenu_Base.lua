@@ -6,12 +6,14 @@
 ---@field Primary UWidgetAnimation
 ---@field PrimaryToSecondary UWidgetAnimation
 ---@field Button_No UW_ButtonBasic_C
+---@field Button_RestartNPE UW_ButtonBasic_C
 ---@field Button_Yes UW_ButtonBasic_C
 ---@field CurrencyDisplayRoot UNamedSlot
 ---@field DetailsDisplayRoot UNamedSlot
 ---@field GridFilterRoot UNamedSlot
 ---@field NPCImage UImage
 ---@field SecondaryDetails UNamedSlot
+---@field TitleIndicator UImage
 ---@field TitleText UCommonTextBlock
 ---@field TOP_Left UImage
 ---@field Top_Right UImage
@@ -38,6 +40,7 @@
 ---@field ['Currently Hovered Widget'] UW_PurchaseMenu_GridElement_C
 ---@field ['Current Display Index'] int32
 ---@field NoOptionsPrompt FText
+---@field ['Header Icon'] FSlateBrush
 UW_PurchaseMenu_Base_C = {}
 
 ---@param bUseEmptyText boolean
@@ -103,6 +106,10 @@ UW_PurchaseMenu_Base_C['BndEvt__W_PurchaseMenu_Base_W_RSTSpellbookGrid_K2Node_Co
 UW_PurchaseMenu_Base_C['Process Element Unhovered'] = function(InputPin) end
 ---@param NumSpawned int32
 UW_PurchaseMenu_Base_C['BndEvt__W_PurchaseMenu_Base_W_RSTSpellbookGrid_K2Node_ComponentBoundEvent_4_Grid Elements Spawned__DelegateSignature'] = function(NumSpawned) end
+---@param Button UCommonButtonBase
+function UW_PurchaseMenu_Base_C:BndEvt__W_PurchaseMenu_Base_Button_RestartNPE_K2Node_ComponentBoundEvent_7_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_PurchaseMenu_Base_C:BP_StartNPE() end
+function UW_PurchaseMenu_Base_C:BP_EndNPE() end
 ---@param EntryPoint int32
 function UW_PurchaseMenu_Base_C:ExecuteUbergraph_W_PurchaseMenu_Base(EntryPoint) end
 

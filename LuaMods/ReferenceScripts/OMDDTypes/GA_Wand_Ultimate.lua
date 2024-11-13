@@ -25,8 +25,11 @@
 ---@field EffectsToExecute TArray<TSubclassOf<UGameplayEffect>>
 ---@field ['Clone Count'] int32
 ---@field ['Clone Locations'] TArray<FVector>
+---@field DefaultCloneClass TSubclassOf<ARSTWandClone>
 UGA_Wand_Ultimate_C = {}
 
+---@param Class TSubclassOf<ARSTWandClone>
+UGA_Wand_Ultimate_C['Get Clone Class'] = function(Class) end
 function UGA_Wand_Ultimate_C:OnFinish_BCEACC4C42336C6AF77EB6895BEB2F96() end
 function UGA_Wand_Ultimate_C:OnFinish_B574A93B42BD506E8FFAC0A265E4D124() end
 ---@param SpawnedActor AActor

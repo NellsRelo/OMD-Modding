@@ -5,6 +5,7 @@
 ---@field Hidden UWidgetAnimation
 ---@field Hide UWidgetAnimation
 ---@field Show UWidgetAnimation
+---@field Image_PlatformIcon UW_PlayerPlatformIcon_C
 ---@field ItemsRoot1 UHorizontalBox
 ---@field ItemsRoot2 UHorizontalBox
 ---@field PlayerIcon UImage
@@ -37,6 +38,8 @@ UW_Spellbook_OtherPlayerHotbar_C['Init Player Callbacks'] = function() end
 UW_Spellbook_OtherPlayerHotbar_C['On Pawn Definition Changed'] = function(PlayerState) end
 ---@param newPlayerName FString
 UW_Spellbook_OtherPlayerHotbar_C['On Player Name Changed'] = function(newPlayerName) end
+---@param PlayerState APlayerState
+function UW_Spellbook_OtherPlayerHotbar_C:UpdatePlatformIcon(PlayerState) end
 ---@param EntryPoint int32
 function UW_Spellbook_OtherPlayerHotbar_C:ExecuteUbergraph_W_Spellbook_OtherPlayerHotbar(EntryPoint) end
 

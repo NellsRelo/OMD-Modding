@@ -1,9 +1,9 @@
 ---@meta
 
 ---@class UW_DraftPlayerName_C : URSTUserWidget
----@field Image_48 UImage
 ---@field Image_Background UImage
 ---@field Image_Frame UImage
+---@field Image_IsSelecting UImage
 ---@field Text_Bottom UCommonTextBlock
 ---@field Text_Top UCommonTextBlock
 UW_DraftPlayerName_C = {}
