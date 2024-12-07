@@ -15,4 +15,21 @@ function Retrieve.PlayerCharacter(idx)
   end
 end
 
+--- Function to get or create the RSTCheatManager (the OMDD specific Manager, not UE)
+--- @return RSTCheatManager
+function Retrieve.RSTCheatManager()
+    local CheatManager = Utils.findInstanceOf("RSTCheatManager")
+
+    if CheatManager and CheatManager:IsValid() then
+        return CheatManager
+    end
+
+    local RSTCheatManagerClass = StaticFindObject("/Script/OMD4.RSTCheatManager")
+    local PlayerController = UEHelpers.GetPlayerController()
+
+    local CheatManager = StaticConstructObject(RSTCheatManagerClass, PlayerController, 0, 0, 0, nil, false, false, nil)
+
+    return CheatManager
+end
+
 return Retrieve
