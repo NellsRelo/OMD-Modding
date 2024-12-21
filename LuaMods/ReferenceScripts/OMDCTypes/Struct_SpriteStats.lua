@@ -1,0 +1,12 @@
+---@meta
+
+---@class FStruct_SpriteStats
+---@field IdleSetName_11_4B62DDCA4263E55C7F4A3297599F4EFE FName
+---@field WalkSetName_4_0096DB72411E3CD38059CB969D7D1265 FName
+---@field AttackSetName_5_C8BC886D4EE0AA0606EFD0A08C8F3AAA FName
+---@field PainSetName_7_FD6D44104B0D68ED4F808ABDC7E4615C FName
+---@field DeathSetName_9_E0BAC89044E77667832E179337580F8A FName
+FStruct_SpriteStats = {}
+
+
+
