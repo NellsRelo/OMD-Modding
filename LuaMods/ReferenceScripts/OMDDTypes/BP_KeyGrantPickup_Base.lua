@@ -11,6 +11,11 @@
 ---@field PickupCueTag FGameplayTag
 ABP_KeyGrantPickup_Base_C = {}
 
+---@param Player APlayerController
+ABP_KeyGrantPickup_Base_C['Perform Key Grant'] = function(Player) end
+---@param Controller APlayerController
+---@param bAllowed boolean
+ABP_KeyGrantPickup_Base_C['Is Key Grant Allowed'] = function(Controller, bAllowed) end
 ---@param RequestingInteractor AActor
 ---@param RetValue boolean
 function ABP_KeyGrantPickup_Base_C:BP_CanInteractWith(RequestingInteractor, RetValue) end

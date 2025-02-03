@@ -65,6 +65,7 @@ function UAsyncAction_CommonUserInitialize:HandleInitializationComplete(UserInfo
 ---@field K2_OnCreateSessionCompleteEvent FCommonSessionSubsystemK2_OnCreateSessionCompleteEvent
 ---@field K2_OnDestroySessionCompleteEvent FCommonSessionSubsystemK2_OnDestroySessionCompleteEvent
 ---@field K2_OnPendingJoinSessionEvent FCommonSessionSubsystemK2_OnPendingJoinSessionEvent
+---@field PendingJoinRequest UCommonSession_SearchResult
 UCommonSessionSubsystem = {}
 
 ---@param NewSessionVisibility ECommonSessionVisibility

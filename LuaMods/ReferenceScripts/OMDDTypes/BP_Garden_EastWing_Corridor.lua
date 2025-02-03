@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABP_Garden_EastWing_Corridor_C : ABP_OMDTrapGrid_C
+---@field RSTTrapGridBox80 URSTTrapGridBoxComponent
 ---@field ColumnTrim_CastStone_1200W1 UStaticMeshComponent
 ---@field ColumnTrim_CastStone_1200W UStaticMeshComponent
 ---@field RSTTrapGridBox79 URSTTrapGridBoxComponent
@@ -40,7 +41,6 @@
 ---@field CSC_600_GardenWall UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM92 UStaticMeshComponent
 ---@field CSC_1200_GardenWall2 UStaticMeshComponent
----@field RSTTrapGridBox75 URSTTrapGridBoxComponent
 ---@field Wall_StoneWall_Castle_4x2_SM UStaticMeshComponent
 ---@field Window_Pointed_4x_Trim23 UStaticMeshComponent
 ---@field Window_Pointed_4x_Trim22 UStaticMeshComponent

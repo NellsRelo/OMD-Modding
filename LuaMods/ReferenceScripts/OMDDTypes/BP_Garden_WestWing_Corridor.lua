@@ -1,6 +1,31 @@
 ---@meta
 
 ---@class ABP_Garden_WestWing_Corridor_C : ABP_OMDTrapGrid_C
+---@field RSTTrapGridBox84 URSTTrapGridBoxComponent
+---@field Cren_Stepped_Short_CS2 UStaticMeshComponent
+---@field Cren_Stepped_Short_CS1 UStaticMeshComponent
+---@field ColumnTileA_CastStone_Mid1 UStaticMeshComponent
+---@field ColumnTileA_CastStone_Mid UStaticMeshComponent
+---@field Cren_Stepped_Square_CS_Deco7 UStaticMeshComponent
+---@field Cren_Stepped_Square_CS_Deco6 UStaticMeshComponent
+---@field Cren_Stepped_Square_CS_Deco5 UStaticMeshComponent
+---@field Cren_Stepped_Square_CS_Deco4 UStaticMeshComponent
+---@field Cren_Stepped_Square_CS_Deco3 UStaticMeshComponent
+---@field Cren_Stepped_Square_CS_Deco2 UStaticMeshComponent
+---@field Cren_Stepped_Square_CS_Deco1 UStaticMeshComponent
+---@field Cren_Stepped_Square_CS_Deco UStaticMeshComponent
+---@field Floor_1x4_Plaza_PatternC1_SM8 UStaticMeshComponent
+---@field Arch_1x1x4_StoneWall_SM10 UStaticMeshComponent
+---@field RSTTrapGridBox83 URSTTrapGridBoxComponent
+---@field Column_Square_1_6_StoneWall_SM15 UStaticMeshComponent
+---@field Column_Square_1_6_StoneWall_SM14 UStaticMeshComponent
+---@field Column_Square_1_6_StoneWall_SM13 UStaticMeshComponent
+---@field Column_Square_1_6_StoneWall_SM12 UStaticMeshComponent
+---@field Column_Square_1_6_StoneWall_SM11 UStaticMeshComponent
+---@field Floor_4x4_StoneBlock_SM120 UStaticMeshComponent
+---@field Floor_4x4_StoneBlock_SM119 UStaticMeshComponent
+---@field Floor_4x4_StoneBlock_SM118 UStaticMeshComponent
+---@field Floor_4x4_StoneBlock_SM117 UStaticMeshComponent
 ---@field ColumnTrim_CastStone_1200W5 UStaticMeshComponent
 ---@field ColumnTrim_CastStone_1200W4 UStaticMeshComponent
 ---@field Column_Pointed_Half_B_SM_Straighten3 UStaticMeshComponent
@@ -112,7 +137,6 @@
 ---@field RSTTrapGridBox58 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox57 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox56 URSTTrapGridBoxComponent
----@field RSTTrapGridBox55 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox54 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox53 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox52 URSTTrapGridBoxComponent

@@ -1,0 +1,56 @@
+---@meta
+
+---@class ABP_Garden_BossCinematic_A_C : ABP_OMDTrapGrid_C
+---@field Proto_Dome_C_Tile_Glass3 UStaticMeshComponent
+---@field Proto_Dome_C_Glass UStaticMeshComponent
+---@field Proto_Dome_C_Tile_Glass2 UStaticMeshComponent
+---@field Proto_Dome_C UStaticMeshComponent
+---@field Proto_Dome_C6 UStaticMeshComponent
+---@field Proto_Dome_C5 UStaticMeshComponent
+---@field Proto_Dome_C_Cap_A2 UStaticMeshComponent
+---@field Proto_Dome_C_Cap_A1 UStaticMeshComponent
+---@field Proto_Dome_C_Tile_Glass6 UStaticMeshComponent
+---@field Proto_Dome_C_Tile_Glass7 UStaticMeshComponent
+---@field Proto_Dome_C_Glass1 UStaticMeshComponent
+---@field Proto_Dome_C_Cap_A UStaticMeshComponent
+---@field Proto_Dome_C_Cap_B UStaticMeshComponent
+---@field Proto_Dome_C1 UStaticMeshComponent
+---@field Proto_Dome_C10 UStaticMeshComponent
+---@field Proto_Dome_C9 UStaticMeshComponent
+---@field Proto_Dome_C_Cap_A3 UStaticMeshComponent
+---@field Proto_Dome_C2 UStaticMeshComponent
+---@field Proto_Dome_C_Glass2 UStaticMeshComponent
+---@field Proto_Dome_C_Cap_A6 UStaticMeshComponent
+---@field Proto_Dome_C_Cap_B1 UStaticMeshComponent
+---@field SM_fountain_part_04 UStaticMeshComponent
+---@field Hero_Fountain_C_SM1 UStaticMeshComponent
+---@field Hero_Fountain_C_SM UStaticMeshComponent
+---@field SM_fountain_part_01 UStaticMeshComponent
+---@field Hero_Fountain_D_SM UStaticMeshComponent
+---@field Wall_Bottom_4x4_StoneWalls_SM30 UStaticMeshComponent
+---@field Wall_Bottom_4x4_StoneWalls_SM29 UStaticMeshComponent
+---@field Column_Sec_CastStone_Tall_FB_Merged23 UStaticMeshComponent
+---@field Column_Sec_CastStone_Tall_FB_Merged22 UStaticMeshComponent
+---@field Stair_1x4_Stone_RandomSize_SM16 UStaticMeshComponent
+---@field Wall_Sec_2_2_V2_RB28 UStaticMeshComponent
+---@field Stair_1x4_Stone_RandomSize_SM8 UStaticMeshComponent
+---@field Wall_Sec_2_2_V2_RB27 UStaticMeshComponent
+---@field Wall_Bottom_4x4_StoneWalls_SM26 UStaticMeshComponent
+---@field Wall_Bottom_4x4_StoneWalls_SM23 UStaticMeshComponent
+---@field Column_Sec_CastStone_Tall_FB_Merged15 UStaticMeshComponent
+---@field Column_Sec_CastStone_Tall_FB_Merged14 UStaticMeshComponent
+---@field Column_Sec_CastStone_Tall_FB_Merged13 UStaticMeshComponent
+---@field Column_Sec_CastStone_Tall_FB_Merged12 UStaticMeshComponent
+---@field Column_Sec_CastStone_Tall_FB_Merged8 UStaticMeshComponent
+---@field Column_Sec_CastStone_Tall_FB_Merged2 UStaticMeshComponent
+---@field Wall_Sec_2_2_V2_RB24 UStaticMeshComponent
+---@field Wall_Sec_2_2_V2_RB19 UStaticMeshComponent
+---@field Stair_1x4_Stone_RandomSize_SM15 UStaticMeshComponent
+---@field Stair_1x4_Stone_RandomSize_SM10 UStaticMeshComponent
+---@field Stair_1x4_Stone_RandomSize_SM7 UStaticMeshComponent
+---@field Geo USceneComponent
+---@field TrapGrid USceneComponent
+ABP_Garden_BossCinematic_A_C = {}
+
+
+

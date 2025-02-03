@@ -3,7 +3,7 @@
 ---@class ABP_MusicActor_MainMenu_C : AActor
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field DefaultSceneRoot USceneComponent
----@field Timeline_2_5s_E2E2E6A64BB8EE3C18F8D18F2B33D019 float
+---@field Timeline_1_5s_E2E2E6A64BB8EE3C18F8D18F2B33D019 float
 ---@field Timeline__Direction_E2E2E6A64BB8EE3C18F8D18F2B33D019 ETimelineDirection::Type
 ---@field Timeline UTimelineComponent
 ---@field ['Main Menu Loop'] UAudioComponent
@@ -20,6 +20,9 @@ function ABP_MusicActor_MainMenu_C:ReceiveTick(DeltaSeconds) end
 ---@param Result FOnlineResultInformation
 function ABP_MusicActor_MainMenu_C:OnCreateSessionComplete(Result) end
 function ABP_MusicActor_MainMenu_C:MainMenuShown() end
+function ABP_MusicActor_MainMenu_C:ReceiveBeginPlay() end
+---@param bIsShowing boolean
+function ABP_MusicActor_MainMenu_C:LoadingScreenChanged(bIsShowing) end
 ---@param EntryPoint int32
 function ABP_MusicActor_MainMenu_C:ExecuteUbergraph_BP_MusicActor_MainMenu(EntryPoint) end
 

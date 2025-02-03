@@ -4,7 +4,6 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field OnHide UWidgetAnimation
 ---@field OnShow UWidgetAnimation
----@field Image_94 UImage
 ---@field ReviveProgressBar UImage
 ---@field WidgetRoot USizeBox
 ---@field bShouldTick boolean

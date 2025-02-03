@@ -50,7 +50,7 @@
 ---@field Image_5 UImage
 ---@field Image_127 UImage
 ---@field Image_201 UImage
----@field InvalidationBox_0 UInvalidationBox
+---@field Image_HeroHighlight UImage
 ---@field InvalidationBox_1 UInvalidationBox
 ---@field InvalidationBox_2 UInvalidationBox
 ---@field InvalidationBox_3 UInvalidationBox
@@ -127,6 +127,8 @@
 ---@field Row6_Column7 UUIExtensionPointWidget
 ---@field Row6_Column8 UUIExtensionPointWidget
 ---@field Row6_Column9 UUIExtensionPointWidget
+---@field SafeZone_0 USafeZone
+---@field ScaleBox_3 UScaleBox
 ---@field SkillLevelText UCommonTextBlock
 ---@field SkullCost UCommonTextBlock
 ---@field SkullCostImage UImage

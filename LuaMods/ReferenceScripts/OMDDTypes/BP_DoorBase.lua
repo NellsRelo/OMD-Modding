@@ -37,6 +37,18 @@
 ---@field DynamicDissolveMaterials TArray<UMaterialInstanceDynamic>
 ---@field ['Dissolve Delay'] float
 ---@field DissolveSound USoundBase
+---@field Light_Intensity_Day double
+---@field Light_Intensity_Night double
+---@field Light_Intensity_Rain double
+---@field DoorBreakCompleted boolean
+---@field DoorBreakStarted boolean
+---@field ['Use Collision Switch'] boolean
+---@field ['Collision Switch Delay'] double
+---@field ['Switch to Profile'] FName
+---@field ['Spawn Particles on Break'] boolean
+---@field MainBreakFX UNiagaraSystem
+---@field Decal_Parameter_Name FName
+---@field Decal_Material_Instance UMaterialInterface
 ABP_DoorBase_C = {}
 
 function ABP_DoorBase_C:UserConstructionScript() end
@@ -53,6 +65,9 @@ function ABP_DoorBase_C:ReceiveTick(DeltaSeconds) end
 ---@param BreakEvent FChaosBreakEvent
 function ABP_DoorBase_C:BndEvt__BP_DoorBase_GeometryCollection_K2Node_ComponentBoundEvent_1_OnChaosBreakEvent__DelegateSignature(BreakEvent) end
 function ABP_DoorBase_C:DoorAnim() end
+function ABP_DoorBase_C:ChaosActivation() end
+---@param CollisionInfo FChaosPhysicsCollisionInfo
+function ABP_DoorBase_C:BndEvt__ChaosBreakable_GeometryCollection_K2Node_ComponentBoundEvent_0_OnChaosPhysicsCollision__DelegateSignature(CollisionInfo) end
 ---@param EntryPoint int32
 function ABP_DoorBase_C:ExecuteUbergraph_BP_DoorBase(EntryPoint) end
 

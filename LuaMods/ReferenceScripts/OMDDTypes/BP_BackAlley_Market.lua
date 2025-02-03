@@ -1,6 +1,18 @@
 ---@meta
 
 ---@class ABP_BackAlley_Market_C : ABP_OMDTrapGrid_C
+---@field Base_Column_Square_05_15_Stone_SM3 UStaticMeshComponent
+---@field Wall_Bottom_2x2_Stone_SM7 UStaticMeshComponent
+---@field Wall_Bottom_2x2_Stone_SM6 UStaticMeshComponent
+---@field Base_Column_Square_05_15_Stone_SM2 UStaticMeshComponent
+---@field Wall_Bottom_2x2_Stone_SM5 UStaticMeshComponent
+---@field Wall_Bottom_2x2_Stone_SM4 UStaticMeshComponent
+---@field Base_Column_Square_05_15_Stone_SM1 UStaticMeshComponent
+---@field Wall_Bottom_2x2_Stone_SM3 UStaticMeshComponent
+---@field Wall_Bottom_2x2_Stone_SM2 UStaticMeshComponent
+---@field Base_Column_Square_05_15_Stone_SM UStaticMeshComponent
+---@field Wall_Bottom_2x2_Stone_SM1 UStaticMeshComponent
+---@field Wall_Bottom_2x2_Stone_SM UStaticMeshComponent
 ---@field NavPowerExclusion UNavPowerExclusionComponent
 ---@field RSTTrapGridBox38 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox37 URSTTrapGridBoxComponent
@@ -75,7 +87,6 @@
 ---@field Floor_2x2_StoneBlock_Dark_SM1 UStaticMeshComponent
 ---@field Wall_4x4_Brick_SM15 UStaticMeshComponent
 ---@field Wall_4x4_Brick_SM14 UStaticMeshComponent
----@field Wall_4x4_Brick_SM UStaticMeshComponent
 ---@field Box UBoxComponent
 ---@field RSTTrapGridBox1 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox URSTTrapGridBoxComponent
@@ -99,19 +110,12 @@
 ---@field RSTTrapGridBox4 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox3 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox9 URSTTrapGridBoxComponent
----@field Wall_4x4_Brick_SM1 UStaticMeshComponent
 ---@field Wall_4x4_Brick_SM13 UStaticMeshComponent
 ---@field Wall_4x4_Brick_SM12 UStaticMeshComponent
 ---@field Wall_4x4_Brick_SM11 UStaticMeshComponent
----@field Wall_4x4_Brick_SM10 UStaticMeshComponent
 ---@field Wall_4x4_Brick_SM9 UStaticMeshComponent
 ---@field Wall_4x4_Brick_SM8 UStaticMeshComponent
----@field Wall_4x4_Brick_SM6 UStaticMeshComponent
 ---@field Wall_4x4_Brick_SM5 UStaticMeshComponent
----@field Wall_4x4_Brick_SM4 UStaticMeshComponent
----@field Wall_4x4_Brick_SM3 UStaticMeshComponent
----@field Wall_4x4_Brick_SM7 UStaticMeshComponent
----@field Wall_4x4_Brick_SM2 UStaticMeshComponent
 ---@field Floor_4x4_Plaza_PatternA_Cross_SM2 UStaticMeshComponent
 ---@field Floor_4x4_Plaza_PatternA_Cross_SM UStaticMeshComponent
 ---@field Stair_1x2_StoneWallBlock_Dark_SM2 UStaticMeshComponent

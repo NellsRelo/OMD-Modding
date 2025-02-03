@@ -1,0 +1,72 @@
+---@meta
+
+---@class ABP_Observatory_GateHouse_C : ABP_OMDTrapGrid_C
+---@field Box UBoxComponent
+---@field RSTTrapGridBox3 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox2 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox1 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox URSTTrapGridBoxComponent
+---@field Base_Column_SquareTaper_StoneWall_2x2_SM1 UStaticMeshComponent
+---@field Base_Column_SquareTaper_StoneWall_2x2_SM UStaticMeshComponent
+---@field Wood_Cantilever_Support3 UStaticMeshComponent
+---@field Wood_Cantilever_Support2 UStaticMeshComponent
+---@field Awning_B_LightBlue_SM_Union1 UStaticMeshComponent
+---@field Wood_Cantilever_Support1 UStaticMeshComponent
+---@field Wood_Cantilever_Support UStaticMeshComponent
+---@field Awning_B_LightBlue_SM_Union UStaticMeshComponent
+---@field Window_Pointed_2x_SansDetail_SM13 UStaticMeshComponent
+---@field Window_Pointed_2x_SansDetail_SM12 UStaticMeshComponent
+---@field Wood_Window_Q UStaticMeshComponent
+---@field Gold_Railing_2x_SM5 UStaticMeshComponent
+---@field Gold_Railing_2x_SM4 UStaticMeshComponent
+---@field Proto_TowerCap_A_Short_Union1 UStaticMeshComponent
+---@field Proto_TowerCap_A_Short_Union UStaticMeshComponent
+---@field Gold_Railing_2x_SM3 UStaticMeshComponent
+---@field Gold_Railing_2x_SM2 UStaticMeshComponent
+---@field Gold_Railing_2x_SM1 UStaticMeshComponent
+---@field Gold_Railing_Box_SM1 UStaticMeshComponent
+---@field BP_Column_Square_1_4_StoneWall_Deco1 UChildActorComponent
+---@field BP_Column_Square_1_4_StoneWall_Deco UChildActorComponent
+---@field Tower_Rec_Roof_LightBlue_SM_Union UStaticMeshComponent
+---@field Fortress_Coastal_GateTower_Roof_SM_Spike1 UStaticMeshComponent
+---@field Fortress_Coastal_GateTower_Roof_SM1 UStaticMeshComponent
+---@field Fortress_Coastal_GateTower_Roof_SM_Spike UStaticMeshComponent
+---@field Fortress_Coastal_GateTower_Roof_SM UStaticMeshComponent
+---@field Window_Pointed_2x_SansDetail_SM11 UStaticMeshComponent
+---@field Window_Pointed_2x_SansDetail_SM10 UStaticMeshComponent
+---@field Window_Pointed_2x_SansDetail_SM9 UStaticMeshComponent
+---@field Window_Pointed_2x_SansDetail_SM8 UStaticMeshComponent
+---@field Window_Pointed_2x_SansDetail_SM7 UStaticMeshComponent
+---@field Window_Pointed_2x_SansDetail_SM6 UStaticMeshComponent
+---@field Window_Pointed_2x_SansDetail_SM5 UStaticMeshComponent
+---@field Window_Pointed_2x_SansDetail_SM4 UStaticMeshComponent
+---@field Window_Pointed_2x_SansDetail_SM3 UStaticMeshComponent
+---@field Window_Pointed_2x_SansDetail_SM2 UStaticMeshComponent
+---@field Window_Pointed_2x_SansDetail_SM1 UStaticMeshComponent
+---@field Cube1 UStaticMeshComponent
+---@field Window_Pointed_2x_SansDetail_SM UStaticMeshComponent
+---@field Cube UStaticMeshComponent
+---@field Gold_Railing_Box_SM UStaticMeshComponent
+---@field Gold_Railing_2x_SM UStaticMeshComponent
+---@field Fortress_Coastal_EntryArchBig_SM1 UStaticMeshComponent
+---@field Fortress_Coastal_EntryArchBig_SM UStaticMeshComponent
+---@field Fortress_Coastal_GateTower_SM UStaticMeshComponent
+---@field Fortress_Coastal_GateTower_Base_SM UStaticMeshComponent
+---@field Wall_Bottom_2x2_StoneWalls_SM3 UStaticMeshComponent
+---@field Wall_Bottom_2x2_StoneWalls_SM2 UStaticMeshComponent
+---@field Wall_Bottom_2x2_StoneWalls_SM1 UStaticMeshComponent
+---@field Wall_Bottom_2x2_StoneWalls_SM UStaticMeshComponent
+---@field Column_Bottom_Square_1_2_StoneWall_Trim_SM_A1_Merge7 UStaticMeshComponent
+---@field Column_Bottom_Square_1_2_StoneWall_Trim_SM_A1_Merge6 UStaticMeshComponent
+---@field Column_Bottom_Square_1_2_StoneWall_Trim_SM_A1_Merge5 UStaticMeshComponent
+---@field Column_Bottom_Square_1_2_StoneWall_Trim_SM_A1_Merge4 UStaticMeshComponent
+---@field Column_Bottom_Square_1_2_StoneWall_Trim_SM_A1_Merge3 UStaticMeshComponent
+---@field Column_Bottom_Square_1_2_StoneWall_Trim_SM_A1_Merge2 UStaticMeshComponent
+---@field Column_Bottom_Square_1_2_StoneWall_Trim_SM_A1_Merge1 UStaticMeshComponent
+---@field Column_Bottom_Square_1_2_StoneWall_Trim_SM_A1_Merge UStaticMeshComponent
+---@field Geo USceneComponent
+---@field TrapGrid USceneComponent
+ABP_Observatory_GateHouse_C = {}
+
+
+

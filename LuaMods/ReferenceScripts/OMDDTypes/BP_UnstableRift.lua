@@ -2,6 +2,7 @@
 
 ---@class ABP_UnstableRift_C : ABP_EnemyBase_C
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field RSTAimAssistTargetPelvis URSTAimAssistTargetComponent
 ---@field NS_Rift_Red_Crystal_Idle UNiagaraComponent
 ---@field NS_Rift_Red_Idle UNiagaraComponent
 ---@field CombatCapsule URSTCombatCapsuleComponent

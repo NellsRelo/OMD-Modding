@@ -128,7 +128,7 @@ function URDialogueBlueprintLibrary:AddValueFactToQuery(Query, FactName, FactVal
 function URDialogueBlueprintLibrary:AddGameplayTagFactToQuery(Query, FactName, GameplayTags) end
 
 
----@class URDialogueComponent : UPawnComponent
+---@class URDialogueComponent : UGameFrameworkComponent
 ---@field Ruleset URDialogueRuleset
 ---@field AudioComponent UAudioComponent
 URDialogueComponent = {}

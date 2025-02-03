@@ -9,7 +9,6 @@
 ---@field ColumnTrim_CastStone_900W6 UStaticMeshComponent
 ---@field ColumnTrim_CastStone_900W5 UStaticMeshComponent
 ---@field ColumnTrim_CastStone_900W4 UStaticMeshComponent
----@field Proto_Crenellation_Coastal_SM1 UStaticMeshComponent
 ---@field Proto_TowerCap_A_Short_Union1 UStaticMeshComponent
 ---@field Tower_OctoHollow_2x2_StoneWall_SM_Union1 UStaticMeshComponent
 ---@field Column_Octo_2x4_StoneWall_SM12 UStaticMeshComponent
@@ -28,8 +27,6 @@
 ---@field Wall_StoneWall_Castle_2x2_SM31 UStaticMeshComponent
 ---@field Wall_StoneWall_Castle_2x2_SM30 UStaticMeshComponent
 ---@field Wall_StoneWall_Castle_2x2_SM29 UStaticMeshComponent
----@field Wall_StoneWall_Castle_2x2_SM28 UStaticMeshComponent
----@field Wall_StoneWall_Castle_2x2_SM27 UStaticMeshComponent
 ---@field Wall_StoneWall_Castle_2x2_SM26 UStaticMeshComponent
 ---@field Wall_StoneWall_Castle_2x2_SM25 UStaticMeshComponent
 ---@field Wall_StoneWall_Castle_2x2_SM24 UStaticMeshComponent
@@ -42,8 +39,6 @@
 ---@field Wall_StoneWall_Castle_2x2_SM17 UStaticMeshComponent
 ---@field Wall_StoneWall_Castle_2x2_SM16 UStaticMeshComponent
 ---@field Wall_StoneWall_Castle_2x2_SM15 UStaticMeshComponent
----@field Wall_StoneWall_Castle_2x2_SM8 UStaticMeshComponent
----@field Proto_Crenellation_Coastal_SM UStaticMeshComponent
 ---@field ColumnTrim_CastStone_1200W_Deco UStaticMeshComponent
 ---@field Proto_TowerCap_A_Short_Union UStaticMeshComponent
 ---@field Tower_OctoHollow_2x2_StoneWall_SM_Union UStaticMeshComponent

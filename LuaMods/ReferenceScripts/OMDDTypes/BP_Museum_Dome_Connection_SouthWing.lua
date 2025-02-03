@@ -1,7 +1,23 @@
 ---@meta
 
 ---@class ABP_Museum_Dome_Connection_SouthWing_C : ABP_OMDTrapGrid_C
----@field GuardianCroc_Statue UStaticMeshComponent
+---@field Column_Square_1_6_StoneWall_SM9 UStaticMeshComponent
+---@field Floor_4x4_StoneBlock_SM67 UStaticMeshComponent
+---@field Proto_Dome_RiftRoom_C1_Window14 UStaticMeshComponent
+---@field Proto_Dome_RiftRoom_C1_Window13 UStaticMeshComponent
+---@field Proto_Dome_RiftRoom_C1_Window12 UStaticMeshComponent
+---@field Proto_Dome_RiftRoom_C1_Window11 UStaticMeshComponent
+---@field Proto_Dome_RiftRoom_C1_Window10 UStaticMeshComponent
+---@field Proto_Dome_RiftRoom_C1_Window9 UStaticMeshComponent
+---@field Proto_Dome_RiftRoom_C1_Window8 UStaticMeshComponent
+---@field Proto_Dome_RiftRoom_C1_Window7 UStaticMeshComponent
+---@field Proto_Dome_RiftRoom_C1_Window6 UStaticMeshComponent
+---@field Proto_Dome_RiftRoom_C1_Window5 UStaticMeshComponent
+---@field Proto_Dome_RiftRoom_C1_Window4 UStaticMeshComponent
+---@field Proto_Dome_RiftRoom_C1_Window3 UStaticMeshComponent
+---@field Proto_Dome_RiftRoom_C1_Window2 UStaticMeshComponent
+---@field Proto_Dome_RiftRoom_C1_Window1 UStaticMeshComponent
+---@field Proto_Dome_RiftRoom_C1_Window UStaticMeshComponent
 ---@field BarricadeBasherPose UStaticMeshComponent
 ---@field Statue_Warhero_Knight_A1 UStaticMeshComponent
 ---@field Statue_Warhero_Knight_A UStaticMeshComponent
@@ -35,7 +51,6 @@
 ---@field Floor_4x4_StoneBlock_SM70 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM69 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM68 UStaticMeshComponent
----@field Floor_4x4_StoneBlock_SM67 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM22 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM21 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM66 UStaticMeshComponent

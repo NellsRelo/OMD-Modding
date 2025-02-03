@@ -2,12 +2,11 @@
 
 ---@class UW_RecordBook_HeroSwitcher_C : URSTUserWidget
 ---@field UberGraphFrame FPointerToUberGraphFrame
----@field FilterButtons UVerticalBox
+---@field FilterButtons UHorizontalBox
+---@field FilterIndicator UHorizontalBox
 ---@field Indicator UImage
 ---@field IndicatorBottom USpacer
 ---@field IndicatorTop USpacer
----@field W_Button_KeyHint_C_0 UW_Button_KeyHint_C
----@field W_Button_KeyHint_C_1 UW_Button_KeyHint_C
 ---@field CursorVal double
 ---@field TargetCursorVal double
 ---@field ['On Category Selected'] FW_RecordBook_HeroSwitcher_COn Category Selected
@@ -48,10 +47,8 @@ function UW_RecordBook_HeroSwitcher_C:OnInitialized() end
 UW_RecordBook_HeroSwitcher_C['On Tick'] = function(MyGeometry, InDeltaTime) end
 ---@param bInShouldTick boolean
 UW_RecordBook_HeroSwitcher_C['Set Should Tick'] = function(bInShouldTick) end
----@param Button UCommonButtonBase
-function UW_RecordBook_HeroSwitcher_C:BndEvt__W_RecordBook_HeroSwitcher_W_Button_KeyHint_C_0_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(Button) end
----@param Button UCommonButtonBase
-function UW_RecordBook_HeroSwitcher_C:BndEvt__W_RecordBook_HeroSwitcher_W_Button_KeyHint_C_1_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(Button) end
+UW_RecordBook_HeroSwitcher_C['Tab Left'] = function() end
+UW_RecordBook_HeroSwitcher_C['Tab Right'] = function() end
 ---@param EntryPoint int32
 function UW_RecordBook_HeroSwitcher_C:ExecuteUbergraph_W_RecordBook_HeroSwitcher(EntryPoint) end
 ---@param Category int32

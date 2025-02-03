@@ -2,9 +2,9 @@
 
 ---@class ABP_Elemental_Blueling_C : ABP_EnemyBase_C
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field Audio_ExistLoop UAudioComponent
 ---@field NS_Elemental_Blueling UNiagaraComponent
 ---@field RSTAimAssistTargetHead URSTAimAssistTargetComponent
----@field Audio_FireLoop UAudioComponent
 ---@field CombatCapsule URSTCombatCapsuleComponent
 ABP_Elemental_Blueling_C = {}
 

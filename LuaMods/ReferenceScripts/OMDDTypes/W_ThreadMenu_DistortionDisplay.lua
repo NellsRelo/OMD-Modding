@@ -4,6 +4,7 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field Background UImage
 ---@field DistortionRetainer URetainerBox
+---@field Foreground UImage
 ---@field Icon UImage
 ---@field Distortion URSTMetaDistortionDefinition
 UW_ThreadMenu_DistortionDisplay_C = {}

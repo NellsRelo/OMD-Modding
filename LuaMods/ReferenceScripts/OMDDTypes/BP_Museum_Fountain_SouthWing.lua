@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABP_Museum_Fountain_SouthWing_C : ABP_OMDTrapGrid_C
+---@field BP_Fountain_02 UChildActorComponent
 ---@field PictureFrame_5x3_Landscape2 UStaticMeshComponent
 ---@field PictureFrame_5x3_Landscape1 UStaticMeshComponent
 ---@field PictureFrame_02 UStaticMeshComponent
@@ -73,7 +74,6 @@
 ---@field Crenel_BaseD_CastStone_SubD1 UStaticMeshComponent
 ---@field Crenel_BaseD_CastStone_SubD UStaticMeshComponent
 ---@field Proto_Dome_E_Tile_Glass1 UStaticMeshComponent
----@field Hero_Fountain_H_SM UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM51 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM28 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM27 UStaticMeshComponent

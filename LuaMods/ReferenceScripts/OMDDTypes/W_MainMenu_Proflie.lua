@@ -12,6 +12,7 @@
 ---@field Button_SelectProfile UW_ButtonBasic_C
 ---@field Frame UImage
 ---@field ProfileList URSTListView
+---@field SafeZone_0 USafeZone
 ---@field TitleText UCommonTextBlock
 ---@field VerticalBox_Buttons UVerticalBox
 ---@field VerticalBox_Proflies UVerticalBox
@@ -57,6 +58,16 @@ function UW_MainMenu_Proflie_C:ConfirmProfileRename(Text) end
 ---@param Text FText
 function UW_MainMenu_Proflie_C:CancelProfileRename(Text) end
 function UW_MainMenu_Proflie_C:ConfirmProfileLoadError() end
+---@param Button UCommonButtonBase
+function UW_MainMenu_Proflie_C:BndEvt__W_MainMenu_Proflie_Button_Back_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature(Button) end
+---@param Button UCommonButtonBase
+function UW_MainMenu_Proflie_C:BndEvt__W_MainMenu_Proflie_Button_CreateProfile_K2Node_ComponentBoundEvent_7_CommonButtonBaseClicked__DelegateSignature(Button) end
+---@param Button UCommonButtonBase
+function UW_MainMenu_Proflie_C:BndEvt__W_MainMenu_Proflie_Button_DeleteProfile_K2Node_ComponentBoundEvent_8_CommonButtonBaseClicked__DelegateSignature(Button) end
+---@param Button UCommonButtonBase
+function UW_MainMenu_Proflie_C:BndEvt__W_MainMenu_Proflie_Button_RenameProfile_K2Node_ComponentBoundEvent_9_CommonButtonBaseClicked__DelegateSignature(Button) end
+---@param Button UCommonButtonBase
+function UW_MainMenu_Proflie_C:BndEvt__W_MainMenu_Proflie_Button_SelectProfile_K2Node_ComponentBoundEvent_10_CommonButtonBaseClicked__DelegateSignature(Button) end
 ---@param EntryPoint int32
 function UW_MainMenu_Proflie_C:ExecuteUbergraph_W_MainMenu_Proflie(EntryPoint) end
 

@@ -5,9 +5,8 @@
 ---@field bg_color UImage
 ---@field bg_image UImage
 ---@field Image_214 UImage
----@field InvalidationBox_0 UInvalidationBox
 ---@field OptionsBox UScrollBox
----@field SafeZone_76 USafeZone
+---@field SafeZone_0 USafeZone
 ---@field ScrollSlider USlider
 ---@field W_ExitMenuButton UW_ExitMenuButton_C
 ---@field GameData URSTGameData
@@ -26,6 +25,7 @@ function UW_ScoreSummary_C:BndEvt__W_RSTOptionsMenu_OptionsBox_K2Node_ComponentB
 function UW_ScoreSummary_C:RefreshScrollbar() end
 ---@param Value float
 function UW_ScoreSummary_C:BndEvt__W_ScoreSummary_ScrollSlider_K2Node_ComponentBoundEvent_1_OnFloatValueChangedEvent__DelegateSignature(Value) end
+UW_ScoreSummary_C['BndEvt__W_ScoreSummary_W_ExitMenuButton_K2Node_ComponentBoundEvent_0_On Button Clicked__DelegateSignature'] = function() end
 ---@param EntryPoint int32
 function UW_ScoreSummary_C:ExecuteUbergraph_W_ScoreSummary(EntryPoint) end
 

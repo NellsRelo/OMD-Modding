@@ -2,11 +2,12 @@
 
 ---@class ABP_MaxMirror_C : ARSTInteractableActor
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field NS_Mirror_Active UNiagaraComponent
+---@field FX USceneComponent
 ---@field Magic_MirrorClassroom_01 UStaticMeshComponent
 ---@field Scene USceneComponent
 ---@field InteractVolume UCapsuleComponent
 ---@field Root USceneComponent
----@field TEMPNS_Mirror_Active UNiagaraComponent
 ---@field Mirror_Shard_4 UStaticMeshComponent
 ---@field Mirror_Shard_3 UStaticMeshComponent
 ---@field Mirror_Shard_2 UStaticMeshComponent

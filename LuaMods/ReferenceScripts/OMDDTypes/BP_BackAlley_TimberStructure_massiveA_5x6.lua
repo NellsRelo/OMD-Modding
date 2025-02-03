@@ -1,6 +1,10 @@
 ---@meta
 
 ---@class ABP_BackAlley_TimberStructure_massiveA_5x6_C : ABP_OMDTrapGrid_C
+---@field RSTTrapGridBox68 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox58 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox44 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox43 URSTTrapGridBoxComponent
 ---@field NavPowerExclusion UNavPowerExclusionComponent
 ---@field RSTTrapGridBox67 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox66 URSTTrapGridBoxComponent
@@ -24,12 +28,8 @@
 ---@field RSTTrapGridBox47 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox46 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox45 URSTTrapGridBoxComponent
----@field RSTTrapGridBox44 URSTTrapGridBoxComponent
----@field RSTTrapGridBox43 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox42 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox41 URSTTrapGridBoxComponent
----@field RSTTrapGridBox40 URSTTrapGridBoxComponent
----@field RSTTrapGridBox39 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox38 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox37 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox36 URSTTrapGridBoxComponent
@@ -68,15 +68,11 @@
 ---@field Wood_Square_300W_A_NoTaper_light21 UStaticMeshComponent
 ---@field Wood_Square_300W_A_NoTaper_light20 UStaticMeshComponent
 ---@field WoodPlank_4x1_Floor_A3 UStaticMeshComponent
----@field SM_flower_box_02 UStaticMeshComponent
----@field SM_flower_box_01 UStaticMeshComponent
 ---@field Wall_15x15_Wainscot_Wood_SM_Door_Union UStaticMeshComponent
 ---@field Column_Bottom_Square_1_2_Stone_SM3 UStaticMeshComponent
 ---@field Column_Bottom_Square_1_2_Stone_SM2 UStaticMeshComponent
 ---@field Column_Bottom_Square_1_2_Stone_SM1 UStaticMeshComponent
 ---@field Column_Bottom_Square_1_2_Stone_SM UStaticMeshComponent
----@field Wood_Square_600W_A_Joint_Light9 UStaticMeshComponent
----@field Wood_Square_600W_A_Joint_Light8 UStaticMeshComponent
 ---@field Wood_Square_300W_A_NoTaper_light19 UStaticMeshComponent
 ---@field Wood_Square_300W_A_NoTaper_light18 UStaticMeshComponent
 ---@field Wood_Square_1200W_A_Light_NoTaper7 UStaticMeshComponent
@@ -127,8 +123,6 @@
 ---@field Wood_Square_1200W_A_Light_NoTaper3 UStaticMeshComponent
 ---@field Wood_Square_1200W_A_Light_NoTaper2 UStaticMeshComponent
 ---@field Wood_Square_1200W_A_Light_NoTaper1 UStaticMeshComponent
----@field Wood_Square_600W_A_Joint_Light7 UStaticMeshComponent
----@field Wood_Square_600W_A_Joint_Light6 UStaticMeshComponent
 ---@field Wood_Square_600W_A_Joint_Light5 UStaticMeshComponent
 ---@field Wood_Square_600W_A_Joint_Light4 UStaticMeshComponent
 ---@field WoodPlank_4x1_Floor_A2 UStaticMeshComponent

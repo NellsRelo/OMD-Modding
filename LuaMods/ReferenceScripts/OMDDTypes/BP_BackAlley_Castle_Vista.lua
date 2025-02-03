@@ -49,13 +49,11 @@
 ---@field BP_FishMarket_Fortress_MainGate_Gate_Gardens_RodIron_B UStaticMeshComponent
 ---@field Fortress_Coastal_BigWallEnd_Hole_16x5_SM2_StaticMeshComponent1 UStaticMeshComponent
 ---@field BP_FishMarket_Fortress_MainGate_Fortress_Coastal_TowerSquareMed_3x_Windowed_SM UStaticMeshComponent
----@field Fortress_Coastal_BigWallEnd_C_SM3_StaticMeshComponent1 UStaticMeshComponent
 ---@field Proto_Fortress_TowerRoundLarge_Top_SM_StaticMeshComponent4 UStaticMeshComponent
 ---@field Proto_Fortress_TowerRoundLarge_SM2_StaticMeshComponent3 UStaticMeshComponent
 ---@field Fortress_Coastal_BigWallEnd_B_16x5_SM8_StaticMeshComponent1 UStaticMeshComponent
 ---@field Proto_Fortress_TowerRoundLarge_Top_SM_StaticMeshComponent3 UStaticMeshComponent
 ---@field Proto_Fortress_TowerRoundLarge_SM2_StaticMeshComponent2 UStaticMeshComponent
----@field Proto_Fortress_TowerRoundLarge_Top_SM_StaticMeshComponent0 UStaticMeshComponent
 ---@field Proto_Fortress_TowerRoundLarge_Top_SM_StaticMeshComponent2 UStaticMeshComponent
 ---@field Fortress_Coastal_GateTower_Roof_SM UStaticMeshComponent
 ---@field Proto_Fortress_TowerRoundLarge_Top_SM_StaticMeshComponent1 UStaticMeshComponent
@@ -81,7 +79,6 @@
 ---@field BP_FishMarket_Fortress_MainGate_Wall_Bottom_2x05_StoneWalls_SM UStaticMeshComponent
 ---@field BP_FishMarket_Castle_Main_Proto_TowerCap_A_Short_Union UStaticMeshComponent
 ---@field BP_FishMarket_Castle_Main_Column_Octo_2x4_StoneWall_SM8 UStaticMeshComponent
----@field Proto_Fortress_TowerRoundLarge_SM2_StaticMeshComponent1 UStaticMeshComponent
 ---@field Fortress_Coastal_TowerTopLarge3_StaticMeshComponent0 UStaticMeshComponent
 ABP_BackAlley_Castle_Vista_C = {}
 

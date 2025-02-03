@@ -2,14 +2,19 @@
 
 ---@class ABP_Brazier_Boss_C : AActor
 ---@field UberGraphFrame FPointerToUberGraphFrame
----@field Brazier_Logs UStaticMeshComponent
----@field P_Brazier_Large_Fire_Embers UParticleSystemComponent
----@field P_Brazier_Large_Fire UParticleSystemComponent
----@field NS_Brazier_Fire UNiagaraComponent
+---@field SpotLight_Wall USpotLightComponent
+---@field Hub_BossFire_Trough_Circle_SM UStaticMeshComponent
+---@field StaticMesh_Boss UStaticMeshComponent
 ---@field AmbEmitter_Torch_LP_SC UAudioComponent
----@field Torch_Point_Static2 UPointLightComponent
----@field Torch_Point_Static1 UPointLightComponent
----@field Lighting_Brazier_Large_Bowl_SM UStaticMeshComponent
+---@field Constant USceneComponent
+---@field Niagara_Unlocked_FX2 UNiagaraComponent
+---@field SpotLight_Head USpotLightComponent
+---@field PointLight_Locked UPointLightComponent
+---@field PointLight_Unlocked UPointLightComponent
+---@field Niagara_Unlocked_FX UNiagaraComponent
+---@field Niagara_Locked_FX UNiagaraComponent
+---@field Unlocked USceneComponent
+---@field Locked USceneComponent
 ---@field DefaultSceneRoot USceneComponent
 ---@field TorchLit boolean
 ---@field ['Key to Check'] FGameplayTag

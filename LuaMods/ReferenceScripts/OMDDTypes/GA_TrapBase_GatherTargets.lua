@@ -30,8 +30,10 @@ function UGA_TrapBase_GatherTargets_C:GetAdjustedDeathLaunchVelocity(AiCharacter
 ---@param DeathEvent URSTDeathEvent
 function UGA_TrapBase_GatherTargets_C:ConfigureDeathEvent(Target, DeathEvent) end
 ---@param AiCharacter ARSTAICharacter
+---@param LaunchDirection FVector
+---@param LaunchVelocity double
 ---@return float
-function UGA_TrapBase_GatherTargets_C:GetAdjustedLaunchVelocity(AiCharacter) end
+function UGA_TrapBase_GatherTargets_C:GetAdjustedLaunchVelocity(AiCharacter, LaunchDirection, LaunchVelocity) end
 ---@param AiCharacter ARSTCharacter
 ---@return boolean
 function UGA_TrapBase_GatherTargets_C:ShouldExceptMaxWeightClass(AiCharacter) end

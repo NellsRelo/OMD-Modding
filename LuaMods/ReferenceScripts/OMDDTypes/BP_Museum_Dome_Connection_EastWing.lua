@@ -1,6 +1,18 @@
 ---@meta
 
 ---@class ABP_Museum_Dome_Connection_EastWing_C : ABP_OMDTrapGrid_C
+---@field Column_Square_1_1_StoneWall_SM_Merge7 UStaticMeshComponent
+---@field Column_Square_1_1_StoneWall_SM_Merge6 UStaticMeshComponent
+---@field Column_Square_1_1_StoneWall_SM_Merge5 UStaticMeshComponent
+---@field Column_Square_1_1_StoneWall_SM_Merge4 UStaticMeshComponent
+---@field Column_Square_1_1_StoneWall_SM_Merge3 UStaticMeshComponent
+---@field Column_Square_1_1_StoneWall_SM_Merge2 UStaticMeshComponent
+---@field Column_Square_1_1_StoneWall_SM_Merge1 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM31 UStaticMeshComponent
+---@field Statue_ShieldBearer_SM UStaticMeshComponent
+---@field Column_BaseD_CastStone UStaticMeshComponent
+---@field Column_Square_1_1_StoneWall_SM_Merge UStaticMeshComponent
+---@field Floor_4x4_StoneBlock_SM36 UStaticMeshComponent
 ---@field SM_MERGED_Garden_Railing_B17 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM30 UStaticMeshComponent
 ---@field SM_MERGED_Garden_Railing_B16 UStaticMeshComponent
@@ -104,7 +116,6 @@
 ---@field Wall_4x4x05_Stonewall_SM6 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM4 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM3 UStaticMeshComponent
----@field Wall_4x4x05_Stonewall_SM2 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM1 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM UStaticMeshComponent
 ---@field Column_Square_1_6_StoneWall_SM1 UStaticMeshComponent

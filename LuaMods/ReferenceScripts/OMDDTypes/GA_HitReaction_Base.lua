@@ -34,7 +34,8 @@ UGA_HitReaction_Base_C['Get Knockback Strength Direction'] = function(Hit_Data, 
 UGA_HitReaction_Base_C['Stop Interrupt Timer'] = function() end
 UGA_HitReaction_Base_C['Do Flinch'] = function() end
 UGA_HitReaction_Base_C['On Knockback Finished'] = function() end
-UGA_HitReaction_Base_C['Knockback Cleanup'] = function() end
+---@param bTerminate boolean
+UGA_HitReaction_Base_C['Knockback Cleanup'] = function(bTerminate) end
 ---@param Hit_Data URSTAppliedHitReactData
 ---@param bWasInterrupted boolean
 UGA_HitReaction_Base_C['Process Knockback'] = function(Hit_Data, bWasInterrupted) end

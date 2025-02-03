@@ -16,9 +16,8 @@
 ---@field Image_360 UImage
 ---@field PlatformControls UVerticalBox
 ---@field VoiceControls UVerticalBox
----@field TargetPlayer APlayerState
+---@field TargetPlayer ARSTPlayerState
 ---@field OnOptionSelected FW_MissionStats_ContextMenu_COnOptionSelected
----@field ActiveModal URSTModal_TwoChoices
 UW_MissionStats_ContextMenu_C = {}
 
 ---@param PlayerToCheck APlayerState
@@ -35,11 +34,10 @@ function UW_MissionStats_ContextMenu_C:BndEvt__W_MissionStats_ContextMenu_Button
 function UW_MissionStats_ContextMenu_C:BndEvt__W_MissionStats_ContextMenu_Button_Kick_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(Button) end
 ---@param Button UCommonButtonBase
 function UW_MissionStats_ContextMenu_C:BndEvt__W_MissionStats_ContextMenu_Button_Ban_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature(Button) end
-function UW_MissionStats_ContextMenu_C:ConfirmKick() end
-function UW_MissionStats_ContextMenu_C:Cancel() end
-function UW_MissionStats_ContextMenu_C:BanPlayer() end
 ---@param EntryPoint int32
 function UW_MissionStats_ContextMenu_C:ExecuteUbergraph_W_MissionStats_ContextMenu(EntryPoint) end
-function UW_MissionStats_ContextMenu_C:OnOptionSelected__DelegateSignature() end
+---@param PlayerToKick ARSTPlayerState
+---@param PlayerToBan ARSTPlayerState
+function UW_MissionStats_ContextMenu_C:OnOptionSelected__DelegateSignature(PlayerToKick, PlayerToBan) end
 
 

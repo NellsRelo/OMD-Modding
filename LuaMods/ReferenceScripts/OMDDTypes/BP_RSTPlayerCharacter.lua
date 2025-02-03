@@ -170,6 +170,7 @@ function ABP_RSTPlayerCharacter_C:BP_OnDeathStarted() end
 ---@param GameplayEffectClass TSubclassOf<UGameplayEffect>
 ---@param SetByCallerValues TMap<FGameplayTag, float>
 ABP_RSTPlayerCharacter_C['Server Apply Gameplay Effect SetByCaller'] = function(GameplayEffectClass, SetByCallerValues) end
+function ABP_RSTPlayerCharacter_C:BP_AbilitySystemInitialized() end
 ---@param EntryPoint int32
 function ABP_RSTPlayerCharacter_C:ExecuteUbergraph_BP_RSTPlayerCharacter(EntryPoint) end
 

@@ -38,6 +38,13 @@ function ABP_CrossbowAttachment_C:OnCompleted_C900976B4591E8ABDDFA9CA977D9E609(N
 function ABP_CrossbowAttachment_C:BP_Reload(AdditionalContextData) end
 ---@param AdditionalContextData FGameplayTagContainer
 function ABP_CrossbowAttachment_C:BP_PrimaryFired(AdditionalContextData) end
+---@param VisualTagContainer FGameplayTagContainer
+---@param bRevertToDefaults boolean
+function ABP_CrossbowAttachment_C:OnCurrentVisualVariantChanged(VisualTagContainer, bRevertToDefaults) end
+---@param IdleFX UNiagaraSystem
+---@param LimbTipsMat UMaterialInterface
+---@param LimbBurrsMat UMaterialInterface
+ABP_CrossbowAttachment_C['Update Crossbow Visuals'] = function(IdleFX, LimbTipsMat, LimbBurrsMat) end
 ---@param EntryPoint int32
 function ABP_CrossbowAttachment_C:ExecuteUbergraph_BP_CrossbowAttachment(EntryPoint) end
 

@@ -1,10 +1,27 @@
 ---@meta
 
 ---@class ABP_Garden_EastWing_A_C : ABP_OMDTrapGrid_C
+---@field RSTTrapGridBox15 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox23 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox18 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox19 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox22 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox14 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox24 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox17 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox21 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox33 URSTTrapGridBoxComponent
----@field RSTTrapGridBox32 URSTTrapGridBoxComponent
----@field RSTTrapGridBox31 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox30 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox4 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox25 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox26 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox27 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox28 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox29 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox31 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox32 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox20 URSTTrapGridBoxComponent
+---@field TrapGrid USceneComponent
 ---@field Column_Square_1_1_StoneWall_SM_Merge UStaticMeshComponent
 ---@field Proto_Dome_E_Tile_Sides_Glass2 UStaticMeshComponent
 ---@field Proto_Dome_E_Tile_Sides_Glass1 UStaticMeshComponent
@@ -31,12 +48,6 @@
 ---@field ColumnTrim_CastStone_300W1 UStaticMeshComponent
 ---@field ColumnTrim_CastStone_300W UStaticMeshComponent
 ---@field Crenel_TrimA_SM1 UStaticMeshComponent
----@field RSTTrapGridBox29 URSTTrapGridBoxComponent
----@field RSTTrapGridBox28 URSTTrapGridBoxComponent
----@field RSTTrapGridBox27 URSTTrapGridBoxComponent
----@field RSTTrapGridBox26 URSTTrapGridBoxComponent
----@field RSTTrapGridBox25 URSTTrapGridBoxComponent
----@field RSTTrapGridBox20 URSTTrapGridBoxComponent
 ---@field Chandelier_Tiered_C UStaticMeshComponent
 ---@field Orc_ShipIronClad_Canyon_A_01_SmockStackBottom_SM5 UStaticMeshComponent
 ---@field Orc_ShipIronClad_Canyon_A_01_SmockStackBottom_SM4 UStaticMeshComponent
@@ -65,7 +76,6 @@
 ---@field Column_Bottom_Square_1_2_StoneWall_SM2 UStaticMeshComponent
 ---@field Column_Bottom_Square_1_2_StoneWall_SM1 UStaticMeshComponent
 ---@field Column_Bottom_Square_1_2_StoneWall_SM UStaticMeshComponent
----@field RSTTrapGridBox15 URSTTrapGridBoxComponent
 ---@field ColumnB_CastStone_3Story2 UStaticMeshComponent
 ---@field ColumnB_CastStone_3Story1 UStaticMeshComponent
 ---@field Window_Pointed_4x_Trim_Ring5 UStaticMeshComponent
@@ -78,14 +88,6 @@
 ---@field Proto_Dome_E_Tile_Sides5 UStaticMeshComponent
 ---@field Proto_Dome_E_Tile_Sides4 UStaticMeshComponent
 ---@field ColumnTrim_CastStone_DoorFrameA17 UStaticMeshComponent
----@field RSTTrapGridBox17 URSTTrapGridBoxComponent
----@field RSTTrapGridBox18 URSTTrapGridBoxComponent
----@field RSTTrapGridBox19 URSTTrapGridBoxComponent
----@field RSTTrapGridBox22 URSTTrapGridBoxComponent
----@field RSTTrapGridBox14 URSTTrapGridBoxComponent
----@field RSTTrapGridBox23 URSTTrapGridBoxComponent
----@field RSTTrapGridBox24 URSTTrapGridBoxComponent
----@field RSTTrapGridBox21 URSTTrapGridBoxComponent
 ---@field Wall_2x2x05_StoneWall_SM26 UStaticMeshComponent
 ---@field Wall_2x2x05_StoneWall_SM25 UStaticMeshComponent
 ---@field Wall_2x2x05_StoneWall_SM4 UStaticMeshComponent
@@ -146,7 +148,6 @@
 ---@field Arch_1x1x4_StoneWall_SM UStaticMeshComponent
 ---@field Arch_1x1x4_StoneWall_SM1 UStaticMeshComponent
 ---@field Wall_2x2x05_StoneWall_SM2 UStaticMeshComponent
----@field RSTTrapGridBox4 URSTTrapGridBoxComponent
 ---@field Props USceneComponent
 ABP_Garden_EastWing_A_C = {}
 

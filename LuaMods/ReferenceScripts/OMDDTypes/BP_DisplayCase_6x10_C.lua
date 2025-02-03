@@ -1,23 +1,24 @@
 ---@meta
 
 ---@class ABP_DisplayCase_6x10_C_C : ABP_OMDTrapGrid_C
+---@field NavPowerExclusion UNavPowerExclusionComponent
+---@field BP_Mountain_Weapon_Breakable UChildActorComponent
+---@field BP_Gnoll_Dagger_GeoCol_Breakable UChildActorComponent
+---@field BP_Skeleton_Cyclops_Clavicle_L_Breakable UChildActorComponent
+---@field BP_FireFiend_ShinRight_Breakable UChildActorComponent
+---@field BP_FireFiend_Left_Breakable1 UChildActorComponent
+---@field BP_Skeleton_Cyclops_LowerArm_Breakable UChildActorComponent
+---@field BP_FireFiend_Medium16_Breakable UChildActorComponent
+---@field BP_FireFiend_Medium15_Breakable UChildActorComponent
+---@field BP_FireFiend_Medium13_Breakable UChildActorComponent
+---@field BP_FireFiend_Left_Breakable UChildActorComponent
+---@field BP_Skeleton_FireFiend_Mage_SM4_Breakable UChildActorComponent
+---@field BP_FireFiend_Weapon_Breakable UChildActorComponent
+---@field BP_Skeleton_FireFiend_Mage_SM4_Breakable1 UChildActorComponent
+---@field BP_Skeleton_Cyclops_Heavy_Axe_Breakable UChildActorComponent
+---@field BP_Skeleton_FireFiend_Mage_Weapon_Breakable UChildActorComponent
 ---@field Wood_BookShelves_Shelve_600C_03 UStaticMeshComponent
----@field FireFiendMedium_ShinRight UStaticMeshComponent
----@field FireFiendMedium_Left UStaticMeshComponent
----@field FireFiendMedium3 UStaticMeshComponent
----@field FireFiendMedium2 UStaticMeshComponent
----@field FireFiendMedium1 UStaticMeshComponent
----@field FireFiendMedium UStaticMeshComponent
----@field FireFiend_Medium_Weapon UStaticMeshComponent
----@field FireFiendMage_SM1 UStaticMeshComponent
----@field FireFiendMage_SM UStaticMeshComponent
----@field FireFiend_Mage_ATTACHMENT_Weapon_Hand_R_Skin00 UStaticMeshComponent
----@field Cyclops_Heavy_ATTACHMENT_Armor_Lowerarm_Twist_02_R_Skin00 UStaticMeshComponent
----@field Cyclops_Heavy_ATTACHMENT_Armor_Clavicle_L_Skin00 UStaticMeshComponent
----@field Cyclops_Heavy_Axe_SM UStaticMeshComponent
 ---@field Wood_BookShelves_Shelve_600C_02 UStaticMeshComponent
----@field Gnoll_Dagger UStaticMeshComponent
----@field Troll_Mountain_ATTACHMENT_Weapon_Hand_R_Skin00 UStaticMeshComponent
 ---@field BP_Skeleton_Cyclops_Heavy_Attack_Nested_Breakable UChildActorComponent
 ---@field BP_Skeleton_FireFiend_Mage_Nested_Breakable1 UChildActorComponent
 ---@field BP_Skeleton_Cyclops_Druid_Nested_Breakable UChildActorComponent

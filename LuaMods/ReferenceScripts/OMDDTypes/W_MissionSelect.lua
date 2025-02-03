@@ -20,7 +20,6 @@
 ---@field Image_207 UImage
 ---@field Image_306 UImage
 ---@field InvalidationBox UInvalidationBox
----@field InvalidationBox_0 UInvalidationBox
 ---@field InvalidationBox_2 UInvalidationBox
 ---@field InvalidationBox_3 UInvalidationBox
 ---@field InvalidationBox_4 UInvalidationBox
@@ -28,7 +27,8 @@
 ---@field MessageText UCommonTextBlock
 ---@field MissionIndexText UCommonTextBlock
 ---@field MissionSelectText UCommonTextBlock
----@field RiftEffect UImage
+---@field RiftImage UImage
+---@field RiftNS UNiagaraSystemWidget
 ---@field RiftPoints UCommonTextBlock
 ---@field SafeZone_0 USafeZone
 ---@field SkullOverlay UOverlay
@@ -50,8 +50,6 @@ function UW_MissionSelect_C:RemoveCloseButton() end
 ---@param Success boolean
 function UW_MissionSelect_C:GetNextProgressionMissionIndex(missionIndex, ProgressionQuery, Success) end
 function UW_MissionSelect_C:PopulateDistortions() end
----@return boolean
-function UW_MissionSelect_C:CanToggleTabWidget() end
 ---@return UWidget
 function UW_MissionSelect_C:BP_GetDesiredFocusTarget() end
 function UW_MissionSelect_C:Construct() end
@@ -71,6 +69,7 @@ function UW_MissionSelect_C:BndEvt__W_MissionSelect_W_ButtonBasic_K2Node_Compone
 function UW_MissionSelect_C:BndEvt__W_MissionSelect_TabButton_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(Button) end
 ---@param Button UCommonButtonBase
 function UW_MissionSelect_C:BndEvt__W_MissionSelect_Button_ClientReady_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_MissionSelect_C:InitFromGameState() end
 ---@param EntryPoint int32
 function UW_MissionSelect_C:ExecuteUbergraph_W_MissionSelect(EntryPoint) end
 

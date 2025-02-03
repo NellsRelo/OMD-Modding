@@ -16,7 +16,7 @@
 ---@field CreditsData UDataTable
 ---@field ScrollSpeed double
 ---@field bEnded boolean
----@field LastScrollTime double
+---@field StopScrollTime double
 ---@field LastScrollOffset double
 ---@field CreditsMusic USoundBase
 ---@field CreditsAudioComponent UAudioComponent

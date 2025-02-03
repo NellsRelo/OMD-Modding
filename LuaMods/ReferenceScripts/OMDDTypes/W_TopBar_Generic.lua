@@ -6,8 +6,8 @@
 ---@field LeftSpacer USpacer
 ---@field RightSpacer USpacer
 ---@field SelectIndicator UImage
----@field W_Button_KeyHint_C_0 UW_Button_KeyHint_C
----@field W_Button_KeyHint_C_1 UW_Button_KeyHint_C
+---@field TabLeft UW_Button_KeyHint_C
+---@field TabRight UW_Button_KeyHint_C
 ---@field ['On Tab Selected'] FW_TopBar_Generic_COn Tab Selected
 ---@field CurrentIndex int32
 ---@field CursorVal double
@@ -17,8 +17,17 @@
 ---@field bIsSet boolean
 ---@field ButtonText TArray<FText>
 ---@field ButtonIndexMapping TMap<UCommonButtonBase, int32>
+---@field EnabledStates TArray<boolean>
 UW_TopBar_Generic_C = {}
 
+---@param InitialIndex int32
+---@param Diff int32
+---@param bValid boolean
+---@param DestIndex int32
+UW_TopBar_Generic_C['Get Next Valid Index'] = function(InitialIndex, Diff, bValid, DestIndex) end
+---@param Index int32
+---@param Array_Element UCommonButtonBase
+UW_TopBar_Generic_C['Get Button For Index'] = function(Index, Array_Element) end
 ---@param Button UCommonButtonBase
 UW_TopBar_Generic_C['On Button Clicked'] = function(Button) end
 ---@param Text FText
@@ -54,6 +63,9 @@ function UW_TopBar_Generic_C:BndEvt__W_TopBar_Generic_W_Button_KeyHint_C_0_K2Nod
 ---@param Options TArray<FText>
 UW_TopBar_Generic_C['Set Button Options'] = function(Options) end
 UW_TopBar_Generic_C['Init Buttons'] = function() end
+---@param Index int32
+---@param bEnabled boolean
+UW_TopBar_Generic_C['Set Button Index Enabled'] = function(Index, bEnabled) end
 ---@param EntryPoint int32
 function UW_TopBar_Generic_C:ExecuteUbergraph_W_TopBar_Generic(EntryPoint) end
 ---@param Index int32

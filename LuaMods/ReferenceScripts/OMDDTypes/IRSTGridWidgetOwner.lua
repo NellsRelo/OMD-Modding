@@ -11,6 +11,6 @@ IIRSTGridWidgetOwner_C['Get Empty Text'] = function(bUseEmptyText, Empty_Text) e
 IIRSTGridWidgetOwner_C['Should Element Be Spawned'] = function(Element, Should_Enable) end
 ---@param Element UObject
 ---@param Should_Enable boolean
-IIRSTGridWidgetOwner_C['Should Enable Contents for Element'] = function(Element, Should_Enable) end
+IIRSTGridWidgetOwner_C['Should Enable Contents For Element'] = function(Element, Should_Enable) end
 
 

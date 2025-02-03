@@ -4,7 +4,6 @@
 ---@field Wood_Square_1200W_A_Light_NoTaper1 UStaticMeshComponent
 ---@field Wood_Square_1200W_A_Light_NoTaper UStaticMeshComponent
 ---@field Dormer_E1_1x1_Teal_SM_Union UStaticMeshComponent
----@field Awning_B_LightBlue_SM_Union2 UStaticMeshComponent
 ---@field Awning_B_LightBlue_SM_Union1 UStaticMeshComponent
 ---@field Awning_B_LightBlue_SM_Union UStaticMeshComponent
 ---@field Wall_2x15_Wainscot_Wood_Window_SM_Union1 UStaticMeshComponent

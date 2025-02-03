@@ -20,7 +20,10 @@
 ---@field ['SmokeFX GameplayCue Tag'] FGameplayTag
 UGA_SpecialAttack_Gnoll_Sniper_C = {}
 
-function UGA_SpecialAttack_Gnoll_Sniper_C:DoShotFX() end
+---@return boolean
+function UGA_SpecialAttack_Gnoll_Sniper_C:BP_IsRanged() end
+---@param DidHit boolean
+function UGA_SpecialAttack_Gnoll_Sniper_C:DoShotFX(DidHit) end
 ---@param Target AActor
 ---@param Success boolean
 function UGA_SpecialAttack_Gnoll_Sniper_C:DoSniperDamage(Target, Success) end

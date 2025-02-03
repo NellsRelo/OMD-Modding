@@ -5,8 +5,7 @@
 ---@field bg_image UImage
 ---@field CommonRichTextBlock UCommonRichTextBlock
 ---@field divider UImage
----@field InvalidationBox_0 UInvalidationBox
----@field SafeZone_64 USafeZone
+---@field SafeZone_0 USafeZone
 ---@field ScrollBarSlider USlider
 ---@field ScrollBox UScrollBox
 ---@field TitleText UCommonTextBlock
@@ -35,6 +34,9 @@ function UW_MainMenu_PatchNotes_C:BndEvt__W_MainMenu_PatchNotes_ScrollBarSlider_
 ---@param CurrentOffset float
 function UW_MainMenu_PatchNotes_C:BndEvt__W_MainMenu_PatchNotes_ScrollBox_K2Node_ComponentBoundEvent_1_OnUserScrolledEvent__DelegateSignature(CurrentOffset) end
 function UW_MainMenu_PatchNotes_C:RefreshScrollbar() end
+---@param MyGeometry FGeometry
+---@param InDeltaTime float
+function UW_MainMenu_PatchNotes_C:Tick(MyGeometry, InDeltaTime) end
 ---@param EntryPoint int32
 function UW_MainMenu_PatchNotes_C:ExecuteUbergraph_W_MainMenu_PatchNotes(EntryPoint) end
 

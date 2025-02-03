@@ -17,10 +17,6 @@ FAnimBlueprintGeneratedConstantData = {}
 
 
 
----@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
-FAnimBlueprintGeneratedMutableData = {}
-
-
 ---@class UABP_Blunderbuss_Pet_Ultimate_C : UAnimInstance
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance

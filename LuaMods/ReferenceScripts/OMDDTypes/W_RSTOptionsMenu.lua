@@ -9,6 +9,8 @@
 ---@field NavigationBar UW_TopBar_Generic_C
 ---@field OptionsBox UScrollBox
 ---@field Overlay_AllOptions UOverlay
+---@field SafeZone_1 USafeZone
+---@field SafeZone_2 USafeZone
 ---@field ScrollBarSlider USlider
 ---@field TitleText UCommonTextBlock
 ---@field W_ExitMenuButton UW_ExitMenuButton_C
@@ -37,8 +39,19 @@
 ---@field CurrentModal URSTModal_TwoChoices
 ---@field bNoScrollUpdate boolean
 ---@field SessionVisibilityComboBox UW_RSTOption_ComboBox_C
+---@field LinkAccountButton UW_RSTOption_Button_C
 UW_RSTOptionsMenu_C = {}
 
+---@param Settings URSTSettingsLocal
+---@param ApplyImmediately boolean
+function UW_RSTOptionsMenu_C:ResetEnvironmentDetails(Settings, ApplyImmediately) end
+---@param bIsEnabled boolean
+function UW_RSTOptionsMenu_C:OnCameraShakeChanged(bIsEnabled) end
+---@param SessionVisbility ECommonSessionVisibility
+---@param SessionVisibilityText FText
+function UW_RSTOptionsMenu_C:GetSessionVisibilityString(SessionVisbility, SessionVisibilityText) end
+---@param bIsChecked boolean
+function UW_RSTOptionsMenu_C:OnShowBreakableObjectsChanged(bIsChecked) end
 ---@param Array TArray<FString>
 function UW_RSTOptionsMenu_C:MakeSessionVisibilityOptions(Array) end
 ---@param bIsChecked boolean
@@ -293,8 +306,10 @@ function UW_RSTOptionsMenu_C:BP_GetDesiredFocusTarget() end
 ---@param ValueChangedEvent FSetupSliderValueChangedEvent
 ---@param bHasResetButton boolean
 ---@param DefaultValue double
+---@param bIsPercentage boolean
+---@param bAlwaysSign boolean
 ---@param Slider UW_RSTOption_Slider_C
-function UW_RSTOptionsMenu_C:SetupSlider(Name, InitialValue, SliderMin, SliderMax, ValueChangedEvent, bHasResetButton, DefaultValue, Slider) end
+function UW_RSTOptionsMenu_C:SetupSlider(Name, InitialValue, SliderMin, SliderMax, ValueChangedEvent, bHasResetButton, DefaultValue, bIsPercentage, bAlwaysSign, Slider) end
 ---@param Name FText
 ---@param Options TArray<FString>
 ---@param InitialSelection FString
@@ -328,13 +343,11 @@ function UW_RSTOptionsMenu_C:AddContent_Graphics() end
 function UW_RSTOptionsMenu_C:AddContent_Controls() end
 function UW_RSTOptionsMenu_C:AddContent_Audio() end
 function UW_RSTOptionsMenu_C:Construct() end
-function UW_RSTOptionsMenu_C:Destruct() end
 function UW_RSTOptionsMenu_C:OnClickedResetHUDNPE() end
 UW_RSTOptionsMenu_C['BndEvt__W_RSTOptionsMenu_W_ExitMenuButton_K2Node_ComponentBoundEvent_1_On Button Clicked__DelegateSignature'] = function() end
 function UW_RSTOptionsMenu_C:OnResetGraphicsClicked() end
 function UW_RSTOptionsMenu_C:OnResetAudioClicked() end
 function UW_RSTOptionsMenu_C:OnResetGameplayClicked() end
-function UW_RSTOptionsMenu_C:OnResetOptimizationClicked() end
 function UW_RSTOptionsMenu_C:OnResetKeymappingClicked() end
 function UW_RSTOptionsMenu_C:ClearModal() end
 ---@param Value float
@@ -344,6 +357,15 @@ function UW_RSTOptionsMenu_C:BndEvt__W_RSTOptionsMenu_OptionsBox_K2Node_Componen
 function UW_RSTOptionsMenu_C:RefreshScrollbar() end
 ---@param Index int32
 UW_RSTOptionsMenu_C['BndEvt__W_RSTOptionsMenu_NavigationBar_K2Node_ComponentBoundEvent_3_On Tab Selected__DelegateSignature'] = function(Index) end
+function UW_RSTOptionsMenu_C:OnLinkAccountClicked() end
+function UW_RSTOptionsMenu_C:OnToggleLinkedAccount() end
+function UW_RSTOptionsMenu_C:CancelAccountChange() end
+function UW_RSTOptionsMenu_C:BP_OnDeactivated() end
+---@param MyGeometry FGeometry
+---@param InDeltaTime float
+function UW_RSTOptionsMenu_C:Tick(MyGeometry, InDeltaTime) end
+function UW_RSTOptionsMenu_C:OnResetControlsClicked() end
+function UW_RSTOptionsMenu_C:AddContentGameplayMain() end
 ---@param EntryPoint int32
 function UW_RSTOptionsMenu_C:ExecuteUbergraph_W_RSTOptionsMenu(EntryPoint) end
 

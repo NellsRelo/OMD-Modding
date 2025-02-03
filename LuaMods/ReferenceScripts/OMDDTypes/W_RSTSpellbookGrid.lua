@@ -21,6 +21,7 @@
 ---@field AvailableGridElements TArray<UW_PurchaseMenu_GridElement_C>
 ---@field UsedGridElements TArray<UW_PurchaseMenu_GridElement_C>
 ---@field bNoScrollUpdate boolean
+---@field SpawnedSpacers TArray<USpacer>
 UW_RSTSpellbookGrid_C = {}
 
 function UW_RSTSpellbookGrid_C:ClearGrid() end
@@ -48,7 +49,7 @@ UW_RSTSpellbookGrid_C['On Grid Element Clicked'] = function(GridElement) end
 UW_RSTSpellbookGrid_C['On Grid Element Hovered'] = function(GridElement) end
 ---@param Element UObject
 ---@param bShouldEnable boolean
-UW_RSTSpellbookGrid_C['Should Enable Contents for Element'] = function(Element, bShouldEnable) end
+UW_RSTSpellbookGrid_C['Should Enable Contents For Element'] = function(Element, bShouldEnable) end
 ---@param NewObject UObject
 ---@param bSpawned boolean
 UW_RSTSpellbookGrid_C['Create Grid Element'] = function(NewObject, bSpawned) end

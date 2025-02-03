@@ -16,6 +16,8 @@
 ---@field bAllowTeleportToTeleporter boolean
 ABP_Rift_C = {}
 
+---@return FTransform
+function ABP_Rift_C:BP_GetRiftTeleportTransform() end
 ---@return FVector
 function ABP_Rift_C:GetRiftFXLocation() end
 ---@param ActorInfo FGameplayAbilityActorInfo

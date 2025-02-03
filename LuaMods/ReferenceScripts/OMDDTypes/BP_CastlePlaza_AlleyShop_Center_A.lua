@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABP_CastlePlaza_AlleyShop_Center_A_C : ABP_OMDTrapGrid_C
+---@field WoodPlank_4x4_Floor_A4 UStaticMeshComponent
 ---@field NavPowerExclusion UNavPowerExclusionComponent
 ---@field RSTTrapGridBox12 URSTTrapGridBoxComponent
 ---@field Wall_1x2_ExposedBrick_SM_Union4 UStaticMeshComponent

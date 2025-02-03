@@ -12,6 +12,7 @@
 ---@field DetailsDisplayRoot UNamedSlot
 ---@field GridFilterRoot UNamedSlot
 ---@field NPCImage UImage
+---@field SafeZone_0 USafeZone
 ---@field SecondaryDetails UNamedSlot
 ---@field TitleIndicator UImage
 ---@field TitleText UCommonTextBlock
@@ -48,7 +49,7 @@ UW_PurchaseMenu_Base_C = {}
 UW_PurchaseMenu_Base_C['Get Empty Text'] = function(bUseEmptyText, Empty_Text) end
 ---@param Element UObject
 ---@param Should_Enable boolean
-UW_PurchaseMenu_Base_C['Should Enable Contents for Element'] = function(Element, Should_Enable) end
+UW_PurchaseMenu_Base_C['Should Enable Contents For Element'] = function(Element, Should_Enable) end
 ---@param Element UObject
 ---@param Should_Enable boolean
 UW_PurchaseMenu_Base_C['Should Element Be Spawned'] = function(Element, Should_Enable) end
@@ -56,7 +57,8 @@ UW_PurchaseMenu_Base_C['Perform No Button Clicked'] = function() end
 UW_PurchaseMenu_Base_C['Stop Display State Anims'] = function() end
 ---@param Display_Index int32
 ---@param bSnap boolean
-UW_PurchaseMenu_Base_C['Set Display Index'] = function(Display_Index, bSnap) end
+---@param bForce boolean
+UW_PurchaseMenu_Base_C['Set Display Index'] = function(Display_Index, bSnap, bForce) end
 UW_PurchaseMenu_Base_C['Perform Yes Button Clicked'] = function() end
 ---@param Yes_Visibility ESlateVisibility
 UW_PurchaseMenu_Base_C['Can Show Yes Button'] = function(Yes_Visibility) end

@@ -5,6 +5,7 @@
 ---@field Image_244 UImage
 ---@field PlayerList URSTListView
 ---@field W_ThreadMenu_DistortionContainer UW_ThreadMenu_DistortionContainer_C
+---@field W_ThreadMenu_TeamThreads UW_ThreadMenu_TeamThreadContainer_C
 ---@field SortedPlayerArray TArray<APlayerState>
 ---@field LooseTagHandle FRSTLooseTagHandle
 UW_RSTThreadMenu_C = {}

@@ -14,6 +14,7 @@
 ---@field PasswordProtectedCheckbox UCheckBox
 ---@field RegionComboBox UComboBoxString
 ---@field RegionSizeBox USizeBox
+---@field SafeZone_0 USafeZone
 ---@field SessionList URSTListView
 ---@field SessionMessage UCommonTextBlock
 ---@field TitleText UCommonTextBlock

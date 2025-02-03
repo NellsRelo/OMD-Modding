@@ -1,6 +1,11 @@
 ---@meta
 
 ---@class ABP_Orc_Ship_Ironclad_Spawner_C : AActor
+---@field NavPowerExclusion4 UNavPowerExclusionComponent
+---@field NavPowerExclusion3 UNavPowerExclusionComponent
+---@field NavPowerExclusion2 UNavPowerExclusionComponent
+---@field NavPowerExclusion1 UNavPowerExclusionComponent
+---@field NavPowerExclusion UNavPowerExclusionComponent
 ---@field P_Smoke_Large_Fire_Cine1 UParticleSystemComponent
 ---@field FishPaste_SM2 UStaticMeshComponent
 ---@field FishPaste_SM1 UStaticMeshComponent

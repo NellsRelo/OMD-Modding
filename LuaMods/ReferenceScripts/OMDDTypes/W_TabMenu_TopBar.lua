@@ -5,11 +5,13 @@
 ---@field HeroButton UW_ButtonBasic_C
 ---@field LeftSpacer USpacer
 ---@field MapButton UW_ButtonBasic_C
+---@field MapSizeBox USizeBox
 ---@field RightSpacer USpacer
 ---@field SelectIndicator UImage
 ---@field SpellbookButton UW_ButtonBasic_C
 ---@field StatsButton UW_ButtonBasic_C
 ---@field ThreadsButton UW_ButtonBasic_C
+---@field TrapsSizeBox USizeBox
 ---@field W_Button_KeyHint UW_Button_KeyHint_C
 ---@field W_Button_KeyHint_C_1 UW_Button_KeyHint_C
 ---@field ['On Tab Selected'] FW_TabMenu_TopBar_COn Tab Selected

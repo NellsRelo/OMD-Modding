@@ -1,6 +1,8 @@
 ---@meta
 
 ---@class ABP_Rift_Crystal_C : ARSTRiftCrystal
+---@field NavPowerObstruction2 UNavPowerObstructionComponent
+---@field NavPowerObstruction1 UNavPowerObstructionComponent
 ---@field Rift_Crystal_SKM USkeletalMeshComponent
 ---@field NS_Crystal_Rift_Idle UNiagaraComponent
 ---@field RiftFXLocation USceneComponent

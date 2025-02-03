@@ -113,8 +113,8 @@
 ---@field ['Simulate Changing Material State Over Time'] boolean
 ---@field ['Wetness Coverage Duration'] double
 ---@field ['Wetness Dry Duration'] double
----@field ['Wetness Dry Speed In Sunlight'] double
----@field ['Wetness Dry Speed Without Sunlight'] double
+---@field ['Wetness Dry Speed in Sunlight'] double
+---@field ['Wetness Dry Speed without Sunlight'] double
 ---@field ['Snow Coverage Duration'] double
 ---@field ['Snow Melt Duration'] double
 ---@field ['Snow Melt Speed Above Freezing'] double
@@ -122,7 +122,7 @@
 ---@field ['Dust Coverage Duration'] double
 ---@field ['Dust Clear Duration'] double
 ---@field ['Dust Clear Speed when Windy'] double
----@field ['Dust Clear Speed When Calm'] double
+---@field ['Dust Clear Speed when Calm'] double
 ---@field ['Melted Snow Coverage Contributes to Wetness'] double
 ---@field ['Snow Coverage Lights Up Height Fog'] double
 ---@field ['Wind Force Scale'] double
@@ -1016,8 +1016,8 @@ function AUltra_Dynamic_Weather_C:UserConstructionScript() end
 ---@param EndPlayReason EEndPlayReason::Type
 function AUltra_Dynamic_Weather_C:ReceiveEndPlay(EndPlayReason) end
 ---@param New_Weather_Type UUDS_Weather_Settings_C
----@param Time_To_Transition_To_New_Weather__Seconds_ double
-AUltra_Dynamic_Weather_C['Change Weather'] = function(New_Weather_Type, Time_To_Transition_To_New_Weather__Seconds_) end
+---@param Time_to_Transition_to_New_Weather__Seconds_ double
+AUltra_Dynamic_Weather_C['Change Weather'] = function(New_Weather_Type, Time_to_Transition_to_New_Weather__Seconds_) end
 ---@param Duration double
 AUltra_Dynamic_Weather_C['Clients Transition Start'] = function(Duration) end
 ---@param Time_to_Transition_to_Random_Weather__Seconds_ double

@@ -35,6 +35,8 @@ UW_HeroUnlockDisplay_C['Spawn Hero Display Contents'] = function(UFD) end
 function UW_HeroUnlockDisplay_C:BP_OnFinishShow() end
 UW_HeroUnlockDisplay_C['Process Hero Display Shown'] = function() end
 function UW_HeroUnlockDisplay_C:BP_OnActivated() end
+---@param Button UCommonButtonBase
+function UW_HeroUnlockDisplay_C:BndEvt__W_HeroUnlockDisplay_DismissButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(Button) end
 ---@param EntryPoint int32
 function UW_HeroUnlockDisplay_C:ExecuteUbergraph_W_HeroUnlockDisplay(EntryPoint) end
 

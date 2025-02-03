@@ -6,6 +6,8 @@
 ---@field Timeline__Direction_465351EB4A015EEF76FF92A3F7BB615A ETimelineDirection::Type
 ---@field Timeline UTimelineComponent
 ---@field Mesh USkeletalMeshComponent
+---@field bIsActive boolean
+---@field bQueueLoopingStart boolean
 AGCN_Character_VFXStatus_Petrified_C = {}
 
 ---@param MyTarget AActor
@@ -22,6 +24,10 @@ function AGCN_Character_VFXStatus_Petrified_C:OnLoopingStart(Target, Parameters,
 ---@param Parameters FGameplayCueParameters
 ---@param SpawnResults FGameplayCueNotify_SpawnResult
 function AGCN_Character_VFXStatus_Petrified_C:OnRemoval(Target, Parameters, SpawnResults) end
+---@param Target AActor
+---@param Parameters FGameplayCueParameters
+---@param SpawnResults FGameplayCueNotify_SpawnResult
+function AGCN_Character_VFXStatus_Petrified_C:OnApplication(Target, Parameters, SpawnResults) end
 ---@param EntryPoint int32
 function AGCN_Character_VFXStatus_Petrified_C:ExecuteUbergraph_GCN_Character_VFXStatus_Petrified(EntryPoint) end
 

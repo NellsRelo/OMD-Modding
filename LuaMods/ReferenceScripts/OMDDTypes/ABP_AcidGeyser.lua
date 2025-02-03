@@ -31,10 +31,6 @@ FAnimBlueprintGeneratedConstantData = {}
 
 
 
----@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
-FAnimBlueprintGeneratedMutableData = {}
-
-
 ---@class UABP_AcidGeyser_C : URSTAnimInstanceTrap
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance

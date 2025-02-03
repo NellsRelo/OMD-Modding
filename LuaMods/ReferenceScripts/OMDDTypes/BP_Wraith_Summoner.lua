@@ -2,6 +2,7 @@
 
 ---@class ABP_Wraith_Summoner_C : ABP_EnemyBase_C
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field Audio_ExistLoop UAudioComponent
 ---@field NS_Wraith_Base UNiagaraComponent
 ---@field NS_Wraith_Eyes UNiagaraComponent
 ---@field NS_Wraith_Lantern UNiagaraComponent
@@ -9,10 +10,9 @@
 ---@field RSTAimAssistTargetPelvis URSTAimAssistTargetComponent
 ---@field RSTRangedFirePoint URSTRangedFirePointComponent
 ---@field CombatCapsule URSTCombatCapsuleComponent
----@field ['Druid Magic Loop'] UAudioComponent
+---@field ['New Value'] float
 ---@field HealthDropRatio double
 ---@field ['Old Value'] float
----@field ['New Value'] float
 ---@field HealthInc double
 ---@field ['Old Health Inc'] int32
 ---@field ['New Health Inc'] int32
@@ -33,6 +33,7 @@ function ABP_Wraith_Summoner_C:ReceiveBeginPlay() end
 ---@param Spec FGameplayEffectSpec
 function ABP_Wraith_Summoner_C:OnHealthChanged(HealthComponent, OldValue, NewValue, Instigator, HitResult, bHasSpec, Spec) end
 function ABP_Wraith_Summoner_C:CheckForLast() end
+function ABP_Wraith_Summoner_C:BP_OnDeathStarted() end
 ---@param EntryPoint int32
 function ABP_Wraith_Summoner_C:ExecuteUbergraph_BP_Wraith_Summoner(EntryPoint) end
 

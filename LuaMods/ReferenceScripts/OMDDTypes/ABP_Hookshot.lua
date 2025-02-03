@@ -28,10 +28,6 @@ FAnimBlueprintGeneratedConstantData = {}
 
 
 
----@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
-FAnimBlueprintGeneratedMutableData = {}
-
-
 ---@class UABP_Hookshot_C : URSTAnimInstanceTrap_Hookshot
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance
@@ -65,8 +61,6 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field __CustomProperty_yaw_01B0C0044A0F23F914D0E9A056C3ABD6 float
 ---@field __CustomProperty_pitch_01B0C0044A0F23F914D0E9A056C3ABD6 float
 ---@field __CustomProperty_target_transform_01B0C0044A0F23F914D0E9A056C3ABD6 FTransform
----@field Yaw double
----@field Pitch double
 UABP_Hookshot_C = {}
 
 ---@param AnimGraph FPoseLink

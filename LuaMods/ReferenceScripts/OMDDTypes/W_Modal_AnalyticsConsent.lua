@@ -9,6 +9,8 @@
 ---@field Text_ModalTitle UCommonTextBlock
 UW_Modal_AnalyticsConsent_C = {}
 
+---@return UWidget
+function UW_Modal_AnalyticsConsent_C:BP_GetDesiredFocusTarget() end
 ---@param Button UCommonButtonBase
 function UW_Modal_AnalyticsConsent_C:BndEvt__W_Modal_TwoChoices_BoundActionButton_ChoiceOne_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(Button) end
 ---@param Button UCommonButtonBase

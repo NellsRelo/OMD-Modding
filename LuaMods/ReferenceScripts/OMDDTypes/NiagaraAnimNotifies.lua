@@ -15,6 +15,9 @@ FCurveParameterPair = {}
 ---@field bDestroyAtEnd boolean
 UAnimNotifyState_TimedNiagaraEffect = {}
 
+---@param MeshComp USkeletalMeshComponent
+---@return UNiagaraSystem
+function UAnimNotifyState_TimedNiagaraEffect:GetSystemTemplate(MeshComp) end
 ---@param MeshComp UMeshComponent
 ---@return UFXSystemComponent
 function UAnimNotifyState_TimedNiagaraEffect:GetSpawnedEffect(MeshComp) end
@@ -41,6 +44,9 @@ function UAnimNotifyState_TimedNiagaraEffectAdvanced:GetNotifyProgress(MeshComp)
 ---@field SocketName FName
 UAnimNotify_PlayNiagaraEffect = {}
 
+---@param MeshComp USkeletalMeshComponent
+---@return UNiagaraSystem
+function UAnimNotify_PlayNiagaraEffect:GetSystemTemplate(MeshComp) end
 ---@return UFXSystemComponent
 function UAnimNotify_PlayNiagaraEffect:GetSpawnedEffect() end
 

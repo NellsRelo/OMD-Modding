@@ -2,7 +2,8 @@
 
 ---@class UW_RSTTabMenu_C : URSTTabMenuWidget
 ---@field UberGraphFrame FPointerToUberGraphFrame
----@field SafeZone_0 USafeZone
+---@field SafeZone_3 USafeZone
+---@field SafeZone_4 USafeZone
 ---@field W_ExitMenuButton_173 UW_ExitMenuButton_C
 ---@field W_InHUBHeroSelection UW_HeroSelection_C
 ---@field W_MissionStatsBase UW_MissionStatsBase_C

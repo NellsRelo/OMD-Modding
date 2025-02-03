@@ -1,6 +1,14 @@
 ---@meta
 
 ---@class ABP_Museum_Dome_MainRoom_Southwing_C : ABP_OMDTrapGrid_C
+---@field Crenel_TrimB_SM UStaticMeshComponent
+---@field Column_Square_1_6_StoneWall_SM27 UStaticMeshComponent
+---@field Column_Pointed_Half_B_SM_Straighten10 UStaticMeshComponent
+---@field Column_Pointed_Half_B_SM_Straighten9 UStaticMeshComponent
+---@field Crenel_TrimA_SM_Octo_Filled3 UStaticMeshComponent
+---@field Crenel_TrimA_SM_Octo_Filled2 UStaticMeshComponent
+---@field Crenel_TrimA_SM_Octo_Filled1 UStaticMeshComponent
+---@field Crenel_TrimA_SM_Octo_Filled UStaticMeshComponent
 ---@field Wall_StoneWall_Castle_4x2_SM_Merge29 UStaticMeshComponent
 ---@field Wall_StoneWall_Castle_4x2_SM_Merge28 UStaticMeshComponent
 ---@field Column_BaseC_CastStone5 UStaticMeshComponent
@@ -68,9 +76,6 @@
 ---@field Column_Square_1_6_StoneWall_SM41 UStaticMeshComponent
 ---@field Stair_1x1_StoneWallBlock_SM1 UStaticMeshComponent
 ---@field Column_BaseC_CastStone3 UStaticMeshComponent
----@field Column_BaseC_CastStone2 UStaticMeshComponent
----@field Column_BaseC_CastStone1 UStaticMeshComponent
----@field Column_BaseC_CastStone UStaticMeshComponent
 ---@field Column_Pointed_Half_B_SM_Straighten4 UStaticMeshComponent
 ---@field Column_Pointed_Half_B_SM_Straighten3 UStaticMeshComponent
 ---@field Column_Pointed_Half_B_SM_Straighten2 UStaticMeshComponent
@@ -194,9 +199,7 @@
 ---@field Dome_3x3_Half_StoneWall_SM UStaticMeshComponent
 ---@field RSTTrapGridBox14 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox13 URSTTrapGridBoxComponent
----@field RSTTrapGridBox12 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox11 URSTTrapGridBoxComponent
----@field RSTTrapGridBox10 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox9 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox8 URSTTrapGridBoxComponent
 ---@field Column_Square_1_6_StoneWall_SM17 UStaticMeshComponent

@@ -21,15 +21,9 @@ function ABP_Hookshot_C:OnRep_bCooldownActive() end
 ---@param OtherActor AActor
 ---@return boolean
 function ABP_Hookshot_C:IsValidTarget(OtherActor) end
----@param Rotation FRotator
----@param Yaw double
-function ABP_Hookshot_C:ConvertBallistaSpaceRotationToYaw(Rotation, Yaw) end
----@param Yaw double
----@param Rotation FRotator
-function ABP_Hookshot_C:ConvertYawToBallistaSpaceRotation(Yaw, Rotation) end
----@param Yaw double
 ---@param Pitch double
-function ABP_Hookshot_C:GetTargetRotation(Yaw, Pitch) end
+---@param Yaw double
+function ABP_Hookshot_C:GetTargetRotation(Pitch, Yaw) end
 ---@return boolean
 function ABP_Hookshot_C:HasValidTarget() end
 ---@param OutLocation FVector

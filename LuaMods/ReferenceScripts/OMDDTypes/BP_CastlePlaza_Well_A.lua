@@ -1,12 +1,13 @@
 ---@meta
 
 ---@class ABP_CastlePlaza_Well_A_C : ABP_OMDTrapGrid_C
+---@field Tower_Rec_Roof_Teal_SM_Union UStaticMeshComponent
+---@field Base_Wall_Bottom_2x1_StoneWall_SM3 UStaticMeshComponent
+---@field Base_Wall_Bottom_2x1_StoneWall_SM2 UStaticMeshComponent
+---@field Base_Wall_Bottom_2x1_StoneWall_SM1 UStaticMeshComponent
+---@field Base_Wall_Bottom_2x1_StoneWall_SM UStaticMeshComponent
 ---@field Water UStaticMeshComponent
 ---@field Floor_Stone_Herringbone_2x4_SM_MERGED UStaticMeshComponent
----@field Wall_1_2_FB3 UStaticMeshComponent
----@field Wall_1_2_FB2 UStaticMeshComponent
----@field Wall_1_2_FB1 UStaticMeshComponent
----@field Wall_1_2_FB UStaticMeshComponent
 ---@field ColumnTrim_CastStone_300W3 UStaticMeshComponent
 ---@field ColumnTrim_CastStone_300W2 UStaticMeshComponent
 ---@field ColumnTrim_CastStone_300W1 UStaticMeshComponent
@@ -55,7 +56,6 @@
 ---@field Wood_Plank_600W_A_Light8 UStaticMeshComponent
 ---@field Wood_Plank_600W_A_Light7 UStaticMeshComponent
 ---@field Wood_Plank_600W_A_Light6 UStaticMeshComponent
----@field SM_MERGED_Turret_Square_TiledEdge2 UStaticMeshComponent
 ---@field Wood_Plank_600W_A_Light3 UStaticMeshComponent
 ---@field Wood_Plank_600W_A_Light2 UStaticMeshComponent
 ---@field Wood_Plank_600W_A_Light1 UStaticMeshComponent

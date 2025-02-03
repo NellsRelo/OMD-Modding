@@ -20,7 +20,6 @@ function UW_HeroAvatar_C:GetHeroActor(HeroActor) end
 ---@param PawnTag FGameplayTag
 ---@param SkinTag FGameplayTag
 UW_HeroAvatar_C['Set From Pawn Tag'] = function(PawnTag, SkinTag) end
-function UW_HeroAvatar_C:Construct() end
 function UW_HeroAvatar_C:Destruct() end
 function UW_HeroAvatar_C:BP_OnDeactivated_1() end
 ---@param EntryPoint int32

@@ -1,6 +1,20 @@
 ---@meta
 
 ---@class ABP_BackAlley_Gate_C : ABP_OMDTrapGrid_C
+---@field Colosseum_Portcullis_Colosseum_Portcullis_Wood_SM UStaticMeshComponent
+---@field Metal_Grate_Spikes12 UStaticMeshComponent
+---@field Metal_Grate_Spikes11 UStaticMeshComponent
+---@field Metal_Grate_Spikes10 UStaticMeshComponent
+---@field Metal_Grate_Spikes9 UStaticMeshComponent
+---@field Metal_Grate_Spikes8 UStaticMeshComponent
+---@field Metal_Grate_Spikes7 UStaticMeshComponent
+---@field Metal_Grate_Spikes6 UStaticMeshComponent
+---@field Metal_Grate_Spikes5 UStaticMeshComponent
+---@field Metal_Grate_Spikes4 UStaticMeshComponent
+---@field Metal_Grate_Spikes3 UStaticMeshComponent
+---@field Metal_Grate_Spikes2 UStaticMeshComponent
+---@field Metal_Grate_Spikes1 UStaticMeshComponent
+---@field Metal_Grate_Spikes UStaticMeshComponent
 ---@field RSTTrapGridBox33 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox32 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox31 URSTTrapGridBoxComponent
@@ -58,12 +72,10 @@
 ---@field Archway_2x05x3_Brick4 UStaticMeshComponent
 ---@field Ceiling_ArchTileBig_EndAB_2x4_StoneWall_SM3 UStaticMeshComponent
 ---@field Wall_4x2_Brick_SM_Merge11 UStaticMeshComponent
----@field Metal_Gate_B2 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM5 UStaticMeshComponent
 ---@field Ceiling_ArchTileBig_EndAB_2x4_StoneWall_SM2 UStaticMeshComponent
 ---@field Wall_4x2_Brick_SM_Merge9 UStaticMeshComponent
 ---@field Wall_4x2_Brick_SM_Merge10 UStaticMeshComponent
----@field Metal_Gate_B3 UStaticMeshComponent
 ---@field Wall_3x2_Wainscot_Wood_SM_Window_Union UStaticMeshComponent
 ---@field Tower_Rec_Roof_A_SM_Union10 UStaticMeshComponent
 ---@field Ceiling_5x05_PlasterWood_SM_Cap_Union2 UStaticMeshComponent
@@ -127,11 +139,9 @@
 ---@field Floor_2x2_StoneBlock_SM UStaticMeshComponent
 ---@field Roof_5x4x3_ShingleC_SM_End_Union2 UStaticMeshComponent
 ---@field Floor_2x2_StoneBlock_SM1 UStaticMeshComponent
----@field Metal_Gate_B UStaticMeshComponent
 ---@field Floor_2x2_StoneBlock_SM3 UStaticMeshComponent
 ---@field Tower_Rec_Roof_A_SM_Union6 UStaticMeshComponent
 ---@field Wall_4x2_Brick_Door_SM_Merge2 UStaticMeshComponent
----@field Fencing_2x2_RodIron_Garden_Curved UStaticMeshComponent
 ---@field Wall_4x4_Brick_SM UStaticMeshComponent
 ---@field Wall_4x4_Brick_SM1 UStaticMeshComponent
 ---@field Wall_4x4_Brick_SM2 UStaticMeshComponent
@@ -142,7 +152,6 @@
 ---@field ['Gable_4x3_A_Window_Plasterwood-Wood_SM_Union_A4'] UStaticMeshComponent
 ---@field ['Gable_4x3_A_Window_Plasterwood-Wood_SM_Union_A'] UStaticMeshComponent
 ---@field Wood_Door_D_Light_Cut_Merge UStaticMeshComponent
----@field Gate_Gardens_RodIron_D UStaticMeshComponent
 ---@field ['Gable_4x3_A_Window_Plasterwood-Wood_SM_Union_A1'] UStaticMeshComponent
 ---@field RSTTrapGridBox9 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox3 URSTTrapGridBoxComponent

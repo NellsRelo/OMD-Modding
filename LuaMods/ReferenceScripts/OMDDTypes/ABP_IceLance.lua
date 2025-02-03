@@ -36,7 +36,7 @@ FAnimBlueprintGeneratedMutableData = {}
 
 
 
----@class UABP_IceLance_C : URSTAnimInstanceTrap
+---@class UABP_IceLance_C : URSTAnimInstanceTrap_Ballista
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field __AnimBlueprintMutables FAnimBlueprintGeneratedMutableData
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance
@@ -67,8 +67,6 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field AnimGraphNode_SequencePlayer FAnimNode_SequencePlayer
 ---@field AnimGraphNode_StateResult FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine FAnimNode_StateMachine
----@field Yaw double
----@field Pitch double
 UABP_IceLance_C = {}
 
 ---@param AnimGraph FPoseLink

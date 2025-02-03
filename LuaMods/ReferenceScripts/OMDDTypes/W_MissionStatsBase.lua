@@ -9,10 +9,9 @@
 ---@field HorizontalBox_AwardParent UHorizontalBox
 ---@field HorizontalBox_GoldSkullParent UHorizontalBox
 ---@field HorizontalBox_SkullParent UHorizontalBox
----@field InvalidationBox_0 UInvalidationBox
 ---@field MenuAnchor_78 UMenuAnchor
 ---@field RunStatsToggle UW_ButtonBoundAction_C
----@field SafeZone_129 USafeZone
+---@field SafeZone_0 USafeZone
 ---@field SkullSpacer USpacer
 ---@field Text_GoldSkulls UCommonTextBlock
 ---@field Text_Skulls UCommonTextBlock
@@ -24,11 +23,13 @@
 ---@field SortedPlayerArray TArray<ARSTPlayerState>
 ---@field bIsTabScreen boolean
 ---@field EnableDevelopmentStats boolean
----@field LastPlayerSpawnedContextMenu APlayerState
+---@field LastPlayerSpawnedContextMenu ARSTPlayerState
 ---@field ['Run Stats'] boolean
 ---@field RefreshHandle FTimerHandle
 ---@field SkullChangeAction UAsyncAction_ListenForGameplayMessage
 ---@field GoldSkullChangeAction UAsyncAction_ListenForGameplayMessage
+---@field ModalTargetPlayer ARSTPlayerState
+---@field ActiveModal URSTModal_TwoChoices
 UW_MissionStatsBase_C = {}
 
 UW_MissionStatsBase_C['Update Gold Skulls Text'] = function() end
@@ -37,7 +38,9 @@ UW_MissionStatsBase_C['Should Show Accolades'] = function(bShowAccolades) end
 ---@param SingleTag FGameplayTag
 ---@return TArray<ARSTPlayerState>
 function UW_MissionStatsBase_C:GetPlayersWithHighestStatValue(SingleTag) end
-function UW_MissionStatsBase_C:OnContextMenuOptionSelected() end
+---@param PlayerToKick ARSTPlayerState
+---@param PlayerToBan ARSTPlayerState
+function UW_MissionStatsBase_C:OnContextMenuOptionSelected(PlayerToKick, PlayerToBan) end
 ---@return UWidget
 function UW_MissionStatsBase_C:GetContextMenuContent() end
 ---@param Widget UW_MissionStats_Entry_C
@@ -84,6 +87,13 @@ function UW_MissionStatsBase_C:PreConstruct(IsDesignTime) end
 function UW_MissionStatsBase_C:PlayerStateChanged(PlayerState) end
 ---@param RSTPlayerState ARSTPlayerState
 function UW_MissionStatsBase_C:OnPlayerIndexSet(RSTPlayerState) end
+---@param PlayerToKick ARSTPlayerState
+function UW_MissionStatsBase_C:KickPlayer(PlayerToKick) end
+---@param PlayerToBan ARSTPlayerState
+function UW_MissionStatsBase_C:BanPlayer(PlayerToBan) end
+function UW_MissionStatsBase_C:ConfirmKick() end
+function UW_MissionStatsBase_C:ConfirmBan() end
+function UW_MissionStatsBase_C:Cancel() end
 ---@param EntryPoint int32
 function UW_MissionStatsBase_C:ExecuteUbergraph_W_MissionStatsBase(EntryPoint) end
 

@@ -50,6 +50,8 @@ function ABP_Gib_Skeletal_Base_C:MeltedDeath() end
 ---@param LifeSpan double
 function ABP_Gib_Skeletal_Base_C:FrozenDeath(LifeSpan) end
 function ABP_Gib_Skeletal_Base_C:PoisonedDeath() end
+function ABP_Gib_Skeletal_Base_C:BP_ActorRequestedFromPool() end
+function ABP_Gib_Skeletal_Base_C:BP_PrepareActorForReuse() end
 ---@param EntryPoint int32
 function ABP_Gib_Skeletal_Base_C:ExecuteUbergraph_BP_Gib_Skeletal_Base(EntryPoint) end
 

@@ -10,10 +10,6 @@ FAnimBlueprintGeneratedConstantData = {}
 
 
 
----@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
-FAnimBlueprintGeneratedMutableData = {}
-
-
 ---@class UABP_Blunderbuss_Attachment_C : UAnimInstance
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance

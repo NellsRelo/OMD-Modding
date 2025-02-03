@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABP_Display_Dragon_SpineTail2_Breakable_C : AActor
+---@field NavPowerExclusion UNavPowerExclusionComponent
 ---@field BP_GlassPanel_A_Square_Breakable UChildActorComponent
 ---@field BP_GlassPanel_A_Square_Breakable3 UChildActorComponent
 ---@field BP_GlassPanel_A_Square_Breakable2 UChildActorComponent

@@ -5,6 +5,7 @@
 ---@field NS_Fire_Ogre_Special_Ground UNiagaraComponent
 ---@field MyASC UAbilitySystemComponent
 ---@field ['Volume Lifespan'] float
+---@field ['Gas Loop'] UAudioComponent
 ABP_PoisonVolume_Gas_Sapper_C = {}
 
 ---@param OtherActor AActor

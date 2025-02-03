@@ -1,6 +1,10 @@
 ---@meta
 
 ---@class ABP_Arboretum_TimberStructure_smallA_C : ABP_OMDTrapGrid_C
+---@field Base_ArchWall_3W63 UStaticMeshComponent
+---@field Base_ArchWall_3W62 UStaticMeshComponent
+---@field Base_ArchWall_3W61 UStaticMeshComponent
+---@field Base_ArchWall_3W60 UStaticMeshComponent
 ---@field NavPowerExclusion UNavPowerExclusionComponent
 ---@field Nav USceneComponent
 ---@field Base_ArchWall_3W29 UStaticMeshComponent

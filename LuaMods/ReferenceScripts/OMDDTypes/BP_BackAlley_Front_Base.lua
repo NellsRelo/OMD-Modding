@@ -1,6 +1,9 @@
 ---@meta
 
 ---@class ABP_BackAlley_Front_Base_C : ABP_OMDTrapGrid_C
+---@field Wood_Door_D_Light_Cut UStaticMeshComponent
+---@field RSTTrapGridBox29 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox28 URSTTrapGridBoxComponent
 ---@field ColumnTrim_CastStone_900W11 UStaticMeshComponent
 ---@field ColumnTrim_CastStone_900W10 UStaticMeshComponent
 ---@field ColumnTrim_CastStone_900W1 UStaticMeshComponent
@@ -46,10 +49,6 @@
 ---@field ColumnTrim_CastStone_900W17 UStaticMeshComponent
 ---@field ColumnTrim_CastStone_900W16 UStaticMeshComponent
 ---@field Fencing_1x6_RodIron_Garden7 UStaticMeshComponent
----@field RSTTrapGridBox31 URSTTrapGridBoxComponent
----@field RSTTrapGridBox30 URSTTrapGridBoxComponent
----@field RSTTrapGridBox29 URSTTrapGridBoxComponent
----@field RSTTrapGridBox28 URSTTrapGridBoxComponent
 ---@field Fencing_1x6_RodIron_Garden6 UStaticMeshComponent
 ---@field Fencing_1x6_RodIron_Garden5 UStaticMeshComponent
 ---@field Fencing_1x6_RodIron_Garden4 UStaticMeshComponent
@@ -58,21 +57,12 @@
 ---@field Fencing_1x6_RodIron_Garden1 UStaticMeshComponent
 ---@field Fencing_1x6_RodIron_Garden UStaticMeshComponent
 ---@field Arch_1x4x4_StoneWall_SM UStaticMeshComponent
----@field ColumnTrim_CastStone_900W15 UStaticMeshComponent
----@field ColumnTrim_CastStone_900W4 UStaticMeshComponent
 ---@field Archway_2x05x25_Brick6 UStaticMeshComponent
 ---@field Archway_2x05x25_Brick5 UStaticMeshComponent
 ---@field Archway_2x05x25_Brick4 UStaticMeshComponent
 ---@field Ceiling_ArchTileBig_025x2_Brick_SM1 UStaticMeshComponent
 ---@field Archway_2x05x25_Brick3 UStaticMeshComponent
 ---@field Archway_2x05x25_Brick2 UStaticMeshComponent
----@field ColumnTrim_CastStone_900W9 UStaticMeshComponent
----@field ColumnTrim_CastStone_900W8 UStaticMeshComponent
----@field ColumnTrim_CastStone_900W7 UStaticMeshComponent
----@field ColumnTrim_CastStone_900W6 UStaticMeshComponent
----@field ColumnTrim_CastStone_900W5 UStaticMeshComponent
----@field ColumnTrim_CastStone_900W3 UStaticMeshComponent
----@field ColumnTrim_CastStone_900W UStaticMeshComponent
 ---@field Column_Pointed_Half_B_SM1 UStaticMeshComponent
 ---@field Column_Pointed_Half_B_SM UStaticMeshComponent
 ---@field Statue_ShieldBearer_SM1 UStaticMeshComponent
@@ -114,7 +104,6 @@
 ---@field Wall_Bottom_2x2_Stone_SM3 UStaticMeshComponent
 ---@field Base_Column_Square_05_2_Stone_SM2 UStaticMeshComponent
 ---@field Wall_Bottom_2x2_Stone_SM2 UStaticMeshComponent
----@field Fencing_2x2_RodIron_Garden3 UStaticMeshComponent
 ---@field Fencing_2x2_RodIron_Garden2 UStaticMeshComponent
 ---@field Fencing_2x2_RodIron_Garden1 UStaticMeshComponent
 ---@field Fencing_2x2_RodIron_Garden UStaticMeshComponent

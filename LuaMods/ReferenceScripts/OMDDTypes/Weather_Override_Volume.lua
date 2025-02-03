@@ -109,8 +109,8 @@ AWeather_Override_Volume_C['Create World Space Drawing Geometry'] = function() e
 AWeather_Override_Volume_C['Calculate Spline Bounds'] = function() end
 function AWeather_Override_Volume_C:UserConstructionScript() end
 ---@param New_Weather_Type UUDS_Weather_Settings_C
----@param Time_To_Transition_To_New_Weather__Seconds_ double
-AWeather_Override_Volume_C['Change Weather'] = function(New_Weather_Type, Time_To_Transition_To_New_Weather__Seconds_) end
+---@param Time_to_Transition_to_New_Weather__Seconds_ double
+AWeather_Override_Volume_C['Change Weather'] = function(New_Weather_Type, Time_to_Transition_to_New_Weather__Seconds_) end
 ---@param Time_to_Transition_to_Random_Weather__Seconds_ double
 ---@param Random_Weather_Mode UDS_RandomWeatherTiming::Type
 AWeather_Override_Volume_C['Change to Random Weather Variation'] = function(Time_to_Transition_to_Random_Weather__Seconds_, Random_Weather_Mode) end

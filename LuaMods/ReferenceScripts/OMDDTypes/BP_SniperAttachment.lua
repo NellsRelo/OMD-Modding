@@ -46,6 +46,11 @@ function ABP_SniperAttachment_C:BP_Reload(AdditionalContextData) end
 function ABP_SniperAttachment_C:BP_AmmoCountChanged(AdditionalContextData) end
 function ABP_SniperAttachment_C:UpdatePrimaryVFX() end
 function ABP_SniperAttachment_C:ReceiveBeginPlay() end
+---@param VisualTagContainer FGameplayTagContainer
+---@param bRevertToDefaults boolean
+function ABP_SniperAttachment_C:OnCurrentVisualVariantChanged(VisualTagContainer, bRevertToDefaults) end
+---@param SniperFX UNiagaraSystem
+ABP_SniperAttachment_C['Update Sniper Visuals'] = function(SniperFX) end
 ---@param EntryPoint int32
 function ABP_SniperAttachment_C:ExecuteUbergraph_BP_SniperAttachment(EntryPoint) end
 

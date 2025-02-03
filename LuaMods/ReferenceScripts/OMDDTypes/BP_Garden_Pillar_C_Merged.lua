@@ -7,7 +7,6 @@
 ---@field Wall03 URSTTrapGridBoxComponent
 ---@field Wall02 URSTTrapGridBoxComponent
 ---@field Wall00 URSTTrapGridBoxComponent
----@field Box_Collision UBoxComponent
 ---@field Collision USceneComponent
 ---@field Geometry USceneComponent
 ---@field TrapGrid USceneComponent

@@ -18,16 +18,10 @@ ABP_Ballista_C = {}
 function ABP_Ballista_C:BP_GetActorEyesViewPoint(OutLocation, OutRotation) end
 ---@return boolean
 function ABP_Ballista_C:HasValidTarget() end
----@param Yaw double
 ---@param Pitch double
-function ABP_Ballista_C:GetTargetRotation(Yaw, Pitch) end
+---@param Yaw double
+function ABP_Ballista_C:GetTargetRotation(Pitch, Yaw) end
 function ABP_Ballista_C:UpdateTarget() end
----@param Rotation FRotator
----@param Yaw double
-function ABP_Ballista_C:ConvertBallistaSpaceRotationToYaw(Rotation, Yaw) end
----@param Yaw double
----@param Rotation FRotator
-function ABP_Ballista_C:ConvertYawToBallistaSpaceRotation(Yaw, Rotation) end
 function ABP_Ballista_C:UserConstructionScript() end
 function ABP_Ballista_C:ReceiveBeginPlay() end
 ---@param DeltaSeconds float

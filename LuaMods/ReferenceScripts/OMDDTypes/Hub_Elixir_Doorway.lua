@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class AHub_Elixir_Doorway_C : ABP_OMDTrapGrid_C
+---@field Wood_Door_D1_Light2 UStaticMeshComponent
 ---@field ColumnTrim_CastStone_300W15 UStaticMeshComponent
 ---@field ColumnTrim_CastStone_300W14 UStaticMeshComponent
 ---@field ColumnTrim_CastStone_300W13 UStaticMeshComponent
@@ -77,7 +78,6 @@
 ---@field Stair_05_CornerIn_StoneWallBlock_SM UStaticMeshComponent
 ---@field Wood_Door_D1_Light1 UStaticMeshComponent
 ---@field Window_Pointed_2x_SansDetail_SM1 UStaticMeshComponent
----@field Wood_Door_D1_Light UStaticMeshComponent
 ---@field Window_Pointed_2x_SansDetail_SM UStaticMeshComponent
 ---@field Wall_2x05_Crenel_StoneWall_Trimmed_SM1 UStaticMeshComponent
 ---@field Column_Octo_2x2_StoneWall_SM3 UStaticMeshComponent

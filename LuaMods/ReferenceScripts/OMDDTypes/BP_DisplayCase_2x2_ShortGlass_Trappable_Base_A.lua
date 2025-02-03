@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABP_DisplayCase_2x2_ShortGlass_Trappable_Base_A_C : ABP_OMDTrapGrid_C
+---@field NavPowerExclusion UNavPowerExclusionComponent
 ---@field BP_Potion_Props_Pot_02_A_Breakable UChildActorComponent
 ---@field RSTTrapGridBox3 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox4 URSTTrapGridBoxComponent

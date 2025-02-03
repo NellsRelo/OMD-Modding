@@ -34,10 +34,6 @@ FAnimBlueprintGeneratedConstantData = {}
 
 
 
----@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
-FAnimBlueprintGeneratedMutableData = {}
-
-
 ---@class UABP_Rift_Crystal_C : UAnimInstance
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance
@@ -75,6 +71,7 @@ UABP_Rift_Crystal_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_Rift_Crystal_C:AnimGraph(AnimGraph) end
+function UABP_Rift_Crystal_C:OnReady_9762D5864683FD93352DBEA957B308AF() end
 function UABP_Rift_Crystal_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Rift_Crystal_AnimGraphNode_TransitionResult_0086DFCE4FEED0C95B855B8A9E9F46FB() end
 function UABP_Rift_Crystal_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Rift_Crystal_AnimGraphNode_TransitionResult_EE7D83C44D69D0BC315B8EA7512961EF() end
 function UABP_Rift_Crystal_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Rift_Crystal_AnimGraphNode_TransitionResult_C456C50848D4DF7C6208DEB56CAEAE74() end

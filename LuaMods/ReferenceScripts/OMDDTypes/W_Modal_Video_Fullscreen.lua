@@ -4,7 +4,7 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field OnHide UWidgetAnimation
 ---@field OnShow UWidgetAnimation
----@field Image_46 UImage
+---@field Image_BlackBackground UImage
 ---@field Image_Video UImage
 ---@field SubtitleDisplay_368 USubtitleDisplay
 ---@field W_ExitMenuButton UW_ExitMenuButton_C

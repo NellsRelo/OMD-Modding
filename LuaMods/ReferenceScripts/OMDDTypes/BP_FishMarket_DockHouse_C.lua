@@ -25,7 +25,6 @@
 ---@field Buoy_A UStaticMeshComponent
 ---@field RSTTrapGridBox5 URSTTrapGridBoxComponent
 ---@field Wood_Square_900W_A_NoTaper_Light9 UStaticMeshComponent
----@field Pennant_Far_BP UChildActorComponent
 ---@field Props USceneComponent
 ---@field RSTTrapGridBox26 URSTTrapGridBoxComponent
 ---@field Wall_4x05_SM4 UStaticMeshComponent

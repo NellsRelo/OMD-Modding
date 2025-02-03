@@ -4,7 +4,7 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field NS_Elemental_Redling UNiagaraComponent
 ---@field RSTAimAssistTargetHead URSTAimAssistTargetComponent
----@field Audio_FireLoop UAudioComponent
+---@field Audio_ExistLoop UAudioComponent
 ---@field CombatCapsule URSTCombatCapsuleComponent
 ABP_Elemental_Redling_C = {}
 

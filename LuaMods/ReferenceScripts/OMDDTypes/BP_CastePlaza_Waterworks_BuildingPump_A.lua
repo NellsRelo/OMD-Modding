@@ -1,6 +1,10 @@
 ---@meta
 
 ---@class ABP_CastePlaza_Waterworks_BuildingPump_A_C : ABP_OMDTrapGrid_C
+---@field Gable_4x3_A_Window_ExposedBrick_SM_Merge_A1 UStaticMeshComponent
+---@field Gable_4x3_A_Window_ExposedBrick_SM_Merge_A UStaticMeshComponent
+---@field Roof_4x3x2_CapA_Blue_SM_Union_1 UStaticMeshComponent
+---@field Roof_4x3x2_CapA_Blue_SM_Union_ UStaticMeshComponent
 ---@field NavPowerExclusion UNavPowerExclusionComponent
 ---@field Wall_1_2_FB9 UStaticMeshComponent
 ---@field Collision UBoxComponent
@@ -13,18 +17,6 @@
 ---@field ['SewerPipe_Straight_Short_1-deg-deg_Corner11'] UStaticMeshComponent
 ---@field ['SewerPipe_Straight_Short_1-deg-deg_Corner10'] UStaticMeshComponent
 ---@field ['SewerPipe_Straight_Short_1-deg-deg_Corner9'] UStaticMeshComponent
----@field ['M_Proto_Roof_SS_45-deg-deg_Corner8'] UStaticMeshComponent
----@field ['M_Proto_Roof_SS_45-deg-deg_Corner7'] UStaticMeshComponent
----@field ['M_Proto_Roof_SS_45-deg-deg_Corner6'] UStaticMeshComponent
----@field ['M_Proto_Roof_SS_45-deg-deg_Corner5'] UStaticMeshComponent
----@field ['M_Proto_Roof_SS_45-deg_Corner3'] UStaticMeshComponent
----@field ['M_Proto_Roof_SS_45-deg_Corner2'] UStaticMeshComponent
----@field ['M_Proto_Roof_SS_45-deg-deg_Corner4'] UStaticMeshComponent
----@field ['M_Proto_Roof_SS_45-deg_Corner1'] UStaticMeshComponent
----@field ['M_Proto_Roof_SS_45-deg-deg_Corner3'] UStaticMeshComponent
----@field ['M_Proto_Roof_SS_45-deg-deg_Corner2'] UStaticMeshComponent
----@field ['M_Proto_Roof_SS_45-deg-deg_Corner1'] UStaticMeshComponent
----@field ['M_Proto_Roof_SS_45-deg_Corner'] UStaticMeshComponent
 ---@field RSTTrapGridBox7 URSTTrapGridBoxComponent
 ---@field Wood_Plank_600W_A_Light11 UStaticMeshComponent
 ---@field RSTTrapGridBox6 URSTTrapGridBoxComponent

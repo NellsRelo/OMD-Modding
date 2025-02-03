@@ -21,8 +21,20 @@
 ---@field BeamDamageHandle FActiveGameplayEffectHandle
 ---@field ['Beam Tracking Speed'] float
 ---@field ['Status Effect Duration'] float
+---@field GameplayCueBeamImpactPlayer FGameplayTag
+---@field GameplyCueBeamImpactNormal FGameplayTag
+---@field ['Last Hit Actor'] AActor
+---@field LastImpactCue FGameplayTag
+---@field ValidTargetTags FGameplayTagContainer
 UGA_SpecialAttack_Cyclops_Druid_C = {}
 
+---@param HitActor AActor
+---@param GameplayCue FGameplayTag
+function UGA_SpecialAttack_Cyclops_Druid_C:RemoveImpactSFX(HitActor, GameplayCue) end
+---@param HitActor AActor
+---@param GameplayCue FGameplayTag
+---@param HitLocation FVector
+UGA_SpecialAttack_Cyclops_Druid_C['Add Impact SFX'] = function(HitActor, GameplayCue, HitLocation) end
 ---@return boolean
 function UGA_SpecialAttack_Cyclops_Druid_C:BP_IsRanged() end
 function UGA_SpecialAttack_Cyclops_Druid_C:DoBeamDamage() end
@@ -46,7 +58,8 @@ function UGA_SpecialAttack_Cyclops_Druid_C:OnTaskFailed_AF715F3348F67EA00FA2B591
 ---@param Duration float
 function UGA_SpecialAttack_Cyclops_Druid_C:OnTargetReached_AF715F3348F67EA00FA2B59193B8CE83(Duration) end
 ---@param HitActor AActor
-function UGA_SpecialAttack_Cyclops_Druid_C:OnReadyToFire_C3228DEE4E9AFC7582448D9F54188859(HitActor) end
+---@param HitLocation FVector
+function UGA_SpecialAttack_Cyclops_Druid_C:OnReadyToFire_C3228DEE4E9AFC7582448D9F54188859(HitActor, HitLocation) end
 function UGA_SpecialAttack_Cyclops_Druid_C:OnFinished_60F783984CAF2CD48EFF78B9FDAE3A4F() end
 function UGA_SpecialAttack_Cyclops_Druid_C:OnActorDied_60F783984CAF2CD48EFF78B9FDAE3A4F() end
 function UGA_SpecialAttack_Cyclops_Druid_C:K2_ActivateAbility() end

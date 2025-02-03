@@ -57,12 +57,12 @@ function UW_WheelSelectBase_C:InpActEvt_IA_UI_Gamepad_Cursor_K2Node_EnhancedInpu
 ---@param TriggeredTime float
 ---@param SourceAction UInputAction
 function UW_WheelSelectBase_C:InpActEvt_IA_UI_Gamepad_Cursor_K2Node_EnhancedInputActionEvent_0(ActionValue, ElapsedTime, TriggeredTime, SourceAction) end
----@param MyGeometry FGeometry
----@param InDeltaTime float
-function UW_WheelSelectBase_C:Tick(MyGeometry, InDeltaTime) end
 function UW_WheelSelectBase_C:OnInitialized() end
 function UW_WheelSelectBase_C:OnWheelVisible() end
 function UW_WheelSelectBase_C:BP_OnActivated_1() end
+---@param MyGeometry FGeometry
+---@param InDeltaTime float
+function UW_WheelSelectBase_C:Tick(MyGeometry, InDeltaTime) end
 ---@param EntryPoint int32
 function UW_WheelSelectBase_C:ExecuteUbergraph_W_WheelSelectBase(EntryPoint) end
 

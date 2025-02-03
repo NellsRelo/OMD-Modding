@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABP_Garden_Wall_Half_Planter_A_C : ABP_OMDTrapGrid_C
+---@field NavPowerExclusion UNavPowerExclusionComponent
 ---@field ColumnTrim_CastStone_300W15 UStaticMeshComponent
 ---@field Wall01 URSTTrapGridBoxComponent
 ---@field ColumnTrim_CastStone_300W23 UStaticMeshComponent

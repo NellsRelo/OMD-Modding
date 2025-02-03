@@ -37,6 +37,7 @@
 ---@field Image_ribbon_11 UImage
 ---@field Image_top_blue_2 UImage
 ---@field RiftPointDisplayContainer UVerticalBox
+---@field SafeZone_0 USafeZone
 ---@field TabButton UW_ButtonBasic_C
 ---@field TabButtonOverlay UOverlay
 ---@field TOP_Left UImage

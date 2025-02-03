@@ -2,6 +2,7 @@
 
 ---@class ABP_Sentinel_Cannoneer_Trap_C : ABP_RSTTrap_Base_C
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field RDialogue URDialogueComponent
 ---@field AudioLocation2 USceneComponent
 ---@field NavPowerExclusion UNavPowerExclusionComponent
 ---@field AudioLocation USceneComponent
@@ -79,6 +80,17 @@ function ABP_Sentinel_Cannoneer_Trap_C:InitializeHealthDisplay() end
 function ABP_Sentinel_Cannoneer_Trap_C:BP_GoBreakChanged(bIsGoBreakActive) end
 ---@param DeltaSeconds float
 function ABP_Sentinel_Cannoneer_Trap_C:ReceiveTick(DeltaSeconds) end
+ABP_Sentinel_Cannoneer_Trap_C['[SOUND] Spawn VO'] = function() end
+---@param HealthComponent URSTHealthComponent
+---@param Damage float
+---@param Instigator AActor
+---@param HitResult FHitResult
+---@param bHasSpec boolean
+---@param Spec FGameplayEffectSpec
+ABP_Sentinel_Cannoneer_Trap_C['BndEvt__BP_Sentinel_Cannoneer_Trap_Health Component_K2Node_ComponentBoundEvent_0_RSTHealth_DamageDelegate__DelegateSignature'] = function(HealthComponent, Damage, Instigator, HitResult, bHasSpec, Spec) end
+---@param OwningActor AActor
+---@param Instigator AActor
+ABP_Sentinel_Cannoneer_Trap_C['BndEvt__BP_Sentinel_Cannoneer_Trap_Health Component_K2Node_ComponentBoundEvent_3_RSTHealth_DeathEvent__DelegateSignature'] = function(OwningActor, Instigator) end
 ---@param EntryPoint int32
 function ABP_Sentinel_Cannoneer_Trap_C:ExecuteUbergraph_BP_Sentinel_Cannoneer_Trap(EntryPoint) end
 

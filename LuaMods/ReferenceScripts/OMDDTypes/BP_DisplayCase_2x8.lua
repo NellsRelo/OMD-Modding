@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABP_DisplayCase_2x8_C : ABP_OMDTrapGrid_C
+---@field NavPowerExclusion UNavPowerExclusionComponent
 ---@field BP_Head_1_Breakable UChildActorComponent
 ---@field BP_Head_2_Breakable UChildActorComponent
 ---@field BP_Head_3_Breakable UChildActorComponent

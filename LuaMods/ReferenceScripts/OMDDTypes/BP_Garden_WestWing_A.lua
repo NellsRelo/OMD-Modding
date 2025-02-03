@@ -1,6 +1,18 @@
 ---@meta
 
 ---@class ABP_Garden_WestWing_A_C : ABP_OMDTrapGrid_C
+---@field Wall_Bottom_4x4_Stone_SM_Door8 UStaticMeshComponent
+---@field Wall_Bottom_4x4_Stone_SM_Door7 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Window18 UStaticMeshComponent
+---@field Wall_2x2x05_StoneWall_SM53 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Window17 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Window16 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Window15 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Window14 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Window13 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Window9 UStaticMeshComponent
+---@field Wall_4x4x05_Stonewall_SM_Window8 UStaticMeshComponent
+---@field Fencing_RodIron_Garden_GateSmall UStaticMeshComponent
 ---@field RSTTrapGridBox12 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox11 URSTTrapGridBoxComponent
 ---@field Box1 UBoxComponent
@@ -174,7 +186,6 @@
 ---@field Wall_4x4x05_Stonewall_SM_Window1 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM_Window UStaticMeshComponent
 ---@field Wall_2x2x05_StoneWall_SM37 UStaticMeshComponent
----@field Wall_2x2x05_StoneWall_SM36 UStaticMeshComponent
 ---@field Proto_Dome_E_Tile_Sides_Glass2 UStaticMeshComponent
 ---@field Proto_Dome_E_Tile_Sides2 UStaticMeshComponent
 ---@field Proto_Dome_E_Tile_Sides_Glass1 UStaticMeshComponent

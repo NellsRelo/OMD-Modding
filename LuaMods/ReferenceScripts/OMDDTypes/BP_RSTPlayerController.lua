@@ -22,10 +22,6 @@ ABP_RSTPlayerController_C = {}
 function ABP_RSTPlayerController_C:CanHandleUIInput(CanHandle) end
 function ABP_RSTPlayerController_C:OnRep_W_TabMenu() end
 ---@param UserWidget UCommonActivatableWidget
-function ABP_RSTPlayerController_C:AfterPush_D97608E442A53346781B649DAB2F1B35(UserWidget) end
----@param UserWidget UCommonActivatableWidget
-function ABP_RSTPlayerController_C:BeforePush_D97608E442A53346781B649DAB2F1B35(UserWidget) end
----@param UserWidget UCommonActivatableWidget
 function ABP_RSTPlayerController_C:AfterPush_D97608E442A53346781B649D9EF89540(UserWidget) end
 ---@param UserWidget UCommonActivatableWidget
 function ABP_RSTPlayerController_C:BeforePush_D97608E442A53346781B649D9EF89540(UserWidget) end
@@ -38,17 +34,21 @@ function ABP_RSTPlayerController_C:AfterPush_D97608E442A53346781B649DFD1C395E(Us
 ---@param UserWidget UCommonActivatableWidget
 function ABP_RSTPlayerController_C:BeforePush_D97608E442A53346781B649DFD1C395E(UserWidget) end
 ---@param UserWidget UCommonActivatableWidget
+function ABP_RSTPlayerController_C:AfterPush_D97608E442A53346781B649DA8EB43AF(UserWidget) end
+---@param UserWidget UCommonActivatableWidget
+function ABP_RSTPlayerController_C:BeforePush_D97608E442A53346781B649DA8EB43AF(UserWidget) end
+---@param UserWidget UCommonActivatableWidget
 function ABP_RSTPlayerController_C:AfterPush_EA8504C4410B4458C9F809B95CBAE754(UserWidget) end
 ---@param UserWidget UCommonActivatableWidget
 function ABP_RSTPlayerController_C:BeforePush_EA8504C4410B4458C9F809B95CBAE754(UserWidget) end
 ---@param UserWidget UCommonActivatableWidget
-function ABP_RSTPlayerController_C:AfterPush_D97608E442A53346781B649DEFA6C463(UserWidget) end
----@param UserWidget UCommonActivatableWidget
-function ABP_RSTPlayerController_C:BeforePush_D97608E442A53346781B649DEFA6C463(UserWidget) end
----@param UserWidget UCommonActivatableWidget
 function ABP_RSTPlayerController_C:AfterPush_78658E0D407D41565F385F96E657972B(UserWidget) end
 ---@param UserWidget UCommonActivatableWidget
 function ABP_RSTPlayerController_C:BeforePush_78658E0D407D41565F385F96E657972B(UserWidget) end
+---@param UserWidget UCommonActivatableWidget
+function ABP_RSTPlayerController_C:AfterPush_D97608E442A53346781B649DEFA6C463(UserWidget) end
+---@param UserWidget UCommonActivatableWidget
+function ABP_RSTPlayerController_C:BeforePush_D97608E442A53346781B649DEFA6C463(UserWidget) end
 ---@param ActionValue FInputActionValue
 ---@param ElapsedTime float
 ---@param TriggeredTime float
@@ -82,13 +82,13 @@ function ABP_RSTPlayerController_C:InpActEvt_IA_TabMenu_Trap_K2Node_EnhancedInpu
 ---@param ActualChannel FGameplayTag
 function ABP_RSTPlayerController_C:OnMessageReceived_7A63BC6B4680C95E8E106AA1AA8F3BAD(ProxyObject, ActualChannel) end
 ---@param UserWidget UCommonActivatableWidget
+function ABP_RSTPlayerController_C:AfterPush_D97608E442A53346781B649DAB2F1B35(UserWidget) end
+---@param UserWidget UCommonActivatableWidget
+function ABP_RSTPlayerController_C:BeforePush_D97608E442A53346781B649DAB2F1B35(UserWidget) end
+---@param UserWidget UCommonActivatableWidget
 function ABP_RSTPlayerController_C:AfterPush_04C12A9743BB8B8B8DFABEBD47C35F63(UserWidget) end
 ---@param UserWidget UCommonActivatableWidget
 function ABP_RSTPlayerController_C:BeforePush_04C12A9743BB8B8B8DFABEBD47C35F63(UserWidget) end
----@param UserWidget UCommonActivatableWidget
-function ABP_RSTPlayerController_C:AfterPush_D97608E442A53346781B649DA8EB43AF(UserWidget) end
----@param UserWidget UCommonActivatableWidget
-function ABP_RSTPlayerController_C:BeforePush_D97608E442A53346781B649DA8EB43AF(UserWidget) end
 ---@param ActionValue FInputActionValue
 ---@param ElapsedTime float
 ---@param TriggeredTime float
@@ -135,6 +135,7 @@ ABP_RSTPlayerController_C['Try Process Popups'] = function() end
 ---@param Condition boolean
 ---@param WidgetClass TSoftClassPtr<UCommonActivatableWidget>
 ABP_RSTPlayerController_C['Try Show Popup'] = function(Condition, WidgetClass) end
+ABP_RSTPlayerController_C['Clear Existing Menus'] = function() end
 ---@param EntryPoint int32
 function ABP_RSTPlayerController_C:ExecuteUbergraph_BP_RSTPlayerController(EntryPoint) end
 ---@param bIsVisible boolean

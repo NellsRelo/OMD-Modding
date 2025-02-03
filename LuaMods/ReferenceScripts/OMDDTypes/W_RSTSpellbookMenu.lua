@@ -20,10 +20,12 @@ UW_RSTSpellbookMenu_C = {}
 UW_RSTSpellbookMenu_C['Get Empty Text'] = function(bUseEmptyText, Empty_Text) end
 ---@param Element UObject
 ---@param Should_Enable boolean
-UW_RSTSpellbookMenu_C['Should Enable Contents for Element'] = function(Element, Should_Enable) end
+UW_RSTSpellbookMenu_C['Should Enable Contents For Element'] = function(Element, Should_Enable) end
 ---@param Element UObject
 ---@param Should_Enable boolean
 UW_RSTSpellbookMenu_C['Should Element Be Spawned'] = function(Element, Should_Enable) end
+---@return UWidget
+function UW_RSTSpellbookMenu_C:GetScrollRecipient() end
 ---@return boolean
 function UW_RSTSpellbookMenu_C:CanModifyHotbar() end
 ---@param MyGeometry FGeometry
@@ -62,6 +64,7 @@ UW_RSTSpellbookMenu_C['Listen for Spellbook Operation'] = function() end
 UW_RSTSpellbookMenu_C['Clear Spellbook Operation Listener'] = function() end
 UW_RSTSpellbookMenu_C['Listen for Loadout Change'] = function() end
 UW_RSTSpellbookMenu_C['Clear Loadout Change  Listener'] = function() end
+function UW_RSTSpellbookMenu_C:BP_OnActivated() end
 ---@param EntryPoint int32
 function UW_RSTSpellbookMenu_C:ExecuteUbergraph_W_RSTSpellbookMenu(EntryPoint) end
 

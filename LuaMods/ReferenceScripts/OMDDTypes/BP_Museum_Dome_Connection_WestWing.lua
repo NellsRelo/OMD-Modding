@@ -1,6 +1,13 @@
 ---@meta
 
 ---@class ABP_Museum_Dome_Connection_WestWing_C : ABP_OMDTrapGrid_C
+---@field Wall_4x4x05_Stonewall_SM13 UStaticMeshComponent
+---@field ColumnA_CastStone_2Story5 UStaticMeshComponent
+---@field ColumnA_CastStone_2Story4 UStaticMeshComponent
+---@field ColumnA_CastStone_2Story3 UStaticMeshComponent
+---@field ColumnA_CastStone_2Story2 UStaticMeshComponent
+---@field ColumnA_CastStone_2Story1 UStaticMeshComponent
+---@field ColumnA_CastStone_2Story UStaticMeshComponent
 ---@field ColumnTrim_CastStone_1200W_Deco3 UStaticMeshComponent
 ---@field Column_Square_2_4_StoneWall_TrimA_SM1 UStaticMeshComponent
 ---@field Column_Square_2_4_StoneWall_TrimA_SM UStaticMeshComponent
@@ -85,7 +92,6 @@
 ---@field Wall_4x4x05_Stonewall_SM9 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM8 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM13 UStaticMeshComponent
----@field Floor_4x4_StoneBlock_SM12 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM7 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM6 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM4 UStaticMeshComponent

@@ -3,6 +3,9 @@
 ---@class ABP_EnemyBase_C : ARSTAICharacter
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field W_HealthDisplay UWidgetComponent
+---@field Poisoned_Timeline_BodyDissolveAmount_155E099B4408784262AEDA9EE01602C6 float
+---@field Poisoned_Timeline__Direction_155E099B4408784262AEDA9EE01602C6 ETimelineDirection::Type
+---@field ['Poisoned Timeline'] UTimelineComponent
 ---@field EnterRiftMove_Timeline_MoveToRift_Curve_E21639874669AD90853ECE89464ADD25 float
 ---@field EnterRiftMove_Timeline__Direction_E21639874669AD90853ECE89464ADD25 ETimelineDirection::Type
 ---@field ['EnterRiftMove Timeline'] UTimelineComponent
@@ -10,9 +13,6 @@
 ---@field Electrified_Timeline_SkeletonVisibility_CA48934F458F5870995D1283A3A50DA4 float
 ---@field Electrified_Timeline__Direction_CA48934F458F5870995D1283A3A50DA4 ETimelineDirection::Type
 ---@field ['Electrified Timeline'] UTimelineComponent
----@field Poisoned_Timeline_BodyDissolveAmount_155E099B4408784262AEDA9EE01602C6 float
----@field Poisoned_Timeline__Direction_155E099B4408784262AEDA9EE01602C6 ETimelineDirection::Type
----@field ['Poisoned Timeline'] UTimelineComponent
 ---@field Melting_Timeline_BodyDissolveTime_67B4850348D96B81688E1EA835F51632 float
 ---@field Melting_Timeline__Direction_67B4850348D96B81688E1EA835F51632 ETimelineDirection::Type
 ---@field ['Melting Timeline'] UTimelineComponent
@@ -27,6 +27,7 @@
 ---@field RiftLocation FVector
 ---@field ['Starting Rift Entry Location'] FVector
 ---@field bWillGib boolean
+---@field bCanDetachPhys boolean
 ABP_EnemyBase_C = {}
 
 ---@return USceneComponent
@@ -60,20 +61,20 @@ function ABP_EnemyBase_C:NoType_6C375FC2438076BE55E4A09CC4C63626() end
 function ABP_EnemyBase_C:BP_OnDeathStarted() end
 function ABP_EnemyBase_C:BurningDeath() end
 function ABP_EnemyBase_C:ElectrifiedDeath() end
----@param SelfActor AActor
----@param bHidden boolean
-function ABP_EnemyBase_C:OnActorHiddenChanged_Event(SelfActor, bHidden) end
-function ABP_EnemyBase_C:MeltingDeath() end
 ---@param Meshes TArray<USkeletalMeshComponent>
 ---@param LifeSpan double
 function ABP_EnemyBase_C:DissolveFX(Meshes, LifeSpan) end
-function ABP_EnemyBase_C:PoisonedDeath() end
-function ABP_EnemyBase_C:FrozenDeath() end
+---@param SelfActor AActor
+---@param bHidden boolean
+function ABP_EnemyBase_C:OnActorHiddenChanged_Event(SelfActor, bHidden) end
 ---@param LifeSpan float
 ---@param deathType uint8
 ---@param animationTag FGameplayTag
 function ABP_EnemyBase_C:BP_DestroyFX(LifeSpan, deathType, animationTag) end
+function ABP_EnemyBase_C:MeltingDeath() end
 function ABP_EnemyBase_C:ReceiveBeginPlay() end
+function ABP_EnemyBase_C:PoisonedDeath() end
+function ABP_EnemyBase_C:FrozenDeath() end
 ---@param blood boolean
 ---@param headExploded boolean
 function ABP_EnemyBase_C:BP_Gibbed(blood, headExploded) end

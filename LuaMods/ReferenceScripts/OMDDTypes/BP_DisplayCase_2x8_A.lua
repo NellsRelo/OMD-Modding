@@ -1,18 +1,19 @@
 ---@meta
 
 ---@class ABP_DisplayCase_2x8_A_C : ABP_OMDTrapGrid_C
----@field Orc_Medium_ATTACHMENT_Weapon_Hand_R_Skin00 UStaticMeshComponent
----@field Orc_Medium_ATTACHMENT_Armor_Clavicle_L_Skin00 UStaticMeshComponent
----@field Orc_Medium_ATTACHMENT_Shield_Lowerarm_L_Skin00 UStaticMeshComponent
----@field Orc_Medium_ATTACHMENT_Armor_Head_Skin00 UStaticMeshComponent
----@field Orc_Medium_ATTACHMENT_Armor_Clavicle_R_Skin00 UStaticMeshComponent
----@field Lizardman_Heavy_ATTACHMENT_Armor_Lowerarm_Twist_02_R_Skin00 UStaticMeshComponent
----@field Lizardman_Heavy_ATTACHMENT_Armor_Upperarm_Twist_01_R_Skin00 UStaticMeshComponent
----@field Lizardman_Heavy_ATTACHMENT_Weapon_Hand_R_Skin00 UStaticMeshComponent
----@field Lizardman_Ranger_ATTACHMENT_Armor_Upperarm_Twist_01_L_Skin00 UStaticMeshComponent
----@field Lizardman_Ranger_ATTACHMENT_Quiver_Spine_03_Skin00 UStaticMeshComponent
----@field Lizardman_Ranger_ATTACHMENT_Weapon_Hand_L_Skin00 UStaticMeshComponent
----@field Skeleton_Lizardman_Ranger_Helmet_SM UStaticMeshComponent
+---@field NavPowerExclusion UNavPowerExclusionComponent
+---@field BP_Lizardman_Ranger__Weapon_Breakable UChildActorComponent
+---@field BP_Lizardman_Ranger_Quiver_Breakable UChildActorComponent
+---@field BP_Lizardman_Ranger_Helmet_Breakable UChildActorComponent
+---@field BP_Lizardman_Heavy_Upperarm_Breakable UChildActorComponent
+---@field BP_Lizardman_Heavy_Lowerarm_Breakable UChildActorComponent
+---@field BP_Lizardman_Ranger__Upperarm_Breakable UChildActorComponent
+---@field BP_Lizardman_Heavy_Weapon_Breakable UChildActorComponent
+---@field BP_Armor_Head_Beakable UChildActorComponent
+---@field BP_Clavicle_R_Beakable UChildActorComponent
+---@field BP_Armor_Clavicle_L_Beakable UChildActorComponent
+---@field BP_Shield_Lowerarm_Beakable UChildActorComponent
+---@field BP_Weapon_Beakable UChildActorComponent
 ---@field BP_Skeleton_Orc_Medium_TPose_Nested_Breakable UChildActorComponent
 ---@field BP_Skeleton_Orc_Medium_Idle_Nested_Breakable UChildActorComponent
 ---@field BP_Skeleton_Lizardman_Heavy_Idle_Nested_Breakable UChildActorComponent

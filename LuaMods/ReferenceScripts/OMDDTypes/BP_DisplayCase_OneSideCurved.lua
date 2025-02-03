@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABP_DisplayCase_OneSideCurved_C : ABP_OMDTrapGrid_C
+---@field NavPowerExclusion UNavPowerExclusionComponent
 ---@field Big_Stone_02A6 UStaticMeshComponent
 ---@field Big_Stone_02A5 UStaticMeshComponent
 ---@field Big_Stone_02A4 UStaticMeshComponent

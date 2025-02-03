@@ -257,8 +257,6 @@
 ---@field Floor_4x4_StoneBlock_SM2 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM1 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM UStaticMeshComponent
----@field Column_Square_1_4_StoneWall_SM1 UStaticMeshComponent
----@field Column_Square_1_4_StoneWall_SM UStaticMeshComponent
 ---@field WaterPlane_DelaunayTri4 UStaticMeshComponent
 ---@field Wall_Sec_2_2_V2_RB24 UStaticMeshComponent
 ---@field Wall_Sec_2_2_V2_RB23 UStaticMeshComponent

@@ -11,7 +11,7 @@
 ---@field bCooldownActive boolean
 ---@field AllParticleSystems TArray<UNiagaraComponent>
 ---@field GhostParameterNames TArray<FName>
----@field ['Max Soul Count'] int32
+---@field ExcludedTags FGameplayTagContainer
 ABP_CursedGround_C = {}
 
 function ABP_CursedGround_C:OnRep_SoulCount() end

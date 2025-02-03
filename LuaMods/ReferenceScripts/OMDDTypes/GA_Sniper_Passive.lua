@@ -18,6 +18,8 @@
 ---@field ['Headshot Cap Additional Effects'] TArray<FRSTAdditionalGameplayEffectData>
 ---@field ['Cap Ultimate Charge Percent'] float
 ---@field NonHeadshotMultiplier double
+---@field bHasProcessedUltGrant boolean
+---@field UltGrantThreshold int32
 UGA_Sniper_Passive_C = {}
 
 ---@param Hits int32
@@ -42,6 +44,7 @@ function UGA_Sniper_Passive_C:K2_OnNewAvatarSet() end
 UGA_Sniper_Passive_C['Reset Streak'] = function() end
 UGA_Sniper_Passive_C['Apply Headshot Damage Multiplier'] = function() end
 UGA_Sniper_Passive_C['Clear Granted Effect Handles'] = function() end
+UGA_Sniper_Passive_C['Perform Ult Grant'] = function() end
 ---@param EntryPoint int32
 function UGA_Sniper_Passive_C:ExecuteUbergraph_GA_Sniper_Passive(EntryPoint) end
 

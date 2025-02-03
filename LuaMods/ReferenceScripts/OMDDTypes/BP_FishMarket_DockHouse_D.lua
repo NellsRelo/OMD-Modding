@@ -8,7 +8,6 @@
 ---@field Wood_Plank_1200W_A_Light UStaticMeshComponent
 ---@field Wood_Platform_300x300_A_Light UStaticMeshComponent
 ---@field Wood_Platform_300x300_A_Light1 UStaticMeshComponent
----@field Pennant_Far_BP UChildActorComponent
 ---@field Wood_Platform_300x300_A_Light2 UStaticMeshComponent
 ---@field Wood_Platform_300x300_A_Light3 UStaticMeshComponent
 ---@field Wood_Window_P_Light UStaticMeshComponent

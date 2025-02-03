@@ -2,6 +2,7 @@
 
 ---@class ABP_Elemental_Red_C : ABP_EnemyBase_C
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field Audio_ExistLoop UAudioComponent
 ---@field NS_Elemental_Red UNiagaraComponent
 ---@field RSTAimAssistTargetHead URSTAimAssistTargetComponent
 ---@field RSTAimAssistTargetPelvis URSTAimAssistTargetComponent

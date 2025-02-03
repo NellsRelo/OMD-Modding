@@ -1,6 +1,10 @@
 ---@meta
 
 ---@class ABP_Fountain_Base_Square_3x3_A_C : ABP_OMDTrapGrid_C
+---@field Box3 UBoxComponent
+---@field Box2 UBoxComponent
+---@field Box1 UBoxComponent
+---@field Box UBoxComponent
 ---@field ASN_FishSpout3 UStaticMeshComponent
 ---@field ASN_FishSpout2 UStaticMeshComponent
 ---@field ASN_FishSpout1 UStaticMeshComponent

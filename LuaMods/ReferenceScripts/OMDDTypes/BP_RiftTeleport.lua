@@ -13,6 +13,9 @@
 ---@field AdditionalEffectData TArray<FRSTAdditionalGameplayEffectData>
 ABP_RiftTeleport_C = {}
 
+---@param Character ARSTCharacter
+---@return FTransform
+function ABP_RiftTeleport_C:GetTeleportTargetTransform(Character) end
 ABP_RiftTeleport_C['Update Rift Target'] = function() end
 ---@param Actor AActor
 ABP_RiftTeleport_C['Apply Additional Effects'] = function(Actor) end

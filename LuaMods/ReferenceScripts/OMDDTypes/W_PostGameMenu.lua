@@ -1,12 +1,14 @@
 ---@meta
 
----@class UW_PostGameMenu_C : UCommonActivatableWidget
+---@class UW_PostGameMenu_C : URSTActivatableWidget
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field Glow_Blessing UWidgetAnimation
 ---@field FrameShake UWidgetAnimation
 ---@field DefeatSwords UWidgetAnimation
 ---@field Glow UWidgetAnimation
 ---@field Swords UWidgetAnimation
 ---@field OnActivate UWidgetAnimation
+---@field AbandonRun UW_ButtonBasic_C
 ---@field DefeatMissionText UCommonTextBlock
 ---@field DefeatOverlay UOverlay
 ---@field GambleForward UW_ButtonBasic_C
@@ -15,13 +17,25 @@
 ---@field MissionStats UW_ButtonBasic_C
 ---@field Quicksave UW_ButtonBasic_C
 ---@field ReturnToHub UW_ButtonBasic_C
+---@field RiftBlessingGlow UImage
+---@field RiftBlessingHeader UBorder
+---@field RiftBonusAnimRoot UOverlay
+---@field RiftBonusDisplay UW_TeamThreadDisplay_C
+---@field RiftBonusRoot USizeBox
+---@field RiftPointDisplayContainer UVerticalBox
 ---@field RunTotalText UCommonTextBlock
 ---@field RunTotalWidget UHorizontalBox
+---@field SafeZone_1 USafeZone
 ---@field ScoreSummary UW_ButtonBasic_C
 ---@field VictoryMissionText UCommonTextBlock
 ---@field VictoryOverlay UOverlay
+---@field Modal URSTModal_TwoChoices
+---@field ['Did Win'] boolean
 UW_PostGameMenu_C = {}
 
+function UW_PostGameMenu_C:SetupRiftPointDisplay() end
+---@return UWidget
+function UW_PostGameMenu_C:BP_GetDesiredFocusTarget() end
 ---@param bEndRunOnCompletion boolean
 function UW_PostGameMenu_C:GetCurrentEndRunOnCompletion(bEndRunOnCompletion) end
 ---@param GameState ARSTGameStateBase
@@ -49,9 +63,23 @@ function UW_PostGameMenu_C:OnGambleSkullsChangedClient() end
 function UW_PostGameMenu_C:OnGambleSkullsChangedHost() end
 ---@param Button UCommonButtonBase
 function UW_PostGameMenu_C:BndEvt__W_PostGameMenu_MissionStats_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(Button) end
-function UW_PostGameMenu_C:Construct() end
 ---@param Button UCommonButtonBase
 function UW_PostGameMenu_C:BndEvt__W_PostGameMenu_Quicksave_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_PostGameMenu_C:ConfirmQuit() end
+function UW_PostGameMenu_C:CancelQuit() end
+---@param bDidWin boolean
+UW_PostGameMenu_C['Init Rift Bonus Display'] = function(bDidWin) end
+function UW_PostGameMenu_C:Construct() end
+---@param Button UCommonButtonBase
+function UW_PostGameMenu_C:BndEvt__W_PostGameMenu_AbandonRun_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_PostGameMenu_C:ConfirmAbandonRun() end
+function UW_PostGameMenu_C:CancelAbandonRun() end
+---@param Button UCommonButtonBase
+function UW_PostGameMenu_C:BndEvt__W_PostGameMenu_GambleForward_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature(Button) end
+---@param Button UCommonButtonBase
+function UW_PostGameMenu_C:BndEvt__W_PostGameMenu_GambleForward_K2Node_ComponentBoundEvent_7_CommonButtonBaseClicked__DelegateSignature(Button) end
+---@param bHovered boolean
+UW_PostGameMenu_C['Set Rift Blessing Hover State'] = function(bHovered) end
 ---@param EntryPoint int32
 function UW_PostGameMenu_C:ExecuteUbergraph_W_PostGameMenu(EntryPoint) end
 

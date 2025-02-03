@@ -1,11 +1,16 @@
 ---@meta
 
 ---@class ABP_Arboretum_TimberStructure_largeA_C : ABP_OMDTrapGrid_C
+---@field Base_ArchWall_3W53 UStaticMeshComponent
+---@field Base_ArchWall_3W51 UStaticMeshComponent
+---@field Base_ArchWall_3W70 UStaticMeshComponent
+---@field Base_ArchWall_3W69 UStaticMeshComponent
+---@field Base_ArchWall_3W68 UStaticMeshComponent
+---@field Base_ArchWall_3W66 UStaticMeshComponent
+---@field Base_ArchWall_3W67 UStaticMeshComponent
 ---@field NavPowerExclusion UNavPowerExclusionComponent
 ---@field Nav USceneComponent
----@field Base_ArchWall_3W66 UStaticMeshComponent
 ---@field Base_ArchWall_3W65 UStaticMeshComponent
----@field Base_ArchWall_3W64 UStaticMeshComponent
 ---@field Base_ArchWall_3W63 UStaticMeshComponent
 ---@field Base_ArchWall_3W62 UStaticMeshComponent
 ---@field Wood_Railing_400C_A_Light11 UStaticMeshComponent
@@ -50,10 +55,8 @@
 ---@field Plane11 UStaticMeshComponent
 ---@field Plane10 UStaticMeshComponent
 ---@field Base_ArchWall_3W114 UStaticMeshComponent
----@field Base_ArchWall_3W113 UStaticMeshComponent
 ---@field Plane9 UStaticMeshComponent
 ---@field Plane8 UStaticMeshComponent
----@field Base_ArchWall_3W107 UStaticMeshComponent
 ---@field Base_ArchWall_3W112 UStaticMeshComponent
 ---@field Base_ArchWall_3W111 UStaticMeshComponent
 ---@field Base_ArchWall_3W110 UStaticMeshComponent
@@ -121,7 +124,6 @@
 ---@field Plane1 UStaticMeshComponent
 ---@field Plane UStaticMeshComponent
 ---@field Base_ArchWall_3W54 UStaticMeshComponent
----@field Base_ArchWall_3W53 UStaticMeshComponent
 ---@field Base_ArchWall_3W37 UStaticMeshComponent
 ---@field Base_ArchWall_3W35 UStaticMeshComponent
 ---@field Base_ArchWall_3W41 UStaticMeshComponent

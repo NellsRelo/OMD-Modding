@@ -2,10 +2,9 @@
 
 ---@class UW_RecordBook_Hero_C : URSTUserWidget
 ---@field UberGraphFrame FPointerToUberGraphFrame
----@field HeroName UCommonTextBlock
----@field Image_125 UImage
+---@field HeroTitle UCommonTextBlock
 ---@field StatBox UVerticalBox
----@field W_HeroSelectAvatar UW_HeroAvatar_C
+---@field W_HeroAvatar UW_HeroAvatar_C
 ---@field W_RecordBook_HeroSwitcher UW_RecordBook_HeroSwitcher_C
 ---@field Heroes TArray<FGameplayTag>
 UW_RecordBook_Hero_C = {}

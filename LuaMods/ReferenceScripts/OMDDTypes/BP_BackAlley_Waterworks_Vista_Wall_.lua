@@ -52,7 +52,6 @@
 ---@field ColumnTrim_CastStone_600W1 UStaticMeshComponent
 ---@field ColumnTrim_CastStone_600W UStaticMeshComponent
 ---@field Wood_Square_600W_A_NoTaper_Light4 UStaticMeshComponent
----@field Wood_Square_600W_A_NoTaper_Light3 UStaticMeshComponent
 ---@field Wall_StoneWall_Castle_4x2_SM61 UStaticMeshComponent
 ---@field Wall_StoneWall_Castle_4x2_SM36 UStaticMeshComponent
 ---@field Wall_StoneWall_Castle_4x2_SM53 UStaticMeshComponent
@@ -60,10 +59,6 @@
 ---@field Wall_StoneWall_Castle_4x2_SM59 UStaticMeshComponent
 ---@field Wall_StoneWall_Castle_4x2_SM57 UStaticMeshComponent
 ---@field Wall_StoneWall_Castle_4x2_SM45 UStaticMeshComponent
----@field W UStaticMeshComponent
----@field Wood_Square_600W_A_NoTaper_Light2 UStaticMeshComponent
----@field Wood_Square_600W_A_NoTaper_Light1 UStaticMeshComponent
----@field Wood_Square_600W_A_NoTaper_Light UStaticMeshComponent
 ---@field Ceiling_2x05_PlasterWood_SM_Cap_Union2 UStaticMeshComponent
 ---@field Ceiling_2x05_PlasterWood_SM_Cap_Union1 UStaticMeshComponent
 ---@field Ceiling_2x05_PlasterWood_SM_Cap_Union UStaticMeshComponent
@@ -114,8 +109,6 @@
 ---@field Roof_2x2_45_ShingleA_SM_Union UStaticMeshComponent
 ---@field Warehouse_4x2_Walkway_SM UStaticMeshComponent
 ---@field Wall_StoneWall_Castle_4x2_SM27 UStaticMeshComponent
----@field Wall_StoneWall_Castle_4x2_SM39 UStaticMeshComponent
----@field Wall_StoneWall_Castle_4x2_SM42 UStaticMeshComponent
 ---@field Floor_4x4_CobbleStone_SM11 UStaticMeshComponent
 ---@field Roof_3x2x3_Cut_Half_Blue_SM_Union3 UStaticMeshComponent
 ---@field Roof_3x2x3_Cut_Half_Blue_SM_Union2 UStaticMeshComponent
@@ -145,10 +138,6 @@
 ---@field ColumnB_CastStone_2Story21 UStaticMeshComponent
 ---@field Archway_2x05x25_Brick9 UStaticMeshComponent
 ---@field Window_Pointed_2x_Trim_Arch UStaticMeshComponent
----@field Wall_StoneWall_Castle_4x2_SM43 UStaticMeshComponent
----@field Wall_StoneWall_Castle_4x2_SM41 UStaticMeshComponent
----@field Wall_StoneWall_Castle_4x2_SM40 UStaticMeshComponent
----@field Wall_StoneWall_Castle_4x2_SM38 UStaticMeshComponent
 ---@field Wall_StoneWall_Castle_4x2_SM33 UStaticMeshComponent
 ---@field Wall_StoneWall_Castle_4x2_SM30 UStaticMeshComponent
 ---@field Wall_StoneWall_Castle_4x2_SM29 UStaticMeshComponent
@@ -167,7 +156,6 @@
 ---@field ColumnB_CastStone_2Story20 UStaticMeshComponent
 ---@field ColumnB_CastStone_2Story16 UStaticMeshComponent
 ---@field ColumnB_CastStone_2Story14 UStaticMeshComponent
----@field Wall_StoneWall_Castle_4x2_SM26 UStaticMeshComponent
 ---@field Wall_StoneWall_Castle_4x2_SM24 UStaticMeshComponent
 ---@field Wall_StoneWall_Castle_4x2_SM22 UStaticMeshComponent
 ---@field Wall_StoneWall_Castle_4x2_SM21 UStaticMeshComponent

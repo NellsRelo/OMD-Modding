@@ -1,6 +1,27 @@
 ---@meta
 
 ---@class ABP_Museum_WingRoom_East_C : ABP_OMDTrapGrid_C
+---@field RSTTrapGridBox20 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox19 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox18 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox17 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox16 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox15 URSTTrapGridBoxComponent
+---@field Wall_StoneWall_Castle_3X_2x2_SM_Fresco_A1 UStaticMeshComponent
+---@field Wall_StoneWall_Castle_3X_2x2_SM_Fresco_B1 UStaticMeshComponent
+---@field Wall_2x2x05_StoneWall_SM_Double_WIndow_Union50 UStaticMeshComponent
+---@field Wall_2x2x05_StoneWall_SM_Double_WIndow_Union43 UStaticMeshComponent
+---@field Wall_2x2x05_StoneWall_SM_Double_WIndow_Union37 UStaticMeshComponent
+---@field Proto_Dome_E1_Tile_Sides_Glass2 UStaticMeshComponent
+---@field Proto_Dome_E1_Tile_Sides_Glass1 UStaticMeshComponent
+---@field Proto_Dome_E1_Tile_Sides2 UStaticMeshComponent
+---@field Proto_Dome_E1_Tile_Sides1 UStaticMeshComponent
+---@field Window_Pointed_4x_Trim1 UStaticMeshComponent
+---@field Window_Pointed_4x_Trim UStaticMeshComponent
+---@field Column_Bottom_Square_1_2_StoneWall_SM_A9 UStaticMeshComponent
+---@field Column_Bottom_Square_1_2_StoneWall_SM_A8 UStaticMeshComponent
+---@field Column_Bottom_Square_1_2_StoneWall_SM_A7 UStaticMeshComponent
+---@field Column_Bottom_Square_1_2_StoneWall_SM_A6 UStaticMeshComponent
 ---@field Window_Square_Large_SM UStaticMeshComponent
 ---@field Wall_2x2x05_StoneWall_SM_Double_WIndow_Union49 UStaticMeshComponent
 ---@field Wall_2x2x05_StoneWall_SM_Double_WIndow_Union46 UStaticMeshComponent
@@ -58,12 +79,10 @@
 ---@field Dome_3x3_Half_StoneWall_SM21 UStaticMeshComponent
 ---@field Proto_Dome_E_Tile_Side_Glass7 UStaticMeshComponent
 ---@field Proto_Dome_E_Tile_Side7 UStaticMeshComponent
----@field Wall_2x2x05_StoneWall_SM_Double_WIndow_Union43 UStaticMeshComponent
 ---@field Proto_Dome_E1_Tile_Sides_Glass UStaticMeshComponent
 ---@field Proto_Dome_E1_Tile_Sides UStaticMeshComponent
 ---@field Proto_Dome_Large2 UStaticMeshComponent
 ---@field Proto_Dome_Large1 UStaticMeshComponent
----@field Wall_2x2x05_StoneWall_SM_Double_WIndow_Union37 UStaticMeshComponent
 ---@field Proto_Dome_E_Tile_Side_Glass3 UStaticMeshComponent
 ---@field Proto_Dome_E_Tile_Side3 UStaticMeshComponent
 ---@field Proto_Dome_E_Tile_Side_Glass2 UStaticMeshComponent

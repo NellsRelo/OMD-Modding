@@ -36,7 +36,7 @@ FAnimBlueprintGeneratedMutableData = {}
 
 
 
----@class UABP_Ballista_C : URSTAnimInstanceTrap
+---@class UABP_Ballista_C : URSTAnimInstanceTrap_Ballista
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field __AnimBlueprintMutables FAnimBlueprintGeneratedMutableData
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance
@@ -67,8 +67,6 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field AnimGraphNode_StateResult FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine FAnimNode_StateMachine
 ---@field AnimGraphNode_Slot FAnimNode_Slot
----@field Yaw double
----@field Pitch double
 ---@field AbilityActive boolean
 ---@field CooldownActive boolean
 UABP_Ballista_C = {}

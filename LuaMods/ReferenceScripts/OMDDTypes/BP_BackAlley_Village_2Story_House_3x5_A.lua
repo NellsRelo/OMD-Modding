@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABP_BackAlley_Village_2Story_House_3x5_A_C : ABP_OMDTrapGrid_C
+---@field Wood_Window_K_Shutter UStaticMeshComponent
 ---@field NavPowerExclusion UNavPowerExclusionComponent
 ---@field RSTTrapGridBox31 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox30 URSTTrapGridBoxComponent
@@ -47,7 +48,6 @@
 ---@field RSTTrapGridBox16 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox15 URSTTrapGridBoxComponent
 ---@field ['Roof_4x3x3_Blue_SM_End_UnionDormer_B_1x3_Blue-Wood-White_SM_UnionWood_Window_SM_Union13'] UStaticMeshComponent
----@field Window_Wood11 UStaticMeshComponent
 ---@field ['Roof_4x3x3_Blue_SM_End_Union-Wood_Window_SM_Union7'] UStaticMeshComponent
 ---@field ['Roof_4x3x3_Blue_SM_End_Union-Wood_Window_SM_Union8'] UStaticMeshComponent
 ---@field ['Roof_4x3x3_Blue_SM_End_UnionDormer_B_1x3_Blue-Wood-White_SM_UnionWood_Window_SM_Union14'] UStaticMeshComponent

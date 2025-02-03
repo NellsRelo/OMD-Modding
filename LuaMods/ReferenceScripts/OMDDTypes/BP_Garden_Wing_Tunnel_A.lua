@@ -1,6 +1,8 @@
 ---@meta
 
 ---@class ABP_Garden_Wing_Tunnel_A_C : ABP_OMDTrapGrid_C
+---@field RSTTrapGridBox5 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox4 URSTTrapGridBoxComponent
 ---@field Wall_4x4_Stonewall_SM13 UStaticMeshComponent
 ---@field Wall_4x4_Stonewall_SM12 UStaticMeshComponent
 ---@field Wall_4x4_Stonewall_SM11 UStaticMeshComponent

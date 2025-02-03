@@ -246,15 +246,14 @@ ERSTEnemyState = {
     WaitForDoor = 5,
     SearchForPlayer = 6,
     Launched = 7,
-    Stuck = 8,
-    InAbility = 9,
-    Guard = 10,
-    ReturnToGuard = 11,
-    Recover = 12,
-    FollowMaster = 13,
-    Interacting = 14,
-    Custom = 15,
-    ERSTEnemyState_MAX = 16,
+    InAbility = 8,
+    Guard = 9,
+    ReturnToGuard = 10,
+    Recover = 11,
+    FollowMaster = 12,
+    Interacting = 13,
+    Custom = 14,
+    ERSTEnemyState_MAX = 15,
 }
 
 ---@enum ERSTEnemyTimer
@@ -532,8 +531,9 @@ ERSTSellTrapAbilityResult = {
     Error_Invalid = 0,
     Error_NotSold = 1,
     Error_AlreadySold = 2,
-    Success = 3,
-    ERSTSellTrapAbilityResult_MAX = 4,
+    Error_TrapNotFound = 3,
+    Success = 4,
+    ERSTSellTrapAbilityResult_MAX = 5,
 }
 
 ---@enum ERSTStatDisplayMode
@@ -586,6 +586,16 @@ ERSTTargetingType = {
     Normal = 0,
     ADS = 1,
     ERSTTargetingType_MAX = 2,
+}
+
+---@enum ERSTTeamThreadState
+ERSTTeamThreadState = {
+    None = 0,
+    Pending = 1,
+    Active = 2,
+    ExpirationPending = 3,
+    Expired = 4,
+    ERSTTeamThreadState_MAX = 5,
 }
 
 ---@enum ERSTTeams

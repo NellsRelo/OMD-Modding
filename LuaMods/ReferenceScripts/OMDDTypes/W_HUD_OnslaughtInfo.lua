@@ -17,6 +17,7 @@
 ---@field bCurrentlyShown boolean
 ---@field bHasShownState boolean
 ---@field bIsDirty boolean
+---@field ReadyUp_Bar UAudioComponent
 UW_HUD_OnslaughtInfo_C = {}
 
 ---@param ActionValue FInputActionValue

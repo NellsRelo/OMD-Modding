@@ -28,9 +28,6 @@
 ---@field Observatory_Building_Crystal_Addon2 UStaticMeshComponent
 ---@field Observatory_Building_Ring UStaticMeshComponent
 ---@field Vendor_Stall_Awning_Single_WoodFrame_SM1 UStaticMeshComponent
----@field Scroll_Open UStaticMeshComponent
----@field Wood_Table_B UStaticMeshComponent
----@field Wineglass UStaticMeshComponent
 ---@field Vendor_Stall_Awning_Single_Fabric_SM1 UStaticMeshComponent
 ---@field Wood_Door_D_Light1 UStaticMeshComponent
 ---@field Observatory_Building_Door1 UStaticMeshComponent

@@ -35,6 +35,7 @@ function UGA_Charge_Ogre_C:OnCancelled_8502F1114215A76D0621FD8E2B1249CD() end
 function UGA_Charge_Ogre_C:OnInterrupted_8502F1114215A76D0621FD8E2B1249CD() end
 function UGA_Charge_Ogre_C:OnBlendOut_8502F1114215A76D0621FD8E2B1249CD() end
 function UGA_Charge_Ogre_C:OnCompleted_8502F1114215A76D0621FD8E2B1249CD() end
+function UGA_Charge_Ogre_C:OnOgreChargeFinished_179AC84B4094F4924BE74B984F008187() end
 ---@param MoveSucceeded boolean
 function UGA_Charge_Ogre_C:OnOgreChargeMoveComplete_179AC84B4094F4924BE74B984F008187(MoveSucceeded) end
 ---@param TargetData FGameplayAbilityTargetDataHandle

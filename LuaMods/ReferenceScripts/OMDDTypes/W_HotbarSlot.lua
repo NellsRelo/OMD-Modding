@@ -22,6 +22,8 @@
 UW_HotbarSlot_C = {}
 
 ---@return boolean
+UW_HotbarSlot_C['Has Enough Coin'] = function() end
+---@return boolean
 function UW_HotbarSlot_C:CanModifyHotbar() end
 ---@param ItemInstance ARSTInventoryItemInstance_Trap
 ---@return int32
@@ -75,6 +77,11 @@ function UW_HotbarSlot_C:OnInputMethodChanged_Event(bNewInputType) end
 UW_HotbarSlot_C['On Trap Placement Bonus Changed'] = function() end
 UW_HotbarSlot_C['Update Trap Cost'] = function() end
 UW_HotbarSlot_C['Configure Icon'] = function() end
+UW_HotbarSlot_C['On Shared Placement Changed'] = function() end
+UW_HotbarSlot_C['Bind Game State Callbacks'] = function() end
+UW_HotbarSlot_C['Unbind Game State Callbacks'] = function() end
+UW_HotbarSlot_C['Bind Player Controller Callbacks'] = function() end
+UW_HotbarSlot_C['Unbind Player Controller Callbacks'] = function() end
 ---@param EntryPoint int32
 function UW_HotbarSlot_C:ExecuteUbergraph_W_HotbarSlot(EntryPoint) end
 

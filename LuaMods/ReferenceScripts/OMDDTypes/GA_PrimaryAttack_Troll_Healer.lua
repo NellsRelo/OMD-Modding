@@ -43,7 +43,8 @@ function UGA_PrimaryAttack_Troll_Healer_C:OnTaskFailed_9198E37A42883E47413BAC958
 ---@param Duration float
 function UGA_PrimaryAttack_Troll_Healer_C:OnTargetReached_9198E37A42883E47413BAC958E6C4624(Duration) end
 ---@param HitActor AActor
-function UGA_PrimaryAttack_Troll_Healer_C:OnReadyToFire_9C1F58F34DD151D6A49B4FBC9B91421A(HitActor) end
+---@param HitLocation FVector
+function UGA_PrimaryAttack_Troll_Healer_C:OnReadyToFire_9C1F58F34DD151D6A49B4FBC9B91421A(HitActor, HitLocation) end
 function UGA_PrimaryAttack_Troll_Healer_C:OnFinished_AC9662F94CAAA25ACE8909B5BF75E3AD() end
 function UGA_PrimaryAttack_Troll_Healer_C:OnActorDied_AC9662F94CAAA25ACE8909B5BF75E3AD() end
 function UGA_PrimaryAttack_Troll_Healer_C:K2_ActivateAbility() end

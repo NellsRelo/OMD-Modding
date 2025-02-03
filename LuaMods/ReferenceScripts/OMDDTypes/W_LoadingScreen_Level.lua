@@ -7,6 +7,7 @@
 ---@field Background_runes UImage
 ---@field Background_stars UImage
 ---@field Image_163 UImage
+---@field SafeZone_0 USafeZone
 UW_LoadingScreen_Level_C = {}
 
 ---@param MyGeometry FGeometry

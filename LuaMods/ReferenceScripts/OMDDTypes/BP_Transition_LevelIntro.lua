@@ -16,8 +16,13 @@ function UBP_Transition_LevelIntro_C:K2_BeginAction() end
 function UBP_Transition_LevelIntro_C:OnLoadingScreenStatusChanged(bIsShowing) end
 function UBP_Transition_LevelIntro_C:MarkLocalHasViewedIntro() end
 function UBP_Transition_LevelIntro_C:CheckIfLoadingScreenIsVisible() end
-function UBP_Transition_LevelIntro_C:CheckIfPlayerStateIsReady() end
-function UBP_Transition_LevelIntro_C:OnPlayerStateChanged() end
+function UBP_Transition_LevelIntro_C:CheckIfPlayerPawnReady() end
+function UBP_Transition_LevelIntro_C:CheckPawnInitialized() end
+---@param OldPawn APawn
+---@param NewPawn APawn
+function UBP_Transition_LevelIntro_C:OnPawnPossessed(OldPawn, NewPawn) end
+---@param Params FActorInitStateChangedParams
+function UBP_Transition_LevelIntro_C:OnGameplayReady(Params) end
 ---@param EntryPoint int32
 function UBP_Transition_LevelIntro_C:ExecuteUbergraph_BP_Transition_LevelIntro(EntryPoint) end
 

@@ -2,12 +2,15 @@
 
 ---@class UW_PurchaseMenu_CurrencyDisplay_C : URSTUserWidget
 ---@field UberGraphFrame FPointerToUberGraphFrame
----@field CurrencyTextDisplay UCommonRichTextBlock
+---@field Image_Icon UImage
+---@field Text_Amount UCommonRichTextBlock
 ---@field IconText FText
 ---@field ['Current Value'] double
 ---@field ['Currency Type'] RSTCurrencyType::Type
 UW_PurchaseMenu_CurrencyDisplay_C = {}
 
+---@param Texture UTexture2D
+function UW_PurchaseMenu_CurrencyDisplay_C:GetIcon(Texture) end
 ---@param IconText FText
 UW_PurchaseMenu_CurrencyDisplay_C['Get Icon Text'] = function(IconText) end
 ---@param CurrentAmount int32

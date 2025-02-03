@@ -1,0 +1,32 @@
+---@meta
+
+---@class UW_RecordBook_LastRun_PlayerButton_C : URSTUserWidget
+---@field UberGraphFrame FPointerToUberGraphFrame
+---@field Button_25 UButton
+---@field Icon UImage
+---@field ['On Clicked'] FW_RecordBook_LastRun_PlayerButton_COn Clicked
+---@field HeroTag FGameplayTag
+---@field PlayerIndex int32
+UW_RecordBook_LastRun_PlayerButton_C = {}
+
+---@param UserFacingData URSTPawnUserFacingData
+---@param DidFind boolean
+function UW_RecordBook_LastRun_PlayerButton_C:OnStreamableFinished_8482B9154252E6EFBC61B5BAFDD1B1CE(UserFacingData, DidFind) end
+function UW_RecordBook_LastRun_PlayerButton_C:BP_SynchronizeProperties() end
+function UW_RecordBook_LastRun_PlayerButton_C:BndEvt__W_RSTSpellbook_FilterButton_Button_25_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature() end
+UW_RecordBook_LastRun_PlayerButton_C['Load Hero Texture'] = function() end
+function UW_RecordBook_LastRun_PlayerButton_C:BndEvt__W_RecordBook_HeroSwitcherButton_Button_25_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature() end
+function UW_RecordBook_LastRun_PlayerButton_C:BndEvt__W_RecordBook_HeroSwitcherButton_Button_25_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature() end
+function UW_RecordBook_LastRun_PlayerButton_C:BndEvt__W_RecordBook_HeroSwitcherButton_Button_25_K2Node_ComponentBoundEvent_3_OnButtonPressedEvent__DelegateSignature() end
+function UW_RecordBook_LastRun_PlayerButton_C:BndEvt__W_RecordBook_HeroSwitcherButton_Button_25_K2Node_ComponentBoundEvent_4_OnButtonReleasedEvent__DelegateSignature() end
+UW_RecordBook_LastRun_PlayerButton_C['Refresh Button Visuals'] = function() end
+---@param HeroTag FGameplayTag
+UW_RecordBook_LastRun_PlayerButton_C['Set Hero Tag'] = function(HeroTag) end
+---@param Index int32
+UW_RecordBook_LastRun_PlayerButton_C['Set Player Index'] = function(Index) end
+---@param EntryPoint int32
+function UW_RecordBook_LastRun_PlayerButton_C:ExecuteUbergraph_W_RecordBook_LastRun_PlayerButton(EntryPoint) end
+---@param ThisButton UW_RecordBook_LastRun_PlayerButton_C
+UW_RecordBook_LastRun_PlayerButton_C['On Clicked__DelegateSignature'] = function(ThisButton) end
+
+

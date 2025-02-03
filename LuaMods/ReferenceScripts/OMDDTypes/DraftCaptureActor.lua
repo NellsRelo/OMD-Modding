@@ -2,6 +2,10 @@
 
 ---@class ADraftCaptureActor_C : AActor
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field Niagra3 UNiagaraComponent
+---@field Niagara2 UNiagaraComponent
+---@field Niagara1 UNiagaraComponent
+---@field Niagara0 UNiagaraComponent
 ---@field PositionForward UStaticMeshComponent
 ---@field Camera UCameraComponent
 ---@field PlayerPosition_03 UStaticMeshComponent
@@ -25,8 +29,12 @@
 ---@field LoadedSkin TArray<boolean>
 ---@field LoadedSkinDefinition TArray<boolean>
 ---@field CurrentlySelectingPlayer int32
+---@field DraftNameCollection TArray<UW_DraftPlayerName_C>
 ADraftCaptureActor_C = {}
 
+---@param PlayerIndex int32
+---@param NS UNiagaraComponent
+function ADraftCaptureActor_C:GetNiagaraSystemForPlayerIndex(PlayerIndex, NS) end
 ---@param Hero URSTPawnUserFacingData
 ---@param Skin URSTSkinUserFacingData
 ---@param Hero_Select_Proxy_Class TSoftClassPtr<ARSTHeroSelectProxyActor>
@@ -79,6 +87,9 @@ function ADraftCaptureActor_C:SetCurrentlySelectingPlayer(PlayerIndex) end
 function ADraftCaptureActor_C:ResetAll() end
 ---@param SkinDef URSTSkinDefinition
 function ADraftCaptureActor_C:OnSkinDefinitionGet(SkinDef) end
+---@param DeltaSeconds float
+function ADraftCaptureActor_C:ReceiveTick(DeltaSeconds) end
+function ADraftCaptureActor_C:OnDraftBegin() end
 ---@param EntryPoint int32
 function ADraftCaptureActor_C:ExecuteUbergraph_DraftCaptureActor(EntryPoint) end
 

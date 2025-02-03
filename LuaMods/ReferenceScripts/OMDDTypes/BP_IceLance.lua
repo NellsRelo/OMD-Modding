@@ -19,15 +19,9 @@ ABP_IceLance_C = {}
 function ABP_IceLance_C:BP_GetActorEyesViewPoint(OutLocation, OutRotation) end
 ---@return boolean
 function ABP_IceLance_C:HasValidTarget() end
----@param Rotation FRotator
----@param Yaw double
-function ABP_IceLance_C:ConvertBallistaSpaceRotationToYaw(Rotation, Yaw) end
----@param Yaw double
----@param Rotation FRotator
-function ABP_IceLance_C:ConvertYawToBallistaSpaceRotation(Yaw, Rotation) end
----@param Yaw double
 ---@param Pitch double
-function ABP_IceLance_C:GetTargetRotation(Yaw, Pitch) end
+---@param Yaw double
+function ABP_IceLance_C:GetTargetRotation(Pitch, Yaw) end
 function ABP_IceLance_C:UpdateTarget() end
 function ABP_IceLance_C:UserConstructionScript() end
 function ABP_IceLance_C:EnablePerception() end

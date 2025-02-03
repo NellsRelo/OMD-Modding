@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABP_DisplayCase_6x14_D_C : ABP_OMDTrapGrid_C
+---@field NavPowerExclusion UNavPowerExclusionComponent
 ---@field Orc_Decor2 UStaticMeshComponent
 ---@field Orc_TeamDecor1A UStaticMeshComponent
 ---@field DisplayCase_WoodFloor_2x8_SM5 UStaticMeshComponent

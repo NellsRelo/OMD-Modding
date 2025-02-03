@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABP_FishMarket_DockHouse_A_C : ABP_OMDTrapGrid_C
+---@field Column_Square_2_4_StoneWall_Trim_SM UStaticMeshComponent
 ---@field NavPowerExclusion UNavPowerExclusionComponent
 ---@field Nav USceneComponent
 ---@field TimberFrame_Wall_2x2_Window_SM29 UStaticMeshComponent
@@ -74,7 +75,6 @@
 ---@field RSTTrapGridBox2 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox1 URSTTrapGridBoxComponent
 ---@field TimberFrame_Wall_2x2_Window_SM1 UStaticMeshComponent
----@field FB_2x2x4_Block UStaticMeshComponent
 ---@field TrapGrid USceneComponent
 ---@field Collision USceneComponent
 ---@field RSTTrapGridBox URSTTrapGridBoxComponent

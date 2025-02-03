@@ -31,7 +31,6 @@
 ---@field RSTTrapGridBox12 URSTTrapGridBoxComponent
 ---@field TrapGrid USceneComponent
 ---@field Wall_4x2_Wainscot_Wood_SM_Deco_Counter_Union5 UStaticMeshComponent
----@field ['Roof_4x3x3_Blue_SM_End_UnionDormer_B_1x3_Blue-Wood-White_SM_UnionWood_Window_SM_Union15'] UStaticMeshComponent
 ---@field ['Roof_4x3x3_Blue_SM_End_UnionDormer_B_1x3_Blue-Wood-White_SM_UnionWood_Window_SM_Union14'] UStaticMeshComponent
 ---@field ['Roof_4x3x3_Blue_SM_End_UnionDormer_B_1x3_Blue-Wood-White_SM_UnionWood_Window_SM_Union11'] UStaticMeshComponent
 ---@field ['Roof_4x3x3_Blue_SM_End_UnionDormer_B_1x3_Blue-Wood-White_SM_UnionWood_Window_SM_Union13'] UStaticMeshComponent

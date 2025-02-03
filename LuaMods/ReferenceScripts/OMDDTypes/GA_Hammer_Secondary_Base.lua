@@ -43,6 +43,7 @@ UGA_Hammer_Secondary_Base_C['Try Trigger Trap'] = function(Actor) end
 UGA_Hammer_Secondary_Base_C['Roll Trigger Traps'] = function() end
 ---@param Actor AActor
 UGA_Hammer_Secondary_Base_C['Process Target'] = function(Actor) end
+function UGA_Hammer_Secondary_Base_C:DestroyBreakables() end
 ---@param EntryPoint int32
 function UGA_Hammer_Secondary_Base_C:ExecuteUbergraph_GA_Hammer_Secondary_Base(EntryPoint) end
 

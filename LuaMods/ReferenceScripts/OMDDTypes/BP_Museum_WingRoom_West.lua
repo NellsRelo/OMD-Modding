@@ -1,6 +1,40 @@
 ---@meta
 
 ---@class ABP_Museum_WingRoom_West_C : ABP_OMDTrapGrid_C
+---@field Box UBoxComponent
+---@field Ceiling_ArchTileBig_EndAB_2x4_StoneWall_SM54 UStaticMeshComponent
+---@field Crenel_BaseD_CastStone_Sub6 UStaticMeshComponent
+---@field Crenel_BaseD_CastStone_Sub5 UStaticMeshComponent
+---@field Crenel_BaseD_CastStone_Sub4 UStaticMeshComponent
+---@field Crenel_BaseD_CastStone_Sub3 UStaticMeshComponent
+---@field Crenel_BaseD_CastStone_Sub2 UStaticMeshComponent
+---@field Crenel_BaseD_CastStone_Sub1 UStaticMeshComponent
+---@field Crenel_BaseD_CastStone_Sub UStaticMeshComponent
+---@field ColumnTrim_CastStone_1200W1 UStaticMeshComponent
+---@field ColumnTrim_CastStone_1200W UStaticMeshComponent
+---@field CSC_1200_GardenWall UStaticMeshComponent
+---@field Garden_Railing_EndCap_SM_Merged29 UStaticMeshComponent
+---@field Garden_Railing_EndCap_SM_Merged28 UStaticMeshComponent
+---@field Garden_Railing_EndCap_SM_Merged27 UStaticMeshComponent
+---@field Garden_Railing_EndCap_SM_Merged26 UStaticMeshComponent
+---@field Garden_Railing_EndCap_SM_Merged25 UStaticMeshComponent
+---@field Garden_Railing_EndCap_SM_Merged24 UStaticMeshComponent
+---@field Garden_Railing_EndCap_SM_Merged23 UStaticMeshComponent
+---@field Garden_Railing_EndCap_SM_Merged22 UStaticMeshComponent
+---@field Garden_Railing_EndCap_SM_Merged21 UStaticMeshComponent
+---@field Garden_Railing_EndCap_SM_Merged20 UStaticMeshComponent
+---@field RailingStairsB12 UStaticMeshComponent
+---@field RailingStairsB9 UStaticMeshComponent
+---@field RailingStairsB8 UStaticMeshComponent
+---@field Metal_Fence_900C_05 UStaticMeshComponent
+---@field Metal_Fence_900C_01 UStaticMeshComponent
+---@field Metal_Fence_900C_04 UStaticMeshComponent
+---@field RailingStairsB11 UStaticMeshComponent
+---@field RailingStairsB10 UStaticMeshComponent
+---@field RailingStairsB7 UStaticMeshComponent
+---@field RailingStairsB5 UStaticMeshComponent
+---@field RailingStairsB3 UStaticMeshComponent
+---@field Column_Bottom_Square_1_2_Stucco_SM_A UStaticMeshComponent
 ---@field Window_Pointed_2x_Trim_Arch_Half_Center19 UStaticMeshComponent
 ---@field Window_Pointed_2x_Trim_Arch_Half_Center18 UStaticMeshComponent
 ---@field Window_Pointed_2x_Trim_Arch_Half_Center17 UStaticMeshComponent

@@ -17,8 +17,11 @@
 ---@field ['Additional Marked Effects'] TArray<FRSTAdditionalGameplayEffectData>
 ---@field ['Target Acquisition Task'] UAbilityTask_WaitDelay
 ---@field ['Target Recheck Time'] float
+---@field HubSpawnerCoordinator TSoftObjectPtr<ARSTHubSpawnerCoordinator>
 UGA_Sniper_Ultimate_C = {}
 
+---@param Targets TArray<APawn>
+UGA_Sniper_Ultimate_C['Get Valid Targets'] = function(Targets) end
 ---@param NumTargetsToMark int32
 ---@param HadTargets boolean
 function UGA_Sniper_Ultimate_C:MarkRandomTargets(NumTargetsToMark, HadTargets) end
@@ -39,6 +42,7 @@ function UGA_Sniper_Ultimate_C:RequestDialogue() end
 UGA_Sniper_Ultimate_C['Start Reacquiring Targets'] = function() end
 UGA_Sniper_Ultimate_C['Stop Reacquiring Targets'] = function() end
 UGA_Sniper_Ultimate_C['Try Reacquire Targets'] = function() end
+UGA_Sniper_Ultimate_C['Try Acquire Hub Coordinator'] = function() end
 ---@param EntryPoint int32
 function UGA_Sniper_Ultimate_C:ExecuteUbergraph_GA_Sniper_Ultimate(EntryPoint) end
 

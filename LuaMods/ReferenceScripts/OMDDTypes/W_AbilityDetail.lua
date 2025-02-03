@@ -5,13 +5,12 @@
 ---@field AbilityDescText UCommonTextBlock
 ---@field AbilityIcon UImage
 ---@field AbilityNameText UCommonTextBlock
----@field W_RSTInputActionWidget_C_259 UW_RSTInputActionWidget_C
----@field AbilityUIData URSTAbilityUIData
+---@field InputActionDisplay UW_RSTInputActionWidget_C
 UW_AbilityDetail_C = {}
 
-function UW_AbilityDetail_C:Construct() end
----@param InInputAction UInputAction
-function UW_AbilityDetail_C:SetInputAction(InInputAction) end
+---@param AbilityUIData URSTAbilityUIData
+---@param InputAction UInputAction
+UW_AbilityDetail_C['Init Display'] = function(AbilityUIData, InputAction) end
 ---@param EntryPoint int32
 function UW_AbilityDetail_C:ExecuteUbergraph_W_AbilityDetail(EntryPoint) end
 

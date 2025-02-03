@@ -1,12 +1,13 @@
 ---@meta
 
 ---@class ABP_DisplayCase_6x10_E_C : ABP_OMDTrapGrid_C
----@field Ogre_Basher_ATTACHMENT_Weapon_Hand_L UStaticMeshComponent
----@field Ogre_Basher_ATTACHMENT_Armor_Upperarm_Twist_01_R UStaticMeshComponent
----@field Ogre_Basher_ATTACHMENT_Armor_Upperarm_Twist_01_L UStaticMeshComponent
----@field Lizardman_Light_Weapon_SM UStaticMeshComponent
----@field Cyclops_Mage_ATTACHMENT_Weapon_Hand_R_Skin00 UStaticMeshComponent
----@field Cyclops_Medium_Weapon_SM UStaticMeshComponent
+---@field NavPowerExclusion UNavPowerExclusionComponent
+---@field BP_OgreBasher_Weapon_Breakable UChildActorComponent
+---@field BP_OgreBasher_Armor_UpperArm_Breakable UChildActorComponent
+---@field BP_Lizardman_light_Breakable UChildActorComponent
+---@field BP_Cyclops_Mage_Weapon_Breakable UChildActorComponent
+---@field BP_Cyclops_Medium_Weapon_Breakable UChildActorComponent
+---@field BP_OgreBasher_Armor_UpperArm__Breakable UChildActorComponent
 ---@field Big_Stone_02A2 UStaticMeshComponent
 ---@field Big_Stone_02A1 UStaticMeshComponent
 ---@field Big_Stone_02A UStaticMeshComponent

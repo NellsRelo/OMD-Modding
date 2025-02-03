@@ -1,0 +1,62 @@
+---@meta
+
+---@class AHub_GabyWarRoom_Table_C : ABP_OMDTrapGrid_C
+---@field Hub_WarTable_WarIcon_05 UStaticMeshComponent
+---@field Hub_WarRoom_Table_Long_SM UStaticMeshComponent
+---@field Armillary_2_BP UChildActorComponent
+---@field Pickup_RuneCoin_Gold_035 UStaticMeshComponent
+---@field Pickup_RuneCoin_Gold_034 UStaticMeshComponent
+---@field Pickup_RuneCoin_Gold_033 UStaticMeshComponent
+---@field Hub_WarTable_WarStick_04 UStaticMeshComponent
+---@field BookStack_B1 UStaticMeshComponent
+---@field Hub_WarTable_Compas_02 UStaticMeshComponent
+---@field Pickup_RuneCoin_Gold_032 UStaticMeshComponent
+---@field Pickup_RuneCoin_Gold_031 UStaticMeshComponent
+---@field Pickup_RuneCoin_Gold_030 UStaticMeshComponent
+---@field Pickup_RuneCoin_Gold_029 UStaticMeshComponent
+---@field Pickup_RuneCoin_Gold_027 UStaticMeshComponent
+---@field Pickup_RuneCoin_Gold_026 UStaticMeshComponent
+---@field Pickup_RuneCoin_Gold_025 UStaticMeshComponent
+---@field Pickup_RuneCoin_Gold_024 UStaticMeshComponent
+---@field Pickup_RuneCoin_Gold_023 UStaticMeshComponent
+---@field Pickup_RuneCoin_Gold_022 UStaticMeshComponent
+---@field Pickup_RuneCoin_Gold_021 UStaticMeshComponent
+---@field Pickup_RuneCoin_Gold_020 UStaticMeshComponent
+---@field Pickup_RuneCoin_Gold_018 UStaticMeshComponent
+---@field Pickup_RuneCoin_Gold_017 UStaticMeshComponent
+---@field Pickup_RuneCoin_Gold_016 UStaticMeshComponent
+---@field Pickup_RuneCoin_Gold_015 UStaticMeshComponent
+---@field Pickup_RuneCoin_Gold_014 UStaticMeshComponent
+---@field Pickup_RuneCoin_Gold_013 UStaticMeshComponent
+---@field Pickup_RuneCoin_Gold_09 UStaticMeshComponent
+---@field Pickup_RuneCoin_Gold_012 UStaticMeshComponent
+---@field Pickup_RuneCoin_Gold_011 UStaticMeshComponent
+---@field Pickup_RuneCoin_Gold_08 UStaticMeshComponent
+---@field Pickup_RuneCoin_Gold_010 UStaticMeshComponent
+---@field Pickup_RuneCoin_Gold_06 UStaticMeshComponent
+---@field Pickup_RuneCoin_Gold_05 UStaticMeshComponent
+---@field Pickup_RuneCoin_Gold_04 UStaticMeshComponent
+---@field Pickup_RuneCoin_Gold_03 UStaticMeshComponent
+---@field Scroll_Roll_B UStaticMeshComponent
+---@field Scroll_Open_Roll UStaticMeshComponent
+---@field Pickup_RuneCoin_Gold_01 UStaticMeshComponent
+---@field BookStack_B UStaticMeshComponent
+---@field Book_B_Book_B UStaticMeshComponent
+---@field Book_A_Book_A UStaticMeshComponent
+---@field Hub_WarTable_Compas_01 UStaticMeshComponent
+---@field Hub_WarTable_WarStick_03 UStaticMeshComponent
+---@field Hub_WarTable_WarStick_02 UStaticMeshComponent
+---@field Hub_WarTable_WarIcon_04 UStaticMeshComponent
+---@field Hub_WarTable_WarIcon_03 UStaticMeshComponent
+---@field Hub_WarTable_WarIcon_02 UStaticMeshComponent
+---@field Hub_WarTable_WarIcon_01 UStaticMeshComponent
+---@field Hub_WarTable_WarStick_01 UStaticMeshComponent
+---@field Hub_WarTable_Telescope_01 UStaticMeshComponent
+---@field Hub_WarTable_Map_01 UStaticMeshComponent
+---@field Collision USceneComponent
+---@field Geometry USceneComponent
+---@field TrapGrid USceneComponent
+AHub_GabyWarRoom_Table_C = {}
+
+
+

@@ -13,7 +13,7 @@ function ALevel_Castle_Courtyards_C:InpActEvt_J_K2Node_InputKeyEvent_0(Key) end
 function ALevel_Castle_Courtyards_C:ReceiveBeginPlay() end
 ---@param OverlappedActor AActor
 ---@param OtherActor AActor
-function ALevel_Castle_Courtyards_C:ActorBeginOVerlap(OverlappedActor, OtherActor) end
+function ALevel_Castle_Courtyards_C:ActorBeginOverlap(OverlappedActor, OtherActor) end
 ---@param EntryPoint int32
 function ALevel_Castle_Courtyards_C:ExecuteUbergraph_Level_Castle_Courtyards(EntryPoint) end
 

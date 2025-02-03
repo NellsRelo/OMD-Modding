@@ -2,10 +2,16 @@
 
 ---@class UW_HeroSelection_C : URSTActivatableWidget
 ---@field UberGraphFrame FPointerToUberGraphFrame
----@field AbilityList UVerticalBox
----@field BG_Gradient UImage
----@field bg_gradient1 UImage
+---@field AbilityCycleLeftButton UW_RSTInputActionWidget_C
+---@field AbilityCycleRightButton UW_RSTInputActionWidget_C
+---@field AbilityPip_0 UImage
+---@field AbilityPip_1 UImage
+---@field AbilityRoot USizeBox
+---@field AbilitySwitcher UCommonActivatableWidgetSwitcher
+---@field CanvasPanel_Draft UCanvasPanel
 ---@field ControlHints UHorizontalBox
+---@field CycleLeftButton UButton
+---@field CycleRightButton UButton
 ---@field HeroButtonsList UHorizontalBox
 ---@field HeroDescription UCommonTextBlock
 ---@field HeroName UCommonTextBlock
@@ -14,26 +20,32 @@
 ---@field Image_BG_Blur UImage
 ---@field Image_BG_Draft UImage
 ---@field Image_TitleBg UImage
+---@field LeftPipButton UButton
 ---@field LocalPlayerTurn UCommonTextBlock
 ---@field MessageText UCommonTextBlock
 ---@field Overlay_Progress UOverlay
 ---@field Overlay_Title UOverlay
+---@field PrimaryAbilityDisplay USizeBox
+---@field PrimaryAbilityList UVerticalBox
 ---@field ProgressBar_DraftTime UProgressBar
 ---@field Right_Header_Text UCommonTextBlock
+---@field RightPipButton UButton
+---@field SecondaryAbilityDisplay USizeBox
+---@field SecondaryAbilityList UVerticalBox
 ---@field SkinList UVerticalBox
 ---@field SkinLoadingIcon UImage
----@field SkinRoot UOverlay
+---@field SkinOverlay UOverlay
+---@field SkinRoot USizeBox
+---@field SpecialAbilityDisplay USizeBox
 ---@field Text_PlayerName UCommonTextBlock
+---@field TraitDisplay USizeBox
+---@field TrapDisplay USizeBox
+---@field UltimateAbilityDisplay USizeBox
 ---@field VerticalBox_HeroDisplay UVerticalBox
----@field VerticalBox_LeftList UVerticalBox
----@field W_Button_Hero UW_Button_Hero_C
----@field W_Button_Hero_1 UW_Button_Hero_C
----@field W_Button_Hero_2 UW_Button_Hero_C
----@field W_Button_Hero_3 UW_Button_Hero_C
----@field W_Button_Hero_4 UW_Button_Hero_C
----@field W_Button_Hero_5 UW_Button_Hero_C
----@field W_Button_Hero_6 UW_Button_Hero_C
----@field W_DraftCaptureWidget UW_DraftCaptureWidget_C
+---@field W_DraftPlayerName_0 UW_DraftPlayerName_C
+---@field W_DraftPlayerName_1 UW_DraftPlayerName_C
+---@field W_DraftPlayerName_2 UW_DraftPlayerName_C
+---@field W_DraftPlayerName_3 UW_DraftPlayerName_C
 ---@field W_ExitMenuButton_173 UW_ExitMenuButton_C
 ---@field W_HeroSelectAvatar UW_HeroAvatar_C
 ---@field UsedHeroButtons TArray<UW_Button_Hero_C>
@@ -50,7 +62,7 @@
 ---@field CurrentPlayerUFD URSTPawnUserFacingData
 ---@field DraftHeroSelectActorList TArray<UW_HeroAvatarSelectDisplay_C>
 ---@field SelectionMode HeroSelectionMode::Type
----@field AbilityTagOrder TArray<FGameplayTag>
+---@field AbilitiesToPull TArray<FGameplayTag>
 ---@field ['Ability Sets'] TArray<URSTAbilitySet>
 ---@field HeroAbilitySoftObject TSoftObjectPtr<URSTAbilityUIData>
 ---@field CurrentPawnDefinition URSTPawnDefinitionHero
@@ -67,8 +79,28 @@
 ---@field CurrentlyHoveredButton UCommonButtonBase
 ---@field SettingToSkinTag FGameplayTag
 ---@field CurrentlyHoveredSkinButton UCommonButtonBase
+---@field CurrentAbilityIndex int32
 UW_HeroSelection_C = {}
 
+---@param WidgetIndex int32
+---@param Mat UMaterialInterface
+UW_HeroSelection_C['Get Ability Brush By Index'] = function(WidgetIndex, Mat) end
+UW_HeroSelection_C['Populate Item Display'] = function() end
+---@param Tag FGameplayTag
+---@param InputAction UInputAction
+UW_HeroSelection_C['Get Ability Input Action'] = function(Tag, InputAction) end
+UW_HeroSelection_C['Populate Ability Display'] = function() end
+---@param Tag FGameplayTag
+UW_HeroSelection_C['Add Ability Display'] = function(Tag) end
+---@param Tag FGameplayTag
+---@param Widget UContentWidget
+UW_HeroSelection_C['Get Ability Root'] = function(Tag, Widget) end
+---@param Index int32
+---@param RSTPlayerState ARSTPlayerState
+function UW_HeroSelection_C:GetPlayerStateForIndex(Index, RSTPlayerState) end
+---@param Index int32
+---@param DraftPlayerName UW_DraftPlayerName_C
+function UW_HeroSelection_C:GetDraftNameplateForPlayerIndex(Index, DraftPlayerName) end
 function UW_HeroSelection_C:ClearHeroButtons() end
 ---@return UW_Button_Hero_C
 function UW_HeroSelection_C:FindOrGetHeroButton() end
@@ -100,9 +132,8 @@ UW_HeroSelection_C['Get Valid Heroes'] = function(Heroes) end
 ---@param SelectionMode HeroSelectionMode::Type
 UW_HeroSelection_C['Set Selection Mode'] = function(SelectionMode) end
 ---@param AbilityTag FGameplayTag
----@param AbilitySet TArray<URSTAbilitySet>
 ---@param OutputPin TSoftObjectPtr<URSTAbilityUIData>
-function UW_HeroSelection_C:FindAbilityMatchingTag(AbilityTag, AbilitySet, OutputPin) end
+function UW_HeroSelection_C:FindAbilityMatchingTag(AbilityTag, OutputPin) end
 ---@param OnlineMode ECommonSessionOnlineMode
 ---@param CanUserCrossPlay boolean
 ---@param HostingRequest URSTCommonSession_HostSessionRequest
@@ -201,6 +232,15 @@ UW_HeroSelection_C['On Skin Unhovered'] = function(Button) end
 UW_HeroSelection_C['BndEvt__W_HeroSelection_W_ExitMenuButton_173_K2Node_ComponentBoundEvent_1_On Button Clicked__DelegateSignature'] = function() end
 function UW_HeroSelection_C:ReapplyControlMappings() end
 UW_HeroSelection_C['Finish Load Skin List'] = function() end
+---@param DesiredTab int32
+UW_HeroSelection_C['Set Ability Display Tab'] = function(DesiredTab) end
+UW_HeroSelection_C['Refresh Ability Button Visibility'] = function() end
+UW_HeroSelection_C['Cycle Ability Tab Left'] = function() end
+UW_HeroSelection_C['Cycle Ability Tab Right'] = function() end
+function UW_HeroSelection_C:BndEvt__W_HeroSelection_CycleLeftButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature() end
+function UW_HeroSelection_C:BndEvt__W_HeroSelection_CycleRightButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature() end
+function UW_HeroSelection_C:BndEvt__W_HeroSelection_LeftPipButton_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature() end
+function UW_HeroSelection_C:BndEvt__W_HeroSelection_RightPipButton_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature() end
 ---@param EntryPoint int32
 function UW_HeroSelection_C:ExecuteUbergraph_W_HeroSelection(EntryPoint) end
 function UW_HeroSelection_C:OnRejectOffline__DelegateSignature() end

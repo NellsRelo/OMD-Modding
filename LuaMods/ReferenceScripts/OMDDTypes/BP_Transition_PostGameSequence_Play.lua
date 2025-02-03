@@ -4,6 +4,7 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field SequencePlayer ABP_PostGameSequencePlayer_C
 ---@field bVictory boolean
+---@field ['Results Loop'] UAudioComponent
 UBP_Transition_PostGameSequence_Play_C = {}
 
 UBP_Transition_PostGameSequence_Play_C['On Sequence Finished'] = function() end

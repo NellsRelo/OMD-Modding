@@ -10,6 +10,7 @@
 ---@field Delay double
 ---@field TargetClass UClass
 ---@field TargetFilter TArray<FGameplayTag>
+---@field ['Triggered Cue Tag'] FGameplayTag
 UGA_Wand_Special_Projectile_C = {}
 
 ---@param Actor AActor

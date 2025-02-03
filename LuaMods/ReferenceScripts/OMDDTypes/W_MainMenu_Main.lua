@@ -14,7 +14,6 @@
 ---@field Button_Quit UW_ButtonBasic_C
 ---@field Button_Rejoin UW_ButtonBasic_C
 ---@field Button_Settings UW_ButtonBasic_C
----@field Button_TechnicalTest UW_ButtonBasic_C
 ---@field Image_Title UImage
 ---@field SafeZone_0 USafeZone
 ---@field Text_PlayerProfile UCommonTextBlock
@@ -128,8 +127,6 @@ function UW_MainMenu_Main_C:ConfirmOffline() end
 function UW_MainMenu_Main_C:BeginHostingGame(OnlineMode) end
 ---@param Button UCommonButtonBase
 function UW_MainMenu_Main_C:BndEvt__W_MainMenu_Main_Button_Discord_K2Node_ComponentBoundEvent_7_CommonButtonBaseClicked__DelegateSignature(Button) end
----@param Button UCommonButtonBase
-function UW_MainMenu_Main_C:BndEvt__W_MainMenu_Main_Button_TechnicalTest_K2Node_ComponentBoundEvent_8_CommonButtonBaseClicked__DelegateSignature(Button) end
 ---@param Button UCommonButtonBase
 function UW_MainMenu_Main_C:BndEvt__W_MainMenu_Main_Button_Quit_K2Node_ComponentBoundEvent_9_CommonButtonBaseClicked__DelegateSignature(Button) end
 ---@param bIsShowing boolean

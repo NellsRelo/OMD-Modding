@@ -1,6 +1,19 @@
 ---@meta
 
 ---@class ABP_Museum_Garden_C : ABP_OMDTrapGrid_C
+---@field Wall_Bottom_4x05_StoneWall_SM3 UStaticMeshComponent
+---@field Floor_1x2_Mud35 UStaticMeshComponent
+---@field Floor_1x2_Mud34 UStaticMeshComponent
+---@field Floor_2x2_Plaza_PatternA_Square_SM7 UStaticMeshComponent
+---@field Floor_2x2_Plaza_PatternA_Square_SM6 UStaticMeshComponent
+---@field Floor_1X1_PatternA_Mosaic_SM15 UStaticMeshComponent
+---@field Floor_1X1_PatternA_Mosaic_SM14 UStaticMeshComponent
+---@field Floor_1X1_PatternA_Mosaic_SM13 UStaticMeshComponent
+---@field Floor_1X1_PatternA_Mosaic_SM12 UStaticMeshComponent
+---@field Floor_1X1_PatternA_Mosaic_SM11 UStaticMeshComponent
+---@field Floor_1X1_PatternA_Mosaic_SM10 UStaticMeshComponent
+---@field Floor_1X1_PatternA_Mosaic_SM9 UStaticMeshComponent
+---@field Floor_1X1_PatternA_Mosaic_SM8 UStaticMeshComponent
 ---@field Wall_Bottom_4x05_StoneWall_SM2 UStaticMeshComponent
 ---@field Wall_Bottom_4x05_StoneWall_SM1 UStaticMeshComponent
 ---@field Stair_1x2_Stone_RandomSize_SM10 UStaticMeshComponent
@@ -52,7 +65,6 @@
 ---@field Floor_1x2_Mud19 UStaticMeshComponent
 ---@field Floor_1x2_Mud18 UStaticMeshComponent
 ---@field Floor_1x2_Mud17 UStaticMeshComponent
----@field Floor_2x2_Grass_SM79 UStaticMeshComponent
 ---@field Floor_2x2_Grass_SM78 UStaticMeshComponent
 ---@field Floor_2x2_Grass_SM77 UStaticMeshComponent
 ---@field Floor_2x2_Grass_SM76 UStaticMeshComponent
@@ -60,7 +72,6 @@
 ---@field Floor_2x2_Grass_SM74 UStaticMeshComponent
 ---@field Floor_2x2_Grass_SM73 UStaticMeshComponent
 ---@field Floor_2x2_Grass_SM72 UStaticMeshComponent
----@field Floor_2x2_Grass_SM71 UStaticMeshComponent
 ---@field Floor_2x2_Grass_SM70 UStaticMeshComponent
 ---@field Floor_2x2_Grass_SM69 UStaticMeshComponent
 ---@field Floor_2x2_Grass_SM68 UStaticMeshComponent
@@ -96,7 +107,6 @@
 ---@field Floor_4x4_StoneBlock_SM8 UStaticMeshComponent
 ---@field Floor_2x2_Grass_SM47 UStaticMeshComponent
 ---@field Floor_2x2_Grass_SM46 UStaticMeshComponent
----@field Floor_2x2_Grass_SM45 UStaticMeshComponent
 ---@field Floor_2x2_Grass_SM44 UStaticMeshComponent
 ---@field Floor_2x2_Grass_SM43 UStaticMeshComponent
 ---@field Floor_2x2_Grass_SM42 UStaticMeshComponent
@@ -108,7 +118,6 @@
 ---@field Floor_2x2_Grass_SM35 UStaticMeshComponent
 ---@field Floor_2x2_Grass_SM34 UStaticMeshComponent
 ---@field Floor_2x2_Grass_SM33 UStaticMeshComponent
----@field Floor_2x2_Grass_SM32 UStaticMeshComponent
 ---@field Floor_1x2_PatternC1_SM22 UStaticMeshComponent
 ---@field Floor_2x2_Plaza_PatternA_Square_SM3 UStaticMeshComponent
 ---@field Floor_2x2_Plaza_PatternA_Square_SM2 UStaticMeshComponent
@@ -117,7 +126,6 @@
 ---@field Floor_4x4_StoneBlock_SM6 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM5 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM4 UStaticMeshComponent
----@field Floor_2x2_Grass_SM31 UStaticMeshComponent
 ---@field Floor_2x2_Grass_SM30 UStaticMeshComponent
 ---@field Floor_2x2_Grass_SM29 UStaticMeshComponent
 ---@field Floor_2x2_Grass_SM28 UStaticMeshComponent
@@ -127,7 +135,6 @@
 ---@field Floor_2x2_Grass_SM24 UStaticMeshComponent
 ---@field Floor_2x2_Grass_SM23 UStaticMeshComponent
 ---@field Floor_2x2_Grass_SM22 UStaticMeshComponent
----@field Floor_2x2_Grass_SM21 UStaticMeshComponent
 ---@field Floor_2x2_Grass_SM20 UStaticMeshComponent
 ---@field Floor_2x2_Grass_SM19 UStaticMeshComponent
 ---@field Floor_2x2_Grass_SM18 UStaticMeshComponent

@@ -16,6 +16,8 @@
 UW_Spellbook_HotbarSlot_C = {}
 
 ---@return boolean
+UW_Spellbook_HotbarSlot_C['Has Enough Coin'] = function() end
+---@return boolean
 UW_Spellbook_HotbarSlot_C['Valid for Operation'] = function() end
 ---@param MyGeometry FGeometry
 ---@param MouseEvent FPointerEvent
@@ -50,6 +52,7 @@ function UW_Spellbook_HotbarSlot_C:OnMessageReceived_4FB737B7488DAF10740A8A8A0FD
 ---@param ProxyObject UAsyncAction_ListenForGameplayMessage
 ---@param ActualChannel FGameplayTag
 function UW_Spellbook_HotbarSlot_C:OnMessageReceived_9C04AAF4434A86ECA1343A95481F5012(ProxyObject, ActualChannel) end
+function UW_Spellbook_HotbarSlot_C:Finished_BA603D24400960C7CC56ED8347AE0AE9() end
 UW_Spellbook_HotbarSlot_C['Hide Slot'] = function() end
 UW_Spellbook_HotbarSlot_C['Show Slot'] = function() end
 function UW_Spellbook_HotbarSlot_C:OnInitialized() end
@@ -58,6 +61,7 @@ function UW_Spellbook_HotbarSlot_C:Construct() end
 UW_Spellbook_HotbarSlot_C['On Coin Updated'] = function(Delta) end
 ---@param InAnimation UWidgetAnimation
 UW_Spellbook_HotbarSlot_C['Play Anim'] = function(InAnimation) end
+function UW_Spellbook_HotbarSlot_C:RefreshVisibility() end
 ---@param EntryPoint int32
 function UW_Spellbook_HotbarSlot_C:ExecuteUbergraph_W_Spellbook_HotbarSlot(EntryPoint) end
 

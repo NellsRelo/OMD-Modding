@@ -10,6 +10,7 @@
 ---@field ArtificialDelay float
 ---@field ['Charge Cue'] FGameplayTag
 ---@field ['FX Fire Point Tag'] FGameplayTag
+---@field ['Impact Cue Tag'] FGameplayTag
 UGA_Crossbow_Secondary_Laser_C = {}
 
 ---@param TargetedActor AActor

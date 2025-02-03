@@ -1,6 +1,8 @@
 ---@meta
 
 ---@class ABP_FishMarket_DockHouse_B_C : ABP_OMDTrapGrid_C
+---@field Woodbeam177 UStaticMeshComponent
+---@field Woodbeam159 UStaticMeshComponent
 ---@field NavPowerExclusion UNavPowerExclusionComponent
 ---@field Nav USceneComponent
 ---@field RSTTrapGridBox33 URSTTrapGridBoxComponent
@@ -145,7 +147,6 @@
 ---@field Column_Sec_1_2_RB5 UStaticMeshComponent
 ---@field RSTTrapGridBox24 URSTTrapGridBoxComponent
 ---@field Wall_2_2_FB1 UStaticMeshComponent
----@field RSTTrapGridBox23 URSTTrapGridBoxComponent
 ---@field Woodbeam102 UStaticMeshComponent
 ---@field RSTTrapGridBox22 URSTTrapGridBoxComponent
 ---@field Wall_2_2_FB UStaticMeshComponent

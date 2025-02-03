@@ -52,7 +52,7 @@ function UW_PurchaseMenu_GridElement_C:OnMouseEnter(MyGeometry, MouseEvent) end
 function UW_PurchaseMenu_GridElement_C:OnMouseLeave(MouseEvent) end
 function UW_PurchaseMenu_GridElement_C:UpdateSelectionDisplay() end
 ---@param LinkedObject UObject
-UW_PurchaseMenu_GridElement_C['Init for Object'] = function(LinkedObject) end
+UW_PurchaseMenu_GridElement_C['Init For Object'] = function(LinkedObject) end
 function UW_PurchaseMenu_GridElement_C:BP_SynchronizeProperties() end
 UW_PurchaseMenu_GridElement_C['Refresh Background'] = function() end
 ---@param BGTexture UTexture2D

@@ -1,8 +1,11 @@
 ---@meta
 
 ---@class ABP_Library_Bookshelf_B_Merged_C : ABP_OMDTrapGrid_C
----@field NavPowerExclusion UNavPowerExclusionComponent
 ---@field SM_MERGED_BP_Library_Books_Merges UStaticMeshComponent
+---@field Box_Collision_Middle5 UBoxComponent
+---@field Box_Collision_Middle4 UBoxComponent
+---@field Box_Collision_Middle3 UBoxComponent
+---@field NavPowerExclusion UNavPowerExclusionComponent
 ---@field Forniture_BookShelves_Library_01 UStaticMeshComponent
 ---@field Box_Collision_Middle1 UBoxComponent
 ---@field RSTTrapGridBox01 URSTTrapGridBoxComponent

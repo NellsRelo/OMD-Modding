@@ -11,6 +11,7 @@
 ---@field InteractingController ARSTPlayerController
 ---@field TheActorInfo FGameplayAbilityActorInfo
 ---@field LooseTagHandle FRSTLooseTagHandle
+---@field ['Layer Name'] FGameplayTag
 ABP_NPCInteractable_C = {}
 
 ---@param OutObscureMeshes TArray<UMeshComponent>
@@ -28,9 +29,9 @@ function ABP_NPCInteractable_C:BP_CanInteractWith(RequestingInteractor, RetValue
 function ABP_NPCInteractable_C:AfterPush_37427C3644CE386C752ADD93B00BC99F(UserWidget) end
 ---@param UserWidget UCommonActivatableWidget
 function ABP_NPCInteractable_C:BeforePush_37427C3644CE386C752ADD93B00BC99F(UserWidget) end
-function ABP_NPCInteractable_C:OnWidgetRemoved() end
 ---@param ActorInfo FGameplayAbilityActorInfo
 function ABP_NPCInteractable_C:BP_OnInteract(ActorInfo) end
+function ABP_NPCInteractable_C:OnWidgetRemoved() end
 ---@param OverlappedComponent UPrimitiveComponent
 ---@param OtherActor AActor
 ---@param OtherComp UPrimitiveComponent

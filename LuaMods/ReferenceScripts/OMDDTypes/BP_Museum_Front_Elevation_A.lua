@@ -1,6 +1,15 @@
 ---@meta
 
 ---@class ABP_Museum_Front_Elevation_A_C : ABP_OMDTrapGrid_C
+---@field RSTTrapGridBox89 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox88 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox86 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox98 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox97 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox96 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox95 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox94 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox85 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox81 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox80 URSTTrapGridBoxComponent
 ---@field Wall_Tile_Stucco_4x2_A_SM51 UStaticMeshComponent
@@ -51,12 +60,6 @@
 ---@field Wall_4x4x05_Stonewall_SM13 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM21 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM20 UStaticMeshComponent
----@field RSTTrapGridBox96 URSTTrapGridBoxComponent
----@field RSTTrapGridBox95 URSTTrapGridBoxComponent
----@field RSTTrapGridBox94 URSTTrapGridBoxComponent
----@field RSTTrapGridBox91 URSTTrapGridBoxComponent
----@field RSTTrapGridBox90 URSTTrapGridBoxComponent
----@field RSTTrapGridBox89 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox2 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox5 URSTTrapGridBoxComponent
@@ -101,7 +104,6 @@
 ---@field RSTTrapGridBox75 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox76 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox4 URSTTrapGridBoxComponent
----@field RSTTrapGridBox88 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox87 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox84 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox82 URSTTrapGridBoxComponent

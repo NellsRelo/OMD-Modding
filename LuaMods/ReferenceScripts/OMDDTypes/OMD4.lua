@@ -135,6 +135,7 @@ function ARSTAICharacter:BP_CanInteractWith(RequestingInteractor, RetValue) end
 ---@field BlackboardGuardianMasterKey FName
 ---@field BlackboardFollowRadiusKey FName
 ---@field BlackboardStuckTimeoutKey FName
+---@field BlackboardIsStuckKey FName
 ARSTAIController = {}
 
 function ARSTAIController:UpdatePathNodeCosts() end
@@ -156,7 +157,8 @@ function ARSTAIController:SetInteractingTag(bIsInteracting) end
 ---@param NewCombat boolean
 function ARSTAIController:SetInCombat(NewCombat) end
 ---@param NewState ERSTEnemyState
-function ARSTAIController:SetCurrentState(NewState) end
+---@param InstigatorActor AActor
+function ARSTAIController:SetCurrentState(NewState, InstigatorActor) end
 ---@return FTransform
 function ARSTAIController:SelectRandomLocation() end
 ---@param bResetPathNode boolean
@@ -184,6 +186,8 @@ function ARSTAIController:IsCurrentAbilityRanged() end
 function ARSTAIController:IsBlockedToNode() end
 ---@return boolean
 function ARSTAIController:InitAIParms() end
+function ARSTAIController:HandleThreatEvaluation() end
+function ARSTAIController:HandleStuckTimer() end
 function ARSTAIController:HandleAITimer() end
 ---@return ERSTThreatGroup
 function ARSTAIController:GetThreatGroup() end
@@ -238,8 +242,9 @@ function ARSTAIController:ActivateSpawnAbility() end
 ---@return boolean
 function ARSTAIController:ActivateReviveAbility() end
 ---@param bIsBeginningInteraction boolean
+---@param InstigatorActor AActor
 ---@return boolean
-function ARSTAIController:ActivateInteractResponseAbility(bIsBeginningInteraction) end
+function ARSTAIController:ActivateInteractResponseAbility(bIsBeginningInteraction, InstigatorActor) end
 ---@param bEnforceRangeCheck boolean
 ---@return boolean
 function ARSTAIController:ActivateCurrentAttackAbility(bEnforceRangeCheck) end
@@ -313,8 +318,15 @@ function ARSTActiveSubobject:OnControllerDestroyed(DestroyedActor) end
 
 ---@class ARSTAttachment : AActor
 ---@field bUseDefaultVisibilityBehavior boolean
+---@field VisualVariantTagConditions TArray<FGameplayTagContainer>
 ARSTAttachment = {}
 
+---@param Tag FGameplayTag
+---@param Count int32
+function ARSTAttachment:OnVisualVariantTagsChanged(Tag, Count) end
+---@param VisualTagContainer FGameplayTagContainer
+---@param bRevertToDefaults boolean
+function ARSTAttachment:OnCurrentVisualVariantChanged(VisualTagContainer, bRevertToDefaults) end
 ---@param UpdatedTag FGameplayTag
 function ARSTAttachment:OnCurrentChargeUpdated(UpdatedTag) end
 ---@return USceneComponent
@@ -667,7 +679,6 @@ function ARSTFlyoff:GetFlyoffLifeSpan() end
 
 
 ---@class ARSTGameModeBase : AModularGameModeBase
----@field CachedGameModeType ERSTGameModeType
 ---@field PropertyMappings FRSTInheritableGameplayTagPropertyMap
 ---@field GoBreakEffects TArray<TSubclassOf<UGameplayEffect>>
 ---@field PostGameEffects TArray<TSubclassOf<UGameplayEffect>>
@@ -696,6 +707,7 @@ function ARSTFlyoff:GetFlyoffLifeSpan() end
 ---@field bPreventUnstableRiftDistortion boolean
 ---@field bRandomizeHotbar boolean
 ---@field PickupWeightModifiers TArray<FRSTPickupParameterMods>
+---@field BonusSharedTrapPlacementLimits TMap<FGameplayTag, int32>
 ARSTGameModeBase = {}
 
 ---@return boolean
@@ -742,6 +754,7 @@ ARSTGameMode_HUB = {}
 function ARSTGameMode_HUB:SetPassword(Password) end
 ---@return boolean
 function ARSTGameMode_HUB:IsPasswordProtected() end
+function ARSTGameMode_HUB:CacheWhitelistedPlayers() end
 
 
 ---@class ARSTGameSession : AGameSession
@@ -758,6 +771,7 @@ ARSTGameSession = {}
 ---@field PRSComponent URSTGameStatePRSComponent
 ---@field TransitionManagerComponent URSTTransitionManagerComponent
 ---@field OnslaughtCoordinator ARSTOnslaughtCoordinator
+---@field CachedGameModeType ERSTGameModeType
 ---@field bIsHUB boolean
 ---@field bDidWin boolean
 ---@field GrantedSkulls int32
@@ -795,17 +809,22 @@ ARSTGameSession = {}
 ---@field EndGameParams FOMDEndGameParameters
 ---@field OnMissionChoiceHostChanged FRSTGameStateBaseOnMissionChoiceHostChanged
 ---@field MissionChoices TArray<FRSTPlayerSelectionParameters>
+---@field PreviousLostMap FName
 ---@field StartingMissionIndex int32
 ---@field CurrentMissionIndex int32
 ---@field SessionMissionSeed int32
 ---@field GrantedKeys FGameplayTagContainer
 ---@field SelectedMissions TArray<URSTMissionDefinition>
 ---@field SelectedDistortions TArray<URSTMetaDistortionDefinition>
+---@field SelectedTeamThreads TArray<FRSTTeamThreadData>
 ---@field OnMissionChoiceChanged FRSTGameStateBaseOnMissionChoiceChanged
 ---@field CurrentMission URSTMissionDefinition
 ---@field GoBreakTagParent FGameplayTag
 ---@field GoBreakTag_GameBegin FGameplayTag
 ---@field OnGoBreakChanged FRSTGameStateBaseOnGoBreakChanged
+---@field OnBonusTrapPlacementLimitsChanged FRSTGameStateBaseOnBonusTrapPlacementLimitsChanged
+---@field BonusTrapPlacementLimits TMap<FGameplayTag, int32>
+---@field BonusTrapPlacementLimitArr TArray<FRSTTrapPlacementLimitRepl>
 ---@field PickupDropChanceMultiplier float
 ---@field PickupDropChanceAddition float
 ---@field RiftPointDepleted FGameplayTag
@@ -823,6 +842,8 @@ ARSTGameSession = {}
 ---@field DraftOrder TArray<int32>
 ---@field OnTeamCompositionChanged FRSTGameStateBaseOnTeamCompositionChanged
 ---@field CinematicInvulnEffect TSubclassOf<UGameplayEffect>
+---@field ReplicatedDifficulty FRSTReplicatedDifficultyData
+---@field OnDifficultyChanged FRSTGameStateBaseOnDifficultyChanged
 ARSTGameStateBase = {}
 
 ---@param isTimedBreakActive boolean
@@ -866,8 +887,10 @@ function ARSTGameStateBase:RSTOnGambledSkullsChangedDelegate__DelegateSignature(
 function ARSTGameStateBase:RSTMissionChoiceHostDelegate__DelegateSignature() end
 ---@param GameState ARSTGameStateBase
 function ARSTGameStateBase:RSTMissionChoiceDelegate__DelegateSignature(GameState) end
+function ARSTGameStateBase:RSTDifficultyChangedDelegate__DelegateSignature() end
 ---@param BossCharacter ARSTCharacter
 function ARSTGameStateBase:RSTBossDelegate__DelegateSignature(BossCharacter) end
+function ARSTGameStateBase:RSTBonusTrapPlacementLimitChanged__DelegateSignature() end
 function ARSTGameStateBase:RSTAccoladesUpdated__DelegateSignature() end
 ---@param Target AActor
 function ARSTGameStateBase:ReleaseSpecialTarget(Target) end
@@ -878,6 +901,7 @@ function ARSTGameStateBase:ProcessBossDied(Character) end
 ---@param PreviousBoss ARSTCharacter
 function ARSTGameStateBase:OnRep_SpawnedBoss(PreviousBoss) end
 function ARSTGameStateBase:OnRep_SessionMissionSeed() end
+function ARSTGameStateBase:OnRep_SelectedTeamThreads() end
 function ARSTGameStateBase:OnRep_SelectedMissions() end
 function ARSTGameStateBase:OnRep_SelectedDistortions() end
 ---@param OldCounts TArray<int32>
@@ -886,12 +910,16 @@ function ARSTGameStateBase:OnRep_RiftProtectedCounts(OldCounts) end
 function ARSTGameStateBase:OnRep_RiftPoints(PreviousRiftPoints) end
 function ARSTGameStateBase:OnRep_MissionChoices() end
 function ARSTGameStateBase:OnRep_IsTimedBreakActive() end
+function ARSTGameStateBase:OnRep_GrantedSkullsCarriedOver() end
 function ARSTGameStateBase:OnRep_GrantedKeys() end
 ---@param PreviousPhase ERSTGamePhase
 function ARSTGameStateBase:OnRep_GamePhase(PreviousPhase) end
+function ARSTGameStateBase:OnRep_GambledSkullsCarriedOver() end
 function ARSTGameStateBase:OnRep_GambledSkulls() end
+function ARSTGameStateBase:OnRep_DifficultyData() end
 function ARSTGameStateBase:OnRep_CurrentWave() end
 function ARSTGameStateBase:OnRep_CurrentMissionIndex() end
+function ARSTGameStateBase:OnRep_BonusTrapPlacementLimitArr() end
 function ARSTGameStateBase:OnRep_AccoladeData() end
 ---@param PRSTag FGameplayTag
 function ARSTGameStateBase:OnPRSInterruptedAndFinished_GoBreak(PRSTag) end
@@ -1007,6 +1035,8 @@ function ARSTGameStateBase:CanSelectHero(PotentialTag, SelectedHeroes, bIgnoreCu
 function ARSTGameStateBase:CanEditHotbar() end
 ---@param riftPointsInitial int32
 function ARSTGameStateBase:CalcInitialRiftPoints(riftPointsInitial) end
+---@param InGamePhase ERSTGamePhase
+function ARSTGameStateBase:BP_OnGamePhaseChanged(InGamePhase) end
 ---@param ScoreTag FGameplayTag
 ---@param Count int32
 ---@param Instances int32
@@ -1072,8 +1102,22 @@ function ARSTHammerDecoy:GetTeam() end
 ---@field SkeletalMeshComp USkeletalMeshComponentBudgeted
 ---@field AttachmentManager URSTAttachmentManagerComponent
 ---@field SkinDefinition URSTSkinDefinition
+---@field DialogueComponent URDialogueComponent
 ARSTHeroSelectProxyActor = {}
 
+function ARSTHeroSelectProxyActor:NotifyCharacterSelected() end
+
+
+---@class ARSTHubSpawnerCoordinator : AActor
+ARSTHubSpawnerCoordinator = {}
+
+---@param TargetIncludeFilterTags FGameplayTagContainer
+---@param bTargetIncludeAnyFilterTags boolean
+---@param TargetIgnoreFilterTags FGameplayTagContainer
+---@return TArray<APawn>
+function ARSTHubSpawnerCoordinator:GetAllPawnsWithTags(TargetIncludeFilterTags, bTargetIncludeAnyFilterTags, TargetIgnoreFilterTags) end
+---@return TArray<APawn>
+function ARSTHubSpawnerCoordinator:BP_GetConsiderPawns() end
 
 
 ---@class ARSTInteractableActor : AActor
@@ -1212,6 +1256,8 @@ ARSTMinirift = {}
 ---@field DefaultStartingCoin int32
 ---@field DelayBetweenWisps float
 ---@field WispGroupSize int32
+---@field GlobalWispCap int32
+---@field PerformanceWispCap int32
 ---@field BossUnlockMap TMap<FGameplayTag, URSTPawnDefinition>
 ---@field SpawnerInfoMap TMap<int32, FSpawnerInfo>
 ---@field OnslaughtActionsActivated TArray<FString>
@@ -1264,6 +1310,9 @@ function ARSTOnslaughtCoordinator:SetAllAICharactersAmount(amountPerSpawn) end
 function ARSTOnslaughtCoordinator:RSTOnslaughtProcessInitialGameStateDelegate__DelegateSignature(GameState) end
 function ARSTOnslaughtCoordinator:RSTOnslaughtInitializeRifts__DelegateSignature() end
 function ARSTOnslaughtCoordinator:ResetOnslaught() end
+---@param Wisp ARSTAICharacter
+---@param bAlsoDestroy boolean
+function ARSTOnslaughtCoordinator:RemoveWisp(Wisp, bAlsoDestroy) end
 ---@param WaveNumber int32
 ---@param SpawnerIndex int32
 function ARSTOnslaughtCoordinator:PreWave(WaveNumber, SpawnerIndex) end
@@ -1369,6 +1418,8 @@ function ARSTOnslaughtCoordinator:CheckOnslaughtModifier(modifier) end
 function ARSTOnslaughtCoordinator:BroadcastEntitySpawn(spawnedEntity) end
 ---@param spawnedEntity ARSTAICharacter
 function ARSTOnslaughtCoordinator:BroadcastBossSpawn(spawnedEntity) end
+---@param bShowBreakableObjects boolean
+function ARSTOnslaughtCoordinator:BP_ShowBreakableObjectsChanged(bShowBreakableObjects) end
 ---@param PawnDefinition URSTPawnDefinition
 ---@param numToAdd int32
 ---@param SpawnLocationType EOnslaughtSpawnLocationType
@@ -1502,6 +1553,7 @@ function ARSTPlayerCharacter:BP_OnInteract(ActorInfo) end
 ---@field OnOwnedTrapDestroyed FRSTPlayerControllerOnOwnedTrapDestroyed
 ---@field HideHUDHandle FRSTLooseTagHandle
 ---@field OnPlayerHeroSelected FRSTPlayerControllerOnPlayerHeroSelected
+---@field CachedKeyGrants FGameplayTagContainer
 ARSTPlayerController = {}
 
 ---@param LevelName FName
@@ -1523,6 +1575,8 @@ function ARSTPlayerController:Server_SetSelectedUpgrades(Upgrades) end
 function ARSTPlayerController:Server_SetSelectedSkins(SelectedSkins) end
 ---@param HotbarItems TArray<URSTInventoryItemDefinition>
 function ARSTPlayerController:Server_SetHotbarItems(HotbarItems) end
+---@param KeyGrants TArray<FGameplayTag>
+function ARSTPlayerController:Server_SetGrantedKeys(KeyGrants) end
 ---@param SelectedHeroTag FGameplayTag
 function ARSTPlayerController:Server_SelectHero(SelectedHeroTag) end
 ---@param SkinTag FGameplayTag
@@ -1572,6 +1626,7 @@ function ARSTPlayerController:OnHeroUnlocksUpdated() end
 function ARSTPlayerController:OnHeroDraftSelectedHeroes(SelectedHeroes) end
 ---@param DesiredHeroes TArray<FGameplayTag>
 function ARSTPlayerController:OnHeroDraftDesiredHeroes(DesiredHeroes) end
+function ARSTPlayerController:OnGrantedKeysChanged() end
 function ARSTPlayerController:OnEndGame() end
 function ARSTPlayerController:OnDisplayThreadSelection() end
 ---@param SelectedHeroes TArray<FGameplayTag>
@@ -1585,6 +1640,8 @@ function ARSTPlayerController:LoadStreamLevel(LevelName) end
 function ARSTPlayerController:KickPlayer(PlayerToKick) end
 function ARSTPlayerController:K2_OnStartAutoRun() end
 function ARSTPlayerController:K2_OnEndAutoRun() end
+---@param SkullCount int32
+function ARSTPlayerController:GrantSkulls(SkullCount) end
 ---@return ARSTPlayerState
 function ARSTPlayerController:GetRSTPlayerState() end
 ---@return URSTAbilitySystemComponent
@@ -1608,6 +1665,8 @@ function ARSTPlayerController:Client_NotifyHeroSelected(HeroTag) end
 ---@param TagContainer FGameplayTagContainer
 ---@param bRecordAnalytics boolean
 function ARSTPlayerController:Client_GrantTags(TagContainer, bRecordAnalytics) end
+---@param SkullCount int32
+function ARSTPlayerController:Client_GrantSkulls(SkullCount) end
 ---@param FlushStats FRSTReplicatedStatList
 function ARSTPlayerController:Client_FlushGameStats(FlushStats) end
 ---@param bDidWin boolean
@@ -1908,7 +1967,7 @@ ARSTPostGameProxyActor = {}
 ---@field HomingContinuousDetectionRange float
 ---@field HomingContinuousUpdateFrequency float
 ---@field bUpdateHomingTargetImmediately boolean
----@field TrailClass TSubclassOf<ARSTProjectileTrail>
+---@field TrailParticleSystem UNiagaraSystem
 ---@field TrailActor ARSTProjectileTrail
 ---@field bShouldInitializeTrailActor boolean
 ---@field DistanceDamageFalloff UCurveFloat
@@ -2053,6 +2112,8 @@ ARSTProjectileTrail = {}
 
 ---@param PSystem UNiagaraComponent
 function ARSTProjectileTrail:OnTrailFXFinished(PSystem) end
+---@return int32
+function ARSTProjectileTrail:GetNumTrails() end
 
 
 ---@class ARSTRift : AActor
@@ -2643,6 +2704,14 @@ FRSTActorOpacityHandle = {}
 
 
 
+---@class FRSTActorPool
+---@field AvailableActors TArray<AActor>
+---@field ActorClass TSoftClassPtr<AActor>
+---@field MaxPoolSize int32
+FRSTActorPool = {}
+
+
+
 ---@class FRSTAdditionalGESetByCallerEntry
 ---@field Value float
 ---@field AggregationType ERSTAdditionalGameplayEffectSetByCallerType
@@ -2700,6 +2769,13 @@ FRSTAppliedModifierData = {}
 ---@field Target TWeakObjectPtr<UObject>
 ---@field Tag FGameplayTag
 FRSTAppliedPropertyContext = {}
+
+
+
+---@class FRSTAssetChunkAssignments
+---@field PrimaryAssetId FPrimaryAssetId
+---@field ChunkId int32
+FRSTAssetChunkAssignments = {}
 
 
 
@@ -2936,6 +3012,19 @@ FRSTComponentCollisionOverride = {}
 
 
 
+---@class FRSTConditionalNiagaraAnimData
+---@field ConditionalTemplates TArray<FRSTConditionalNiagaraEntry>
+FRSTConditionalNiagaraAnimData = {}
+
+
+
+---@class FRSTConditionalNiagaraEntry
+---@field Tags FGameplayTagContainer
+---@field System UNiagaraSystem
+FRSTConditionalNiagaraEntry = {}
+
+
+
 ---@class FRSTCorruptedTrapGridDecoratorEntry
 ---@field BlueprintClass TSubclassOf<ARSTCorruptedTrapGridDecorator>
 ---@field Weight double
@@ -3029,6 +3118,13 @@ FRSTDeferredInputState = {}
 ---@field Handle FActiveGameplayEffectHandle
 ---@field modifier URSTModifierBase
 FRSTDirectModifierData = {}
+
+
+
+---@class FRSTDirectoryChunkAssignments
+---@field Directory FDirectoryPath
+---@field ChunkId int32
+FRSTDirectoryChunkAssignments = {}
 
 
 
@@ -3892,6 +3988,14 @@ FRSTReplicatedAcceleration = {}
 
 
 
+---@class FRSTReplicatedDifficultyData
+---@field InitialDifficulty int32
+---@field GameDifficulty int32
+---@field PlayerDifficulty int32
+FRSTReplicatedDifficultyData = {}
+
+
+
 ---@class FRSTReplicatedMovement
 ---@field bSuspendedInAir boolean
 FRSTReplicatedMovement = {}
@@ -3948,6 +4052,13 @@ FRSTSavedItemUpgradeData = {}
 
 
 
+---@class FRSTSavedPlayerIndex
+---@field Index int32
+---@field bLocal boolean
+FRSTSavedPlayerIndex = {}
+
+
+
 ---@class FRSTSavedPlayerLoadout
 ---@field Items TArray<URSTInventoryItemDefinition>
 FRSTSavedPlayerLoadout = {}
@@ -3958,11 +4069,13 @@ FRSTSavedPlayerLoadout = {}
 ---@field PerPlayerPawnDefinition TArray<URSTPawnDefinitionHero>
 ---@field PerPlayerUserName TArray<FString>
 ---@field PerPlayerLoadouts TArray<FRSTSavedPlayerLoadout>
+---@field PlayerIndexInfo TArray<FRSTSavedPlayerIndex>
 ---@field PerPlayerThreads TArray<FRSTPerPlayerThreadList>
 ---@field PerPlayerPotion TArray<URSTPotionDefinition>
 ---@field PerPlayerRunStats TArray<FRSTReplicatedStatList>
 ---@field SelectedMissions TArray<URSTMissionDefinition>
 ---@field SelectedDistortions TArray<URSTMetaDistortionDefinition>
+---@field SelectedTeamThreads TArray<FRSTTeamThreadData>
 ---@field RiftPointsCarryover int32
 ---@field GrantedSkulls int32
 ---@field GrantedSkullsCarriedOver int32
@@ -4112,6 +4225,19 @@ FRSTTargetingRule = {}
 
 
 
+---@class FRSTTeamCountTrapLimitData
+---@field TeamData TMap<int32, int32>
+FRSTTeamCountTrapLimitData = {}
+
+
+
+---@class FRSTTeamThreadData
+---@field TeamThread URSTMetaTeamThreadDefinition
+---@field State ERSTTeamThreadState
+FRSTTeamThreadData = {}
+
+
+
 ---@class FRSTThreadOption
 ---@field Thread URSTMetaThreadDefinition
 ---@field bNotInLoadout boolean
@@ -4148,6 +4274,13 @@ FRSTTransitionStep = {}
 ---@field ItemTagFilter FGameplayTagQuery
 ---@field bUsed boolean
 FRSTTrapDiscount = {}
+
+
+
+---@class FRSTTrapPlacementLimitRepl
+---@field Group FGameplayTag
+---@field Value int32
+FRSTTrapPlacementLimitRepl = {}
 
 
 
@@ -4250,6 +4383,13 @@ function IRSTActorOpacityControllable:GetOpacityControlledMeshes(OutObscureMeshe
 function IRSTActorOpacityControllable:GetOpacityControlledFXSystems(OutObscureFXSystems) end
 ---@return URSTActorOpacityComponent
 function IRSTActorOpacityControllable:GetActorOpacityComponent() end
+
+
+---@class IRSTActorPoolInterface : IInterface
+IRSTActorPoolInterface = {}
+
+function IRSTActorPoolInterface:BP_PrepareActorForReuse() end
+function IRSTActorPoolInterface:BP_ActorRequestedFromPool() end
 
 
 ---@class IRSTAnimNotifiable : IInterface
@@ -4426,6 +4566,7 @@ function IRSTTrapCooldownModifierInterface:CanCooldownModifierStack() end
 ---@class UAbilityTask_RSTOgreCharge : UAbilityTask
 ---@field OnOgreChargeOverlap FAbilityTask_RSTOgreChargeOnOgreChargeOverlap
 ---@field OnOgreChargeMoveComplete FAbilityTask_RSTOgreChargeOnOgreChargeMoveComplete
+---@field OnOgreChargeFinished FAbilityTask_RSTOgreChargeOnOgreChargeFinished
 UAbilityTask_RSTOgreCharge = {}
 
 ---@param OwningAbility UGameplayAbility
@@ -5730,6 +5871,12 @@ function URSTActorOpacityComponent:OnMeshesChanged() end
 function URSTActorOpacityComponent:ClearOpacityTarget(InOutOperationHandle, bInstant) end
 
 
+---@class URSTActorPoolSubsystem : UWorldSubsystem
+---@field ActorPools TMap<TObjectPtr<UClass>, FRSTActorPool>
+URSTActorPoolSubsystem = {}
+
+
+
 ---@class URSTAdvanceData : URSTHitDataElement
 ---@field DefaultAdvanceDistance float
 ---@field IdealDynamicTargetDistance float
@@ -5790,6 +5937,7 @@ function URSTAnimInstance:IsMontageSlotPlaying(SlotName) end
 ---@field NormalizedSpeed float
 ---@field bInAir boolean
 ---@field PelvisTwist float
+---@field bWasRotationLocked boolean
 ---@field AimPitch float
 ---@field AimYaw float
 ---@field RootYawOffset float
@@ -5862,7 +6010,22 @@ URSTAnimInstanceTrap = {}
 function URSTAnimInstanceTrap:GetTrap() end
 
 
----@class URSTAnimInstanceTrap_Hookshot : URSTAnimInstanceTrap
+---@class URSTAnimInstanceTrap_Ballista : URSTAnimInstanceTrap
+---@field TargetPitch float
+---@field TargetYaw float
+---@field Pitch float
+---@field Yaw float
+---@field ActiveRotationSpeed float
+URSTAnimInstanceTrap_Ballista = {}
+
+---@param bInWasRenderedLastFrame boolean
+function URSTAnimInstanceTrap_Ballista:SetWasRenderedLastFrame(bInWasRenderedLastFrame) end
+---@param InPitch float
+---@param InYaw float
+function URSTAnimInstanceTrap_Ballista:SetTargetRotation(InPitch, InYaw) end
+
+
+---@class URSTAnimInstanceTrap_Hookshot : URSTAnimInstanceTrap_Ballista
 ---@field TargetTransform FTransform
 ---@field bIsGrappling boolean
 URSTAnimInstanceTrap_Hookshot = {}
@@ -5885,6 +6048,12 @@ function URSTAnimLayerManagerComponent:AddAnimLayer(LayerClass) end
 ---@class URSTAnimNotifyState_ForceFeedback : UAnimNotifyState
 ---@field ForceFeedbackParams FRSTForceFeedbackParams
 URSTAnimNotifyState_ForceFeedback = {}
+
+
+
+---@class URSTAnimNotifyState_Niagara_Conditional : UAnimNotifyState_TimedNiagaraEffect
+---@field ConditionalTemplates FRSTConditionalNiagaraAnimData
+URSTAnimNotifyState_Niagara_Conditional = {}
 
 
 
@@ -5913,6 +6082,12 @@ URSTAnimNotify_FireProjectile = {}
 ---@class URSTAnimNotify_ForceFeedback : UAnimNotify
 ---@field ForceFeedbackParams FRSTForceFeedbackParams
 URSTAnimNotify_ForceFeedback = {}
+
+
+
+---@class URSTAnimNotify_Niagara_Conditional : UAnimNotify_PlayNiagaraEffect
+---@field ConditionalTemplates FRSTConditionalNiagaraAnimData
+URSTAnimNotify_Niagara_Conditional = {}
 
 
 
@@ -5965,6 +6140,13 @@ function URSTAppliedHitReactData:CreateAppliedHitReactData(InKnockbackDirection,
 ---@field DefaultPawnDefinition TSoftObjectPtr<URSTPawnDefinition>
 ---@field LoadedAssets TSet<UObject>
 URSTAssetManager = {}
+
+
+
+---@class URSTAssetManagerSettings : UDeveloperSettingsBackedByCVars
+---@field AssetChunkAssignments TArray<FRSTAssetChunkAssignments>
+---@field DirectoryChunkAssignments TArray<FRSTDirectoryChunkAssignments>
+URSTAssetManagerSettings = {}
 
 
 
@@ -6367,9 +6549,16 @@ function URSTCheatManager:ToggleHUD() end
 function URSTCheatManager:ToggleHenry() end
 function URSTCheatManager:ToggleFriendlyFire() end
 function URSTCheatManager:ToggleAimAssistDebug() end
+---@param IndexA int32
+---@param IndexB int32
+function URSTCheatManager:SwapPlayerIndices(IndexA, IndexB) end
 function URSTCheatManager:Suicide() end
 ---@param PickupTableTag FGameplayTag
 function URSTCheatManager:SpawnPickupFromTable(PickupTableTag) end
+---@param Name FString
+---@param Index int32
+---@param Count int32
+function URSTCheatManager:SpawnAICharactersOfClassAtDoor(Name, Index, Count) end
 ---@param Name FString
 ---@param Count int32
 function URSTCheatManager:SpawnAICharactersOfClass(Name, Count) end
@@ -6398,8 +6587,8 @@ function URSTCheatManager:SetInfiniteRift(isInfiniteRift) end
 function URSTCheatManager:SetHotbarSize(NumSlots) end
 ---@param Enabled boolean
 function URSTCheatManager:SetHealthDisplays(Enabled) end
----@param gameDifficulty uint8
-function URSTCheatManager:SetGameDifficulty(gameDifficulty) end
+---@param GameDifficulty uint8
+function URSTCheatManager:SetGameDifficulty(GameDifficulty) end
 ---@param DistortionName FString
 ---@param missionIndex int32
 function URSTCheatManager:SetDistortion(DistortionName, missionIndex) end
@@ -6433,12 +6622,15 @@ function URSTCheatManager:PrintValidMissions(missionIndex) end
 ---@param missionIndex int32
 ---@param ChoiceIndex int32
 function URSTCheatManager:PrintValidDistortions(missionIndex, ChoiceIndex) end
+function URSTCheatManager:PrintTeamThreads() end
 ---@param Tag FGameplayTag
 ---@param Subtag FGameplayTag
 function URSTCheatManager:PrintStat(Tag, Subtag) end
 function URSTCheatManager:PrintProfileStats() end
+function URSTCheatManager:PrintPlayerArray() end
 function URSTCheatManager:PrintMilestoneProgress() end
 function URSTCheatManager:PrintGrantedKeys() end
+function URSTCheatManager:PrintCrystalRiftHealth() end
 ---@param LightingName FString
 function URSTCheatManager:PreviewLighting(LightingName) end
 function URSTCheatManager:NextWave() end
@@ -6458,6 +6650,8 @@ function URSTCheatManager:ForceGarbageCollection() end
 function URSTCheatManager:FinishWave() end
 ---@param Filename FString
 function URSTCheatManager:ExportQuicksave(Filename) end
+---@param bApplyImmediately boolean
+function URSTCheatManager:ExpireTeamThreads(bApplyImmediately) end
 ---@param CueTag FGameplayTag
 function URSTCheatManager:ExecuteGameplayCue(CueTag) end
 function URSTCheatManager:DumpAllPlayerGameplayTags() end
@@ -6479,6 +6673,9 @@ function URSTCheatManager:ClearPotion() end
 function URSTCheatManager:ApplyUpgrade(UpgradeName) end
 ---@param ThreadName FString
 function URSTCheatManager:ApplyThread(ThreadName) end
+---@param ThreadName FString
+---@param bApplyImmediately boolean
+function URSTCheatManager:ApplyTeamThread(ThreadName, bApplyImmediately) end
 ---@param PotionName FString
 function URSTCheatManager:ApplyPotion(PotionName) end
 ---@param DistortionName FString
@@ -6619,6 +6816,7 @@ URSTCommonSession_HostSessionRequest = {}
 ---@field WheelIcon UTexture2D
 ---@field bCreateWorldPing boolean
 ---@field DisplayName FName
+---@field DisplayText FText
 ---@field TileIcon UTexture2D
 ---@field bCreateMinimapPing boolean
 ---@field MapBrush FSlateBrush
@@ -6637,6 +6835,10 @@ URSTCommonSession_HostSessionRequest = {}
 ---@field RequestedAttribute FGameplayAttribute
 URSTCommunicationDefinition = {}
 
+
+
+---@class URSTConditionalNiagaraPreviewData : UAnimMetaData
+URSTConditionalNiagaraPreviewData = {}
 
 
 ---@class URSTConsole : UConsole
@@ -6856,14 +7058,14 @@ function URSTDifficultyManager:ShowDifficulty() end
 function URSTDifficultyManager:SetRiftPointsCarryover(RiftPointsCarryover) end
 ---@param numPlayersDifficulty int32
 function URSTDifficultyManager:SetNumPlayersDifficulty(numPlayersDifficulty) end
----@param initialDifficulty int32
-function URSTDifficultyManager:SetInitialDifficulty(initialDifficulty) end
----@param gameDifficulty int32
-function URSTDifficultyManager:SetGameDifficulty(gameDifficulty) end
+---@param InitialDifficulty int32
+function URSTDifficultyManager:SetInitialDifficulty(InitialDifficulty) end
+---@param GameDifficulty int32
+function URSTDifficultyManager:SetGameDifficulty(GameDifficulty) end
 ---@param numPlayersDifficulty int32
 function URSTDifficultyManager:SetDebugNumPlayersDifficulty(numPlayersDifficulty) end
----@param gameDifficulty int32
-function URSTDifficultyManager:SetDebugGameDifficulty(gameDifficulty) end
+---@param GameDifficulty int32
+function URSTDifficultyManager:SetDebugGameDifficulty(GameDifficulty) end
 ---@param onePlayer boolean
 ---@param twoPlayers boolean
 ---@param threePlayers boolean
@@ -7070,6 +7272,7 @@ function URSTGMMC_Threads:GetSessionMissionSubsystem(Spec) end
 ---@field MinimumCombo int32
 ---@field ComboCoinMultiplier float
 ---@field LargeCombo int32
+---@field SoloRiftPointBonus int32
 ---@field DamageGameplayEffect_SetByCaller TSoftClassPtr<UGameplayEffect>
 ---@field HealGameplayEffect_SetByCaller TSoftClassPtr<UGameplayEffect>
 ---@field DynamicTagGameplayEffect TSoftClassPtr<UGameplayEffect>
@@ -7081,6 +7284,7 @@ function URSTGMMC_Threads:GetSessionMissionSubsystem(Spec) end
 ---@field Modal_KeyMapping TSoftClassPtr<URSTModal_KeyMapping>
 ---@field Modal_Video TSoftClassPtr<URSTModal_Video>
 ---@field SharedTrapPlacementLimits TMap<FGameplayTag, int32>
+---@field TeamSizeSharedTrapPlacementLimits TMap<FGameplayTag, FRSTTeamCountTrapLimitData>
 ---@field HotbarSlotLimits FRuntimeFloatCurve
 ---@field DamageVariance FRSTRange
 ---@field CriticalHitDenominator float
@@ -8518,6 +8722,8 @@ function URSTGameplayStatics:RestartApplicationWithCmdLine(CmdLine) end
 ---@param B FUniqueNetIdRepl
 ---@return boolean
 function URSTGameplayStatics:NetIdEqual(A, B) end
+---@param InLevel ULevelStreaming
+function URSTGameplayStatics:MarkLevelClientOnlyVisible(InLevel) end
 ---@param Hero FGameplayTag
 ---@param Skin FGameplayTag
 ---@return boolean
@@ -9249,6 +9455,7 @@ URSTInputModifier_AimAssist = {}
 
 ---@class URSTInputModifier_SniperADS : UInputModifier
 ---@field GameplayTag FGameplayTag
+---@field SensitivityScalar float
 URSTInputModifier_SniperADS = {}
 
 
@@ -9550,6 +9757,13 @@ URSTMetaSessionMissionOption = {}
 
 
 
+---@class URSTMetaTeamThreadDefinition : URSTMetaModifierDefinition
+---@field bSingleMission boolean
+---@field SelectedStatTags FGameplayTagContainer
+URSTMetaTeamThreadDefinition = {}
+
+
+
 ---@class URSTMetaThreadDefinition : URSTMetaModifierDefinition
 ---@field bHeroLimited boolean
 ---@field AllowedHeroes FGameplayTagContainer
@@ -9702,6 +9916,7 @@ function URSTMilestoneSubsystem:AcknowledgeNewHeroUnlock(HeroTag) end
 ---@field MissionTag FGameplayTag
 ---@field MissionWonStatTags FGameplayTagContainer
 ---@field HeaderBGIcon UTexture2D
+---@field LastRunMissionHeaderIcon UTexture2D
 ---@field MissionTypeIcon UTexture2D
 ---@field MapID FPrimaryAssetId
 ---@field CorruptedTrapGridProperties FRSTCorruptedTrapGridMissionProperties
@@ -9872,6 +10087,10 @@ function URSTModifierSubsystem:OnThreadRemoved(PlayerId, Thread) end
 ---@param PlayerId FUniqueNetIdRepl
 ---@param Thread URSTMetaThreadDefinition
 function URSTModifierSubsystem:OnThreadAdded(PlayerId, Thread) end
+---@param TeamThread URSTMetaTeamThreadDefinition
+function URSTModifierSubsystem:OnTeamThreadRemoved(TeamThread) end
+---@param TeamThread URSTMetaTeamThreadDefinition
+function URSTModifierSubsystem:OnTeamThreadAdded(TeamThread) end
 ---@param PlayerId FUniqueNetIdRepl
 ---@param Potion URSTPotionDefinition
 function URSTModifierSubsystem:OnPotionRemoved(PlayerId, Potion) end
@@ -10012,6 +10231,8 @@ function URSTOnlineBlueprintLibrary:GetUserPrivilegeWithResolveUI(WorldContextOb
 ---@param Privilege ECommonUserPrivilege
 ---@param OutResult ECommonUserPrivilegeResult
 function URSTOnlineBlueprintLibrary:GetUserPrivilege(WorldContextObject, LatentInfo, Player, Privilege, OutResult) end
+---@return boolean
+function URSTOnlineBlueprintLibrary:CanPlatformLinkAccount() end
 
 
 ---@class URSTOnlineSession : UOnlineSession
@@ -10116,6 +10337,7 @@ function URSTPatchNotesSubsystem:CheckPatchNotesVersion() end
 ---@field RangedThreatCap uint8
 ---@field HuntersThreatCap uint8
 ---@field BossThreatCap uint8
+---@field BossSpawnsFromLegacyLocations boolean
 URSTPawnDefinition = {}
 
 
@@ -10196,9 +10418,9 @@ function URSTPawnExtensionComponent:FindPawnExtensionComponent(Actor) end
 ---@field PawnIcon_Head UTexture2D
 ---@field PawnIcon_FullHead UTexture2D
 ---@field PawnIcon_FullBody UTexture2D
----@field HeroSelectProxyClass TSoftClassPtr<ARSTHeroSelectProxyActor>
----@field IdleSequence TSoftObjectPtr<UAnimSequence>
----@field AnimInstanceHeroSelectClass TSoftClassPtr<UAnimInstance>
+---@field HeroSelectProxyClass TSubclassOf<ARSTHeroSelectProxyActor>
+---@field IdleSequence UAnimSequence
+---@field AnimInstanceHeroSelectClass TSubclassOf<UAnimInstance>
 ---@field HeroWidgetCameraOffset FVector
 ---@field HeroWidgetCameraRotationOffset FRotator
 ---@field DisplayIndex int32
@@ -10630,8 +10852,9 @@ URSTPlayerReadySyncData = {}
 
 ---@class URSTPlayerStateMiscModsComponent : UActorComponent
 ---@field PropertyMappings FRSTInheritableGameplayTagPropertyMap
----@field CoinContributionMultiplier float
+---@field TrapDiscounts TArray<FRSTTrapDiscount>
 ---@field bNextTrapCostAllCoin boolean
+---@field CoinContributionMultiplier float
 ---@field FreeDeaths int32
 ---@field FreeDeathChance float
 ---@field HazardDeathCost int32
@@ -11530,6 +11753,9 @@ function URSTRiftSubsystem:ApplyAbilityToAll(Ability, SourceObject) end
 URSTSavedRunFunctionLibrary = {}
 
 ---@param SavedRun FRSTSavedRun
+---@return boolean
+function URSTSavedRunFunctionLibrary:IsRunValid(SavedRun) end
+---@param SavedRun FRSTSavedRun
 ---@param PlayerIndex int32
 ---@param StatTag FGameplayTag
 ---@return float
@@ -11543,6 +11769,9 @@ function URSTSavedRunFunctionLibrary:GetNumPlayers(SavedRun) end
 ---@param SavedRun FRSTSavedRun
 ---@return int32
 function URSTSavedRunFunctionLibrary:GetNumMissionsCompleted(SavedRun) end
+---@param SavedRun FRSTSavedRun
+---@return TArray<int32>
+function URSTSavedRunFunctionLibrary:GetDisplayIndexOrder(SavedRun) end
 
 
 ---@class URSTSessionMissionSubsystem : UGameInstanceSubsystem
@@ -11561,7 +11790,10 @@ function URSTSavedRunFunctionLibrary:GetNumMissionsCompleted(SavedRun) end
 ---@field OnPotionAdded FRSTSessionMissionSubsystemOnPotionAdded
 ---@field OnPotionRemoved FRSTSessionMissionSubsystemOnPotionRemoved
 ---@field OnPotionChanged FRSTSessionMissionSubsystemOnPotionChanged
+---@field OnTeamThreadAdded FRSTSessionMissionSubsystemOnTeamThreadAdded
+---@field OnTeamThreadRemoved FRSTSessionMissionSubsystemOnTeamThreadRemoved
 ---@field SelectedDistortions TArray<URSTMetaDistortionDefinition>
+---@field SelectedTeamThreads TArray<FRSTTeamThreadData>
 ---@field SelectedMissions TArray<URSTMissionDefinition>
 ---@field SelectedThreads TArray<URSTMetaThreadDefinition>
 ---@field AllPlayerGameplayTagContainer FGameplayTagContainer
@@ -11575,6 +11807,8 @@ function URSTSessionMissionSubsystem:SetCurrentSeed(InSeed) end
 ---@param PlayerId FUniqueNetIdRepl
 ---@param Thread URSTMetaThreadDefinition
 function URSTSessionMissionSubsystem:RSTThreadChange__DelegateSignature(PlayerId, Thread) end
+---@param Thread URSTMetaTeamThreadDefinition
+function URSTSessionMissionSubsystem:RSTTeamThreadChange__DelegateSignature(Thread) end
 ---@param PlayerId FUniqueNetIdRepl
 function URSTSessionMissionSubsystem:RSTPotionChangePlayer__DelegateSignature(PlayerId) end
 ---@param PlayerId FUniqueNetIdRepl
@@ -11590,6 +11824,8 @@ function URSTSessionMissionSubsystem:RSTDistortionChange__DelegateSignature(Dist
 ---@param PlayerState ARSTPlayerState
 ---@return TArray<URSTMetaThreadDefinition>
 function URSTSessionMissionSubsystem:GetSelectedThreads(PlayerState) end
+---@return TArray<FRSTTeamThreadData>
+function URSTSessionMissionSubsystem:GetSelectedTeamThreadData() end
 ---@param PlayerState APlayerState
 ---@return URSTPotionDefinition
 function URSTSessionMissionSubsystem:GetSelectedPotion(PlayerState) end
@@ -11669,8 +11905,6 @@ URSTSettingBasedScalar = {}
 ---@field ControllerPlatform FName
 ---@field ControllerPreset FName
 ---@field InputConfigName FName
----@field bIsSprintToggle boolean
----@field bIsADSToggle boolean
 ---@field bIsLookInvert boolean
 ---@field LookSensitivity float
 ---@field SplitLookSensitivity FVector2D
@@ -11683,11 +11917,6 @@ URSTSettingBasedScalar = {}
 ---@field GamepadCursorSpeed float
 ---@field GamepadCursorDeadzone float
 ---@field bSubtitlesEnabled boolean
----@field bAllowGore boolean
----@field FieldOfViewModifier float
----@field ADSFieldOfViewModifier float
----@field bCanCollectAnalytics boolean
----@field bHasSeenAnalyticsPopup boolean
 ---@field DLSSMode UDLSSMode
 ---@field ScreenPercentage float
 ---@field AntiAliasingMethod FString
@@ -11705,13 +11934,13 @@ URSTSettingBasedScalar = {}
 ---@field bUseHealthBars boolean
 ---@field bDrawMapWidgets boolean
 ---@field bEnableGlobalInvalidation boolean
----@field PreferredRegion FString
----@field bHasSeenRegionPopup boolean
 ---@field LastSeenPatchNotesVersion FString
----@field SessionVisibility ECommonSessionVisibility
----@field bCrossplayEnabled boolean
+---@field bShowBreakableObjects boolean
+---@field bLinkToExternalAccount boolean
 URSTSettingsLocal = {}
 
+---@return boolean
+function URSTSettingsLocal:ShouldShowBreakableObjects() end
 ---@return boolean
 function URSTSettingsLocal:ShouldRunAutoBenchmarkAtStartup() end
 ---@param LocalPlayer ULocalPlayer
@@ -11749,16 +11978,14 @@ function URSTSettingsLocal:SetSplitLookSensitivityY(Sens) end
 function URSTSettingsLocal:SetSplitLookSensitivityX(Sens) end
 ---@param InVolume float
 function URSTSettingsLocal:SetSoundFXVolume(InVolume) end
----@param InSessionVisibility ECommonSessionVisibility
-function URSTSettingsLocal:SetSessionVisiblity(InSessionVisibility) end
+---@param bInShowBreakableObjects boolean
+function URSTSettingsLocal:SetShowBreakableObjects(bInShowBreakableObjects) end
 ---@param InScreenPercentage float
 function URSTSettingsLocal:SetScreenPercentage(InScreenPercentage) end
 ---@param Value float
 function URSTSettingsLocal:SetSafeZone(Value) end
 ---@param InMethod FString
 function URSTSettingsLocal:SetReflectionMethod(InMethod) end
----@param InPreferredRegion FString
-function URSTSettingsLocal:SetPreferredRegion(InPreferredRegion) end
 ---@param InVolume float
 function URSTSettingsLocal:SetOverallVolume(InVolume) end
 ---@param bEnabled boolean
@@ -11777,26 +12004,20 @@ function URSTSettingsLocal:SetMusicVolume(InVolume) end
 function URSTSettingsLocal:SetLumenHardwareRayTracing(bEnabled) end
 ---@param Sens float
 function URSTSettingsLocal:SetLookSensitivity(Sens) end
+---@param Value boolean
+function URSTSettingsLocal:SetLinkToExternalAccount(Value) end
 ---@param InLastSeenPatchNotesVersion FString
 function URSTSettingsLocal:SetLastSeenPatchNotesVersion(InLastSeenPatchNotesVersion) end
----@param IsSprintToggle boolean
-function URSTSettingsLocal:SetIsSprintToggle(IsSprintToggle) end
 ---@param IsSplitLookSens boolean
 function URSTSettingsLocal:SetIsSplitLookSensitivity(IsSplitLookSens) end
 ---@param IsLookInvert boolean
 function URSTSettingsLocal:SetIsLookInvert(IsLookInvert) end
----@param IsADSToggle boolean
-function URSTSettingsLocal:SetIsADSToggle(IsADSToggle) end
 ---@param IsSplitLookSens boolean
 function URSTSettingsLocal:SetIsADSSplitLookSensitivity(IsSplitLookSens) end
 ---@param bEnabled boolean
 function URSTSettingsLocal:SetHeadphoneModeEnabled(bEnabled) end
 ---@param bEnabled boolean
 function URSTSettingsLocal:SetHDRAudioModeEnabled(bEnabled) end
----@param bHasSeen boolean
-function URSTSettingsLocal:SetHasSeenRegionPopup(bHasSeen) end
----@param bHasSeen boolean
-function URSTSettingsLocal:SetHasSeenAnalyticsPopup(bHasSeen) end
 ---@param InGraphicsQuality int32
 function URSTSettingsLocal:SetGraphicsQuality(InGraphicsQuality) end
 ---@param InMethod FString
@@ -11819,8 +12040,6 @@ function URSTSettingsLocal:SetFrameRateLimit_Always(NewLimitFPS) end
 function URSTSettingsLocal:SetFoliageDensity(InDensity) end
 ---@param InCullDistance float
 function URSTSettingsLocal:SetFoliageCullDistance(InCullDistance) end
----@param InFieldOfViewModifier float
-function URSTSettingsLocal:SetFieldOfViewModifier(InFieldOfViewModifier) end
 ---@param InVolume float
 function URSTSettingsLocal:SetEnemyDialogueVolume(InVolume) end
 ---@param bEnabled boolean
@@ -11835,26 +12054,18 @@ function URSTSettingsLocal:SetDisplayGamma(InGamma) end
 function URSTSettingsLocal:SetDialogueVolume(InVolume) end
 ---@param InDesiredSuffix FString
 function URSTSettingsLocal:SetDesiredDeviceProfileQualitySuffix(InDesiredSuffix) end
----@param bInCrossplayEnabled boolean
-function URSTSettingsLocal:SetCrossplayEnabled(bInCrossplayEnabled) end
 ---@param InControllerPlatform FName
 function URSTSettingsLocal:SetControllerPlatform(InControllerPlatform) end
----@param bCanCollect boolean
-function URSTSettingsLocal:SetCanCollectAnalytics(bCanCollect) end
 ---@param InAudioOutputDeviceId FString
 function URSTSettingsLocal:SetAudioOutputDeviceId(InAudioOutputDeviceId) end
 ---@param InAntiAliasingMethod FString
 function URSTSettingsLocal:SetAntiAliasingMethod(InAntiAliasingMethod) end
----@param AllowGore boolean
-function URSTSettingsLocal:SetAllowGore(AllowGore) end
 ---@param Sens float
 function URSTSettingsLocal:SetADSSplitLookSensitivityY(Sens) end
 ---@param Sens float
 function URSTSettingsLocal:SetADSSplitLookSensitivityX(Sens) end
 ---@param Sens float
 function URSTSettingsLocal:SetADSLookSensitivity(Sens) end
----@param InADSFieldOfViewModifier float
-function URSTSettingsLocal:SetADSFieldOfViewModifier(InADSFieldOfViewModifier) end
 ---@param bSaveImmediately boolean
 function URSTSettingsLocal:RunAutoBenchmark(bSaveImmediately) end
 ---@return boolean
@@ -11864,9 +12075,9 @@ function URSTSettingsLocal:IsHeadphoneModeEnabled() end
 ---@return boolean
 function URSTSettingsLocal:IsHDRAudioModeEnabled() end
 ---@return boolean
-function URSTSettingsLocal:HasSeenRegionPopup() end
+function URSTSettingsLocal:IsDLSSSupported() end
 ---@return boolean
-function URSTSettingsLocal:HasSeenAnalyticsPopup() end
+function URSTSettingsLocal:IsDLSSEnabled() end
 ---@return boolean
 function URSTSettingsLocal:GetVoiceChatPushToTalk() end
 ---@return boolean
@@ -11893,8 +12104,8 @@ function URSTSettingsLocal:GetSplitLookSensivityY() end
 function URSTSettingsLocal:GetSplitLookSensivityX() end
 ---@return float
 function URSTSettingsLocal:GetSoundFXVolume() end
----@return ECommonSessionVisibility
-function URSTSettingsLocal:GetSessionVisibility() end
+---@param OutOptions TArray<FString>
+function URSTSettingsLocal:GetShadowsQualtiyOptions(OutOptions) end
 ---@return float
 function URSTSettingsLocal:GetScreenPercentage() end
 ---@return float
@@ -11903,8 +12114,6 @@ function URSTSettingsLocal:GetSafeZone() end
 function URSTSettingsLocal:GetReflectionMethodOptions(OutOptions) end
 ---@return FString
 function URSTSettingsLocal:GetReflectionMethod() end
----@return FString
-function URSTSettingsLocal:GetPreferredRegion() end
 ---@return float
 function URSTSettingsLocal:GetOverallVolume() end
 ---@return boolean
@@ -11923,16 +12132,14 @@ function URSTSettingsLocal:GetMusicVolume() end
 function URSTSettingsLocal:GetLumenHardwareRayTracing() end
 ---@return float
 function URSTSettingsLocal:GetLookSensivity() end
+---@return boolean
+function URSTSettingsLocal:GetLinkToExternalAccount() end
 ---@return FString
 function URSTSettingsLocal:GetLastSeenPatchNotesVersion() end
----@return boolean
-function URSTSettingsLocal:GetIsSprintToggle() end
 ---@return boolean
 function URSTSettingsLocal:GetIsSplitLookSensitivity() end
 ---@return boolean
 function URSTSettingsLocal:GetIsLookInvert() end
----@return boolean
-function URSTSettingsLocal:GetIsADSToggle() end
 ---@return boolean
 function URSTSettingsLocal:GetIsADSSplitLookSensitivity() end
 ---@param ConfigName FName
@@ -11969,8 +12176,6 @@ function URSTSettingsLocal:GetFoliageDensity() end
 ---@return float
 function URSTSettingsLocal:GetFoliageCullDistance() end
 ---@return float
-function URSTSettingsLocal:GetFieldOfViewModifier() end
----@return float
 function URSTSettingsLocal:GetEnemyDialogueVolume() end
 ---@return boolean
 function URSTSettingsLocal:GetEnableGlobalInvalidation() end
@@ -11984,8 +12189,6 @@ function URSTSettingsLocal:GetDisplayGamma() end
 function URSTSettingsLocal:GetDialogueVolume() end
 ---@return FString
 function URSTSettingsLocal:GetDesiredDeviceProfileQualitySuffix() end
----@return boolean
-function URSTSettingsLocal:GetCrossplayEnabled() end
 ---@return FName
 function URSTSettingsLocal:GetControllerPlatform() end
 ---@return FString
@@ -11996,22 +12199,16 @@ function URSTSettingsLocal:GetAreSubtitlesEnabled() end
 function URSTSettingsLocal:GetAntiAliasingMethods() end
 ---@return FString
 function URSTSettingsLocal:GetAntiAliasingMethod() end
----@return boolean
-function URSTSettingsLocal:GetAllowGore() end
 ---@return float
 function URSTSettingsLocal:GetADSSplitLookSensivityY() end
 ---@return float
 function URSTSettingsLocal:GetADSSplitLookSensivityX() end
 ---@return float
 function URSTSettingsLocal:GetADSLookSensivity() end
----@return float
-function URSTSettingsLocal:GetADSFieldOfViewModifier() end
 ---@return boolean
 function URSTSettingsLocal:CanRunAutoBenchmark() end
 ---@return boolean
 function URSTSettingsLocal:CanModifyHeadphoneModeEnabled() end
----@return boolean
-function URSTSettingsLocal:CanCollectAnalytics() end
 
 
 ---@class URSTSettingsShared : ULocalPlayerSaveGame
@@ -12041,6 +12238,18 @@ function URSTSettingsLocal:CanCollectAnalytics() end
 ---@field bInvertHorizontalAxis boolean
 ---@field GamepadLookSensitivityPreset ERSTGamepadSensitivity
 ---@field GamepadTargetingSensitivityPreset ERSTGamepadSensitivity
+---@field bIsSprintToggle boolean
+---@field bIsADSToggle boolean
+---@field bCanCollectAnalytics boolean
+---@field bHasSeenAnalyticsPopup boolean
+---@field bAllowGore boolean
+---@field PreferredRegion FString
+---@field bHasSeenRegionPopup boolean
+---@field FieldOfViewModifier float
+---@field ADSFieldOfViewModifier float
+---@field SessionVisibility ECommonSessionVisibility
+---@field bCrossplayEnabled boolean
+---@field bIsCameraShakeEnabled boolean
 URSTSettingsShared = {}
 
 ---@param NewValue boolean
@@ -12063,16 +12272,30 @@ function URSTSettingsShared:SetSubtitlesTextBorder(Value) end
 function URSTSettingsShared:SetSubtitlesEnabled(Value) end
 ---@param Value ESubtitleDisplayBackgroundOpacity
 function URSTSettingsShared:SetSubtitlesBackgroundOpacity(Value) end
+---@param InSessionVisibility ECommonSessionVisibility
+function URSTSettingsShared:SetSessionVisiblity(InSessionVisibility) end
+---@param InPreferredRegion FString
+function URSTSettingsShared:SetPreferredRegion(InPreferredRegion) end
 ---@param NewValue double
 function URSTSettingsShared:SetMouseSensitivityY(NewValue) end
 ---@param NewValue double
 function URSTSettingsShared:SetMouseSensitivityX(NewValue) end
 ---@param NewValue ERSTGamepadSensitivity
 function URSTSettingsShared:SetLookSensitivityPreset(NewValue) end
+---@param IsSprintToggle boolean
+function URSTSettingsShared:SetIsSprintToggle(IsSprintToggle) end
+---@param bEnabled boolean
+function URSTSettingsShared:SetIsCameraShakeEnabled(bEnabled) end
+---@param IsADSToggle boolean
+function URSTSettingsShared:SetIsADSToggle(IsADSToggle) end
 ---@param NewValue boolean
 function URSTSettingsShared:SetInvertVerticalAxis(NewValue) end
 ---@param NewValue boolean
 function URSTSettingsShared:SetInvertHorizontalAxis(NewValue) end
+---@param bHasSeen boolean
+function URSTSettingsShared:SetHasSeenRegionPopup(bHasSeen) end
+---@param bHasSeen boolean
+function URSTSettingsShared:SetHasSeenAnalyticsPopup(bHasSeen) end
 ---@param NewValue ERSTGamepadSensitivity
 function URSTSettingsShared:SetGamepadTargetingSensitivityPreset(NewValue) end
 ---@param NewValue float
@@ -12081,12 +12304,26 @@ function URSTSettingsShared:SetGamepadMoveStickDeadZone(NewValue) end
 function URSTSettingsShared:SetGamepadLookStickDeadZone(NewValue) end
 ---@param NewValue boolean
 function URSTSettingsShared:SetForceFeedbackEnabled(NewValue) end
+---@param InFieldOfViewModifier float
+function URSTSettingsShared:SetFieldOfViewModifier(InFieldOfViewModifier) end
+---@param bInCrossplayEnabled boolean
+function URSTSettingsShared:SetCrossplayEnabled(bInCrossplayEnabled) end
 ---@param InColorBlindStrength int32
 function URSTSettingsShared:SetColorBlindStrength(InColorBlindStrength) end
 ---@param InMode ERSTColorBlindMode
 function URSTSettingsShared:SetColorBlindMode(InMode) end
+---@param bCanCollect boolean
+function URSTSettingsShared:SetCanCollectAnalytics(bCanCollect) end
+---@param AllowGore boolean
+function URSTSettingsShared:SetAllowGore(AllowGore) end
 ---@param NewValue ERSTAllowBackgroundAudioSetting
 function URSTSettingsShared:SetAllowAudioInBackgroundSetting(NewValue) end
+---@param InADSFieldOfViewModifier float
+function URSTSettingsShared:SetADSFieldOfViewModifier(InADSFieldOfViewModifier) end
+---@return boolean
+function URSTSettingsShared:HasSeenRegionPopup() end
+---@return boolean
+function URSTSettingsShared:HasSeenAnalyticsPopup() end
 ---@return boolean
 function URSTSettingsShared:GetTriggerPullUsesHapticThreshold() end
 ---@return uint8
@@ -12107,10 +12344,20 @@ function URSTSettingsShared:GetSubtitlesTextBorder() end
 function URSTSettingsShared:GetSubtitlesEnabled() end
 ---@return ESubtitleDisplayBackgroundOpacity
 function URSTSettingsShared:GetSubtitlesBackgroundOpacity() end
+---@return ECommonSessionVisibility
+function URSTSettingsShared:GetSessionVisibility() end
+---@return FString
+function URSTSettingsShared:GetPreferredRegion() end
 ---@return double
 function URSTSettingsShared:GetMouseSensitivityY() end
 ---@return double
 function URSTSettingsShared:GetMouseSensitivityX() end
+---@return boolean
+function URSTSettingsShared:GetIsSprintToggle() end
+---@return boolean
+function URSTSettingsShared:GetIsCameraShakeEnabled() end
+---@return boolean
+function URSTSettingsShared:GetIsADSToggle() end
 ---@return boolean
 function URSTSettingsShared:GetInvertVerticalAxis() end
 ---@return boolean
@@ -12125,12 +12372,30 @@ function URSTSettingsShared:GetGamepadLookStickDeadZone() end
 function URSTSettingsShared:GetGamepadLookSensitivityPreset() end
 ---@return boolean
 function URSTSettingsShared:GetForceFeedbackEnabled() end
+---@return float
+function URSTSettingsShared:GetFieldOfViewModifier() end
+---@return boolean
+function URSTSettingsShared:GetCrossplayEnabled() end
 ---@return int32
 function URSTSettingsShared:GetColorBlindStrength() end
 ---@return ERSTColorBlindMode
 function URSTSettingsShared:GetColorBlindMode() end
+---@return boolean
+function URSTSettingsShared:GetAllowGore() end
 ---@return ERSTAllowBackgroundAudioSetting
 function URSTSettingsShared:GetAllowAudioInBackgroundSetting() end
+---@return float
+function URSTSettingsShared:GetADSFieldOfViewModifier() end
+---@return boolean
+function URSTSettingsShared:CanCollectAnalytics() end
+
+
+---@class URSTSettingsSharedFunctionLibrary : UBlueprintFunctionLibrary
+URSTSettingsSharedFunctionLibrary = {}
+
+---@param PlayerController APlayerController
+---@return URSTSettingsShared
+function URSTSettingsSharedFunctionLibrary:GetSharedPlayerSettings(PlayerController) end
 
 
 ---@class URSTSharedIconBlueprintLibrary : UBlueprintFunctionLibrary
@@ -12263,8 +12528,8 @@ URSTSkinFragment_MeshReplacement_Static = {}
 ---@field Identifier FGameplayTag
 ---@field DisplayIndex int32
 ---@field SkinName FText
----@field SkinIcon TSoftObjectPtr<UTexture2D>
----@field HeroSelectProxyClass TSoftClassPtr<ARSTHeroSelectProxyActor>
+---@field SkinIcon UTexture2D
+---@field HeroSelectProxyClass TSubclassOf<ARSTHeroSelectProxyActor>
 URSTSkinUserFacingData = {}
 
 ---@param UserFacingArray TArray<URSTSkinUserFacingData>
@@ -12630,6 +12895,14 @@ URSTTrapGridBoxComponent = {}
 
 
 
+---@class URSTTrapPlacementBlueprintLibrary : UBlueprintFunctionLibrary
+URSTTrapPlacementBlueprintLibrary = {}
+
+---@param Pawn APawn
+---@return URSTTrapPlacementComponent
+function URSTTrapPlacementBlueprintLibrary:GetTrapPlacementComponent(Pawn) end
+
+
 ---@class URSTTrapPlacementComponent : UPawnComponent
 ---@field PropertyMappings FRSTInheritableGameplayTagPropertyMap
 ---@field OnTrapPlaced FRSTTrapPlacementComponentOnTrapPlaced
@@ -12638,7 +12911,6 @@ URSTTrapGridBoxComponent = {}
 ---@field Requests TMap<ARSTTrap, FRSTTrapPlacementRequest>
 ---@field PlacementLimitGroupPenalties TMap<FGameplayTag, int32>
 ---@field PlacementLimitGroupBonus TMap<FGameplayTag, int32>
----@field Discounts TArray<FRSTTrapDiscount>
 ---@field RotateTrapWidgetClass TSoftClassPtr<UUserWidget>
 ---@field SellTrapWidgetClass TSoftClassPtr<UUserWidget>
 ---@field SellingBlockedTags FGameplayTagContainer
@@ -12691,6 +12963,11 @@ function URSTTrapPlacementComponent:NetMulticast_AddPlacementGroupBonus(Placemen
 ---@param PlacementLimitGroup FGameplayTag
 ---@return boolean
 function URSTTrapPlacementComponent:HasReachedPlacementLimit(PlacementLimitGroup) end
+---@param InInventoryItem ARSTInventoryItemInstance
+---@return boolean
+function URSTTrapPlacementComponent:HasEnoughCoinForTrap(InInventoryItem) end
+---@return boolean
+function URSTTrapPlacementComponent:HasEnoughCoin() end
 ---@return boolean
 function URSTTrapPlacementComponent:HasAnyUnusedFreeTrapDiscount() end
 ---@param PlacementLimitGroup FGameplayTag

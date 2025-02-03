@@ -1,6 +1,11 @@
 ---@meta
 
 ---@class ABP_Museum_Corner_SouthWing_C : ABP_OMDTrapGrid_C
+---@field ColumnB_CastStone_Deco UStaticMeshComponent
+---@field Arch_1x1x4_StoneWall_SM UStaticMeshComponent
+---@field Crenel_BaseD_CastStone_SubD_BendB UStaticMeshComponent
+---@field RSTTrapGridBox13 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox12 URSTTrapGridBoxComponent
 ---@field Wall_4x4x05_Stonewall_SM24 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM32 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM31 UStaticMeshComponent
@@ -63,7 +68,6 @@
 ---@field Wall_4x4x05_Stonewall_SM7 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM6 UStaticMeshComponent
 ---@field Wall_4x4x05_Stonewall_SM5 UStaticMeshComponent
----@field Arch_1x1x4_StoneWall_SM UStaticMeshComponent
 ---@field Column_Square_1_4_StoneWall_SM3 UStaticMeshComponent
 ---@field Stair_1x4_StoneWallBlock_SM1 UStaticMeshComponent
 ---@field Stair_1x4_StoneWallBlock_SM UStaticMeshComponent

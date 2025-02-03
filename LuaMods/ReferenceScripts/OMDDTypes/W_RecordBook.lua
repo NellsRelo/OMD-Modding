@@ -2,10 +2,9 @@
 
 ---@class UW_RecordBook_C : URSTActivatableWidget
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field SafeZone_0 USafeZone
+---@field SafeZone_1 USafeZone
 ---@field W_ExitMenuButton UW_ExitMenuButton_C
----@field W_RecordBook_Hero UW_RecordBook_Hero_C
----@field W_RecordBook_Profile UW_RecordBook_Profile_C
----@field W_RecordBook_RunStats UW_RecordBook_RunStats_C
 ---@field W_TopBar_Generic UW_TopBar_Generic_C
 ---@field WidgetSwitcher_192 UWidgetSwitcher
 ---@field NPC TSoftObjectPtr<ABP_NPCInteractable_C>

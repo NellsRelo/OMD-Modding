@@ -21,9 +21,9 @@ UUltraDynamicWeather_Functions_C['Get Season · 𝖴𝖣𝖶'] = function(__Worl
 ---@param __WorldContext UObject
 UUltraDynamicWeather_Functions_C['Change to Random Weather Variation · 𝖴𝖣𝖶'] = function(Time_to_Transition_to_Random_Weather__Seconds_, __WorldContext) end
 ---@param New_Weather_Type UUDS_Weather_Settings_C
----@param Time_To_Transition_To_New_Weather__Seconds_ double
+---@param Time_to_Transition_to_New_Weather__Seconds_ double
 ---@param __WorldContext UObject
-UUltraDynamicWeather_Functions_C['Change Weather · 𝖴𝖣𝖶'] = function(New_Weather_Type, Time_To_Transition_To_New_Weather__Seconds_, __WorldContext) end
+UUltraDynamicWeather_Functions_C['Change Weather · 𝖴𝖣𝖶'] = function(New_Weather_Type, Time_to_Transition_to_New_Weather__Seconds_, __WorldContext) end
 ---@param __WorldContext UObject
 ---@param As_String FString
 ---@param As_Enumerator UDS_Weather_Display_Names::Type

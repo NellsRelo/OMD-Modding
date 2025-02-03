@@ -15,8 +15,8 @@ ABP_Projectile_Hellbat_Stoner_C = {}
 
 ---@param ImpactLoc FVector
 function ABP_Projectile_Hellbat_Stoner_C:DoAOEDamage(ImpactLoc) end
-function ABP_Projectile_Hellbat_Stoner_C:ReceiveBeginPlay() end
 function ABP_Projectile_Hellbat_Stoner_C:ReceiveDestroyed() end
+function ABP_Projectile_Hellbat_Stoner_C:ReceiveBeginPlay() end
 ---@param MyComp UPrimitiveComponent
 ---@param Other AActor
 ---@param OtherComp UPrimitiveComponent

@@ -2,6 +2,7 @@
 
 ---@class ABP_Barricade_Wide_C : ABP_RSTTrap_Base_C
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field RSTAttackLocations URSTAttackLocationsComponent
 ---@field W_HealthDisplay UWidgetComponent
 ---@field RSTObstruction URSTObstructionComponent
 ---@field P_BarricadeHitFX UParticleSystemComponent
