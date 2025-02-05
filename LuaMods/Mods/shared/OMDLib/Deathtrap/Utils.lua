@@ -1,12 +1,11 @@
 local UEHelpers = require("UEHelpers")
 local Utils = {}
 
-function Utils.ForEachCharacter(callback)
+function Utils.ForEachCharacter(cb)
   for i = 0, 4, 1 do
     local character = UEHelpers.GetGameplayStatics():GetPlayerCharacter(world, i)
-    print(Utils.GetCharacterPawnTagName(character))
     if character:IsValid() then
-      callback(character)
+      cb(character)
     end
   end
 end
@@ -19,13 +18,13 @@ end
 
 function Utils.IsMax(character)
   if character:IsValid() then
-    return Utils.GetCharacterPawnTagName(character) == "Character.Hero.Blunderbuss"
+    return Utils.GetCharacterPawnTagName(character) == "Character.Hero.Max"
   end
 end
 
 function Utils.IsHarlow(character)
   if character:IsValid() then
-    return Utils.GetCharacterPawnTagName(character) == "Character.Hero.Daggers"
+    return Utils.GetCharacterPawnTagName(character) == "Character.Hero.Blunderbuss"
   end
 end
 
@@ -52,7 +51,6 @@ function Utils.IsVaan(character)
     return Utils.GetCharacterPawnTagName(character) == "Character.Hero.Crossbow"
   end
 end
-
 
 function Utils.IsWren(character)
   if character:IsValid() then
