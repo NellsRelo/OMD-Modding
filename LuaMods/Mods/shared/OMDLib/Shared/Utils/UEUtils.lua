@@ -31,12 +31,13 @@ Utils.findInstanceOf = function(class, ShowCount)
   end
 
   for _, v in pairs(instances or {}) do
-    if v:IsValid() then
+    if v:IsValid() and not string.find(v:GetFullName(), "Leaked") then
       return v
-    else
-      error("No valid " .. class .. " found")
     end
   end
+
+  print("No valid " .. class .. " found")
+  return nil
 end
 
 function Utils.CacheDefaultObject(ObjectFullName, VariableName, ForceInvalidateCache)
