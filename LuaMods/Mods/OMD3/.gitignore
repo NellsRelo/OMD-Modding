@@ -1,0 +1,7 @@
+*
+!ExampleMod
+!ExampleMod/**
+!SpellbookMidWaveExample
+!SpellbookMidWaveExample/**
+!.gitignore
+!README.MD
