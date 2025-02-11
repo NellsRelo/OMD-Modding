@@ -6,6 +6,10 @@ function Retrieve.GetKismetGuidLibrary(ForceInvalidateCache)
   ForceInvalidateCache)
 end
 
+function Retrieve.GetDelegateProperty(ForceInvalidateCache)
+  return Utils.CacheDefaultObject("/Script/CoreUObject.DelegateProperty", "OMDLib_DelegateProperty",
+  ForceInvalidateCache)
+end
 --- Return the Game User Settings
 --- @return UOMDGameUserSettings|UGameUserSettings|nil
 function Retrieve.GetGameUserSettings()
