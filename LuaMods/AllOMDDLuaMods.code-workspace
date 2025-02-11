@@ -2,16 +2,20 @@
   "folders": [
     {
       "path": "C:\\OMD\\LuaMods\\Mods\\OMDD",
-      "name": "OMD3 Lua Mods"
+      "name": "OMDD Lua Mods"
     },
     {
-      "path": "C:\\OMD\\LuaMods\\ReferenceScripts\\OMDD",
+      "path": "C:\\OMD\\LuaMods\\Mods\\shared\\OMDLib",
+      "name": "OMDLib"
+    },
+    {
+      "path": "C:\\OMD\\LuaMods\\ReferenceScripts\\OMDDTypes",
       "name": "ReferenceScripts"
     }
   ],
   "settings": {
     "search.exclude": {},
-    "Lua.workspace.library": ["C:\\OMD\\LuaMods\\ReferenceScripts\\OMDD"],
+    "Lua.workspace.library": ["C:\\OMD\\LuaMods\\ReferenceScripts\\OMDDTypes", "C:\\OMD\\LuaMods\\Mods\\shared\\OMDLib"],
     "Lua.diagnostics.libraryFiles": "Disable",
     "Lua.diagnostics.workspaceRate": 25,
     "Lua.diagnostics.workspaceDelay": 5000,

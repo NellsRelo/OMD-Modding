@@ -18,6 +18,8 @@
     "Lua.workspace.preloadFileSize": 10000,
     "Lua.diagnostics.globals": [
       "OMDLib", "ModRef"
-    ]
+    ],
+    "bg3ModHelper.rootModPath": "c:\\OMD\\LuaMods\\Mods",
+    "bg3ModHelper.packingPriority": 0
   }
 }
