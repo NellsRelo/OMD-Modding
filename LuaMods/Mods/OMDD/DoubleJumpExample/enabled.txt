@@ -1,5 +1,0 @@
-*
-*/
-DoubleJump/
-!ExampleMod
-!ExampleMod/**
