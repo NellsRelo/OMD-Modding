@@ -35,6 +35,10 @@ function Retrieve.ExperienceDefinitions()
   return SharedUtils.findInstanceOf("RSTExperienceDefinition")
 end
 
+function Retrieve.ChatSubsystem()
+  return SharedUtils.findInstanceOf("RSTWorldChatSubsystem")
+end
+
 --- Function to get or create the RSTCheatManager (the OMDD specific Manager, not UE)
 --- @return RSTCheatManager
 function Retrieve.RSTCheatManager()
