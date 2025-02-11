@@ -15,6 +15,26 @@ function Retrieve.PlayerCharacter(idx)
   end
 end
 
+function Retrieve.InventoryFunctionLibrary(ForceInvalidateCache)
+  return SharedUtils.CacheDefaultObject(
+    "/Script/OMD4.RSTInventoryFunctionLibrary",
+    "OMDLib_RSTInventoryFunctionLibrary",
+    ForceInvalidateCache
+  )
+end
+
+function Retrieve.OnslaughtCoordinator()
+    return SharedUtils.findInstanceOf("RSTOnslaughtCoordinator")
+end
+
+function Retrieve.GameStateBase()
+    return SharedUtils.findInstanceOf("RSTGameStateBase")
+end
+
+function Retrieve.ExperienceDefinitions()
+  return SharedUtils.findInstanceOf("RSTExperienceDefinition")
+end
+
 --- Function to get or create the RSTCheatManager (the OMDD specific Manager, not UE)
 --- @return RSTCheatManager
 function Retrieve.RSTCheatManager()
@@ -30,6 +50,18 @@ function Retrieve.RSTCheatManager()
     local CheatManager = StaticConstructObject(RSTCheatManagerClass, PlayerController, 0, 0, 0, nil, false, false, nil)
 
     return CheatManager
+end
+
+function Retrieve.GetInventoryManagerComponent()
+  return Utils.findInstanceOf("RSTInventoryManagerComponent")
+end
+
+function Retrieve.UIExtensions(ForceInvalidateCache)
+  return SharedUtils.CacheDefaultObject(
+    "/Script/OMD4.RSTUIExtensions",
+    "OMDLib_RSTUIExtensions",
+    ForceInvalidateCache
+  )
 end
 
 return Retrieve
