@@ -27,6 +27,10 @@ function Retrieve.OnslaughtCoordinator()
     return SharedUtils.findInstanceOf("RSTOnslaughtCoordinator")
 end
 
+function Retrieve.GauntletController()
+    return SharedUtils.findInstanceOf("RSTGauntletController")
+end
+
 function Retrieve.GameStateBase()
     return SharedUtils.findInstanceOf("RSTGameStateBase")
 end
@@ -37,6 +41,14 @@ end
 
 function Retrieve.ChatSubsystem()
   return SharedUtils.findInstanceOf("RSTWorldChatSubsystem")
+end
+
+function Retrieve.PlayerProfileLibrary(ForceInvalidateCache)
+  return SharedUtils.CacheDefaultObject(
+    "/Script/OMD4.RSTPlayerProfileBlueprintLibrary",
+    "OMDLib_RSTPlayerProfileBlueprintLibrary",
+    ForceInvalidateCache
+  )
 end
 
 --- Function to get or create the RSTCheatManager (the OMDD specific Manager, not UE)
@@ -66,6 +78,11 @@ function Retrieve.UIExtensions(ForceInvalidateCache)
     "OMDLib_RSTUIExtensions",
     ForceInvalidateCache
   )
+end
+
+function Retrieve.ChatHUD(ForceInvalidateCache)
+  return SharedUtils.CacheDefaultObject("/Game/UI/HUD/W_HUD_ChatMessages.W_HUD_ChatMessages_C", "OMDLib_ChatMessagesHUD",
+    ForceInvalidateCache)
 end
 
 return Retrieve
