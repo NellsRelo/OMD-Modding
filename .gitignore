@@ -3,11 +3,14 @@ BPMods/OMD3/*
 BPMods/OMDD/*
 PakMods/OMD3/*
 PakMods/OMDD/*
+LuaMods/Mods/shared/UEHelpers
+Output
 UHT/OMD3/**
 UHT/OMDD/**
 *.exe
 *.bat
 *.ini
+*.dll
 **.cpp
 **.h
 **.Build.cs
