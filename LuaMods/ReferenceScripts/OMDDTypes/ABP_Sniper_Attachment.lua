@@ -24,6 +24,10 @@ FAnimBlueprintGeneratedConstantData = {}
 
 
 
+---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
+FAnimBlueprintGeneratedMutableData = {}
+
+
 ---@class UABP_Sniper_Attachment_C : UAnimInstance
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance

@@ -22,10 +22,6 @@ ABP_RSTPlayerController_C = {}
 function ABP_RSTPlayerController_C:CanHandleUIInput(CanHandle) end
 function ABP_RSTPlayerController_C:OnRep_W_TabMenu() end
 ---@param UserWidget UCommonActivatableWidget
-function ABP_RSTPlayerController_C:AfterPush_D97608E442A53346781B649D9EF89540(UserWidget) end
----@param UserWidget UCommonActivatableWidget
-function ABP_RSTPlayerController_C:BeforePush_D97608E442A53346781B649D9EF89540(UserWidget) end
----@param UserWidget UCommonActivatableWidget
 function ABP_RSTPlayerController_C:AfterPush_D97608E442A53346781B649D989CAA03(UserWidget) end
 ---@param UserWidget UCommonActivatableWidget
 function ABP_RSTPlayerController_C:BeforePush_D97608E442A53346781B649D989CAA03(UserWidget) end
@@ -33,6 +29,10 @@ function ABP_RSTPlayerController_C:BeforePush_D97608E442A53346781B649D989CAA03(U
 function ABP_RSTPlayerController_C:AfterPush_D97608E442A53346781B649DFD1C395E(UserWidget) end
 ---@param UserWidget UCommonActivatableWidget
 function ABP_RSTPlayerController_C:BeforePush_D97608E442A53346781B649DFD1C395E(UserWidget) end
+---@param UserWidget UCommonActivatableWidget
+function ABP_RSTPlayerController_C:AfterPush_D97608E442A53346781B649D9EF89540(UserWidget) end
+---@param UserWidget UCommonActivatableWidget
+function ABP_RSTPlayerController_C:BeforePush_D97608E442A53346781B649D9EF89540(UserWidget) end
 ---@param UserWidget UCommonActivatableWidget
 function ABP_RSTPlayerController_C:AfterPush_D97608E442A53346781B649DA8EB43AF(UserWidget) end
 ---@param UserWidget UCommonActivatableWidget
@@ -136,6 +136,7 @@ ABP_RSTPlayerController_C['Try Process Popups'] = function() end
 ---@param WidgetClass TSoftClassPtr<UCommonActivatableWidget>
 ABP_RSTPlayerController_C['Try Show Popup'] = function(Condition, WidgetClass) end
 ABP_RSTPlayerController_C['Clear Existing Menus'] = function() end
+function ABP_RSTPlayerController_C:OnThreadSelectionRerolledValidated() end
 ---@param EntryPoint int32
 function ABP_RSTPlayerController_C:ExecuteUbergraph_BP_RSTPlayerController(EntryPoint) end
 ---@param bIsVisible boolean

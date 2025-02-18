@@ -13,6 +13,9 @@
 ---@field CrossplayModal URSTModal_OneChoice
 UW_InGameHostSettingsMenu_C = {}
 
+---@param Index boolean
+---@return FText
+UW_InGameHostSettingsMenu_C['Get Crossplay Text'] = function(Index) end
 ---@param NewSessionVisibility ECommonSessionVisibility
 function UW_InGameHostSettingsMenu_C:SetSessionVisibility(NewSessionVisibility) end
 ---@param SessionVisbility ECommonSessionVisibility

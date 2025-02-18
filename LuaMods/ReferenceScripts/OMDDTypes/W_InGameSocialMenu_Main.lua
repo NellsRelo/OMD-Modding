@@ -50,12 +50,15 @@ function UW_InGameSocialMenu_Main_C:BndEvt__W_InGameSocialMenu_Main_GoOnline_K2N
 function UW_InGameSocialMenu_Main_C:ConfirmGoOnline() end
 function UW_InGameSocialMenu_Main_C:CancelGoOnline() end
 function UW_InGameSocialMenu_Main_C:DismissOnlineErrorModal() end
----@param Result FOnlineResultInformation
-function UW_InGameSocialMenu_Main_C:OnCreateSessionComplete(Result) end
 function UW_InGameSocialMenu_Main_C:RefreshOnlineVisibility() end
 function UW_InGameSocialMenu_Main_C:ShowOnlineFailureMessage() end
 ---@param Button UCommonButtonBase
 function UW_InGameSocialMenu_Main_C:BndEvt__W_InGameSocialMenu_Main_HostSettings_K2Node_ComponentBoundEvent_7_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_InGameSocialMenu_Main_C:OnSessionDestroyed() end
+---@param Result FOnlineResultInformation
+function UW_InGameSocialMenu_Main_C:OnCreateSessionComplete(Result) end
+---@param bUseCurrentWorld boolean
+function UW_InGameSocialMenu_Main_C:PrepareToHostSession(bUseCurrentWorld) end
 ---@param EntryPoint int32
 function UW_InGameSocialMenu_Main_C:ExecuteUbergraph_W_InGameSocialMenu_Main(EntryPoint) end
 

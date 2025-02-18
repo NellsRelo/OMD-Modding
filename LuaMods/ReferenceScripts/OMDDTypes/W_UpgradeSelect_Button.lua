@@ -19,14 +19,14 @@ function UW_UpgradeSelect_Button_C:InitializeForUpgrade(Upgrade, UpgradeUIData) 
 ---@param ProxyObject UAsyncAction_ListenForGameplayMessage
 ---@param ActualChannel FGameplayTag
 function UW_UpgradeSelect_Button_C:OnMessageReceived_662F211C466402A436BABEB547F0621C(ProxyObject, ActualChannel) end
-function UW_UpgradeSelect_Button_C:BP_OnClicked() end
+function UW_UpgradeSelect_Button_C:Construct() end
+function UW_UpgradeSelect_Button_C:OnUnlockChanged() end
+---@param MouseEvent FPointerEvent
+function UW_UpgradeSelect_Button_C:OnMouseLeave(MouseEvent) end
 ---@param MyGeometry FGeometry
 ---@param MouseEvent FPointerEvent
 function UW_UpgradeSelect_Button_C:OnMouseEnter(MyGeometry, MouseEvent) end
----@param MouseEvent FPointerEvent
-function UW_UpgradeSelect_Button_C:OnMouseLeave(MouseEvent) end
-function UW_UpgradeSelect_Button_C:Construct() end
-function UW_UpgradeSelect_Button_C:OnUnlockChanged() end
+function UW_UpgradeSelect_Button_C:BP_OnClicked() end
 ---@param EntryPoint int32
 function UW_UpgradeSelect_Button_C:ExecuteUbergraph_W_UpgradeSelect_Button(EntryPoint) end
 ---@param NewParam URSTUpgradeDefinition

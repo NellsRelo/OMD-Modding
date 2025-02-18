@@ -6,7 +6,6 @@
 ---@field Image_47 UImage
 ---@field Text_ModalTitle UCommonTextBlock
 ---@field VerticalBox_158 UVerticalBox
----@field ['Supported Regions'] TArray<FString>
 ---@field LocalizationComboBox UW_RSTOption_ComboBox_C
 UW_Modal_Localization_C = {}
 

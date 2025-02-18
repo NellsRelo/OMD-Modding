@@ -7,7 +7,10 @@
 ---@field Hide UWidgetAnimation
 ---@field Show UWidgetAnimation
 ---@field Action UW_RSTInputActionWidget_C
+---@field Action_1 UW_RSTInputActionWidget_C
 ---@field BarFill UProgressBar
+---@field HBox_TrapReminder UHorizontalBox
+---@field Image UImage
 ---@field Image_201 UImage
 ---@field Label UCommonTextBlock
 ---@field RSTDelayedInvalidationBox_1 URSTDelayedInvalidationBox

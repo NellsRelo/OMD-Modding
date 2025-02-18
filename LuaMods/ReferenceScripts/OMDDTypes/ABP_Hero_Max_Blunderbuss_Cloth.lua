@@ -10,6 +10,10 @@ FAnimBlueprintGeneratedConstantData = {}
 
 
 
+---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
+FAnimBlueprintGeneratedMutableData = {}
+
+
 ---@class UABP_Hero_Max_Blunderbuss_Cloth_C : UAnimInstance
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance

@@ -118,7 +118,7 @@ function UCommonSessionSubsystem:CancelFindSessions() end
 ---@field Password FString
 ---@field SessionVisibility ECommonSessionVisibility
 ---@field HostLevel int32
----@field Region FString
+---@field Region int32
 ---@field PasswordSalt FString
 ---@field bCrossplayEnabled boolean
 UCommonSession_HostSessionRequest = {}

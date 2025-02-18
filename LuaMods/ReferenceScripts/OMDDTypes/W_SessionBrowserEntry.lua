@@ -3,7 +3,7 @@
 ---@class UW_SessionBrowserEntry_C : UCommonTabListWidgetBase
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field CharacterIcons UHorizontalBox
----@field FriendIcon UImage
+---@field FriendIcon UButton
 ---@field HostLevel UCommonTextBlock
 ---@field JoinButton UW_ButtonBasic_C
 ---@field PasswordIcon UImage
@@ -40,6 +40,11 @@ function UW_SessionBrowserEntry_C:SetPassword(Text) end
 ---@param Text FText
 function UW_SessionBrowserEntry_C:CancelPassword(Text) end
 function UW_SessionBrowserEntry_C:InvalidPasswordClose() end
+function UW_SessionBrowserEntry_C:BndEvt__W_SessionBrowserEntry_FriendIcon_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature() end
+function UW_SessionBrowserEntry_C:BndEvt__W_SessionBrowserEntry_W_HeroIcon_0_K2Node_ComponentBoundEvent_3_OnClicked__DelegateSignature() end
+function UW_SessionBrowserEntry_C:BndEvt__W_SessionBrowserEntry_W_HeroIcon_1_K2Node_ComponentBoundEvent_4_OnClicked__DelegateSignature() end
+function UW_SessionBrowserEntry_C:BndEvt__W_SessionBrowserEntry_W_HeroIcon_2_K2Node_ComponentBoundEvent_5_OnClicked__DelegateSignature() end
+function UW_SessionBrowserEntry_C:BndEvt__W_SessionBrowserEntry_W_HeroIcon_3_K2Node_ComponentBoundEvent_6_OnClicked__DelegateSignature() end
 ---@param EntryPoint int32
 function UW_SessionBrowserEntry_C:ExecuteUbergraph_W_SessionBrowserEntry(EntryPoint) end
 

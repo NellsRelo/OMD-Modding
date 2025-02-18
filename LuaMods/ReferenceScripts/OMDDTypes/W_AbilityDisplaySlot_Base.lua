@@ -62,6 +62,7 @@
 ---@field AbilityMask UTexture2D
 ---@field AbilityGreyscalePercentage double
 ---@field bShowAbilityFillBar boolean
+---@field TempIconData URSTAbilityUIData
 UW_AbilityDisplaySlot_Base_C = {}
 
 ---@param NewAmmoDisplayMode ERSTAbilityUIAmmoDisplayType
@@ -108,8 +109,6 @@ function UW_AbilityDisplaySlot_Base_C:OnMessageReceived_DF122DF14BED44EB016568A9
 ---@param ProxyObject UAsyncAction_ListenForGameplayMessage
 ---@param ActualChannel FGameplayTag
 function UW_AbilityDisplaySlot_Base_C:OnMessageReceived_960A3371435A59922725518010FBB23E(ProxyObject, ActualChannel) end
----@param Loaded UObject
-function UW_AbilityDisplaySlot_Base_C:OnLoaded_301FE46B45B3755DA53C1B9899D46B34(Loaded) end
 ---@param Attribute FGameplayAttribute
 ---@param NewValue float
 ---@param OldValue float
@@ -125,6 +124,8 @@ function UW_AbilityDisplaySlot_Base_C:Triggered_E7FCDFB84AA4609D3EC7309E2E0787CF
 function UW_AbilityDisplaySlot_Base_C:Triggered_9DE940A44094C31A1A5B9299A2772A67() end
 function UW_AbilityDisplaySlot_Base_C:Triggered_6ABA3BE649F86EAD4BAB1ABCFF92A8EC() end
 function UW_AbilityDisplaySlot_Base_C:Triggered_A02E6C8046088CC844D1379146F2A68D() end
+---@param Loaded UObject
+function UW_AbilityDisplaySlot_Base_C:OnLoaded_C15C971046B0D27056877DB464DB426F(Loaded) end
 ---@param IsDesignTime boolean
 function UW_AbilityDisplaySlot_Base_C:PreConstruct(IsDesignTime) end
 function UW_AbilityDisplaySlot_Base_C:Construct() end
@@ -179,6 +180,8 @@ UW_AbilityDisplaySlot_Base_C['On Ability Enabled'] = function() end
 UW_AbilityDisplaySlot_Base_C['On Ability - Show'] = function() end
 UW_AbilityDisplaySlot_Base_C['On Ability - Hide'] = function() end
 function UW_AbilityDisplaySlot_Base_C:Destruct() end
+---@param InputPin URSTAbilityUIData
+UW_AbilityDisplaySlot_Base_C['Do Set Ability Icon'] = function(InputPin) end
 ---@param EntryPoint int32
 function UW_AbilityDisplaySlot_Base_C:ExecuteUbergraph_W_AbilityDisplaySlot_Base(EntryPoint) end
 

@@ -2,6 +2,7 @@
 
 ---@class UW_ThreadDisplay_Base_C : URSTUserWidget
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field RerollDisplay UWidgetAnimation
 ---@field OnNotSelected UWidgetAnimation
 ---@field OnClick UWidgetAnimation
 ---@field OnHover UWidgetAnimation
@@ -45,6 +46,8 @@ function UW_ThreadDisplay_Base_C:BndEvt__W_ThreadDisplay_Base_W_ButtonBasic_K2No
 UW_ThreadDisplay_Base_C['Init Display'] = function(ThreadDefinition, bNotInLoadout, bIsNew, bButtonEnabled) end
 UW_ThreadDisplay_Base_C['Refresh Display'] = function() end
 function UW_ThreadDisplay_Base_C:AllowSelection() end
+---@param Delay double
+function UW_ThreadDisplay_Base_C:PlayRerollAnimationIntro(Delay) end
 ---@param EntryPoint int32
 function UW_ThreadDisplay_Base_C:ExecuteUbergraph_W_ThreadDisplay_Base(EntryPoint) end
 

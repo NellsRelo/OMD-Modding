@@ -20,6 +20,10 @@ FAnimBlueprintGeneratedConstantData = {}
 
 
 
+---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
+FAnimBlueprintGeneratedMutableData = {}
+
+
 ---@class UABP_Chest_C : URSTAnimInstance
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance

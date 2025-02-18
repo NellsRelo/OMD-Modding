@@ -45,6 +45,8 @@ ARSTAIAttachmentStatic = {}
 ---@field PickupDropChanceAddition float
 ---@field PickupDropChanceMultiplier float
 ---@field AdditionalPickupTables TArray<FRSTAdditionalPickupTable>
+---@field NextEvaluateNearbyBreakablesTime float
+---@field EvaluateNearbyBreakablesInterval float
 ---@field CurrentStencilIndex int32
 ---@field DamageModifierComponent URSTDamageModifierComponent
 ARSTAICharacter = {}
@@ -93,6 +95,7 @@ function ARSTAICharacter:BP_Ground() end
 ---@param blood boolean
 ---@param headExploded boolean
 function ARSTAICharacter:BP_Gibbed(blood, headExploded) end
+function ARSTAICharacter:BP_EvaluateNearbyBreakables() end
 ---@param LifeSpan float
 ---@param deathType uint8
 ---@param animationTag FGameplayTag
@@ -813,6 +816,7 @@ ARSTGameSession = {}
 ---@field StartingMissionIndex int32
 ---@field CurrentMissionIndex int32
 ---@field SessionMissionSeed int32
+---@field NPEMissionIndex int32
 ---@field GrantedKeys FGameplayTagContainer
 ---@field SelectedMissions TArray<URSTMissionDefinition>
 ---@field SelectedDistortions TArray<URSTMetaDistortionDefinition>
@@ -908,6 +912,7 @@ function ARSTGameStateBase:OnRep_SelectedDistortions() end
 function ARSTGameStateBase:OnRep_RiftProtectedCounts(OldCounts) end
 ---@param PreviousRiftPoints int32
 function ARSTGameStateBase:OnRep_RiftPoints(PreviousRiftPoints) end
+function ARSTGameStateBase:OnRep_NPEMissionIndex() end
 function ARSTGameStateBase:OnRep_MissionChoices() end
 function ARSTGameStateBase:OnRep_IsTimedBreakActive() end
 function ARSTGameStateBase:OnRep_GrantedSkullsCarriedOver() end
@@ -1605,6 +1610,7 @@ function ARSTPlayerController:SelectRandomThread() end
 ---@param SelectedHeroTag FGameplayTag
 function ARSTPlayerController:SelectHero(SelectedHeroTag) end
 function ARSTPlayerController:RunPerfCommands() end
+function ARSTPlayerController:RerollThreadSelection() end
 ---@param SkinTag FGameplayTag
 ---@return boolean
 function ARSTPlayerController:RequestSetSkinDefinition(SkinTag) end
@@ -1615,6 +1621,8 @@ function ARSTPlayerController:RefreshHotbarSlotCount() end
 ---@param DefinitionId FPrimaryAssetId
 function ARSTPlayerController:PawnDefinitionLoaded(DefinitionId) end
 function ARSTPlayerController:OnToggleTabWidget() end
+function ARSTPlayerController:OnThreadSelectionRerolledValidated() end
+function ARSTPlayerController:OnThreadSelectionRerolledBegin() end
 function ARSTPlayerController:OnSkinSelectionUpdated() end
 ---@param shouldForceSelect boolean
 function ARSTPlayerController:OnRemoveThreadSelection(shouldForceSelect) end
@@ -1659,6 +1667,7 @@ function ARSTPlayerController:DoNPCInteraction(bIsInteracting, InteractingNPC) e
 function ARSTPlayerController:ClientWasBanned(BanReason) end
 ---@param shouldForceSelect boolean
 function ARSTPlayerController:Client_RemoveThreadSelection(shouldForceSelect) end
+function ARSTPlayerController:Client_OnRerollsReplicated() end
 function ARSTPlayerController:Client_NotifyHubStarted() end
 ---@param HeroTag FGameplayTag
 function ARSTPlayerController:Client_NotifyHeroSelected(HeroTag) end
@@ -1745,6 +1754,8 @@ ARSTPlayerStart = {}
 ---@field PRSReadyEffectHandles TMap<FGameplayTag, FActiveGameplayEffectHandle>
 ---@field bAllowUltimateChargeWhileActive boolean
 ---@field DamageModifierComponent URSTDamageModifierComponent
+---@field RerollsUsed int32
+---@field ThreadsSkippedCount int32
 ARSTPlayerState = {}
 
 ---@param amount int32
@@ -1752,8 +1763,16 @@ ARSTPlayerState = {}
 function ARSTPlayerState:SpendCoin(amount) end
 ---@param RequestingPlayer APlayerController
 function ARSTPlayerState:ShowProfileUI(RequestingPlayer) end
+---@param InThreadsSkippedCount int32
+function ARSTPlayerState:SetThreadsSkippedCount(InThreadsSkippedCount) end
+---@param amount int32
+function ARSTPlayerState:Server_SpendCoin(amount) end
 ---@param bInVoiceEnabled boolean
 function ARSTPlayerState:Server_SetVoiceEnabled(bInVoiceEnabled) end
+---@param InThreadsSkippedCount int32
+function ARSTPlayerState:Server_SetThreadsSkippedCount(InThreadsSkippedCount) end
+---@param InRerollsUsed int32
+function ARSTPlayerState:Server_SetRerollsUsed(InRerollsUsed) end
 ---@param PingTrackerId int32
 function ARSTPlayerState:Server_RemovePing(PingTrackerId) end
 ---@param CommunicationOption URSTCommunicationDefinition
@@ -1790,6 +1809,7 @@ function ARSTPlayerState:OnRep_SkinDefinition() end
 function ARSTPlayerState:OnRep_SelectedUpgrades() end
 function ARSTPlayerState:OnRep_SelectedThreads() end
 function ARSTPlayerState:OnRep_SelectedPotion() end
+function ARSTPlayerState:OnRep_RerollsUsed() end
 function ARSTPlayerState:OnRep_RawUniqueNetIdStr() end
 function ARSTPlayerState:OnRep_PlayerIndex() end
 function ARSTPlayerState:OnRep_PawnDefinition() end
@@ -1834,6 +1854,8 @@ function ARSTPlayerState:IsDisconnected() end
 function ARSTPlayerState:GrantCoin(amount, GrantReason) end
 ---@return FGameplayTagContainer
 function ARSTPlayerState:GetUnlockedHeroes() end
+---@return int32
+function ARSTPlayerState:GetThreadsSkippedCount() end
 ---@return FGameplayTag
 function ARSTPlayerState:GetTagIdentifier() end
 ---@param InStatTag FGameplayTag
@@ -1848,6 +1870,8 @@ function ARSTPlayerState:GetSelectedSkins(OutSkins) end
 function ARSTPlayerState:GetSelectedSkin(HeroTag) end
 ---@return URSTAbilitySystemComponent
 function ARSTPlayerState:GetRSTAbilitySystemComponent() end
+---@return int32
+function ARSTPlayerState:GetRerollsUsed() end
 ---@param PlacementLimitGroup FGameplayTag
 ---@param OutPlacementLimit int32
 ---@return boolean
@@ -2221,6 +2245,8 @@ function ARSTStatusFXVolume:ApplyGameplayEffects(TargetActor) end
 ---@field MaxCharges int32
 ---@field AvailableCharges int32
 ---@field ResetCooldownOnApplicationChance float
+---@field bFlyersTriggerFloorTrap boolean
+---@field bResetTrapAtGoBreak boolean
 ---@field GrantedHandles FRSTAbilitySet_GrantedHandles
 ---@field IdentifierHandle FRSTLooseTagHandle
 ---@field AbilitySystemComponent URSTAbilitySystemComponent
@@ -3619,6 +3645,19 @@ FRSTModifierSubobjectTargetData = {}
 
 
 
+---@class FRSTNPEMissionIndex
+---@field MissionOptionIds TArray<FPrimaryAssetId>
+FRSTNPEMissionIndex = {}
+
+
+
+---@class FRSTNPEMissionOptions
+---@field NPEIndex int32
+---@field MissionIndexOptions TArray<FRSTNPEMissionIndex>
+FRSTNPEMissionOptions = {}
+
+
+
 ---@class FRSTNameplateInfo
 ---@field Actor AActor
 FRSTNameplateInfo = {}
@@ -4081,9 +4120,12 @@ FRSTSavedPlayerLoadout = {}
 ---@field GrantedSkullsCarriedOver int32
 ---@field GambledSkullsCarriedOver int32
 ---@field SessionSeed int32
+---@field InitialDifficulty int32
 ---@field FailedMissionIndex int32
 ---@field bIsValid boolean
 ---@field bCanBeRestored boolean
+---@field PerPlayerRerollsUsed TArray<int32>
+---@field PerPlayerThreadsSkippedCount TArray<int32>
 FRSTSavedRun = {}
 
 
@@ -4119,6 +4161,13 @@ FRSTSelectedUpgradeData = {}
 
 ---@class FRSTSellTrapAbilityRequest
 FRSTSellTrapAbilityRequest = {}
+
+
+---@class FRSTSettingsStringOption
+---@field DisplayText FText
+---@field BackingValue int32
+FRSTSettingsStringOption = {}
+
 
 
 ---@class FRSTSkinFragment_MaterialOverride_ReferenceMeshes
@@ -6615,6 +6664,7 @@ function URSTCheatManager:RemoveGameplayCue(CueTag) end
 ---@param DistortionName FString
 function URSTCheatManager:RemoveDistortion(DistortionName) end
 function URSTCheatManager:RefreshMilestones() end
+function URSTCheatManager:RefreshConnectLogin() end
 ---@param threadIndex int32
 function URSTCheatManager:PrintValidThreads(threadIndex) end
 ---@param missionIndex int32
@@ -7327,10 +7377,10 @@ function URSTGMMC_Threads:GetSessionMissionSubsystem(Spec) end
 ---@field WeightToBloodTag TMap<ERSTCharacterWeightClass, FGameplayTag>
 ---@field NPEInitialSpawnTag FGameplayTag
 ---@field NPEInputMappingContext UInputMappingContext
----@field SupportedRegions TArray<FString>
+---@field SupportedRegionOptions TArray<FRSTSettingsStringOption>
 ---@field MainMenuMusicActorClass TSoftClassPtr<AActor>
 ---@field HubMusicActorClass TSoftClassPtr<AActor>
----@field CrossplatformWarning FString
+---@field CrossplatformWarningText FText
 URSTGameData = {}
 
 ---@return URSTGameData
@@ -8502,6 +8552,7 @@ URSTGameplayAbility_ReviveAI = {}
 
 ---@class URSTGameplayAbility_ReviveAlly : URSTGameplayAbility_Interact
 ---@field TargetEffects TArray<FRSTAdditionalGameplayEffectData>
+---@field TargetCancelAbilityTags FGameplayTagContainer
 ---@field ActiveTargetEffectHandles TArray<FActiveGameplayEffectHandle>
 URSTGameplayAbility_ReviveAlly = {}
 
@@ -9106,6 +9157,7 @@ function URSTHealthComponent:RSTHealthComponentReviveDataUpdated__DelegateSignat
 ---@param ReviverMultiplier float
 ---@param Instigator AActor
 function URSTHealthComponent:ReviveFromDowned(ReviverMultiplier, Instigator) end
+function URSTHealthComponent:ProcessDownedDeathTimeComplete() end
 function URSTHealthComponent:OnRep_ReviveData() end
 function URSTHealthComponent:OnRep_LastDeathEvent() end
 ---@return boolean
@@ -10083,25 +10135,33 @@ function URSTModifierSubsystem:OnUpgradeRemoved(PlayerId, Upgrade) end
 function URSTModifierSubsystem:OnUpgradeAdded(PlayerId, Upgrade) end
 ---@param PlayerId FUniqueNetIdRepl
 ---@param Thread URSTMetaThreadDefinition
-function URSTModifierSubsystem:OnThreadRemoved(PlayerId, Thread) end
+---@param bFromQuicksave boolean
+function URSTModifierSubsystem:OnThreadRemoved(PlayerId, Thread, bFromQuicksave) end
 ---@param PlayerId FUniqueNetIdRepl
 ---@param Thread URSTMetaThreadDefinition
-function URSTModifierSubsystem:OnThreadAdded(PlayerId, Thread) end
+---@param bFromQuicksave boolean
+function URSTModifierSubsystem:OnThreadAdded(PlayerId, Thread, bFromQuicksave) end
 ---@param TeamThread URSTMetaTeamThreadDefinition
-function URSTModifierSubsystem:OnTeamThreadRemoved(TeamThread) end
+---@param bFromQuicksave boolean
+function URSTModifierSubsystem:OnTeamThreadRemoved(TeamThread, bFromQuicksave) end
 ---@param TeamThread URSTMetaTeamThreadDefinition
-function URSTModifierSubsystem:OnTeamThreadAdded(TeamThread) end
+---@param bFromQuicksave boolean
+function URSTModifierSubsystem:OnTeamThreadAdded(TeamThread, bFromQuicksave) end
 ---@param PlayerId FUniqueNetIdRepl
 ---@param Potion URSTPotionDefinition
-function URSTModifierSubsystem:OnPotionRemoved(PlayerId, Potion) end
+---@param bFromQuicksave boolean
+function URSTModifierSubsystem:OnPotionRemoved(PlayerId, Potion, bFromQuicksave) end
 ---@param PlayerId FUniqueNetIdRepl
 ---@param Potion URSTPotionDefinition
-function URSTModifierSubsystem:OnPotionAdded(PlayerId, Potion) end
+---@param bFromQuicksave boolean
+function URSTModifierSubsystem:OnPotionAdded(PlayerId, Potion, bFromQuicksave) end
 function URSTModifierSubsystem:OnGameReset() end
 ---@param Distortion URSTMetaDistortionDefinition
-function URSTModifierSubsystem:OnDistortionRemoved(Distortion) end
+---@param bFromQuicksave boolean
+function URSTModifierSubsystem:OnDistortionRemoved(Distortion, bFromQuicksave) end
 ---@param Distortion URSTMetaDistortionDefinition
-function URSTModifierSubsystem:OnDistortionAdded(Distortion) end
+---@param bFromQuicksave boolean
+function URSTModifierSubsystem:OnDistortionAdded(Distortion, bFromQuicksave) end
 
 
 ---@class URSTModifierSubtargetMethod : UObject
@@ -10613,6 +10673,7 @@ function URSTPlayerNotificationSubsystem:BP_DisplayTopMessage(LocalPlayer, Messa
 ---@field ItemUpgrades TMap<URSTInventoryItemDefinition, FRSTSavedItemUpgradeData>
 ---@field HotbarItems TArray<URSTInventoryItemDefinition>
 ---@field Skulls int32
+---@field LastGrantSkullCount int32
 ---@field GoldSkulls int32
 ---@field GrantedKeys FGameplayTagContainer
 ---@field PersistentStats TMap<FGameplayTag, FRSTSavedStatEntry>
@@ -11776,6 +11837,7 @@ function URSTSavedRunFunctionLibrary:GetDisplayIndexOrder(SavedRun) end
 
 ---@class URSTSessionMissionSubsystem : UGameInstanceSubsystem
 ---@field MissionProgressionTagQuery TMap<int32, FGameplayTagQuery>
+---@field MissionNPEOptions TArray<FRSTNPEMissionOptions>
 ---@field ValidMissions TArray<URSTMissionDefinition>
 ---@field CurrentThreadChoices TArray<FRSTThreadOption>
 ---@field ValidDistortions TArray<URSTMetaDistortionDefinition>
@@ -11806,21 +11868,25 @@ function URSTSessionMissionSubsystem:SetCurrentThreadIndex(InThreadIndex) end
 function URSTSessionMissionSubsystem:SetCurrentSeed(InSeed) end
 ---@param PlayerId FUniqueNetIdRepl
 ---@param Thread URSTMetaThreadDefinition
-function URSTSessionMissionSubsystem:RSTThreadChange__DelegateSignature(PlayerId, Thread) end
+---@param bFromQuicksave boolean
+function URSTSessionMissionSubsystem:RSTThreadChange__DelegateSignature(PlayerId, Thread, bFromQuicksave) end
 ---@param Thread URSTMetaTeamThreadDefinition
-function URSTSessionMissionSubsystem:RSTTeamThreadChange__DelegateSignature(Thread) end
+---@param bFromQuicksave boolean
+function URSTSessionMissionSubsystem:RSTTeamThreadChange__DelegateSignature(Thread, bFromQuicksave) end
 ---@param PlayerId FUniqueNetIdRepl
 function URSTSessionMissionSubsystem:RSTPotionChangePlayer__DelegateSignature(PlayerId) end
 ---@param PlayerId FUniqueNetIdRepl
 ---@param Potion URSTPotionDefinition
-function URSTSessionMissionSubsystem:RSTPotionChange__DelegateSignature(PlayerId, Potion) end
+---@param bFromQuicksave boolean
+function URSTSessionMissionSubsystem:RSTPotionChange__DelegateSignature(PlayerId, Potion, bFromQuicksave) end
 ---@param PreviousMission URSTMissionDefinition
 ---@param CurrentMission URSTMissionDefinition
 function URSTSessionMissionSubsystem:RSTMissionSelectedChange__DelegateSignature(PreviousMission, CurrentMission) end
 ---@param Mission URSTMissionDefinition
 function URSTSessionMissionSubsystem:RSTMissionChange__DelegateSignature(Mission) end
 ---@param Distortion URSTMetaDistortionDefinition
-function URSTSessionMissionSubsystem:RSTDistortionChange__DelegateSignature(Distortion) end
+---@param bFromQuicksave boolean
+function URSTSessionMissionSubsystem:RSTDistortionChange__DelegateSignature(Distortion, bFromQuicksave) end
 ---@param PlayerState ARSTPlayerState
 ---@return TArray<URSTMetaThreadDefinition>
 function URSTSessionMissionSubsystem:GetSelectedThreads(PlayerState) end
@@ -11836,6 +11902,8 @@ function URSTSessionMissionSubsystem:GetSelectedMission(missionIndex) end
 ---@param NumThreads int32
 ---@return TArray<URSTMetaThreadDefinition>
 function URSTSessionMissionSubsystem:GetRecentlySelectedThreads(PlayerState, NumThreads) end
+---@return int32
+function URSTSessionMissionSubsystem:GetNPEMissionIndex() end
 ---@return int32
 function URSTSessionMissionSubsystem:GetCurrentThreadIndex() end
 ---@return int32
@@ -11854,6 +11922,9 @@ function URSTSessionMissionSubsystem:ChoosePotion(SelectingPlayerController, Pot
 ---@param ChosenMissionIndex int32
 ---@return ERSTMissionChosenResult
 function URSTSessionMissionSubsystem:ChooseMissionByIndex(SelectingPlayerController, ChosenMissionIndex) end
+---@param Profile URSTPlayerProfile
+---@return int32
+function URSTSessionMissionSubsystem:BP_GetMissionNPEIndex(Profile) end
 
 
 ---@class URSTSetByCallerChanceGEComponent : UGameplayEffectComponent
@@ -11870,6 +11941,27 @@ URSTSetByCallerChanceGEComponent = {}
 ---@field MinValueClamp FVector
 URSTSettingBasedScalar = {}
 
+
+
+---@class URSTSettingStringOptionHelpers : UBlueprintFunctionLibrary
+URSTSettingStringOptionHelpers = {}
+
+---@param Options TArray<FRSTSettingsStringOption>
+---@param OutStrings TArray<FString>
+function URSTSettingStringOptionHelpers:GetUIStrings(Options, OutStrings) end
+---@param Options TArray<FRSTSettingsStringOption>
+---@param BackingValue int32
+---@param OutUIText FText
+---@return boolean
+function URSTSettingStringOptionHelpers:GetUIString(Options, BackingValue, OutUIText) end
+---@param Option FRSTSettingsStringOption
+---@return FText
+function URSTSettingStringOptionHelpers:GetText(Option) end
+---@param Options TArray<FRSTSettingsStringOption>
+---@param UISelectedOption FString
+---@param BackingValue int32
+---@return boolean
+function URSTSettingStringOptionHelpers:GetBackingValue(Options, UISelectedOption, BackingValue) end
 
 
 ---@class URSTSettingsLocal : UGameUserSettings
@@ -12104,7 +12196,7 @@ function URSTSettingsLocal:GetSplitLookSensivityY() end
 function URSTSettingsLocal:GetSplitLookSensivityX() end
 ---@return float
 function URSTSettingsLocal:GetSoundFXVolume() end
----@param OutOptions TArray<FString>
+---@param OutOptions TArray<FRSTSettingsStringOption>
 function URSTSettingsLocal:GetShadowsQualtiyOptions(OutOptions) end
 ---@return float
 function URSTSettingsLocal:GetScreenPercentage() end
@@ -12116,6 +12208,8 @@ function URSTSettingsLocal:GetReflectionMethodOptions(OutOptions) end
 function URSTSettingsLocal:GetReflectionMethod() end
 ---@return float
 function URSTSettingsLocal:GetOverallVolume() end
+---@param OutOptions TArray<FRSTSettingsStringOption>
+function URSTSettingsLocal:GetOverallGraphicsQualityOptions(OutOptions) end
 ---@return boolean
 function URSTSettingsLocal:GetOptimizedHitDetectionPartial() end
 ---@return boolean
@@ -12145,7 +12239,7 @@ function URSTSettingsLocal:GetIsADSSplitLookSensitivity() end
 ---@param ConfigName FName
 ---@return UPlayerMappableInputConfig
 function URSTSettingsLocal:GetInputConfigByName(ConfigName) end
----@param OutOptions TArray<FString>
+---@param OutOptions TArray<FRSTSettingsStringOption>
 function URSTSettingsLocal:GetGraphicsQualityOptions(OutOptions) end
 ---@return int32
 function URSTSettingsLocal:GetGraphicsQuality() end
@@ -12161,7 +12255,7 @@ function URSTSettingsLocal:GetGamepadCursorSpeed() end
 function URSTSettingsLocal:GetGamepadCursorDeadzone() end
 ---@return boolean
 function URSTSettingsLocal:GetGamepadAimAssistEnabled() end
----@param OutOptions TArray<FString>
+---@param OutOptions TArray<FRSTSettingsStringOption>
 function URSTSettingsLocal:GetFrameRateLimitOptions(OutOptions) end
 ---@return float
 function URSTSettingsLocal:GetFrameRateLimit_WhenBackgrounded() end
@@ -12243,13 +12337,14 @@ function URSTSettingsLocal:CanModifyHeadphoneModeEnabled() end
 ---@field bCanCollectAnalytics boolean
 ---@field bHasSeenAnalyticsPopup boolean
 ---@field bAllowGore boolean
----@field PreferredRegion FString
+---@field PreferredRegion int32
 ---@field bHasSeenRegionPopup boolean
 ---@field FieldOfViewModifier float
 ---@field ADSFieldOfViewModifier float
 ---@field SessionVisibility ECommonSessionVisibility
 ---@field bCrossplayEnabled boolean
 ---@field bIsCameraShakeEnabled boolean
+---@field bShowFlyoffs boolean
 URSTSettingsShared = {}
 
 ---@param NewValue boolean
@@ -12272,9 +12367,11 @@ function URSTSettingsShared:SetSubtitlesTextBorder(Value) end
 function URSTSettingsShared:SetSubtitlesEnabled(Value) end
 ---@param Value ESubtitleDisplayBackgroundOpacity
 function URSTSettingsShared:SetSubtitlesBackgroundOpacity(Value) end
+---@param bEnabled boolean
+function URSTSettingsShared:SetShowFlyoffs(bEnabled) end
 ---@param InSessionVisibility ECommonSessionVisibility
 function URSTSettingsShared:SetSessionVisiblity(InSessionVisibility) end
----@param InPreferredRegion FString
+---@param InPreferredRegion int32
 function URSTSettingsShared:SetPreferredRegion(InPreferredRegion) end
 ---@param NewValue double
 function URSTSettingsShared:SetMouseSensitivityY(NewValue) end
@@ -12344,9 +12441,11 @@ function URSTSettingsShared:GetSubtitlesTextBorder() end
 function URSTSettingsShared:GetSubtitlesEnabled() end
 ---@return ESubtitleDisplayBackgroundOpacity
 function URSTSettingsShared:GetSubtitlesBackgroundOpacity() end
+---@return boolean
+function URSTSettingsShared:GetShowFlyoffs() end
 ---@return ECommonSessionVisibility
 function URSTSettingsShared:GetSessionVisibility() end
----@return FString
+---@return int32
 function URSTSettingsShared:GetPreferredRegion() end
 ---@return double
 function URSTSettingsShared:GetMouseSensitivityY() end

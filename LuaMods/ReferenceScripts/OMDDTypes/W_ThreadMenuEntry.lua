@@ -21,7 +21,8 @@ UW_ThreadMenuEntry_C = {}
 UW_ThreadMenuEntry_C['Ensure Container Exists'] = function(Index, Grid_Panel) end
 ---@param PlayerId FUniqueNetIdRepl
 ---@param Thread URSTMetaThreadDefinition
-UW_ThreadMenuEntry_C['On Thread Changed'] = function(PlayerId, Thread) end
+---@param bFromQuicksave boolean
+UW_ThreadMenuEntry_C['On Thread Changed'] = function(PlayerId, Thread, bFromQuicksave) end
 ---@param Index int32
 ---@param GridIndex int32
 ---@param GridColumn int32
@@ -42,7 +43,8 @@ function UW_ThreadMenuEntry_C:OnListItemObjectSet(ListItemObject) end
 UW_ThreadMenuEntry_C['Refresh Potion Data'] = function() end
 ---@param PlayerId FUniqueNetIdRepl
 ---@param Potion URSTPotionDefinition
-UW_ThreadMenuEntry_C['On Potion Changed'] = function(PlayerId, Potion) end
+---@param bFromQuicksave boolean
+UW_ThreadMenuEntry_C['On Potion Changed'] = function(PlayerId, Potion, bFromQuicksave) end
 function UW_ThreadMenuEntry_C:Destruct() end
 UW_ThreadMenuEntry_C['Refresh Button Visibility'] = function() end
 ---@param Diff int32

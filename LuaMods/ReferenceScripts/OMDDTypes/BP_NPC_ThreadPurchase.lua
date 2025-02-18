@@ -13,6 +13,10 @@ ABP_NPC_ThreadPurchase_C = {}
 
 function ABP_NPC_ThreadPurchase_C:ReceiveBeginPlay() end
 function ABP_NPC_ThreadPurchase_C:ReceiveDestroyed() end
+---@param DeltaSeconds float
+function ABP_NPC_ThreadPurchase_C:ReceiveTick(DeltaSeconds) end
+---@param ActorInfo FGameplayAbilityActorInfo
+function ABP_NPC_ThreadPurchase_C:BP_OnInteract(ActorInfo) end
 ---@param EntryPoint int32
 function ABP_NPC_ThreadPurchase_C:ExecuteUbergraph_BP_NPC_ThreadPurchase(EntryPoint) end
 

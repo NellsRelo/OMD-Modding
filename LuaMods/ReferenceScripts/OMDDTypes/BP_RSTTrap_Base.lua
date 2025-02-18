@@ -25,8 +25,10 @@
 ---@field TargetMeshScale FVector
 ---@field StartPlacementStartTime double
 ---@field bReplicatedHasActiveCooldownModifier boolean
+---@field RiftBarricadeBuffCount int32
 ABP_RSTTrap_Base_C = {}
 
+function ABP_RSTTrap_Base_C:OnRep_RiftBarricadeBuffCount() end
 function ABP_RSTTrap_Base_C:OnRep_bReplicatedHasActiveCooldownModifier() end
 ---@return boolean
 function ABP_RSTTrap_Base_C:ShouldDisplayAsValid() end

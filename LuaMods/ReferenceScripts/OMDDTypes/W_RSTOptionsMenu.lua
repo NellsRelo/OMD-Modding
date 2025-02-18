@@ -18,7 +18,7 @@
 ---@field Resolutions TMap<FString, FIntPoint>
 ---@field VoiceChatInputDevices TMap<FString, FString>
 ---@field VoiceChatOutputDevices TMap<FString, FString>
----@field WindowModes TArray<FString>
+---@field WindowModes TArray<FText>
 ---@field Color_TabSelected FLinearColor
 ---@field LookSensitivity UW_RSTOption_Slider_C
 ---@field LookSensitivityX UW_RSTOption_Slider_C
@@ -42,6 +42,15 @@
 ---@field LinkAccountButton UW_RSTOption_Button_C
 UW_RSTOptionsMenu_C = {}
 
+---@param WindowOptions TArray<FString>
+UW_RSTOptionsMenu_C['Get Window Option Strings'] = function(WindowOptions) end
+---@param Name FText
+---@param CurrentVal int32
+---@param bUseGraphicsQuality boolean
+---@param OnSelectionChanged FAdd Graphics Quality Combo BoxOnSelectionChanged
+UW_RSTOptionsMenu_C['Add Graphics Quality Combo Box'] = function(Name, CurrentVal, bUseGraphicsQuality, OnSelectionChanged) end
+---@param bIsEnabled boolean
+function UW_RSTOptionsMenu_C:OnShowFlyoffsChanged(bIsEnabled) end
 ---@param Settings URSTSettingsLocal
 ---@param ApplyImmediately boolean
 function UW_RSTOptionsMenu_C:ResetEnvironmentDetails(Settings, ApplyImmediately) end
@@ -352,9 +361,6 @@ function UW_RSTOptionsMenu_C:OnResetKeymappingClicked() end
 function UW_RSTOptionsMenu_C:ClearModal() end
 ---@param Value float
 function UW_RSTOptionsMenu_C:BndEvt__W_RSTOptionsMenu_ScrollbarSlider_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature(Value) end
----@param CurrentOffset float
-function UW_RSTOptionsMenu_C:BndEvt__W_RSTOptionsMenu_OptionsBox_K2Node_ComponentBoundEvent_2_OnUserScrolledEvent__DelegateSignature(CurrentOffset) end
-function UW_RSTOptionsMenu_C:RefreshScrollbar() end
 ---@param Index int32
 UW_RSTOptionsMenu_C['BndEvt__W_RSTOptionsMenu_NavigationBar_K2Node_ComponentBoundEvent_3_On Tab Selected__DelegateSignature'] = function(Index) end
 function UW_RSTOptionsMenu_C:OnLinkAccountClicked() end
@@ -366,6 +372,9 @@ function UW_RSTOptionsMenu_C:BP_OnDeactivated() end
 function UW_RSTOptionsMenu_C:Tick(MyGeometry, InDeltaTime) end
 function UW_RSTOptionsMenu_C:OnResetControlsClicked() end
 function UW_RSTOptionsMenu_C:AddContentGameplayMain() end
+---@param CurrentOffset float
+function UW_RSTOptionsMenu_C:BndEvt__W_RSTOptionsMenu_OptionsBox_K2Node_ComponentBoundEvent_2_OnUserScrolledEvent__DelegateSignature(CurrentOffset) end
+function UW_RSTOptionsMenu_C:RefreshScrollbar() end
 ---@param EntryPoint int32
 function UW_RSTOptionsMenu_C:ExecuteUbergraph_W_RSTOptionsMenu(EntryPoint) end
 

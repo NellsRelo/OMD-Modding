@@ -7,7 +7,10 @@
 ---@field Blue_Threads_3 UWidgetAnimation
 ---@field Blue_Threads_2 UWidgetAnimation
 ---@field Blue_Threads_1 UWidgetAnimation
+---@field Button_Reroll UW_ButtonBasic_C
+---@field Button_Skip UW_ButtonBasic_C
 ---@field HorizontalBox_ThreadParent UHorizontalBox
+---@field Image_170 UImage
 ---@field Image_Background_main UImage
 ---@field Image_Background_top UImage
 ---@field Image_blueline_1 UImage
@@ -53,8 +56,22 @@
 ---@field CardThreadOffsetLeftInLoadout double
 ---@field CardThreadOffsetRightNotInLoadout double
 ---@field CardThreadOffsetRightInLoadout double
+---@field SkipThreadDefinition URSTMetaThreadDefinition
+---@field SkipThreadBaseCost int32
+---@field SkipThreadCostIncreaseFactor double
+---@field SkipThreadMaxCost int32
+---@field RerollMaxBeforeCostStagnates double
+---@field RerollBaseCost int32
+---@field SkipMaxBeforeCostStagnates double
 UW_ThreadSelect_Main_C = {}
 
+---@param amount int32
+---@param HasCoin boolean
+function UW_ThreadSelect_Main_C:LocalPlayerHasCoin(amount, HasCoin) end
+---@param NextSkipCost int32
+function UW_ThreadSelect_Main_C:GetNextSkipCost(NextSkipCost) end
+---@param NextRerollCost int32
+function UW_ThreadSelect_Main_C:GetNextRerollCost(NextRerollCost) end
 function UW_ThreadSelect_Main_C:SetupRiftPointDisplay() end
 ---@param CardIndex int32
 ---@param bNotInLoadout boolean
@@ -70,9 +87,20 @@ function UW_ThreadSelect_Main_C:BndEvt__W_ThreadSelect_Main_TabButton_K2Node_Com
 function UW_ThreadSelect_Main_C:BndEvt__W_ThreadSelect_Main_TabButton_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(Button) end
 ---@param SelectedThreadWidget UW_ThreadDisplay_Base_C
 function UW_ThreadSelect_Main_C:OnThreadSelected(SelectedThreadWidget) end
-function UW_ThreadSelect_Main_C:AllowThreadSelect() end
 ---@param bIsVisible boolean
 function UW_ThreadSelect_Main_C:TabMenuVisibilityUpdated(bIsVisible) end
+---@param Button UCommonButtonBase
+function UW_ThreadSelect_Main_C:BndEvt__W_ThreadSelect_Main_Button_Reroll_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(Button) end
+---@param Button UCommonButtonBase
+function UW_ThreadSelect_Main_C:BndEvt__W_ThreadSelect_Main_Button_Skip_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_ThreadSelect_Main_C:OnRerollThreadSelection() end
+---@param IsReroll boolean
+function UW_ThreadSelect_Main_C:LayoutThreads(IsReroll) end
+function UW_ThreadSelect_Main_C:RecalcualteButtonInteractibility() end
+function UW_ThreadSelect_Main_C:UpdateButtonCostDisplay() end
+function UW_ThreadSelect_Main_C:AllowThreadSelect() end
+---@param Delta int32
+function UW_ThreadSelect_Main_C:CustomEvent(Delta) end
 ---@param EntryPoint int32
 function UW_ThreadSelect_Main_C:ExecuteUbergraph_W_ThreadSelect_Main(EntryPoint) end
 

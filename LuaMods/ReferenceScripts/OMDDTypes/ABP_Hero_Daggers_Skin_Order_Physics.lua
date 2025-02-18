@@ -10,6 +10,10 @@ FAnimBlueprintGeneratedConstantData = {}
 
 
 
+---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
+FAnimBlueprintGeneratedMutableData = {}
+
+
 ---@class UABP_Hero_Daggers_Skin_Order_Physics_C : UAnimInstance
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance

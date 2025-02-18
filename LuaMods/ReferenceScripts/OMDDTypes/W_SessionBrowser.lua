@@ -24,12 +24,14 @@
 ---@field bSearchPasswordProtected boolean
 ---@field bSearchDisableCrossplay boolean
 ---@field CachedResults TArray<UCommonSession_SearchResult>
----@field AllText FString
+---@field AllText FText
 ---@field bCanUseCrossplay boolean
 ---@field bWaitingOnPermissionCheck boolean
 ---@field bSearchPending boolean
 UW_SessionBrowser_C = {}
 
+---@return UWidget
+function UW_SessionBrowser_C:GetScrollRecipient() end
 function UW_SessionBrowser_C:ParseThroughSearchFilter() end
 ---@param InSearchRequest UCommonSession_SearchSessionRequest
 UW_SessionBrowser_C['Init Search Request'] = function(InSearchRequest) end

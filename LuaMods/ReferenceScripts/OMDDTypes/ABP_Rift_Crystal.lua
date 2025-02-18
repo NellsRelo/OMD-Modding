@@ -34,6 +34,10 @@ FAnimBlueprintGeneratedConstantData = {}
 
 
 
+---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
+FAnimBlueprintGeneratedMutableData = {}
+
+
 ---@class UABP_Rift_Crystal_C : UAnimInstance
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance
