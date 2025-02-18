@@ -1,0 +1,1 @@
+﻿"H:\Unreal\BlankProjects\Blank503\Saved\Cooked\Windows\Blank503\Content\asdsad.uasset" "../../../Blank503/Content/asdsad.uasset" -compress
