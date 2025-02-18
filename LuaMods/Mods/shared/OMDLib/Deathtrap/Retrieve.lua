@@ -72,6 +72,9 @@ function Retrieve.GetInventoryManagerComponent()
   return Utils.findInstanceOf("RSTInventoryManagerComponent")
 end
 
+function Retrieve.PlayerState()
+  return Utils.findInstanceOf("RSTPlayerState")
+end
 function Retrieve.UIExtensions(ForceInvalidateCache)
   return SharedUtils.CacheDefaultObject(
     "/Script/OMD4.RSTUIExtensions",
