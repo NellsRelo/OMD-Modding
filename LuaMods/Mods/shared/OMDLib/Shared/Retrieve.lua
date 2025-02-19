@@ -2,7 +2,7 @@ local Utils = require("OMDLib.Shared.Utils")
 local Retrieve = {}
 
 function Retrieve.GetKismetGuidLibrary(ForceInvalidateCache)
-  return Utils.CacheDefaultObject("/Script/Engine.Default__KismetGuidLibrary", "OMDLib_KismetMathLibrary",
+  return Utils.CacheDefaultObject("/Script/Engine.Default__KismetGuidLibrary", "OMDLib_KismetGuidLibrary",
   ForceInvalidateCache)
 end
 
