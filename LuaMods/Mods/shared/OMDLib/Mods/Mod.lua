@@ -1,3 +1,4 @@
+SharedUtils = require("OMDLib.Shared.Utils")
 Mod = {}
 Mod.__index = Mod
 
@@ -12,7 +13,7 @@ function Mod:New(o, name, version, author, description, settings)
   self.Version = version
   self.Author = author
   self.Description = description
-  self.Settings = settings
+  self.Settings = settings or {}
   return o
 end
 
@@ -43,8 +44,12 @@ function Mod:Notify()
   })
 end
 
-function Mod:Register(ModsTable)
-  table.insert(ModsTable, self)
+function Mod:Register()
+  local ModActor = SharedUtils.GetModActor("ModMenu")
+  if ModActor == nil or not ModActor:IsValid() then
+    print("Modactor Invalid")
+  end
+  ModActor:RegisterMod(self.Name, self.Author, self.Version, self.Description)
 end
 
 return Mod

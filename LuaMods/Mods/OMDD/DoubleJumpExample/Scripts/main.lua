@@ -1,13 +1,6 @@
 local UEHelpers = require("UEHelpers")
 local OMDLib = require("OMDLib")
 world = UEHelpers.GetWorld()
-local metadata = OMDLib.Mod:New(
-  _,
-  "Double Jump",
-  "1.0.0",
-  "NellsRelo",
-  "Mod that creates grants all characters the ability to Double-Jump"
-)
 local function grantDoubleJump(character)
   if character.JumpMaxCount ~= 2 and not OMDLib.Deathtrap.Utils.IsMax(character) then
     character.JumpMaxCount = 2
@@ -15,8 +8,17 @@ local function grantDoubleJump(character)
 end
 
 local function Init()
+  local metadata = OMDLib.Mod:New(
+    _,
+    "Double Jump",
+    "1.0.0",
+    "NellsRelo",
+    "Mod that creates grants all characters the ability to Double-Jump"
+  )
   metadata:Notify()
+  metadata:Register()
   OMDLib.Deathtrap.Utils.ForEachCharacter(grantDoubleJump)
+  print(tostring(#OMDLib.Mods))
 end
 
 Init()

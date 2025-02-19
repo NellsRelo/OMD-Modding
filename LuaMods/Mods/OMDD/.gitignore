@@ -3,5 +3,7 @@
 !ExampleMod/**
 !DoubleJumpExample
 !DoubleJumpExample/**
+!ModMenu
+!ModMenu/**
 !.gitignore
 !README.MD
