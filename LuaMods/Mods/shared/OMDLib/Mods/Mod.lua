@@ -4,7 +4,7 @@ Mod.__index = Mod
 -- TODO: Determine a shared solution for OMD3 and OMDC as well
 local NotifyUtils = require("OMDLib.Deathtrap.Notify")
 
-function Mod:New(o, name, version, author, description)
+function Mod:New(o, name, version, author, description, settings)
   o = o or {}
   setmetatable(o, self)
   self.__index = self
@@ -12,6 +12,7 @@ function Mod:New(o, name, version, author, description)
   self.Version = version
   self.Author = author
   self.Description = description
+  self.Settings = settings
   return o
 end
 
@@ -29,6 +30,10 @@ end
 
 function Mod:GetDescription()
   return self.Description
+end
+
+function Mod:GetSettings()
+  return self.Settings
 end
 
 function Mod:Notify()
