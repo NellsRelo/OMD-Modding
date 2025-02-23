@@ -84,4 +84,31 @@ function Utils.IsWren(character)
   end
 end
 
+--- Checks if the game is currently in the HUB.
+-- @return boolean True if the game is in the HUB, false otherwise.
+local function isInHub()
+    local gameState = Utils.findInstanceOf("RSTGameStateBase")
+    return gameState and gameState:IsValid() and gameState.bIsHUB
+end
+
+--- Retrieves the current run seed.
+-- The function first attempts to get the seed from `RSTSessionMissionSubsystem`, 
+-- and if not available, it falls back to `RSTGameStateBase`.
+-- @return integer The current run seed, or -1 if unavailable.
+local function getCurrentRunSeed()
+    local missionSubsystem = Utils.findInstanceOf("RSTSessionMissionSubsystem")
+
+    if missionSubsystem and missionSubsystem:IsValid() then
+        return missionSubsystem:GetCurrentSeed()
+    end
+
+    local gameState = Utils.findInstanceOf("RSTGameStateBase")
+
+    if gameState and gameState:IsValid() then
+        return gameState.SessionMissionSeed
+    end
+
+    return -1
+end
+
 return Utils
