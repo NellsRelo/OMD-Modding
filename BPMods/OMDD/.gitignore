@@ -4,5 +4,5 @@
 !.gitignore
 
 ## And these
-!ModMenu
-!ModMenu/**
+!OMDLib
+!OMDLib/**

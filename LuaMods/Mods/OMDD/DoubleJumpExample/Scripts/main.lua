@@ -15,7 +15,6 @@ local function Init()
     "NellsRelo",
     "Mod that creates grants all characters the ability to Double-Jump"
   )
-  metadata:Notify()
   metadata:Register()
   OMDLib.Deathtrap.Utils.ForEachCharacter(grantDoubleJump)
   print(tostring(#OMDLib.Mods))
@@ -23,8 +22,6 @@ end
 
 Init()
 
-ExecuteInGameThread(function ()
-  RegisterHook("/Script/Engine.PlayerController:ClientRestart", function (_, NewPawn)
-    grantDoubleJump(NewPawn:get())
-  end)
+RegisterHook("/Script/Engine.PlayerController:ClientRestart", function (_, NewPawn)
+  grantDoubleJump(NewPawn:get())
 end)

@@ -2,9 +2,6 @@ SharedUtils = require("OMDLib.Shared.Utils")
 Mod = {}
 Mod.__index = Mod
 
--- TODO: Determine a shared solution for OMD3 and OMDC as well
-local NotifyUtils = require("OMDLib.Deathtrap.Notify")
-
 function Mod:New(o, name, version, author, description, settings)
   o = o or {}
   setmetatable(o, self)
@@ -37,15 +34,8 @@ function Mod:GetSettings()
   return self.Settings
 end
 
-function Mod:Notify()
-  NotifyUtils.Send({
-    Message = "[Mod Loaded] " .. self:GetName() .. " v" .. self:GetVersion(),
-    MessageType = 2
-  })
-end
-
 function Mod:Register()
-  local ModActor = SharedUtils.GetModActor("ModMenu")
+  local ModActor = SharedUtils.GetModActor("OMDLib")
   if ModActor == nil or not ModActor:IsValid() then
     print("Modactor Invalid")
   end

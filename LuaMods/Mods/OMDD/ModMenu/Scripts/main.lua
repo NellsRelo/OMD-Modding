@@ -8,26 +8,16 @@ local SharedUtils = require("OMDLib.Shared.Utils")
 local ModActor
 local metadata
 local ModsButton
-local ModMenu = {}
+local ModMenu
 
 local kismet_math = UEHelpers.GetKismetMathLibrary(false)
 
-local function PopulateModMenu()
 
-  -- ModMenu:AddModEntry("Test", "1.0.0.0", "Nobody", "Blah")
-
-    ModMenu:AddModEntry()
-  --ModMenu.ModEntries = OMDLib.Mods
-end
--- Hook on button press
 RegisterHook("/Script/CommonUI.CommonButtonBase:HandleButtonClicked", function (ctx)
   if ctx:get().ToolTipText:ToString() == "Mod Menu" then
-    OMDLib.Deathtrap.Notify.Send({Message = "Mod Menu Button Clicked!", MessageType = 2})
-    -- TODO: Create Mod Menu Window
+    OMDLib.Deathtrap.Notify.Send({ Message = "Mod Menu Button Clicked!", MessageType = 2 })
+    ModMenu:AddModEntriesBulk()
     ModMenu:AddToViewport(1)
-    PopulateModMenu()
-    print(tostring(#OMDLib.Mods))
-    print(tostring(ModMenu.ModEntries:GetNumItems()))
   end
 end)
 
@@ -59,57 +49,36 @@ end)
 
 -- Create Mod Menu Button
 local function ModsButtonSetup()
-
-  if ModsButton == nil then
-    ModsButton = FindFirstOf("OMDLib_ModMenuBtn")
-  end
-  if not ModsButton:IsValid() then
+  ModsButton = FindFirstOf("OMDLib_ModMenuBtn")
+  if ModsButton == nil or not ModsButton:IsValid() then
     ModsButton = StaticConstructObject(
       StaticFindObject("/Game/UI/Buttons/W_ButtonBasic.W_ButtonBasic_C"),
       Retrieve:GameInstance(),
       FName("OMDLib_ModMenuBtn")
     )
-    if not ModsButton:IsValid() then
-      print("Error creating Mods Button")
-    end
+
+    ModsButton:SetButtonText(FText("Mods"))
   end
-
-  ModsButton:SetButtonText(FText("Mods"))
-end
-
-local function ApplyStylingToModMenu()
-  local socialMenu = StaticConstructObject(
-    StaticFindObject("/Game/UI/Menus/InGameSocialMenus/W_InGameSocialMenu_Main.W_InGameSocialMenu_Main_C"),
-    Retrieve:GameInstance(),
-    FName("DummySocialMenu"))
-  if socialMenu == nil or not socialMenu:IsValid() then
-    print("Invalid Social Menu")
-  else
-    ModMenu.bg = socialMenu.bg
-    ModMenu.Box_bg = socialMenu.Box_bg
+  if not ModsButton:IsValid() then
+    print("Error creating Mods Button")
   end
 end
-
 
 local function ModMenuSetup()
-  ModActor = SharedUtils.GetModActor("ModMenu")
-  if ModActor == nil or not ModActor:IsValid() then
-    print("Modactor Invalid")
-  end
-  ModMenu = SharedUtils.findInstanceOf("OMDLModMenuWidget.OMDLModMenuWidget_C")
-  if ModMenu == nil or not ModMenu:IsValid() then
+  ModActor:DrawModMenu(UEHelpers:GetPlayerController(), {})
+  ModMenu = ModActor.ModMenu
+  print(tostring(ModActor.ModMenu:IsValid()))
+  if ModMenu == nil or not ModActor.ModMenu:IsValid() then
+    print("Constructing ModMenu")
     ModMenu = StaticConstructObject(
-      StaticFindObject("/Game/Mods/ModMenu/Widgets/OMDLModMenuWidget.OMDLModMenuWidget_C"),
+      StaticFindObject("/Game/Mods/OMDLib/Widgets/OMDLModMenuWidget.OMDLModMenuWidget_C"),
       Retrieve:GameInstance(),
       FName("OMDLib_ModMenu")
     )
-
-    ModMenu.ModActor = ModActor
-    if not ModMenu:IsValid() then
-      print("Error creating Mod Menu")
-    else
-      ApplyStylingToModMenu()
-    end
+  end
+  ModMenu.ModActor = ModActor
+  if not ModMenu:IsValid() then
+    OMDLib.Deathtrap.Notify.Send({ Message = "Error creating Mod Menu", MessageType = 1 })
   end
 end
 
@@ -123,13 +92,18 @@ local function Init()
       "Mod Menu",
       "1.0.0",
       "NellsRelo",
-      "Custom Menu Widget to display existing mods and edit their options."
+      "Custom Menu Widget to display existing mods and edit their options.",
+      {}
     )
-    metadata:Notify()
     metadata:Register()
 
-    ModsButtonSetup()
-    ModMenuSetup()
+    ModActor = SharedUtils.GetModActor("OMDLib")
+    if ModActor == nil or not ModActor:IsValid() then
+      print("Modactor Invalid")
+    else
+      ModsButtonSetup()
+      ModMenuSetup()
+    end
   end)
 end
 

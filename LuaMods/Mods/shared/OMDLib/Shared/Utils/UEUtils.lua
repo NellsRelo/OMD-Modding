@@ -18,8 +18,8 @@ end
 -- @param class The class type to search for.
 -- @param ShowCount Optional. Boolean to control display of the count of instances (default: false).
 -- @return Returns the first valid instance found, or nil if no valid instance exists.
-Utils.findInstanceOf = function(class, ShowCount)
-  ShowCount = ShowCount or false  -- Default value for ShowCount is false if not provided
+Utils.findInstanceOf = function (class, ShowCount)
+  ShowCount = ShowCount or false -- Default value for ShowCount is false if not provided
 
   local instances = FindAllOf(class)
   if not instances then
@@ -53,6 +53,20 @@ function Utils.CacheDefaultObject(ObjectFullName, VariableName, ForceInvalidateC
   if not DefaultObject:IsValid() then error(string.format("%s not found", ObjectFullName)) end
 
   return DefaultObject
+end
+
+-- From Kyurin @ UE4SS Discord
+function Utils.RegisterSingleUseHook(FunctionName, Function)
+  local PreID = nil
+  local PostID = nil
+  PreID, PostID = RegisterHook(FunctionName, function (...)
+    Function(...)
+    UnregisterHook(FunctionName, PreID, PostID)
+
+    Utils.Log("Unhooked (Was single use) %s (%d, %d)", FunctionName, PreID, PostID)
+  end)
+
+  Utils.Log("Hooked (Single use) onto %s (%d, %d)", FunctionName, PreID, PostID)
 end
 
 return Utils

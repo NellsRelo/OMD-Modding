@@ -1,15 +1,18 @@
 local Utils = {}
-local json = require("OMDLib.lib.json")
+local UEHelpers = require("UEHelpers")
 local UEUtils = require("OMDLib.Shared.Utils.UEUtils")
 --- Return a given Mod's ModActor by Name
 --- @param modName string Name of mod
 --- @return ModActor|nil ModActor ModActor object
 Utils.GetModActor = function (modName)
-  return UEUtils.GetAllActorsOfClass(
+  local classString = "/Game/Mods/" .. tostring(modName) .. "/ModActor.ModActor_C"
+  local actors = UEUtils.GetAllActorsOfClass(
     UEHelpers.GetWorld(),
-    "/Game/Mods/" .. tostring(modName) .. "/ModActor.ModActor_C",
-    {}
-  )[1]:get()
+    classString
+  )
+
+  local ModActor = actors[1]:get()
+  return ModActor
 end
 
 function Utils.GetContainerPath(path, separator)
@@ -25,21 +28,6 @@ end
 Utils.GetOMDLibPath = function ()
   local path = package.searchpath("OMDLib", package.path)
   return Utils.GetContainerPath(path)
-end
-
-Utils.RegisterMod = function (ModName)
-  local f = assert(io.open(OMDLib.Shared.Utils.GetModPath(ModName) .. "/info.json", "r"))
-  local content = f:read("*a")
-  f:close()
-  print("Json data loaded")
-  local config = json.decode(content)
-
-  Mods[config.ModTableKey] = {
-    Author = config.Author,
-    Name = config.Name,
-    Description = config.Description,
-    Version = config.Version
-  }
 end
 
 return Utils
