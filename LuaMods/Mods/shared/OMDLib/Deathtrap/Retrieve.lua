@@ -93,4 +93,8 @@ function Retrieve.ChatHUD(ForceInvalidateCache)
     ForceInvalidateCache)
 end
 
+function Retrieve.RSTSessionMissionSubsystem()
+  return Utils.findInstanceOf("RSTSessionMissionSubsystem")
+end
+
 return Retrieve
