@@ -93,10 +93,6 @@ function Retrieve.ChatHUD(ForceInvalidateCache)
     ForceInvalidateCache)
 end
 
-function Retrieve.RSTGameStateBase()
-  return Utils.findInstanceOf("RSTGameStateBase")
-end
-
 function Retrieve.RSTSessionMissionSubsystem()
   return Utils.findInstanceOf("RSTSessionMissionSubsystem")
 end
