@@ -1,34 +1,35 @@
+local Print = require("OMDLib.Print")
 local Utils = {}
 --- Print the size of a given value
 --- @param ... any
 function Utils.printSize(...)
-  print(tostring(#...))
+  Print(tostring(#...))
 end
 
 --- Print a given value as a string.
 --- @param ... any
 function Utils.printString(...)
-  print(tostring(...))
+  Print(tostring(...))
 end
 
 --- TODO: Make this print in red
 function Utils.error(...)
-  print(...)
+  Print(...)
 end
 
 --- TODO: Make this print in yellow
 function Utils.warn(...)
-  print(...)
+  Print(...)
 end
 
 --- TODO: Make this print in blue
 function Utils.info(...)
-  print(...)
+  Print(...)
 end
 
 --- TODO: Make this print in green
 function Utils.success(...)
-  print(...)
+  Print(...)
 end
 
 return Utils

@@ -1,4 +1,5 @@
 SharedUtils = require("OMDLib.Shared.Utils")
+local Print = require("OMDLib.Print")
 Mod = {}
 Mod.__index = Mod
 
@@ -37,7 +38,7 @@ end
 function Mod:Register()
   local ModActor = SharedUtils.GetModActor("OMDLib")
   if ModActor == nil or not ModActor:IsValid() then
-    print("Modactor Invalid")
+    Print("Modactor Invalid")
   end
   ModActor:RegisterMod(self.Name, self.Author, self.Version, self.Description)
 end
