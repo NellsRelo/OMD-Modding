@@ -13,31 +13,42 @@ function Utils.GetAllActorsOfClass(WorldContextObject, Class, OutArray)
   return OutArray
 end
 
---- Finds the first valid instance of the specified class.
--- If the 'ShowCount' parameter is true, prints the number of found instances.
+--- Finds all valid instances of the specified class that are not leaked.
+-- If the 'showCount' parameter is true, prints the number of found instances.
 -- @param class The class type to search for.
--- @param ShowCount Optional. Boolean to control display of the count of instances (default: false).
--- @return Returns the first valid instance found, or nil if no valid instance exists.
-Utils.findInstanceOf = function (class, ShowCount)
-  ShowCount = ShowCount or false -- Default value for ShowCount is false if not provided
+-- @param showCount Optional. Boolean to control display of the count of instances (default: false).
+-- @return Returns a table containing all valid instances found, or an empty table if none exist.
+Utils.findValidInstances = function(class, showCount)
+    showCount = showCount or true -- Default value
+    local instances = FindAllOf(class)
 
-  local instances = FindAllOf(class)
-  if not instances then
-    return print("No " .. class .. "s found\n")
-  end
-
-  if ShowCount then
-    print("Found " .. #instances .. " " .. class .. "s\n")
-  end
-
-  for _, v in pairs(instances or {}) do
-    if v:IsValid() and not string.find(v:GetFullName(), "Leaked") then
-      return v
+    if not instances or #instances < 1 then
+        print("No " .. class .. "s found\n")
+        return {}
     end
-  end
 
-  print("No valid " .. class .. " found")
-  return nil
+    local validInstances = {}
+    for _, v in pairs(instances) do
+        if v:IsValid() and not string.find(v:GetFullName(), "Leaked") then
+            table.insert(validInstances, v)
+        end
+    end
+
+    if showCount then
+        print("Found " .. #instances .. " " .. class .. "s (" .. #validInstances .. " valid)\n")
+    end
+
+    return validInstances
+end
+
+--- Finds the first valid instance of the specified class.
+-- If the 'showCount' parameter is true, prints the number of found instances.
+-- @param class The class type to search for.
+-- @param showCount Optional. Boolean to control display of the count of instances (default: false).
+-- @return Returns the first valid instance found, or nil if no valid instance exists.
+Utils.findInstanceOf = function(class, showCount)
+    local instances = Utils.findValidInstances(class, showCount)
+    return #instances > 0 and instances[1] or nil
 end
 
 function Utils.CacheDefaultObject(ObjectFullName, VariableName, ForceInvalidateCache)
