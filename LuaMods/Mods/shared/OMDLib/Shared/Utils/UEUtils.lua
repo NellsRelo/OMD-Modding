@@ -19,7 +19,7 @@ end
 -- @param showCount Optional. Boolean to control display of the count of instances (default: false).
 -- @return Returns a table containing all valid instances found, or an empty table if none exist.
 Utils.findValidInstances = function(class, showCount)
-    showCount = showCount or true -- Default value
+    showCount = showCount or false -- Default value
     local instances = FindAllOf(class)
 
     if not instances or #instances < 1 then
