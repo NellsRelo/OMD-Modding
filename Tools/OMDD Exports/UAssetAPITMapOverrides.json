@@ -51,6 +51,10 @@
     null,
     "GameplayTagContainer"
   ],
+  "AvailableCharacters":[
+    null,
+    "GameplayTagContainer"
+  ],
   "LinkedModifierObjects":[
     "Guid",
     null

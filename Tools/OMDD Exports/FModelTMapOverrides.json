@@ -51,6 +51,10 @@
     "Key":"",
     "Value":"GameplayTagContainer"
   },
+  "AvailableCharacters":{
+    "Key":"",
+    "Value":"GameplayTagContainer"
+  },
   "LinkedModifierObjects":{
     "Key":"Guid",
     "Value":""
