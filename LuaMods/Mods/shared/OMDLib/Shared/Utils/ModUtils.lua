@@ -11,8 +11,8 @@ Utils.GetModActor = function (modName)
     classString
   )
 
-  local ModActor = actors[1]:get()
-  return ModActor
+  local ModActor = actors[1]
+  return ModActor:get()
 end
 
 function Utils.GetContainerPath(path, separator)

@@ -25,12 +25,12 @@ RegisterHook("/Game/UI/Menus/InGameMenu/W_RSTInGameMenu.W_RSTInGameMenu_C:BP_Get
 end)
 
 RegisterHook("/Game/UI/Menus/InGameMenu/W_RSTInGameMenu.W_RSTInGameMenu_C:BP_OnActivated", function (ctx)
+  -- Adopt the style used by one of the Menu text buttons
   local existingButton = ctx.WidgetTree.Exit
   if not existingButton:IsValid() then
     OMDLib.Print("Existing button invalid")
   end
   ModsButton.Style = existingButton.Style
-  ModsButton.ToolTipText = FText("Mod Menu")
   ModsButton:InitHoverDecorator()
   ModsButton:UpdateHoverDecorator()
 
@@ -76,12 +76,9 @@ local function Init()
     ModActor = SharedUtils.GetModActor("OMDLib")
     if ModActor == nil or not ModActor:IsValid() then
       OMDLib.Print("Modactor Invalid")
-    else
-      ModsButton = UI.DrawButton("OMDLib_ModMenuBtn", "Mods")
-
-      OMDLib.Print(tostring(ModsButton))
-      ModMenuSetup()
     end
+    ModsButton = UI.DrawButton("OMDLib_ModMenuBtn", "Mods")
+    ModMenuSetup()
   end)
 end
 

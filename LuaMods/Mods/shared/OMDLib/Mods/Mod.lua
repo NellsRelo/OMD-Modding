@@ -36,7 +36,7 @@ function Mod:GetSettings()
 end
 
 function Mod:Register()
-  local ModActor = SharedUtils.GetModActor("OMDLib")
+  ModActor = SharedUtils.GetModActor("OMDLib")
   if ModActor == nil or not ModActor:IsValid() then
     Print("Modactor Invalid")
   end
