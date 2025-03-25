@@ -6,13 +6,8 @@
 ---@field MaxLaunchDistance double
 ---@field Character ARSTCharacter
 ---@field LaunchVelocity FVector
----@field AltCooldownDuration double
----@field AltCooldownChance double
----@field AltCooldownCap int32
 UGA_PoisonFlower_Fire_C = {}
 
----@return float
-function UGA_PoisonFlower_Fire_C:GetCooldownDuration() end
 function UGA_PoisonFlower_Fire_C:OnCancelled_C23C0D1B4377E7B2CE6079971BECE866() end
 function UGA_PoisonFlower_Fire_C:OnInterrupted_C23C0D1B4377E7B2CE6079971BECE866() end
 function UGA_PoisonFlower_Fire_C:OnBlendOut_C23C0D1B4377E7B2CE6079971BECE866() end

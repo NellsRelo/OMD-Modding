@@ -39,6 +39,7 @@ UGA_Blunderbuss_Passive_C['On Death Started'] = function(OwningActor, Instigator
 ---@param OwningActor AActor
 ---@param Instigator AActor
 UGA_Blunderbuss_Passive_C['On Death Finished'] = function(OwningActor, Instigator) end
+UGA_Blunderbuss_Passive_C['Destroy Spawned Pet'] = function() end
 ---@param EntryPoint int32
 function UGA_Blunderbuss_Passive_C:ExecuteUbergraph_GA_Blunderbuss_Passive(EntryPoint) end
 

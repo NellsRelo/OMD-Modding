@@ -2,7 +2,6 @@
 
 ---@class ABP_BossSequencePlayer_Sniper_C : ABP_BossSequencePlayer_Base_C
 ---@field UberGraphFrame FPointerToUberGraphFrame
----@field Gnoll_Sniper_Intro USoundBase
 ABP_BossSequencePlayer_Sniper_C = {}
 
 function ABP_BossSequencePlayer_Sniper_C:ReceiveBeginPlay() end

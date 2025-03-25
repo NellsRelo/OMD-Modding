@@ -62,6 +62,15 @@
 ---@field AbilityMask UTexture2D
 ---@field AbilityGreyscalePercentage double
 ---@field bShowAbilityFillBar boolean
+---@field Condition_AbilityDisableTask UAbilityAsync_WaitGameplayTagQuery
+---@field Condition_AbilityEnabledTask UAbilityAsync_WaitGameplayTagQuery
+---@field Condition_AbilityShowTask UAbilityAsync_WaitGameplayTagQuery
+---@field Condition_AbilityHideTask UAbilityAsync_WaitGameplayTagQuery
+---@field bAbilityEnabled boolean
+---@field bAbilityCanActivate boolean
+---@field AbilityUIData TSoftObjectPtr<URSTAbilityUIData>
+---@field Condition_CustomEnabledTask UAbilityAsync_WaitGameplayTagQuery
+---@field Condition_CustomDisabledTask UAbilityAsync_WaitGameplayTagQuery
 ---@field TempIconData URSTAbilityUIData
 UW_AbilityDisplaySlot_Base_C = {}
 
@@ -124,8 +133,12 @@ function UW_AbilityDisplaySlot_Base_C:Triggered_E7FCDFB84AA4609D3EC7309E2E0787CF
 function UW_AbilityDisplaySlot_Base_C:Triggered_9DE940A44094C31A1A5B9299A2772A67() end
 function UW_AbilityDisplaySlot_Base_C:Triggered_6ABA3BE649F86EAD4BAB1ABCFF92A8EC() end
 function UW_AbilityDisplaySlot_Base_C:Triggered_A02E6C8046088CC844D1379146F2A68D() end
+function UW_AbilityDisplaySlot_Base_C:Triggered_487526E74D2B21DD2DBF80B0286D7912() end
+function UW_AbilityDisplaySlot_Base_C:Triggered_EFC0AF01462767082E63F099A8864D77() end
 ---@param Loaded UObject
-function UW_AbilityDisplaySlot_Base_C:OnLoaded_C15C971046B0D27056877DB464DB426F(Loaded) end
+function UW_AbilityDisplaySlot_Base_C:OnLoaded_11E8AE6546F5688D0C230D8A2B953D86(Loaded) end
+---@param Loaded UObject
+function UW_AbilityDisplaySlot_Base_C:OnLoaded_ADD1354743CD9B5DF6006881AA0A9A7D(Loaded) end
 ---@param IsDesignTime boolean
 function UW_AbilityDisplaySlot_Base_C:PreConstruct(IsDesignTime) end
 function UW_AbilityDisplaySlot_Base_C:Construct() end
@@ -144,8 +157,6 @@ UW_AbilityDisplaySlot_Base_C['Process Recharging Cancelled'] = function(Instigat
 UW_AbilityDisplaySlot_Base_C['Register Message Callbacks'] = function() end
 UW_AbilityDisplaySlot_Base_C['Refresh Max Charge Count'] = function() end
 UW_AbilityDisplaySlot_Base_C['Refresh Charge Count'] = function() end
----@param Ability_Icon TSoftObjectPtr<URSTAbilityUIData>
-UW_AbilityDisplaySlot_Base_C['Set Ability Icon'] = function(Ability_Icon) end
 UW_AbilityDisplaySlot_Base_C['Hide Ability Icon'] = function() end
 UW_AbilityDisplaySlot_Base_C['Init Charges'] = function() end
 UW_AbilityDisplaySlot_Base_C['Init Ability Icon'] = function() end
@@ -180,8 +191,19 @@ UW_AbilityDisplaySlot_Base_C['On Ability Enabled'] = function() end
 UW_AbilityDisplaySlot_Base_C['On Ability - Show'] = function() end
 UW_AbilityDisplaySlot_Base_C['On Ability - Hide'] = function() end
 function UW_AbilityDisplaySlot_Base_C:Destruct() end
+---@param Action UCancellableAsyncAction
+UW_AbilityDisplaySlot_Base_C['Try Cancel Async Action'] = function(Action) end
+UW_AbilityDisplaySlot_Base_C['Clear Tasks'] = function() end
+UW_AbilityDisplaySlot_Base_C['Refresh Ability Enabled Visuals'] = function() end
+---@param InputPin TSoftObjectPtr<URSTAbilityUIData>
+UW_AbilityDisplaySlot_Base_C['Listen for Activation Failure'] = function(InputPin) end
+UW_AbilityDisplaySlot_Base_C['Clear Activation Failure Listener'] = function() end
+---@param Ability_Icon TSoftObjectPtr<URSTAbilityUIData>
+UW_AbilityDisplaySlot_Base_C['Set Ability Icon'] = function(Ability_Icon) end
 ---@param InputPin URSTAbilityUIData
 UW_AbilityDisplaySlot_Base_C['Do Set Ability Icon'] = function(InputPin) end
+---@param Target URSTAbilityUIData
+UW_AbilityDisplaySlot_Base_C['Do Listen for Activation Failure'] = function(Target) end
 ---@param EntryPoint int32
 function UW_AbilityDisplaySlot_Base_C:ExecuteUbergraph_W_AbilityDisplaySlot_Base(EntryPoint) end
 

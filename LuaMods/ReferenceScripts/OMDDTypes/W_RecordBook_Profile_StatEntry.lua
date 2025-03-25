@@ -23,6 +23,8 @@ function UW_RecordBook_Profile_StatEntry_C:OnStreamableFinished_FA556C7548C63693
 ---@param ItemDefinition URSTInventoryItemDefinition
 ---@param DidFind boolean
 function UW_RecordBook_Profile_StatEntry_C:OnStreamableFinished_709AA2A749FA4903E2909CB3215A5C9B(ItemDefinition, DidFind) end
+---@param Loaded UObject
+function UW_RecordBook_Profile_StatEntry_C:OnLoaded_90317F6842F4535A7014EDA3ADD2015E(Loaded) end
 function UW_RecordBook_Profile_StatEntry_C:BP_SynchronizeProperties() end
 function UW_RecordBook_Profile_StatEntry_C:Construct() end
 UW_RecordBook_Profile_StatEntry_C['Refresh Stat Value'] = function() end

@@ -2,6 +2,8 @@
 
 ---@class UW_RSTOptionsMenu_C : URSTGenericTabWidget
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field OnShow_NoBG UWidgetAnimation
+---@field OnHide_NoBG UWidgetAnimation
 ---@field OnHide UWidgetAnimation
 ---@field OnShow UWidgetAnimation
 ---@field Image_109 UImage
@@ -31,8 +33,7 @@
 ---@field ScreenPercentage UW_RSTOption_Slider_C
 ---@field AntiAliasing UW_RSTOption_ComboBox_C
 ---@field LocalizationComboBox UW_RSTOption_ComboBox_C
----@field TabContentMap TMap<Enum_OptionsTab::Type, UW_RSTOptionsTab_C>
----@field TabTypeMap TMap<int32, Enum_OptionsTab::Type>
+---@field TabContentMap TMap<uint8, UW_RSTOptionsTab_C>
 ---@field DependentOptionSpacerSize FVector2D
 ---@field GraphicsQualityBox UW_RSTOption_ComboBox_C
 ---@field MapKeybindingCategoryToWidget TMap<FString, UW_RSTOption_Category_C>
@@ -40,8 +41,14 @@
 ---@field bNoScrollUpdate boolean
 ---@field SessionVisibilityComboBox UW_RSTOption_ComboBox_C
 ---@field LinkAccountButton UW_RSTOption_Button_C
+---@field bIsRunningOnSteamDeck boolean
+---@field TabIdMap TMap<int32, FName>
 UW_RSTOptionsMenu_C = {}
 
+---@param bIsChecked boolean
+function UW_RSTOptionsMenu_C:OnTextChatToggleChanged(bIsChecked) end
+---@param bIsEnabled boolean
+function UW_RSTOptionsMenu_C:OnShowFlyoffsChanged(bIsEnabled) end
 ---@param WindowOptions TArray<FString>
 UW_RSTOptionsMenu_C['Get Window Option Strings'] = function(WindowOptions) end
 ---@param Name FText
@@ -49,8 +56,6 @@ UW_RSTOptionsMenu_C['Get Window Option Strings'] = function(WindowOptions) end
 ---@param bUseGraphicsQuality boolean
 ---@param OnSelectionChanged FAdd Graphics Quality Combo BoxOnSelectionChanged
 UW_RSTOptionsMenu_C['Add Graphics Quality Combo Box'] = function(Name, CurrentVal, bUseGraphicsQuality, OnSelectionChanged) end
----@param bIsEnabled boolean
-function UW_RSTOptionsMenu_C:OnShowFlyoffsChanged(bIsEnabled) end
 ---@param Settings URSTSettingsLocal
 ---@param ApplyImmediately boolean
 function UW_RSTOptionsMenu_C:ResetEnvironmentDetails(Settings, ApplyImmediately) end
@@ -182,10 +187,12 @@ function UW_RSTOptionsMenu_C:GetDLSSModeOptions(Options) end
 function UW_RSTOptionsMenu_C:SetupButton(Name, ButtonText, OnButtonClicked, Button) end
 ---@param Value float
 UW_RSTOptionsMenu_C['Gamepade Deadzone Changed'] = function(Value) end
+---@param bStackActive boolean
 ---@return UWidgetAnimation
-function UW_RSTOptionsMenu_C:BP_GetOnHideAnimation() end
+function UW_RSTOptionsMenu_C:BP_GetOnHideAnimation(bStackActive) end
+---@param bStackActive boolean
 ---@return UWidgetAnimation
-function UW_RSTOptionsMenu_C:BP_GetOnShowAnimation() end
+function UW_RSTOptionsMenu_C:BP_GetOnShowAnimation(bStackActive) end
 ---@param Name FName
 ---@return boolean
 function UW_RSTOptionsMenu_C:IsPrimaryOfSubcategory(Name) end
@@ -361,6 +368,9 @@ function UW_RSTOptionsMenu_C:OnResetKeymappingClicked() end
 function UW_RSTOptionsMenu_C:ClearModal() end
 ---@param Value float
 function UW_RSTOptionsMenu_C:BndEvt__W_RSTOptionsMenu_ScrollbarSlider_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature(Value) end
+---@param CurrentOffset float
+function UW_RSTOptionsMenu_C:BndEvt__W_RSTOptionsMenu_OptionsBox_K2Node_ComponentBoundEvent_2_OnUserScrolledEvent__DelegateSignature(CurrentOffset) end
+function UW_RSTOptionsMenu_C:RefreshScrollbar() end
 ---@param Index int32
 UW_RSTOptionsMenu_C['BndEvt__W_RSTOptionsMenu_NavigationBar_K2Node_ComponentBoundEvent_3_On Tab Selected__DelegateSignature'] = function(Index) end
 function UW_RSTOptionsMenu_C:OnLinkAccountClicked() end
@@ -372,9 +382,7 @@ function UW_RSTOptionsMenu_C:BP_OnDeactivated() end
 function UW_RSTOptionsMenu_C:Tick(MyGeometry, InDeltaTime) end
 function UW_RSTOptionsMenu_C:OnResetControlsClicked() end
 function UW_RSTOptionsMenu_C:AddContentGameplayMain() end
----@param CurrentOffset float
-function UW_RSTOptionsMenu_C:BndEvt__W_RSTOptionsMenu_OptionsBox_K2Node_ComponentBoundEvent_2_OnUserScrolledEvent__DelegateSignature(CurrentOffset) end
-function UW_RSTOptionsMenu_C:RefreshScrollbar() end
+function UW_RSTOptionsMenu_C:OnInitialized() end
 ---@param EntryPoint int32
 function UW_RSTOptionsMenu_C:ExecuteUbergraph_W_RSTOptionsMenu(EntryPoint) end
 

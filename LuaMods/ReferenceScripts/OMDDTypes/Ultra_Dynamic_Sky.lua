@@ -444,14 +444,14 @@
 ---@field ['Exposure Bias Dusty'] double
 ---@field ['Exposure Brightness Range'] FFloatRange
 ---@field ['Apply Interior Adjustments'] boolean
----@field ['Extra Fog Start Distance in Interior'] double
----@field ['Fog Density Multiplier in Interior'] double
+---@field ['Extra Fog Start Distance In Interior'] double
+---@field ['Fog Density Multiplier In Interior'] double
 ---@field ['Exposure Bias in Interior'] double
 ---@field ['Sky Light Intensity Multiplier in Interiors'] double
 ---@field ['Sun Light Intensity Multiplier in Interiors'] double
 ---@field ['Moon Light Intensity Multiplier in Interiors'] double
----@field ['Extra Sun Volumetric Scattering In Interiors'] double
----@field ['Extra Moon Volumetric Scattering In Interiors'] double
+---@field ['Extra Sun Volumetric Scattering in Interiors'] double
+---@field ['Extra Moon Volumetric Scattering in Interiors'] double
 ---@field ['Cached Inverted Global Occlusion'] double
 ---@field ['Occlusion Settings'] UUDS_OcclusionSettings_C
 ---@field ['Cloud Shadow Disable Threshold'] double
@@ -470,7 +470,7 @@
 ---@field ['Cached Value Changing'] TArray<boolean>
 ---@field ['Max Property Cache Period'] double
 ---@field ['Preset Location Coordinates'] TMap<UDS_CityPresets::Type, FVector>
----@field ['Disable Image Based Lens Flares When Enabled'] boolean
+---@field ['Disable Image Based Lens Flares when Enabled'] boolean
 ---@field ['Starting Sky Atmosphere Height'] double
 ---@field ['Post Process Components'] TArray<FUDS_Post_Process_Stage>
 ---@field ['Static Post Process Settings'] FPostProcessSettings
@@ -490,14 +490,14 @@
 ---@field ['Custom Sun Light Actor'] ADirectionalLight
 ---@field ['Max Sun Source Angle Scale'] double
 ---@field ['Sun Source Angle Softness'] double
----@field ['Scale Sun Radius as it Nears Horizon'] double
+---@field ['Scale Sun Radius As It Nears Horizon'] double
 ---@field ['Fade Down High Sun Light Intensity Below Horizon'] boolean
 ---@field ['Support Sky Atmo Affecting Height Fog'] boolean
 ---@field ['UDS Version'] FString
 ---@field ['UDS Version Info'] UUDS_VersionInfo_C
 ---@field ['Clouds B Time'] double
 ---@field ['Sky Atmosphere Overcast Luminance'] double
----@field ['Keep Planet Top At Camera XY Location'] boolean
+---@field ['Keep Planet Top at Camera XY Location'] boolean
 ---@field ['Control Sky Atmosphere Settings'] boolean
 ---@field ['Old Composite Weather'] FVector
 ---@field ['Old Composite Context'] FVector
@@ -655,7 +655,7 @@
 ---@field ['Modifier Targets'] TArray<double>
 ---@field ['Modifier Speeds'] TArray<double>
 ---@field ['Starting Modifiers'] TArray<UUDS_Modifier_C>
----@field ['Preview Starting Modifiers In Editor'] boolean
+---@field ['Preview Starting Modifiers in Editor'] boolean
 ---@field ['Replicate Modifiers to Clients'] boolean
 ---@field ['Using Volumetric Light Rays'] boolean
 ---@field ['Last Material Quality Level'] int32

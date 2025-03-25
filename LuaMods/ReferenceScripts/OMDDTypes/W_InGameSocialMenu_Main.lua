@@ -2,15 +2,22 @@
 
 ---@class UW_InGameSocialMenu_Main_C : URSTActivatableWidget
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field OnHide_NoBG UWidgetAnimation
+---@field OnShow_NoBG UWidgetAnimation
+---@field OnHide UWidgetAnimation
+---@field OnShow UWidgetAnimation
 ---@field Back UW_ButtonBasic_C
----@field bg UImage
+---@field BG UImage
 ---@field Box_bg UImage
 ---@field GoOnline UW_ButtonBasic_C
 ---@field HostSettings UW_ButtonBasic_C
 ---@field HostSettingsRoot UScaleBox
 ---@field InviteFriends UW_ButtonBasic_C
 ---@field LobbyList UW_ButtonBasic_C
+---@field LobbyListRoot UScaleBox
 ---@field OnlineModeRoot UVerticalBox
+---@field QuickPlay UW_ButtonBasic_C
+---@field QuickPlayRoot UScaleBox
 ---@field StandaloneModeRoot UVerticalBox
 ---@field PasswordModal URSTModal_TextPrompt
 ---@field OnlineModal URSTModal_TwoChoices
@@ -20,8 +27,13 @@
 ---@field CrossplayModal URSTModal_TwoChoices
 UW_InGameSocialMenu_Main_C = {}
 
----@return boolean
-function UW_InGameSocialMenu_Main_C:BP_OnHandleBackAction() end
+function UW_InGameSocialMenu_Main_C:SetVisibilityBasedOnQuickplaySetting() end
+---@param bStackActive boolean
+---@return UWidgetAnimation
+function UW_InGameSocialMenu_Main_C:BP_GetOnShowAnimation(bStackActive) end
+---@param bStackActive boolean
+---@return UWidgetAnimation
+function UW_InGameSocialMenu_Main_C:BP_GetOnHideAnimation(bStackActive) end
 ---@return UWidget
 function UW_InGameSocialMenu_Main_C:BP_GetDesiredFocusTarget() end
 ---@param UserWidget UCommonActivatableWidget
@@ -50,15 +62,17 @@ function UW_InGameSocialMenu_Main_C:BndEvt__W_InGameSocialMenu_Main_GoOnline_K2N
 function UW_InGameSocialMenu_Main_C:ConfirmGoOnline() end
 function UW_InGameSocialMenu_Main_C:CancelGoOnline() end
 function UW_InGameSocialMenu_Main_C:DismissOnlineErrorModal() end
+---@param Result FOnlineResultInformation
+function UW_InGameSocialMenu_Main_C:OnCreateSessionComplete(Result) end
 function UW_InGameSocialMenu_Main_C:RefreshOnlineVisibility() end
 function UW_InGameSocialMenu_Main_C:ShowOnlineFailureMessage() end
 ---@param Button UCommonButtonBase
 function UW_InGameSocialMenu_Main_C:BndEvt__W_InGameSocialMenu_Main_HostSettings_K2Node_ComponentBoundEvent_7_CommonButtonBaseClicked__DelegateSignature(Button) end
-function UW_InGameSocialMenu_Main_C:OnSessionDestroyed() end
----@param Result FOnlineResultInformation
-function UW_InGameSocialMenu_Main_C:OnCreateSessionComplete(Result) end
+---@param Button UCommonButtonBase
+function UW_InGameSocialMenu_Main_C:BndEvt__W_InGameSocialMenu_Main_QuickPlay_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(Button) end
 ---@param bUseCurrentWorld boolean
 function UW_InGameSocialMenu_Main_C:PrepareToHostSession(bUseCurrentWorld) end
+function UW_InGameSocialMenu_Main_C:OnSessionDestroyed() end
 ---@param EntryPoint int32
 function UW_InGameSocialMenu_Main_C:ExecuteUbergraph_W_InGameSocialMenu_Main(EntryPoint) end
 

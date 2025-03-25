@@ -2,6 +2,8 @@
 
 ---@class UW_RSTTabMenu_C : URSTTabMenuWidget
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field OnHide UWidgetAnimation
+---@field OnShow UWidgetAnimation
 ---@field SafeZone_3 USafeZone
 ---@field SafeZone_4 USafeZone
 ---@field W_ExitMenuButton_173 UW_ExitMenuButton_C
@@ -15,6 +17,12 @@
 ---@field MapMenuWidget UWidget
 UW_RSTTabMenu_C = {}
 
+---@param bStackActive boolean
+---@return UWidgetAnimation
+function UW_RSTTabMenu_C:BP_GetOnHideAnimation(bStackActive) end
+---@param bStackActive boolean
+---@return UWidgetAnimation
+function UW_RSTTabMenu_C:BP_GetOnShowAnimation(bStackActive) end
 ---@return boolean
 function UW_RSTTabMenu_C:BP_OnHandleBackAction() end
 ---@param Tab ERSTTabMenuTab

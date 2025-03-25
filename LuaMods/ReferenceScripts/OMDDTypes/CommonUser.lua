@@ -70,11 +70,13 @@ UCommonSessionSubsystem = {}
 
 ---@param NewSessionVisibility ECommonSessionVisibility
 function UCommonSessionSubsystem:SetSessionVisibility(NewSessionVisibility) end
+---@param NewDifficulty int32
+function UCommonSessionSubsystem:SetSessionDifficulty(NewDifficulty) end
 ---@param bInCrossplayEnabled boolean
 function UCommonSessionSubsystem:SetCrossplayEnabled(bInCrossplayEnabled) end
 ---@param JoiningOrHostingPlayer APlayerController
----@param Request UCommonSession_HostSessionRequest
-function UCommonSessionSubsystem:QuickPlaySession(JoiningOrHostingPlayer, Request) end
+---@param bCanUserCrossPlay boolean
+function UCommonSessionSubsystem:QuickPlaySession(JoiningOrHostingPlayer, bCanUserCrossPlay) end
 ---@param InSearchResults TArray<UCommonSession_SearchResult>
 ---@param bCanUserCrossPlay boolean
 ---@param SearchText FText
@@ -92,6 +94,8 @@ function UCommonSessionSubsystem:IsInSession() end
 function UCommonSessionSubsystem:HostSession(HostingPlayer, Request) end
 ---@return ECommonSessionVisibility
 function UCommonSessionSubsystem:GetSessionVibility() end
+---@return int32
+function UCommonSessionSubsystem:GetSessionDifficulty() end
 ---@return FString
 function UCommonSessionSubsystem:GetCrossplayPlatform() end
 ---@return boolean
@@ -118,6 +122,7 @@ function UCommonSessionSubsystem:CancelFindSessions() end
 ---@field Password FString
 ---@field SessionVisibility ECommonSessionVisibility
 ---@field HostLevel int32
+---@field Difficulty int32
 ---@field Region int32
 ---@field PasswordSalt FString
 ---@field bCrossplayEnabled boolean
@@ -258,6 +263,9 @@ function UCommonUserSubsystem:GetMaxLocalPlayers() end
 ---@param LocalPlayerIndex int32
 ---@return ECommonUserInitializationState
 function UCommonUserSubsystem:GetLocalPlayerInitializationState(LocalPlayerIndex) end
+---@param localUserNum int32
+---@return boolean
+function UCommonUserSubsystem:CanShowInviteUI(localUserNum) end
 ---@param LocalPlayerIndex int32
 ---@return boolean
 function UCommonUserSubsystem:CancelUserInitialization(LocalPlayerIndex) end

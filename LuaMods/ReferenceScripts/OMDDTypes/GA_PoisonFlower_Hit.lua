@@ -8,7 +8,6 @@
 ---@field AbilityDuration float
 ---@field GatherTargetsHandle FTimerHandle
 ---@field EndOverlapEffectData TArray<FRSTAdditionalGameplayEffectData>
----@field ['Poison Cloud'] UNiagaraComponent
 UGA_PoisonFlower_Hit_C = {}
 
 ---@param Target AActor

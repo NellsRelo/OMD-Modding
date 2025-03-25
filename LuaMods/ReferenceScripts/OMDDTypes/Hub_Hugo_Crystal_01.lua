@@ -2,7 +2,13 @@
 
 ---@class AHub_Hugo_Crystal_01_C : AActor
 ---@field UberGraphFrame FPointerToUberGraphFrame
----@field NS_Crystal_Rift_Idle UNiagaraComponent
+---@field NS_Hugo_Crystal_Rays UNiagaraComponent
+---@field NS_Hugo_Crystal_Base_03 UNiagaraComponent
+---@field NS_Hugo_Crystal_Base_02 UNiagaraComponent
+---@field NS_Hugo_Crystal_Base_01 UNiagaraComponent
+---@field NS_Hugo_Crystal_Shell UNiagaraComponent
+---@field NS_Hugo_Crystal_02 UNiagaraComponent
+---@field NS_Hugo_Crystal_01 UNiagaraComponent
 ---@field Hub_HugoPlatform_CenterPlatform_Crystal_01 UStaticMeshComponent
 ---@field Hub_HugoPlatform_CenterPlatform_Crystal_03 UStaticMeshComponent
 ---@field Hub_HugoPlatform_CenterPlatform_Crystal_02 UStaticMeshComponent

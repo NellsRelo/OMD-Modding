@@ -13,6 +13,7 @@
 ---@field Killed_Timeline__Direction_FF11ECB242328A25544A55862A8CB241 ETimelineDirection::Type
 ---@field ['Killed Timeline'] UTimelineComponent
 ---@field LimitPenaltyOnDeath boolean
+---@field bAppliedLimitPenalty boolean
 ABP_Barricade_C = {}
 
 ---@return boolean

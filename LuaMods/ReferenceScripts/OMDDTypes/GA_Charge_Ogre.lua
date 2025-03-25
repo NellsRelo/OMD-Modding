@@ -36,8 +36,8 @@ function UGA_Charge_Ogre_C:OnInterrupted_8502F1114215A76D0621FD8E2B1249CD() end
 function UGA_Charge_Ogre_C:OnBlendOut_8502F1114215A76D0621FD8E2B1249CD() end
 function UGA_Charge_Ogre_C:OnCompleted_8502F1114215A76D0621FD8E2B1249CD() end
 function UGA_Charge_Ogre_C:OnOgreChargeFinished_179AC84B4094F4924BE74B984F008187() end
----@param MoveSucceeded boolean
-function UGA_Charge_Ogre_C:OnOgreChargeMoveComplete_179AC84B4094F4924BE74B984F008187(MoveSucceeded) end
+---@param CollidedWithPlayer boolean
+function UGA_Charge_Ogre_C:OnOgreChargeMoveComplete_179AC84B4094F4924BE74B984F008187(CollidedWithPlayer) end
 ---@param TargetData FGameplayAbilityTargetDataHandle
 function UGA_Charge_Ogre_C:OnOgreChargeOverlap_179AC84B4094F4924BE74B984F008187(TargetData) end
 function UGA_Charge_Ogre_C:OnCancelled_43A15C344DE335921ADD7AAFA5D54516() end
@@ -50,6 +50,8 @@ function UGA_Charge_Ogre_C:K2_OnEndAbility(bWasCancelled) end
 ---@param NotifyTag FGameplayTag
 ---@param NotifyEvent FAnimNotifyEvent
 function UGA_Charge_Ogre_C:K2_OnAnimNotify(NotifyTag, NotifyEvent) end
+---@param CollidedWithPlayer boolean
+function UGA_Charge_Ogre_C:CustomEvent(CollidedWithPlayer) end
 ---@param EntryPoint int32
 function UGA_Charge_Ogre_C:ExecuteUbergraph_GA_Charge_Ogre(EntryPoint) end
 

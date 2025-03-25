@@ -21,6 +21,7 @@
 ---@field ContributionAmount int32
 ---@field SummonCost int32
 ---@field DisplayName FText
+---@field bAllowInteraction boolean
 ABP_Sentinel_Cannoneer_Trap_C = {}
 
 ---@return FText

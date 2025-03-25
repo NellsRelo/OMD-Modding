@@ -20,10 +20,12 @@
 ---@field Modal URSTModal
 UW_MainMenu_Proflie_C = {}
 
+---@param bStackActive boolean
 ---@return UWidgetAnimation
-function UW_MainMenu_Proflie_C:BP_GetOnHideAnimation() end
+function UW_MainMenu_Proflie_C:BP_GetOnHideAnimation(bStackActive) end
+---@param bStackActive boolean
 ---@return UWidgetAnimation
-function UW_MainMenu_Proflie_C:BP_GetOnShowAnimation() end
+function UW_MainMenu_Proflie_C:BP_GetOnShowAnimation(bStackActive) end
 ---@param OutError FText
 ---@return boolean
 function UW_MainMenu_Proflie_C:IsCurrentProfileValid(OutError) end
@@ -68,6 +70,7 @@ function UW_MainMenu_Proflie_C:BndEvt__W_MainMenu_Proflie_Button_DeleteProfile_K
 function UW_MainMenu_Proflie_C:BndEvt__W_MainMenu_Proflie_Button_RenameProfile_K2Node_ComponentBoundEvent_9_CommonButtonBaseClicked__DelegateSignature(Button) end
 ---@param Button UCommonButtonBase
 function UW_MainMenu_Proflie_C:BndEvt__W_MainMenu_Proflie_Button_SelectProfile_K2Node_ComponentBoundEvent_10_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_MainMenu_Proflie_C:ConfirmLoadBackup() end
 ---@param EntryPoint int32
 function UW_MainMenu_Proflie_C:ExecuteUbergraph_W_MainMenu_Proflie(EntryPoint) end
 

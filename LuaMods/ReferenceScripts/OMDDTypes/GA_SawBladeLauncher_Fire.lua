@@ -5,8 +5,11 @@
 ---@field LaunchAngle float
 ---@field WipsProjectileCooldown float
 ---@field WispProjectileClass TSubclassOf<ARSTProjectile>
+---@field WispProjectileLifespan float
 UGA_SawBladeLauncher_Fire_C = {}
 
+---@return float
+function UGA_SawBladeLauncher_Fire_C:GetProjectileLifespan() end
 ---@return float
 function UGA_SawBladeLauncher_Fire_C:GetCooldownDuration() end
 ---@return TSubclassOf<ARSTProjectile>

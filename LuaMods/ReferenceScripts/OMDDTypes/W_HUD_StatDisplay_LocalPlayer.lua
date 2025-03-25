@@ -2,6 +2,7 @@
 
 ---@class UW_HUD_StatDisplay_LocalPlayer_C : UW_StatDisplay_Base_C
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field ShownShield UWidgetAnimation
 ---@field HideShield UWidgetAnimation
 ---@field ShowShield UWidgetAnimation
 ---@field OnShow UWidgetAnimation

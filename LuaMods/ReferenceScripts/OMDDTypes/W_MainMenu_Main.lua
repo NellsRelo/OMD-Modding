@@ -7,7 +7,6 @@
 ---@field Background UImage
 ---@field Button_Credits UW_ButtonBasic_C
 ---@field Button_Discord UW_ButtonBasic_C
----@field Button_LoadQuicksave UW_ButtonBasic_C
 ---@field Button_News UW_MainMenu_NewsButton_C
 ---@field Button_Play UW_ButtonBasic_C
 ---@field Button_Profile UW_ButtonBasic_C
@@ -28,14 +27,16 @@
 UW_MainMenu_Main_C = {}
 
 function UW_MainMenu_Main_C:MoveCursorToCenter() end
+---@param bStackActive boolean
 ---@return UWidgetAnimation
-function UW_MainMenu_Main_C:BP_GetOnShowAnimation() end
+function UW_MainMenu_Main_C:BP_GetOnShowAnimation(bStackActive) end
 ---@param MissionNum int32
 ---@param Skulls int32
 UW_MainMenu_Main_C['Get Saved Run Info'] = function(MissionNum, Skulls) end
 function UW_MainMenu_Main_C:PopModal() end
+---@param bStackActive boolean
 ---@return UWidgetAnimation
-function UW_MainMenu_Main_C:BP_GetOnHideAnimation() end
+function UW_MainMenu_Main_C:BP_GetOnHideAnimation(bStackActive) end
 ---@return boolean
 function UW_MainMenu_Main_C:BP_OnHandleBackAction() end
 ---@return UWidget
@@ -75,16 +76,13 @@ function UW_MainMenu_Main_C:BeforePush_B8D5024A4B4545778B9F44B62443215D(UserWidg
 ---@param DidFind boolean
 function UW_MainMenu_Main_C:OnStreamableFinished_A0DEA72840BE7749FD398796AEE7F3DB(UserFacingData, DidFind) end
 ---@param UserWidget UCommonActivatableWidget
-function UW_MainMenu_Main_C:AfterPush_FC66D5534EE0BDAF2139CEB020F3A184(UserWidget) end
----@param UserWidget UCommonActivatableWidget
-function UW_MainMenu_Main_C:BeforePush_FC66D5534EE0BDAF2139CEB020F3A184(UserWidget) end
----@param UserWidget UCommonActivatableWidget
 function UW_MainMenu_Main_C:AfterPush_DC90F05D4AA9DDFD66D37C87083F0759(UserWidget) end
 ---@param UserWidget UCommonActivatableWidget
 function UW_MainMenu_Main_C:BeforePush_DC90F05D4AA9DDFD66D37C87083F0759(UserWidget) end
-function UW_MainMenu_Main_C:Construct() end
----@param Button UCommonButtonBase
-function UW_MainMenu_Main_C:BndEvt__W_MainMenu_Main_Button_Settings_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(Button) end
+---@param UserWidget UCommonActivatableWidget
+function UW_MainMenu_Main_C:AfterPush_34D2F88947199562EBDEE6B9E8A115C0(UserWidget) end
+---@param UserWidget UCommonActivatableWidget
+function UW_MainMenu_Main_C:BeforePush_34D2F88947199562EBDEE6B9E8A115C0(UserWidget) end
 function UW_MainMenu_Main_C:DelgateOne() end
 function UW_MainMenu_Main_C:delegateTwo() end
 ---@param Button UCommonButtonBase
@@ -92,6 +90,8 @@ function UW_MainMenu_Main_C:BndEvt__W_MainMenu_Main_Button_News_K2Node_Component
 ---@param Button UCommonButtonBase
 function UW_MainMenu_Main_C:BndEvt__W_MainMenu_Main_Button_Profile_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature(Button) end
 function UW_MainMenu_Main_C:UpdatePlayerProfile() end
+---@param Button UCommonButtonBase
+function UW_MainMenu_Main_C:BndEvt__W_MainMenu_Main_Button_Settings_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(Button) end
 function UW_MainMenu_Main_C:ConfirmProfileLoadError() end
 function UW_MainMenu_Main_C:Destruct() end
 function UW_MainMenu_Main_C:OnRejoinStatusUpdated() end
@@ -105,8 +105,6 @@ function UW_MainMenu_Main_C:StartPlay() end
 function UW_MainMenu_Main_C:OnModalComplete() end
 ---@param Enabled boolean
 function UW_MainMenu_Main_C:SetAllButtons(Enabled) end
----@param Button UCommonButtonBase
-function UW_MainMenu_Main_C:BndEvt__W_MainMenu_Main_Button_LoadQuicksave_K2Node_ComponentBoundEvent_18_CommonButtonBaseClicked__DelegateSignature(Button) end
 ---@param bSuccess boolean
 function UW_MainMenu_Main_C:OnPatchNotesVersionReceived(bSuccess) end
 function UW_MainMenu_Main_C:BP_OnActivated() end
@@ -114,9 +112,6 @@ function UW_MainMenu_Main_C:BP_OnDeactivated() end
 function UW_MainMenu_Main_C:OnMessageQueueChanged() end
 ---@param bIsShowing boolean
 function UW_MainMenu_Main_C:OnLoadingScreenVisibilityChanged(bIsShowing) end
-function UW_MainMenu_Main_C:LoadQuicksave() end
-function UW_MainMenu_Main_C:DoButtonPlay() end
-function UW_MainMenu_Main_C:AbandonQuicksave() end
 ---@param Button UCommonButtonBase
 function UW_MainMenu_Main_C:BndEvt__W_MainMenu_Main_Button_Credits_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature(Button) end
 ---@param Result FOnlineResultInformation
@@ -127,11 +122,13 @@ function UW_MainMenu_Main_C:ConfirmOffline() end
 function UW_MainMenu_Main_C:BeginHostingGame(OnlineMode) end
 ---@param Button UCommonButtonBase
 function UW_MainMenu_Main_C:BndEvt__W_MainMenu_Main_Button_Discord_K2Node_ComponentBoundEvent_7_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_MainMenu_Main_C:Construct() end
 ---@param Button UCommonButtonBase
 function UW_MainMenu_Main_C:BndEvt__W_MainMenu_Main_Button_Quit_K2Node_ComponentBoundEvent_9_CommonButtonBaseClicked__DelegateSignature(Button) end
 ---@param bIsShowing boolean
 function UW_MainMenu_Main_C:OnLoadingScreenChanged(bIsShowing) end
 function UW_MainMenu_Main_C:BP_OnFinishShow() end
+function UW_MainMenu_Main_C:ConfirmLoadBackup() end
 ---@param EntryPoint int32
 function UW_MainMenu_Main_C:ExecuteUbergraph_W_MainMenu_Main(EntryPoint) end
 

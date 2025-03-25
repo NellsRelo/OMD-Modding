@@ -3,9 +3,13 @@
 ---@class ABP_Daggers_Skeleton_C : ABP_EnemyBase_C
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field CombatCapsule URSTCombatCapsuleComponent
+---@field RSTSkinSubobject URSTSkinSubobjectComponent
+---@field RSTSkinVisuals URSTSkinVisualsComponent
+---@field RSTAttachmentManager URSTAttachmentManagerComponent
 ---@field Timeline_BodyDissolveTime_D007CE06444AD06A5123E6A83D58B1B2 float
 ---@field Timeline__Direction_D007CE06444AD06A5123E6A83D58B1B2 ETimelineDirection::Type
 ---@field Timeline UTimelineComponent
+---@field HideHandle FRSTAttachmentTransactionHandle
 ABP_Daggers_Skeleton_C = {}
 
 ---@return UPrimitiveComponent

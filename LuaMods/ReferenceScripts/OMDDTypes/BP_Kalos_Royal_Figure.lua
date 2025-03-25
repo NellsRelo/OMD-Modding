@@ -1,12 +1,6 @@
 ---@meta
 
----@class ABP_Kalos_Royal_Figure_C : AActor
----@field StaticMesh1 UStaticMeshComponent
----@field SpotLight USpotLightComponent
----@field StaticMesh UStaticMeshComponent
----@field SkeletalMesh USkeletalMeshComponent
----@field DefaultSceneRoot USceneComponent
+---@class ABP_Kalos_Royal_Figure_C : ABP_RoyalFigure_Base_C
 ABP_Kalos_Royal_Figure_C = {}
-
 
 

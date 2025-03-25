@@ -14,10 +14,12 @@
 ---@field BinkMediaPlayer UBinkMediaPlayer
 UW_PurchaseMenu_Videos_Playback_C = {}
 
+---@param bStackActive boolean
 ---@return UWidgetAnimation
-function UW_PurchaseMenu_Videos_Playback_C:BP_GetOnHideAnimation() end
+function UW_PurchaseMenu_Videos_Playback_C:BP_GetOnHideAnimation(bStackActive) end
+---@param bStackActive boolean
 ---@return UWidgetAnimation
-function UW_PurchaseMenu_Videos_Playback_C:BP_GetOnShowAnimation() end
+function UW_PurchaseMenu_Videos_Playback_C:BP_GetOnShowAnimation(bStackActive) end
 ---@return boolean
 function UW_PurchaseMenu_Videos_Playback_C:BP_OnHandleBackAction() end
 ---@return UWidget

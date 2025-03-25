@@ -1,6 +1,8 @@
 ---@meta
 
 ---@class ABP_BackAlley_Sewer_BigDrain_C : ABP_OMDTrapGrid_C
+---@field TunnelLarge_Straight_4x_Top_Sewer_SM3 UStaticMeshComponent
+---@field TunnelLarge_Straight_4x_Bottom_Sewer_SM3 UStaticMeshComponent
 ---@field Wall_Bottom_4x4_Sewer_SM2 UStaticMeshComponent
 ---@field Metal_Grating_A UStaticMeshComponent
 ---@field RSTTrapGridBox15 URSTTrapGridBoxComponent

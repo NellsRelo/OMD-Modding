@@ -1,6 +1,8 @@
 ---@meta
 
 ---@class ABP_MinecartProjectile_Explosive_C : ABP_MinecartProjectile_C
+---@field UberGraphFrame FPointerToUberGraphFrame
+---@field Audio_Fuse_LP UAudioComponent
 ---@field BP_Minecart_Bombs_020 UChildActorComponent
 ---@field BP_Minecart_Bombs_019 UChildActorComponent
 ---@field BP_Minecart_Bombs_03 UChildActorComponent
@@ -23,5 +25,9 @@
 ---@field DamageEffectClass TSubclassOf<UGameplayEffect>
 ABP_MinecartProjectile_Explosive_C = {}
 
+function ABP_MinecartProjectile_Explosive_C:ReceiveBeginPlay() end
+function ABP_MinecartProjectile_Explosive_C:DeathVFX() end
+---@param EntryPoint int32
+function ABP_MinecartProjectile_Explosive_C:ExecuteUbergraph_BP_MinecartProjectile_Explosive(EntryPoint) end
 
 

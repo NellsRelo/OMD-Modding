@@ -1,6 +1,8 @@
 ---@meta
 
 ---@class ABP_DryDocks_Shop_4x7_C : ABP_OMDTrapGrid_C
+---@field Warehouse_4x2_Walkway_SM1 UStaticMeshComponent
+---@field RSTTrapGridBox57 URSTTrapGridBoxComponent
 ---@field Wood_Stairs_600W_A_B3 UStaticMeshComponent
 ---@field WoodPlank_2x2_Floor_A11 UStaticMeshComponent
 ---@field Gable_4x3_Wood_Grid_SM_Union_B30 UStaticMeshComponent

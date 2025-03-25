@@ -9,11 +9,9 @@
 ---@field Text_Description UCommonTextBlock
 ---@field Text_Title UCommonTextBlock
 ---@field SizeBox FVector2D
----@field ThreadMain UW_ThreadSelect_Main_C
 ---@field ThreadDefinition URSTMetaTeamThreadDefinition
 ---@field bIsNew boolean
 ---@field bNotInLoadout boolean
----@field ['Option 0'] FGameplayTag
 UW_TeamThreadDisplay_C = {}
 
 function UW_TeamThreadDisplay_C:OnInitialized() end

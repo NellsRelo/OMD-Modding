@@ -15,6 +15,7 @@
 ---@field AggregatedChainCount int32
 ---@field AggregatedSegmentCount int32
 ---@field ComboChance float
+---@field ['Damage Scale'] float
 UGA_Death_ElectrifiedBase_C = {}
 
 ---@param SourceActor AActor

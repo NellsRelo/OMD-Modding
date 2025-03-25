@@ -11,7 +11,6 @@
 ---@field NS_HealingTree_Fruit2 UNiagaraComponent
 ---@field NS_HealingTree_Fruit3 UNiagaraComponent
 ---@field NS_HealingTree_Fruit1 UNiagaraComponent
----@field NS_HealingTree_Base UNiagaraComponent
 ---@field InteractPoint USceneComponent
 ---@field Fruit3 UStaticMeshComponent
 ---@field Fruit2 UStaticMeshComponent

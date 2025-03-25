@@ -12,10 +12,12 @@ UW_Modal_Video_Fullscreen_C = {}
 
 ---@return boolean
 function UW_Modal_Video_Fullscreen_C:BP_OnHandleBackAction() end
+---@param bStackActive boolean
 ---@return UWidgetAnimation
-function UW_Modal_Video_Fullscreen_C:BP_GetOnShowAnimation() end
+function UW_Modal_Video_Fullscreen_C:BP_GetOnShowAnimation(bStackActive) end
+---@param bStackActive boolean
 ---@return UWidgetAnimation
-function UW_Modal_Video_Fullscreen_C:BP_GetOnHideAnimation() end
+function UW_Modal_Video_Fullscreen_C:BP_GetOnHideAnimation(bStackActive) end
 function UW_Modal_Video_Fullscreen_C:BP_OnMediaPlayerAssigned() end
 function UW_Modal_Video_Fullscreen_C:OnMediaEnd() end
 function UW_Modal_Video_Fullscreen_C:BP_OnStartHide() end

@@ -56,6 +56,8 @@ function UW_MissionStats_Entry_C:OnStreamableFinished_A087087C4883253C22ABF4B298
 ---@param ProxyObject UAsyncAction_ListenForGameplayMessage
 ---@param ActualChannel FGameplayTag
 function UW_MissionStats_Entry_C:OnMessageReceived_CB5910814BA75AF36B500D89FC221342(ProxyObject, ActualChannel) end
+---@param Loaded UObject
+function UW_MissionStats_Entry_C:OnLoaded_FEA9478448BCF94F46D92B9CEE79E6DC(Loaded) end
 function UW_MissionStats_Entry_C:Construct() end
 function UW_MissionStats_Entry_C:UpdateStats() end
 ---@param IsDesignTime boolean

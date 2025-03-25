@@ -16,6 +16,8 @@ UW_MissionStats_Award_C = {}
 function UW_MissionStats_Award_C:OnStreamableFinished_5472623C46257A69585D8CB1C7928CD9(UserFacingData, DidFind) end
 ---@param Loaded UObject
 function UW_MissionStats_Award_C:OnLoaded_872209A14BC61B17C1D2F89519A45B01(Loaded) end
+---@param Loaded UObject
+function UW_MissionStats_Award_C:OnLoaded_68FA52DF4EAA5CEA536B3A9906EB3904(Loaded) end
 function UW_MissionStats_Award_C:Construct() end
 ---@param InputPin URSTPawnUserFacingData
 UW_MissionStats_Award_C['Set Pawn Icon'] = function(InputPin) end

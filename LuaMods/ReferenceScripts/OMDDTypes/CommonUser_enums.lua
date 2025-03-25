@@ -6,6 +6,17 @@ ECommonSessionOnlineMode = {
     ECommonSessionOnlineMode_MAX = 3,
 }
 
+---@enum ECommonSessionQuickPlayResult
+ECommonSessionQuickPlayResult = {
+    Joining = 0,
+    ClientSearching = 1,
+    Hosting = 2,
+    Converting = 3,
+    AlreadyMax = 4,
+    Failed = 5,
+    ECommonSessionQuickPlayResult_MAX = 6,
+}
+
 ---@enum ECommonSessionVisibility
 ECommonSessionVisibility = {
     FriendsOnly = 0,

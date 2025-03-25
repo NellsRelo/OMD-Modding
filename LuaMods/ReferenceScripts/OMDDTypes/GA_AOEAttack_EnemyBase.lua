@@ -9,6 +9,8 @@
 ---@field ExcludeFallingActors boolean
 ---@field ['Ignore Actor Tags'] FGameplayTagContainer
 ---@field ['AOE Object Types'] TArray<EObjectTypeQuery>
+---@field bPerformTeamCheck boolean
+---@field RequiredTeamAttitude ETeamAttitude::Type
 UGA_AOEAttack_EnemyBase_C = {}
 
 ---@param Source UAbilitySystemComponent

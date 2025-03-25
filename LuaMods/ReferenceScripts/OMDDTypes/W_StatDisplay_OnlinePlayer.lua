@@ -2,6 +2,7 @@
 
 ---@class UW_StatDisplay_OnlinePlayer_C : UW_StatDisplay_Base_C
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field ShownShield UWidgetAnimation
 ---@field HideShield UWidgetAnimation
 ---@field ShowShield UWidgetAnimation
 ---@field OnHide UWidgetAnimation
@@ -106,6 +107,8 @@ function UW_StatDisplay_OnlinePlayer_C:OnStreamableFinished_147F8C7C4B491B43FFC9
 ---@param ProxyObject UAsyncAction_ListenForGameplayMessage
 ---@param ActualChannel FGameplayTag
 function UW_StatDisplay_OnlinePlayer_C:OnMessageReceived_F6CDDCE040C02A3EB5E0438BC52869AB(ProxyObject, ActualChannel) end
+---@param Loaded UObject
+function UW_StatDisplay_OnlinePlayer_C:OnLoaded_BAF2CB3B40D45C7614D7B385EF0EFA15(Loaded) end
 function UW_StatDisplay_OnlinePlayer_C:Construct() end
 ---@param PRSTag FGameplayTag
 ---@param PlayerNetID FUniqueNetIdRepl
@@ -128,6 +131,8 @@ function UW_StatDisplay_OnlinePlayer_C:OnInitialized() end
 ---@param PlayerState APlayerState
 function UW_StatDisplay_OnlinePlayer_C:UpdatePlatformIcon(PlayerState) end
 function UW_StatDisplay_OnlinePlayer_C:OnPlayerStateChanged() end
+---@param PawnIconHead TSoftObjectPtr<UTexture2D>
+function UW_StatDisplay_OnlinePlayer_C:SetPawnIcon(PawnIconHead) end
 ---@param EntryPoint int32
 function UW_StatDisplay_OnlinePlayer_C:ExecuteUbergraph_W_StatDisplay_OnlinePlayer(EntryPoint) end
 

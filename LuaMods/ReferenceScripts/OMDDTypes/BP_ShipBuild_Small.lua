@@ -1,6 +1,8 @@
 ---@meta
 
 ---@class ABP_ShipBuild_Small_C : AActor
+---@field Box4 UBoxComponent
+---@field Box3 UBoxComponent
 ---@field Wood_Square_1200W_A_Light_NoTaper_BendP UStaticMeshComponent
 ---@field Wood_Platform_600x450_A_Light_Arch36_StaticMeshComponent1 UStaticMeshComponent
 ---@field Wood_Ladder_600w_A_Light UStaticMeshComponent

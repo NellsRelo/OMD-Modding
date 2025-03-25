@@ -2,8 +2,11 @@
 
 ---@class ABP_WallCharger_C : ABP_RSTTrap_Base_C
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field CooldownRestartIdle USceneComponent
+---@field IdleSound UAudioComponent
 ---@field NS_WallCharger_Idle UNiagaraComponent
 ---@field bIsCooldownActive boolean
+---@field CooldownSound UAudioComponent
 ABP_WallCharger_C = {}
 
 function ABP_WallCharger_C:OnRep_bIsCooldownActive() end

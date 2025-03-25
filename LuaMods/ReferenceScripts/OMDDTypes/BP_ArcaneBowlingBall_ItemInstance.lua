@@ -5,6 +5,7 @@
 ---@field Damage double
 ---@field ProjectileLifeSpan double
 ---@field ['Critical Hit Chance'] double
+---@field BouncCount int32
 ABP_ArcaneBowlingBall_ItemInstance_C = {}
 
 

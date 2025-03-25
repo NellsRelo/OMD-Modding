@@ -23,6 +23,7 @@ function UGA_Blunderbuss_Secondary_Explosion_C:K2_OnEndAbility(bWasCancelled) en
 function UGA_Blunderbuss_Secondary_Explosion_C:K2_ActivateAbilityFromEvent(EventData) end
 UGA_Blunderbuss_Secondary_Explosion_C['Perform Damage'] = function() end
 UGA_Blunderbuss_Secondary_Explosion_C['Apply Damage'] = function() end
+function UGA_Blunderbuss_Secondary_Explosion_C:DestroyBreakables() end
 ---@param EntryPoint int32
 function UGA_Blunderbuss_Secondary_Explosion_C:ExecuteUbergraph_GA_Blunderbuss_Secondary_Explosion(EntryPoint) end
 

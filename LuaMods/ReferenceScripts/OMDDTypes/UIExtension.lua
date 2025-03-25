@@ -47,6 +47,14 @@ function UUIExtensionPointHandleFunctions:IsValid(Handle) end
 ---@field ExtensionMapping TMap<FUIExtensionHandle, UUserWidget>
 UUIExtensionPointWidget = {}
 
+---@param InExtensionPointTag FGameplayTag
+function UUIExtensionPointWidget:SetExtensionPointTag(InExtensionPointTag) end
+---@param DataItem UObject
+---@return TSubclassOf<UUserWidget>
+function UUIExtensionPointWidget:OnGetWidgetClassForData__DelegateSignature(DataItem) end
+---@param Widget UUserWidget
+---@param DataItem UObject
+function UUIExtensionPointWidget:OnConfigureWidgetForData__DelegateSignature(Widget, DataItem) end
 
 
 ---@class UUIExtensionSubsystem : UWorldSubsystem

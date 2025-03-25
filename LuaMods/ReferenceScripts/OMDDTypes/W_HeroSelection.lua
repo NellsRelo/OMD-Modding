@@ -2,6 +2,8 @@
 
 ---@class UW_HeroSelection_C : URSTActivatableWidget
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field OnHide UWidgetAnimation
+---@field OnShow UWidgetAnimation
 ---@field AbilityCycleLeftButton UW_RSTInputActionWidget_C
 ---@field AbilityCycleRightButton UW_RSTInputActionWidget_C
 ---@field AbilityPip_0 UImage
@@ -32,7 +34,7 @@
 ---@field RightPipButton UButton
 ---@field SecondaryAbilityDisplay USizeBox
 ---@field SecondaryAbilityList UVerticalBox
----@field SkinList UVerticalBox
+---@field SkinList UScrollBox
 ---@field SkinLoadingIcon UImage
 ---@field SkinOverlay UOverlay
 ---@field SkinRoot USizeBox
@@ -42,6 +44,7 @@
 ---@field TrapDisplay USizeBox
 ---@field UltimateAbilityDisplay USizeBox
 ---@field VerticalBox_HeroDisplay UVerticalBox
+---@field VerticalBox_HeroInfo UVerticalBox
 ---@field W_DraftPlayerName_0 UW_DraftPlayerName_C
 ---@field W_DraftPlayerName_1 UW_DraftPlayerName_C
 ---@field W_DraftPlayerName_2 UW_DraftPlayerName_C
@@ -80,8 +83,18 @@
 ---@field SettingToSkinTag FGameplayTag
 ---@field CurrentlyHoveredSkinButton UCommonButtonBase
 ---@field CurrentAbilityIndex int32
+---@field DraftActiveTags FRSTLooseTagHandle
+---@field FallbackHeroDraftTransform FTransform
 UW_HeroSelection_C = {}
 
+---@return UWidget
+function UW_HeroSelection_C:GetScrollRecipient() end
+---@param bStackActive boolean
+---@return UWidgetAnimation
+function UW_HeroSelection_C:BP_GetOnHideAnimation(bStackActive) end
+---@param bStackActive boolean
+---@return UWidgetAnimation
+function UW_HeroSelection_C:BP_GetOnShowAnimation(bStackActive) end
 ---@param WidgetIndex int32
 ---@param Mat UMaterialInterface
 UW_HeroSelection_C['Get Ability Brush By Index'] = function(WidgetIndex, Mat) end
@@ -189,7 +202,8 @@ function UW_HeroSelection_C:SetToCurrentCharacter() end
 function UW_HeroSelection_C:BP_OnDeactivated() end
 ---@param SelectedHeroes TArray<FGameplayTag>
 ---@param DesiredHeroes TArray<FGameplayTag>
-function UW_HeroSelection_C:OnUpdateDraft(SelectedHeroes, DesiredHeroes) end
+---@param HeroSelectWidget UCommonActivatableWidget
+function UW_HeroSelection_C:OnUpdateDraft(SelectedHeroes, DesiredHeroes, HeroSelectWidget) end
 ---@param Result FOnlineResultInformation
 function UW_HeroSelection_C:OnCreateSessionComplete(Result) end
 ---@param bEnabled boolean
@@ -241,6 +255,12 @@ function UW_HeroSelection_C:BndEvt__W_HeroSelection_CycleLeftButton_K2Node_Compo
 function UW_HeroSelection_C:BndEvt__W_HeroSelection_CycleRightButton_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature() end
 function UW_HeroSelection_C:BndEvt__W_HeroSelection_LeftPipButton_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature() end
 function UW_HeroSelection_C:BndEvt__W_HeroSelection_RightPipButton_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature() end
+UW_HeroSelection_C['Clean Up Draft'] = function() end
+UW_HeroSelection_C['Init Draft Camera'] = function() end
+UW_HeroSelection_C['Position Heroes For Draft'] = function() end
+---@param Target AActor
+UW_HeroSelection_C['Set All View Targets'] = function(Target) end
+UW_HeroSelection_C['Restore View Targets'] = function() end
 ---@param EntryPoint int32
 function UW_HeroSelection_C:ExecuteUbergraph_W_HeroSelection(EntryPoint) end
 function UW_HeroSelection_C:OnRejectOffline__DelegateSignature() end

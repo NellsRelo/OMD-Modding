@@ -2,6 +2,9 @@
 
 ---@class ABP_Blunderbuss_Pet_Ultimate_C : ARSTBlunderbussPetUltimate
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field RSTSkinSubobject URSTSkinSubobjectComponent
+---@field RSTSkinVisuals URSTSkinVisualsComponent
+---@field RSTAttachmentManager URSTAttachmentManagerComponent
 ---@field NS_Blunderbuss_Pet_Nose UNiagaraComponent
 ---@field NS_Blunderbuss_Pet_Breath UNiagaraComponent
 ---@field NS_Bb_Pet_Wings_Small_H_R UNiagaraComponent
@@ -31,8 +34,13 @@
 ---@field ['Spawn Montage'] UAnimMontage
 ---@field ['Montage Starting Position'] float
 ---@field SpawningHandle FRSTLooseTagHandle
+---@field ['Attachment Handle'] FRSTAttachmentTransactionHandle
 ABP_Blunderbuss_Pet_Ultimate_C = {}
 
+---@return USkeletalMeshComponent
+function ABP_Blunderbuss_Pet_Ultimate_C:GetSkeletalMesh() end
+---@return UMeshComponent
+function ABP_Blunderbuss_Pet_Ultimate_C:GetSkinnableMeshComponent() end
 ---@param Found_Pet ARSTBlunderbussPet
 ABP_Blunderbuss_Pet_Ultimate_C['Cache Passive Pet Actor'] = function(Found_Pet) end
 ---@param Pet ARSTBlunderbussPet
@@ -59,6 +67,8 @@ function ABP_Blunderbuss_Pet_Ultimate_C:BP_ReplacementActorSpawned(NetworkedActo
 function ABP_Blunderbuss_Pet_Ultimate_C:ProcessNotify(Tag) end
 ABP_Blunderbuss_Pet_Ultimate_C['Hide Pet'] = function() end
 ABP_Blunderbuss_Pet_Ultimate_C['Show Pet'] = function() end
+ABP_Blunderbuss_Pet_Ultimate_C['Hide Attachments'] = function() end
+ABP_Blunderbuss_Pet_Ultimate_C['Show Attachments'] = function() end
 ---@param EntryPoint int32
 function ABP_Blunderbuss_Pet_Ultimate_C:ExecuteUbergraph_BP_Blunderbuss_Pet_Ultimate(EntryPoint) end
 

@@ -12,7 +12,6 @@
 ---@field Orc_ShipIronClad_A_03_Door_SM UStaticMeshComponent
 ---@field Orc_ShipIronClad_DoorOpen_SM1 UStaticMeshComponent
 ---@field Orc_ShipIronClad_DoorOpen_SM UStaticMeshComponent
----@field P_Smoke_Large_Fire_Cine1 UParticleSystemComponent
 ---@field Orc_Sail UStaticMeshComponent
 ---@field ForceField_VFX3 UStaticMeshComponent
 ---@field ForceField_VFX2 UStaticMeshComponent

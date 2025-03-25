@@ -100,7 +100,7 @@
 ---@field ['Dynamic State'] EObjectStateTypeEnum
 ---@field PlanarFalloffDist double
 ---@field TotalDecay double
----@field falloffMinMax FVector2D
+---@field FalloffMinMax FVector2D
 ---@field PlanarFalloffExtentColor FLinearColor
 ---@field DIrectionalVelocityVector FVector
 ---@field UpVector FVector
@@ -132,9 +132,9 @@ AFS_MasterField_C = {}
 ---@param OutputPin UNoiseField
 function AFS_MasterField_C:CalculateNoise(OutputPin) end
 ---@param FalloffType EFieldFalloffType
----@param falloffMinMax FVector2D
+---@param FalloffMinMax FVector2D
 ---@param OperatorFieldOut UOperatorField
-function AFS_MasterField_C:FalloffShapeSwitch(FalloffType, falloffMinMax, OperatorFieldOut) end
+function AFS_MasterField_C:FalloffShapeSwitch(FalloffType, FalloffMinMax, OperatorFieldOut) end
 function AFS_MasterField_C:MakeDynamic_EnableNonGC() end
 function AFS_MasterField_C:InitializeFieldVariables() end
 function AFS_MasterField_C:DisplayTextSetup() end
@@ -142,10 +142,10 @@ function AFS_MasterField_C:ForceMultiplier() end
 function AFS_MasterField_C:SetVisibility() end
 ---@param Magnitude double
 ---@param FalloffType EFieldFalloffType
----@param falloffMinMax FVector2D
+---@param FalloffMinMax FVector2D
 ---@param OperatorField UOperatorField
 ---@param CullingField UCullingField
-function AFS_MasterField_C:FalloffAndCullSwitch_Main(Magnitude, FalloffType, falloffMinMax, OperatorField, CullingField) end
+function AFS_MasterField_C:FalloffAndCullSwitch_Main(Magnitude, FalloffType, FalloffMinMax, OperatorField, CullingField) end
 function AFS_MasterField_C:UserConstructionScript() end
 function AFS_MasterField_C:CE_Trigger() end
 ---@param DeltaSeconds float

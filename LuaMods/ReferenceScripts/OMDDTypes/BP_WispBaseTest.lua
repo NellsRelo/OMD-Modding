@@ -2,6 +2,7 @@
 
 ---@class ABP_WispBaseTest_C : ARSTAICharacter
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field Audio_Wisp UAudioComponent
 ---@field NS_Wisp_Trail_Normal UNiagaraComponent
 ---@field EnterRiftMoveTimeline_MoveToRift_Curve_3059842447EF4A3FAD3594B6C93D5793 float
 ---@field EnterRiftMoveTimeline__Direction_3059842447EF4A3FAD3594B6C93D5793 ETimelineDirection::Type
@@ -28,9 +29,9 @@ function ABP_WispBaseTest_C:NoType_A6D1935E41ED8B570C49B8A25C632E2A() end
 ---@param LifeSpan double
 function ABP_WispBaseTest_C:DissolveFX(Meshes, LifeSpan) end
 ---@param LifeSpan float
----@param deathType uint8
----@param animationTag FGameplayTag
-function ABP_WispBaseTest_C:BP_DestroyFX(LifeSpan, deathType, animationTag) end
+---@param DeathType uint8
+---@param AnimationTag FGameplayTag
+function ABP_WispBaseTest_C:BP_DestroyFX(LifeSpan, DeathType, AnimationTag) end
 ABP_WispBaseTest_C['Event OnEnteredRift'] = function() end
 ---@param EntryPoint int32
 function ABP_WispBaseTest_C:ExecuteUbergraph_BP_WispBaseTest(EntryPoint) end

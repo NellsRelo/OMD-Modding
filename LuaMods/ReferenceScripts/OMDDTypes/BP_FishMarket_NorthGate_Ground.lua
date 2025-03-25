@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABP_FishMarket_NorthGate_Ground_C : ABP_OMDTrapGrid_C
+---@field RSTTrapGridBox13 URSTTrapGridBoxComponent
 ---@field Floor_4x4_Plaza_PatternA_Square_SM UStaticMeshComponent
 ---@field Floor_2x2_StoneBlock_SM3 UStaticMeshComponent
 ---@field Floor_2X2_45_StoneBlock_SM1 UStaticMeshComponent

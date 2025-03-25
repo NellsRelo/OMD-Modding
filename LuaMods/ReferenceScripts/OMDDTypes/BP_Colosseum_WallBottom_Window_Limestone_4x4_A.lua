@@ -1,6 +1,8 @@
 ---@meta
 
 ---@class ABP_Colosseum_WallBottom_Window_Limestone_4x4_A_C : ABP_OMDTrapGrid_C
+---@field Box1 UBoxComponent
+---@field Box UBoxComponent
 ---@field Trim_SAND_2x_Gold_SM3 UStaticMeshComponent
 ---@field Trim_SAND_2x_Gold_SM2 UStaticMeshComponent
 ---@field Trim_SAND_2x_Gold_SM1 UStaticMeshComponent

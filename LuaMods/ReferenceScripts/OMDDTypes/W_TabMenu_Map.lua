@@ -10,7 +10,7 @@
 ---@field HubLegendEntries UVerticalBox
 ---@field LegendEntries UVerticalBox
 ---@field MapDetailsBox UVerticalBox
----@field MapName UCommonTextBlock
+---@field MAPNAME UCommonTextBlock
 ---@field MapWidget UW_MapWidget_C
 ---@field MissionCount UCommonTextBlock
 ---@field MissionInfoBox UVerticalBox

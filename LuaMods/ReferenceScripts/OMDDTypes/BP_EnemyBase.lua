@@ -3,6 +3,9 @@
 ---@class ABP_EnemyBase_C : ARSTAICharacter
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field W_HealthDisplay UWidgetComponent
+---@field FrozenDissolve_Scale_4CBD30744C4B5D58C75ABF9298EB1C38 float
+---@field FrozenDissolve__Direction_4CBD30744C4B5D58C75ABF9298EB1C38 ETimelineDirection::Type
+---@field FrozenDissolve UTimelineComponent
 ---@field Poisoned_Timeline_BodyDissolveAmount_155E099B4408784262AEDA9EE01602C6 float
 ---@field Poisoned_Timeline__Direction_155E099B4408784262AEDA9EE01602C6 ETimelineDirection::Type
 ---@field ['Poisoned Timeline'] UTimelineComponent
@@ -46,6 +49,8 @@ ABP_EnemyBase_C['Poisoned Timeline__FinishedFunc'] = function() end
 ABP_EnemyBase_C['Poisoned Timeline__UpdateFunc'] = function() end
 ABP_EnemyBase_C['EnterRiftMove Timeline__FinishedFunc'] = function() end
 ABP_EnemyBase_C['EnterRiftMove Timeline__UpdateFunc'] = function() end
+function ABP_EnemyBase_C:FrozenDissolve__FinishedFunc() end
+function ABP_EnemyBase_C:FrozenDissolve__UpdateFunc() end
 function ABP_EnemyBase_C:Pulled_6C375FC2438076BE55E4A09CC4C63626() end
 function ABP_EnemyBase_C:EnteredRift_6C375FC2438076BE55E4A09CC4C63626() end
 function ABP_EnemyBase_C:CustomAnimation_6C375FC2438076BE55E4A09CC4C63626() end
@@ -60,9 +65,9 @@ function ABP_EnemyBase_C:Ragdoll_ED64E6D249616092FEA7C6962E1C0614() end
 function ABP_EnemyBase_C:NoType_ED64E6D249616092FEA7C6962E1C0614() end
 function ABP_EnemyBase_C:ReceiveBeginPlay() end
 ---@param LifeSpan float
----@param deathType uint8
----@param animationTag FGameplayTag
-function ABP_EnemyBase_C:BP_DestroyFX(LifeSpan, deathType, animationTag) end
+---@param DeathType uint8
+---@param AnimationTag FGameplayTag
+function ABP_EnemyBase_C:BP_DestroyFX(LifeSpan, DeathType, AnimationTag) end
 ---@param Meshes TArray<USkeletalMeshComponent>
 ---@param LifeSpan double
 function ABP_EnemyBase_C:DissolveFX(Meshes, LifeSpan) end
@@ -79,6 +84,7 @@ function ABP_EnemyBase_C:FrozenDeath() end
 ---@param headExploded boolean
 function ABP_EnemyBase_C:BP_Gibbed(blood, headExploded) end
 ABP_EnemyBase_C['Event OnEnteredRift'] = function() end
+function ABP_EnemyBase_C:OnEnteredProtectedRift() end
 function ABP_EnemyBase_C:BP_EvaluateNearbyBreakables() end
 ---@param EntryPoint int32
 function ABP_EnemyBase_C:ExecuteUbergraph_BP_EnemyBase(EntryPoint) end

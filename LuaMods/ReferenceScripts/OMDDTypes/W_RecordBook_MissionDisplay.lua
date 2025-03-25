@@ -14,7 +14,7 @@
 ---@field MissionDefinition URSTMissionDefinition
 ---@field DistortionDefinition URSTMetaDistortionDefinition
 ---@field TeamThreadDefinition FRSTTeamThreadData
----@field missionIndex int32
+---@field MissionIndex int32
 UW_RecordBook_MissionDisplay_C = {}
 
 function UW_RecordBook_MissionDisplay_C:Construct() end

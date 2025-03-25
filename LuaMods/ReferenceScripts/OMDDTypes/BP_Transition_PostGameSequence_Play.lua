@@ -13,6 +13,12 @@ function UBP_Transition_PostGameSequence_Play_C:K2_PrepareResources() end
 UBP_Transition_PostGameSequence_Play_C['On Sequence Ready'] = function(SequenceActor) end
 function UBP_Transition_PostGameSequence_Play_C:K2_BeginAction() end
 function UBP_Transition_PostGameSequence_Play_C:K2_CancelAction() end
+function UBP_Transition_PostGameSequence_Play_C:OnPlayerStateChanged() end
+function UBP_Transition_PostGameSequence_Play_C:CheckIfPlayerStateIsReady() end
+function UBP_Transition_PostGameSequence_Play_C:CheckAllPlayerStatesReplicated() end
+function UBP_Transition_PostGameSequence_Play_C:OnAllPlayerStatesReplicated() end
+---@param bIsShowing boolean
+function UBP_Transition_PostGameSequence_Play_C:OnLoadingScreenStatusChanged(bIsShowing) end
 ---@param EntryPoint int32
 function UBP_Transition_PostGameSequence_Play_C:ExecuteUbergraph_BP_Transition_PostGameSequence_Play(EntryPoint) end
 

@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABP_WallTorch_NoLight_C : AActor
+---@field Decal UDecalComponent
 ---@field Box UBoxComponent
 ---@field WallTorch_Log UStaticMeshComponent
 ---@field Lighting_Torch_Cage UStaticMeshComponent

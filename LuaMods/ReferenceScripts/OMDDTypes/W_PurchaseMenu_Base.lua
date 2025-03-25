@@ -2,6 +2,8 @@
 
 ---@class UW_PurchaseMenu_Base_C : URSTActivatableWidget
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field OnHide UWidgetAnimation
+---@field OnShow UWidgetAnimation
 ---@field Secondary UWidgetAnimation
 ---@field Primary UWidgetAnimation
 ---@field PrimaryToSecondary UWidgetAnimation
@@ -49,10 +51,16 @@ UW_PurchaseMenu_Base_C = {}
 UW_PurchaseMenu_Base_C['Get Empty Text'] = function(bUseEmptyText, Empty_Text) end
 ---@param Element UObject
 ---@param Should_Enable boolean
-UW_PurchaseMenu_Base_C['Should Enable Contents For Element'] = function(Element, Should_Enable) end
+UW_PurchaseMenu_Base_C['Should Enable Contents for Element'] = function(Element, Should_Enable) end
 ---@param Element UObject
 ---@param Should_Enable boolean
 UW_PurchaseMenu_Base_C['Should Element Be Spawned'] = function(Element, Should_Enable) end
+---@param bStackActive boolean
+---@return UWidgetAnimation
+function UW_PurchaseMenu_Base_C:BP_GetOnShowAnimation(bStackActive) end
+---@param bStackActive boolean
+---@return UWidgetAnimation
+function UW_PurchaseMenu_Base_C:BP_GetOnHideAnimation(bStackActive) end
 UW_PurchaseMenu_Base_C['Perform No Button Clicked'] = function() end
 UW_PurchaseMenu_Base_C['Stop Display State Anims'] = function() end
 ---@param Display_Index int32

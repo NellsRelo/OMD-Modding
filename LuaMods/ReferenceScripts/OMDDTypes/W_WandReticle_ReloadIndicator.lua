@@ -5,7 +5,7 @@
 ---@field Fail UWidgetAnimation
 ---@field Success UWidgetAnimation
 ---@field Reveal UWidgetAnimation
----@field bg UImage
+---@field BG UImage
 ---@field CursorBar UImage
 ---@field Image_88 UImage
 ---@field W_RSTInputActionWidget_C_74 UW_RSTInputActionWidget_C

@@ -159,8 +159,6 @@
 ---@field Wall_1x15_Wainscot_Wood_SM_A_Union UStaticMeshComponent
 ---@field Wall_2x15_Wainscot_Wood_SM UStaticMeshComponent
 ---@field Wall_3x05_Wood_SM_Counter_Union UStaticMeshComponent
----@field Weather_Mask_Brush UChildActorComponent
----@field Tech USceneComponent
 ---@field RSTTrapGridBox39 URSTTrapGridBoxComponent
 ---@field RSTTrapGridBox33 URSTTrapGridBoxComponent
 ---@field Wall_2_2_FB11 UStaticMeshComponent

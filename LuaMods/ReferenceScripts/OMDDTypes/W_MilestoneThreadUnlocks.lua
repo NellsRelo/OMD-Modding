@@ -2,8 +2,11 @@
 
 ---@class UW_MilestoneThreadUnlocks_C : URSTActivatableWidget
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field OnHide UWidgetAnimation
+---@field OnShow UWidgetAnimation
 ---@field DismissButton UW_ButtonBasic_C
 ---@field LeftButton UW_ButtonBasic_C
+---@field Overlay_86 UOverlay
 ---@field RightButton UW_ButtonBasic_C
 ---@field TitleArrow UImage
 ---@field TitleText UCommonTextBlock
@@ -14,6 +17,12 @@
 ---@field ThreadUnlockSoundCue USoundBase
 UW_MilestoneThreadUnlocks_C = {}
 
+---@param bStackActive boolean
+---@return UWidgetAnimation
+function UW_MilestoneThreadUnlocks_C:BP_GetOnHideAnimation(bStackActive) end
+---@param bStackActive boolean
+---@return UWidgetAnimation
+function UW_MilestoneThreadUnlocks_C:BP_GetOnShowAnimation(bStackActive) end
 ---@return boolean
 function UW_MilestoneThreadUnlocks_C:BP_OnHandleBackAction() end
 ---@return UWidget

@@ -34,8 +34,15 @@
 ---@field MissionsPerPage int32
 ---@field LoadoutColumns int32
 ---@field SelectedPlayerIndex int32
+---@field CurrentViewedRun FRSTSavedRun
+---@field ThreadSlotPadding FMargin
 UW_RecordBook_RunStats_C = {}
 
+UW_RecordBook_RunStats_C['Add Potion Item'] = function() end
+---@param InSavedRun FRSTSavedRun
+function UW_RecordBook_RunStats_C:SetCurrentViewedRun(InSavedRun) end
+---@return FRSTSavedRun
+function UW_RecordBook_RunStats_C:GetLastRun() end
 ---@param IndexToTest int32
 ---@param Output int32
 UW_RecordBook_RunStats_C['Display to Array Index'] = function(IndexToTest, Output) end
@@ -55,7 +62,7 @@ function UW_RecordBook_RunStats_C:UpdatePlayerVisibility() end
 function UW_RecordBook_RunStats_C:AddThread(Thread) end
 function UW_RecordBook_RunStats_C:PopulateThreads() end
 ---@return FRSTSavedRun
-function UW_RecordBook_RunStats_C:GetSavedRun() end
+function UW_RecordBook_RunStats_C:GetCurrentViewedRun() end
 ---@param SelfDisplay UW_RecordBook_StatEntry_C
 function UW_RecordBook_RunStats_C:BndEvt__W_RecordBook_RunStats_EnemiesKilled_K2Node_ComponentBoundEvent_2_OnRequestCustomDisplay__DelegateSignature(SelfDisplay) end
 ---@param SelfDisplay UW_RecordBook_StatEntry_C
@@ -91,6 +98,7 @@ UW_RecordBook_RunStats_C['BndEvt__W_RecordBook_RunStats_HostPlayer_K2Node_Compon
 UW_RecordBook_RunStats_C['BndEvt__W_RecordBook_RunStats_Player2_K2Node_ComponentBoundEvent_15_On Clicked__DelegateSignature'] = function(ThisButton) end
 ---@param ThisButton UW_RecordBook_LastRun_PlayerButton_C
 UW_RecordBook_RunStats_C['BndEvt__W_RecordBook_RunStats_Player3_K2Node_ComponentBoundEvent_16_On Clicked__DelegateSignature'] = function(ThisButton) end
+function UW_RecordBook_RunStats_C:InitDisplays() end
 ---@param EntryPoint int32
 function UW_RecordBook_RunStats_C:ExecuteUbergraph_W_RecordBook_RunStats(EntryPoint) end
 

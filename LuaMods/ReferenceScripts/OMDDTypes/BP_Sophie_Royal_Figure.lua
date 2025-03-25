@@ -1,12 +1,7 @@
 ---@meta
 
----@class ABP_Sophie_Royal_Figure_C : AActor
+---@class ABP_Sophie_Royal_Figure_C : ABP_RoyalFigure_Base_C
 ---@field Hero_Daggers_Weapon_SKM1 USkeletalMeshComponent
----@field Hero_Daggers_Weapon_SKM USkeletalMeshComponent
----@field SpotLight USpotLightComponent
----@field StaticMesh UStaticMeshComponent
----@field SkeletalMesh USkeletalMeshComponent
----@field DefaultSceneRoot USceneComponent
 ABP_Sophie_Royal_Figure_C = {}
 
 

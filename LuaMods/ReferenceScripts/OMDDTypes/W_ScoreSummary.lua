@@ -26,6 +26,9 @@ function UW_ScoreSummary_C:RefreshScrollbar() end
 ---@param Value float
 function UW_ScoreSummary_C:BndEvt__W_ScoreSummary_ScrollSlider_K2Node_ComponentBoundEvent_1_OnFloatValueChangedEvent__DelegateSignature(Value) end
 UW_ScoreSummary_C['BndEvt__W_ScoreSummary_W_ExitMenuButton_K2Node_ComponentBoundEvent_0_On Button Clicked__DelegateSignature'] = function() end
+---@param MyGeometry FGeometry
+---@param InDeltaTime float
+function UW_ScoreSummary_C:Tick(MyGeometry, InDeltaTime) end
 ---@param EntryPoint int32
 function UW_ScoreSummary_C:ExecuteUbergraph_W_ScoreSummary(EntryPoint) end
 

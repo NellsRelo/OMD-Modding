@@ -45,10 +45,6 @@ function ABP_RSTPlayerController_C:BeforePush_EA8504C4410B4458C9F809B95CBAE754(U
 function ABP_RSTPlayerController_C:AfterPush_78658E0D407D41565F385F96E657972B(UserWidget) end
 ---@param UserWidget UCommonActivatableWidget
 function ABP_RSTPlayerController_C:BeforePush_78658E0D407D41565F385F96E657972B(UserWidget) end
----@param UserWidget UCommonActivatableWidget
-function ABP_RSTPlayerController_C:AfterPush_D97608E442A53346781B649DEFA6C463(UserWidget) end
----@param UserWidget UCommonActivatableWidget
-function ABP_RSTPlayerController_C:BeforePush_D97608E442A53346781B649DEFA6C463(UserWidget) end
 ---@param ActionValue FInputActionValue
 ---@param ElapsedTime float
 ---@param TriggeredTime float
@@ -58,6 +54,10 @@ function ABP_RSTPlayerController_C:InpActEvt_IA_ToggleTabMenu_K2Node_EnhancedInp
 function ABP_RSTPlayerController_C:AfterPush_7205A57F48D8697D666B6E8DFDC4A7F4(UserWidget) end
 ---@param UserWidget UCommonActivatableWidget
 function ABP_RSTPlayerController_C:BeforePush_7205A57F48D8697D666B6E8DFDC4A7F4(UserWidget) end
+---@param UserWidget UCommonActivatableWidget
+function ABP_RSTPlayerController_C:AfterPush_D97608E442A53346781B649DEFA6C463(UserWidget) end
+---@param UserWidget UCommonActivatableWidget
+function ABP_RSTPlayerController_C:BeforePush_D97608E442A53346781B649DEFA6C463(UserWidget) end
 ---@param ActionValue FInputActionValue
 ---@param ElapsedTime float
 ---@param TriggeredTime float
@@ -82,13 +82,13 @@ function ABP_RSTPlayerController_C:InpActEvt_IA_TabMenu_Trap_K2Node_EnhancedInpu
 ---@param ActualChannel FGameplayTag
 function ABP_RSTPlayerController_C:OnMessageReceived_7A63BC6B4680C95E8E106AA1AA8F3BAD(ProxyObject, ActualChannel) end
 ---@param UserWidget UCommonActivatableWidget
-function ABP_RSTPlayerController_C:AfterPush_D97608E442A53346781B649DAB2F1B35(UserWidget) end
----@param UserWidget UCommonActivatableWidget
-function ABP_RSTPlayerController_C:BeforePush_D97608E442A53346781B649DAB2F1B35(UserWidget) end
----@param UserWidget UCommonActivatableWidget
 function ABP_RSTPlayerController_C:AfterPush_04C12A9743BB8B8B8DFABEBD47C35F63(UserWidget) end
 ---@param UserWidget UCommonActivatableWidget
 function ABP_RSTPlayerController_C:BeforePush_04C12A9743BB8B8B8DFABEBD47C35F63(UserWidget) end
+---@param UserWidget UCommonActivatableWidget
+function ABP_RSTPlayerController_C:AfterPush_D97608E442A53346781B649DAB2F1B35(UserWidget) end
+---@param UserWidget UCommonActivatableWidget
+function ABP_RSTPlayerController_C:BeforePush_D97608E442A53346781B649DAB2F1B35(UserWidget) end
 ---@param ActionValue FInputActionValue
 ---@param ElapsedTime float
 ---@param TriggeredTime float
@@ -143,7 +143,8 @@ function ABP_RSTPlayerController_C:ExecuteUbergraph_BP_RSTPlayerController(Entry
 function ABP_RSTPlayerController_C:TabMenuVisibilityUpdated__DelegateSignature(bIsVisible) end
 ---@param SelectedHeroes TArray<FGameplayTag>
 ---@param DesiredHeroes TArray<FGameplayTag>
-function ABP_RSTPlayerController_C:UpdateDraft__DelegateSignature(SelectedHeroes, DesiredHeroes) end
+---@param HeroSelectWidget UCommonActivatableWidget
+function ABP_RSTPlayerController_C:UpdateDraft__DelegateSignature(SelectedHeroes, DesiredHeroes, HeroSelectWidget) end
 function ABP_RSTPlayerController_C:ActivateCountdownSound__DelegateSignature() end
 
 

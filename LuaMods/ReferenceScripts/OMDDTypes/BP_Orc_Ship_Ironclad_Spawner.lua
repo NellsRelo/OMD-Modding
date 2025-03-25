@@ -6,7 +6,6 @@
 ---@field NavPowerExclusion2 UNavPowerExclusionComponent
 ---@field NavPowerExclusion1 UNavPowerExclusionComponent
 ---@field NavPowerExclusion UNavPowerExclusionComponent
----@field P_Smoke_Large_Fire_Cine1 UParticleSystemComponent
 ---@field FishPaste_SM2 UStaticMeshComponent
 ---@field FishPaste_SM1 UStaticMeshComponent
 ---@field Wood_Crate_65A_A4 UStaticMeshComponent

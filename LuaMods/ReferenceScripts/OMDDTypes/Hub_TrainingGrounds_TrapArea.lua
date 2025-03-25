@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class AHub_TrainingGrounds_TrapArea_C : ABP_OMDTrapGrid_C
+---@field Metal_Crate_300A_A3 UStaticMeshComponent
 ---@field Metal_Crate_300A_A2 UStaticMeshComponent
 ---@field Metal_Crate_300A_A1 UStaticMeshComponent
 ---@field Metal_Crate_300A_A UStaticMeshComponent

@@ -48,6 +48,7 @@ ABP_Rift_Barricade_C['Try Apply Additional Effects'] = function(Actor) end
 function ABP_Rift_Barricade_C:AddAdjacentTrap(Trap) end
 ---@param Trap ARSTTrap
 function ABP_Rift_Barricade_C:RemoveAdjacentTrap(Trap) end
+function ABP_Rift_Barricade_C:BP_IsSoldChanged() end
 ---@param EntryPoint int32
 function ABP_Rift_Barricade_C:ExecuteUbergraph_BP_Rift_Barricade(EntryPoint) end
 

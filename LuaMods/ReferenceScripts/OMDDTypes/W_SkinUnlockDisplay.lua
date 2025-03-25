@@ -2,6 +2,8 @@
 
 ---@class UW_SkinUnlockDisplay_C : URSTActivatableWidget
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field OnHide UWidgetAnimation
+---@field OnShow UWidgetAnimation
 ---@field DismissButton UW_ButtonBoundAction_C
 ---@field SkinIcon UImage
 ---@field SkinName UCommonTextBlock
@@ -12,6 +14,12 @@
 ---@field SkinTag FGameplayTag
 UW_SkinUnlockDisplay_C = {}
 
+---@param bStackActive boolean
+---@return UWidgetAnimation
+function UW_SkinUnlockDisplay_C:BP_GetOnHideAnimation(bStackActive) end
+---@param bStackActive boolean
+---@return UWidgetAnimation
+function UW_SkinUnlockDisplay_C:BP_GetOnShowAnimation(bStackActive) end
 ---@return boolean
 function UW_SkinUnlockDisplay_C:BP_OnHandleBackAction() end
 ---@return UWidget

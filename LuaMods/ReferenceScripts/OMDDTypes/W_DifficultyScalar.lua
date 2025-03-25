@@ -20,10 +20,12 @@
 ---@field NewVar boolean
 UW_DifficultyScalar_C = {}
 
+---@param bStackActive boolean
 ---@return UWidgetAnimation
-function UW_DifficultyScalar_C:BP_GetOnHideAnimation() end
+function UW_DifficultyScalar_C:BP_GetOnHideAnimation(bStackActive) end
+---@param bStackActive boolean
 ---@return UWidgetAnimation
-function UW_DifficultyScalar_C:BP_GetOnShowAnimation() end
+function UW_DifficultyScalar_C:BP_GetOnShowAnimation(bStackActive) end
 ---@return UWidget
 function UW_DifficultyScalar_C:BP_GetDesiredFocusTarget() end
 function UW_DifficultyScalar_C:Construct() end

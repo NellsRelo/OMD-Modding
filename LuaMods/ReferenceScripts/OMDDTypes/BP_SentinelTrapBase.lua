@@ -12,6 +12,7 @@
 ---@field ContributionAmount int32
 ---@field SummonCost int32
 ---@field SummonClass TSubclassOf<ARSTAICharacter>
+---@field bAllowInteraction boolean
 ABP_SentinelTrapBase_C = {}
 
 ---@return FText

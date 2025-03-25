@@ -1,0 +1,59 @@
+---@meta
+
+---@class ABP_Library_Bookshelf_RestrictedSection_C : ABP_OMDTrapGrid_C
+---@field Elevator_Metal_Door_A_SM9 UStaticMeshComponent
+---@field Elevator_Metal_Door_A_SM8 UStaticMeshComponent
+---@field Elevator_Metal_Door_A_SM7 UStaticMeshComponent
+---@field Elevator_Metal_Door_A_SM1 UStaticMeshComponent
+---@field Elevator_Metal_Door_A_SM6 UStaticMeshComponent
+---@field Elevator_Metal_Door_A_SM5 UStaticMeshComponent
+---@field Wood_BookShelves_Shelve_300C_022 UStaticMeshComponent
+---@field Wood_BookShelves_Shelve_300C_021 UStaticMeshComponent
+---@field Wood_BookShelves_Shelve_600C_06 UStaticMeshComponent
+---@field Wood_BookShelves_Shelve_300C_020 UStaticMeshComponent
+---@field Wood_BookShelves_Shelve_150C_06 UStaticMeshComponent
+---@field Wood_BookShelves_Shelve_300C_019 UStaticMeshComponent
+---@field Elevator_Metal_Door_A_SM4 UStaticMeshComponent
+---@field Elevator_Metal_Door_A_SM3 UStaticMeshComponent
+---@field Elevator_Metal_Door_A_SM2 UStaticMeshComponent
+---@field Elevator_Metal_Door_A_SM UStaticMeshComponent
+---@field Wood_BookShelves_Shelve_300C_018 UStaticMeshComponent
+---@field Wood_BookShelves_Shelve_300C_017 UStaticMeshComponent
+---@field Wood_BookShelves_Shelve_600C_05 UStaticMeshComponent
+---@field Wood_BookShelves_Shelve_600C_04 UStaticMeshComponent
+---@field Wood_BookShelves_Shelve_300C_016 UStaticMeshComponent
+---@field Wood_BookShelves_Shelve_300C_015 UStaticMeshComponent
+---@field Wood_BookShelves_Shelve_300C_014 UStaticMeshComponent
+---@field Wood_BookShelves_Shelve_300C_013 UStaticMeshComponent
+---@field Wood_BookShelves_Shelve_600C_03 UStaticMeshComponent
+---@field Wood_BookShelves_Shelve_300C_012 UStaticMeshComponent
+---@field Wood_BookShelves_Shelve_300C_011 UStaticMeshComponent
+---@field Wood_BookShelves_Shelve_600C_02 UStaticMeshComponent
+---@field Wood_BookShelves_Shelve_300C_010 UStaticMeshComponent
+---@field Wood_BookShelves_Shelve_300C_09 UStaticMeshComponent
+---@field Wood_BookShelves_Shelve_300C_08 UStaticMeshComponent
+---@field Wood_BookShelves_Shelve_300C_07 UStaticMeshComponent
+---@field Wood_BookShelves_Shelve_150C_05 UStaticMeshComponent
+---@field Wood_BookShelves_Shelve_150C_04 UStaticMeshComponent
+---@field BP_Library_Bookshelf_Manor_SmallBooks_Front1 UChildActorComponent
+---@field BP_Library_Bookshelf_Manor_SmallBooks_Front UChildActorComponent
+---@field Wood_BookShelves_Shelve_300C_06 UStaticMeshComponent
+---@field Wood_BookShelves_Shelve_300C_03 UStaticMeshComponent
+---@field Wood_BookShelves_Shelve_600C_01 UStaticMeshComponent
+---@field Wood_BookShelves_Shelve_300C_05 UStaticMeshComponent
+---@field Wood_BookShelves_Shelve_300C_04 UStaticMeshComponent
+---@field Wood_BookShelves_Shelve_150C_03 UStaticMeshComponent
+---@field Wood_BookShelves_Shelve_300C_02 UStaticMeshComponent
+---@field Wood_BookShelves_Shelve_150C_01 UStaticMeshComponent
+---@field Wood_BookShelves_Shelve_300C_01 UStaticMeshComponent
+---@field RSTTrapGridBox01 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox02 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox05 URSTTrapGridBoxComponent
+---@field RSTTrapGridBox03 URSTTrapGridBoxComponent
+---@field TrapGrid USceneComponent
+---@field Geo_Shelf USceneComponent
+---@field Box_Collision_Middle UBoxComponent
+ABP_Library_Bookshelf_RestrictedSection_C = {}
+
+
+

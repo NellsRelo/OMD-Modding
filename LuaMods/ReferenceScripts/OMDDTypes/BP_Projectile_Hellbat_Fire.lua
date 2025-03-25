@@ -2,7 +2,7 @@
 
 ---@class ABP_Projectile_Hellbat_Fire_C : ABP_Projectile_Base_C
 ---@field UberGraphFrame FPointerToUberGraphFrame
----@field ParticleSystem UParticleSystemComponent
+---@field NS_Hellbat_Fire_Projectile UNiagaraComponent
 ---@field StaticMesh UStaticMeshComponent
 ---@field Projectile_LP UAudioComponent
 ---@field ['AOE Radius'] float

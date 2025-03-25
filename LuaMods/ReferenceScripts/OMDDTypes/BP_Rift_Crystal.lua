@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABP_Rift_Crystal_C : ARSTRiftCrystal
+---@field RiftCrystal_LP_SC UAudioComponent
 ---@field NavPowerObstruction2 UNavPowerObstructionComponent
 ---@field NavPowerObstruction1 UNavPowerObstructionComponent
 ---@field Rift_Crystal_SKM USkeletalMeshComponent

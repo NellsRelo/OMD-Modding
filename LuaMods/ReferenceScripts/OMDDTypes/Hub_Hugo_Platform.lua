@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class AHub_Hugo_Platform_C : AActor
+---@field Hub_HugoPlatform_CenterPlatform_CrystalPlatform_017 UStaticMeshComponent
 ---@field Hub_HugoPlatform_Pillar_A2 UStaticMeshComponent
 ---@field Hub_HugoPlatform_StairSimbol_A UStaticMeshComponent
 ---@field Hub_HugoPlatform_StairsPillar_A3 UStaticMeshComponent
@@ -71,9 +72,7 @@
 ---@field Plants_OakLeaves_Ivy_09 UStaticMeshComponent
 ---@field Plants_OakLeaves_Ivy_015 UStaticMeshComponent
 ---@field Plants_OakLeaves_Ivy_010 UStaticMeshComponent
----@field Plants_OakLeaves_Ivy_020 UStaticMeshComponent
 ---@field Plants_OakLeaves_Ivy_03 UStaticMeshComponent
----@field Plants_OakLeaves_Ivy_022 UStaticMeshComponent
 ---@field Plants_OakLeaves_Ivy_016 UStaticMeshComponent
 ---@field Plants_OakLeaves_Ivy_021 UStaticMeshComponent
 ---@field Foliage USceneComponent

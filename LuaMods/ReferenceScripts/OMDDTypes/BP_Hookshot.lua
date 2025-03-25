@@ -2,6 +2,8 @@
 
 ---@class ABP_Hookshot_C : ABP_RSTTrap_Base_C
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field ReleaseAudioLocation USceneComponent
+---@field IdleSound UAudioComponent
 ---@field NS_Hookshot_Fuse UNiagaraComponent
 ---@field PerceptionOrigin USceneComponent
 ---@field AIPerception UAIPerceptionComponent
@@ -41,6 +43,7 @@ function ABP_Hookshot_C:UpdateRotation(DeltaSeconds) end
 function ABP_Hookshot_C:BP_CooldownEnded() end
 function ABP_Hookshot_C:BP_CooldownBegan() end
 function ABP_Hookshot_C:UpdateFuseFX() end
+function ABP_Hookshot_C:BP_IsSoldChanged() end
 ---@param EntryPoint int32
 function ABP_Hookshot_C:ExecuteUbergraph_BP_Hookshot(EntryPoint) end
 

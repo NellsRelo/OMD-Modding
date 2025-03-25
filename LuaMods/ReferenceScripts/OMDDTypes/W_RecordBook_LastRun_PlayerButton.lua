@@ -12,6 +12,8 @@ UW_RecordBook_LastRun_PlayerButton_C = {}
 ---@param UserFacingData URSTPawnUserFacingData
 ---@param DidFind boolean
 function UW_RecordBook_LastRun_PlayerButton_C:OnStreamableFinished_8482B9154252E6EFBC61B5BAFDD1B1CE(UserFacingData, DidFind) end
+---@param Loaded UObject
+function UW_RecordBook_LastRun_PlayerButton_C:OnLoaded_24A3577D491AC5952FD1C7B533AC36FF(Loaded) end
 function UW_RecordBook_LastRun_PlayerButton_C:BP_SynchronizeProperties() end
 function UW_RecordBook_LastRun_PlayerButton_C:BndEvt__W_RSTSpellbook_FilterButton_Button_25_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature() end
 UW_RecordBook_LastRun_PlayerButton_C['Load Hero Texture'] = function() end

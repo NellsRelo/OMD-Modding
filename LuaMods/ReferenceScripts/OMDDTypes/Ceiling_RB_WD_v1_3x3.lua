@@ -1,7 +1,6 @@
 ---@meta
 
 ---@class ACeiling_RB_WD_v1_3x3_C : ABP_OMDTrapGrid_C
----@field CamBlocker UBoxComponent
 ---@field SM_MERGED_Ceiling_3x3_Beams_A UStaticMeshComponent
 ---@field Metal_Trim_Join_Small_Rivet3 UStaticMeshComponent
 ---@field Metal_Trim_Join_Small_Rivet2 UStaticMeshComponent

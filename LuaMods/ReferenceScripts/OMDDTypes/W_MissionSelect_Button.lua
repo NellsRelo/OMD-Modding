@@ -11,6 +11,8 @@
 ---@field DistortionTitleText UCommonTextBlock
 ---@field Frame UImage
 ---@field Highlight UImage
+---@field HorizontalBox_Stars UHorizontalBox
+---@field Image_Stars UImage
 ---@field InvalidationBox_0 UInvalidationBox
 ---@field LevelHighlight UImage
 ---@field LevelHighlightGlow UImage

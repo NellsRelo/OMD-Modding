@@ -163,7 +163,17 @@ ERSTChatMessageType = {
     Player = 0,
     Game = 1,
     System = 2,
-    ERSTChatMessageType_MAX = 3,
+    SystemPermanent = 3,
+    ERSTChatMessageType_MAX = 4,
+}
+
+---@enum ERSTChatToolTipType
+ERSTChatToolTipType = {
+    Thread = 0,
+    Trap = 1,
+    Item = 2,
+    AICharacter = 3,
+    ERSTChatToolTipType_MAX = 4,
 }
 
 ---@enum ERSTCheatExecutionTime
@@ -186,6 +196,16 @@ ERSTCoinGrantReason = {
     Cheat = 8,
     Onslaught = 9,
     ERSTCoinGrantReason_MAX = 10,
+}
+
+---@enum ERSTCoinSpendReason
+ERSTCoinSpendReason = {
+    None = 0,
+    NormalSpend = 1,
+    Correction = 2,
+    SystemDeduction = 3,
+    PlayerCountAdjustment = 4,
+    ERSTCoinSpendReason_MAX = 5,
 }
 
 ---@enum ERSTColorBlindMode
@@ -450,6 +470,15 @@ ERSTPlayerAttachmentEventType = {
     ERSTPlayerAttachmentEventType_MAX = 14,
 }
 
+---@enum ERSTPlayerChallengeImportCode
+ERSTPlayerChallengeImportCode = {
+    Success = 0,
+    InvalidCode = 1,
+    InvalidVersion = 2,
+    InvalidParse = 3,
+    ERSTPlayerChallengeImportCode_MAX = 4,
+}
+
 ---@enum ERSTPlayerReadySyncBeginType
 ERSTPlayerReadySyncBeginType = {
     Instant = 0,
@@ -479,6 +508,12 @@ ERSTPropertyAggregationMethod = {
     ERSTPropertyAggregationMethod_MAX = 6,
 }
 
+---@enum ERSTQueuedSpawnType
+ERSTQueuedSpawnType = {
+    Gib = 0,
+    ERSTQueuedSpawnType_MAX = 1,
+}
+
 ---@enum ERSTRangeResult
 ERSTRangeResult = {
     InvalidCheck = 0,
@@ -495,7 +530,8 @@ ERSTRangedAimCollisionResolutionMethod = {
     IgnoreReticleCollision_NoCollision = 2,
     IgnoreReticleCollision_FirePointTrace = 3,
     ReticleCast_CheckObstruction = 4,
-    ERSTRangedAimCollisionResolutionMethod_MAX = 5,
+    SphereSweep = 5,
+    ERSTRangedAimCollisionResolutionMethod_MAX = 6,
 }
 
 ---@enum ERSTRangedAimMode
@@ -684,7 +720,8 @@ ERSTTrapVisualFlags = {
     BuffPreview = 2,
     Buff = 4,
     Disabled = 8,
-    ERSTTrapVisualFlags_MAX = 9,
+    SuperTrap = 16,
+    ERSTTrapVisualFlags_MAX = 17,
 }
 
 ---@enum ERSTWidgetInputMode

@@ -37,6 +37,8 @@ function UW_HotbarSlot_C:OnMessageReceived_7D1D650F40AEC87FE8DD8080DD73A86E(Prox
 ---@param ProxyObject UAsyncAction_ListenForGameplayMessage
 ---@param ActualChannel FGameplayTag
 function UW_HotbarSlot_C:OnMessageReceived_ADCCFCAB4EFD6B39A378C9926EC8EDA0(ProxyObject, ActualChannel) end
+---@param Loaded UClass
+function UW_HotbarSlot_C:OnLoaded_AF59B8134057A2555C6267B4D9932D7F(Loaded) end
 function UW_HotbarSlot_C:UpdateDisplay() end
 ---@param IsSelected boolean
 function UW_HotbarSlot_C:OnSelectionStateChanged(IsSelected) end

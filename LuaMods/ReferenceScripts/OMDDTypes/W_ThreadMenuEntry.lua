@@ -32,6 +32,8 @@ UW_ThreadMenuEntry_C['Refresh Thread Display'] = function() end
 ---@param UserFacingData URSTPawnUserFacingData
 ---@param DidFind boolean
 function UW_ThreadMenuEntry_C:OnStreamableFinished_5E24C6D54A411F3310838E97D78F876B(UserFacingData, DidFind) end
+---@param Loaded UObject
+function UW_ThreadMenuEntry_C:OnLoaded_9203BBA449D008266494A48854CAB01F(Loaded) end
 function UW_ThreadMenuEntry_C:BP_OnEntryReleased() end
 ---@param bIsExpanded boolean
 function UW_ThreadMenuEntry_C:BP_OnItemExpansionChanged(bIsExpanded) end

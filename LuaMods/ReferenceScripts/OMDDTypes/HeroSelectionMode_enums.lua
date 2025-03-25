@@ -1,9 +1,10 @@
 ---@enum HeroSelectionMode
 HeroSelectionMode = {
-    NewEnumerator0 = 0,
-    NewEnumerator1 = 1,
-    NewEnumerator2 = 2,
-    NewEnumerator3 = 3,
-    HeroSelectionMode_MAX = 4,
+    NewEnumerator4 = 0,
+    NewEnumerator0 = 1,
+    NewEnumerator1 = 2,
+    NewEnumerator2 = 3,
+    NewEnumerator3 = 4,
+    HeroSelectionMode_MAX = 5,
 }
 

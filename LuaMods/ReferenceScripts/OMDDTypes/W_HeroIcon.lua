@@ -2,11 +2,10 @@
 
 ---@class UW_HeroIcon_C : URSTUserWidget
 ---@field UberGraphFrame FPointerToUberGraphFrame
----@field bg UImage
+---@field BG UImage
 ---@field FrameBorder UImage
 ---@field Image_41 UImage
 ---@field Overlay_0 UOverlay
----@field HeroTexture UTexture2D
 ---@field PlayerState ARSTPlayerState
 UW_HeroIcon_C = {}
 

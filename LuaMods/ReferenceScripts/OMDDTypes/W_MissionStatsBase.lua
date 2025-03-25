@@ -2,7 +2,7 @@
 
 ---@class UW_MissionStatsBase_C : URSTActivatableWidget
 ---@field UberGraphFrame FPointerToUberGraphFrame
----@field bg UBorder
+---@field BG UBorder
 ---@field Button_DevStatsToggle UW_ButtonBasic_C
 ---@field CanvasPanel_0 UCanvasPanel
 ---@field HeaderText UCommonTextBlock

@@ -4,8 +4,6 @@
 ---@field Box UBoxComponent
 ---@field Lighting_Torch_Cage UStaticMeshComponent
 ---@field Lighting_Torch_WoodHandle UStaticMeshComponent
----@field Torch_Point_Static1 UPointLightComponent
----@field Torch_Point_Static UPointLightComponent
 ---@field AmbEmitter_Torch_LP_SC UAudioComponent
 ---@field Lighting_WallCrystal_Holder_SM UStaticMeshComponent
 ---@field Metal_PostBase_B UStaticMeshComponent

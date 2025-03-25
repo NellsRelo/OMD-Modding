@@ -21,6 +21,7 @@
 ABP_Brazier_Boss_C = {}
 
 function ABP_Brazier_Boss_C:OnRep_TorchLit() end
+function ABP_Brazier_Boss_C:UserConstructionScript() end
 function ABP_Brazier_Boss_C:ReceiveBeginPlay() end
 ---@param TorchLit boolean
 function ABP_Brazier_Boss_C:SetTorchLit(TorchLit) end

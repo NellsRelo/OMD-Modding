@@ -1,0 +1,76 @@
+---@meta
+
+---@class ABP_BackAlley_Sewer_Ground_D2_C : ABP_OMDTrapGrid_C
+---@field Floor_1x4_StoneBlock_SM3 UStaticMeshComponent
+---@field Floor_1x4_StoneBlock_SM2 UStaticMeshComponent
+---@field Floor_1x4_StoneBlock_SM7 UStaticMeshComponent
+---@field Floor_1x4_StoneBlock_SM6 UStaticMeshComponent
+---@field Floor_1x4_StoneBlock_SM5 UStaticMeshComponent
+---@field Floor_1x4_StoneBlock_SM4 UStaticMeshComponent
+---@field Stair_5x2_Sewer_SM3 UStaticMeshComponent
+---@field Stair_5x2_Sewer_SM2 UStaticMeshComponent
+---@field Floor_Sewer_Dirt_2x2_SM1 UStaticMeshComponent
+---@field Floor_Sewer_Dirt_2x2_SM3 UStaticMeshComponent
+---@field Floor_Sewer_Dirt_2x2_SM2 UStaticMeshComponent
+---@field FloorTrim_1200_Sewers_SM9 UStaticMeshComponent
+---@field FloorTrim_1200_Sewers_SM8 UStaticMeshComponent
+---@field Floor_1x4_StoneBlock_SM1 UStaticMeshComponent
+---@field Floor_1x4_StoneBlock_SM UStaticMeshComponent
+---@field FloorTrim_1200_Sewers_SM7 UStaticMeshComponent
+---@field FloorTrim_1200_Sewers_SM6 UStaticMeshComponent
+---@field Floor_Sewer_Dirt_2x2_SM UStaticMeshComponent
+---@field Stair_5x2_Sewer_SM1 UStaticMeshComponent
+---@field Stair_5x2_Sewer_SM UStaticMeshComponent
+---@field Floor_1x2_Plaza_Pattern_Brick_None_SM34 UStaticMeshComponent
+---@field Floor_1x2_Plaza_Pattern_Brick_None_SM30 UStaticMeshComponent
+---@field Floor_1x2_Plaza_Pattern_Brick_None_SM20 UStaticMeshComponent
+---@field Floor_1x2_Plaza_Pattern_Brick_None_SM33 UStaticMeshComponent
+---@field Floor_1x2_Plaza_Pattern_Brick_None_SM19 UStaticMeshComponent
+---@field Floor_1x2_Plaza_Pattern_Brick_None_SM18 UStaticMeshComponent
+---@field Floor_1x2_Plaza_Pattern_Brick_None_SM22 UStaticMeshComponent
+---@field Floor_1x2_Plaza_Pattern_Brick_None_SM21 UStaticMeshComponent
+---@field Floor_1x2_Plaza_Pattern_Brick_None_SM17 UStaticMeshComponent
+---@field Floor_1x2_Plaza_Pattern_Brick_None_SM25 UStaticMeshComponent
+---@field Floor_1x2_Plaza_Pattern_Brick_None_SM23 UStaticMeshComponent
+---@field Floor_1x2_Plaza_Pattern_Brick_None_SM24 UStaticMeshComponent
+---@field Floor_1x2_Plaza_Pattern_Brick_None_SM32 UStaticMeshComponent
+---@field Floor_1x2_Plaza_Pattern_Brick_None_SM27 UStaticMeshComponent
+---@field Floor_1x2_Plaza_Pattern_Brick_None_SM31 UStaticMeshComponent
+---@field Floor_1x2_Plaza_Pattern_Brick_None_SM28 UStaticMeshComponent
+---@field Floor_1x2_Plaza_Pattern_Brick_None_SM29 UStaticMeshComponent
+---@field Floor_1x2_Plaza_Pattern_Brick_None_SM26 UStaticMeshComponent
+---@field Rock USceneComponent
+---@field FloorTrim_1200_Sewers_SM5 UStaticMeshComponent
+---@field FloorTrim_1200_Sewers_SM4 UStaticMeshComponent
+---@field FloorTrim_1200_Sewers_SM3 UStaticMeshComponent
+---@field FloorTrim_1200_Sewers_SM2 UStaticMeshComponent
+---@field FloorTrim_1200_Sewers_SM1 UStaticMeshComponent
+---@field FloorTrim_600_Sewers_SM4 UStaticMeshComponent
+---@field FloorTrim_600_Sewers_SM3 UStaticMeshComponent
+---@field FloorTrim_600_Sewers_SM2 UStaticMeshComponent
+---@field FloorTrim_600_Sewers_SM1 UStaticMeshComponent
+---@field FloorTrim_600_Sewers_SM UStaticMeshComponent
+---@field FloorTrim_300_Sewers_SM4 UStaticMeshComponent
+---@field FloorTrim_300_Sewers_SM3 UStaticMeshComponent
+---@field FloorTrim_300_Sewers_SM2 UStaticMeshComponent
+---@field FloorTrim_300_Sewers_SM1 UStaticMeshComponent
+---@field FloorTrim_1200_Sewers_SM UStaticMeshComponent
+---@field FloorTrim_300_Sewers_SM UStaticMeshComponent
+---@field Trim USceneComponent
+---@field Box UBoxComponent
+---@field Stair_5x3_Sewer_SM UStaticMeshComponent
+---@field Stair_5x3_Sewer_SM2 UStaticMeshComponent
+---@field Stair_4x3_Sewer_SM UStaticMeshComponent
+---@field Stair_5x3_Sewer_SM1 UStaticMeshComponent
+---@field Floor_Tile_Straight_Sewer_SM12 UStaticMeshComponent
+---@field Floor_Tile_Straight_Sewer_SM11 UStaticMeshComponent
+---@field Floor_Tile_Straight_Sewer_SM5 UStaticMeshComponent
+---@field Floor_Tile_Straight_Sewer_SM7 UStaticMeshComponent
+---@field Floor_Tile_Straight_Sewer_SM1 UStaticMeshComponent
+---@field RSTTrapGridBox4 URSTTrapGridBoxComponent
+---@field TrapGrid USceneComponent
+---@field Geo USceneComponent
+ABP_BackAlley_Sewer_Ground_D2_C = {}
+
+
+

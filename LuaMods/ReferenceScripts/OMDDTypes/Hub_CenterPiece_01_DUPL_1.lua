@@ -46,7 +46,6 @@
 ---@field Scroll_Closed_Roll73 UStaticMeshComponent
 ---@field Scroll_Closed_Roll64 UStaticMeshComponent
 ---@field Scroll_Open_Roll1 UStaticMeshComponent
----@field Scroll_Closed_Roll63 UStaticMeshComponent
 ---@field Scroll_Closed_Roll62 UStaticMeshComponent
 ---@field Scroll_Open_Roll UStaticMeshComponent
 ---@field Book_B_Book_B UStaticMeshComponent
@@ -64,7 +63,6 @@
 ---@field Scroll_Closed_Roll2 UStaticMeshComponent
 ---@field Scroll_Closed_Roll8 UStaticMeshComponent
 ---@field Scroll_Closed_Roll7 UStaticMeshComponent
----@field Scroll_Closed_Roll13 UStaticMeshComponent
 ---@field Scroll_Roll_B6 UStaticMeshComponent
 ---@field Scroll_Closed_Roll15 UStaticMeshComponent
 ---@field Scroll_Closed_Roll14 UStaticMeshComponent

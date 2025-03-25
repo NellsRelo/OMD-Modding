@@ -2,6 +2,10 @@
 
 ---@class UW_SessionBrowser_C : URSTActivatableWidget
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field OnHide_NoBG UWidgetAnimation
+---@field OnShow_NoBG UWidgetAnimation
+---@field OnHide UWidgetAnimation
+---@field OnShow UWidgetAnimation
 ---@field BrowserSwitcher UWidgetSwitcher
 ---@field Button_Refresh UW_ButtonBasic_C
 ---@field CrossplayRoot UHorizontalBox
@@ -12,6 +16,7 @@
 ---@field Image UImage
 ---@field Image_420 UImage
 ---@field PasswordProtectedCheckbox UCheckBox
+---@field PatchNotesOutOfDateVersion UCommonTextBlock
 ---@field RegionComboBox UComboBoxString
 ---@field RegionSizeBox USizeBox
 ---@field SafeZone_0 USafeZone
@@ -32,6 +37,12 @@ UW_SessionBrowser_C = {}
 
 ---@return UWidget
 function UW_SessionBrowser_C:GetScrollRecipient() end
+---@param bStackActive boolean
+---@return UWidgetAnimation
+function UW_SessionBrowser_C:BP_GetOnHideAnimation(bStackActive) end
+---@param bStackActive boolean
+---@return UWidgetAnimation
+function UW_SessionBrowser_C:BP_GetOnShowAnimation(bStackActive) end
 function UW_SessionBrowser_C:ParseThroughSearchFilter() end
 ---@param InSearchRequest UCommonSession_SearchSessionRequest
 UW_SessionBrowser_C['Init Search Request'] = function(InSearchRequest) end

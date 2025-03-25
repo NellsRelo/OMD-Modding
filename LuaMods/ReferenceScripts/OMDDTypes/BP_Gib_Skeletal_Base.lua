@@ -41,9 +41,9 @@ function ABP_Gib_Skeletal_Base_C:NoType_2DA8779B4E4BD7DF378495B871D98273() end
 ---@param LifeSpan double
 function ABP_Gib_Skeletal_Base_C:DisolveFX(Meshs, LifeSpan) end
 ---@param LifeSpan float
----@param deathType uint8
----@param animationTag FGameplayTag
-function ABP_Gib_Skeletal_Base_C:BP_DestroyFX(LifeSpan, deathType, animationTag) end
+---@param DeathType uint8
+---@param AnimationTag FGameplayTag
+function ABP_Gib_Skeletal_Base_C:BP_DestroyFX(LifeSpan, DeathType, AnimationTag) end
 function ABP_Gib_Skeletal_Base_C:ElectrifiedDeath() end
 function ABP_Gib_Skeletal_Base_C:BurnedDeath() end
 function ABP_Gib_Skeletal_Base_C:MeltedDeath() end

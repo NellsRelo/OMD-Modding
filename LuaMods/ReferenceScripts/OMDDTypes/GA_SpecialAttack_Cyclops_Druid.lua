@@ -26,8 +26,12 @@
 ---@field ['Last Hit Actor'] AActor
 ---@field LastImpactCue FGameplayTag
 ---@field ValidTargetTags FGameplayTagContainer
+---@field HitReactTargets TArray<AActor>
 UGA_SpecialAttack_Cyclops_Druid_C = {}
 
+---@param Target AActor
+---@return boolean
+function UGA_SpecialAttack_Cyclops_Druid_C:CanPlayHitReact(Target) end
 ---@param HitActor AActor
 ---@param GameplayCue FGameplayTag
 function UGA_SpecialAttack_Cyclops_Druid_C:RemoveImpactSFX(HitActor, GameplayCue) end
@@ -59,7 +63,8 @@ function UGA_SpecialAttack_Cyclops_Druid_C:OnTaskFailed_AF715F3348F67EA00FA2B591
 function UGA_SpecialAttack_Cyclops_Druid_C:OnTargetReached_AF715F3348F67EA00FA2B59193B8CE83(Duration) end
 ---@param HitActor AActor
 ---@param HitLocation FVector
-function UGA_SpecialAttack_Cyclops_Druid_C:OnReadyToFire_C3228DEE4E9AFC7582448D9F54188859(HitActor, HitLocation) end
+---@param bDealDamage boolean
+function UGA_SpecialAttack_Cyclops_Druid_C:OnReadyToFire_C3228DEE4E9AFC7582448D9F54188859(HitActor, HitLocation, bDealDamage) end
 function UGA_SpecialAttack_Cyclops_Druid_C:OnFinished_60F783984CAF2CD48EFF78B9FDAE3A4F() end
 function UGA_SpecialAttack_Cyclops_Druid_C:OnActorDied_60F783984CAF2CD48EFF78B9FDAE3A4F() end
 function UGA_SpecialAttack_Cyclops_Druid_C:K2_ActivateAbility() end
@@ -68,6 +73,15 @@ function UGA_SpecialAttack_Cyclops_Druid_C:K2_OnEndAbility(bWasCancelled) end
 ---@param NotifyTag FGameplayTag
 ---@param NotifyEvent FAnimNotifyEvent
 function UGA_SpecialAttack_Cyclops_Druid_C:K2_OnAnimNotify(NotifyTag, NotifyEvent) end
+---@param Target AActor
+function UGA_SpecialAttack_Cyclops_Druid_C:AddHitReactTarget(Target) end
+---@param Hit_Actor AActor
+---@param Hit_Location FVector
+---@param bDealDamage boolean
+UGA_SpecialAttack_Cyclops_Druid_C['Process Fire Target'] = function(Hit_Actor, Hit_Location, bDealDamage) end
+---@param Actor AActor
+---@param bDealDamage boolean
+UGA_SpecialAttack_Cyclops_Druid_C['Apply Damage Effects'] = function(Actor, bDealDamage) end
 ---@param EntryPoint int32
 function UGA_SpecialAttack_Cyclops_Druid_C:ExecuteUbergraph_GA_SpecialAttack_Cyclops_Druid(EntryPoint) end
 

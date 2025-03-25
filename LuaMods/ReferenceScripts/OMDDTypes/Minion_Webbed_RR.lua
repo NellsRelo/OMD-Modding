@@ -1,0 +1,146 @@
+---@meta
+
+---@class UMinion_Webbed_RR_C : UControlRig
+---@field Pitch double
+---@field Offset double
+---@field Seed int32
+UMinion_Webbed_RR_C = {}
+
+
+
+---@class URigVMMemory_Literal : URigVMMemoryStorage
+---@field RigVMModel___RigUnit_OffsetTransformForItem_Item__Const FRigElementKey
+---@field RigVMModel___RigUnit_OffsetTransformForItem_OffsetTransform__Const FTransform
+---@field RigVMModel___RigVMFunction_TimeLoop_Speed__Const float
+---@field RigVMModel___RigVMFunction_TimeLoop_Duration__Const float
+---@field RigVMModel___RigVMFunction_TimeLoop_Normalize__Const boolean
+---@field RigVMModel___Noise_Speed__Const double
+---@field RigVMModel___Noise_Frequency__Const double
+---@field RigVMModel___Noise_Minimum__Const double
+---@field RigVMModel___Noise_Maximum__Const double
+---@field RigVMModel___Noise_1_Speed__Const double
+---@field RigVMModel___Noise_1_Frequency__Const double
+---@field RigVMModel___Noise_1_Minimum__Const double
+---@field RigVMModel___Noise_1_Maximum__Const double
+---@field RigVMModel___Noise_1_1_Speed__Const double
+---@field RigVMModel___Noise_1_1_Minimum__Const double
+---@field RigVMModel___Noise_1_1_Maximum__Const double
+---@field RigVMModel___TimeOffset_BufferSize__Const int32
+---@field RigVMModel___RigVMFunction_MathQuaternionFromEuler_RotationOrder__Const EEulerRotationOrder
+---@field RigVMModel___RigUnit_OffsetTransformForItem_bPropagateToChildren__Const boolean
+---@field RigVMModel___RigUnit_OffsetTransformForItem_1_Item__Const FRigElementKey
+---@field RigVMModel___RigUnit_OffsetTransformForItem_2_Item__Const FRigElementKey
+---@field RigVMModel___RigUnit_OffsetTransformForItem_3_Item__Const FRigElementKey
+---@field RigVMModel___RigUnit_OffsetTransformForItem_4_Item__Const FRigElementKey
+---@field RigVMModel___AimItem_Item__Const FRigElementKey
+---@field RigVMModel___AimItem_Primary__Const FRigUnit_AimItem_Target
+---@field RigVMModel___AimItem_Secondary__Const FRigUnit_AimItem_Target
+---@field RigVMModel___AimItem_DebugSettings__Const FRigUnit_AimBone_DebugSettings
+---@field RigVMModel___AimItem_1_Item__Const FRigElementKey
+---@field RigVMModel___AimItem_1_Primary__Const FRigUnit_AimItem_Target
+---@field RigVMModel___AimItem_2_Item__Const FRigElementKey
+---@field RigVMModel___AimItem_2_Primary__Const FRigUnit_AimItem_Target
+---@field RigVMModel___AimItem_2_1_Item__Const FRigElementKey
+---@field RigVMModel___AimItem_2_1_Primary__Const FRigUnit_AimItem_Target
+---@field RigVMModel___RigUnit_SetRotation_2_Item__Const FRigElementKey
+---@field RigVMModel___RigUnit_SetRotation_2_Space__Const ERigVMTransformSpace
+---@field RigVMModel___RigVMFunction_MathQuaternionFromEuler_1_Euler__Const FVector
+---@field RigVMModel___Subtract_A__Const double
+---@field RigVMModel___KalmanFilter_BufferSize__Const int32
+---@field RigVMModel___RigVMFunction_MathQuaternionFromEuler_1_RotationOrder__Const EEulerRotationOrder
+---@field RigVMModel___RigUnit_SetRotation_3_Item__Const FRigElementKey
+---@field RigVMModel___Add_B__Const double
+---@field RigVMModel___RigUnit_OffsetTransformForItem_5_Item__Const FRigElementKey
+---@field RigVMModel___RigVMFunction_MathQuaternionFromEuler_2_Euler__Const FVector
+---@field RigVMModel___RigUnit_OffsetTransformForItem_6_Item__Const FRigElementKey
+---@field RigVMModel___Random_Minimum__Const float
+---@field RigVMModel___Random_Maximum__Const float
+---@field RigVMModel___Random_Duration__Const float
+URigVMMemory_Literal = {}
+
+
+
+---@class URigVMMemory_Work : URigVMMemoryStorage
+---@field RigVMModel___RigVMFunction_MathQuaternionFromEuler_Result FQuat
+---@field RigVMModel___TimeOffset_Result FVector
+---@field RigVMModel___RigVMFunction_MathVectorMake_Result FVector
+---@field RigVMModel___Noise_Result double
+---@field RigVMModel___Sin_Result double
+---@field RigVMModel___RigVMFunction_TimeLoop_Absolute float
+---@field RigVMModel___RigVMFunction_TimeLoop_Relative float
+---@field RigVMModel___RigVMFunction_TimeLoop_FlipFlop float
+---@field RigVMModel___RigVMFunction_TimeLoop_Even boolean
+---@field RigVMModel___RigVMFunction_TimeLoop_AccumulatedAbsolute TArray<float>
+---@field RigVMModel___RigVMFunction_TimeLoop_AccumulatedRelative TArray<float>
+---@field RigVMModel___RigVMFunction_TimeLoop_NumIterations TArray<int32>
+---@field RigVMModel___RigVMFunction_TimeLoop_bIsInitialized TArray<boolean>
+---@field RigVMModel___Sin_Value double
+---@field RigVMModel___Noise_Time TArray<double>
+---@field RigVMModel___RigVMFunction_MathVectorMake_X float
+---@field RigVMModel___Noise_1_Result double
+---@field RigVMModel___Noise_1_Time TArray<double>
+---@field RigVMModel___RigVMFunction_MathVectorMake_Y float
+---@field RigVMModel___Noise_1_1_Result double
+---@field RigVMModel___Noise_1_1_Time TArray<double>
+---@field RigVMModel___RigVMFunction_MathVectorMake_Z float
+---@field RigVMModel___TimeOffset_SecondsAgo float
+---@field RigVMModel___TimeOffset_TimeRange float
+---@field RigVMModel___TimeOffset_Buffer TArray<TArray<FVector>>
+---@field RigVMModel___TimeOffset_DeltaTimes TArray<TArray<float>>
+---@field RigVMModel___TimeOffset_LastInsertIndex TArray<int32>
+---@field RigVMModel___TimeOffset_UpperBound TArray<int32>
+---@field RigVMModel___RigUnit_OffsetTransformForItem_OffsetTransform__IO FTransform
+---@field RigVMModel___RigUnit_OffsetTransformForItem_CachedIndex TArray<FCachedRigElement>
+---@field RigVMModel___RigUnit_OffsetTransformForItem_1_OffsetTransform__IO FTransform
+---@field RigVMModel___RigUnit_OffsetTransformForItem_1_CachedIndex TArray<FCachedRigElement>
+---@field RigVMModel___RigUnit_OffsetTransformForItem_2_OffsetTransform__IO FTransform
+---@field RigVMModel___RigUnit_OffsetTransformForItem_2_CachedIndex TArray<FCachedRigElement>
+---@field RigVMModel___RigUnit_OffsetTransformForItem_3_OffsetTransform__IO FTransform
+---@field RigVMModel___RigUnit_OffsetTransformForItem_3_CachedIndex TArray<FCachedRigElement>
+---@field RigVMModel___RigUnit_OffsetTransformForItem_4_OffsetTransform__IO FTransform
+---@field RigVMModel___RigUnit_OffsetTransformForItem_4_CachedIndex TArray<FCachedRigElement>
+---@field RigVMModel___AimItem_CachedItem TArray<FCachedRigElement>
+---@field RigVMModel___AimItem_PrimaryCachedSpace TArray<FCachedRigElement>
+---@field RigVMModel___AimItem_SecondaryCachedSpace TArray<FCachedRigElement>
+---@field RigVMModel___AimItem_bIsInitialized TArray<boolean>
+---@field RigVMModel___AimItem_1_CachedItem TArray<FCachedRigElement>
+---@field RigVMModel___AimItem_1_PrimaryCachedSpace TArray<FCachedRigElement>
+---@field RigVMModel___AimItem_1_SecondaryCachedSpace TArray<FCachedRigElement>
+---@field RigVMModel___AimItem_1_bIsInitialized TArray<boolean>
+---@field RigVMModel___AimItem_2_CachedItem TArray<FCachedRigElement>
+---@field RigVMModel___AimItem_2_PrimaryCachedSpace TArray<FCachedRigElement>
+---@field RigVMModel___AimItem_2_SecondaryCachedSpace TArray<FCachedRigElement>
+---@field RigVMModel___AimItem_2_bIsInitialized TArray<boolean>
+---@field RigVMModel___AimItem_2_1_CachedItem TArray<FCachedRigElement>
+---@field RigVMModel___AimItem_2_1_PrimaryCachedSpace TArray<FCachedRigElement>
+---@field RigVMModel___AimItem_2_1_SecondaryCachedSpace TArray<FCachedRigElement>
+---@field RigVMModel___AimItem_2_1_bIsInitialized TArray<boolean>
+---@field RigVMModel___RigVMFunction_MathQuaternionFromEuler_1_Result FQuat
+---@field RigVMModel___Subtract_Result double
+---@field RigVMModel___Multiply_Result double
+---@field RigVMModel___KalmanFilter_Result float
+---@field RigVMModel___KalmanFilter_Value float
+---@field RigVMModel___KalmanFilter_Buffer TArray<TArray<float>>
+---@field RigVMModel___KalmanFilter_LastInsertIndex TArray<int32>
+---@field RigVMModel___Multiply_A double
+---@field RigVMModel___RigVMFunction_MathQuaternionFromEuler_1_Euler__IO FVector
+---@field RigVMModel___RigUnit_SetRotation_2_CachedIndex TArray<FCachedRigElement>
+---@field RigVMModel___RigVMFunction_MathQuaternionFromEuler_1_1_Result FQuat
+---@field RigVMModel___Add_Result double
+---@field RigVMModel___RigVMFunction_MathQuaternionFromEuler_1_1_Euler__IO FVector
+---@field RigVMModel___RigUnit_SetRotation_3_CachedIndex TArray<FCachedRigElement>
+---@field RigVMModel___RigVMFunction_MathQuaternionFromEuler_2_Result FQuat
+---@field RigVMModel___RigVMFunction_MathQuaternionFromEuler_2_Euler__IO FVector
+---@field RigVMModel___RigUnit_OffsetTransformForItem_5_OffsetTransform__IO FTransform
+---@field RigVMModel___RigUnit_OffsetTransformForItem_5_CachedIndex TArray<FCachedRigElement>
+---@field RigVMModel___RigUnit_OffsetTransformForItem_6_OffsetTransform__IO FTransform
+---@field RigVMModel___RigUnit_OffsetTransformForItem_6_CachedIndex TArray<FCachedRigElement>
+---@field RigVMModel___Random_Result float
+---@field RigVMModel___Random_LastResult TArray<float>
+---@field RigVMModel___Random_LastSeed TArray<int32>
+---@field RigVMModel___Random_BaseSeed TArray<int32>
+---@field RigVMModel___Random_TimeLeft TArray<float>
+URigVMMemory_Work = {}
+
+
+

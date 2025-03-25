@@ -20,7 +20,7 @@ UW_RSTSpellbookMenu_C = {}
 UW_RSTSpellbookMenu_C['Get Empty Text'] = function(bUseEmptyText, Empty_Text) end
 ---@param Element UObject
 ---@param Should_Enable boolean
-UW_RSTSpellbookMenu_C['Should Enable Contents For Element'] = function(Element, Should_Enable) end
+UW_RSTSpellbookMenu_C['Should Enable Contents for Element'] = function(Element, Should_Enable) end
 ---@param Element UObject
 ---@param Should_Enable boolean
 UW_RSTSpellbookMenu_C['Should Element Be Spawned'] = function(Element, Should_Enable) end

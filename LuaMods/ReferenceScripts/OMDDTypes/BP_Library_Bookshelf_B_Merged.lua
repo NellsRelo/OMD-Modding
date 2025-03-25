@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ABP_Library_Bookshelf_B_Merged_C : ABP_OMDTrapGrid_C
----@field SM_MERGED_BP_Library_Books_Merges UStaticMeshComponent
+---@field SM_Library_Forniture_Books_Merge UStaticMeshComponent
 ---@field Box_Collision_Middle5 UBoxComponent
 ---@field Box_Collision_Middle4 UBoxComponent
 ---@field Box_Collision_Middle3 UBoxComponent

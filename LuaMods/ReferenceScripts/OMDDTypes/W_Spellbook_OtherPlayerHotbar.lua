@@ -25,6 +25,8 @@ function UW_Spellbook_OtherPlayerHotbar_C:OnMessageReceived_8B1727054F7B25DC97FD
 ---@param UserFacingData URSTPawnUserFacingData
 ---@param DidFind boolean
 function UW_Spellbook_OtherPlayerHotbar_C:OnStreamableFinished_7E7E72E44D968F33BFDAF08C850FC9BB(UserFacingData, DidFind) end
+---@param Loaded UObject
+function UW_Spellbook_OtherPlayerHotbar_C:OnLoaded_C70DF97C4865A494F236A0AE81D54AD7(Loaded) end
 function UW_Spellbook_OtherPlayerHotbar_C:Construct() end
 function UW_Spellbook_OtherPlayerHotbar_C:OnInitialized() end
 ---@param Player APlayerState

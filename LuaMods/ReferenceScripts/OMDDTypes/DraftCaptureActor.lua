@@ -2,6 +2,9 @@
 
 ---@class ADraftCaptureActor_C : AActor
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field SpotLight_Up USpotLightComponent
+---@field SpotLight_Rim1 USpotLightComponent
+---@field Lights USceneComponent
 ---@field Niagra3 UNiagaraComponent
 ---@field Niagara2 UNiagaraComponent
 ---@field Niagara1 UNiagaraComponent
@@ -15,6 +18,9 @@
 ---@field PositionRight UStaticMeshComponent
 ---@field PositionLeft UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
+---@field SelectMaterialFlash_Timeline_FlashTrack_C32CC3E640F475BA1763E982AF08C216 float
+---@field SelectMaterialFlash_Timeline__Direction_C32CC3E640F475BA1763E982AF08C216 ETimelineDirection::Type
+---@field SelectMaterialFlash_Timeline UTimelineComponent
 ---@field PlayerCount int32
 ---@field PlayerActors TArray<ARSTHeroSelectProxyActor>
 ---@field TextureTarget UTextureRenderTarget2D
@@ -56,6 +62,8 @@ ADraftCaptureActor_C['Spawn Hero'] = function(PlayerIndex, PawnUFD, SkinUFD, Ski
 ---@param PlayerCount int32
 function ADraftCaptureActor_C:SetPlayerCount(PlayerCount) end
 function ADraftCaptureActor_C:RecalculatePlayerPositions() end
+function ADraftCaptureActor_C:SelectMaterialFlash_Timeline__FinishedFunc() end
+function ADraftCaptureActor_C:SelectMaterialFlash_Timeline__UpdateFunc() end
 ---@param UserFacingData URSTPawnUserFacingData
 ---@param DidFind boolean
 function ADraftCaptureActor_C:OnStreamableFinished_C6EAA87C4DD2235009A3D79F070474FE(UserFacingData, DidFind) end

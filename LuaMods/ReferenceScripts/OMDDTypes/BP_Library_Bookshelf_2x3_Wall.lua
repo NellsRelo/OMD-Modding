@@ -10,8 +10,8 @@
 ---@field Bookshelf_Half_C16 UStaticMeshComponent
 ---@field Bookshelf_Half_B5 UStaticMeshComponent
 ---@field Bookshelf_Half_A8 UStaticMeshComponent
----@field Bookshelf_Half_A1 UStaticMeshComponent
----@field Bookshelf_Quarter_A1 UStaticMeshComponent
+---@field BookShelf_Half_A1 UStaticMeshComponent
+---@field BookShelf_Quarter_A1 UStaticMeshComponent
 ---@field Bookshelf_Quarter_A2 UStaticMeshComponent
 ---@field Bookshelf_Half_C1 UStaticMeshComponent
 ---@field BookShelf_Quarter_A UStaticMeshComponent

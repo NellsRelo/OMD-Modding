@@ -8,10 +8,12 @@
 ---@field Overlay_19 UOverlay
 UW_Modal_TwoChoices_C = {}
 
+---@param bStackActive boolean
 ---@return UWidgetAnimation
-function UW_Modal_TwoChoices_C:BP_GetOnShowAnimation() end
+function UW_Modal_TwoChoices_C:BP_GetOnShowAnimation(bStackActive) end
+---@param bStackActive boolean
 ---@return UWidgetAnimation
-function UW_Modal_TwoChoices_C:BP_GetOnHideAnimation() end
+function UW_Modal_TwoChoices_C:BP_GetOnHideAnimation(bStackActive) end
 ---@param Button UCommonButtonBase
 function UW_Modal_TwoChoices_C:BndEvt__W_Modal_TwoChoices_BoundActionButton_ChoiceOne_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(Button) end
 ---@param Button UCommonButtonBase

@@ -2,6 +2,8 @@
 
 ---@class UW_HeroUnlockDisplay_C : URSTActivatableWidget
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field OnHide UWidgetAnimation
+---@field OnShow UWidgetAnimation
 ---@field DismissButton UW_ButtonBoundAction_C
 ---@field HeroDisplayRoot USizeBox
 ---@field TitleArrow UImage
@@ -12,6 +14,12 @@
 ---@field ['As W Hero Unlock Hero Display Base'] UW_HeroUnlock_HeroDisplay_Base_C
 UW_HeroUnlockDisplay_C = {}
 
+---@param bStackActive boolean
+---@return UWidgetAnimation
+function UW_HeroUnlockDisplay_C:BP_GetOnHideAnimation(bStackActive) end
+---@param bStackActive boolean
+---@return UWidgetAnimation
+function UW_HeroUnlockDisplay_C:BP_GetOnShowAnimation(bStackActive) end
 ---@return boolean
 function UW_HeroUnlockDisplay_C:BP_OnHandleBackAction() end
 ---@return UWidget

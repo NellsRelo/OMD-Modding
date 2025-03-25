@@ -8,6 +8,7 @@
 ---@field FadeTime double
 ---@field FullVisibilityTime double
 ---@field bShouldFadeOut boolean
+---@field PlayerIndex int32
 UW_HUD_ChatMessage_C = {}
 
 function UW_HUD_ChatMessage_C:Construct() end

@@ -5,7 +5,10 @@
 ---@field Niagara UNiagaraComponent
 ---@field SM_Daggers_Projectile UStaticMeshComponent
 ---@field WandPrimaryProj UAudioComponent
+---@field HomingTrail UNiagaraSystem
 ABP_Daggers_Projectile_Secondary_C = {}
 
+---@return UNiagaraSystem
+function ABP_Daggers_Projectile_Secondary_C:GetTrailSystemInternal() end
 
 

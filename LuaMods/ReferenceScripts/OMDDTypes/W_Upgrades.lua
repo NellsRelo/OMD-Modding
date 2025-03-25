@@ -2,66 +2,33 @@
 
 ---@class UW_Upgrades_C : URSTGenericTabWidget
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field OnHide UWidgetAnimation
+---@field OnShow UWidgetAnimation
 ---@field Stars UWidgetAnimation
 ---@field Clouds UWidgetAnimation
 ---@field Background_Clouds UImage
 ---@field Background_nebula UImage
 ---@field Background_stars UImage
----@field Blunderbuss1 UUIExtensionPointWidget
----@field Blunderbuss2 UUIExtensionPointWidget
----@field Blunderbuss3_1 UUIExtensionPointWidget
----@field Blunderbuss3_2 UUIExtensionPointWidget
----@field Blunderbuss4 UUIExtensionPointWidget
----@field Blunderbuss5 UUIExtensionPointWidget
----@field BlunderbussCanvas UCanvasPanel
 ---@field Branch1 UUIExtensionPointWidget
 ---@field Branch2 UUIExtensionPointWidget
 ---@field Button_RestartNPE UW_ButtonBasic_C
----@field Crossbow1 UUIExtensionPointWidget
----@field Crossbow2 UUIExtensionPointWidget
----@field Crossbow3_1 UUIExtensionPointWidget
----@field Crossbow3_2 UUIExtensionPointWidget
----@field Crossbow4 UUIExtensionPointWidget
----@field Crossbow5 UUIExtensionPointWidget
----@field CrossbowCanvas UCanvasPanel
----@field Dagger1 UUIExtensionPointWidget
----@field Dagger2 UUIExtensionPointWidget
----@field Dagger2_1 UUIExtensionPointWidget
----@field Dagger2_2 UUIExtensionPointWidget
----@field Dagger4 UUIExtensionPointWidget
----@field Dagger5 UUIExtensionPointWidget
----@field DaggerCanvas UCanvasPanel
----@field Hammer1 UUIExtensionPointWidget
----@field Hammer2 UUIExtensionPointWidget
----@field Hammer3_1 UUIExtensionPointWidget
----@field Hammer3_2 UUIExtensionPointWidget
----@field Hammer4 UUIExtensionPointWidget
----@field Hammer5 UUIExtensionPointWidget
----@field HammerCanvas UCanvasPanel
----@field HeroCanvasSwitcher UWidgetSwitcher
+---@field HeroIcon UImage
 ---@field HeroList UHorizontalBox
 ---@field HeroScrollBox UScrollBox
 ---@field HeroScrollBoxSlider USlider
----@field Image UImage
----@field Image_1 UImage
----@field Image_2 UImage
----@field Image_3 UImage
----@field Image_4 UImage
----@field Image_5 UImage
----@field Image_127 UImage
+---@field HeroUpgradePanel UCanvasPanel
+---@field HeroUpgradeSlot_1 UUIExtensionPointWidget
+---@field HeroUpgradeSlot_2 UUIExtensionPointWidget
+---@field HeroUpgradeSlot_4 UUIExtensionPointWidget
+---@field HeroUpgradeSlot_5 UUIExtensionPointWidget
+---@field HeroUpgradeSlot_3A UUIExtensionPointWidget
+---@field HeroUpgradeSlot_3B UUIExtensionPointWidget
 ---@field Image_201 UImage
 ---@field Image_HeroHighlight UImage
 ---@field InvalidationBox_1 UInvalidationBox
 ---@field InvalidationBox_2 UInvalidationBox
 ---@field InvalidationBox_3 UInvalidationBox
 ---@field InvalidationBox_5 UInvalidationBox
----@field Max1 UUIExtensionPointWidget
----@field Max2 UUIExtensionPointWidget
----@field Max3_1 UUIExtensionPointWidget
----@field Max3_2 UUIExtensionPointWidget
----@field Max4 UUIExtensionPointWidget
----@field Max5 UUIExtensionPointWidget
----@field MaxCanvas UCanvasPanel
 ---@field MouseOverDescription UCommonTextBlock
 ---@field MouseOverImage UImage
 ---@field MouseOverTitle UCommonTextBlock
@@ -133,21 +100,10 @@
 ---@field SkullCost UCommonTextBlock
 ---@field SkullCostImage UImage
 ---@field SkullOverlay UOverlay
----@field Sniper1 UUIExtensionPointWidget
----@field Sniper2 UUIExtensionPointWidget
----@field Sniper3_1 UUIExtensionPointWidget
----@field Sniper3_2 UUIExtensionPointWidget
----@field Sniper4 UUIExtensionPointWidget
----@field Sniper5 UUIExtensionPointWidget
----@field SniperCanvas UCanvasPanel
 ---@field UpgradeHeaderImage UImage
 ---@field UpgradeTreeCanvas UCanvasPanel
----@field W_BlunderbussUpgradePaintLayer UW_TempUpradePaintLinkLayer_C
----@field W_CrossbowUpgradePaintLayer UW_TempUpradePaintLinkLayer_C
----@field W_DaggerUpgradePaintLayer UW_TempUpradePaintLinkLayer_C
 ---@field W_ExitMenuButton UW_ExitMenuButton_C
----@field W_HammerUpgradePaintLayer UW_TempUpradePaintLinkLayer_C
----@field W_MaxUpgradePaintLayer UW_TempUpradePaintLinkLayer_C
+---@field W_HeroUpgradePaintLayer UW_TempUpradePaintLinkLayer_C
 ---@field W_NPE_Blocker UW_NPE_Blocker_C
 ---@field W_NPE_Box_Bottom UW_NPE_Box_C
 ---@field W_NPE_Box_Center UW_NPE_Box_C
@@ -160,16 +116,7 @@
 ---@field W_NPE_Tooltip_Skulls UW_NPE_Tooltip_C
 ---@field W_NPE_Tooltip_Skulls_0 UW_NPE_Tooltip_C
 ---@field W_PurchaseMenu_CurrencyDisplay UW_PurchaseMenu_CurrencyDisplay_C
----@field W_SniperUpgradePaintLayer UW_TempUpradePaintLinkLayer_C
 ---@field W_TempUpradePaintLinkLayer UW_TempUpradePaintLinkLayer_C
----@field W_WandUpgradePaintLayer UW_TempUpradePaintLinkLayer_C
----@field Wand1 UUIExtensionPointWidget
----@field Wand2 UUIExtensionPointWidget
----@field Wand3_1 UUIExtensionPointWidget
----@field Wand3_2 UUIExtensionPointWidget
----@field Wand4 UUIExtensionPointWidget
----@field Wand5 UUIExtensionPointWidget
----@field WandCanvas UCanvasPanel
 ---@field SelectedHeroTag FGameplayTag
 ---@field UpgradeToUserFacingMap TMap<URSTUpgradeDefinition, URSTUpgradeUserFacingData>
 ---@field UpgradeTagExtensionHandleMap TMap<FGameplayTag, FUIExtensionHandle>
@@ -182,8 +129,16 @@
 ---@field NPETag FGameplayTag
 ---@field AddedUpgrades TSet<URSTUpgradeDefinition>
 ---@field UpgradesDirty FW_Upgrades_CUpgradesDirty
+---@field UpgradePath TArray<URSTUpgradeDefinition>
+---@field HeroUpgradeWidgets TArray<UUIExtensionPointWidget>
 UW_Upgrades_C = {}
 
+---@param bStackActive boolean
+---@return UWidgetAnimation
+function UW_Upgrades_C:BP_GetOnHideAnimation(bStackActive) end
+---@param bStackActive boolean
+---@return UWidgetAnimation
+function UW_Upgrades_C:BP_GetOnShowAnimation(bStackActive) end
 ---@param Heroes TArray<FGameplayTag>
 UW_Upgrades_C['Get Valid Heroes'] = function(Heroes) end
 ---@return boolean
@@ -199,7 +154,6 @@ function UW_Upgrades_C:GetTabIDMax() end
 function UW_Upgrades_C:AddValidSortedHeroesToPanel() end
 ---@param Panel UPanelWidget
 function UW_Upgrades_C:AddTagExtensionPoint(Panel) end
-function UW_Upgrades_C:UpdateHeroActiveTree() end
 ---@param DataItem UObject
 ---@return TSubclassOf<UUserWidget>
 function UW_Upgrades_C:OnGetWidgetClassForData(DataItem) end
@@ -220,6 +174,12 @@ function UW_Upgrades_C:OnMessageReceived_8DE2DC2847FF1023AA7197BC49ED100C(ProxyO
 ---@param UserFacingData URSTPawnUserFacingData
 ---@param DidFind boolean
 function UW_Upgrades_C:OnStreamableFinished_A064880644E4BEC559953D9AE1F6F1B4(UserFacingData, DidFind) end
+---@param UserFacingData URSTPawnUserFacingData
+---@param DidFind boolean
+function UW_Upgrades_C:OnStreamableFinished_40EBDA5F4F8D9EBA53231E8B43CC56BE(UserFacingData, DidFind) end
+---@param UserFacingData URSTPawnUserFacingData
+---@param DidFind boolean
+function UW_Upgrades_C:OnStreamableFinished_ABD181EF41AB3D368DC0719E68D6D366(UserFacingData, DidFind) end
 function UW_Upgrades_C:Construct() end
 ---@param SelectedHero FGameplayTag
 function UW_Upgrades_C:OnHeroSelectionChanged(SelectedHero) end
@@ -254,6 +214,12 @@ function UW_Upgrades_C:BndEvt__W_Upgrades_HeroScrollBox_K2Node_ComponentBoundEve
 function UW_Upgrades_C:BndEvt__W_Upgrades_HeroScrollBoxSlider_K2Node_ComponentBoundEvent_4_OnFloatValueChangedEvent__DelegateSignature(Value) end
 ---@param Hero UW_UpgradeHeroIcon_C
 UW_Upgrades_C['On Hero Button Clicked'] = function(Hero) end
+UW_Upgrades_C['Refresh Hero Icon'] = function() end
+UW_Upgrades_C['Refresh Hero Extension Points'] = function() end
+function UW_Upgrades_C:OnInitialized() end
+---@param InputPin UUIExtensionPointWidget
+---@param InExtensionPointTag FGameplayTag
+UW_Upgrades_C['Modify Extension Point Tag'] = function(InputPin, InExtensionPointTag) end
 ---@param EntryPoint int32
 function UW_Upgrades_C:ExecuteUbergraph_W_Upgrades(EntryPoint) end
 function UW_Upgrades_C:UpgradesDirty__DelegateSignature() end

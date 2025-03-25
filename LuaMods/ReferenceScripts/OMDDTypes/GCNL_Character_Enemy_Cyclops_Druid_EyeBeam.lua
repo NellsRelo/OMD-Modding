@@ -9,6 +9,7 @@
 ---@field StartLocation FVector
 ---@field TargetLocation FVector
 ---@field TargetActor UObject
+---@field BeamSound UAudioComponent
 AGCNL_Character_Enemy_Cyclops_Druid_EyeBeam_C = {}
 
 ---@param StartPoint FVector

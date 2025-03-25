@@ -2,6 +2,7 @@
 
 ---@class ABP_CursedGround_C : ABP_RSTTrap_Base_C
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field IdleSound UAudioComponent
 ---@field NS_CursedGround_Ghosts UNiagaraComponent
 ---@field NS_CursedGround_Candles UNiagaraComponent
 ---@field SoulCount int32
@@ -46,6 +47,8 @@ function ABP_CursedGround_C:UpdateDisabledVisuals(IsDisabled) end
 ---@param bIsDisabled boolean
 ABP_CursedGround_C['[FX] Cooldown'] = function(bIsDisabled) end
 ABP_CursedGround_C['[FX] Souls'] = function() end
+function ABP_CursedGround_C:BP_IsBeingPlacedChanged() end
+function ABP_CursedGround_C:BP_IsSoldChanged() end
 ---@param EntryPoint int32
 function ABP_CursedGround_C:ExecuteUbergraph_BP_CursedGround(EntryPoint) end
 

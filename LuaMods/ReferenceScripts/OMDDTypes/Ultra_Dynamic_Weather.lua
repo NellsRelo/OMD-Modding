@@ -153,7 +153,7 @@
 ---@field ['Fog Particle Camera Offset'] double
 ---@field ['Wind Directional Source Intensity Scale'] double
 ---@field ['Obscured Lightning Scale'] double
----@field ['Lightning Flash Max Angle from Forward'] double
+---@field ['Lightning Flash Max Angle From Forward'] double
 ---@field ['Show Lightning Flashes In Level Editor'] boolean
 ---@field ['Daytime Lightning Flash Intensity'] double
 ---@field ['Nighttime Lightning Flash Intensity'] double
@@ -193,7 +193,7 @@
 ---@field ['Puddle Coverage'] double
 ---@field ['Puddles Z Normal Cutoff'] double
 ---@field ['Puddles Z Normal Falloff'] double
----@field ['Base Wetness When Raining'] double
+---@field ['Base Wetness when Raining'] double
 ---@field ['Base Wetness when Clear'] double
 ---@field ['Puddle Sharpness'] double
 ---@field ['Variation Clouds Scale'] double
@@ -224,13 +224,13 @@
 ---@field ['DLWE Recenter Offset'] FVector
 ---@field ['Cloud Reference Array'] TArray<FVector2D>
 ---@field ['DLWE Interactions Buffer'] TArray<FVector4>
----@field ['Use Occlusion to Attenuate Sounds in Interiors'] boolean
+---@field ['Use Occlusion To Attenuate Sounds In Interiors'] boolean
 ---@field ['Max Attenuation'] double
 ---@field ['Min LPF Frequency'] double
 ---@field ['Occlusion Settings'] UUDS_OcclusionSettings_C
 ---@field ['Enable Post Process Wind Fog'] boolean
 ---@field ['PPWF Intensity from Fog'] double
----@field ['PPWF Intensity from Rain'] double
+---@field ['PPWF Intensity From Rain'] double
 ---@field ['PPWF Intensity From Snow'] double
 ---@field ['PPWF Intensity from Dust'] double
 ---@field ['PPWF Intensity Scale'] double
@@ -262,7 +262,7 @@
 ---@field ['Camera Facing Rain Bias'] double
 ---@field ['Droplet Tiling'] double
 ---@field ['Blur Radius'] double
----@field ['Wet Screen When Emerging from Water'] boolean
+---@field ['Wet Screen when Emerging From Water'] boolean
 ---@field ['Screen Droplets Clear Speed'] double
 ---@field ['Show Screen Droplets in Editor'] boolean
 ---@field ['Screen Droplets MID'] UMaterialInstanceDynamic
@@ -308,7 +308,7 @@
 ---@field ['Max Rainbow Strength'] double
 ---@field ['Strength From Rain'] double
 ---@field ['Strength From Fog'] double
----@field ['Strength In Any Weather'] double
+---@field ['Strength in any Weather'] double
 ---@field ['Time to Last After Rain/Fog'] double
 ---@field ['Mask Rainbow Above Clouds'] double
 ---@field ['Mask Rainbow Below Water'] double
@@ -348,7 +348,7 @@
 ---@field ['Rainbow Material 2D'] TSoftObjectPtr<UMaterialInterface>
 ---@field ['Rainbow Material Volumetric'] TSoftObjectPtr<UMaterialInterface>
 ---@field ['Weather Particle Motion Stretch'] double
----@field ['Particle Sprite Motion Blur With Camera Movement'] double
+---@field ['Particle Sprite Motion Blur with Camera Movement'] double
 ---@field ['Previous Temperature Scale'] uint8
 ---@field ['Apply Changes Above Volumetric Cloud Layer'] boolean
 ---@field ['Rain Multiplier Above Clouds'] double
@@ -435,9 +435,9 @@
 ---@field ['Tick Behavior Active'] boolean
 ---@field ['Editor Camera Position'] FVector
 ---@field ['Run Context'] UDS_RunContext::Type
----@field ['Sharing Occlusion with UDS'] boolean
+---@field ['Sharing Occlusion With UDS'] boolean
 ---@field ['Weather Occlusion State'] UUDS_OcclusionState_C
----@field ['Time Of Last Sound Effects Cache'] double
+---@field ['Time of Last Sound Effects Cache'] double
 ---@field ['Last Editor Tick Periodic Update'] double
 ---@field ['Last Editor Tick Sound Occlusion Update'] double
 ---@field ['Last Editor Tick Time'] double

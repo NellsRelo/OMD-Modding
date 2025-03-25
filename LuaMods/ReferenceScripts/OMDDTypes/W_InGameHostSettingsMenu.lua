@@ -2,8 +2,12 @@
 
 ---@class UW_InGameHostSettingsMenu_C : URSTActivatableWidget
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field OnHide_NoBG UWidgetAnimation
+---@field OnShow_NoBG UWidgetAnimation
+---@field OnHide UWidgetAnimation
+---@field OnShow UWidgetAnimation
 ---@field Back UW_ButtonBasic_C
----@field bg UImage
+---@field BG UImage
 ---@field Box_bg UImage
 ---@field CheckBox UCheckBox
 ---@field DisableCrossplay UW_ButtonBasic_C
@@ -13,6 +17,12 @@
 ---@field CrossplayModal URSTModal_OneChoice
 UW_InGameHostSettingsMenu_C = {}
 
+---@param bStackActive boolean
+---@return UWidgetAnimation
+function UW_InGameHostSettingsMenu_C:BP_GetOnHideAnimation(bStackActive) end
+---@param bStackActive boolean
+---@return UWidgetAnimation
+function UW_InGameHostSettingsMenu_C:BP_GetOnShowAnimation(bStackActive) end
 ---@param Index boolean
 ---@return FText
 UW_InGameHostSettingsMenu_C['Get Crossplay Text'] = function(Index) end
@@ -23,8 +33,6 @@ function UW_InGameHostSettingsMenu_C:SetSessionVisibility(NewSessionVisibility) 
 function UW_InGameHostSettingsMenu_C:GetSessionVisibilityString(SessionVisbility, SessionVisibilityText) end
 ---@param NewParam boolean
 function UW_InGameHostSettingsMenu_C:HasCrossplatformPlayers(NewParam) end
----@return boolean
-function UW_InGameHostSettingsMenu_C:BP_OnHandleBackAction() end
 ---@return UWidget
 function UW_InGameHostSettingsMenu_C:BP_GetDesiredFocusTarget() end
 function UW_InGameHostSettingsMenu_C:Construct() end

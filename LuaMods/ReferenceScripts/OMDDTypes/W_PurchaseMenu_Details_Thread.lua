@@ -15,6 +15,7 @@
 ---@field bShowMilestoneDisplay boolean
 UW_PurchaseMenu_Details_Thread_C = {}
 
+UW_PurchaseMenu_Details_Thread_C['Init Thread Bounds'] = function() end
 UW_PurchaseMenu_Details_Thread_C['Init Display'] = function() end
 ---@param Thread URSTMetaThreadDefinition
 UW_PurchaseMenu_Details_Thread_C['Init Cost Display'] = function(Thread) end

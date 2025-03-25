@@ -12,6 +12,10 @@
 ---@field ['AOE Collision Profile'] FCollisionProfileName
 ABP_Projectile_Orc_Archer_TNT_C = {}
 
+---@param Source UAbilitySystemComponent
+---@param Target AActor
+---@return boolean
+function ABP_Projectile_Orc_Archer_TNT_C:BP_Projectile_Orc_Archer_TNT_CanDamage(Source, Target) end
 function ABP_Projectile_Orc_Archer_TNT_C:DoAOEDamage() end
 ---@param MyComp UPrimitiveComponent
 ---@param Other AActor

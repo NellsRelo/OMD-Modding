@@ -18,7 +18,7 @@ UW_HeroSkin_Button_C['Get Tags'] = function(PawnTag, SkinTag) end
 UW_HeroSkin_Button_C['Get Locked Text'] = function(Text) end
 ---@param bLocked boolean
 UW_HeroSkin_Button_C['Is Skin Locked'] = function(bLocked) end
----@param Output UTexture2D
+---@param Output TSoftObjectPtr<UTexture2D>
 UW_HeroSkin_Button_C['Get Preview Image'] = function(Output) end
 ---@param ProxyObject UAsyncAction_ListenForGameplayMessage
 ---@param ActualChannel FGameplayTag

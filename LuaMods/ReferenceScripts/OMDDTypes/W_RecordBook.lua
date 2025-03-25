@@ -2,6 +2,8 @@
 
 ---@class UW_RecordBook_C : URSTActivatableWidget
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field OnHide UWidgetAnimation
+---@field OnShow UWidgetAnimation
 ---@field SafeZone_0 USafeZone
 ---@field SafeZone_1 USafeZone
 ---@field W_ExitMenuButton UW_ExitMenuButton_C
@@ -10,6 +12,12 @@
 ---@field NPC TSoftObjectPtr<ABP_NPCInteractable_C>
 UW_RecordBook_C = {}
 
+---@param bStackActive boolean
+---@return UWidgetAnimation
+function UW_RecordBook_C:BP_GetOnHideAnimation(bStackActive) end
+---@param bStackActive boolean
+---@return UWidgetAnimation
+function UW_RecordBook_C:BP_GetOnShowAnimation(bStackActive) end
 ---@return UWidget
 function UW_RecordBook_C:BP_GetDesiredFocusTarget() end
 ---@param NPC ABP_NPCInteractable_C

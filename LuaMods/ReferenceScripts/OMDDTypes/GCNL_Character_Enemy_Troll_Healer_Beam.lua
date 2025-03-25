@@ -11,6 +11,7 @@
 ---@field TargetActor UObject
 ---@field BeamStartSocket FName
 ---@field AdjustedVector FVector
+---@field ['Beam Sound'] UAudioComponent
 AGCNL_Character_Enemy_Troll_Healer_Beam_C = {}
 
 ---@param StartPoint FVector
@@ -25,6 +26,10 @@ function AGCNL_Character_Enemy_Troll_Healer_Beam_C:OnApplication(Target, Paramet
 ---@param Parameters FGameplayCueParameters
 ---@param SpawnResults FGameplayCueNotify_SpawnResult
 function AGCNL_Character_Enemy_Troll_Healer_Beam_C:OnLoopingStart(Target, Parameters, SpawnResults) end
+---@param Target AActor
+---@param Parameters FGameplayCueParameters
+---@param SpawnResults FGameplayCueNotify_SpawnResult
+function AGCNL_Character_Enemy_Troll_Healer_Beam_C:OnRemoval(Target, Parameters, SpawnResults) end
 ---@param DeltaSeconds float
 function AGCNL_Character_Enemy_Troll_Healer_Beam_C:ReceiveTick(DeltaSeconds) end
 ---@param SpawnResults FGameplayCueNotify_SpawnResult

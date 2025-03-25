@@ -2,7 +2,6 @@
 
 ---@class ABP_BossSequencePlayer_Healer_C : ABP_BossSequencePlayer_Base_C
 ---@field UberGraphFrame FPointerToUberGraphFrame
----@field Troll_Healer_Intro USoundBase
 ABP_BossSequencePlayer_Healer_C = {}
 
 function ABP_BossSequencePlayer_Healer_C:ReceiveBeginPlay() end

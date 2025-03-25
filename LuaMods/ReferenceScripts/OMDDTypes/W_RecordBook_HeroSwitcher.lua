@@ -19,7 +19,7 @@
 UW_RecordBook_HeroSwitcher_C = {}
 
 ---@param SwitcherButton UW_RecordBook_HeroSwitcherButton_C
-UW_RecordBook_HeroSwitcher_C['On Filter Button Clicked'] = function(SwitcherButton) end
+UW_RecordBook_HeroSwitcher_C['On Filter Button CLicked'] = function(SwitcherButton) end
 UW_RecordBook_HeroSwitcher_C['Populate Buttons'] = function() end
 ---@param CursorAdjustRate double
 UW_RecordBook_HeroSwitcher_C['Get Adjust Rate'] = function(CursorAdjustRate) end

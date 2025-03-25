@@ -6,13 +6,8 @@
 ---@field AIPerception UAIPerceptionComponent
 ---@field CurrentTarget AActor
 ---@field ActivationBlockingTags FGameplayTagContainer
----@field AltCooldownCount int32
 ABP_PoisonFlower_C = {}
 
----@param InBaseDuration float
----@param ModifiedDuration float
----@return float
-function ABP_PoisonFlower_C:BP_HandleCooldownApplication(InBaseDuration, ModifiedDuration) end
 ---@param OutLocation FVector
 ---@param OutRotation FRotator
 function ABP_PoisonFlower_C:BP_GetActorEyesViewPoint(OutLocation, OutRotation) end

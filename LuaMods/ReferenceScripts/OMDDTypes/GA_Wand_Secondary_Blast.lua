@@ -13,6 +13,7 @@
 ---@field ['Line of Sight Task'] URSTAbilityTask_TraceLineOfSight
 ---@field BlastCue FGameplayTag
 ---@field ['Initial Delay'] double
+---@field ['On Fire Effects'] TArray<FRSTAdditionalGameplayEffectData>
 UGA_Wand_Secondary_Blast_C = {}
 
 ---@param Actor AActor
@@ -41,6 +42,7 @@ UGA_Wand_Secondary_Blast_C['Fire Trap'] = function(Object) end
 function UGA_Wand_Secondary_Blast_C:RequestDialogue() end
 ---@param Target AActor
 UGA_Wand_Secondary_Blast_C['Apply Damage'] = function(Target) end
+function UGA_Wand_Secondary_Blast_C:ApplySelfEffects() end
 ---@param EntryPoint int32
 function UGA_Wand_Secondary_Blast_C:ExecuteUbergraph_GA_Wand_Secondary_Blast(EntryPoint) end
 

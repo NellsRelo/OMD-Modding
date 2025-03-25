@@ -28,8 +28,6 @@ function ABP_NPCSocialMenu_C:GetActorOpacityComponent() end
 function ABP_NPCSocialMenu_C:GetOpacityControlledMeshes(OutObscureMeshes) end
 ---@return FName
 function ABP_NPCSocialMenu_C:GetHomingSocket() end
----@return FText
-function ABP_NPCSocialMenu_C:GetPingDisplayName() end
 ---@param ActorInfo FGameplayAbilityActorInfo
 function ABP_NPCSocialMenu_C:BP_OnInteract(ActorInfo) end
 function ABP_NPCSocialMenu_C:DismissOnlineFailureModal() end
