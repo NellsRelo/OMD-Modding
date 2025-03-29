@@ -111,4 +111,29 @@ local function getCurrentRunSeed()
     return -1
 end
 
+--- A constant table containing all available hero internal codes.
+--- These codes represent unique identifiers for each hero character.
+local ALL_HERO_CODES = {
+    "Character.Hero.Daggers",
+    "Character.Hero.Sniper",
+    "Character.Hero.Max",
+    "Character.Hero.Hammer",
+    "Character.Hero.Crossbow",
+    "Character.Hero.Wand",
+    "Character.Hero.Blunderbuss",
+    "Character.Hero.Gabby"
+}
+
+--- Returns a list of all hero internal codes.
+-- @return table A copy of the list of hero internal codes.
+local function getAllHeroCodes()
+    -- Return a shallow copy to prevent external modifications to the constant
+    local copy = {}
+    for i, code in ipairs(ALL_HERO_CODES) do
+        copy[i] = code
+    end
+    return copy
+end
+
+
 return Utils
