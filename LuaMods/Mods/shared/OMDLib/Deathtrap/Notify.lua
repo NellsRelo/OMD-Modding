@@ -2,12 +2,12 @@ local DTR = require("OMDLib.Deathtrap.Retrieve")
 local UEHelpers = require("UEHelpers")
 Notify = {}
 
-Notify.Send = function (messageData)
+Notify.SendByPlayer = function (messageData, playerState, sanitize)
+    sanitize = sanitize or false
     chatSubSystem = DTR.ChatSubsystem()
   
-    chatSubSystem:AddChatMessage(messageData.Message, messageData.MessageType)
+    chatSubSystem:AddPlayerChatMessage(playerState, messageData.Message, sanitize)
 end
-
 
 
 return Notify
