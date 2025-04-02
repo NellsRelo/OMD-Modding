@@ -58,7 +58,7 @@ end
 --- Function to get or create the RSTCheatManager (the OMDD specific Manager, not UE)
 --- @return RSTCheatManager
 function Retrieve.RSTCheatManager()
-  local CheatManager = Utils.findInstanceOf("RSTCheatManager")
+  local CheatManager = SharedUtils.findInstanceOf("RSTCheatManager")
 
   if CheatManager and CheatManager:IsValid() then
     return CheatManager
@@ -73,11 +73,31 @@ function Retrieve.RSTCheatManager()
 end
 
 function Retrieve.GetInventoryManagerComponent()
-  return Utils.findInstanceOf("RSTInventoryManagerComponent")
+  return SharedUtils.findInstanceOf("RSTInventoryManagerComponent")
 end
 
 function Retrieve.PlayerState()
-  return Utils.findInstanceOf("RSTPlayerState")
+  return SharedUtils.findInstanceOf("RSTPlayerState")
+end
+
+--- Retrieves the local player's `RSTPlayerState` instance.
+-- This function searches for all valid instances of `RSTPlayerState` and returns the first
+-- instance that is associated with the local player controller.
+--
+-- @return userdata The local player's `RSTPlayerState` instance, or `nil` if not found.
+local function Retrieve.LocalRSTPlayerState()
+  local RSTPlayerStates = SharedUtils.findValidInstances("RSTPlayerState")
+  if not RSTPlayerStates or #RSTPlayerStates == 0 then
+      return nil
+  end
+
+  for _, RSTPlayerState in ipairs(RSTPlayerStates) do
+      if RSTPlayerState:GetOwner().bIsLocalPlayerController then
+          return RSTPlayerState
+      end
+  end
+
+  return nil
 end
 
 function Retrieve.UIExtensions(ForceInvalidateCache)
@@ -94,7 +114,7 @@ function Retrieve.ChatHUD(ForceInvalidateCache)
 end
 
 function Retrieve.RSTSessionMissionSubsystem()
-  return Utils.findInstanceOf("RSTSessionMissionSubsystem")
+  return SharedUtils.findInstanceOf("RSTSessionMissionSubsystem")
 end
 
 return Retrieve
