@@ -51,6 +51,11 @@ Utils.findInstanceOf = function(class, showCount)
     return #instances > 0 and instances[1] or nil
 end
 
+--- Caches and retrieves a default object, optionally forcing cache invalidation.
+-- @param ObjectFullName string: The full name of the object to retrieve, used with StaticFindObject.
+-- @param VariableName string: The name of the shared variable to cache the object under.
+-- @param ForceInvalidateCache boolean: If true, the cache will be bypassed and re-fetched.
+-- @return userdata: The default object found and cached.
 function Utils.CacheDefaultObject(ObjectFullName, VariableName, ForceInvalidateCache)
   local DefaultObject
 
@@ -61,15 +66,23 @@ function Utils.CacheDefaultObject(ObjectFullName, VariableName, ForceInvalidateC
 
   DefaultObject = StaticFindObject(ObjectFullName)
   ModRef:SetSharedVariable(VariableName, DefaultObject)
-  if not DefaultObject:IsValid() then error(string.format("%s not found", ObjectFullName)) end
+
+  if not DefaultObject:IsValid() then
+    error(string.format("%s not found", ObjectFullName))
+  end
 
   return DefaultObject
 end
 
+--- Registers a single-use function hook that automatically unregisters after being triggered once.
 -- From Kyurin @ UE4SS Discord
+-- @param FunctionName string: The name of the function to hook into.
+-- @param Function function: The callback function to execute when the hook is triggered.
 function Utils.RegisterSingleUseHook(FunctionName, Function)
   local PreID = nil
   local PostID = nil
+
+  -- Register the hook, then immediately unregister it after first execution
   PreID, PostID = RegisterHook(FunctionName, function (...)
     Function(...)
     UnregisterHook(FunctionName, PreID, PostID)
