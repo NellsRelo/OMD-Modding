@@ -60,4 +60,22 @@ function Retrieve.GetPlayerCharacter()
     Utils.findInstanceOf("PlayerCharacter")
 end
 
+--- Retrieves the global Asset Registry instance.
+-- This function uses the `AssetRegistryHelpers` to obtain a reference
+-- to the `AssetRegistry` object, ensuring it is valid before returning it.
+-- 
+-- @return assetRegistry The Asset Registry object if found and valid, otherwise `nil`.
+function Retrieve.GetAssetRegistry()
+  local UAssetRegistryHelpers = StaticFindObject("/Script/AssetRegistry.Default__AssetRegistryHelpers")
+  if not UAssetRegistryHelpers or not UAssetRegistryHelpers:IsValid() then
+      return nil
+  end
+
+  local assetRegistry = UAssetRegistryHelpers:GetAssetRegistry()
+  if not assetRegistry or (type(assetRegistry) == "nil") or not assetRegistry:IsValid() then
+      return nil
+  end
+  return assetRegistry
+end
+
 return Retrieve
