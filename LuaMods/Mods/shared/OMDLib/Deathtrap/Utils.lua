@@ -86,7 +86,7 @@ end
 
 --- Checks if the game is currently in the HUB.
 -- @return boolean True if the game is in the HUB, false otherwise.
-local function isInHub()
+local function Utils.IsInHub()
     local gameState = Utils.findInstanceOf("RSTGameStateBase")
     return gameState and gameState:IsValid() and gameState.bIsHUB
 end
@@ -95,7 +95,7 @@ end
 -- The function first attempts to get the seed from `RSTSessionMissionSubsystem`, 
 -- and if not available, it falls back to `RSTGameStateBase`.
 -- @return integer The current run seed, or -1 if unavailable.
-local function getCurrentRunSeed()
+local function Utils.GetCurrentRunSeed()
     local missionSubsystem = Utils.findInstanceOf("RSTSessionMissionSubsystem")
 
     if missionSubsystem and missionSubsystem:IsValid() then
@@ -126,7 +126,7 @@ local ALL_HERO_CODES = {
 
 --- Returns a list of all hero internal codes.
 -- @return table A copy of the list of hero internal codes.
-local function getAllHeroCodes()
+local function Utils.GetAllHeroCodes()
     -- Return a shallow copy to prevent external modifications to the constant
     local copy = {}
     for i, code in ipairs(ALL_HERO_CODES) do
