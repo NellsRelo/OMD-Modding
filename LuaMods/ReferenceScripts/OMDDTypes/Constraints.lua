@@ -37,30 +37,37 @@ UConstraintsScriptingLibrary = {}
 ---@param InTickableConstraint UTickableConstraint
 ---@return boolean
 function UConstraintsScriptingLibrary:RemoveThisConstraint(InWorld, InTickableConstraint) end
+
 ---@param InWorld UWorld
 ---@param InIndex int32
 ---@return boolean
 function UConstraintsScriptingLibrary:RemoveConstraint(InWorld, InIndex) end
+
 ---@param InWorld UWorld
 ---@return UConstraintsManager
 function UConstraintsScriptingLibrary:GetManager(InWorld) end
+
 ---@param InWorld UWorld
 ---@return TArray<UTickableConstraint>
 function UConstraintsScriptingLibrary:GetConstraintsArray(InWorld) end
+
 ---@param InWorld UWorld
 ---@param InObject UObject
 ---@param InAttachmentName FName
 ---@return UTransformableHandle
 function UConstraintsScriptingLibrary:CreateTransformableHandle(InWorld, InObject, InAttachmentName) end
+
 ---@param InWorld UWorld
 ---@param InSceneComponent USceneComponent
 ---@param InSocketName FName
 ---@return UTransformableComponentHandle
 function UConstraintsScriptingLibrary:CreateTransformableComponentHandle(InWorld, InSceneComponent, InSocketName) end
+
 ---@param InWorld UWorld
 ---@param InType ETransformConstraintType
 ---@return UTickableTransformConstraint
 function UConstraintsScriptingLibrary:CreateFromType(InWorld, InType) end
+
 ---@param InWorld UWorld
 ---@param InParentHandle UTransformableHandle
 ---@param InChildHandle UTransformableHandle
@@ -68,7 +75,6 @@ function UConstraintsScriptingLibrary:CreateFromType(InWorld, InType) end
 ---@param bMaintainOffset boolean
 ---@return boolean
 function UConstraintsScriptingLibrary:AddConstraint(InWorld, InParentHandle, InChildHandle, InConstraint, bMaintainOffset) end
-
 
 ---@class UTickableConstraint : UObject
 ---@field ConstraintTick FConstraintTickFunction
@@ -133,6 +139,3 @@ UTransformableComponentHandle = {}
 ---@class UTransformableHandle : UObject
 ---@field ConstraintBindingID FMovieSceneObjectBindingID
 UTransformableHandle = {}
-
-
-

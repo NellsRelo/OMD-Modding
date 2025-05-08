@@ -10,6 +10,3 @@
 ---@field Trap_Wall1 URSTTrapGridBoxComponent
 ---@field trap_wall URSTTrapGridBoxComponent
 ABP_Warehouse_1x2x1_Wall_WoodWork_C = {}
-
-
-

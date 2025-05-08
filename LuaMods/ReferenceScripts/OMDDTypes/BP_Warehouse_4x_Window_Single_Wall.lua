@@ -9,6 +9,3 @@
 ---@field Trap_Wall4 URSTTrapGridBoxComponent
 ---@field Trap_Wall2 URSTTrapGridBoxComponent
 ABP_Warehouse_4x_Window_Single_Wall_C = {}
-
-
-

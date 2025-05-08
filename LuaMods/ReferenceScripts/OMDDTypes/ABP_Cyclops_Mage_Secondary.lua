@@ -43,8 +43,8 @@ UABP_Cyclops_Mage_Secondary_C = {}
 ---@param InPose FPoseLink
 ---@param AnimGraph FPoseLink
 function UABP_Cyclops_Mage_Secondary_C:AnimGraph(BaseBones, InPose, AnimGraph) end
+
 function UABP_Cyclops_Mage_Secondary_C:BlueprintBeginPlay() end
+
 ---@param EntryPoint int32
 function UABP_Cyclops_Mage_Secondary_C:ExecuteUbergraph_ABP_Cyclops_Mage_Secondary(EntryPoint) end
-
-

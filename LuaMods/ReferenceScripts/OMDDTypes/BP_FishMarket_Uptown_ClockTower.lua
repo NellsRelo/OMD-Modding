@@ -48,6 +48,3 @@
 ---@field TrapGrid USceneComponent
 ---@field Collision USceneComponent
 ABP_FishMarket_Uptown_ClockTower_C = {}
-
-
-

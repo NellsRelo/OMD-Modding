@@ -13,4 +13,3 @@ UDS_Weather_State_Variable = {
     NewEnumerator10 = 10,
     UDS_Weather_State_MAX = 11,
 }
-

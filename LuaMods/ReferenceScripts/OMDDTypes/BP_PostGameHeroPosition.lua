@@ -14,12 +14,14 @@
 ABP_PostGameHeroPosition_C = {}
 
 function ABP_PostGameHeroPosition_C:UserConstructionScript() end
+
 function ABP_PostGameHeroPosition_C:K2_OnPropertyChanged() end
+
 ---@param Tag FGameplayTag
 ---@param Val int32
 function ABP_PostGameHeroPosition_C:K2_SetIntValue(Tag, Val) end
+
 function ABP_PostGameHeroPosition_C:ReceiveBeginPlay() end
+
 ---@param EntryPoint int32
 function ABP_PostGameHeroPosition_C:ExecuteUbergraph_BP_PostGameHeroPosition(EntryPoint) end
-
-

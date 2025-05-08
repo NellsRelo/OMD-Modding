@@ -19,6 +19,3 @@
 ---@field TrapGrid USceneComponent
 ---@field Collision USceneComponent
 ABP_Courtyard_4x3_ElevatedDeck_B_C = {}
-
-
-

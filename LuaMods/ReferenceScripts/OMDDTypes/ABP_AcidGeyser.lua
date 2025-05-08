@@ -31,6 +31,10 @@ FAnimBlueprintGeneratedConstantData = {}
 
 
 
+---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
+FAnimBlueprintGeneratedMutableData = {}
+
+
 ---@class UABP_AcidGeyser_C : URSTAnimInstanceTrap
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance
@@ -63,7 +67,6 @@ UABP_AcidGeyser_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_AcidGeyser_C:AnimGraph(AnimGraph) end
+
 ---@param EntryPoint int32
 function UABP_AcidGeyser_C:ExecuteUbergraph_ABP_AcidGeyser(EntryPoint) end
-
-

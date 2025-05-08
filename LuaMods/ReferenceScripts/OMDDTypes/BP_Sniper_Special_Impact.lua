@@ -13,10 +13,11 @@
 ABP_Sniper_Special_Impact_C = {}
 
 function ABP_Sniper_Special_Impact_C:ReceiveBeginPlay() end
+
 ---@param DeltaSeconds float
 function ABP_Sniper_Special_Impact_C:ReceiveTick(DeltaSeconds) end
+
 function ABP_Sniper_Special_Impact_C:UpdateSize() end
+
 ---@param EntryPoint int32
 function ABP_Sniper_Special_Impact_C:ExecuteUbergraph_BP_Sniper_Special_Impact(EntryPoint) end
-
-

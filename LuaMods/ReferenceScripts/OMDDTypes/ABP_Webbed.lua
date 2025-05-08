@@ -25,11 +25,11 @@ UABP_Webbed_C = {}
 
 ---@param InPose FPoseLink
 ---@param Full_Body_Override FPoseLink
-UABP_Webbed_C['Full Body Override'] = function(InPose, Full_Body_Override) end
+UABP_Webbed_C['Full Body Override'] = function(self, InPose, Full_Body_Override) end
 ---@param AnimGraph FPoseLink
 function UABP_Webbed_C:AnimGraph(AnimGraph) end
+
 function UABP_Webbed_C:BlueprintInitializeAnimation() end
+
 ---@param EntryPoint int32
 function UABP_Webbed_C:ExecuteUbergraph_ABP_Webbed(EntryPoint) end
-
-

@@ -12,6 +12,3 @@
 ---@field Tower_Square_Stone_Castle_Courtyard_3x3_A UStaticMeshComponent
 ---@field Wall00 URSTTrapGridBoxComponent
 ABP_Planter_Base_Square_3x3_A_C = {}
-
-
-

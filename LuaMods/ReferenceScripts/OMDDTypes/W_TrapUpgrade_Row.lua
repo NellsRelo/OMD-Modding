@@ -19,22 +19,27 @@ UW_TrapUpgrade_Row_C = {}
 ---@param PreviewLevel int32
 ---@param ConfirmedLevel int32
 ---@param StarTexture UTexture2D
-UW_TrapUpgrade_Row_C['Get Star Texture'] = function(StarIndex, PreviewLevel, ConfirmedLevel, StarTexture) end
+UW_TrapUpgrade_Row_C['Get Star Texture'] = function(self, StarIndex, PreviewLevel, ConfirmedLevel, StarTexture) end
 ---@param StarIndex int32
 ---@param PreviewLevel int32
 ---@param ConfirmedLevel int32
-UW_TrapUpgrade_Row_C['Update Star Level Display'] = function(StarIndex, PreviewLevel, ConfirmedLevel) end
+UW_TrapUpgrade_Row_C['Update Star Level Display'] = function(self, StarIndex, PreviewLevel, ConfirmedLevel) end
 ---@param ProxyObject UAsyncAction_ListenForGameplayMessage
 ---@param ActualChannel FGameplayTag
 function UW_TrapUpgrade_Row_C:OnMessageReceived_098148B341C6EF56B499FE9492FA4668(ProxyObject, ActualChannel) end
+
 function UW_TrapUpgrade_Row_C:OnInitialized() end
+
 function UW_TrapUpgrade_Row_C:Construct() end
-UW_TrapUpgrade_Row_C['Update Level Display'] = function() end
+
+UW_TrapUpgrade_Row_C['Update Level Display'] = function(self,) end
 ---@param Button UCommonButtonBase
-function UW_TrapUpgrade_Row_C:BndEvt__W_TrapUpgrade_Row_Plus_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_TrapUpgrade_Row_C:BndEvt__W_TrapUpgrade_Row_Plus_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(
+    Button) end
+
 ---@param Button UCommonButtonBase
-function UW_TrapUpgrade_Row_C:BndEvt__W_TrapUpgrade_Row_Minus_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_TrapUpgrade_Row_C:BndEvt__W_TrapUpgrade_Row_Minus_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(
+    Button) end
+
 ---@param EntryPoint int32
 function UW_TrapUpgrade_Row_C:ExecuteUbergraph_W_TrapUpgrade_Row(EntryPoint) end
-
-

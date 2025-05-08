@@ -11,14 +11,18 @@ UW_Modal_AnalyticsConsent_C = {}
 
 ---@return UWidget
 function UW_Modal_AnalyticsConsent_C:BP_GetDesiredFocusTarget() end
+
 ---@param Button UCommonButtonBase
-function UW_Modal_AnalyticsConsent_C:BndEvt__W_Modal_TwoChoices_BoundActionButton_ChoiceOne_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_Modal_AnalyticsConsent_C:BndEvt__W_Modal_TwoChoices_BoundActionButton_ChoiceOne_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(
+    Button) end
+
 ---@param Button UCommonButtonBase
-function UW_Modal_AnalyticsConsent_C:BndEvt__W_Modal_TwoChoices_BoundActionButton_ChoiceTwo_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_Modal_AnalyticsConsent_C:BndEvt__W_Modal_TwoChoices_BoundActionButton_ChoiceTwo_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(
+    Button) end
+
 ---@param bConsent boolean
-UW_Modal_AnalyticsConsent_C['Set Analytics Consent'] = function(bConsent) end
+UW_Modal_AnalyticsConsent_C['Set Analytics Consent'] = function(self, bConsent) end
 function UW_Modal_AnalyticsConsent_C:Construct() end
+
 ---@param EntryPoint int32
 function UW_Modal_AnalyticsConsent_C:ExecuteUbergraph_W_Modal_AnalyticsConsent(EntryPoint) end
-
-

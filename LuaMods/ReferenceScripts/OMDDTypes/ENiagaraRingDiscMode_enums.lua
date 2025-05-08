@@ -4,4 +4,3 @@ ENiagaraRingDiscMode = {
     NewEnumerator1 = 1,
     ENiagaraRingDiscMode_MAX = 2,
 }
-

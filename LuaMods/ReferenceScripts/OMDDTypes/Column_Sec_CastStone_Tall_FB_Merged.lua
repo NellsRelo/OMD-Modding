@@ -5,6 +5,3 @@
 ---@field TrapGrid USceneComponent
 ---@field Geo USceneComponent
 AColumn_Sec_CastStone_Tall_FB_Merged_C = {}
-
-
-

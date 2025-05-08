@@ -8,5 +8,3 @@
 ABP_NPC_Alchemist_Base_C = {}
 
 function ABP_NPC_Alchemist_Base_C:UserConstructionScript() end
-
-

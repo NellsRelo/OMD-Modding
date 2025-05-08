@@ -27,6 +27,3 @@
 ---@field Wood_Beam_Barrier_600_B UStaticMeshComponent
 ---@field Geometry USceneComponent
 ABP_Wood_Platform_1x2_A_C = {}
-
-
-

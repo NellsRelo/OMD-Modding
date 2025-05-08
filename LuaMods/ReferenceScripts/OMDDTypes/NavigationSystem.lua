@@ -19,7 +19,6 @@ ANavModifierVolume = {}
 ---@param NewAreaClass TSubclassOf<UNavArea>
 function ANavModifierVolume:SetAreaClass(NewAreaClass) end
 
-
 ---@class ANavSystemConfigOverride : AActor
 ---@field NavigationSystemConfig UNavigationSystemConfig
 ---@field OverridePolicy ENavSystemOverridePolicy
@@ -169,7 +168,6 @@ ARecastNavMesh = {}
 ---@param ReplaceLinks boolean
 ---@return boolean
 function ARecastNavMesh:K2_ReplaceAreaInTileBounds(Bounds, OldArea, NewArea, ReplaceLinks) end
-
 
 ---@class FNavCollisionBox
 ---@field Offset FVector
@@ -451,7 +449,6 @@ UNavModifierComponent = {}
 ---@param NewAreaClass TSubclassOf<UNavArea>
 function UNavModifierComponent:SetAreaClass(NewAreaClass) end
 
-
 ---@class UNavRelevantComponent : UActorComponent
 ---@field bAttachToOwnersRoot boolean
 ---@field CachedNavParent UObject
@@ -459,7 +456,6 @@ UNavRelevantComponent = {}
 
 ---@param bRelevant boolean
 function UNavRelevantComponent:SetNavigationRelevancy(bRelevant) end
-
 
 ---@class UNavTestRenderingComponent : UDebugDrawComponent
 UNavTestRenderingComponent = {}
@@ -490,22 +486,28 @@ UNavigationPath = {}
 
 ---@return boolean
 function UNavigationPath:IsValid() end
+
 ---@return boolean
 function UNavigationPath:IsStringPulled() end
+
 ---@return boolean
 function UNavigationPath:IsPartial() end
+
 ---@return double
 function UNavigationPath:GetPathLength() end
+
 ---@return double
 function UNavigationPath:GetPathCost() end
+
 ---@return FString
 function UNavigationPath:GetDebugString() end
+
 ---@param DoRecalculation ENavigationOptionFlag::Type
 function UNavigationPath:EnableRecalculationOnInvalidation(DoRecalculation) end
+
 ---@param bShouldDrawDebugData boolean
 ---@param PathColor FLinearColor
 function UNavigationPath:EnableDebugDrawing(bShouldDrawDebugData, PathColor) end
-
 
 ---@class UNavigationQueryFilter : UObject
 ---@field Areas TArray<FNavigationFilterArea>
@@ -555,17 +557,23 @@ UNavigationSystemV1 = {}
 
 ---@param Invoker AActor
 function UNavigationSystemV1:UnregisterNavigationInvoker(Invoker) end
+
 ---@param MaxNumberOfJobs int32
 function UNavigationSystemV1:SetMaxSimultaneousTileGenerationJobsCount(MaxNumberOfJobs) end
+
 ---@param NewMode ENavDataGatheringModeConfig
 function UNavigationSystemV1:SetGeometryGatheringMode(NewMode) end
+
 function UNavigationSystemV1:ResetMaxSimultaneousTileGenerationJobsCount() end
+
 ---@param Invoker AActor
 ---@param TileGenerationRadius float
 ---@param TileRemovalRadius float
 function UNavigationSystemV1:RegisterNavigationInvoker(Invoker, TileGenerationRadius, TileRemovalRadius) end
+
 ---@param NavVolume ANavMeshBoundsVolume
 function UNavigationSystemV1:OnNavigationBoundsUpdated(NavVolume) end
+
 ---@param WorldContextObject UObject
 ---@param RayStart FVector
 ---@param RayEnd FVector
@@ -574,11 +582,13 @@ function UNavigationSystemV1:OnNavigationBoundsUpdated(NavVolume) end
 ---@param Querier AController
 ---@return boolean
 function UNavigationSystemV1:NavigationRaycast(WorldContextObject, RayStart, RayEnd, HitLocation, FilterClass, Querier) end
+
 ---@param Object UObject
 ---@param OldArea TSubclassOf<UNavArea>
 ---@param NewArea TSubclassOf<UNavArea>
 ---@return boolean
 function UNavigationSystemV1:K2_ReplaceAreaInOctreeData(Object, OldArea, NewArea) end
+
 ---@param WorldContextObject UObject
 ---@param Point FVector
 ---@param ProjectedLocation FVector
@@ -586,7 +596,9 @@ function UNavigationSystemV1:K2_ReplaceAreaInOctreeData(Object, OldArea, NewArea
 ---@param FilterClass TSubclassOf<UNavigationQueryFilter>
 ---@param QueryExtent FVector
 ---@return boolean
-function UNavigationSystemV1:K2_ProjectPointToNavigation(WorldContextObject, Point, ProjectedLocation, NavData, FilterClass, QueryExtent) end
+function UNavigationSystemV1:K2_ProjectPointToNavigation(WorldContextObject, Point, ProjectedLocation, NavData,
+                                                         FilterClass, QueryExtent) end
+
 ---@param WorldContextObject UObject
 ---@param Origin FVector
 ---@param RandomLocation FVector
@@ -594,7 +606,9 @@ function UNavigationSystemV1:K2_ProjectPointToNavigation(WorldContextObject, Poi
 ---@param NavData ANavigationData
 ---@param FilterClass TSubclassOf<UNavigationQueryFilter>
 ---@return boolean
-function UNavigationSystemV1:K2_GetRandomReachablePointInRadius(WorldContextObject, Origin, RandomLocation, Radius, NavData, FilterClass) end
+function UNavigationSystemV1:K2_GetRandomReachablePointInRadius(WorldContextObject, Origin, RandomLocation, Radius,
+                                                                NavData, FilterClass) end
+
 ---@param WorldContextObject UObject
 ---@param Origin FVector
 ---@param RandomLocation FVector
@@ -602,7 +616,9 @@ function UNavigationSystemV1:K2_GetRandomReachablePointInRadius(WorldContextObje
 ---@param NavData ANavigationData
 ---@param FilterClass TSubclassOf<UNavigationQueryFilter>
 ---@return boolean
-function UNavigationSystemV1:K2_GetRandomPointInNavigableRadius(WorldContextObject, Origin, RandomLocation, Radius, NavData, FilterClass) end
+function UNavigationSystemV1:K2_GetRandomPointInNavigableRadius(WorldContextObject, Origin, RandomLocation, Radius,
+                                                                NavData, FilterClass) end
+
 ---@param WorldContextObject UObject
 ---@param Origin FVector
 ---@param RandomLocation FVector
@@ -610,13 +626,17 @@ function UNavigationSystemV1:K2_GetRandomPointInNavigableRadius(WorldContextObje
 ---@param NavData ANavigationData
 ---@param FilterClass TSubclassOf<UNavigationQueryFilter>
 ---@return boolean
-function UNavigationSystemV1:K2_GetRandomLocationInNavigableRadius(WorldContextObject, Origin, RandomLocation, Radius, NavData, FilterClass) end
+function UNavigationSystemV1:K2_GetRandomLocationInNavigableRadius(WorldContextObject, Origin, RandomLocation, Radius,
+                                                                   NavData, FilterClass) end
+
 ---@param WorldContextObject UObject
 ---@return boolean
 function UNavigationSystemV1:IsNavigationBeingBuiltOrLocked(WorldContextObject) end
+
 ---@param WorldContextObject UObject
 ---@return boolean
 function UNavigationSystemV1:IsNavigationBeingBuilt(WorldContextObject) end
+
 ---@param WorldContextObject UObject
 ---@param PathStart FVector
 ---@param PathEnd FVector
@@ -625,6 +645,7 @@ function UNavigationSystemV1:IsNavigationBeingBuilt(WorldContextObject) end
 ---@param FilterClass TSubclassOf<UNavigationQueryFilter>
 ---@return ENavigationQueryResult::Type
 function UNavigationSystemV1:GetPathLength(WorldContextObject, PathStart, PathEnd, PathLength, NavData, FilterClass) end
+
 ---@param WorldContextObject UObject
 ---@param PathStart FVector
 ---@param PathEnd FVector
@@ -633,16 +654,20 @@ function UNavigationSystemV1:GetPathLength(WorldContextObject, PathStart, PathEn
 ---@param FilterClass TSubclassOf<UNavigationQueryFilter>
 ---@return ENavigationQueryResult::Type
 function UNavigationSystemV1:GetPathCost(WorldContextObject, PathStart, PathEnd, PathCost, NavData, FilterClass) end
+
 ---@param WorldContextObject UObject
 ---@return UNavigationSystemV1
 function UNavigationSystemV1:GetNavigationSystem(WorldContextObject) end
+
 ---@param WorldContextObject UObject
 ---@param PathStart FVector
 ---@param PathEnd FVector
 ---@param PathfindingContext AActor
 ---@param FilterClass TSubclassOf<UNavigationQueryFilter>
 ---@return UNavigationPath
-function UNavigationSystemV1:FindPathToLocationSynchronously(WorldContextObject, PathStart, PathEnd, PathfindingContext, FilterClass) end
+function UNavigationSystemV1:FindPathToLocationSynchronously(WorldContextObject, PathStart, PathEnd, PathfindingContext,
+                                                             FilterClass) end
+
 ---@param WorldContextObject UObject
 ---@param PathStart FVector
 ---@param GoalActor AActor
@@ -650,8 +675,8 @@ function UNavigationSystemV1:FindPathToLocationSynchronously(WorldContextObject,
 ---@param PathfindingContext AActor
 ---@param FilterClass TSubclassOf<UNavigationQueryFilter>
 ---@return UNavigationPath
-function UNavigationSystemV1:FindPathToActorSynchronously(WorldContextObject, PathStart, GoalActor, TetherDistance, PathfindingContext, FilterClass) end
-
+function UNavigationSystemV1:FindPathToActorSynchronously(WorldContextObject, PathStart, GoalActor, TetherDistance,
+                                                          PathfindingContext, FilterClass) end
 
 ---@class URecastFilter_UseDefaultArea : UNavigationQueryFilter
 URecastFilter_UseDefaultArea = {}
@@ -659,5 +684,3 @@ URecastFilter_UseDefaultArea = {}
 
 ---@class URecastNavMeshDataChunk : UNavigationDataChunk
 URecastNavMeshDataChunk = {}
-
-

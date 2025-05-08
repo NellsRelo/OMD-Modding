@@ -7,5 +7,3 @@ UGCN_Character_Max_Secondary_Blast_C = {}
 ---@param Parameters FGameplayCueParameters
 ---@param SpawnResults FGameplayCueNotify_SpawnResult
 function UGCN_Character_Max_Secondary_Blast_C:OnBurst(Target, Parameters, SpawnResults) end
-
-

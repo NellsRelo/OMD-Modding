@@ -26,7 +26,6 @@ UABP_Hero_Wand_Physics_C = {}
 ---@param InPose FPoseLink
 ---@param AnimGraph FPoseLink
 function UABP_Hero_Wand_Physics_C:AnimGraph(InPose, AnimGraph) end
+
 ---@param EntryPoint int32
 function UABP_Hero_Wand_Physics_C:ExecuteUbergraph_ABP_Hero_Wand_Physics(EntryPoint) end
-
-

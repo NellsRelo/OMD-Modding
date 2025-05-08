@@ -4,6 +4,3 @@
 ---@field StaticMesh UStaticMeshComponent
 ---@field Projectile_LP UAudioComponent
 ABP_Projectile_Sentinel_Archer_C = {}
-
-
-

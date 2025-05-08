@@ -7,6 +7,3 @@
 ---@field Hub_PlatformCurve1x3_01 UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 AHub_Platforms_RiftRoom_01_C = {}
-
-
-

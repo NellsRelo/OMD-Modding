@@ -132,14 +132,16 @@ IGizmoAxisSource = {}
 
 ---@return boolean
 function IGizmoAxisSource:HasTangentVectors() end
+
 ---@param TangentXOut FVector
 ---@param TangentYOut FVector
 function IGizmoAxisSource:GetTangentVectors(TangentXOut, TangentYOut) end
+
 ---@return FVector
 function IGizmoAxisSource:GetOrigin() end
+
 ---@return FVector
 function IGizmoAxisSource:GetDirection() end
-
 
 ---@class IGizmoClickMultiTarget : IInterface
 IGizmoClickMultiTarget = {}
@@ -147,33 +149,36 @@ IGizmoClickMultiTarget = {}
 ---@param bInteracting boolean
 ---@param InPartIdentifier uint32
 function IGizmoClickMultiTarget:UpdateInteractingState(bInteracting, InPartIdentifier) end
+
 ---@param bHovering boolean
 ---@param InPartIdentifier uint32
 function IGizmoClickMultiTarget:UpdateHoverState(bHovering, InPartIdentifier) end
+
 ---@param bHittable boolean
 ---@param InPartIdentifier uint32
 function IGizmoClickMultiTarget:UpdateHittableState(bHittable, InPartIdentifier) end
-
 
 ---@class IGizmoClickTarget : IInterface
 IGizmoClickTarget = {}
 
 ---@param bInteracting boolean
 function IGizmoClickTarget:UpdateInteractingState(bInteracting) end
+
 ---@param bHovering boolean
 function IGizmoClickTarget:UpdateHoverState(bHovering) end
-
 
 ---@class IGizmoFloatParameterSource : IInterface
 IGizmoFloatParameterSource = {}
 
 ---@param NewValue float
 function IGizmoFloatParameterSource:SetParameter(NewValue) end
+
 ---@return float
 function IGizmoFloatParameterSource:GetParameter() end
-function IGizmoFloatParameterSource:EndModify() end
-function IGizmoFloatParameterSource:BeginModify() end
 
+function IGizmoFloatParameterSource:EndModify() end
+
+function IGizmoFloatParameterSource:BeginModify() end
 
 ---@class IGizmoRenderMultiTarget : IInterface
 IGizmoRenderMultiTarget = {}
@@ -181,7 +186,6 @@ IGizmoRenderMultiTarget = {}
 ---@param bVisible boolean
 ---@param InPartIdentifier uint32
 function IGizmoRenderMultiTarget:UpdateVisibilityState(bVisible, InPartIdentifier) end
-
 
 ---@class IGizmoRenderTarget : IInterface
 IGizmoRenderTarget = {}
@@ -191,28 +195,30 @@ IGizmoRenderTarget = {}
 IGizmoStateTarget = {}
 
 function IGizmoStateTarget:EndUpdate() end
-function IGizmoStateTarget:BeginUpdate() end
 
+function IGizmoStateTarget:BeginUpdate() end
 
 ---@class IGizmoTransformSource : IInterface
 IGizmoTransformSource = {}
 
 ---@param NewTransform FTransform
 function IGizmoTransformSource:SetTransform(NewTransform) end
+
 ---@return FTransform
 function IGizmoTransformSource:GetTransform() end
-
 
 ---@class IGizmoVec2ParameterSource : IInterface
 IGizmoVec2ParameterSource = {}
 
 ---@param NewValue FVector2D
 function IGizmoVec2ParameterSource:SetParameter(NewValue) end
+
 ---@return FVector2D
 function IGizmoVec2ParameterSource:GetParameter() end
-function IGizmoVec2ParameterSource:EndModify() end
-function IGizmoVec2ParameterSource:BeginModify() end
 
+function IGizmoVec2ParameterSource:EndModify() end
+
+function IGizmoVec2ParameterSource:BeginModify() end
 
 ---@class IInputBehaviorSource : IInterface
 IInputBehaviorSource = {}
@@ -494,9 +500,9 @@ UGizmoBaseComponent = {}
 
 ---@param bWorldIn boolean
 function UGizmoBaseComponent:UpdateWorldLocalState(bWorldIn) end
+
 ---@param bHoveringIn boolean
 function UGizmoBaseComponent:UpdateHoverState(bHoveringIn) end
-
 
 ---@class UGizmoBaseFloatParameterSource : UObject
 UGizmoBaseFloatParameterSource = {}
@@ -1157,6 +1163,3 @@ UToolTargetManager = {}
 ---@field SharedTransform FTransform
 ---@field InitialSharedTransform FTransform
 UTransformProxy = {}
-
-
-

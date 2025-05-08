@@ -5,4 +5,3 @@ ENiagaraCollisionRadiusOptions = {
     NewEnumerator3 = 2,
     ENiagaraCollisionRadiusOptions_MAX = 3,
 }
-

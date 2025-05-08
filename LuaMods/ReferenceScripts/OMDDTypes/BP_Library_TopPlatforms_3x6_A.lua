@@ -17,6 +17,3 @@
 ---@field Trap_Ceiling2 URSTTrapGridBoxComponent
 ---@field Library_TopPlatforms_3x6_A_SM UStaticMeshComponent
 ABP_Library_TopPlatforms_3x6_A_C = {}
-
-
-

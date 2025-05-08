@@ -9,6 +9,3 @@
 ---@field Geometry USceneComponent
 ---@field TrapGrid USceneComponent
 ABP_Garden_Pillar_D_Merged_C = {}
-
-
-

@@ -15,6 +15,3 @@
 ---@field Proto_Dome_E_Tile_Sides UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Dome_E_Group_C = {}
-
-
-

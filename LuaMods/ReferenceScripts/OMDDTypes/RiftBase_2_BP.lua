@@ -7,6 +7,3 @@
 ---@field Metal_Final UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ARiftBase_2_BP_C = {}
-
-
-

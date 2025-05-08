@@ -39,6 +39,3 @@
 ---@field Geo USceneComponent
 ---@field RectLight2_LightComponent0 URectLightComponent
 ABP_Kitchen_Dining_Stove_C_C = {}
-
-
-

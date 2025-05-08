@@ -6,6 +6,3 @@
 ---@field SharedRoot USceneComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Banner_Garden_Tree_C = {}
-
-
-

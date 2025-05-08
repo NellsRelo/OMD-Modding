@@ -5,4 +5,3 @@ ENiagara_DirectReadSamplingMode = {
     NewEnumerator1 = 2,
     ENiagara_MAX = 3,
 }
-

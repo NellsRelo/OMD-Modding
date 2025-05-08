@@ -227,15 +227,16 @@ UMovieGraphBlueprintLibrary = {}
 ---@param OutMergedFormatArgs FMovieGraphResolveArgs
 ---@return FString
 function UMovieGraphBlueprintLibrary:ResolveFilenameFormatArguments(InFormatString, InParams, OutMergedFormatArgs) end
+
 ---@param InEvaluatedGraph UMovieGraphEvaluatedConfig
 ---@param InBranchName FName
 ---@return FIntPoint
 function UMovieGraphBlueprintLibrary:GetEffectiveOutputResolution(InEvaluatedGraph, InBranchName) end
+
 ---@param InNode UMovieGraphOutputSettingNode
 ---@param InDefaultRate FFrameRate
 ---@return FFrameRate
 function UMovieGraphBlueprintLibrary:GetEffectiveFrameRate(InNode, InDefaultRate) end
-
 
 ---@class UMovieGraphBranchNode : UMovieGraphNode
 UMovieGraphBranchNode = {}
@@ -256,7 +257,6 @@ UMovieGraphBurnInWidget = {}
 
 ---@param InGraphPipeline UMovieGraphPipeline
 function UMovieGraphBurnInWidget:UpdateForGraph(InGraphPipeline) end
-
 
 ---@class UMovieGraphCollectionNode : UMovieGraphSettingNode
 ---@field bOverride_CollectionName boolean
@@ -279,13 +279,14 @@ UMovieGraphConfig = {}
 ---@param bIncludeGlobal boolean
 ---@return TArray<UMovieGraphVariable>
 function UMovieGraphConfig:GetVariables(bIncludeGlobal) end
+
 ---@param InContext FMovieGraphTraversalContext
 ---@return UMovieGraphEvaluatedConfig
 function UMovieGraphConfig:CreateFlattenedGraph(InContext) end
+
 ---@param InCustomBaseName FName
 ---@return UMovieGraphVariable
 function UMovieGraphConfig:AddVariable(InCustomBaseName) end
-
 
 ---@class UMovieGraphDataSourceBase : UObject
 UMovieGraphDataSourceBase = {}
@@ -482,15 +483,18 @@ UMovieGraphPipeline = {}
 
 ---@param InDateTime FDateTime
 function UMovieGraphPipeline:SetInitializationTime(InDateTime) end
+
 function UMovieGraphPipeline:OnMoviePipelineFinishedImpl() end
+
 ---@param InJob UMoviePipelineExecutorJob
 ---@param InitConfig FMovieGraphInitConfig
 function UMovieGraphPipeline:Initialize(InJob, InitConfig) end
+
 ---@return FDateTime
 function UMovieGraphPipeline:GetInitializationTime() end
+
 ---@return UMoviePipelineExecutorJob
 function UMovieGraphPipeline:GetCurrentJob() end
-
 
 ---@class UMovieGraphRenderLayerNode : UMovieGraphSettingNode
 ---@field bOverride_LayerName boolean
@@ -540,9 +544,9 @@ UMovieGraphSubgraphNode = {}
 
 ---@param InSubgraphAsset TSoftObjectPtr<UMovieGraphConfig>
 function UMovieGraphSubgraphNode:SetSubGraphAsset(InSubgraphAsset) end
+
 ---@return UMovieGraphConfig
 function UMovieGraphSubgraphNode:GetSubgraphAsset() end
-
 
 ---@class UMovieGraphTimeStepBase : UObject
 UMovieGraphTimeStepBase = {}
@@ -554,97 +558,127 @@ UMovieGraphValueContainer = {}
 
 ---@param ValueTypeObject UObject
 function UMovieGraphValueContainer:SetValueTypeObject(ValueTypeObject) end
+
 ---@param ValueType EMovieGraphValueType
 function UMovieGraphValueContainer:SetValueType(ValueType) end
+
 ---@param InValue FText
 ---@return boolean
 function UMovieGraphValueContainer:SetValueText(InValue) end
+
 ---@param InValue FString
 ---@return boolean
 function UMovieGraphValueContainer:SetValueString(InValue) end
+
 ---@param NewValue FString
 ---@return boolean
 function UMovieGraphValueContainer:SetValueSerializedString(NewValue) end
+
 ---@param InValue UObject
 ---@return boolean
 function UMovieGraphValueContainer:SetValueObject(InValue) end
+
 ---@param InValue FName
 ---@return boolean
 function UMovieGraphValueContainer:SetValueName(InValue) end
+
 ---@param InValue int64
 ---@return boolean
 function UMovieGraphValueContainer:SetValueInt64(InValue) end
+
 ---@param InValue int32
 ---@return boolean
 function UMovieGraphValueContainer:SetValueInt32(InValue) end
+
 ---@param InValue float
 ---@return boolean
 function UMovieGraphValueContainer:SetValueFloat(InValue) end
+
 ---@param InValue uint8
 ---@param Enum UEnum
 ---@return boolean
 function UMovieGraphValueContainer:SetValueEnum(InValue, Enum) end
+
 ---@param InValue double
 ---@return boolean
 function UMovieGraphValueContainer:SetValueDouble(InValue) end
+
 ---@param ContainerType EMovieGraphContainerType
 function UMovieGraphValueContainer:SetValueContainerType(ContainerType) end
+
 ---@param InValue UClass
 ---@return boolean
 function UMovieGraphValueContainer:SetValueClass(InValue) end
+
 ---@param InValue uint8
 ---@return boolean
 function UMovieGraphValueContainer:SetValueByte(InValue) end
+
 ---@param bInValue boolean
 ---@return boolean
 function UMovieGraphValueContainer:SetValueBool(bInValue) end
+
 ---@return UObject
 function UMovieGraphValueContainer:GetValueTypeObject() end
+
 ---@return EMovieGraphValueType
 function UMovieGraphValueContainer:GetValueType() end
+
 ---@param OutValue FText
 ---@return boolean
 function UMovieGraphValueContainer:GetValueText(OutValue) end
+
 ---@param OutValue FString
 ---@return boolean
 function UMovieGraphValueContainer:GetValueString(OutValue) end
+
 ---@return FString
 function UMovieGraphValueContainer:GetValueSerializedString() end
+
 ---@param OutValue UObject
 ---@param RequestedClass UClass
 ---@return boolean
 function UMovieGraphValueContainer:GetValueObject(OutValue, RequestedClass) end
+
 ---@param OutValue FName
 ---@return boolean
 function UMovieGraphValueContainer:GetValueName(OutValue) end
+
 ---@param OutValue int64
 ---@return boolean
 function UMovieGraphValueContainer:GetValueInt64(OutValue) end
+
 ---@param OutValue int32
 ---@return boolean
 function UMovieGraphValueContainer:GetValueInt32(OutValue) end
+
 ---@param OutValue float
 ---@return boolean
 function UMovieGraphValueContainer:GetValueFloat(OutValue) end
+
 ---@param OutValue uint8
 ---@param RequestedEnum UEnum
 ---@return boolean
 function UMovieGraphValueContainer:GetValueEnum(OutValue, RequestedEnum) end
+
 ---@param OutValue double
 ---@return boolean
 function UMovieGraphValueContainer:GetValueDouble(OutValue) end
+
 ---@return EMovieGraphContainerType
 function UMovieGraphValueContainer:GetValueContainerType() end
+
 ---@param OutValue UClass
 ---@return boolean
 function UMovieGraphValueContainer:GetValueClass(OutValue) end
+
 ---@param OutValue uint8
 ---@return boolean
 function UMovieGraphValueContainer:GetValueByte(OutValue) end
+
 ---@param bOutValue boolean
 ---@return boolean
 function UMovieGraphValueContainer:GetValueBool(bOutValue) end
-
 
 ---@class UMovieGraphVariable : UMovieGraphMember
 ---@field bIsGlobal boolean
@@ -668,128 +702,158 @@ UMovieJobVariableAssignmentContainer = {}
 ---@param bIsEnabled boolean
 ---@return boolean
 function UMovieJobVariableAssignmentContainer:SetVariableAssignmentEnableState(InGraphVariable, bIsEnabled) end
+
 ---@param PropertyName FName
 ---@param InValue FText
 ---@return boolean
 function UMovieJobVariableAssignmentContainer:SetValueText(PropertyName, InValue) end
+
 ---@param PropertyName FName
 ---@param InValue FString
 ---@return boolean
 function UMovieJobVariableAssignmentContainer:SetValueString(PropertyName, InValue) end
+
 ---@param PropertyName FName
 ---@param NewValue FString
 ---@return boolean
 function UMovieJobVariableAssignmentContainer:SetValueSerializedString(PropertyName, NewValue) end
+
 ---@param PropertyName FName
 ---@param InValue UObject
 ---@return boolean
 function UMovieJobVariableAssignmentContainer:SetValueObject(PropertyName, InValue) end
+
 ---@param PropertyName FName
 ---@param InValue FName
 ---@return boolean
 function UMovieJobVariableAssignmentContainer:SetValueName(PropertyName, InValue) end
+
 ---@param PropertyName FName
 ---@param InValue int64
 ---@return boolean
 function UMovieJobVariableAssignmentContainer:SetValueInt64(PropertyName, InValue) end
+
 ---@param PropertyName FName
 ---@param InValue int32
 ---@return boolean
 function UMovieJobVariableAssignmentContainer:SetValueInt32(PropertyName, InValue) end
+
 ---@param PropertyName FName
 ---@param InValue float
 ---@return boolean
 function UMovieJobVariableAssignmentContainer:SetValueFloat(PropertyName, InValue) end
+
 ---@param PropertyName FName
 ---@param InValue uint8
 ---@param Enum UEnum
 ---@return boolean
 function UMovieJobVariableAssignmentContainer:SetValueEnum(PropertyName, InValue, Enum) end
+
 ---@param PropertyName FName
 ---@param InValue double
 ---@return boolean
 function UMovieJobVariableAssignmentContainer:SetValueDouble(PropertyName, InValue) end
+
 ---@param PropertyName FName
 ---@param InValue UClass
 ---@return boolean
 function UMovieJobVariableAssignmentContainer:SetValueClass(PropertyName, InValue) end
+
 ---@param PropertyName FName
 ---@param InValue uint8
 ---@return boolean
 function UMovieJobVariableAssignmentContainer:SetValueByte(PropertyName, InValue) end
+
 ---@param PropertyName FName
 ---@param bInValue boolean
 ---@return boolean
 function UMovieJobVariableAssignmentContainer:SetValueBool(PropertyName, bInValue) end
+
 ---@param InGraphConfig TSoftObjectPtr<UMovieGraphConfig>
 function UMovieJobVariableAssignmentContainer:SetGraphConfig(InGraphConfig) end
+
 ---@param InGraphVariable UMovieGraphVariable
 ---@param bOutIsEnabled boolean
 ---@return boolean
 function UMovieJobVariableAssignmentContainer:GetVariableAssignmentEnableState(InGraphVariable, bOutIsEnabled) end
+
 ---@param PropertyName FName
 ---@return UObject
 function UMovieJobVariableAssignmentContainer:GetValueTypeObject(PropertyName) end
+
 ---@param PropertyName FName
 ---@return EMovieGraphValueType
 function UMovieJobVariableAssignmentContainer:GetValueType(PropertyName) end
+
 ---@param PropertyName FName
 ---@param OutValue FText
 ---@return boolean
 function UMovieJobVariableAssignmentContainer:GetValueText(PropertyName, OutValue) end
+
 ---@param PropertyName FName
 ---@param OutValue FString
 ---@return boolean
 function UMovieJobVariableAssignmentContainer:GetValueString(PropertyName, OutValue) end
+
 ---@param PropertyName FName
 ---@return FString
 function UMovieJobVariableAssignmentContainer:GetValueSerializedString(PropertyName) end
+
 ---@param PropertyName FName
 ---@param OutValue UObject
 ---@param RequestedClass UClass
 ---@return boolean
 function UMovieJobVariableAssignmentContainer:GetValueObject(PropertyName, OutValue, RequestedClass) end
+
 ---@param PropertyName FName
 ---@param OutValue FName
 ---@return boolean
 function UMovieJobVariableAssignmentContainer:GetValueName(PropertyName, OutValue) end
+
 ---@param PropertyName FName
 ---@param OutValue int64
 ---@return boolean
 function UMovieJobVariableAssignmentContainer:GetValueInt64(PropertyName, OutValue) end
+
 ---@param PropertyName FName
 ---@param OutValue int32
 ---@return boolean
 function UMovieJobVariableAssignmentContainer:GetValueInt32(PropertyName, OutValue) end
+
 ---@param PropertyName FName
 ---@param OutValue float
 ---@return boolean
 function UMovieJobVariableAssignmentContainer:GetValueFloat(PropertyName, OutValue) end
+
 ---@param PropertyName FName
 ---@param OutValue uint8
 ---@param RequestedEnum UEnum
 ---@return boolean
 function UMovieJobVariableAssignmentContainer:GetValueEnum(PropertyName, OutValue, RequestedEnum) end
+
 ---@param PropertyName FName
 ---@param OutValue double
 ---@return boolean
 function UMovieJobVariableAssignmentContainer:GetValueDouble(PropertyName, OutValue) end
+
 ---@param PropertyName FName
 ---@return EMovieGraphContainerType
 function UMovieJobVariableAssignmentContainer:GetValueContainerType(PropertyName) end
+
 ---@param PropertyName FName
 ---@param OutValue UClass
 ---@return boolean
 function UMovieJobVariableAssignmentContainer:GetValueClass(PropertyName, OutValue) end
+
 ---@param PropertyName FName
 ---@param OutValue uint8
 ---@return boolean
 function UMovieJobVariableAssignmentContainer:GetValueByte(PropertyName, OutValue) end
+
 ---@param PropertyName FName
 ---@param bOutValue boolean
 ---@return boolean
 function UMovieJobVariableAssignmentContainer:GetValueBool(PropertyName, bOutValue) end
-
 
 ---@class UMoviePipeline : UMoviePipelineBase
 ---@field OnMoviePipelineFinishedDelegate FMoviePipelineOnMoviePipelineFinishedDelegate
@@ -807,20 +871,26 @@ UMoviePipeline = {}
 
 ---@param InDateTime FDateTime
 function UMoviePipeline:SetInitializationTime(InDateTime) end
+
 function UMoviePipeline:OnMoviePipelineFinishedImpl() end
+
 ---@param InJob UMoviePipelineExecutorJob
 function UMoviePipeline:Initialize(InJob) end
+
 ---@return UTexture
 function UMoviePipeline:GetPreviewTexture() end
+
 ---@return UMoviePipelinePrimaryConfig
 function UMoviePipeline:GetPipelinePrimaryConfig() end
+
 ---@return UMoviePipelinePrimaryConfig
 function UMoviePipeline:GetPipelineMasterConfig() end
+
 ---@return FDateTime
 function UMoviePipeline:GetInitializationTime() end
+
 ---@return UMoviePipelineExecutorJob
 function UMoviePipeline:GetCurrentJob() end
-
 
 ---@class UMoviePipelineAntiAliasingSetting : UMoviePipelineSetting
 ---@field SpatialSampleCount int32
@@ -840,13 +910,15 @@ UMoviePipelineBase = {}
 
 ---@param bIsError boolean
 function UMoviePipelineBase:Shutdown(bIsError) end
+
 ---@param bIsError boolean
 function UMoviePipelineBase:RequestShutdown(bIsError) end
+
 ---@return boolean
 function UMoviePipelineBase:IsShutdownRequested() end
+
 ---@return EMovieRenderPipelineState
 function UMoviePipelineBase:GetPipelineState() end
-
 
 ---@class UMoviePipelineBlueprintLibrary : UBlueprintFunctionLibrary
 UMoviePipelineBlueprintLibrary = {}
@@ -855,108 +927,138 @@ UMoviePipelineBlueprintLibrary = {}
 ---@param InJob UMoviePipelineExecutorJob
 ---@param bShotsChanged boolean
 function UMoviePipelineBlueprintLibrary:UpdateJobShotListFromSequence(InSequence, InJob, bShotsChanged) end
+
 ---@param InParams FMoviePipelineFilenameResolveParams
 ---@param bGetNextVersion boolean
 ---@return int32
 function UMoviePipelineBlueprintLibrary:ResolveVersionNumber(InParams, bGetNextVersion) end
+
 ---@param InFormatString FString
 ---@param InParams FMoviePipelineFilenameResolveParams
 ---@param OutFinalPath FString
 ---@param OutMergedFormatArgs FMoviePipelineFormatArgs
-function UMoviePipelineBlueprintLibrary:ResolveFilenameFormatArguments(InFormatString, InParams, OutFinalPath, OutMergedFormatArgs) end
+function UMoviePipelineBlueprintLibrary:ResolveFilenameFormatArguments(InFormatString, InParams, OutFinalPath,
+                                                                       OutMergedFormatArgs) end
+
 ---@param InManifestFilePath FString
 ---@return UMoviePipelineQueue
 function UMoviePipelineBlueprintLibrary:LoadManifestFileFromString(InManifestFilePath) end
+
 ---@param InMoviePipeline UMoviePipeline
 ---@return FTimecode
 function UMoviePipelineBlueprintLibrary:GetRootTimecode(InMoviePipeline) end
+
 ---@param InMoviePipeline UMoviePipeline
 ---@return FFrameNumber
 function UMoviePipelineBlueprintLibrary:GetRootFrameNumber(InMoviePipeline) end
+
 ---@param InPipeline UMoviePipeline
 ---@return EMovieRenderPipelineState
 function UMoviePipelineBlueprintLibrary:GetPipelineState(InPipeline) end
+
 ---@param InMoviePipeline UMoviePipeline
 ---@param OutCurrentIndex int32
 ---@param OutTotalCount int32
 function UMoviePipelineBlueprintLibrary:GetOverallSegmentCounts(InMoviePipeline, OutCurrentIndex, OutTotalCount) end
+
 ---@param InMoviePipeline UMoviePipeline
 ---@param OutCurrentIndex int32
 ---@param OutTotalCount int32
 function UMoviePipelineBlueprintLibrary:GetOverallOutputFrames(InMoviePipeline, OutCurrentIndex, OutTotalCount) end
+
 ---@param InMoviePipeline UMoviePipeline
 ---@return FText
 function UMoviePipelineBlueprintLibrary:GetMoviePipelineEngineChangelistLabel(InMoviePipeline) end
+
 ---@param InMoviePipeline UMoviePipeline
 ---@return FTimecode
 function UMoviePipelineBlueprintLibrary:GetMasterTimecode(InMoviePipeline) end
+
 ---@param InMoviePipeline UMoviePipeline
 ---@return FFrameNumber
 function UMoviePipelineBlueprintLibrary:GetMasterFrameNumber(InMoviePipeline) end
+
 ---@param InJob UMoviePipelineExecutorJob
 ---@return FString
 function UMoviePipelineBlueprintLibrary:GetMapPackageName(InJob) end
+
 ---@param InMoviePipeline UMoviePipeline
 ---@return FText
 function UMoviePipelineBlueprintLibrary:GetJobName(InMoviePipeline) end
+
 ---@param InMoviePipeline UMoviePipeline
 ---@return FDateTime
 function UMoviePipelineBlueprintLibrary:GetJobInitializationTime(InMoviePipeline) end
+
 ---@param InMoviePipeline UMoviePipeline
 ---@return FText
 function UMoviePipelineBlueprintLibrary:GetJobAuthor(InMoviePipeline) end
+
 ---@param InPipeline UMoviePipeline
 ---@param OutEstimate FTimespan
 ---@return boolean
 function UMoviePipelineBlueprintLibrary:GetEstimatedTimeRemaining(InPipeline, OutEstimate) end
+
 ---@param InPrimaryConfig UMoviePipelinePrimaryConfig
 ---@param InPipelineExecutorShot UMoviePipelineExecutorShot
 ---@return FIntPoint
 function UMoviePipelineBlueprintLibrary:GetEffectiveOutputResolution(InPrimaryConfig, InPipelineExecutorShot) end
+
 ---@param InMoviePipeline UMoviePipeline
 ---@return FTimecode
 function UMoviePipelineBlueprintLibrary:GetCurrentShotTimecode(InMoviePipeline) end
+
 ---@param InMoviePipeline UMoviePipeline
 ---@return FFrameNumber
 function UMoviePipelineBlueprintLibrary:GetCurrentShotFrameNumber(InMoviePipeline) end
+
 ---@param InMoviePipeline UMoviePipeline
 ---@return ULevelSequence
 function UMoviePipelineBlueprintLibrary:GetCurrentSequence(InMoviePipeline) end
+
 ---@param InMoviePipeline UMoviePipeline
 ---@return FMoviePipelineSegmentWorkMetrics
 function UMoviePipelineBlueprintLibrary:GetCurrentSegmentWorkMetrics(InMoviePipeline) end
+
 ---@param InMoviePipeline UMoviePipeline
 ---@return EMovieRenderShotState
 function UMoviePipelineBlueprintLibrary:GetCurrentSegmentState(InMoviePipeline) end
+
 ---@param InMoviePipeline UMoviePipeline
 ---@param OutOuterName FText
 ---@param OutInnerName FText
 function UMoviePipelineBlueprintLibrary:GetCurrentSegmentName(InMoviePipeline, OutOuterName, OutInnerName) end
+
 ---@param InMoviePipeline UMoviePipeline
 ---@return float
 function UMoviePipelineBlueprintLibrary:GetCurrentFocusDistance(InMoviePipeline) end
+
 ---@param InMoviePipeline UMoviePipeline
 ---@return float
 function UMoviePipelineBlueprintLibrary:GetCurrentFocalLength(InMoviePipeline) end
+
 ---@param InMoviePipeline UMoviePipeline
 ---@return UMoviePipelineExecutorShot
 function UMoviePipelineBlueprintLibrary:GetCurrentExecutorShot(InMoviePipeline) end
+
 ---@param InMoviePipeline UMoviePipeline
 ---@return float
 function UMoviePipelineBlueprintLibrary:GetCurrentAperture(InMoviePipeline) end
+
 ---@param InPipeline UMoviePipeline
 ---@return float
 function UMoviePipelineBlueprintLibrary:GetCompletionPercentage(InPipeline) end
+
 ---@param InSettingType TSubclassOf<UMoviePipelineSetting>
 ---@param InPrimaryConfig UMoviePipelinePrimaryConfig
 ---@param InShot UMoviePipelineExecutorShot
 ---@return UMoviePipelineSetting
 function UMoviePipelineBlueprintLibrary:FindOrGetDefaultSettingForShot(InSettingType, InPrimaryConfig, InShot) end
+
 ---@param Outer UObject
 ---@param InSequence UMovieSceneSequence
 ---@return UMovieSceneSequence
 function UMoviePipelineBlueprintLibrary:DuplicateSequence(Outer, InSequence) end
-
 
 ---@class UMoviePipelineCameraSetting : UMoviePipelineSetting
 ---@field ShutterTiming EMoviePipelineShutterTiming
@@ -973,15 +1075,17 @@ UMoviePipelineCollection = {}
 
 ---@param InName FString
 function UMoviePipelineCollection:SetCollectionName(InName) end
+
 ---@param World UWorld
 ---@param bInvertResult boolean
 ---@return TArray<AActor>
 function UMoviePipelineCollection:GetMatchingActors(World, bInvertResult) end
+
 ---@return FString
 function UMoviePipelineCollection:GetCollectionName() end
+
 ---@param Query UMoviePipelineCollectionQuery
 function UMoviePipelineCollection:AddQuery(Query) end
-
 
 ---@class UMoviePipelineCollectionCommonQuery : UMoviePipelineCollectionQuery
 ---@field ComponentTypes TArray<TObjectPtr<UClass>>
@@ -992,16 +1096,19 @@ UMoviePipelineCollectionCommonQuery = {}
 
 ---@param InTags TArray<FName>
 function UMoviePipelineCollectionCommonQuery:SetTags(InTags) end
+
 ---@param InQueryMode EMoviePipelineCollectionCommonQueryMode
 function UMoviePipelineCollectionCommonQuery:SetQueryMode(InQueryMode) end
+
 ---@param InComponentTypes TArray<UClass>
 function UMoviePipelineCollectionCommonQuery:SetComponentTypes(InComponentTypes) end
+
 ---@param InActorNames TArray<FString>
 function UMoviePipelineCollectionCommonQuery:SetActorNames(InActorNames) end
+
 ---@param Actor AActor
 ---@return boolean
 function UMoviePipelineCollectionCommonQuery:DoesActorMatchQuery(Actor) end
-
 
 ---@class UMoviePipelineCollectionModifier : UObject
 ---@field Collections TArray<UMoviePipelineCollection>
@@ -1010,15 +1117,18 @@ UMoviePipelineCollectionModifier = {}
 
 ---@param bIsInverted boolean
 function UMoviePipelineCollectionModifier:SetIsInverted(bIsInverted) end
+
 ---@param InCollections TArray<UMoviePipelineCollection>
 function UMoviePipelineCollectionModifier:SetCollections(InCollections) end
+
 ---@return boolean
 function UMoviePipelineCollectionModifier:IsInverted() end
+
 ---@return TArray<UMoviePipelineCollection>
 function UMoviePipelineCollectionModifier:GetCollections() end
+
 ---@param Collection UMoviePipelineCollection
 function UMoviePipelineCollectionModifier:AddCollection(Collection) end
-
 
 ---@class UMoviePipelineCollectionQuery : UObject
 UMoviePipelineCollectionQuery = {}
@@ -1067,30 +1177,36 @@ UMoviePipelineConfigBase = {}
 
 ---@param InConfig UMoviePipelineConfigBase
 function UMoviePipelineConfigBase:SetConfigOrigin(InConfig) end
+
 ---@param InSetting UMoviePipelineSetting
 function UMoviePipelineConfigBase:RemoveSetting(InSetting) end
+
 ---@return TArray<UMoviePipelineSetting>
 function UMoviePipelineConfigBase:GetUserSettings() end
+
 ---@return UMoviePipelineConfigBase
 function UMoviePipelineConfigBase:GetConfigOrigin() end
+
 ---@param InClass TSubclassOf<UMoviePipelineSetting>
 ---@param bIncludeDisabledSettings boolean
 ---@param bExactMatch boolean
 ---@return TArray<UMoviePipelineSetting>
 function UMoviePipelineConfigBase:FindSettingsByClass(InClass, bIncludeDisabledSettings, bExactMatch) end
+
 ---@param InClass TSubclassOf<UMoviePipelineSetting>
 ---@param bIncludeDisabledSettings boolean
 ---@param bExactMatch boolean
 ---@return UMoviePipelineSetting
 function UMoviePipelineConfigBase:FindSettingByClass(InClass, bIncludeDisabledSettings, bExactMatch) end
+
 ---@param InClass TSubclassOf<UMoviePipelineSetting>
 ---@param bIncludeDisabledSettings boolean
 ---@param bExactMatch boolean
 ---@return UMoviePipelineSetting
 function UMoviePipelineConfigBase:FindOrAddSettingByClass(InClass, bIncludeDisabledSettings, bExactMatch) end
+
 ---@param InConfig UMoviePipelineConfigBase
 function UMoviePipelineConfigBase:CopyFrom(InConfig) end
-
 
 ---@class UMoviePipelineCustomTimeStep : UEngineCustomTimeStep
 UMoviePipelineCustomTimeStep = {}
@@ -1117,43 +1233,58 @@ UMoviePipelineExecutorBase = {}
 
 ---@param InProgress float
 function UMoviePipelineExecutorBase:SetStatusProgress(InProgress) end
+
 ---@param InStatus FString
 function UMoviePipelineExecutorBase:SetStatusMessage(InStatus) end
+
 ---@param InPipelineClass UClass
 function UMoviePipelineExecutorBase:SetMoviePipelineClass(InPipelineClass) end
+
 ---@param InMessage FString
 ---@return boolean
 function UMoviePipelineExecutorBase:SendSocketMessage(InMessage) end
+
 ---@param InURL FString
 ---@param InVerb FString
 ---@param InMessage FString
 ---@param InHeaders TMap<FString, FString>
 ---@return int32
 function UMoviePipelineExecutorBase:SendHTTPRequest(InURL, InVerb, InMessage, InHeaders) end
+
 function UMoviePipelineExecutorBase:OnExecutorFinishedImpl() end
+
 ---@param ErroredPipeline UMoviePipeline
 ---@param bFatal boolean
 ---@param ErrorReason FText
 function UMoviePipelineExecutorBase:OnExecutorErroredImpl(ErroredPipeline, bFatal, ErrorReason) end
+
 function UMoviePipelineExecutorBase:OnBeginFrame() end
+
 ---@return boolean
 function UMoviePipelineExecutorBase:IsSocketConnected() end
+
 ---@return boolean
 function UMoviePipelineExecutorBase:IsRendering() end
+
 ---@return float
 function UMoviePipelineExecutorBase:GetStatusProgress() end
+
 ---@return FString
 function UMoviePipelineExecutorBase:GetStatusMessage() end
+
 ---@param InPipelineQueue UMoviePipelineQueue
 function UMoviePipelineExecutorBase:Execute(InPipelineQueue) end
+
 function UMoviePipelineExecutorBase:DisconnectSocket() end
+
 ---@param InHostName FString
 ---@param InPort int32
 ---@return boolean
 function UMoviePipelineExecutorBase:ConnectSocket(InHostName, InPort) end
-function UMoviePipelineExecutorBase:CancelCurrentJob() end
-function UMoviePipelineExecutorBase:CancelAllJobs() end
 
+function UMoviePipelineExecutorBase:CancelCurrentJob() end
+
+function UMoviePipelineExecutorBase:CancelAllJobs() end
 
 ---@class UMoviePipelineExecutorJob : UObject
 ---@field JobName FString
@@ -1176,42 +1307,59 @@ UMoviePipelineExecutorJob = {}
 
 ---@param InProgress float
 function UMoviePipelineExecutorJob:SetStatusProgress(InProgress) end
+
 ---@param InStatus FString
 function UMoviePipelineExecutorJob:SetStatusMessage(InStatus) end
+
 ---@param InSequence FSoftObjectPath
 function UMoviePipelineExecutorJob:SetSequence(InSequence) end
+
 ---@param InPreset UMoviePipelinePrimaryConfig
 function UMoviePipelineExecutorJob:SetPresetOrigin(InPreset) end
+
 ---@param bInEnabled boolean
 function UMoviePipelineExecutorJob:SetIsEnabled(bInEnabled) end
+
 ---@param InGraphPreset UMovieGraphConfig
 function UMoviePipelineExecutorJob:SetGraphPreset(InGraphPreset) end
+
 ---@param InGraphConfig UMovieGraphConfig
 function UMoviePipelineExecutorJob:SetGraphConfig(InGraphConfig) end
+
 ---@param bInConsumed boolean
 function UMoviePipelineExecutorJob:SetConsumed(bInConsumed) end
+
 ---@param InPreset UMoviePipelinePrimaryConfig
 function UMoviePipelineExecutorJob:SetConfiguration(InPreset) end
+
 function UMoviePipelineExecutorJob:OnDuplicated() end
+
 ---@return boolean
 function UMoviePipelineExecutorJob:IsUsingGraphConfiguration() end
+
 ---@return boolean
 function UMoviePipelineExecutorJob:IsEnabled() end
+
 ---@return boolean
 function UMoviePipelineExecutorJob:IsConsumed() end
+
 ---@return float
 function UMoviePipelineExecutorJob:GetStatusProgress() end
+
 ---@return FString
 function UMoviePipelineExecutorJob:GetStatusMessage() end
+
 ---@return UMoviePipelinePrimaryConfig
 function UMoviePipelineExecutorJob:GetPresetOrigin() end
+
 ---@return UMovieGraphConfig
 function UMoviePipelineExecutorJob:GetGraphPreset() end
+
 ---@return UMovieGraphConfig
 function UMoviePipelineExecutorJob:GetGraphConfig() end
+
 ---@return UMoviePipelinePrimaryConfig
 function UMoviePipelineExecutorJob:GetConfiguration() end
-
 
 ---@class UMoviePipelineExecutorShot : UObject
 ---@field bEnabled boolean
@@ -1229,39 +1377,53 @@ UMoviePipelineExecutorShot = {}
 
 ---@return boolean
 function UMoviePipelineExecutorShot:ShouldRender() end
+
 ---@param InProgress float
 function UMoviePipelineExecutorShot:SetStatusProgress(InProgress) end
+
 ---@param InStatus FString
 function UMoviePipelineExecutorShot:SetStatusMessage(InStatus) end
+
 ---@param InPreset UMoviePipelineShotConfig
 function UMoviePipelineExecutorShot:SetShotOverridePresetOrigin(InPreset) end
+
 ---@param InPreset UMoviePipelineShotConfig
 function UMoviePipelineExecutorShot:SetShotOverrideConfiguration(InPreset) end
+
 ---@param InGraphPreset UMovieGraphConfig
 function UMoviePipelineExecutorShot:SetGraphPreset(InGraphPreset) end
+
 ---@param InGraphConfig UMovieGraphConfig
 function UMoviePipelineExecutorShot:SetGraphConfig(InGraphConfig) end
+
 ---@return boolean
 function UMoviePipelineExecutorShot:IsUsingGraphConfiguration() end
+
 ---@return float
 function UMoviePipelineExecutorShot:GetStatusProgress() end
+
 ---@return FString
 function UMoviePipelineExecutorShot:GetStatusMessage() end
+
 ---@return UMoviePipelineShotConfig
 function UMoviePipelineExecutorShot:GetShotOverridePresetOrigin() end
+
 ---@return UMoviePipelineShotConfig
 function UMoviePipelineExecutorShot:GetShotOverrideConfiguration() end
+
 ---@return UMovieGraphConfig
 function UMoviePipelineExecutorShot:GetGraphPreset() end
+
 ---@return UMovieGraphConfig
 function UMoviePipelineExecutorShot:GetGraphConfig() end
+
 ---@param InCameraIndex int32
 ---@return FString
 function UMoviePipelineExecutorShot:GetCameraName(InCameraIndex) end
+
 ---@param InConfigType TSubclassOf<UMoviePipelineShotConfig>
 ---@return UMoviePipelineShotConfig
 function UMoviePipelineExecutorShot:AllocateNewShotOverrideConfig(InConfigType) end
-
 
 ---@class UMoviePipelineFCPXMLExporter : UMoviePipelineOutputBase
 ---@field FileNameFormatOverride FString
@@ -1327,11 +1489,12 @@ UMoviePipelineLinearExecutorBase = {}
 UMoviePipelineMaterialModifier = {}
 
 function UMoviePipelineMaterialModifier:UndoModifier() end
+
 ---@param InMaterial TSoftObjectPtr<UMaterialInterface>
 function UMoviePipelineMaterialModifier:SetMaterial(InMaterial) end
+
 ---@param World UWorld
 function UMoviePipelineMaterialModifier:ApplyModifier(World) end
-
 
 ---@class UMoviePipelineOutputBase : UMoviePipelineSetting
 UMoviePipelineOutputBase = {}
@@ -1365,16 +1528,18 @@ UMoviePipelineOutputSetting = {}
 UMoviePipelinePrimaryConfig = {}
 
 function UMoviePipelinePrimaryConfig:InitializeTransientSettings() end
+
 ---@return TArray<UMoviePipelineSetting>
 function UMoviePipelinePrimaryConfig:GetTransientSettings() end
+
 ---@param InSequence ULevelSequence
 ---@return FFrameRate
 function UMoviePipelinePrimaryConfig:GetEffectiveFrameRate(InSequence) end
+
 ---@param bIncludeDisabledSettings boolean
 ---@param bIncludeTransientSettings boolean
 ---@return TArray<UMoviePipelineSetting>
 function UMoviePipelinePrimaryConfig:GetAllSettings(bIncludeDisabledSettings, bIncludeTransientSettings) end
-
 
 ---@class UMoviePipelinePythonHostExecutor : UMoviePipelineExecutorBase
 ---@field ExecutorClass TSubclassOf<UMoviePipelinePythonHostExecutor>
@@ -1384,11 +1549,12 @@ UMoviePipelinePythonHostExecutor = {}
 
 ---@param InWorld UWorld
 function UMoviePipelinePythonHostExecutor:OnMapLoad(InWorld) end
+
 ---@return UWorld
 function UMoviePipelinePythonHostExecutor:GetLastLoadedWorld() end
+
 ---@param InPipelineQueue UMoviePipelineQueue
 function UMoviePipelinePythonHostExecutor:ExecuteDelayed(InPipelineQueue) end
-
 
 ---@class UMoviePipelineQueue : UObject
 ---@field Jobs TArray<UMoviePipelineExecutorJob>
@@ -1397,25 +1563,32 @@ UMoviePipelineQueue = {}
 
 ---@param InConfig UMoviePipelineQueue
 function UMoviePipelineQueue:SetQueueOrigin(InConfig) end
+
 ---@param InJob UMoviePipelineExecutorJob
 ---@param Index int32
 function UMoviePipelineQueue:SetJobIndex(InJob, Index) end
+
 ---@return UMoviePipelineQueue
 function UMoviePipelineQueue:GetQueueOrigin() end
+
 ---@return TArray<UMoviePipelineExecutorJob>
 function UMoviePipelineQueue:GetJobs() end
+
 ---@param InJob UMoviePipelineExecutorJob
 ---@return UMoviePipelineExecutorJob
 function UMoviePipelineQueue:DuplicateJob(InJob) end
+
 ---@param InJob UMoviePipelineExecutorJob
 function UMoviePipelineQueue:DeleteJob(InJob) end
+
 function UMoviePipelineQueue:DeleteAllJobs() end
+
 ---@param InQueue UMoviePipelineQueue
 function UMoviePipelineQueue:CopyFrom(InQueue) end
+
 ---@param InJobType TSubclassOf<UMoviePipelineExecutorJob>
 ---@return UMoviePipelineExecutorJob
 function UMoviePipelineQueue:AllocateNewJob(InJobType) end
-
 
 ---@class UMoviePipelineQueueEngineSubsystem : UEngineSubsystem
 ---@field OnRenderFinished FMoviePipelineQueueEngineSubsystemOnRenderFinished
@@ -1426,23 +1599,29 @@ UMoviePipelineQueueEngineSubsystem = {}
 ---@param InProgressWidgetClass TSubclassOf<UMovieRenderDebugWidget>
 ---@param bRenderPlayerViewport boolean
 function UMoviePipelineQueueEngineSubsystem:SetConfiguration(InProgressWidgetClass, bRenderPlayerViewport) end
+
 ---@param InExecutor UMoviePipelineExecutorBase
 function UMoviePipelineQueueEngineSubsystem:RenderQueueWithExecutorInstance(InExecutor) end
+
 ---@param InExecutorType TSubclassOf<UMoviePipelineExecutorBase>
 ---@return UMoviePipelineExecutorBase
 function UMoviePipelineQueueEngineSubsystem:RenderQueueWithExecutor(InExecutorType) end
+
 ---@param InJob UMoviePipelineExecutorJob
 function UMoviePipelineQueueEngineSubsystem:RenderJob(InJob) end
+
 ---@return boolean
 function UMoviePipelineQueueEngineSubsystem:IsRendering() end
+
 ---@return UMoviePipelineQueue
 function UMoviePipelineQueueEngineSubsystem:GetQueue() end
+
 ---@return UMoviePipelineExecutorBase
 function UMoviePipelineQueueEngineSubsystem:GetActiveExecutor() end
+
 ---@param InSequence ULevelSequence
 ---@return UMoviePipelineExecutorJob
 function UMoviePipelineQueueEngineSubsystem:AllocateJob(InSequence) end
-
 
 ---@class UMoviePipelineRenderLayer : UObject
 ---@field RenderLayerName FString
@@ -1451,22 +1630,28 @@ UMoviePipelineRenderLayer = {}
 
 ---@param World UWorld
 function UMoviePipelineRenderLayer:UndoPreview(World) end
+
 ---@param NewName FString
 function UMoviePipelineRenderLayer:SetRenderLayerName(NewName) end
+
 ---@param modifier UMoviePipelineCollectionModifier
 function UMoviePipelineRenderLayer:RemoveModifier(modifier) end
+
 ---@param World UWorld
 function UMoviePipelineRenderLayer:Preview(World) end
+
 ---@return FString
 function UMoviePipelineRenderLayer:GetRenderLayerName() end
+
 ---@return TArray<UMoviePipelineCollectionModifier>
 function UMoviePipelineRenderLayer:GetModifiers() end
+
 ---@param Name FString
 ---@return UMoviePipelineCollection
 function UMoviePipelineRenderLayer:GetCollectionByName(Name) end
+
 ---@param modifier UMoviePipelineCollectionModifier
 function UMoviePipelineRenderLayer:AddModifier(modifier) end
-
 
 ---@class UMoviePipelineRenderLayerSubsystem : UWorldSubsystem
 ---@field RenderLayers TArray<UMoviePipelineRenderLayer>
@@ -1481,29 +1666,40 @@ UMoviePipelineRenderLayerSubsystem = {}
 
 ---@param RenderLayer UMoviePipelineRenderLayer
 function UMoviePipelineRenderLayerSubsystem:SetActiveRenderLayerByObj(RenderLayer) end
+
 ---@param RenderLayerName FString
 function UMoviePipelineRenderLayerSubsystem:SetActiveRenderLayerByName(RenderLayerName) end
+
 function UMoviePipelineRenderLayerSubsystem:Reset() end
+
 ---@param RenderLayerName FString
 function UMoviePipelineRenderLayerSubsystem:RemoveRenderLayer(RenderLayerName) end
+
 ---@param modifier UMoviePipelineCollectionModifier
 function UMoviePipelineRenderLayerSubsystem:PreviewModifier(modifier) end
+
 ---@param Collection UMoviePipelineCollection
 function UMoviePipelineRenderLayerSubsystem:PreviewCollection(Collection) end
+
 ---@return TArray<UMoviePipelineRenderLayer>
 function UMoviePipelineRenderLayerSubsystem:GetRenderLayers() end
+
 ---@param World UWorld
 ---@return UMoviePipelineRenderLayerSubsystem
 function UMoviePipelineRenderLayerSubsystem:GetFromWorld(World) end
+
 ---@return UMoviePipelineRenderLayer
 function UMoviePipelineRenderLayerSubsystem:GetActiveRenderLayer() end
+
 function UMoviePipelineRenderLayerSubsystem:ClearModifierPreview() end
+
 function UMoviePipelineRenderLayerSubsystem:ClearCollectionPreview() end
+
 function UMoviePipelineRenderLayerSubsystem:ClearActiveRenderLayer() end
+
 ---@param RenderLayer UMoviePipelineRenderLayer
 ---@return boolean
 function UMoviePipelineRenderLayerSubsystem:AddRenderLayer(RenderLayer) end
-
 
 ---@class UMoviePipelineRenderPass : UMoviePipelineSetting
 UMoviePipelineRenderPass = {}
@@ -1516,17 +1712,20 @@ UMoviePipelineSetting = {}
 
 ---@param bInEnabled boolean
 function UMoviePipelineSetting:SetIsEnabled(bInEnabled) end
+
 ---@return boolean
 function UMoviePipelineSetting:IsEnabled() end
+
 ---@param InOutUnrealURLParams TArray<FString>
 ---@param InOutCommandLineArgs TArray<FString>
 ---@param InOutDeviceProfileCvars TArray<FString>
 ---@param InOutExecCmds TArray<FString>
-function UMoviePipelineSetting:BuildNewProcessCommandLineArgs(InOutUnrealURLParams, InOutCommandLineArgs, InOutDeviceProfileCvars, InOutExecCmds) end
+function UMoviePipelineSetting:BuildNewProcessCommandLineArgs(InOutUnrealURLParams, InOutCommandLineArgs,
+                                                              InOutDeviceProfileCvars, InOutExecCmds) end
+
 ---@param InOutUnrealURLParams FString
 ---@param InOutCommandLineArgs FString
 function UMoviePipelineSetting:BuildNewProcessCommandLine(InOutUnrealURLParams, InOutCommandLineArgs) end
-
 
 ---@class UMoviePipelineSetting_BlueprintBase : UMoviePipelineSetting
 ---@field CategoryText FText
@@ -1537,13 +1736,15 @@ UMoviePipelineSetting_BlueprintBase = {}
 
 ---@param InPipeline UMoviePipeline
 function UMoviePipelineSetting_BlueprintBase:ReceiveTeardownForPipelineImpl(InPipeline) end
+
 ---@param InPipeline UMoviePipeline
 function UMoviePipelineSetting_BlueprintBase:ReceiveSetupForPipelineImpl(InPipeline) end
+
 ---@param InOutFormatArgs FMoviePipelineFormatArgs
 ---@return FMoviePipelineFormatArgs
 function UMoviePipelineSetting_BlueprintBase:ReceiveGetFormatArguments(InOutFormatArgs) end
-function UMoviePipelineSetting_BlueprintBase:OnEngineTickBeginFrame() end
 
+function UMoviePipelineSetting_BlueprintBase:OnEngineTickBeginFrame() end
 
 ---@class UMoviePipelineShotConfig : UMoviePipelineConfigBase
 UMoviePipelineShotConfig = {}
@@ -1563,18 +1764,18 @@ UMoviePipelineViewFamilySetting = {}
 UMoviePipelineVisibilityModifier = {}
 
 function UMoviePipelineVisibilityModifier:UndoModifier() end
+
 ---@param bInIsHidden boolean
 function UMoviePipelineVisibilityModifier:SetHidden(bInIsHidden) end
+
 ---@return boolean
 function UMoviePipelineVisibilityModifier:IsHidden() end
+
 ---@param World UWorld
 function UMoviePipelineVisibilityModifier:ApplyModifier(World) end
-
 
 ---@class UMovieRenderDebugWidget : UUserWidget
 UMovieRenderDebugWidget = {}
 
 ---@param ForPipeline UMoviePipeline
 function UMovieRenderDebugWidget:OnInitializedForPipeline(ForPipeline) end
-
-

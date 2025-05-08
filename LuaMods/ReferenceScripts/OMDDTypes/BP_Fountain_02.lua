@@ -17,6 +17,3 @@
 ---@field Metal_Trim_Straight_Deco_ UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Fountain_02_C = {}
-
-
-

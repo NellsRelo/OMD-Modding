@@ -74,5 +74,3 @@ FSimulationStageMetaData = {}
 
 ---@class UNiagaraScriptBase : UObject
 UNiagaraScriptBase = {}
-
-

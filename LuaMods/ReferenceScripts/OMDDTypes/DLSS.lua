@@ -29,6 +29,3 @@ UDLSSOverrideSettings = {}
 ---@field DLSSPerformancePreset EDLSSPreset
 ---@field DLSSUltraPerformancePreset EDLSSPreset
 UDLSSSettings = {}
-
-
-

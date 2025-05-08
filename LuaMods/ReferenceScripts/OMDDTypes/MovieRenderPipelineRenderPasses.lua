@@ -76,6 +76,3 @@ UMoviePipelineImageSequenceOutput_PNG = {}
 ---@class UMoviePipelineWaveOutput : UMoviePipelineOutputBase
 ---@field FileNameFormatOverride FString
 UMoviePipelineWaveOutput = {}
-
-
-

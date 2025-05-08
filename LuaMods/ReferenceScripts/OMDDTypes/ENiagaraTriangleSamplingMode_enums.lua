@@ -6,4 +6,3 @@ ENiagaraTriangleSamplingMode = {
     NewEnumerator8 = 3,
     ENiagaraTriangleSamplingMode_MAX = 4,
 }
-

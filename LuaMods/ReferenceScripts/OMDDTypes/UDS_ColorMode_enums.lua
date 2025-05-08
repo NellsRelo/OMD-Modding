@@ -4,4 +4,3 @@ UDS_ColorMode = {
     NewEnumerator1 = 1,
     UDS_MAX = 2,
 }
-

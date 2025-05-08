@@ -18,6 +18,7 @@
 ABP_Troll_Healer_C = {}
 
 function ABP_Troll_Healer_C:ReceiveBeginPlay() end
+
 ---@param HealthComponent URSTHealthComponent
 ---@param OldValue float
 ---@param NewValue float
@@ -26,7 +27,6 @@ function ABP_Troll_Healer_C:ReceiveBeginPlay() end
 ---@param bHasSpec boolean
 ---@param Spec FGameplayEffectSpec
 function ABP_Troll_Healer_C:OnHealthChanged(HealthComponent, OldValue, NewValue, Instigator, HitResult, bHasSpec, Spec) end
+
 ---@param EntryPoint int32
 function ABP_Troll_Healer_C:ExecuteUbergraph_BP_Troll_Healer(EntryPoint) end
-
-

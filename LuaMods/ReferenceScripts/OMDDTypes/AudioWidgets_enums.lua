@@ -5,4 +5,3 @@ EAudioRadialSliderLayout = {
     Layout_LabelBottom = 2,
     Layout_MAX = 3,
 }
-

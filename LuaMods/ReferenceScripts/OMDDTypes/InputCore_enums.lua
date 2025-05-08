@@ -58,4 +58,3 @@ ETouchType = {
     NumTypes = 6,
     ETouchType_MAX = 7,
 }
-

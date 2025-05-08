@@ -12,17 +12,20 @@ AGCNL_Character_Burning_C = {}
 ---@param Parameters FGameplayCueParameters
 ---@return boolean
 function AGCNL_Character_Burning_C:OnActive(MyTarget, Parameters) end
+
 function AGCNL_Character_Burning_C:Timeline__FinishedFunc() end
+
 function AGCNL_Character_Burning_C:Timeline__UpdateFunc() end
+
 ---@param Target AActor
 ---@param Parameters FGameplayCueParameters
 ---@param SpawnResults FGameplayCueNotify_SpawnResult
 function AGCNL_Character_Burning_C:OnLoopingStart(Target, Parameters, SpawnResults) end
+
 ---@param Target AActor
 ---@param Parameters FGameplayCueParameters
 ---@param SpawnResults FGameplayCueNotify_SpawnResult
 function AGCNL_Character_Burning_C:OnRemoval(Target, Parameters, SpawnResults) end
+
 ---@param EntryPoint int32
 function AGCNL_Character_Burning_C:ExecuteUbergraph_GCNL_Character_Burning(EntryPoint) end
-
-

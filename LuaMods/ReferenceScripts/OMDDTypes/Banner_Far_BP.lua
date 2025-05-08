@@ -6,6 +6,3 @@
 ---@field SharedRoot USceneComponent
 ---@field DefaultSceneRoot USceneComponent
 ABanner_Far_BP_C = {}
-
-
-

@@ -8,4 +8,3 @@ UDS_Weather_Mask_Brush = {
     NewEnumerator5 = 5,
     UDS_Weather_Mask_MAX = 6,
 }
-

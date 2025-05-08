@@ -8,6 +8,3 @@
 ---@field Warehouse_Shelf_600W_SM UStaticMeshComponent
 ---@field Geo USceneComponent
 ABP_Warehouse_Shelf_600W_C = {}
-
-
-

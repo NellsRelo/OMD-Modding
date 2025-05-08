@@ -34,5 +34,3 @@ AModularPlayerController = {}
 
 ---@class AModularPlayerState : APlayerState
 AModularPlayerState = {}
-
-

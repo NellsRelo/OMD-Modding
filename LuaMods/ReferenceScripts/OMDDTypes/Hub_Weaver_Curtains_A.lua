@@ -10,6 +10,3 @@
 ---@field Curtains_TiedBack UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 AHub_Weaver_Curtains_A_C = {}
-
-
-

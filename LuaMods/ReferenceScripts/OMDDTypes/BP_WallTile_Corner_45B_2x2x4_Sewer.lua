@@ -9,6 +9,3 @@
 ---@field Trap_Wall1 URSTTrapGridBoxComponent
 ---@field trap_wall URSTTrapGridBoxComponent
 ABP_WallTile_Corner_45B_2x2x4_Sewer_C = {}
-
-
-

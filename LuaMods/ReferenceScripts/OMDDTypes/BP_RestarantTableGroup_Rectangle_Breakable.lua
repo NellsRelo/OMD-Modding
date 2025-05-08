@@ -11,6 +11,3 @@
 ---@field BP_Wood_Chair_A_Breakable1 UChildActorComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_RestarantTableGroup_Rectangle_Breakable_C = {}
-
-
-

@@ -7,6 +7,3 @@
 ---@field CompressedFormatForFloatTextures ETextureImportFloatingPointFormat
 ---@field PNGInfill ETextureImportPNGInfill
 UTextureImportSettings = {}
-
-
-

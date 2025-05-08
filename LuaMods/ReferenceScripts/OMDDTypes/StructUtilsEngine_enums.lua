@@ -4,4 +4,3 @@ EStructUtilsResult = {
     NotValid = 1,
     EStructUtilsResult_MAX = 2,
 }
-

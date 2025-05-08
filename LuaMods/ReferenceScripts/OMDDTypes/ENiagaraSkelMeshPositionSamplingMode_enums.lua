@@ -5,4 +5,3 @@ ENiagaraSkelMeshPositionSamplingMode = {
     NewEnumerator2 = 2,
     ENiagaraSkelMeshPositionSamplingMode_MAX = 3,
 }
-

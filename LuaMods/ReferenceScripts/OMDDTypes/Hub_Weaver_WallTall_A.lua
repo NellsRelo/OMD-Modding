@@ -16,6 +16,3 @@
 ---@field Hub_BlackSmith_WallWindow_SM UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 AHub_Weaver_WallTall_A_C = {}
-
-
-

@@ -92,9 +92,9 @@ EControlRigInteractionType = {
 
 ---@enum EControlRigModifyBoneMode
 EControlRigModifyBoneMode = {
-    OverrideLocal = 0,
+    Override = 0,
     OverrideGlobal = 1,
-    AdditiveLocal = 2,
+    Additive = 2,
     AdditiveGlobal = 3,
     Max = 4,
 }
@@ -305,8 +305,8 @@ ERigTransformStackEntryType = {
 
 ---@enum ERigTransformType
 ERigTransformType = {
-    InitialLocal = 0,
-    CurrentLocal = 1,
+    Initial = 0,
+    Current = 1,
     InitialGlobal = 2,
     CurrentGlobal = 3,
     NumTransformTypes = 4,
@@ -328,4 +328,3 @@ ETransformSpaceMode = {
     BaseJoint = 3,
     Max = 4,
 }
-

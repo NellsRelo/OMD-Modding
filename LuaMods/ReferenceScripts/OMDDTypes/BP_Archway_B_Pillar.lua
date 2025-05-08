@@ -13,6 +13,3 @@
 ---@field Geometry USceneComponent
 ---@field TrapGrid USceneComponent
 ABP_Archway_B_Pillar_C = {}
-
-
-

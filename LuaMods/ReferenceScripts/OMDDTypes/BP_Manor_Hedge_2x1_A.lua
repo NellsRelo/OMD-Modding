@@ -9,6 +9,3 @@
 ---@field Wall002 URSTTrapGridBoxComponent
 ---@field Wall001 URSTTrapGridBoxComponent
 ABP_Manor_Hedge_2x1_A_C = {}
-
-
-

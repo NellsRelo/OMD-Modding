@@ -5,6 +5,3 @@
 ---@field TabId int32
 ---@field TabName FName
 UW_RSTOptionsTab_C = {}
-
-
-

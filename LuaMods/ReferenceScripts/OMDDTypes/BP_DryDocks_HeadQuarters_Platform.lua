@@ -13,6 +13,3 @@
 ---@field TrapGrid USceneComponent
 ---@field Collision USceneComponent
 ABP_DryDocks_HeadQuarters_Platform_C = {}
-
-
-

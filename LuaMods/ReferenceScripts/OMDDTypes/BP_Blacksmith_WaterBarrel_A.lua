@@ -7,6 +7,3 @@
 ---@field Wood_Barrel_A UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Blacksmith_WaterBarrel_A_C = {}
-
-
-

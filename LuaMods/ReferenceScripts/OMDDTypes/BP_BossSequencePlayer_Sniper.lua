@@ -5,8 +5,8 @@
 ABP_BossSequencePlayer_Sniper_C = {}
 
 function ABP_BossSequencePlayer_Sniper_C:ReceiveBeginPlay() end
+
 function ABP_BossSequencePlayer_Sniper_C:BossIntroStarted() end
+
 ---@param EntryPoint int32
 function ABP_BossSequencePlayer_Sniper_C:ExecuteUbergraph_BP_BossSequencePlayer_Sniper(EntryPoint) end
-
-

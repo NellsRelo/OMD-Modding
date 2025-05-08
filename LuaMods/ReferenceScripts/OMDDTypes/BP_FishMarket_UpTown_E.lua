@@ -92,6 +92,3 @@
 ---@field TrapGrid USceneComponent
 ---@field Collision USceneComponent
 ABP_FishMarket_UpTown_E_C = {}
-
-
-

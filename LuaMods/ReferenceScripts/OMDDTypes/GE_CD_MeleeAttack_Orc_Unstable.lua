@@ -2,5 +2,3 @@
 
 ---@class UGE_CD_MeleeAttack_Orc_Unstable_C : UGameplayEffect
 UGE_CD_MeleeAttack_Orc_Unstable_C = {}
-
-

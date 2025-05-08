@@ -9,7 +9,6 @@ UGA_Death_Elemental_Red_C = {}
 
 ---@param EventData FGameplayEventData
 function UGA_Death_Elemental_Red_C:K2_ActivateAbilityFromEvent(EventData) end
+
 ---@param EntryPoint int32
 function UGA_Death_Elemental_Red_C:ExecuteUbergraph_GA_Death_Elemental_Red(EntryPoint) end
-
-

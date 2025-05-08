@@ -45,9 +45,10 @@ UABP_Wraith_Summoner_Secondary_C = {}
 ---@param InPose_0 FPoseLink
 ---@param AnimGraph FPoseLink
 function UABP_Wraith_Summoner_Secondary_C:AnimGraph(InPose, InPose_0, AnimGraph) end
+
 function UABP_Wraith_Summoner_Secondary_C:LoseItsShit() end
+
 function UABP_Wraith_Summoner_Secondary_C:BlueprintBeginPlay() end
+
 ---@param EntryPoint int32
 function UABP_Wraith_Summoner_Secondary_C:ExecuteUbergraph_ABP_Wraith_Summoner_Secondary(EntryPoint) end
-
-

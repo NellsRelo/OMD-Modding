@@ -73,7 +73,7 @@ EMovieSceneKeyInterpolation = {
 
 ---@enum EMovieSceneObjectBindingSpace
 EMovieSceneObjectBindingSpace = {
-    Local = 0,
+    = 0,
     Root = 1,
     Unused = 2,
     EMovieSceneObjectBindingSpace_MAX = 3,

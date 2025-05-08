@@ -5,4 +5,3 @@ ENiagaraCoordinateSpace = {
     NewEnumerator2 = 2,
     ENiagaraCoordinateSpace_MAX = 3,
 }
-

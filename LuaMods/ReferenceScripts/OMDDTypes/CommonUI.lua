@@ -128,8 +128,8 @@ ICommonMappingContextMetadataInterface = {}
 ICommonPoolableWidgetInterface = {}
 
 function ICommonPoolableWidgetInterface:OnReleaseToPool() end
-function ICommonPoolableWidgetInterface:OnAcquireFromPool() end
 
+function ICommonPoolableWidgetInterface:OnAcquireFromPool() end
 
 ---@class UAnalogSlider : USlider
 ---@field OnAnalogCapture FAnalogSliderOnAnalogCapture
@@ -157,25 +157,33 @@ UCommonActionWidget = {}
 
 ---@param bInHeldStaticDisplay boolean
 function UCommonActionWidget:SetShowHeldStaticDisplay(bInHeldStaticDisplay) end
+
 ---@param NewInputActions TArray<FDataTableRowHandle>
 function UCommonActionWidget:SetInputActions(NewInputActions) end
+
 ---@param InputActionRow FDataTableRowHandle
 function UCommonActionWidget:SetInputAction(InputActionRow) end
+
 ---@param InIconRimBrush FSlateBrush
 function UCommonActionWidget:SetIconRimBrush(InIconRimBrush) end
+
 ---@param InInputAction UInputAction
 function UCommonActionWidget:SetEnhancedInputAction(InInputAction) end
+
 ---@param bUsingGamepad boolean
 function UCommonActionWidget:OnInputMethodChanged__DelegateSignature(bUsingGamepad) end
+
 ---@return boolean
 function UCommonActionWidget:IsHeldAction() end
+
 ---@return FText
 function UCommonActionWidget:GetKeyText() end
+
 ---@return FSlateBrush
 function UCommonActionWidget:GetIcon() end
+
 ---@return FText
 function UCommonActionWidget:GetDisplayText() end
-
 
 ---@class UCommonActivatableWidget : UCommonUserWidget
 ---@field bIsBackHandler boolean
@@ -202,23 +210,32 @@ UCommonActivatableWidget = {}
 ---@param OnDeactivatedVisibility ESlateVisibility
 ---@param bInAllActive boolean
 function UCommonActivatableWidget:SetBindVisibilities(OnActivatedVisibility, OnDeactivatedVisibility, bInAllActive) end
+
 ---@return boolean
 function UCommonActivatableWidget:IsActivated() end
+
 ---@return UWidget
 function UCommonActivatableWidget:GetDesiredFocusTarget() end
+
 function UCommonActivatableWidget:DeactivateWidget() end
+
 ---@return boolean
 function UCommonActivatableWidget:BP_OnHandleBackAction() end
+
 function UCommonActivatableWidget:BP_OnDeactivated() end
+
 function UCommonActivatableWidget:BP_OnActivated() end
+
 ---@return FUIInputConfig
 function UCommonActivatableWidget:BP_GetDesiredInputConfig() end
+
 ---@return UWidget
 function UCommonActivatableWidget:BP_GetDesiredFocusTarget() end
+
 ---@param ActivatableWidget UCommonActivatableWidget
 function UCommonActivatableWidget:BindVisibilityToActivation(ActivatableWidget) end
-function UCommonActivatableWidget:ActivateWidget() end
 
+function UCommonActivatableWidget:ActivateWidget() end
 
 ---@class UCommonActivatableWidgetContainerBase : UWidget
 ---@field TransitionType ECommonSwitcherTransition
@@ -231,17 +248,21 @@ UCommonActivatableWidgetContainerBase = {}
 
 ---@param Duration float
 function UCommonActivatableWidgetContainerBase:SetTransitionDuration(Duration) end
+
 ---@param WidgetToRemove UCommonActivatableWidget
 function UCommonActivatableWidgetContainerBase:RemoveWidget(WidgetToRemove) end
+
 ---@return float
 function UCommonActivatableWidgetContainerBase:GetTransitionDuration() end
+
 ---@return UCommonActivatableWidget
 function UCommonActivatableWidgetContainerBase:GetActiveWidget() end
+
 function UCommonActivatableWidgetContainerBase:ClearWidgets() end
+
 ---@param ActivatableWidgetClass TSubclassOf<UCommonActivatableWidget>
 ---@return UCommonActivatableWidget
 function UCommonActivatableWidgetContainerBase:BP_AddWidget(ActivatableWidgetClass) end
-
 
 ---@class UCommonActivatableWidgetQueue : UCommonActivatableWidgetContainerBase
 UCommonActivatableWidgetQueue = {}
@@ -266,17 +287,21 @@ UCommonAnimatedSwitcher = {}
 
 ---@param bDisableAnimation boolean
 function UCommonAnimatedSwitcher:SetDisableTransitionAnimation(bDisableAnimation) end
+
 ---@return boolean
 function UCommonAnimatedSwitcher:IsTransitionPlaying() end
+
 ---@return boolean
 function UCommonAnimatedSwitcher:IsCurrentlySwitching() end
+
 ---@return boolean
 function UCommonAnimatedSwitcher:HasWidgets() end
+
 ---@param bCanWrap boolean
 function UCommonAnimatedSwitcher:ActivatePreviousWidget(bCanWrap) end
+
 ---@param bCanWrap boolean
 function UCommonAnimatedSwitcher:ActivateNextWidget(bCanWrap) end
-
 
 ---@class UCommonBorder : UBorder
 ---@field Style TSubclassOf<UCommonBorderStyle>
@@ -287,14 +312,12 @@ UCommonBorder = {}
 ---@param InStyle TSubclassOf<UCommonBorderStyle>
 function UCommonBorder:SetStyle(InStyle) end
 
-
 ---@class UCommonBorderStyle : UObject
 ---@field Background FSlateBrush
 UCommonBorderStyle = {}
 
 ---@param Brush FSlateBrush
 function UCommonBorderStyle:GetBackgroundBrush(Brush) end
-
 
 ---@class UCommonBoundActionBar : UDynamicEntryBoxBase
 ---@field ActionButtonClass TSubclassOf<UCommonButtonBase>
@@ -305,13 +328,11 @@ UCommonBoundActionBar = {}
 ---@param bShouldOnlyDisplayOwningPlayerActions boolean
 function UCommonBoundActionBar:SetDisplayOwningPlayerActionsOnly(bShouldOnlyDisplayOwningPlayerActions) end
 
-
 ---@class UCommonBoundActionButton : UCommonButtonBase
 ---@field Text_ActionName UCommonTextBlock
 UCommonBoundActionButton = {}
 
 function UCommonBoundActionButton:OnUpdateInputAction() end
-
 
 ---@class UCommonButtonBase : UCommonUserWidget
 ---@field ClickEvent FWidgetEventField
@@ -362,146 +383,223 @@ UCommonButtonBase = {}
 
 ---@param CurrentInputType ECommonInputType
 function UCommonButtonBase:UpdateHoldData(CurrentInputType) end
+
 function UCommonButtonBase:StopDoubleClickPropagation() end
+
 ---@param InputActionRow FDataTableRowHandle
 function UCommonButtonBase:SetTriggeringInputAction(InputActionRow) end
+
 ---@param InInputAction UInputAction
 function UCommonButtonBase:SetTriggeringEnhancedInputAction(InInputAction) end
+
 ---@param InputActionRow FDataTableRowHandle
 function UCommonButtonBase:SetTriggeredInputAction(InputActionRow) end
+
 ---@param InTouchMethod EButtonTouchMethod::Type
 function UCommonButtonBase:SetTouchMethod(InTouchMethod) end
+
 ---@param InStyle TSubclassOf<UCommonButtonStyle>
 function UCommonButtonBase:SetStyle(InStyle) end
+
 ---@param bInShouldUseFallbackDefaultInputAction boolean
 function UCommonButtonBase:SetShouldUseFallbackDefaultInputAction(bInShouldUseFallbackDefaultInputAction) end
+
 ---@param bInShouldSelectUponReceivingFocus boolean
 function UCommonButtonBase:SetShouldSelectUponReceivingFocus(bInShouldSelectUponReceivingFocus) end
+
 ---@param Sound USoundBase
 function UCommonButtonBase:SetSelectedPressedSoundOverride(Sound) end
+
 ---@param bInSelected boolean
 ---@param bAllowSound boolean
 ---@param bBroadcast boolean
 function UCommonButtonBase:SetSelectedInternal(bInSelected, bAllowSound, bBroadcast) end
+
 ---@param Sound USoundBase
 function UCommonButtonBase:SetSelectedHoveredSoundOverride(Sound) end
+
 ---@param InPressMethod EButtonPressMethod::Type
 function UCommonButtonBase:SetPressMethod(InPressMethod) end
+
 ---@param Sound USoundBase
 function UCommonButtonBase:SetPressedSoundOverride(Sound) end
+
 ---@param InMinWidth int32
 ---@param InMinHeight int32
 function UCommonButtonBase:SetMinDimensions(InMinWidth, InMinHeight) end
+
 ---@param Sound USoundBase
 function UCommonButtonBase:SetLockedPressedSoundOverride(Sound) end
+
 ---@param Sound USoundBase
 function UCommonButtonBase:SetLockedHoveredSoundOverride(Sound) end
+
 ---@param bInIsToggleable boolean
 function UCommonButtonBase:SetIsToggleable(bInIsToggleable) end
+
 ---@param InSelected boolean
 ---@param bGiveClickFeedback boolean
 function UCommonButtonBase:SetIsSelected(InSelected, bGiveClickFeedback) end
+
 ---@param bInIsSelectable boolean
 function UCommonButtonBase:SetIsSelectable(bInIsSelectable) end
+
 ---@param bInIsLocked boolean
 function UCommonButtonBase:SetIsLocked(bInIsLocked) end
+
 ---@param bInIsInteractionEnabled boolean
 function UCommonButtonBase:SetIsInteractionEnabled(bInIsInteractionEnabled) end
+
 ---@param bInInteractableWhenSelected boolean
 function UCommonButtonBase:SetIsInteractableWhenSelected(bInInteractableWhenSelected) end
+
 ---@param bInIsFocusable boolean
 function UCommonButtonBase:SetIsFocusable(bInIsFocusable) end
+
 ---@param InProgressMaterialBrush FSlateBrush
 ---@param InProgressMaterialParam FName
 function UCommonButtonBase:SetInputActionProgressMaterial(InProgressMaterialBrush, InProgressMaterialParam) end
+
 ---@param Sound USoundBase
 function UCommonButtonBase:SetHoveredSoundOverride(Sound) end
+
 ---@param bInHideInputAction boolean
 function UCommonButtonBase:SetHideInputAction(bInHideInputAction) end
+
 ---@param InClickMethod EButtonClickMethod::Type
 function UCommonButtonBase:SetClickMethod(InClickMethod) end
+
 ---@param NewTriggeredAction FDataTableRowHandle
 function UCommonButtonBase:OnTriggeringInputActionChanged(NewTriggeredAction) end
+
 ---@param InInputAction UInputAction
 function UCommonButtonBase:OnTriggeringEnhancedInputActionChanged(InInputAction) end
+
 ---@param NewTriggeredAction FDataTableRowHandle
 function UCommonButtonBase:OnTriggeredInputActionChanged(NewTriggeredAction) end
+
 ---@param CurrentInputType ECommonInputType
 function UCommonButtonBase:OnInputMethodChanged(CurrentInputType) end
+
 function UCommonButtonBase:OnCurrentTextStyleChanged() end
+
 ---@param HeldPercent float
 function UCommonButtonBase:OnActionProgress(HeldPercent) end
+
 function UCommonButtonBase:OnActionComplete() end
+
 ---@param DeltaTime float
 ---@return boolean
 function UCommonButtonBase:NativeOnHoldProgressRollback(DeltaTime) end
+
 ---@param DeltaTime float
 ---@return boolean
 function UCommonButtonBase:NativeOnHoldProgress(DeltaTime) end
+
 ---@param HeldPercent float
 function UCommonButtonBase:NativeOnActionProgress(HeldPercent) end
+
 function UCommonButtonBase:NativeOnActionComplete() end
+
 ---@return boolean
 function UCommonButtonBase:IsPressed() end
+
 ---@return boolean
 function UCommonButtonBase:IsInteractionEnabled() end
+
 function UCommonButtonBase:HoldReset() end
+
 ---@param bPassThrough boolean
 function UCommonButtonBase:HandleTriggeringActionCommited(bPassThrough) end
+
 function UCommonButtonBase:HandleFocusReceived() end
+
 function UCommonButtonBase:HandleFocusLost() end
+
 function UCommonButtonBase:HandleButtonReleased() end
+
 function UCommonButtonBase:HandleButtonPressed() end
+
 function UCommonButtonBase:HandleButtonClicked() end
+
 ---@return UCommonButtonStyle
 function UCommonButtonBase:GetStyle() end
+
 ---@return UMaterialInstanceDynamic
 function UCommonButtonBase:GetSingleMaterialStyleMID() end
+
 ---@return boolean
 function UCommonButtonBase:GetShouldSelectUponReceivingFocus() end
+
 ---@return boolean
 function UCommonButtonBase:GetSelected() end
+
 ---@return boolean
 function UCommonButtonBase:GetLocked() end
+
 ---@return boolean
 function UCommonButtonBase:GetIsFocusable() end
+
 ---@param InputActionRow FDataTableRowHandle
 ---@return boolean
 function UCommonButtonBase:GetInputAction(InputActionRow) end
+
 ---@return UInputAction
 function UCommonButtonBase:GetEnhancedInputAction() end
+
 ---@return TSubclassOf<UCommonTextStyle>
 function UCommonButtonBase:GetCurrentTextStyleClass() end
+
 ---@return UCommonTextStyle
 function UCommonButtonBase:GetCurrentTextStyle() end
+
 ---@param OutCustomPadding FMargin
 function UCommonButtonBase:GetCurrentCustomPadding(OutCustomPadding) end
+
 ---@param OutButtonPadding FMargin
 function UCommonButtonBase:GetCurrentButtonPadding(OutButtonPadding) end
+
 ---@return boolean
 function UCommonButtonBase:GetConvertInputActionToHold() end
+
 ---@param DisabledReason FText
 function UCommonButtonBase:DisableButtonWithReason(DisabledReason) end
+
 function UCommonButtonBase:ClearSelection() end
+
 function UCommonButtonBase:BP_OnUnhovered() end
+
 function UCommonButtonBase:BP_OnSelected() end
+
 function UCommonButtonBase:BP_OnReleased() end
+
 function UCommonButtonBase:BP_OnPressed() end
+
 ---@param bIsLocked boolean
 function UCommonButtonBase:BP_OnLockedChanged(bIsLocked) end
+
 function UCommonButtonBase:BP_OnLockDoubleClicked() end
+
 function UCommonButtonBase:BP_OnLockClicked() end
+
 ---@param CurrentInputType ECommonInputType
 function UCommonButtonBase:BP_OnInputMethodChanged(CurrentInputType) end
-function UCommonButtonBase:BP_OnHovered() end
-function UCommonButtonBase:BP_OnFocusReceived() end
-function UCommonButtonBase:BP_OnFocusLost() end
-function UCommonButtonBase:BP_OnEnabled() end
-function UCommonButtonBase:BP_OnDoubleClicked() end
-function UCommonButtonBase:BP_OnDisabled() end
-function UCommonButtonBase:BP_OnDeselected() end
-function UCommonButtonBase:BP_OnClicked() end
 
+function UCommonButtonBase:BP_OnHovered() end
+
+function UCommonButtonBase:BP_OnFocusReceived() end
+
+function UCommonButtonBase:BP_OnFocusLost() end
+
+function UCommonButtonBase:BP_OnEnabled() end
+
+function UCommonButtonBase:BP_OnDoubleClicked() end
+
+function UCommonButtonBase:BP_OnDisabled() end
+
+function UCommonButtonBase:BP_OnDeselected() end
+
+function UCommonButtonBase:BP_OnClicked() end
 
 ---@class UCommonButtonGroupBase : UCommonWidgetGroupBase
 ---@field OnSelectedButtonBaseChanged FCommonButtonGroupBaseOnSelectedButtonBaseChanged
@@ -514,42 +612,57 @@ UCommonButtonGroupBase = {}
 
 ---@param bRequireSelection boolean
 function UCommonButtonGroupBase:SetSelectionRequired(bRequireSelection) end
+
 ---@param bAllowWrap boolean
 function UCommonButtonGroupBase:SelectPreviousButton(bAllowWrap) end
+
 ---@param bAllowWrap boolean
 function UCommonButtonGroupBase:SelectNextButton(bAllowWrap) end
+
 ---@param ButtonIndex int32
 ---@param bAllowSound boolean
 function UCommonButtonGroupBase:SelectButtonAtIndex(ButtonIndex, bAllowSound) end
+
 ---@param BaseButton UCommonButtonBase
 ---@param bIsSelected boolean
 function UCommonButtonGroupBase:OnSelectionStateChangedBase(BaseButton, bIsSelected) end
+
 ---@param BaseButton UCommonButtonBase
 function UCommonButtonGroupBase:OnHandleButtonBaseDoubleClicked(BaseButton) end
+
 ---@param BaseButton UCommonButtonBase
 function UCommonButtonGroupBase:OnHandleButtonBaseClicked(BaseButton) end
+
 ---@param BaseButton UCommonButtonBase
 function UCommonButtonGroupBase:OnButtonBaseUnhovered(BaseButton) end
+
 ---@param BaseButton UCommonButtonBase
 function UCommonButtonGroupBase:OnButtonBaseHovered(BaseButton) end
+
 ---@return boolean
 function UCommonButtonGroupBase:HasAnyButtons() end
+
 ---@return int32
 function UCommonButtonGroupBase:GetSelectedButtonIndex() end
+
 ---@return UCommonButtonBase
 function UCommonButtonGroupBase:GetSelectedButtonBase() end
+
 ---@return int32
 function UCommonButtonGroupBase:GetHoveredButtonIndex() end
+
 ---@return int32
 function UCommonButtonGroupBase:GetButtonCount() end
+
 ---@param Index int32
 ---@return UCommonButtonBase
 function UCommonButtonGroupBase:GetButtonBaseAtIndex(Index) end
+
 ---@param ButtonToFind UCommonButtonBase
 ---@return int32
 function UCommonButtonGroupBase:FindButtonIndex(ButtonToFind) end
-function UCommonButtonGroupBase:DeselectAll() end
 
+function UCommonButtonGroupBase:DeselectAll() end
 
 ---@class UCommonButtonInternalBase : UButton
 ---@field OnDoubleClicked FCommonButtonInternalBaseOnDoubleClicked
@@ -590,35 +703,48 @@ UCommonButtonStyle = {}
 
 ---@return UCommonTextStyle
 function UCommonButtonStyle:GetSelectedTextStyle() end
+
 ---@param Brush FSlateBrush
 function UCommonButtonStyle:GetSelectedPressedBrush(Brush) end
+
 ---@return UCommonTextStyle
 function UCommonButtonStyle:GetSelectedHoveredTextStyle() end
+
 ---@param Brush FSlateBrush
 function UCommonButtonStyle:GetSelectedHoveredBrush(Brush) end
+
 ---@param Brush FSlateBrush
 function UCommonButtonStyle:GetSelectedBaseBrush(Brush) end
+
 ---@return UCommonTextStyle
 function UCommonButtonStyle:GetNormalTextStyle() end
+
 ---@param Brush FSlateBrush
 function UCommonButtonStyle:GetNormalPressedBrush(Brush) end
+
 ---@return UCommonTextStyle
 function UCommonButtonStyle:GetNormalHoveredTextStyle() end
+
 ---@param Brush FSlateBrush
 function UCommonButtonStyle:GetNormalHoveredBrush(Brush) end
+
 ---@param Brush FSlateBrush
 function UCommonButtonStyle:GetNormalBaseBrush(Brush) end
+
 ---@param Brush FSlateBrush
 function UCommonButtonStyle:GetMaterialBrush(Brush) end
+
 ---@return UCommonTextStyle
 function UCommonButtonStyle:GetDisabledTextStyle() end
+
 ---@param Brush FSlateBrush
 function UCommonButtonStyle:GetDisabledBrush(Brush) end
+
 ---@param OutCustomPadding FMargin
 function UCommonButtonStyle:GetCustomPadding(OutCustomPadding) end
+
 ---@param OutButtonPadding FMargin
 function UCommonButtonStyle:GetButtonPadding(OutButtonPadding) end
-
 
 ---@class UCommonCustomNavigation : UBorder
 ---@field OnNavigationEvent FCommonCustomNavigationOnNavigationEvent
@@ -631,15 +757,17 @@ UCommonDateTimeTextBlock = {}
 
 ---@param InTimespan FTimespan
 function UCommonDateTimeTextBlock:SetTimespanValue(InTimespan) end
+
 ---@param InDateTime FDateTime
 ---@param bShowAsCountdown boolean
 ---@param InRefreshDelay float
 function UCommonDateTimeTextBlock:SetDateTimeValue(InDateTime, bShowAsCountdown, InRefreshDelay) end
+
 ---@param InCompletionText FText
 function UCommonDateTimeTextBlock:SetCountDownCompletionText(InCompletionText) end
+
 ---@return FDateTime
 function UCommonDateTimeTextBlock:GetDateTime() end
-
 
 ---@class UCommonGameViewportClient : UGameViewportClient
 UCommonGameViewportClient = {}
@@ -680,17 +808,20 @@ UCommonLazyImage = {}
 
 ---@param TextureParamName FName
 function UCommonLazyImage:SetMaterialTextureParamName(TextureParamName) end
+
 ---@param LazyTexture TSoftObjectPtr<UTexture2D>
 ---@param bMatchSize boolean
 function UCommonLazyImage:SetBrushFromLazyTexture(LazyTexture, bMatchSize) end
+
 ---@param LazyMaterial TSoftObjectPtr<UMaterialInterface>
 function UCommonLazyImage:SetBrushFromLazyMaterial(LazyMaterial) end
+
 ---@param LazyObject TSoftObjectPtr<UObject>
 ---@param bMatchTextureSize boolean
 function UCommonLazyImage:SetBrushFromLazyDisplayAsset(LazyObject, bMatchTextureSize) end
+
 ---@return boolean
 function UCommonLazyImage:IsLoading() end
-
 
 ---@class UCommonLazyWidget : UWidget
 ---@field LoadingBackgroundBrush FSlateBrush
@@ -700,18 +831,18 @@ UCommonLazyWidget = {}
 
 ---@param SoftWidget TSoftClassPtr<UUserWidget>
 function UCommonLazyWidget:SetLazyContent(SoftWidget) end
+
 ---@return boolean
 function UCommonLazyWidget:IsLoading() end
+
 ---@return UUserWidget
 function UCommonLazyWidget:GetContent() end
-
 
 ---@class UCommonListView : UListView
 UCommonListView = {}
 
 ---@param InEntrySpacing float
 function UCommonListView:SetEntrySpacing(InEntrySpacing) end
-
 
 ---@class UCommonLoadGuard : UContentWidget
 ---@field LoadingBackgroundBrush FSlateBrush
@@ -725,16 +856,19 @@ UCommonLoadGuard = {}
 
 ---@param InLoadingText FText
 function UCommonLoadGuard:SetLoadingText(InLoadingText) end
+
 ---@param bInIsLoading boolean
 function UCommonLoadGuard:SetIsLoading(bInIsLoading) end
+
 ---@param Object UObject
 function UCommonLoadGuard:OnAssetLoaded__DelegateSignature(Object) end
+
 ---@return boolean
 function UCommonLoadGuard:IsLoading() end
+
 ---@param InLazyAsset TSoftObjectPtr<UObject>
 ---@param OnAssetLoaded FBP_GuardAndLoadAssetOnAssetLoaded
 function UCommonLoadGuard:BP_GuardAndLoadAsset(InLazyAsset, OnAssetLoaded) end
-
 
 ---@class UCommonMappingContextMetadata : UDataAsset
 ---@field EnhancedInputMetadata UCommonInputMetadata
@@ -760,29 +894,37 @@ UCommonNumericTextBlock = {}
 
 ---@param InNumericType ECommonNumericType
 function UCommonNumericTextBlock:SetNumericType(InNumericType) end
+
 ---@param NewValue float
 function UCommonNumericTextBlock:SetCurrentValue(NewValue) end
+
 ---@param NumericTextBlock UCommonNumericTextBlock
 function UCommonNumericTextBlock:OnOutro__DelegateSignature(NumericTextBlock) end
+
 ---@param NumericTextBlock UCommonNumericTextBlock
 ---@param LastValue float
 ---@param NewValue float
 function UCommonNumericTextBlock:OnInterpolationUpdated__DelegateSignature(NumericTextBlock, LastValue, NewValue) end
+
 ---@param NumericTextBlock UCommonNumericTextBlock
 function UCommonNumericTextBlock:OnInterpolationStarted__DelegateSignature(NumericTextBlock) end
+
 ---@param NumericTextBlock UCommonNumericTextBlock
 ---@param HadCompleted boolean
 function UCommonNumericTextBlock:OnInterpolationEnded__DelegateSignature(NumericTextBlock, HadCompleted) end
+
 ---@return boolean
 function UCommonNumericTextBlock:IsInterpolatingNumericValue() end
+
 ---@param TargetValue float
 ---@param MaximumInterpolationDuration float
 ---@param MinimumChangeRate float
 ---@param OutroOffset float
-function UCommonNumericTextBlock:InterpolateToValue(TargetValue, MaximumInterpolationDuration, MinimumChangeRate, OutroOffset) end
+function UCommonNumericTextBlock:InterpolateToValue(TargetValue, MaximumInterpolationDuration, MinimumChangeRate,
+                                                    OutroOffset) end
+
 ---@return float
 function UCommonNumericTextBlock:GetTargetValue() end
-
 
 ---@class UCommonRichTextBlock : URichTextBlock
 ---@field InlineIconDisplayMode ERichTextInlineIconDisplayMode
@@ -798,27 +940,32 @@ UCommonRichTextBlock = {}
 ---@param bInIsScrollingEnabled boolean
 function UCommonRichTextBlock:SetScrollingEnabled(bInIsScrollingEnabled) end
 
-
 ---@class UCommonRotator : UCommonButtonBase
 ---@field OnRotated FCommonRotatorOnRotated
 ---@field MyText UCommonTextBlock
 UCommonRotator = {}
 
 function UCommonRotator:ShiftTextRight() end
+
 function UCommonRotator:ShiftTextLeft() end
+
 ---@param InValue int32
 function UCommonRotator:SetSelectedItem(InValue) end
+
 ---@param Labels TArray<FText>
 function UCommonRotator:PopulateTextLabels(Labels) end
+
 ---@return FText
 function UCommonRotator:GetSelectedText() end
+
 ---@return int32
 function UCommonRotator:GetSelectedIndex() end
+
 ---@param Count int32
 function UCommonRotator:BP_OnOptionsPopulated(Count) end
+
 ---@param Index int32
 function UCommonRotator:BP_OnOptionSelected(Index) end
-
 
 ---@class UCommonTabListWidgetBase : UCommonUserWidget
 ---@field OnTabSelected FCommonTabListWidgetBaseOnTabSelected
@@ -839,72 +986,97 @@ UCommonTabListWidgetBase = {}
 ---@param TabNameID FName
 ---@param NewVisibility ESlateVisibility
 function UCommonTabListWidgetBase:SetTabVisibility(TabNameID, NewVisibility) end
+
 ---@param TabNameID FName
 ---@param bEnable boolean
 function UCommonTabListWidgetBase:SetTabInteractionEnabled(TabNameID, bEnable) end
+
 ---@param TabNameID FName
 ---@param bEnable boolean
 function UCommonTabListWidgetBase:SetTabEnabled(TabNameID, bEnable) end
+
 ---@param bShouldListen boolean
 function UCommonTabListWidgetBase:SetListeningForInput(bShouldListen) end
+
 ---@param CommonSwitcher UCommonAnimatedSwitcher
 function UCommonTabListWidgetBase:SetLinkedSwitcher(CommonSwitcher) end
+
 ---@param TabNameID FName
 ---@param bSuppressClickFeedback boolean
 ---@return boolean
 function UCommonTabListWidgetBase:SelectTabByID(TabNameID, bSuppressClickFeedback) end
+
 ---@param TabNameID FName
 ---@return boolean
 function UCommonTabListWidgetBase:RemoveTab(TabNameID) end
+
 function UCommonTabListWidgetBase:RemoveAllTabs() end
+
 ---@param TabNameID FName
 ---@param ButtonWidgetType TSubclassOf<UCommonButtonBase>
 ---@param ContentWidget UWidget
 ---@param TabIndex int32
 ---@return boolean
 function UCommonTabListWidgetBase:RegisterTab(TabNameID, ButtonWidgetType, ContentWidget, TabIndex) end
+
 ---@param TabId FName
 function UCommonTabListWidgetBase:OnTabSelected__DelegateSignature(TabId) end
+
 function UCommonTabListWidgetBase:OnTabListRebuilt__DelegateSignature() end
+
 ---@param TabId FName
 ---@param TabButton UCommonButtonBase
 function UCommonTabListWidgetBase:OnTabButtonRemoval__DelegateSignature(TabId, TabButton) end
+
 ---@param TabId FName
 ---@param TabButton UCommonButtonBase
 function UCommonTabListWidgetBase:OnTabButtonCreation__DelegateSignature(TabId, TabButton) end
+
 ---@param TabNameID FName
 ---@param TabButton UCommonButtonBase
 function UCommonTabListWidgetBase:HandleTabRemoval(TabNameID, TabButton) end
+
 ---@param TabNameID FName
 ---@param TabButton UCommonButtonBase
 function UCommonTabListWidgetBase:HandleTabCreation(TabNameID, TabButton) end
+
 ---@param SelectedTabButton UCommonButtonBase
 ---@param ButtonIndex int32
 function UCommonTabListWidgetBase:HandleTabButtonSelected(SelectedTabButton, ButtonIndex) end
+
 ---@param bPassThrough boolean
 function UCommonTabListWidgetBase:HandlePreviousTabInputAction(bPassThrough) end
+
 function UCommonTabListWidgetBase:HandlePreLinkedSwitcherChanged_BP() end
+
 function UCommonTabListWidgetBase:HandlePostLinkedSwitcherChanged_BP() end
+
 ---@param bPassThrough boolean
 function UCommonTabListWidgetBase:HandleNextTabInputAction(bPassThrough) end
+
 ---@param Index int32
 ---@return FName
 function UCommonTabListWidgetBase:GetTabIdAtIndex(Index) end
+
 ---@return int32
 function UCommonTabListWidgetBase:GetTabCount() end
+
 ---@param TabNameID FName
 ---@return UCommonButtonBase
 function UCommonTabListWidgetBase:GetTabButtonBaseByID(TabNameID) end
+
 ---@return FName
 function UCommonTabListWidgetBase:GetSelectedTabId() end
+
 ---@return UCommonAnimatedSwitcher
 function UCommonTabListWidgetBase:GetLinkedSwitcher() end
+
 ---@return FName
 function UCommonTabListWidgetBase:GetActiveTab() end
+
 ---@param TabNameID FName
 ---@param Reason FText
 function UCommonTabListWidgetBase:DisableTabWithReason(TabNameID, Reason) end
-
 
 ---@class UCommonTextBlock : UTextBlock
 ---@field MobileFontSizeMultiplier float
@@ -917,24 +1089,32 @@ UCommonTextBlock = {}
 
 ---@param InWrapTextAt int32
 function UCommonTextBlock:SetWrapTextWidth(InWrapTextAt) end
+
 ---@param bUseAllCaps boolean
 function UCommonTextBlock:SetTextCase(bUseAllCaps) end
+
 ---@param InStyle TSubclassOf<UCommonTextStyle>
 function UCommonTextBlock:SetStyle(InStyle) end
+
 ---@param bInIsScrollingEnabled boolean
 function UCommonTextBlock:SetScrollingEnabled(bInIsScrollingEnabled) end
+
 ---@param InMobileFontSizeMultiplier float
 function UCommonTextBlock:SetMobileFontSizeMultiplier(InMobileFontSizeMultiplier) end
+
 ---@param InMargin FMargin
 function UCommonTextBlock:SetMargin(InMargin) end
+
 ---@param InLineHeightPercentage float
 function UCommonTextBlock:SetLineHeightPercentage(InLineHeightPercentage) end
+
 function UCommonTextBlock:ResetScrollState() end
+
 ---@return float
 function UCommonTextBlock:GetMobileFontSizeMultiplier() end
+
 ---@return FMargin
 function UCommonTextBlock:GetMargin() end
-
 
 ---@class UCommonTextScrollStyle : UObject
 ---@field Speed float
@@ -959,19 +1139,24 @@ UCommonTextStyle = {}
 
 ---@param OutStrikeBrush FSlateBrush
 function UCommonTextStyle:GetStrikeBrush(OutStrikeBrush) end
+
 ---@param OutShadowOffset FVector2D
 function UCommonTextStyle:GetShadowOffset(OutShadowOffset) end
+
 ---@param OutColor FLinearColor
 function UCommonTextStyle:GetShadowColor(OutColor) end
+
 ---@param OutMargin FMargin
 function UCommonTextStyle:GetMargin(OutMargin) end
+
 ---@return float
 function UCommonTextStyle:GetLineHeightPercentage() end
+
 ---@param OutFont FSlateFontInfo
 function UCommonTextStyle:GetFont(OutFont) end
+
 ---@param OutColor FLinearColor
 function UCommonTextStyle:GetColor(OutColor) end
-
 
 ---@class UCommonTileView : UTileView
 UCommonTileView = {}
@@ -1011,7 +1196,6 @@ UCommonUILibrary = {}
 ---@return UWidget
 function UCommonUILibrary:FindParentWidgetOfType(StartingWidget, Type) end
 
-
 ---@class UCommonUIRichTextData : UObject
 ---@field InlineIconSet UDataTable
 UCommonUIRichTextData = {}
@@ -1040,11 +1224,11 @@ UCommonUISubsystemBase = {}
 ---@param GamepadName FName
 ---@return FSlateBrush
 function UCommonUISubsystemBase:GetInputActionButtonIcon(InputActionRowHandle, InputType, GamepadName) end
+
 ---@param InputAction UInputAction
 ---@param LocalPlayer ULocalPlayer
 ---@return FSlateBrush
 function UCommonUISubsystemBase:GetEnhancedInputActionButtonIcon(InputAction, LocalPlayer) end
-
 
 ---@class UCommonUIVisibilitySubsystem : ULocalPlayerSubsystem
 UCommonUIVisibilitySubsystem = {}
@@ -1057,7 +1241,6 @@ UCommonUserWidget = {}
 
 ---@param bInConsumePointerInput boolean
 function UCommonUserWidget:SetConsumePointerInput(bInConsumePointerInput) end
-
 
 ---@class UCommonVideoPlayer : UWidget
 ---@field Video UMediaSource
@@ -1079,19 +1262,25 @@ UCommonVisibilitySwitcher = {}
 
 ---@param Index int32
 function UCommonVisibilitySwitcher:SetActiveWidgetIndex(Index) end
+
 ---@param Widget UWidget
 function UCommonVisibilitySwitcher:SetActiveWidget(Widget) end
+
 ---@param bAllowWrapping boolean
 function UCommonVisibilitySwitcher:IncrementActiveWidgetIndex(bAllowWrapping) end
+
 ---@return int32
 function UCommonVisibilitySwitcher:GetActiveWidgetIndex() end
+
 ---@return UWidget
 function UCommonVisibilitySwitcher:GetActiveWidget() end
+
 ---@param bAllowWrapping boolean
 function UCommonVisibilitySwitcher:DecrementActiveWidgetIndex(bAllowWrapping) end
-function UCommonVisibilitySwitcher:DeactivateVisibleSlot() end
-function UCommonVisibilitySwitcher:ActivateVisibleSlot() end
 
+function UCommonVisibilitySwitcher:DeactivateVisibleSlot() end
+
+function UCommonVisibilitySwitcher:ActivateVisibleSlot() end
 
 ---@class UCommonVisibilitySwitcherSlot : UOverlaySlot
 UCommonVisibilitySwitcherSlot = {}
@@ -1110,19 +1299,25 @@ UCommonWidgetCarousel = {}
 
 ---@param Index int32
 function UCommonWidgetCarousel:SetActiveWidgetIndex(Index) end
+
 ---@param Widget UWidget
 function UCommonWidgetCarousel:SetActiveWidget(Widget) end
+
 function UCommonWidgetCarousel:PreviousPage() end
+
 function UCommonWidgetCarousel:NextPage() end
+
 ---@param Index int32
 ---@return UWidget
 function UCommonWidgetCarousel:GetWidgetAtIndex(Index) end
+
 ---@return int32
 function UCommonWidgetCarousel:GetActiveWidgetIndex() end
+
 function UCommonWidgetCarousel:EndAutoScrolling() end
+
 ---@param ScrollInterval float
 function UCommonWidgetCarousel:BeginAutoScrolling(ScrollInterval) end
-
 
 ---@class UCommonWidgetCarouselNavBar : UWidget
 ---@field ButtonWidgetType TSubclassOf<UCommonButtonBase>
@@ -1134,23 +1329,25 @@ UCommonWidgetCarouselNavBar = {}
 
 ---@param CommonCarousel UCommonWidgetCarousel
 function UCommonWidgetCarouselNavBar:SetLinkedCarousel(CommonCarousel) end
+
 ---@param CommonCarousel UCommonWidgetCarousel
 ---@param PageIndex int32
 function UCommonWidgetCarouselNavBar:HandlePageChanged(CommonCarousel, PageIndex) end
+
 ---@param AssociatedButton UCommonButtonBase
 ---@param ButtonIndex int32
 function UCommonWidgetCarouselNavBar:HandleButtonClicked(AssociatedButton, ButtonIndex) end
-
 
 ---@class UCommonWidgetGroupBase : UObject
 UCommonWidgetGroupBase = {}
 
 ---@param InWidget UWidget
 function UCommonWidgetGroupBase:RemoveWidget(InWidget) end
+
 function UCommonWidgetGroupBase:RemoveAll() end
+
 ---@param InWidget UWidget
 function UCommonWidgetGroupBase:AddWidget(InWidget) end
-
 
 ---@class UDEPRECATED_UCommonVisibilityWidgetBase : UCommonBorder
 ---@field VisibilityControls TMap<FName, boolean>
@@ -1164,7 +1361,6 @@ UDEPRECATED_UCommonVisibilityWidgetBase = {}
 ---@return TArray<FName>
 function UDEPRECATED_UCommonVisibilityWidgetBase:GetRegisteredPlatforms() end
 
-
 ---@class ULoadGuardSlot : UPanelSlot
 ---@field Padding FMargin
 ---@field HorizontalAlignment EHorizontalAlignment
@@ -1173,13 +1369,12 @@ ULoadGuardSlot = {}
 
 ---@param InVerticalAlignment EVerticalAlignment
 function ULoadGuardSlot:SetVerticalAlignment(InVerticalAlignment) end
+
 ---@param InPadding FMargin
 function ULoadGuardSlot:SetPadding(InPadding) end
+
 ---@param InHorizontalAlignment EHorizontalAlignment
 function ULoadGuardSlot:SetHorizontalAlignment(InHorizontalAlignment) end
 
-
 ---@class UWidgetLockedStateRegistration : UWidgetBinaryStateRegistration
 UWidgetLockedStateRegistration = {}
-
-

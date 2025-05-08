@@ -5,6 +5,3 @@
 ---@field BP_Wood_Table_C_Breakable UChildActorComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_BouyDisplayTable_B_Breakable_C = {}
-
-
-

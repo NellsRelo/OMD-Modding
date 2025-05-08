@@ -8,9 +8,10 @@
 UGA_Blunderbuss_Secondary_C = {}
 
 function UGA_Blunderbuss_Secondary_C:BP_FireMontageStarted() end
+
 function UGA_Blunderbuss_Secondary_C:BP_FireProjectile() end
+
 function UGA_Blunderbuss_Secondary_C:K2_CommitExecute() end
+
 ---@param EntryPoint int32
 function UGA_Blunderbuss_Secondary_C:ExecuteUbergraph_GA_Blunderbuss_Secondary(EntryPoint) end
-
-

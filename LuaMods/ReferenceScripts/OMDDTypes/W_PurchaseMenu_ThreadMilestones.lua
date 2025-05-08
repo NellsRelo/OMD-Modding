@@ -6,9 +6,7 @@ UW_PurchaseMenu_ThreadMilestones_C = {}
 
 ---@param Element UObject
 ---@param Should_Enable boolean
-UW_PurchaseMenu_ThreadMilestones_C['Should Enable Contents for Element'] = function(Element, Should_Enable) end
-UW_PurchaseMenu_ThreadMilestones_C['Load Grid Objects'] = function() end
+UW_PurchaseMenu_ThreadMilestones_C['Should Enable Contents for Element'] = function(self, Element, Should_Enable) end
+UW_PurchaseMenu_ThreadMilestones_C['Load Grid Objects'] = function(self,) end
 ---@param EntryPoint int32
 function UW_PurchaseMenu_ThreadMilestones_C:ExecuteUbergraph_W_PurchaseMenu_ThreadMilestones(EntryPoint) end
-
-

@@ -21,6 +21,10 @@ FAnimBlueprintGeneratedConstantData = {}
 
 
 
+---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
+FAnimBlueprintGeneratedMutableData = {}
+
+
 ---@class UABPT_NPCBase_C : URSTAnimInstanceCharacter
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance
@@ -45,7 +49,6 @@ UABPT_NPCBase_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABPT_NPCBase_C:AnimGraph(AnimGraph) end
+
 ---@param EntryPoint int32
 function UABPT_NPCBase_C:ExecuteUbergraph_ABPT_NPCBase(EntryPoint) end
-
-

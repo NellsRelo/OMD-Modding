@@ -72,6 +72,3 @@
 ---@field Warehouse_Roof_Half_Skylight_SM UStaticMeshComponent
 ---@field Warehouse_Roof_Half_Wood_SM UStaticMeshComponent
 ABP_Warehouse_Roof_Large_C = {}
-
-
-

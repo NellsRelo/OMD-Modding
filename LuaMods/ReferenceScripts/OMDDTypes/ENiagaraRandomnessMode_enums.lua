@@ -5,4 +5,3 @@ ENiagaraRandomnessMode = {
     NewEnumerator2 = 2,
     ENiagaraRandomnessMode_MAX = 3,
 }
-

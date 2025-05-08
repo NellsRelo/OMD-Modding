@@ -9,6 +9,3 @@
 ---@field Wood_Mantle_1x1_A_SM UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Display_Dragon_RibCage_Breakable_C = {}
-
-
-

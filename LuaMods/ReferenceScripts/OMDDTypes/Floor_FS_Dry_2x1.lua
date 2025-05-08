@@ -5,6 +5,3 @@
 ---@field Floor_2x4_FS UStaticMeshComponent
 ---@field Floor00 URSTTrapGridBoxComponent
 AFloor_FS_Dry_2x1_C = {}
-
-
-

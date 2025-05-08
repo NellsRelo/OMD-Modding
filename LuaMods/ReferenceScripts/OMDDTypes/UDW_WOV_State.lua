@@ -13,6 +13,3 @@
 ---@field TransitionWeatherB_41_51640EB94AA5AC815DC5569687237618 UObject
 ---@field VolumeAlpha_42_4C5D2EB945C4BC5FFA0D688B3137FD43 double
 FUDW_WOV_State = {}
-
-
-

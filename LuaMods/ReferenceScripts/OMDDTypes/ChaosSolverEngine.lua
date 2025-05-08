@@ -24,8 +24,8 @@ AChaosSolverActor = {}
 
 ---@param bActive boolean
 function AChaosSolverActor:SetSolverActive(bActive) end
-function AChaosSolverActor:SetAsCurrentWorldSolver() end
 
+function AChaosSolverActor:SetAsCurrentWorldSolver() end
 
 ---@class FBreakEventCallbackWrapper
 FBreakEventCallbackWrapper = {}
@@ -101,10 +101,6 @@ UChaosSolverEngineBlueprintLibrary = {}
 ---@return FHitResult
 function UChaosSolverEngineBlueprintLibrary:ConvertPhysicsCollisionToHitResult(PhysicsCollision) end
 
-
 ---@class UChaosSolverSettings : UDeveloperSettings
 ---@field DefaultChaosSolverActorClass FSoftClassPath
 UChaosSolverSettings = {}
-
-
-

@@ -5,4 +5,3 @@ ENiagaraScaleColorMode = {
     NewEnumerator2 = 2,
     ENiagaraScaleColorMode_MAX = 3,
 }
-

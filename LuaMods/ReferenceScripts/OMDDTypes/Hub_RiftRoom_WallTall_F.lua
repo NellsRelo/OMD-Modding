@@ -13,6 +13,3 @@
 ---@field Wall_2x2x05_StoneWall_SM1 UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 AHub_RiftRoom_WallTall_F_C = {}
-
-
-

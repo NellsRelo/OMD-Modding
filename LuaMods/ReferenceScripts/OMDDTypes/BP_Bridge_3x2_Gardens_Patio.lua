@@ -15,6 +15,3 @@
 ---@field TrapGrid USceneComponent
 ---@field Geo USceneComponent
 ABP_Bridge_3x2_Gardens_Patio_C = {}
-
-
-

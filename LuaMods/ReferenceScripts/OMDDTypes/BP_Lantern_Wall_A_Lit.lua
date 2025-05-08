@@ -6,6 +6,3 @@
 ---@field SM_lamppost_02 UStaticMeshComponent
 ---@field Geometry USceneComponent
 ABP_Lantern_Wall_A_Lit_C = {}
-
-
-

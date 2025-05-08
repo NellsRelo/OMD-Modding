@@ -8,6 +8,3 @@
 ---@field TrapGrid USceneComponent
 ---@field Collision USceneComponent
 ABP_VistaFar_City_HB_Merge_C = {}
-
-
-

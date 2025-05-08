@@ -20,6 +20,3 @@
 ---@field Wood_Square_600W_A_NoTaper_Light1 UStaticMeshComponent
 ---@field Geometry USceneComponent
 ABP_Wood_Awning_300W_A_C = {}
-
-
-

@@ -24,6 +24,3 @@
 ---@field Wall_1x05_Wood_SM_Union UStaticMeshComponent
 ---@field Geometry USceneComponent
 ABP_Wood_Platform_1x2_B_C = {}
-
-
-

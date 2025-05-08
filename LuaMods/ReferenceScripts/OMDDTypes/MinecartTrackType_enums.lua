@@ -4,4 +4,3 @@ MinecartTrackType = {
     NewEnumerator1 = 1,
     MinecartTrackType_MAX = 2,
 }
-

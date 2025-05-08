@@ -1,0 +1,30 @@
+---@meta
+
+---@class ABP_SplitStairs_RampTrapGrid_C : ABP_OMDTrapGrid_C
+---@field TrapGrid_Ramp17 URSTTrapGridBoxComponent
+---@field Floor_4x4_SM12 UStaticMeshComponent
+---@field TrapGrid_Ramp9 URSTTrapGridBoxComponent
+---@field TrapGrid_Ramp8 URSTTrapGridBoxComponent
+---@field Floor_4x4_SM11 UStaticMeshComponent
+---@field Floor_4x4_SM10 UStaticMeshComponent
+---@field Floor_4x4_SM9 UStaticMeshComponent
+---@field TrapGrid_Ramp7 URSTTrapGridBoxComponent
+---@field TrapGrid_Ramp5 URSTTrapGridBoxComponent
+---@field TrapGrid_Ramp6 URSTTrapGridBoxComponent
+---@field TrapGrid_Ramp4 URSTTrapGridBoxComponent
+---@field TrapGrid_Ramp3 URSTTrapGridBoxComponent
+---@field TrapGrid_Ramp1 URSTTrapGridBoxComponent
+---@field TrapGrid_Ramp URSTTrapGridBoxComponent
+---@field Floor_4x4_SM8 UStaticMeshComponent
+---@field Floor_4x4_SM7 UStaticMeshComponent
+---@field TrapGrid_Ramp2 URSTTrapGridBoxComponent
+---@field Floor_4x4_SM5 UStaticMeshComponent
+---@field Floor_4x4_SM6 UStaticMeshComponent
+---@field Floor_4x4_SM UStaticMeshComponent
+---@field Floor_4x4_SM1 UStaticMeshComponent
+---@field Floor_4x4_SM2 UStaticMeshComponent
+---@field Floor_4x4_SM3 UStaticMeshComponent
+---@field Floor_4x4_SM4 UStaticMeshComponent
+---@field Hidden USceneComponent
+---@field TrapGrid USceneComponent
+ABP_SplitStairs_RampTrapGrid_C = {}

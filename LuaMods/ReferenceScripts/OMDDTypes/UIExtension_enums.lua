@@ -11,4 +11,3 @@ EUIExtensionPointMatch = {
     PartialMatch = 1,
     EUIExtensionPointMatch_MAX = 2,
 }
-

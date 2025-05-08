@@ -5,4 +5,3 @@ UDS_Particle_Collision_Mode = {
     NewEnumerator2 = 2,
     UDS_Particle_Collision_MAX = 3,
 }
-

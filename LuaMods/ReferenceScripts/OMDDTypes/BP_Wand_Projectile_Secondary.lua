@@ -5,6 +5,3 @@
 ---@field NS_Wand_Sec_Projectile UNiagaraComponent
 ---@field Sphere UStaticMeshComponent
 ABP_Wand_Projectile_Secondary_C = {}
-
-
-

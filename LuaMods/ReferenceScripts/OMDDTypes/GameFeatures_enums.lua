@@ -7,4 +7,3 @@ EGameFeatureTargetState = {
     Count = 4,
     EGameFeatureTargetState_MAX = 5,
 }
-

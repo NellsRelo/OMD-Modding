@@ -6,5 +6,3 @@ FAnimBlueprintGeneratedConstantData = {}
 
 ---@class UABP_Orc_Skeleton_C : UABPT_EnemyBase_C
 UABP_Orc_Skeleton_C = {}
-
-

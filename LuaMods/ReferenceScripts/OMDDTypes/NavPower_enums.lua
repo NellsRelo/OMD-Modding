@@ -26,4 +26,3 @@ ENavPowerMoveToTaskState = {
     Complete = 6,
     ENavPowerMoveToTaskState_MAX = 7,
 }
-

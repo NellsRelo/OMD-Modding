@@ -8,6 +8,3 @@
 ---@field Column_BaseD_CastStone UStaticMeshComponent
 ---@field Ceiling00 URSTTrapGridBoxComponent
 ACeiling_Platform_1x1_C_C = {}
-
-
-

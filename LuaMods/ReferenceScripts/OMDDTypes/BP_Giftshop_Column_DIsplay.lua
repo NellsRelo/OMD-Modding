@@ -1,0 +1,28 @@
+---@meta
+
+---@class ABP_Giftshop_Column_DIsplay_C : ABP_OMDTrapGrid_C
+---@field Resort_AddonRoof_04 UStaticMeshComponent
+---@field Resort_AddonRoof_03 UStaticMeshComponent
+---@field Column_Square_Manor_1x1_B_SM1 UStaticMeshComponent
+---@field Crenel_BaseB_CastStone_Sub3 UStaticMeshComponent
+---@field Resort_Giftshop_Terracotta_ColumnCap_A_SM UStaticMeshComponent
+---@field Wall_Resort_Adobe_Corner_1x2_B_SM UStaticMeshComponent
+---@field Crenel_BaseB_CastStone_Sub2 UStaticMeshComponent
+---@field Wood_Platform_600x450_A_Light_Arch1 UStaticMeshComponent
+---@field Wood_Platform_600x450_A_Light_Arch UStaticMeshComponent
+---@field Crenel_BaseB_CastStone_Sub1 UStaticMeshComponent
+---@field Resort_Lighthouse_ColumnDetail_A_SM UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper2 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper1 UStaticMeshComponent
+---@field Column_Resort_Adobe_1x1_B_SM UStaticMeshComponent
+---@field Column_Square_Manor_1x1_B_SM UStaticMeshComponent
+---@field Wall001 URSTTrapGridBoxComponent
+---@field Wall00 URSTTrapGridBoxComponent
+---@field Crenel_BaseB_CastStone_Sub UStaticMeshComponent
+---@field TrapGrid USceneComponent
+---@field Geo USceneComponent
+---@field BP_GlassPanel_A_Tall_Breakable1 UChildActorComponent
+---@field BP_GlassPanel_A_Tall_Breakable UChildActorComponent
+---@field Blueprints USceneComponent
+ABP_Giftshop_Column_DIsplay_C = {}

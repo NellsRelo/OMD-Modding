@@ -37,23 +37,31 @@ ABP_TimeCrystals_C = {}
 
 ---@return boolean
 function ABP_TimeCrystals_C:CanCooldownModifierStack() end
+
 ---@return FGameplayTag
 function ABP_TimeCrystals_C:GetCooldownModifierIdentifier() end
+
 ---@return boolean
 function ABP_TimeCrystals_C:IsCooldownModifierActive() end
+
 ---@param InBaseDuration float
 ---@return float
 function ABP_TimeCrystals_C:HandleCooldownModification(InBaseDuration) end
+
 ---@return int32
 function ABP_TimeCrystals_C:GetActiveCrystalCount() end
+
 ---@param Delta int32
 function ABP_TimeCrystals_C:UpdateActiveCrystalStates(Delta) end
+
 ---@return boolean
 function ABP_TimeCrystals_C:CanModifyCooldown() end
+
 ---@param DeltaSeconds double
 function ABP_TimeCrystals_C:UpdateRecharge(DeltaSeconds) end
+
 ---@param bValid boolean
-ABP_TimeCrystals_C['Valid for Additional Effects'] = function(bValid) end
+ABP_TimeCrystals_C['Valid for Additional Effects'] = function(self, bValid) end
 ---@param StartingLocation FVector
 ---@param Index int32
 ---@param bIsActive boolean
@@ -61,61 +69,84 @@ ABP_TimeCrystals_C['Valid for Additional Effects'] = function(bValid) end
 ---@param ParticleSystem UNiagaraComponent
 ---@param DeltaSeconds float
 ---@param PhaseOffset double
-function ABP_TimeCrystals_C:UpdateCrystalVisuals(StartingLocation, Index, bIsActive, StaticMesh, ParticleSystem, DeltaSeconds, PhaseOffset) end
+function ABP_TimeCrystals_C:UpdateCrystalVisuals(StartingLocation, Index, bIsActive, StaticMesh, ParticleSystem,
+                                                 DeltaSeconds, PhaseOffset) end
+
 ---@return boolean
 function ABP_TimeCrystals_C:IsReadyForActivation() end
+
 ---@return double
 function ABP_TimeCrystals_C:GetChargePercent() end
+
 function ABP_TimeCrystals_C:UserConstructionScript() end
+
 ---@param DeltaSeconds float
 function ABP_TimeCrystals_C:ReceiveTick(DeltaSeconds) end
+
 ---@param OverlappedComponent UPrimitiveComponent
 ---@param OtherActor AActor
 ---@param OtherComp UPrimitiveComponent
 ---@param OtherBodyIndex int32
 ---@param bFromSweep boolean
 ---@param SweepResult FHitResult
-function ABP_TimeCrystals_C:BndEvt__BP_TimeCrystals_QueryBox1_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex, bFromSweep, SweepResult) end
+function ABP_TimeCrystals_C:BndEvt__BP_TimeCrystals_QueryBox1_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(
+    OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex, bFromSweep, SweepResult) end
+
 ---@param OverlappedComponent UPrimitiveComponent
 ---@param OtherActor AActor
 ---@param OtherComp UPrimitiveComponent
 ---@param OtherBodyIndex int32
 ---@param bFromSweep boolean
 ---@param SweepResult FHitResult
-function ABP_TimeCrystals_C:BndEvt__BP_TimeCrystals_QueryBox2_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex, bFromSweep, SweepResult) end
+function ABP_TimeCrystals_C:BndEvt__BP_TimeCrystals_QueryBox2_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(
+    OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex, bFromSweep, SweepResult) end
+
 ---@param Trap ARSTTrap
 function ABP_TimeCrystals_C:AddAdjacentTrap(Trap) end
+
 ---@param Trap ARSTTrap
 function ABP_TimeCrystals_C:RemoveAdjacentTrap(Trap) end
+
 ---@param OverlappedComponent UPrimitiveComponent
 ---@param OtherActor AActor
 ---@param OtherComp UPrimitiveComponent
 ---@param OtherBodyIndex int32
-function ABP_TimeCrystals_C:BndEvt__BP_TimeCrystals_QueryBox1_K2Node_ComponentBoundEvent_2_ComponentEndOverlapSignature__DelegateSignature(OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex) end
+function ABP_TimeCrystals_C:BndEvt__BP_TimeCrystals_QueryBox1_K2Node_ComponentBoundEvent_2_ComponentEndOverlapSignature__DelegateSignature(
+    OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex) end
+
 ---@param OverlappedComponent UPrimitiveComponent
 ---@param OtherActor AActor
 ---@param OtherComp UPrimitiveComponent
 ---@param OtherBodyIndex int32
-function ABP_TimeCrystals_C:BndEvt__BP_TimeCrystals_QueryBox2_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature(OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex) end
+function ABP_TimeCrystals_C:BndEvt__BP_TimeCrystals_QueryBox2_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature(
+    OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex) end
+
 function ABP_TimeCrystals_C:BP_IsSoldChanged() end
+
 function ABP_TimeCrystals_C:ResetTrap() end
+
 function ABP_TimeCrystals_C:BP_AvailableChargesChanged() end
+
 ---@param IsDisabled boolean
 function ABP_TimeCrystals_C:UpdateDisabledVisuals(IsDisabled) end
+
 ---@param Actor AActor
-ABP_TimeCrystals_C['Try Apply Additional Effects'] = function(Actor) end
-ABP_TimeCrystals_C['Apply Additional Effects to All Targets'] = function() end
-ABP_TimeCrystals_C['Remove Additional Effects from All Targets'] = function() end
+ABP_TimeCrystals_C['Try Apply Additional Effects'] = function(self, Actor) end
+ABP_TimeCrystals_C['Apply Additional Effects to All Targets'] = function(self,) end
+ABP_TimeCrystals_C['Remove Additional Effects from All Targets'] = function(self,) end
 ---@param bForce boolean
-ABP_TimeCrystals_C['Refresh Additional Effects'] = function(bForce) end
+ABP_TimeCrystals_C['Refresh Additional Effects'] = function(self, bForce) end
 ---@param Tag FGameplayTag
 function ABP_TimeCrystals_C:BP_NotifyPropertyPreModify(Tag) end
+
 ---@param Tag FGameplayTag
 function ABP_TimeCrystals_C:BP_NotifyPropertyModified(Tag) end
+
 function ABP_TimeCrystals_C:BP_IsBeingPlacedChanged() end
+
 function ABP_TimeCrystals_C:ReceiveBeginPlay() end
+
 function ABP_TimeCrystals_C:UpdateMeshVisuals() end
+
 ---@param EntryPoint int32
 function ABP_TimeCrystals_C:ExecuteUbergraph_BP_TimeCrystals(EntryPoint) end
-
-

@@ -15,6 +15,3 @@
 ---@field Wall0021 URSTTrapGridBoxComponent
 ---@field Wall001 URSTTrapGridBoxComponent
 AColumn_Seawall_A_Lit_EmissiveOnly_C = {}
-
-
-

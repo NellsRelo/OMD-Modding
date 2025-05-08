@@ -83,30 +83,36 @@ UCameraAnimationCameraModifier = {}
 ---@param Handle FCameraAnimationHandle
 ---@param bImmediate boolean
 function UCameraAnimationCameraModifier:StopCameraAnimation(Handle, bImmediate) end
+
 ---@param Sequence UCameraAnimationSequence
 ---@param bImmediate boolean
 function UCameraAnimationCameraModifier:StopAllCameraAnimationsOf(Sequence, bImmediate) end
+
 ---@param bImmediate boolean
 function UCameraAnimationCameraModifier:StopAllCameraAnimations(bImmediate) end
+
 ---@param Sequence UCameraAnimationSequence
 ---@param Params FCameraAnimationParams
 ---@return FCameraAnimationHandle
 function UCameraAnimationCameraModifier:PlayCameraAnimation(Sequence, Params) end
+
 ---@param Handle FCameraAnimationHandle
 ---@return boolean
 function UCameraAnimationCameraModifier:IsCameraAnimationActive(Handle) end
+
 ---@param PlayerController APlayerController
 ---@return UCameraAnimationCameraModifier
 function UCameraAnimationCameraModifier:GetCameraAnimationCameraModifierFromPlayerController(PlayerController) end
+
 ---@param WorldContextObject UObject
 ---@param ControllerId int32
 ---@return UCameraAnimationCameraModifier
 function UCameraAnimationCameraModifier:GetCameraAnimationCameraModifierFromID(WorldContextObject, ControllerId) end
+
 ---@param WorldContextObject UObject
 ---@param PlayerIndex int32
 ---@return UCameraAnimationCameraModifier
 function UCameraAnimationCameraModifier:GetCameraAnimationCameraModifier(WorldContextObject, PlayerIndex) end
-
 
 ---@class UCompositeCameraShakePattern : UCameraShakePattern
 ---@field ChildPatterns TArray<UCameraShakePattern>
@@ -131,13 +137,14 @@ UGameplayCamerasFunctionLibrary = {}
 ---@param CameraAnimationPlaySpace ECameraAnimationPlaySpace
 ---@return ECameraShakePlaySpace
 function UGameplayCamerasFunctionLibrary:Conv_CameraShakePlaySpace(CameraAnimationPlaySpace) end
+
 ---@param CameraShakePlaySpace ECameraShakePlaySpace
 ---@return ECameraAnimationPlaySpace
 function UGameplayCamerasFunctionLibrary:Conv_CameraAnimationPlaySpace(CameraShakePlaySpace) end
+
 ---@param PlayerCameraManager APlayerCameraManager
 ---@return UCameraAnimationCameraModifier
 function UGameplayCamerasFunctionLibrary:Conv_CameraAnimationCameraModifier(PlayerCameraManager) end
-
 
 ---@class UGameplayCamerasSubsystem : UWorldSubsystem
 UGameplayCamerasSubsystem = {}
@@ -146,23 +153,26 @@ UGameplayCamerasSubsystem = {}
 ---@param Handle FCameraAnimationHandle
 ---@param bImmediate boolean
 function UGameplayCamerasSubsystem:StopCameraAnimation(PlayerController, Handle, bImmediate) end
+
 ---@param PlayerController APlayerController
 ---@param Sequence UCameraAnimationSequence
 ---@param bImmediate boolean
 function UGameplayCamerasSubsystem:StopAllCameraAnimationsOf(PlayerController, Sequence, bImmediate) end
+
 ---@param PlayerController APlayerController
 ---@param bImmediate boolean
 function UGameplayCamerasSubsystem:StopAllCameraAnimations(PlayerController, bImmediate) end
+
 ---@param PlayerController APlayerController
 ---@param Sequence UCameraAnimationSequence
 ---@param Params FCameraAnimationParams
 ---@return FCameraAnimationHandle
 function UGameplayCamerasSubsystem:PlayCameraAnimation(PlayerController, Sequence, Params) end
+
 ---@param PlayerController APlayerController
 ---@param Handle FCameraAnimationHandle
 ---@return boolean
 function UGameplayCamerasSubsystem:IsCameraAnimationActive(PlayerController, Handle) end
-
 
 ---@class ULegacyCameraShake : UCameraShakeBase
 ---@field OscillationDuration float
@@ -189,7 +199,9 @@ ULegacyCameraShake = {}
 ---@param PlaySpace ECameraShakePlaySpace
 ---@param UserPlaySpaceRot FRotator
 ---@return ULegacyCameraShake
-function ULegacyCameraShake:StartLegacyCameraShakeFromSource(PlayerCameraManager, ShakeClass, SourceComponent, Scale, PlaySpace, UserPlaySpaceRot) end
+function ULegacyCameraShake:StartLegacyCameraShakeFromSource(PlayerCameraManager, ShakeClass, SourceComponent, Scale,
+                                                             PlaySpace, UserPlaySpaceRot) end
+
 ---@param PlayerCameraManager APlayerCameraManager
 ---@param ShakeClass TSubclassOf<ULegacyCameraShake>
 ---@param Scale float
@@ -197,18 +209,21 @@ function ULegacyCameraShake:StartLegacyCameraShakeFromSource(PlayerCameraManager
 ---@param UserPlaySpaceRot FRotator
 ---@return ULegacyCameraShake
 function ULegacyCameraShake:StartLegacyCameraShake(PlayerCameraManager, ShakeClass, Scale, PlaySpace, UserPlaySpaceRot) end
+
 ---@param bImmediately boolean
 function ULegacyCameraShake:ReceiveStopShake(bImmediately) end
+
 ---@param Scale float
 function ULegacyCameraShake:ReceivePlayShake(Scale) end
+
 ---@return boolean
 function ULegacyCameraShake:ReceiveIsFinished() end
+
 ---@param DeltaTime float
 ---@param Alpha float
 ---@param POV FMinimalViewInfo
 ---@param ModifiedPOV FMinimalViewInfo
 function ULegacyCameraShake:BlueprintUpdateCameraShake(DeltaTime, Alpha, POV, ModifiedPOV) end
-
 
 ---@class ULegacyCameraShakeFunctionLibrary : UBlueprintFunctionLibrary
 ULegacyCameraShakeFunctionLibrary = {}
@@ -216,7 +231,6 @@ ULegacyCameraShakeFunctionLibrary = {}
 ---@param CameraShake UCameraShakeBase
 ---@return ULegacyCameraShake
 function ULegacyCameraShakeFunctionLibrary:Conv_LegacyCameraShake(CameraShake) end
-
 
 ---@class ULegacyCameraShakePattern : UCameraShakePattern
 ULegacyCameraShakePattern = {}
@@ -263,6 +277,3 @@ UTestCameraShake = {}
 ---@field Roll FWaveOscillator
 ---@field FOV FWaveOscillator
 UWaveOscillatorCameraShakePattern = {}
-
-
-

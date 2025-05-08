@@ -80,4 +80,3 @@ MediaTextureOutputFormat = {
     MTOF_SRGB_LINOUT = 1,
     MTOF_MAX = 2,
 }
-

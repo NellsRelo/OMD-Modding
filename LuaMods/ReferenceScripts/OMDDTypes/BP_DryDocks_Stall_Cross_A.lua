@@ -14,6 +14,3 @@
 ---@field TrapGrid USceneComponent
 ---@field SharedRoot USceneComponent
 ABP_DryDocks_Stall_Cross_A_C = {}
-
-
-

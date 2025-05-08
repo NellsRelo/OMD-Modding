@@ -4,4 +4,3 @@ EFieldForceVel = {
     NewEnumerator1 = 1,
     EFieldForceVel_MAX = 2,
 }
-

@@ -8,4 +8,3 @@ ENiagaraBooleanLogicOps_v2 = {
     NewEnumerator7 = 5,
     ENiagaraBooleanLogicOps_MAX = 6,
 }
-

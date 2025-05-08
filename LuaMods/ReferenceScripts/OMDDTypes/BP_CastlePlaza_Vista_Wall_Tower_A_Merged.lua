@@ -4,6 +4,3 @@
 ---@field SM_CastlePlaza_Vista_Wall_Tower_A_Merged UStaticMeshComponent
 ---@field Geometry USceneComponent
 ABP_CastlePlaza_Vista_Wall_Tower_A_Merged_C = {}
-
-
-

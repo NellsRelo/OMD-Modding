@@ -150,6 +150,3 @@
 ---@field Wall_2x2x05_StoneWall_SM2 UStaticMeshComponent
 ---@field Props USceneComponent
 ABP_Garden_EastWing_A_C = {}
-
-
-

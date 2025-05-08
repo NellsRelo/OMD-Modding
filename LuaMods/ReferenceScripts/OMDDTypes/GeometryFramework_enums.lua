@@ -54,4 +54,3 @@ EDynamicMeshVertexColorTransformMode = {
     SRGBToLinear = 2,
     EDynamicMeshVertexColorTransformMode_MAX = 3,
 }
-

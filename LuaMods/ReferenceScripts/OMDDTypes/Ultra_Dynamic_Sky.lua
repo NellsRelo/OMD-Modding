@@ -358,7 +358,7 @@
 ---@field ['Dynamic Sky Light Multiplier'] double
 ---@field ['Cloud Coverage 0-3'] double
 ---@field ['Global Overcast 0-1'] double
----@field ['Local Overcast 0-1'] double
+---@field ['Overcast 0-1'] double
 ---@field ['Override with New Changes'] boolean
 ---@field ['Overcast Turbulence MID'] UMaterialInstanceDynamic
 ---@field ['Scale View Samples when Camera is In Cloud Layer'] double
@@ -555,8 +555,8 @@
 ---@field ['Painted Cloud Coverage Opacity'] double
 ---@field ['Layer 2 Painted Cloud Coverage Opacity'] double
 ---@field ['Painted Coverage Affects Global Values'] double
----@field ['Local Painting Cell Data'] TMap<FIntPoint, UUDS_Cloud_Paint_Cell_C>
----@field ['Local Painted Cell Size'] int32
+---@field ['Painting Cell Data'] TMap<FIntPoint, UUDS_Cloud_Paint_Cell_C>
+---@field ['Painted Cell Size'] int32
 ---@field ['Cloud Painting Active'] boolean
 ---@field ['Cloud Coverage Target Location'] FVector2D
 ---@field ['Current Cloud Coverage Render Target Mapping'] FLinearColor
@@ -710,7 +710,7 @@
 ---@field ['Sky Glow Fog Color'] FLinearColor
 ---@field ['Cached Night Sky Glow'] FLinearColor
 ---@field ['Cached Light Pollution'] FLinearColor
----@field ['Local Cloud Coverage'] double
+---@field ['Cloud Coverage'] double
 ---@field ['Storm Clouds Draw MID'] UMaterialInstanceDynamic
 ---@field ['Cloud Painting Present'] boolean
 ---@field ['Radial Storm Clouds Present'] boolean
@@ -763,183 +763,183 @@
 AUltra_Dynamic_Sky_C = {}
 
 ---@param Cloud_Coverage double
-AUltra_Dynamic_Sky_C['Get Cloud Coverage 0-10'] = function(Cloud_Coverage) end
+AUltra_Dynamic_Sky_C['Get Cloud Coverage 0-10'] = function(self, Cloud_Coverage) end
 ---@return double
-AUltra_Dynamic_Sky_C['Current Sun Moon Cache Delta'] = function() end
+AUltra_Dynamic_Sky_C['Current Sun Moon Cache Delta'] = function(self,) end
 ---@param Ray_Strength double
 ---@param Ray_Color FLinearColor
-AUltra_Dynamic_Sky_C['Volumetric Light Ray Strength and Color'] = function(Ray_Strength, Ray_Color) end
-AUltra_Dynamic_Sky_C['Static Mode Cloud Tick'] = function() end
-AUltra_Dynamic_Sky_C['Static Mode Startup'] = function() end
-AUltra_Dynamic_Sky_C['Startup Tick'] = function() end
-AUltra_Dynamic_Sky_C['Set Previous Weather Variables'] = function() end
-AUltra_Dynamic_Sky_C['Update Path Tracer Fog'] = function() end
-AUltra_Dynamic_Sky_C['Construct Path Tracer Fog'] = function() end
-AUltra_Dynamic_Sky_C['Add Static Post Process Materials'] = function() end
-AUltra_Dynamic_Sky_C['Check to Start Volumetric Cloud Light Rays'] = function() end
-AUltra_Dynamic_Sky_C['Add Constructed Components'] = function() end
+AUltra_Dynamic_Sky_C['Volumetric Light Ray Strength and Color'] = function(self, Ray_Strength, Ray_Color) end
+AUltra_Dynamic_Sky_C['Static Mode Cloud Tick'] = function(self,) end
+AUltra_Dynamic_Sky_C['Static Mode Startup'] = function(self,) end
+AUltra_Dynamic_Sky_C['Startup Tick'] = function(self,) end
+AUltra_Dynamic_Sky_C['Set Previous Weather Variables'] = function(self,) end
+AUltra_Dynamic_Sky_C['Update Path Tracer Fog'] = function(self,) end
+AUltra_Dynamic_Sky_C['Construct Path Tracer Fog'] = function(self,) end
+AUltra_Dynamic_Sky_C['Add Static Post Process Materials'] = function(self,) end
+AUltra_Dynamic_Sky_C['Check to Start Volumetric Cloud Light Rays'] = function(self,) end
+AUltra_Dynamic_Sky_C['Add Constructed Components'] = function(self,) end
 ---@param Index int32
 ---@param Enabled boolean
-AUltra_Dynamic_Sky_C['Toggle Post Process Material'] = function(Index, Enabled) end
-AUltra_Dynamic_Sky_C['Get Starting Cloud Painting Actors'] = function() end
-AUltra_Dynamic_Sky_C['Revert Changed Console Variables'] = function() end
-AUltra_Dynamic_Sky_C['Reverse Day Ended'] = function() end
+AUltra_Dynamic_Sky_C['Toggle Post Process Material'] = function(self, Index, Enabled) end
+AUltra_Dynamic_Sky_C['Get Starting Cloud Painting Actors'] = function(self,) end
+AUltra_Dynamic_Sky_C['Revert Changed Console Variables'] = function(self,) end
+AUltra_Dynamic_Sky_C['Reverse Day Ended'] = function(self,) end
 ---@return double
-AUltra_Dynamic_Sky_C['Fog and Dust Shadow Value'] = function() end
+AUltra_Dynamic_Sky_C['Fog and Dust Shadow Value'] = function(self,) end
 ---@param Out FLinearColor
-AUltra_Dynamic_Sky_C['Simplified Cloud Light Color'] = function(Out) end
+AUltra_Dynamic_Sky_C['Simplified Cloud Light Color'] = function(self, Out) end
 ---@param Title FString
 ---@param Message FString
-AUltra_Dynamic_Sky_C['Show Editor Warning'] = function(Title, Message) end
+AUltra_Dynamic_Sky_C['Show Editor Warning'] = function(self, Title, Message) end
 ---@param Made_Changes boolean
-AUltra_Dynamic_Sky_C['Apply Feature Level Mode Changes'] = function(Made_Changes) end
+AUltra_Dynamic_Sky_C['Apply Feature Level Mode Changes'] = function(self, Made_Changes) end
 ---@param Dust_Amount double
-AUltra_Dynamic_Sky_C['Set Dust Amount'] = function(Dust_Amount) end
+AUltra_Dynamic_Sky_C['Set Dust Amount'] = function(self, Dust_Amount) end
 ---@param Fog double
-AUltra_Dynamic_Sky_C['Set Fog'] = function(Fog) end
+AUltra_Dynamic_Sky_C['Set Fog'] = function(self, Fog) end
 ---@param Cloud_Coverage double
-AUltra_Dynamic_Sky_C['Set Cloud Coverage'] = function(Cloud_Coverage) end
-AUltra_Dynamic_Sky_C['Apply Editor Weather Override'] = function() end
-AUltra_Dynamic_Sky_C['Apply Starting Modifiers'] = function() end
-AUltra_Dynamic_Sky_C['Revert Modified Properties'] = function() end
-AUltra_Dynamic_Sky_C['Set Startup Variables'] = function() end
-AUltra_Dynamic_Sky_C['Update Total Days Elapsed'] = function() end
-AUltra_Dynamic_Sky_C['Client Check Initial Replication'] = function() end
+AUltra_Dynamic_Sky_C['Set Cloud Coverage'] = function(self, Cloud_Coverage) end
+AUltra_Dynamic_Sky_C['Apply Editor Weather Override'] = function(self,) end
+AUltra_Dynamic_Sky_C['Apply Starting Modifiers'] = function(self,) end
+AUltra_Dynamic_Sky_C['Revert Modified Properties'] = function(self,) end
+AUltra_Dynamic_Sky_C['Set Startup Variables'] = function(self,) end
+AUltra_Dynamic_Sky_C['Update Total Days Elapsed'] = function(self,) end
+AUltra_Dynamic_Sky_C['Client Check Initial Replication'] = function(self,) end
 ---@return FDateTime
-AUltra_Dynamic_Sky_C['Current Event Date'] = function() end
-AUltra_Dynamic_Sky_C['Set Variables Controlled by Weather'] = function() end
+AUltra_Dynamic_Sky_C['Current Event Date'] = function(self,) end
+AUltra_Dynamic_Sky_C['Set Variables Controlled by Weather'] = function(self,) end
 ---@param Out FVector
-AUltra_Dynamic_Sky_C['Composite Context Vector'] = function(Out) end
+AUltra_Dynamic_Sky_C['Composite Context Vector'] = function(self, Out) end
 ---@param Out FVector
-AUltra_Dynamic_Sky_C['Composite Weather Vector'] = function(Out) end
+AUltra_Dynamic_Sky_C['Composite Weather Vector'] = function(self, Out) end
 ---@param Old_Vector FVector
 ---@param New_Vector FVector
-AUltra_Dynamic_Sky_C['Get Manual Target Change Speed'] = function(Old_Vector, New_Vector) end
-AUltra_Dynamic_Sky_C['Adjust for World Origin Rebasing'] = function() end
+AUltra_Dynamic_Sky_C['Get Manual Target Change Speed'] = function(self, Old_Vector, New_Vector) end
+AUltra_Dynamic_Sky_C['Adjust for World Origin Rebasing'] = function(self,) end
 ---@param Minute int32
-AUltra_Dynamic_Sky_C['Current Minute as Integer'] = function(Minute) end
+AUltra_Dynamic_Sky_C['Current Minute as Integer'] = function(self, Minute) end
 ---@param Time double
 ---@param Hour int32
 ---@param Minute int32
 ---@param Second int32
 ---@param Second_Fraction double
-AUltra_Dynamic_Sky_C['Time Of Day to H/M/S'] = function(Time, Hour, Minute, Second, Second_Fraction) end
+AUltra_Dynamic_Sky_C['Time Of Day to H/M/S'] = function(self, Time, Hour, Minute, Second, Second_Fraction) end
 ---@param Hours int32
 ---@param Minutes int32
 ---@param Seconds int32
 ---@param Miliseconds int32
 ---@param Time double
-AUltra_Dynamic_Sky_C['H/M/S/MS to Time of Day'] = function(Hours, Minutes, Seconds, Miliseconds, Time) end
+AUltra_Dynamic_Sky_C['H/M/S/MS to Time of Day'] = function(self, Hours, Minutes, Seconds, Miliseconds, Time) end
 ---@return double
-AUltra_Dynamic_Sky_C['Moon Effective Illumination 0-1'] = function() end
-AUltra_Dynamic_Sky_C['Update Water Level Parameter'] = function() end
+AUltra_Dynamic_Sky_C['Moon Effective Illumination 0-1'] = function(self,) end
+AUltra_Dynamic_Sky_C['Update Water Level Parameter'] = function(self,) end
 ---@param Enum UDS_CachedProperties::Type
 ---@param Yes boolean
-AUltra_Dynamic_Sky_C['Is Cached Value Changing'] = function(Enum, Yes) end
-AUltra_Dynamic_Sky_C['Set Time Cycle Degrees'] = function() end
+AUltra_Dynamic_Sky_C['Is Cached Value Changing'] = function(self, Enum, Yes) end
+AUltra_Dynamic_Sky_C['Set Time Cycle Degrees'] = function(self,) end
 ---@param Sun_Up boolean
-AUltra_Dynamic_Sky_C['Current Sunset/Sunrise Event State'] = function(Sun_Up) end
+AUltra_Dynamic_Sky_C['Current Sunset/Sunrise Event State'] = function(self, Sun_Up) end
 ---@return boolean
-AUltra_Dynamic_Sky_C['Is Date and Time in Daylight Savings Time'] = function() end
-AUltra_Dynamic_Sky_C['Apply System Time'] = function() end
-AUltra_Dynamic_Sky_C['Editor Update from Weather'] = function() end
-AUltra_Dynamic_Sky_C['Sky Startup Functions'] = function() end
-AUltra_Dynamic_Sky_C['Static Properties - Occlusion'] = function() end
-AUltra_Dynamic_Sky_C['Static Properties - Mode Derivatives'] = function() end
-AUltra_Dynamic_Sky_C['Static Properties - Post Processing'] = function() end
+AUltra_Dynamic_Sky_C['Is Date and Time in Daylight Savings Time'] = function(self,) end
+AUltra_Dynamic_Sky_C['Apply System Time'] = function(self,) end
+AUltra_Dynamic_Sky_C['Editor Update from Weather'] = function(self,) end
+AUltra_Dynamic_Sky_C['Sky Startup Functions'] = function(self,) end
+AUltra_Dynamic_Sky_C['Static Properties - Occlusion'] = function(self,) end
+AUltra_Dynamic_Sky_C['Static Properties - Mode Derivatives'] = function(self,) end
+AUltra_Dynamic_Sky_C['Static Properties - Post Processing'] = function(self,) end
 ---@return boolean
-AUltra_Dynamic_Sky_C['Runtime Or Initializing'] = function() end
-AUltra_Dynamic_Sky_C['Start Editor Tick Handler'] = function() end
+AUltra_Dynamic_Sky_C['Runtime Or Initializing'] = function(self,) end
+AUltra_Dynamic_Sky_C['Start Editor Tick Handler'] = function(self,) end
 ---@param Editor_Camera_Location FVector
 ---@param Editor_Camera_Rotation FRotator
 ---@param Sequencer_Open boolean
-AUltra_Dynamic_Sky_C['Editor Tick'] = function(Editor_Camera_Location, Editor_Camera_Rotation, Sequencer_Open) end
+AUltra_Dynamic_Sky_C['Editor Tick'] = function(self, Editor_Camera_Location, Editor_Camera_Rotation, Sequencer_Open) end
 ---@param Hour int32
-AUltra_Dynamic_Sky_C['Current Hour as Integer'] = function(Hour) end
+AUltra_Dynamic_Sky_C['Current Hour as Integer'] = function(self, Hour) end
 ---@param Entry TArray<FName>
-AUltra_Dynamic_Sky_C['Open Editor Readme Entry Set'] = function(Entry) end
-AUltra_Dynamic_Sky_C['📘 Configuring for Performance'] = function() end
-AUltra_Dynamic_Sky_C['📘 Underwater Caustics'] = function() end
-AUltra_Dynamic_Sky_C['📘 Screen Space Light Shafts'] = function() end
-AUltra_Dynamic_Sky_C['📘 Considerations for Mobile'] = function() end
-AUltra_Dynamic_Sky_C['📘 Interior Adjustments'] = function() end
-AUltra_Dynamic_Sky_C['📘 Cinematic / Offline Rendering'] = function() end
-AUltra_Dynamic_Sky_C['📘 Sky Modifiers'] = function() end
-AUltra_Dynamic_Sky_C['📘 Volumetric Cloud Painting'] = function() end
-AUltra_Dynamic_Sky_C['📘 Volumetric Cloud Light Rays'] = function() end
-AUltra_Dynamic_Sky_C['📘 Post Processing'] = function() end
-AUltra_Dynamic_Sky_C['📘 Sun Lens Flare'] = function() end
-AUltra_Dynamic_Sky_C['📘 Aurora'] = function() end
-AUltra_Dynamic_Sky_C['📘 Sky Glow'] = function() end
-AUltra_Dynamic_Sky_C['📘 Dust'] = function() end
-AUltra_Dynamic_Sky_C['📘 Space Layer'] = function() end
-AUltra_Dynamic_Sky_C['📘 Stars'] = function() end
-AUltra_Dynamic_Sky_C['📘 Simplified Color'] = function() end
+AUltra_Dynamic_Sky_C['Open Editor Readme Entry Set'] = function(self, Entry) end
+AUltra_Dynamic_Sky_C['📘 Configuring for Performance'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘 Underwater Caustics'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘 Screen Space Light Shafts'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘 Considerations for Mobile'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘 Interior Adjustments'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘 Cinematic / Offline Rendering'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘 Sky Modifiers'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘 Volumetric Cloud Painting'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘 Volumetric Cloud Light Rays'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘 Post Processing'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘 Sun Lens Flare'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘 Aurora'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘 Sky Glow'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘 Dust'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘 Space Layer'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘 Stars'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘 Simplified Color'] = function(self,) end
 ---@return FLinearColor
-AUltra_Dynamic_Sky_C['Simplified Moon Scattering Color'] = function() end
-AUltra_Dynamic_Sky_C['📘 Sky Atmosphere'] = function() end
-AUltra_Dynamic_Sky_C['📘 Volumetric Fog'] = function() end
-AUltra_Dynamic_Sky_C['📘 Fog Density'] = function() end
-AUltra_Dynamic_Sky_C['📘 Fog Color'] = function() end
-AUltra_Dynamic_Sky_C['📘 Exposure'] = function() end
-AUltra_Dynamic_Sky_C['📘 Cloud Shadows'] = function() end
-AUltra_Dynamic_Sky_C['📘 Directional Light'] = function() end
-AUltra_Dynamic_Sky_C['📘 Sky Light'] = function() end
-AUltra_Dynamic_Sky_C['📘 Moon'] = function() end
-AUltra_Dynamic_Sky_C['📘 Sun'] = function() end
-AUltra_Dynamic_Sky_C['📘 Cloud Wisps'] = function() end
-AUltra_Dynamic_Sky_C['📘 Simulation'] = function() end
-AUltra_Dynamic_Sky_C['📘 Cloud Movement'] = function() end
-AUltra_Dynamic_Sky_C['📘Static Clouds'] = function() end
+AUltra_Dynamic_Sky_C['Simplified Moon Scattering Color'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘 Sky Atmosphere'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘 Volumetric Fog'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘 Fog Density'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘 Fog Color'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘 Exposure'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘 Cloud Shadows'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘 Directional Light'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘 Sky Light'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘 Moon'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘 Sun'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘 Cloud Wisps'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘 Simulation'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘 Cloud Movement'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘Static Clouds'] = function(self,) end
 ---@param Entry FString
-AUltra_Dynamic_Sky_C['Open Editor Readme Entry'] = function(Entry) end
-AUltra_Dynamic_Sky_C['Start Instant Exposure'] = function() end
-AUltra_Dynamic_Sky_C['📘Time of Day'] = function() end
-AUltra_Dynamic_Sky_C['📘 UDS Documentation'] = function() end
-AUltra_Dynamic_Sky_C['📘2D Dynamic Clouds'] = function() end
-AUltra_Dynamic_Sky_C['📘Volumetric Clouds'] = function() end
-AUltra_Dynamic_Sky_C['Disable Instant Exposure'] = function() end
-AUltra_Dynamic_Sky_C['Static Properties - Stars'] = function() end
-AUltra_Dynamic_Sky_C['Static Properties - Lens Flare'] = function() end
-AUltra_Dynamic_Sky_C['Static Properties - Space Layer'] = function() end
-AUltra_Dynamic_Sky_C['Static Properties - Static Clouds'] = function() end
-AUltra_Dynamic_Sky_C['Static Properties - Aurora'] = function() end
-AUltra_Dynamic_Sky_C['Static Properties - Sky Atmosphere'] = function() end
-AUltra_Dynamic_Sky_C['Static Properties - Simplified Color'] = function() end
-AUltra_Dynamic_Sky_C['Static Properties - Water Caustics'] = function() end
-AUltra_Dynamic_Sky_C['Static Properties - Cloud Shadows'] = function() end
-AUltra_Dynamic_Sky_C['Static Properties - 2D Dynamic Clouds'] = function() end
-AUltra_Dynamic_Sky_C['Static Properties - Misc'] = function() end
-AUltra_Dynamic_Sky_C['Static Properties - Sky Material'] = function() end
-AUltra_Dynamic_Sky_C['Static Properties - Height Fog'] = function() end
-AUltra_Dynamic_Sky_C['Static Properties - Sun'] = function() end
-AUltra_Dynamic_Sky_C['Static Properties - Moon'] = function() end
-AUltra_Dynamic_Sky_C['Static Properties - Sky Light'] = function() end
-AUltra_Dynamic_Sky_C['Static Properties - Volumetric Cloud Light Rays'] = function() end
-AUltra_Dynamic_Sky_C['Static Properties - Volumetric Clouds'] = function() end
-AUltra_Dynamic_Sky_C['Static Properties - Cloud Movement'] = function() end
-AUltra_Dynamic_Sky_C['Update Non-Cached Active Properties'] = function() end
+AUltra_Dynamic_Sky_C['Open Editor Readme Entry'] = function(self, Entry) end
+AUltra_Dynamic_Sky_C['Start Instant Exposure'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘Time of Day'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘 UDS Documentation'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘2D Dynamic Clouds'] = function(self,) end
+AUltra_Dynamic_Sky_C['📘Volumetric Clouds'] = function(self,) end
+AUltra_Dynamic_Sky_C['Disable Instant Exposure'] = function(self,) end
+AUltra_Dynamic_Sky_C['Static Properties - Stars'] = function(self,) end
+AUltra_Dynamic_Sky_C['Static Properties - Lens Flare'] = function(self,) end
+AUltra_Dynamic_Sky_C['Static Properties - Space Layer'] = function(self,) end
+AUltra_Dynamic_Sky_C['Static Properties - Static Clouds'] = function(self,) end
+AUltra_Dynamic_Sky_C['Static Properties - Aurora'] = function(self,) end
+AUltra_Dynamic_Sky_C['Static Properties - Sky Atmosphere'] = function(self,) end
+AUltra_Dynamic_Sky_C['Static Properties - Simplified Color'] = function(self,) end
+AUltra_Dynamic_Sky_C['Static Properties - Water Caustics'] = function(self,) end
+AUltra_Dynamic_Sky_C['Static Properties - Cloud Shadows'] = function(self,) end
+AUltra_Dynamic_Sky_C['Static Properties - 2D Dynamic Clouds'] = function(self,) end
+AUltra_Dynamic_Sky_C['Static Properties - Misc'] = function(self,) end
+AUltra_Dynamic_Sky_C['Static Properties - Sky Material'] = function(self,) end
+AUltra_Dynamic_Sky_C['Static Properties - Height Fog'] = function(self,) end
+AUltra_Dynamic_Sky_C['Static Properties - Sun'] = function(self,) end
+AUltra_Dynamic_Sky_C['Static Properties - Moon'] = function(self,) end
+AUltra_Dynamic_Sky_C['Static Properties - Sky Light'] = function(self,) end
+AUltra_Dynamic_Sky_C['Static Properties - Volumetric Cloud Light Rays'] = function(self,) end
+AUltra_Dynamic_Sky_C['Static Properties - Volumetric Clouds'] = function(self,) end
+AUltra_Dynamic_Sky_C['Static Properties - Cloud Movement'] = function(self,) end
+AUltra_Dynamic_Sky_C['Update Non-Cached Active Properties'] = function(self,) end
 ---@param modifier UUDS_Modifier_C
 ---@param Alpha double
-AUltra_Dynamic_Sky_C['Apply Modifier Property Overrides'] = function(modifier, Alpha) end
-AUltra_Dynamic_Sky_C['Apply Modifiers'] = function() end
-AUltra_Dynamic_Sky_C['Clear Modifiers'] = function() end
+AUltra_Dynamic_Sky_C['Apply Modifier Property Overrides'] = function(self, modifier, Alpha) end
+AUltra_Dynamic_Sky_C['Apply Modifiers'] = function(self,) end
+AUltra_Dynamic_Sky_C['Clear Modifiers'] = function(self,) end
 ---@param modifier UUDS_Modifier_C
 ---@param Alpha double
-AUltra_Dynamic_Sky_C['Set Modifier State'] = function(modifier, Alpha) end
+AUltra_Dynamic_Sky_C['Set Modifier State'] = function(self, modifier, Alpha) end
 ---@param modifier UUDS_Modifier_C
 ---@param Fade_Out_Time double
-AUltra_Dynamic_Sky_C['Remove Modifier'] = function(modifier, Fade_Out_Time) end
+AUltra_Dynamic_Sky_C['Remove Modifier'] = function(self, modifier, Fade_Out_Time) end
 ---@param modifier UUDS_Modifier_C
 ---@param Fade_In_Time double
-AUltra_Dynamic_Sky_C['Add Modifier'] = function(modifier, Fade_In_Time) end
-AUltra_Dynamic_Sky_C['Set Unmodified Property Values'] = function() end
-AUltra_Dynamic_Sky_C['Cinematic Mode Startup'] = function() end
+AUltra_Dynamic_Sky_C['Add Modifier'] = function(self, modifier, Fade_In_Time) end
+AUltra_Dynamic_Sky_C['Set Unmodified Property Values'] = function(self,) end
+AUltra_Dynamic_Sky_C['Cinematic Mode Startup'] = function(self,) end
 ---@return double
-AUltra_Dynamic_Sky_C['Get Inverted Global Occlusion'] = function() end
-AUltra_Dynamic_Sky_C['Construct Inside Cloud Fog'] = function() end
-AUltra_Dynamic_Sky_C['Configure Height Fog with Feature Toggle'] = function() end
-AUltra_Dynamic_Sky_C['Configure Sky Light with Feature Toggle'] = function() end
+AUltra_Dynamic_Sky_C['Get Inverted Global Occlusion'] = function(self,) end
+AUltra_Dynamic_Sky_C['Construct Inside Cloud Fog'] = function(self,) end
+AUltra_Dynamic_Sky_C['Configure Height Fog with Feature Toggle'] = function(self,) end
+AUltra_Dynamic_Sky_C['Configure Sky Light with Feature Toggle'] = function(self,) end
 ---@param Toggle boolean
 ---@param Selected_Component_Variable UDirectionalLightComponent
 ---@param Built_in_Light_Component UDirectionalLightComponent
@@ -947,26 +947,30 @@ AUltra_Dynamic_Sky_C['Configure Sky Light with Feature Toggle'] = function() end
 ---@param Atmospheric_Index int32
 ---@param Mobility EComponentMobility::Type
 ---@param Light_Visibility boolean
-AUltra_Dynamic_Sky_C['Configure Directional Light with Feature Toggle'] = function(Toggle, Selected_Component_Variable, Built_in_Light_Component, Custom_Light_Actor, Atmospheric_Index, Mobility, Light_Visibility) end
-AUltra_Dynamic_Sky_C['Construct Volumetric Aurora'] = function() end
-AUltra_Dynamic_Sky_C['Construct Volumetric Clouds'] = function() end
-AUltra_Dynamic_Sky_C['Construct Cloud Shadows MID'] = function() end
-AUltra_Dynamic_Sky_C['Construct Sky Sphere and Material'] = function() end
+AUltra_Dynamic_Sky_C['Configure Directional Light with Feature Toggle'] = function(self, Toggle,
+                                                                                   Selected_Component_Variable,
+                                                                                   Built_in_Light_Component,
+                                                                                   Custom_Light_Actor, Atmospheric_Index,
+                                                                                   Mobility, Light_Visibility) end
+AUltra_Dynamic_Sky_C['Construct Volumetric Aurora'] = function(self,) end
+AUltra_Dynamic_Sky_C['Construct Volumetric Clouds'] = function(self,) end
+AUltra_Dynamic_Sky_C['Construct Cloud Shadows MID'] = function(self,) end
+AUltra_Dynamic_Sky_C['Construct Sky Sphere and Material'] = function(self,) end
 ---@param Year int32
 ---@param Count int32
-AUltra_Dynamic_Sky_C['Number of Days in a Year'] = function(Year, Count) end
+AUltra_Dynamic_Sky_C['Number of Days in a Year'] = function(self, Year, Count) end
 ---@param Year int32
 ---@param Lengths TArray<int32>
-AUltra_Dynamic_Sky_C['Current Month Lengths'] = function(Year, Lengths) end
+AUltra_Dynamic_Sky_C['Current Month Lengths'] = function(self, Year, Lengths) end
 ---@param Year int32
 ---@param Month int32
 ---@param Count int32
-AUltra_Dynamic_Sky_C['Day Count at the Start of a Month'] = function(Year, Month, Count) end
+AUltra_Dynamic_Sky_C['Day Count at the Start of a Month'] = function(self, Year, Month, Count) end
 ---@param Input_Day int32
 ---@param Input_Month int32
 ---@param Input_Year int32
 ---@param Days int32
-AUltra_Dynamic_Sky_C['Days Since Y1D1M1'] = function(Input_Day, Input_Month, Input_Year, Days) end
+AUltra_Dynamic_Sky_C['Days Since Y1D1M1'] = function(self, Input_Day, Input_Month, Input_Year, Days) end
 ---@param Input_Month int32
 ---@param Input_Day int32
 ---@param Input_Year int32
@@ -974,114 +978,116 @@ AUltra_Dynamic_Sky_C['Days Since Y1D1M1'] = function(Input_Day, Input_Month, Inp
 ---@param Output_Month int32
 ---@param Output_Day int32
 ---@param Output_Year int32
-AUltra_Dynamic_Sky_C['Offset Date by a Number of Days'] = function(Input_Month, Input_Day, Input_Year, Offset, Output_Month, Output_Day, Output_Year) end
+AUltra_Dynamic_Sky_C['Offset Date by a Number of Days'] = function(self, Input_Month, Input_Day, Input_Year, Offset,
+                                                                   Output_Month, Output_Day, Output_Year) end
 ---@param Out double
-AUltra_Dynamic_Sky_C['Applied Cloud Speed'] = function(Out) end
+AUltra_Dynamic_Sky_C['Applied Cloud Speed'] = function(self, Out) end
 ---@param Day_Offset int32
 ---@param Season double
-AUltra_Dynamic_Sky_C['Season Value for Weather from Date and Time'] = function(Day_Offset, Season) end
-AUltra_Dynamic_Sky_C['Save Calendar Data'] = function() end
+AUltra_Dynamic_Sky_C['Season Value for Weather from Date and Time'] = function(self, Day_Offset, Season) end
+AUltra_Dynamic_Sky_C['Save Calendar Data'] = function(self,) end
 ---@param Month int32
 ---@param Day int32
 ---@param Time double
 ---@param Days_from_Start_of_Year double
-AUltra_Dynamic_Sky_C['Date and Time to Year Progress'] = function(Month, Day, Time, Days_from_Start_of_Year) end
+AUltra_Dynamic_Sky_C['Date and Time to Year Progress'] = function(self, Month, Day, Time, Days_from_Start_of_Year) end
 ---@param Year int32
 ---@param Leap_Year boolean
-AUltra_Dynamic_Sky_C['Check If Year is Leap Year'] = function(Year, Leap_Year) end
-AUltra_Dynamic_Sky_C['Time of Day Animation'] = function() end
+AUltra_Dynamic_Sky_C['Check If Year is Leap Year'] = function(self, Year, Leap_Year) end
+AUltra_Dynamic_Sky_C['Time of Day Animation'] = function(self,) end
 ---@param amount double
-AUltra_Dynamic_Sky_C['Increment Time of Day Forward'] = function(amount) end
-AUltra_Dynamic_Sky_C['Starting Animate Time of Day Offset'] = function() end
-AUltra_Dynamic_Sky_C['Start Up UDW If it Exists'] = function() end
-AUltra_Dynamic_Sky_C['Day Ended'] = function() end
+AUltra_Dynamic_Sky_C['Increment Time of Day Forward'] = function(self, amount) end
+AUltra_Dynamic_Sky_C['Starting Animate Time of Day Offset'] = function(self,) end
+AUltra_Dynamic_Sky_C['Start Up UDW If it Exists'] = function(self,) end
+AUltra_Dynamic_Sky_C['Day Ended'] = function(self,) end
 ---@param World_Rotation FRotator
 ---@param Light USceneComponent
 ---@return boolean
-AUltra_Dynamic_Sky_C['Lights Update Degree Threshold Test'] = function(World_Rotation, Light) end
+AUltra_Dynamic_Sky_C['Lights Update Degree Threshold Test'] = function(self, World_Rotation, Light) end
 ---@param LinearColor FLinearColor
-AUltra_Dynamic_Sky_C['2D Clouds Shading Offset Vector'] = function(LinearColor) end
+AUltra_Dynamic_Sky_C['2D Clouds Shading Offset Vector'] = function(self, LinearColor) end
 ---@param Group UDS_Cache_Group::Type
 ---@param Properties TArray<UDS_CachedProperties::Type>
-AUltra_Dynamic_Sky_C['Update Cache Group Boolean'] = function(Group, Properties) end
-AUltra_Dynamic_Sky_C['Update High Priority Properties'] = function() end
-AUltra_Dynamic_Sky_C['Update Low Priority Properties'] = function() end
-AUltra_Dynamic_Sky_C['Increment Cloud Movement Cache'] = function() end
-AUltra_Dynamic_Sky_C['Check for Time Event Dispatchers'] = function() end
+AUltra_Dynamic_Sky_C['Update Cache Group Boolean'] = function(self, Group, Properties) end
+AUltra_Dynamic_Sky_C['Update High Priority Properties'] = function(self,) end
+AUltra_Dynamic_Sky_C['Update Low Priority Properties'] = function(self,) end
+AUltra_Dynamic_Sky_C['Increment Cloud Movement Cache'] = function(self,) end
+AUltra_Dynamic_Sky_C['Check for Time Event Dispatchers'] = function(self,) end
 ---@param Hour int32
-AUltra_Dynamic_Sky_C['Update Lunar Phase'] = function(Hour) end
-AUltra_Dynamic_Sky_C['Start Active Timers'] = function() end
+AUltra_Dynamic_Sky_C['Update Lunar Phase'] = function(self, Hour) end
+AUltra_Dynamic_Sky_C['Start Active Timers'] = function(self,) end
 ---@param Light FLinearColor
 ---@param Shadow FLinearColor
-AUltra_Dynamic_Sky_C['Static Clouds Tint Color'] = function(Light, Shadow) end
-AUltra_Dynamic_Sky_C['Randomize Time Of Day'] = function() end
+AUltra_Dynamic_Sky_C['Static Clouds Tint Color'] = function(self, Light, Shadow) end
+AUltra_Dynamic_Sky_C['Randomize Time Of Day'] = function(self,) end
 ---@param Scale double
-AUltra_Dynamic_Sky_C['Cloud Texture Pan Scale'] = function(Scale) end
-AUltra_Dynamic_Sky_C['Update Global Volumetric Fog Material'] = function() end
-AUltra_Dynamic_Sky_C['Set Up Global Volumetric Fog Material'] = function() end
+AUltra_Dynamic_Sky_C['Cloud Texture Pan Scale'] = function(self, Scale) end
+AUltra_Dynamic_Sky_C['Update Global Volumetric Fog Material'] = function(self,) end
+AUltra_Dynamic_Sky_C['Set Up Global Volumetric Fog Material'] = function(self,) end
 ---@return double
-AUltra_Dynamic_Sky_C['Current Volumetric Cloud Sky Atmo Contribution'] = function() end
+AUltra_Dynamic_Sky_C['Current Volumetric Cloud Sky Atmo Contribution'] = function(self,) end
 ---@return double
-AUltra_Dynamic_Sky_C['Overcast Brightness'] = function() end
-AUltra_Dynamic_Sky_C['Notify of Removed Cloud Paint Container'] = function() end
-AUltra_Dynamic_Sky_C['Update Volumetric Cloud Light Rays'] = function() end
-AUltra_Dynamic_Sky_C['Update Cloud Coverage After Painting'] = function() end
+AUltra_Dynamic_Sky_C['Overcast Brightness'] = function(self,) end
+AUltra_Dynamic_Sky_C['Notify of Removed Cloud Paint Container'] = function(self,) end
+AUltra_Dynamic_Sky_C['Update Volumetric Cloud Light Rays'] = function(self,) end
+AUltra_Dynamic_Sky_C['Update Cloud Coverage After Painting'] = function(self,) end
 ---@param Location FVector
 ---@param Cloud_Coverage_with_Painting double
-AUltra_Dynamic_Sky_C['Test Point for Painted Cloud Coverage'] = function(Location, Cloud_Coverage_with_Painting) end
+AUltra_Dynamic_Sky_C['Test Point for Painted Cloud Coverage'] = function(self, Location, Cloud_Coverage_with_Painting) end
 ---@param Location FVector
-AUltra_Dynamic_Sky_C['Update Sky Atmosphere Location'] = function(Location) end
+AUltra_Dynamic_Sky_C['Update Sky Atmosphere Location'] = function(self, Location) end
 ---@param Out double
-AUltra_Dynamic_Sky_C['Current Volumetric Cloud Multiscattering Intensity'] = function(Out) end
+AUltra_Dynamic_Sky_C['Current Volumetric Cloud Multiscattering Intensity'] = function(self, Out) end
 ---@return double
-AUltra_Dynamic_Sky_C['Current Overcast Turbulence Strength'] = function() end
+AUltra_Dynamic_Sky_C['Current Overcast Turbulence Strength'] = function(self,) end
 ---@param Out FLinearColor
-AUltra_Dynamic_Sky_C['Current Cloud Wisps Color'] = function(Out) end
+AUltra_Dynamic_Sky_C['Current Cloud Wisps Color'] = function(self, Out) end
 ---@param Multiplier double
-AUltra_Dynamic_Sky_C['Night Filtered Night Brightness'] = function(Multiplier) end
-AUltra_Dynamic_Sky_C['Get Nearby Cloud Cells To Load Asynchronously'] = function() end
+AUltra_Dynamic_Sky_C['Night Filtered Night Brightness'] = function(self, Multiplier) end
+AUltra_Dynamic_Sky_C['Get Nearby Cloud Cells To Load Asynchronously'] = function(self,) end
 ---@param Object TSoftObjectPtr<UObject>
-AUltra_Dynamic_Sky_C['Release Async Loaded Object'] = function(Object) end
+AUltra_Dynamic_Sky_C['Release Async Loaded Object'] = function(self, Object) end
 ---@param Object TSoftObjectPtr<UObject>
 ---@param High_Priority boolean
-AUltra_Dynamic_Sky_C['Add Object to Async Loading Queue'] = function(Object, High_Priority) end
-AUltra_Dynamic_Sky_C['Check for Cloud Coverage Target Recenter'] = function() end
+AUltra_Dynamic_Sky_C['Add Object to Async Loading Queue'] = function(self, Object, High_Priority) end
+AUltra_Dynamic_Sky_C['Check for Cloud Coverage Target Recenter'] = function(self,) end
 ---@param In FVector2D
 ---@param Out FVector2D
-AUltra_Dynamic_Sky_C['World Space to Drawn Target Pixel Space'] = function(In, Out) end
+AUltra_Dynamic_Sky_C['World Space to Drawn Target Pixel Space'] = function(self, In, Out) end
 ---@param Mapping FVector
-AUltra_Dynamic_Sky_C['Cloud Coverage Target Mapping'] = function(Mapping) end
-AUltra_Dynamic_Sky_C['Update Painted Cloud Coverage Target'] = function() end
+AUltra_Dynamic_Sky_C['Cloud Coverage Target Mapping'] = function(self, Mapping) end
+AUltra_Dynamic_Sky_C['Update Painted Cloud Coverage Target'] = function(self,) end
 ---@param Out FLinearColor
-AUltra_Dynamic_Sky_C['Current Sky Atmosphere Absorption Color'] = function(Out) end
+AUltra_Dynamic_Sky_C['Current Sky Atmosphere Absorption Color'] = function(self, Out) end
 ---@param Out double
-AUltra_Dynamic_Sky_C['Current Volumetric Cloud Inner Emit Limit'] = function(Out) end
+AUltra_Dynamic_Sky_C['Current Volumetric Cloud Inner Emit Limit'] = function(self, Out) end
 ---@return FLinearColor
-AUltra_Dynamic_Sky_C['Current Cloud Fog Post Process Color'] = function() end
+AUltra_Dynamic_Sky_C['Current Cloud Fog Post Process Color'] = function(self,) end
 ---@return double
-AUltra_Dynamic_Sky_C['Inside Outside Cloud Layer'] = function() end
+AUltra_Dynamic_Sky_C['Inside Outside Cloud Layer'] = function(self,) end
 ---@param Multiplier double
 ---@param Out double
-AUltra_Dynamic_Sky_C['Overcast Luminance Boost'] = function(Multiplier, Out) end
+AUltra_Dynamic_Sky_C['Overcast Luminance Boost'] = function(self, Multiplier, Out) end
 ---@param Bottom FLinearColor
 ---@param Top FLinearColor
-AUltra_Dynamic_Sky_C['Volumetric Cloud Ambient Light Color'] = function(Bottom, Top) end
+AUltra_Dynamic_Sky_C['Volumetric Cloud Ambient Light Color'] = function(self, Bottom, Top) end
 ---@param Local_Height double
-AUltra_Dynamic_Sky_C['Get Cloud Coverage Local'] = function(Local_Height) end
+AUltra_Dynamic_Sky_C['Get Cloud Coverage Local'] = function(self, Local_Height) end
 ---@param Cloud_Coverage double
-AUltra_Dynamic_Sky_C['Get Cloud Coverage 0-3'] = function(Cloud_Coverage) end
+AUltra_Dynamic_Sky_C['Get Cloud Coverage 0-3'] = function(self, Cloud_Coverage) end
 ---@param Bottom_World_Height double
 ---@param Top_World_Height double
-AUltra_Dynamic_Sky_C['Cloud Layer Top and Bottom World Height'] = function(Bottom_World_Height, Top_World_Height) end
-AUltra_Dynamic_Sky_C['Camera Location Dependent Updates'] = function() end
-AUltra_Dynamic_Sky_C['Get Editor Camera Location'] = function() end
-AUltra_Dynamic_Sky_C['Get Runtime Camera Location'] = function() end
+AUltra_Dynamic_Sky_C['Cloud Layer Top and Bottom World Height'] = function(self, Bottom_World_Height, Top_World_Height) end
+AUltra_Dynamic_Sky_C['Camera Location Dependent Updates'] = function(self,) end
+AUltra_Dynamic_Sky_C['Get Editor Camera Location'] = function(self,) end
+AUltra_Dynamic_Sky_C['Get Runtime Camera Location'] = function(self,) end
 ---@param Light UDirectionalLightComponent
 ---@param Max_Brightness FVector2D
 ---@param Bloom_Threshold FVector2D
 ---@param Bloom_Scale FVector2D
 ---@param Forward_Vector FVector
-AUltra_Dynamic_Sky_C['Apply Light Shaft Settings'] = function(Light, Max_Brightness, Bloom_Threshold, Bloom_Scale, Forward_Vector) end
+AUltra_Dynamic_Sky_C['Apply Light Shaft Settings'] = function(self, Light, Max_Brightness, Bloom_Threshold, Bloom_Scale,
+                                                              Forward_Vector) end
 ---@param Location FVector
 ---@param Distance_to_Trace double
 ---@param Actors_to_Ignore_in_Trace TArray<AActor>
@@ -1089,323 +1095,330 @@ AUltra_Dynamic_Sky_C['Apply Light Shaft Settings'] = function(Light, Max_Brightn
 ---@param Exposed_to_Moon boolean
 ---@param Exposed_to_Either boolean
 ---@param Light_Intensity__Lux_ double
-AUltra_Dynamic_Sky_C['Check if Point is Exposed to Sun or Moon Light'] = function(Location, Distance_to_Trace, Actors_to_Ignore_in_Trace, Exposed_to_Sun, Exposed_to_Moon, Exposed_to_Either, Light_Intensity__Lux_) end
+AUltra_Dynamic_Sky_C['Check if Point is Exposed to Sun or Moon Light'] = function(self, Location, Distance_to_Trace,
+                                                                                  Actors_to_Ignore_in_Trace,
+                                                                                  Exposed_to_Sun, Exposed_to_Moon,
+                                                                                  Exposed_to_Either,
+                                                                                  Light_Intensity__Lux_) end
 ---@return double
-AUltra_Dynamic_Sky_C['Current Moons Cloud Mask'] = function() end
+AUltra_Dynamic_Sky_C['Current Moons Cloud Mask'] = function(self,) end
 ---@param In double
 ---@param Cine double
 ---@param Use_Higher boolean
 ---@param Out double
-AUltra_Dynamic_Sky_C['Swap with Cinematic Runtime Value'] = function(In, Cine, Use_Higher, Out) end
+AUltra_Dynamic_Sky_C['Swap with Cinematic Runtime Value'] = function(self, In, Cine, Use_Higher, Out) end
 ---@param Sun_Angular_Diameter double
 ---@param Moon_Angular_Diameter double
 ---@param Moon_Vector FVector
 ---@param Moon_Softness double
 ---@param Fraction_Showing double
-AUltra_Dynamic_Sky_C['Solar Eclipse Circle Mask'] = function(Sun_Angular_Diameter, Moon_Angular_Diameter, Moon_Vector, Moon_Softness, Fraction_Showing) end
+AUltra_Dynamic_Sky_C['Solar Eclipse Circle Mask'] = function(self, Sun_Angular_Diameter, Moon_Angular_Diameter,
+                                                             Moon_Vector, Moon_Softness, Fraction_Showing) end
 ---@return double
-AUltra_Dynamic_Sky_C['Current Space Layer Brightness'] = function() end
+AUltra_Dynamic_Sky_C['Current Space Layer Brightness'] = function(self,) end
 ---@param Planet FUDS_Space_Planet
 ---@param Out TSoftObjectPtr<UMaterialInterface>
-AUltra_Dynamic_Sky_C['Space Planet Parent MID'] = function(Planet, Out) end
-AUltra_Dynamic_Sky_C['Update Space Layer Vectors'] = function() end
+AUltra_Dynamic_Sky_C['Space Planet Parent MID'] = function(self, Planet, Out) end
+AUltra_Dynamic_Sky_C['Update Space Layer Vectors'] = function(self,) end
 ---@param Out FVector
-AUltra_Dynamic_Sky_C['Moon Z Vector'] = function(Out) end
+AUltra_Dynamic_Sky_C['Moon Z Vector'] = function(self, Out) end
 ---@param Out FVector
-AUltra_Dynamic_Sky_C['Sun Z Vector'] = function(Out) end
-AUltra_Dynamic_Sky_C['Construct Space Layer'] = function() end
-AUltra_Dynamic_Sky_C['Increment Cache Timer'] = function() end
+AUltra_Dynamic_Sky_C['Sun Z Vector'] = function(self, Out) end
+AUltra_Dynamic_Sky_C['Construct Space Layer'] = function(self,) end
+AUltra_Dynamic_Sky_C['Increment Cache Timer'] = function(self,) end
 ---@param Out double
-AUltra_Dynamic_Sky_C['Combined Night Brightness'] = function(Out) end
-AUltra_Dynamic_Sky_C['Restart Real Time Sky Light Capture'] = function() end
+AUltra_Dynamic_Sky_C['Combined Night Brightness'] = function(self, Out) end
+AUltra_Dynamic_Sky_C['Restart Real Time Sky Light Capture'] = function(self,) end
 ---@param Input_Day int32
 ---@param Input_Month int32
 ---@param Input_Year int32
 ---@param Days int32
-AUltra_Dynamic_Sky_C['Days Since J2000'] = function(Input_Day, Input_Month, Input_Year, Days) end
+AUltra_Dynamic_Sky_C['Days Since J2000'] = function(self, Input_Day, Input_Month, Input_Year, Days) end
 ---@param Out FLinearColor
-AUltra_Dynamic_Sky_C['Cloud Wisp Gradient Vector'] = function(Out) end
+AUltra_Dynamic_Sky_C['Cloud Wisp Gradient Vector'] = function(self, Out) end
 ---@return double
-AUltra_Dynamic_Sky_C['Current Directional Inscattering Exponent'] = function() end
+AUltra_Dynamic_Sky_C['Current Directional Inscattering Exponent'] = function(self,) end
 ---@param Out double
-AUltra_Dynamic_Sky_C['Current View Sample Scale'] = function(Out) end
+AUltra_Dynamic_Sky_C['Current View Sample Scale'] = function(self, Out) end
 ---@param Day double
 ---@param Dawn_Dusk double
 ---@param Night double
 ---@param Out double
-AUltra_Dynamic_Sky_C['Three Time Floats'] = function(Day, Dawn_Dusk, Night, Out) end
-AUltra_Dynamic_Sky_C['Update Post Process Blend Weights'] = function() end
-AUltra_Dynamic_Sky_C['Create Post Process Components'] = function() end
+AUltra_Dynamic_Sky_C['Three Time Floats'] = function(self, Day, Dawn_Dusk, Night, Out) end
+AUltra_Dynamic_Sky_C['Update Post Process Blend Weights'] = function(self,) end
+AUltra_Dynamic_Sky_C['Create Post Process Components'] = function(self,) end
 ---@param New_Sky_Mode UDS_SkyMode::Type
-AUltra_Dynamic_Sky_C['Change Sky Mode at Runtime'] = function(New_Sky_Mode) end
+AUltra_Dynamic_Sky_C['Change Sky Mode at Runtime'] = function(self, New_Sky_Mode) end
 ---@param Location UDS_CityPresets::Type
-AUltra_Dynamic_Sky_C['Apply Location Preset'] = function(Location) end
+AUltra_Dynamic_Sky_C['Apply Location Preset'] = function(self, Location) end
 ---@param Out double
-AUltra_Dynamic_Sky_C['Current Volumetric Cloud Shadow Tracing Distance'] = function(Out) end
+AUltra_Dynamic_Sky_C['Current Volumetric Cloud Shadow Tracing Distance'] = function(self, Out) end
 ---@return FLinearColor
-AUltra_Dynamic_Sky_C['Current Sky Atmosphere Luminance'] = function() end
-AUltra_Dynamic_Sky_C['Get UDW Reference'] = function() end
+AUltra_Dynamic_Sky_C['Current Sky Atmosphere Luminance'] = function(self,) end
+AUltra_Dynamic_Sky_C['Get UDW Reference'] = function(self,) end
 ---@param High FLinearColor
 ---@param Low FLinearColor
-AUltra_Dynamic_Sky_C['Volumetric Clouds SubNoise Scales'] = function(High, Low) end
+AUltra_Dynamic_Sky_C['Volumetric Clouds SubNoise Scales'] = function(self, High, Low) end
 ---@param Height_Clear double
 ---@param Height_Cloudy double
 ---@param Color double
-AUltra_Dynamic_Sky_C['Volumetric Cloud Floor Variation'] = function(Height_Clear, Height_Cloudy, Color) end
+AUltra_Dynamic_Sky_C['Volumetric Cloud Floor Variation'] = function(self, Height_Clear, Height_Cloudy, Color) end
 ---@param XY_Mask FLinearColor
-AUltra_Dynamic_Sky_C['Static Clouds Lighting Mask'] = function(XY_Mask) end
-AUltra_Dynamic_Sky_C['Starting Cloud Formation'] = function() end
+AUltra_Dynamic_Sky_C['Static Clouds Lighting Mask'] = function(self, XY_Mask) end
+AUltra_Dynamic_Sky_C['Starting Cloud Formation'] = function(self,) end
 ---@param Out FLinearColor
-AUltra_Dynamic_Sky_C['Simplified Sun Glow Color'] = function(Out) end
-AUltra_Dynamic_Sky_C['Size Cache Arrays'] = function() end
+AUltra_Dynamic_Sky_C['Simplified Sun Glow Color'] = function(self, Out) end
+AUltra_Dynamic_Sky_C['Size Cache Arrays'] = function(self,) end
 ---@param Bias double
-AUltra_Dynamic_Sky_C['Current Exposure Bias'] = function(Bias) end
-AUltra_Dynamic_Sky_C['Monitor for Changes'] = function() end
+AUltra_Dynamic_Sky_C['Current Exposure Bias'] = function(self, Bias) end
+AUltra_Dynamic_Sky_C['Monitor for Changes'] = function(self,) end
 ---@param Hard_Cache_Reset boolean
-AUltra_Dynamic_Sky_C['Cache Timer And Update Speed'] = function(Hard_Cache_Reset) end
+AUltra_Dynamic_Sky_C['Cache Timer And Update Speed'] = function(self, Hard_Cache_Reset) end
 ---@param Property UDS_CachedProperties::Type
 ---@param Value FVector
-AUltra_Dynamic_Sky_C['Get Cached Vector'] = function(Property, Value) end
+AUltra_Dynamic_Sky_C['Get Cached Vector'] = function(self, Property, Value) end
 ---@param Property UDS_CachedProperties::Type
 ---@param Set_Value FVector
 ---@param Change_Tolerance double
-AUltra_Dynamic_Sky_C['Cache Vector'] = function(Property, Set_Value, Change_Tolerance) end
-AUltra_Dynamic_Sky_C['Cache Sun and Moon Orientation'] = function() end
+AUltra_Dynamic_Sky_C['Cache Vector'] = function(self, Property, Set_Value, Change_Tolerance) end
+AUltra_Dynamic_Sky_C['Cache Sun and Moon Orientation'] = function(self,) end
 ---@param Property UDS_CachedProperties::Type
 ---@param Value FLinearColor
-AUltra_Dynamic_Sky_C['Get Cached Color'] = function(Property, Value) end
+AUltra_Dynamic_Sky_C['Get Cached Color'] = function(self, Property, Value) end
 ---@param Property UDS_CachedProperties::Type
 ---@param Set_Value FLinearColor
 ---@param Change_Tolerance double
-AUltra_Dynamic_Sky_C['Cache Color'] = function(Property, Set_Value, Change_Tolerance) end
+AUltra_Dynamic_Sky_C['Cache Color'] = function(self, Property, Set_Value, Change_Tolerance) end
 ---@param Property UDS_CachedProperties::Type
 ---@param Set_Value double
 ---@param Change_Tolerance double
-AUltra_Dynamic_Sky_C['Cache Float'] = function(Property, Set_Value, Change_Tolerance) end
+AUltra_Dynamic_Sky_C['Cache Float'] = function(self, Property, Set_Value, Change_Tolerance) end
 ---@param Cache_Group int32
 ---@param Starting_Cache_Fill boolean
-AUltra_Dynamic_Sky_C['Cache Properties'] = function(Cache_Group, Starting_Cache_Fill) end
+AUltra_Dynamic_Sky_C['Cache Properties'] = function(self, Cache_Group, Starting_Cache_Fill) end
 ---@param Property UDS_CachedProperties::Type
 ---@param Value double
-AUltra_Dynamic_Sky_C['Get Cached Float'] = function(Property, Value) end
-AUltra_Dynamic_Sky_C['Hard Reset Cache'] = function() end
+AUltra_Dynamic_Sky_C['Get Cached Float'] = function(self, Property, Value) end
+AUltra_Dynamic_Sky_C['Hard Reset Cache'] = function(self,) end
 ---@param Cached boolean
 ---@param Z double
-AUltra_Dynamic_Sky_C['Sun Height'] = function(Cached, Z) end
+AUltra_Dynamic_Sky_C['Sun Height'] = function(self, Cached, Z) end
 ---@param Eclipse_Percent double
 ---@param Tint_Color FLinearColor
-AUltra_Dynamic_Sky_C['Current Solar Eclipse Values'] = function(Eclipse_Percent, Tint_Color) end
+AUltra_Dynamic_Sky_C['Current Solar Eclipse Values'] = function(self, Eclipse_Percent, Tint_Color) end
 ---@param Sun_Vector FVector
 ---@param Intensity double
 ---@param Multiplier double
-AUltra_Dynamic_Sky_C['Adjust Base Sun Light Intensity'] = function(Sun_Vector, Intensity, Multiplier) end
+AUltra_Dynamic_Sky_C['Adjust Base Sun Light Intensity'] = function(self, Sun_Vector, Intensity, Multiplier) end
 ---@param Unfiltered double
 ---@param Intensity double
-AUltra_Dynamic_Sky_C['Filtered Moon Light Intensity'] = function(Unfiltered, Intensity) end
-AUltra_Dynamic_Sky_C['Initialize Occlusion'] = function() end
-AUltra_Dynamic_Sky_C['Tick Time Transition'] = function() end
-AUltra_Dynamic_Sky_C['Finish Time Transition'] = function() end
+AUltra_Dynamic_Sky_C['Filtered Moon Light Intensity'] = function(self, Unfiltered, Intensity) end
+AUltra_Dynamic_Sky_C['Initialize Occlusion'] = function(self,) end
+AUltra_Dynamic_Sky_C['Tick Time Transition'] = function(self,) end
+AUltra_Dynamic_Sky_C['Finish Time Transition'] = function(self,) end
 ---@param Out double
-AUltra_Dynamic_Sky_C['Directional Light Dimming'] = function(Out) end
+AUltra_Dynamic_Sky_C['Directional Light Dimming'] = function(self, Out) end
 ---@param Mat TSoftObjectPtr<UMaterialInterface>
-AUltra_Dynamic_Sky_C['Lens Flare Parent Material'] = function(Mat) end
+AUltra_Dynamic_Sky_C['Lens Flare Parent Material'] = function(self, Mat) end
 ---@param Mat TSoftObjectPtr<UMaterialInterface>
-AUltra_Dynamic_Sky_C['Cloud Shadows Parent Material'] = function(Mat) end
-AUltra_Dynamic_Sky_C['Load Required Assets'] = function() end
+AUltra_Dynamic_Sky_C['Cloud Shadows Parent Material'] = function(self, Mat) end
+AUltra_Dynamic_Sky_C['Load Required Assets'] = function(self,) end
 ---@param Z double
 ---@param Scale double
-AUltra_Dynamic_Sky_C['Twilight Brightness Falloff'] = function(Z, Scale) end
-AUltra_Dynamic_Sky_C['Construct Overcast Turbulence'] = function() end
-AUltra_Dynamic_Sky_C['Update Overcast Turbulence'] = function() end
-AUltra_Dynamic_Sky_C['Update Current Volumetric Clouds MID'] = function() end
+AUltra_Dynamic_Sky_C['Twilight Brightness Falloff'] = function(self, Z, Scale) end
+AUltra_Dynamic_Sky_C['Construct Overcast Turbulence'] = function(self,) end
+AUltra_Dynamic_Sky_C['Update Overcast Turbulence'] = function(self,) end
+AUltra_Dynamic_Sky_C['Update Current Volumetric Clouds MID'] = function(self,) end
 ---@param Out double
-AUltra_Dynamic_Sky_C['Current Max Trace Distance'] = function(Out) end
+AUltra_Dynamic_Sky_C['Current Max Trace Distance'] = function(self, Out) end
 ---@param Disk_Scale double
 ---@param Max_Scale_Factor double
 ---@param Scale_Setting double
 ---@param Out double
-AUltra_Dynamic_Sky_C['Directional Source Angle'] = function(Disk_Scale, Max_Scale_Factor, Scale_Setting, Out) end
+AUltra_Dynamic_Sky_C['Directional Source Angle'] = function(self, Disk_Scale, Max_Scale_Factor, Scale_Setting, Out) end
 ---@param Vector FLinearColor
 ---@param Cancel_Value double
-AUltra_Dynamic_Sky_C['Cloud Shadows Light Vector And Cancel Value'] = function(Vector, Cancel_Value) end
+AUltra_Dynamic_Sky_C['Cloud Shadows Light Vector And Cancel Value'] = function(self, Vector, Cancel_Value) end
 ---@param Cvar FString
 ---@param setting double
 ---@param Type int32
-AUltra_Dynamic_Sky_C['Apply Console Variable with Check'] = function(Cvar, setting, Type) end
+AUltra_Dynamic_Sky_C['Apply Console Variable with Check'] = function(self, Cvar, setting, Type) end
 ---@param Color FLinearColor
-AUltra_Dynamic_Sky_C['Current Moon Light Color'] = function(Color) end
+AUltra_Dynamic_Sky_C['Current Moon Light Color'] = function(self, Color) end
 ---@param Day_Color FLinearColor
 ---@param Dawn_Dusk_Color FLinearColor
 ---@param Night_Color FLinearColor
 ---@param Out FLinearColor
-AUltra_Dynamic_Sky_C['3 Color Time Blend'] = function(Day_Color, Dawn_Dusk_Color, Night_Color, Out) end
+AUltra_Dynamic_Sky_C['3 Color Time Blend'] = function(self, Day_Color, Dawn_Dusk_Color, Night_Color, Out) end
 ---@return FLinearColor
-AUltra_Dynamic_Sky_C['Simplfied Color Sun Scattering'] = function() end
+AUltra_Dynamic_Sky_C['Simplfied Color Sun Scattering'] = function(self,) end
 ---@param Multiplier double
-AUltra_Dynamic_Sky_C['Directional Inscattering Multiplier'] = function(Multiplier) end
-AUltra_Dynamic_Sky_C['Query Project Settings And UDS Version'] = function() end
+AUltra_Dynamic_Sky_C['Directional Inscattering Multiplier'] = function(self, Multiplier) end
+AUltra_Dynamic_Sky_C['Query Project Settings And UDS Version'] = function(self,) end
 ---@param Output double
-AUltra_Dynamic_Sky_C['Sky Atmosphere Fog Contribution'] = function(Output) end
+AUltra_Dynamic_Sky_C['Sky Atmosphere Fog Contribution'] = function(self, Output) end
 ---@param Layer_Scale double
-AUltra_Dynamic_Sky_C['Volumetric Cloud Layer Scale'] = function(Layer_Scale) end
+AUltra_Dynamic_Sky_C['Volumetric Cloud Layer Scale'] = function(self, Layer_Scale) end
 ---@param Cloud_Top_Altitude double
-AUltra_Dynamic_Sky_C['Volumetric Cloud First Layer Top Altitude'] = function(Cloud_Top_Altitude) end
+AUltra_Dynamic_Sky_C['Volumetric Cloud First Layer Top Altitude'] = function(self, Cloud_Top_Altitude) end
 ---@param Base_Cloud_Height double
 ---@param Layer_Height double
-AUltra_Dynamic_Sky_C['Volumetric Cloud Layer Height'] = function(Base_Cloud_Height, Layer_Height) end
+AUltra_Dynamic_Sky_C['Volumetric Cloud Layer Height'] = function(self, Base_Cloud_Height, Layer_Height) end
 ---@param Base_Cloud_Height double
-AUltra_Dynamic_Sky_C['Volumetric Cloud Base Cloud Height'] = function(Base_Cloud_Height) end
+AUltra_Dynamic_Sky_C['Volumetric Cloud Base Cloud Height'] = function(self, Base_Cloud_Height) end
 ---@return double
-AUltra_Dynamic_Sky_C['Current Volumetric Multiscattering Phase 1'] = function() end
+AUltra_Dynamic_Sky_C['Current Volumetric Multiscattering Phase 1'] = function(self,) end
 ---@param Sky_Ambient_Color FLinearColor
-AUltra_Dynamic_Sky_C['Current Sky Ambient Color'] = function(Sky_Ambient_Color) end
+AUltra_Dynamic_Sky_C['Current Sky Ambient Color'] = function(self, Sky_Ambient_Color) end
 ---@param Directional_Inscattering_Color FLinearColor
-AUltra_Dynamic_Sky_C['Current Fog Directional Inscattering Color'] = function(Directional_Inscattering_Color) end
+AUltra_Dynamic_Sky_C['Current Fog Directional Inscattering Color'] = function(self, Directional_Inscattering_Color) end
 ---@param Inscattering_Color FLinearColor
-AUltra_Dynamic_Sky_C['Current Fog Inscattering Color'] = function(Inscattering_Color) end
-AUltra_Dynamic_Sky_C['Set Current Fog Base Colors'] = function() end
+AUltra_Dynamic_Sky_C['Current Fog Inscattering Color'] = function(self, Inscattering_Color) end
+AUltra_Dynamic_Sky_C['Set Current Fog Base Colors'] = function(self,) end
 ---@param In double
 ---@param Out double
-AUltra_Dynamic_Sky_C['Scale Sample Count'] = function(In, Out) end
-AUltra_Dynamic_Sky_C['Fire Editor Dispatchers'] = function() end
+AUltra_Dynamic_Sky_C['Scale Sample Count'] = function(self, In, Out) end
+AUltra_Dynamic_Sky_C['Fire Editor Dispatchers'] = function(self,) end
 ---@return double
-AUltra_Dynamic_Sky_C['Current Wisps Opacity'] = function() end
+AUltra_Dynamic_Sky_C['Current Wisps Opacity'] = function(self,) end
 ---@return double
-AUltra_Dynamic_Sky_C['Current Overall Intensity'] = function() end
+AUltra_Dynamic_Sky_C['Current Overall Intensity'] = function(self,) end
 ---@return double
-AUltra_Dynamic_Sky_C['Current Lit Intensity'] = function() end
+AUltra_Dynamic_Sky_C['Current Lit Intensity'] = function(self,) end
 ---@return double
-AUltra_Dynamic_Sky_C['Fog Start Distance'] = function() end
+AUltra_Dynamic_Sky_C['Fog Start Distance'] = function(self,) end
 ---@return double
-AUltra_Dynamic_Sky_C['Fog Height Falloff'] = function() end
+AUltra_Dynamic_Sky_C['Fog Height Falloff'] = function(self,) end
 ---@return double
-AUltra_Dynamic_Sky_C['Current Fog Density'] = function() end
+AUltra_Dynamic_Sky_C['Current Fog Density'] = function(self,) end
 ---@return TSoftObjectPtr<UMaterialInterface>
-AUltra_Dynamic_Sky_C['Get Sky MID Parent Material Instance'] = function() end
+AUltra_Dynamic_Sky_C['Get Sky MID Parent Material Instance'] = function(self,) end
 ---@return double
-AUltra_Dynamic_Sky_C['Current Sunset Event Time'] = function() end
+AUltra_Dynamic_Sky_C['Current Sunset Event Time'] = function(self,) end
 ---@return double
-AUltra_Dynamic_Sky_C['Current Sunrise Event Time'] = function() end
+AUltra_Dynamic_Sky_C['Current Sunrise Event Time'] = function(self,) end
 ---@return double
-AUltra_Dynamic_Sky_C['Clouds Time of Day Factor'] = function() end
+AUltra_Dynamic_Sky_C['Clouds Time of Day Factor'] = function(self,) end
 ---@return double
-AUltra_Dynamic_Sky_C['Total Time Elapsed'] = function() end
+AUltra_Dynamic_Sky_C['Total Time Elapsed'] = function(self,) end
 ---@param Per_Second double
-AUltra_Dynamic_Sky_C['Time of Day Offset'] = function(Per_Second) end
+AUltra_Dynamic_Sky_C['Time of Day Offset'] = function(self, Per_Second) end
 ---@return FLinearColor
-AUltra_Dynamic_Sky_C['Current 2D Cloud Tint'] = function() end
+AUltra_Dynamic_Sky_C['Current 2D Cloud Tint'] = function(self,) end
 ---@param Cached boolean
 ---@return double
-AUltra_Dynamic_Sky_C['Night Filter'] = function(Cached) end
+AUltra_Dynamic_Sky_C['Night Filter'] = function(self, Cached) end
 ---@return double
-AUltra_Dynamic_Sky_C['Absent Directional Lights Brightness'] = function() end
+AUltra_Dynamic_Sky_C['Absent Directional Lights Brightness'] = function(self,) end
 ---@param Without_Light_Brightness double
 ---@return double
-AUltra_Dynamic_Sky_C['Moon Phase Light Multiplier'] = function(Without_Light_Brightness) end
+AUltra_Dynamic_Sky_C['Moon Phase Light Multiplier'] = function(self, Without_Light_Brightness) end
 ---@return boolean
-AUltra_Dynamic_Sky_C['Dimming Directional Lights'] = function() end
+AUltra_Dynamic_Sky_C['Dimming Directional Lights'] = function(self,) end
 ---@return FLinearColor
-AUltra_Dynamic_Sky_C['Current Light Pollution'] = function() end
+AUltra_Dynamic_Sky_C['Current Light Pollution'] = function(self,) end
 ---@return double
-AUltra_Dynamic_Sky_C['Current Aurora Intensity'] = function() end
+AUltra_Dynamic_Sky_C['Current Aurora Intensity'] = function(self,) end
 ---@return FLinearColor
-AUltra_Dynamic_Sky_C['Current Night Sky Glow'] = function() end
+AUltra_Dynamic_Sky_C['Current Night Sky Glow'] = function(self,) end
 ---@return FLinearColor
-AUltra_Dynamic_Sky_C['Current Stars Color'] = function() end
+AUltra_Dynamic_Sky_C['Current Stars Color'] = function(self,) end
 ---@return FLinearColor
-AUltra_Dynamic_Sky_C['Current Rayleigh Scattering Color'] = function() end
+AUltra_Dynamic_Sky_C['Current Rayleigh Scattering Color'] = function(self,) end
 ---@return double
-AUltra_Dynamic_Sky_C['Current Mie Scattering Scale'] = function() end
+AUltra_Dynamic_Sky_C['Current Mie Scattering Scale'] = function(self,) end
 ---@return double
-AUltra_Dynamic_Sky_C['Current Mie Anisotropy'] = function() end
+AUltra_Dynamic_Sky_C['Current Mie Anisotropy'] = function(self,) end
 ---@param Out_Intensity double
 ---@param Out_Color FLinearColor
-AUltra_Dynamic_Sky_C['Get Current Sky Light Color and Intensity'] = function(Out_Intensity, Out_Color) end
+AUltra_Dynamic_Sky_C['Get Current Sky Light Color and Intensity'] = function(self, Out_Intensity, Out_Color) end
 ---@return FLinearColor
-AUltra_Dynamic_Sky_C['Current Sky Light Lower Hemisphere Color'] = function() end
+AUltra_Dynamic_Sky_C['Current Sky Light Lower Hemisphere Color'] = function(self,) end
 ---@return FLinearColor
-AUltra_Dynamic_Sky_C['Current Moon Light Material Color'] = function() end
+AUltra_Dynamic_Sky_C['Current Moon Light Material Color'] = function(self,) end
 ---@return double
-AUltra_Dynamic_Sky_C['Current Moon Lit Percent'] = function() end
+AUltra_Dynamic_Sky_C['Current Moon Lit Percent'] = function(self,) end
 ---@return double
-AUltra_Dynamic_Sky_C['Current Moon Material Intensity'] = function() end
+AUltra_Dynamic_Sky_C['Current Moon Material Intensity'] = function(self,) end
 ---@return FLinearColor
-AUltra_Dynamic_Sky_C['Current Moon Phase Angle'] = function() end
+AUltra_Dynamic_Sky_C['Current Moon Phase Angle'] = function(self,) end
 ---@param Scale double
-AUltra_Dynamic_Sky_C['Current Moon Scale'] = function(Scale) end
+AUltra_Dynamic_Sky_C['Current Moon Scale'] = function(self, Scale) end
 ---@return double
-AUltra_Dynamic_Sky_C['Moon Light Specular Scale'] = function() end
+AUltra_Dynamic_Sky_C['Moon Light Specular Scale'] = function(self,) end
 ---@return double
-AUltra_Dynamic_Sky_C['Moon Light Volumetric Scattering Intensity'] = function() end
+AUltra_Dynamic_Sky_C['Moon Light Volumetric Scattering Intensity'] = function(self,) end
 ---@param Out double
-AUltra_Dynamic_Sky_C['Unfiltered Moon Light Intensity'] = function(Out) end
+AUltra_Dynamic_Sky_C['Unfiltered Moon Light Intensity'] = function(self, Out) end
 ---@return double
-AUltra_Dynamic_Sky_C['Current Sun Radius'] = function() end
+AUltra_Dynamic_Sky_C['Current Sun Radius'] = function(self,) end
 ---@return double
-AUltra_Dynamic_Sky_C['Current Sun Light Intensity'] = function() end
+AUltra_Dynamic_Sky_C['Current Sun Light Intensity'] = function(self,) end
 ---@return double
-AUltra_Dynamic_Sky_C['Current Sun Specular Scale'] = function() end
+AUltra_Dynamic_Sky_C['Current Sun Specular Scale'] = function(self,) end
 ---@param Force_Disabled boolean
 ---@param Light_Vector FVector
 ---@param Yes boolean
-AUltra_Dynamic_Sky_C['Is Directional Light Casting Shadows'] = function(Force_Disabled, Light_Vector, Yes) end
+AUltra_Dynamic_Sky_C['Is Directional Light Casting Shadows'] = function(self, Force_Disabled, Light_Vector, Yes) end
 ---@return FLinearColor
-AUltra_Dynamic_Sky_C['Current Sun Light Color'] = function() end
+AUltra_Dynamic_Sky_C['Current Sun Light Color'] = function(self,) end
 ---@return FLinearColor
-AUltra_Dynamic_Sky_C['Current Sun Disk Color'] = function() end
+AUltra_Dynamic_Sky_C['Current Sun Disk Color'] = function(self,) end
 ---@return double
-AUltra_Dynamic_Sky_C['Current Sun Disk Intensity'] = function() end
+AUltra_Dynamic_Sky_C['Current Sun Disk Intensity'] = function(self,) end
 ---@return double
-AUltra_Dynamic_Sky_C['Cloud Shadows Cloud Density'] = function() end
+AUltra_Dynamic_Sky_C['Cloud Shadows Cloud Density'] = function(self,) end
 ---@param Bottom FLinearColor
 ---@param Top FLinearColor
-AUltra_Dynamic_Sky_C['Get Volumetric Cloud Emissive Colors'] = function(Bottom, Top) end
+AUltra_Dynamic_Sky_C['Get Volumetric Cloud Emissive Colors'] = function(self, Bottom, Top) end
 ---@param MIDs TArray<UMaterialInstanceDynamic>
-AUltra_Dynamic_Sky_C['All Volumetric Cloud MIDs'] = function(MIDs) end
+AUltra_Dynamic_Sky_C['All Volumetric Cloud MIDs'] = function(self, MIDs) end
 ---@return double
-AUltra_Dynamic_Sky_C['Current Base Clouds Scale'] = function() end
+AUltra_Dynamic_Sky_C['Current Base Clouds Scale'] = function(self,) end
 ---@param Alpha double
-AUltra_Dynamic_Sky_C['Current Lerp to Simplified Clouds'] = function(Alpha) end
+AUltra_Dynamic_Sky_C['Current Lerp to Simplified Clouds'] = function(self, Alpha) end
 ---@param Simplified TSoftObjectPtr<UMaterialInterface>
 ---@param Complex TSoftObjectPtr<UMaterialInterface>
-AUltra_Dynamic_Sky_C['Volumetric Clouds Parent Materials'] = function(Simplified, Complex) end
+AUltra_Dynamic_Sky_C['Volumetric Clouds Parent Materials'] = function(self, Simplified, Complex) end
 ---@return double
-AUltra_Dynamic_Sky_C['Current Volumetric Cloud Macro Variation'] = function() end
+AUltra_Dynamic_Sky_C['Current Volumetric Cloud Macro Variation'] = function(self,) end
 ---@return FLinearColor
-AUltra_Dynamic_Sky_C['Current Volumetric Cloud Albedo'] = function() end
+AUltra_Dynamic_Sky_C['Current Volumetric Cloud Albedo'] = function(self,) end
 ---@param Occlusion double
-AUltra_Dynamic_Sky_C['Current Volumetric Cloud Multiscattering Occlusion'] = function(Occlusion) end
+AUltra_Dynamic_Sky_C['Current Volumetric Cloud Multiscattering Occlusion'] = function(self, Occlusion) end
 ---@param Top double
-AUltra_Dynamic_Sky_C['Get Current Volumetric Cloud Extinction Scale'] = function(Top) end
+AUltra_Dynamic_Sky_C['Get Current Volumetric Cloud Extinction Scale'] = function(self, Top) end
 ---@param Layer_1 boolean
 ---@param Out double
-AUltra_Dynamic_Sky_C['Current Volumetric Clouds Density'] = function(Layer_1, Out) end
-AUltra_Dynamic_Sky_C['Update Dynamic Sky Light Multiplier'] = function() end
+AUltra_Dynamic_Sky_C['Current Volumetric Clouds Density'] = function(self, Layer_1, Out) end
+AUltra_Dynamic_Sky_C['Update Dynamic Sky Light Multiplier'] = function(self,) end
 ---@param New_Sky_Light_Intensity_Multiplier double
 ---@param Transition_Time double
-AUltra_Dynamic_Sky_C['Transition Sky Light Intensity'] = function(New_Sky_Light_Intensity_Multiplier, Transition_Time) end
+AUltra_Dynamic_Sky_C['Transition Sky Light Intensity'] = function(self, New_Sky_Light_Intensity_Multiplier,
+                                                                  Transition_Time) end
 ---@param New_Time_of_Day double
 ---@param Transition_Duration__Seconds_ double
 ---@param Easing_Function EEasingFunc::Type
 ---@param Easing_Exponent double
 ---@param Allow_Time_Going_Backwards boolean
-AUltra_Dynamic_Sky_C['Transition Time of Day'] = function(New_Time_of_Day, Transition_Duration__Seconds_, Easing_Function, Easing_Exponent, Allow_Time_Going_Backwards) end
-AUltra_Dynamic_Sky_C['Update Lens Flare'] = function() end
-AUltra_Dynamic_Sky_C['Construct Lens Flare'] = function() end
+AUltra_Dynamic_Sky_C['Transition Time of Day'] = function(self, New_Time_of_Day, Transition_Duration__Seconds_,
+                                                          Easing_Function, Easing_Exponent, Allow_Time_Going_Backwards) end
+AUltra_Dynamic_Sky_C['Update Lens Flare'] = function(self,) end
+AUltra_Dynamic_Sky_C['Construct Lens Flare'] = function(self,) end
 ---@param Mode UDS_VolRT_Mode::Type
-AUltra_Dynamic_Sky_C['Apply Volumetric Mode'] = function(Mode) end
-AUltra_Dynamic_Sky_C['Find Real Sunset/Sunrise Times'] = function() end
+AUltra_Dynamic_Sky_C['Apply Volumetric Mode'] = function(self, Mode) end
+AUltra_Dynamic_Sky_C['Find Real Sunset/Sunrise Times'] = function(self,) end
 ---@param State FUDS_and_UDW_State
-AUltra_Dynamic_Sky_C['Apply Saved UDS and UDW State'] = function(State) end
+AUltra_Dynamic_Sky_C['Apply Saved UDS and UDW State'] = function(self, State) end
 ---@param Packaged_State FUDS_and_UDW_State
-AUltra_Dynamic_Sky_C['Create UDS and UDW State for Saving'] = function(Packaged_State) end
-AUltra_Dynamic_Sky_C['Update Replicated Time'] = function() end
-AUltra_Dynamic_Sky_C['OnRep_Replicated Time of Day'] = function() end
+AUltra_Dynamic_Sky_C['Create UDS and UDW State for Saving'] = function(self, Packaged_State) end
+AUltra_Dynamic_Sky_C['Update Replicated Time'] = function(self,) end
+AUltra_Dynamic_Sky_C['OnRep_Replicated Time of Day'] = function(self,) end
 ---@param Hour int32
-AUltra_Dynamic_Sky_C['Check for Daylight Savings Time'] = function(Hour) end
+AUltra_Dynamic_Sky_C['Check for Daylight Savings Time'] = function(self, Hour) end
 ---@param Offset int32
-AUltra_Dynamic_Sky_C['Offset Date'] = function(Offset) end
-AUltra_Dynamic_Sky_C['Force Valid Day'] = function() end
+AUltra_Dynamic_Sky_C['Offset Date'] = function(self, Offset) end
+AUltra_Dynamic_Sky_C['Force Valid Day'] = function(self,) end
 ---@param Time_of_Day double
 ---@param Only_Calculate_Sun boolean
 ---@param Sun_Vector FVector
@@ -1414,62 +1427,72 @@ AUltra_Dynamic_Sky_C['Force Valid Day'] = function() end
 ---@param Phase_Alignment FVector
 ---@param Celestial_Yaw FLinearColor
 ---@param Celestial_Orbit double
-AUltra_Dynamic_Sky_C['Approximate Real Sun Moon and Stars'] = function(Time_of_Day, Only_Calculate_Sun, Sun_Vector, Moon_Vector, Real_Phase, Phase_Alignment, Celestial_Yaw, Celestial_Orbit) end
+AUltra_Dynamic_Sky_C['Approximate Real Sun Moon and Stars'] = function(self, Time_of_Day, Only_Calculate_Sun, Sun_Vector,
+                                                                       Moon_Vector, Real_Phase, Phase_Alignment,
+                                                                       Celestial_Yaw, Celestial_Orbit) end
 ---@param Date_Time FDateTime
-AUltra_Dynamic_Sky_C['Set Date and Time'] = function(Date_Time) end
-AUltra_Dynamic_Sky_C['Update Directional Light Rotations'] = function() end
-AUltra_Dynamic_Sky_C['Recapture Sky Light'] = function() end
-AUltra_Dynamic_Sky_C['Update Settings Based on Scalability'] = function() end
-AUltra_Dynamic_Sky_C['Construction Script Function'] = function() end
-AUltra_Dynamic_Sky_C['Update Cloud Movement'] = function() end
+AUltra_Dynamic_Sky_C['Set Date and Time'] = function(self, Date_Time) end
+AUltra_Dynamic_Sky_C['Update Directional Light Rotations'] = function(self,) end
+AUltra_Dynamic_Sky_C['Recapture Sky Light'] = function(self,) end
+AUltra_Dynamic_Sky_C['Update Settings Based on Scalability'] = function(self,) end
+AUltra_Dynamic_Sky_C['Construction Script Function'] = function(self,) end
+AUltra_Dynamic_Sky_C['Update Cloud Movement'] = function(self,) end
 ---@return FVector
-AUltra_Dynamic_Sky_C['Cloud Texture Velocity'] = function() end
-AUltra_Dynamic_Sky_C['Update Static Variables'] = function() end
+AUltra_Dynamic_Sky_C['Cloud Texture Velocity'] = function(self,) end
+AUltra_Dynamic_Sky_C['Update Static Variables'] = function(self,) end
 ---@param Time_Code FTimecode
-AUltra_Dynamic_Sky_C['Set Time with Time Code'] = function(Time_Code) end
+AUltra_Dynamic_Sky_C['Set Time with Time Code'] = function(self, Time_Code) end
 ---@param Index int32
 ---@param Name FString
-AUltra_Dynamic_Sky_C['Get Day of the Week'] = function(Index, Name) end
+AUltra_Dynamic_Sky_C['Get Day of the Week'] = function(self, Index, Name) end
 ---@param Yes boolean
-AUltra_Dynamic_Sky_C['Is it Daytime?'] = function(Yes) end
+AUltra_Dynamic_Sky_C['Is it Daytime?'] = function(self, Yes) end
 ---@param Current_Date_and_Time FDateTime
-AUltra_Dynamic_Sky_C['Get DateTime'] = function(Current_Date_and_Time) end
+AUltra_Dynamic_Sky_C['Get DateTime'] = function(self, Current_Date_and_Time) end
 ---@param Time FTimecode
-AUltra_Dynamic_Sky_C['Get TimeCode'] = function(Time) end
-AUltra_Dynamic_Sky_C['Update Active Variables'] = function() end
-AUltra_Dynamic_Sky_C['Update Common Derivatives'] = function() end
-AUltra_Dynamic_Sky_C['Tick Function'] = function() end
-AUltra_Dynamic_Sky_C['Set Sun and Moon Root Rotation'] = function() end
+AUltra_Dynamic_Sky_C['Get TimeCode'] = function(self, Time) end
+AUltra_Dynamic_Sky_C['Update Active Variables'] = function(self,) end
+AUltra_Dynamic_Sky_C['Update Common Derivatives'] = function(self,) end
+AUltra_Dynamic_Sky_C['Tick Function'] = function(self,) end
+AUltra_Dynamic_Sky_C['Set Sun and Moon Root Rotation'] = function(self,) end
 function AUltra_Dynamic_Sky_C:UserConstructionScript() end
+
 ---@param Loaded UObject
 function AUltra_Dynamic_Sky_C:OnLoaded_AA91001A446E22425F2F54AAB2159C50(Loaded) end
-AUltra_Dynamic_Sky_C['UDW Instant Update'] = function() end
+
+AUltra_Dynamic_Sky_C['UDW Instant Update'] = function(self,) end
 ---@param EndPlayReason EEndPlayReason::Type
 function AUltra_Dynamic_Sky_C:ReceiveEndPlay(EndPlayReason) end
-AUltra_Dynamic_Sky_C['UDW Editor Update'] = function() end
+
+AUltra_Dynamic_Sky_C['UDW Editor Update'] = function(self,) end
 ---@param Modifiers TArray<UUDS_Modifier_C>
 ---@param Modifier_Alphas TArray<double>
 ---@param Modifier_Targets TArray<double>
 ---@param Modifier_Speeds TArray<double>
 ---@param Hard_Reset boolean
-AUltra_Dynamic_Sky_C['Replicate Modifier State'] = function(Modifiers, Modifier_Alphas, Modifier_Targets, Modifier_Speeds, Hard_Reset) end
-AUltra_Dynamic_Sky_C['Start Async Loader'] = function() end
-AUltra_Dynamic_Sky_C['Timed Override with New Changes'] = function() end
+AUltra_Dynamic_Sky_C['Replicate Modifier State'] = function(self, Modifiers, Modifier_Alphas, Modifier_Targets,
+                                                            Modifier_Speeds, Hard_Reset) end
+AUltra_Dynamic_Sky_C['Start Async Loader'] = function(self,) end
+AUltra_Dynamic_Sky_C['Timed Override with New Changes'] = function(self,) end
 ---@param DeltaSeconds float
 function AUltra_Dynamic_Sky_C:ReceiveTick(DeltaSeconds) end
+
 function AUltra_Dynamic_Sky_C:ReceiveBeginPlay() end
-AUltra_Dynamic_Sky_C['Force Startup'] = function() end
+
+AUltra_Dynamic_Sky_C['Force Startup'] = function(self,) end
 ---@param EntryPoint int32
 function AUltra_Dynamic_Sky_C:ExecuteUbergraph_Ultra_Dynamic_Sky(EntryPoint) end
-AUltra_Dynamic_Sky_C['Date Changed__DelegateSignature'] = function() end
+
+AUltra_Dynamic_Sky_C['Date Changed__DelegateSignature'] = function(self,) end
 ---@param Hour int32
-AUltra_Dynamic_Sky_C['Current Hour Changed__DelegateSignature'] = function(Hour) end
+AUltra_Dynamic_Sky_C['Current Hour Changed__DelegateSignature'] = function(self, Hour) end
 ---@param Minute__0_59_ int32
-AUltra_Dynamic_Sky_C['Every Minute__DelegateSignature'] = function(Minute__0_59_) end
+AUltra_Dynamic_Sky_C['Every Minute__DelegateSignature'] = function(self, Minute__0_59_) end
 ---@param Hour int32
 function AUltra_Dynamic_Sky_C:Hourly__DelegateSignature(Hour) end
+
 function AUltra_Dynamic_Sky_C:Midnight__DelegateSignature() end
+
 function AUltra_Dynamic_Sky_C:Sunrise__DelegateSignature() end
+
 function AUltra_Dynamic_Sky_C:Sunset__DelegateSignature() end
-
-

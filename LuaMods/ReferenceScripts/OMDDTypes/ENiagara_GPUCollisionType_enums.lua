@@ -6,4 +6,3 @@ ENiagara_GPUCollisionType = {
     NewEnumerator3 = 3,
     ENiagara_MAX = 4,
 }
-

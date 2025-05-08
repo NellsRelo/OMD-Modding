@@ -5,4 +5,3 @@ UDS_SkyLightMode = {
     NewEnumerator2 = 2,
     UDS_MAX = 3,
 }
-

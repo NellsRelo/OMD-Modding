@@ -5,6 +5,3 @@
 ---@field BP_Wood_Storage_G_Breakable UChildActorComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_FishTable_G2_Beakable_C = {}
-
-
-

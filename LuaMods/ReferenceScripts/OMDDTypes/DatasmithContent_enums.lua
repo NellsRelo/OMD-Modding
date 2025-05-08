@@ -94,4 +94,3 @@ EDatasmithImportSearchPackagePolicy = {
     All = 1,
     EDatasmithImportSearchPackagePolicy_MAX = 2,
 }
-

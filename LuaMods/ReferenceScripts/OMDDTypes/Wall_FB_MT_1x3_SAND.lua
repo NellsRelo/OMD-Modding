@@ -9,9 +9,6 @@
 ---@field CastTrim UStaticMeshComponent
 ---@field ColumnTrim_CastStone_600W2 UStaticMeshComponent
 ---@field ColumnTrim_CastStone_600W UStaticMeshComponent
----@field Box_WallCollision UBoxComponent
+---@field Box_WAllCollision UBoxComponent
 ---@field Wall URSTTrapGridBoxComponent
 AWall_FB_MT_1x3_SAND_C = {}
-
-
-

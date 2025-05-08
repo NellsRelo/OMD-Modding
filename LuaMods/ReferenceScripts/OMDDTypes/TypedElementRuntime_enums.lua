@@ -12,4 +12,3 @@ ETypedElementSelectionMethod = {
     Secondary = 1,
     ETypedElementSelectionMethod_MAX = 2,
 }
-

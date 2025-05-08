@@ -104,6 +104,3 @@
 ---@field ['Wall_4x15_Wainscot_BrickWhite-Wood_Window_SM_Union1'] UStaticMeshComponent
 ---@field Geo USceneComponent
 ABP_BackAlley_Village_SingleHouse_D_Vista_C = {}
-
-
-

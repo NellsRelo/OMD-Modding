@@ -4,6 +4,3 @@
 ---@field ParticleSystem UParticleSystemComponent
 ---@field Projectile_LP UAudioComponent
 ABP_Projectile_Orc_Boss_C = {}
-
-
-

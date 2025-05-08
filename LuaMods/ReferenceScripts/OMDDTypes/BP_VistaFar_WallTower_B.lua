@@ -8,6 +8,3 @@
 ---@field Foliage USceneComponent
 ---@field Geo USceneComponent
 ABP_VistaFar_WallTower_B_C = {}
-
-
-

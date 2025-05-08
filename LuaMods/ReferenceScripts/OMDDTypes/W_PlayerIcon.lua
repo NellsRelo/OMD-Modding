@@ -10,9 +10,9 @@
 UW_PlayerIcon_C = {}
 
 function UW_PlayerIcon_C:Construct() end
+
 ---@param NewPlayerState ARSTPlayerState
 function UW_PlayerIcon_C:SetPlayerState(NewPlayerState) end
+
 ---@param EntryPoint int32
 function UW_PlayerIcon_C:ExecuteUbergraph_W_PlayerIcon(EntryPoint) end
-
-

@@ -15,6 +15,3 @@
 ---@field Geo_Books USceneComponent
 ---@field Geo_Shelf USceneComponent
 ABP_Library_Bookshelf_Doorway_Merged_C = {}
-
-
-

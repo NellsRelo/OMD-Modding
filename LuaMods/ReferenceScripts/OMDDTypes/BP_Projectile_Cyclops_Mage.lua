@@ -11,7 +11,6 @@
 ABP_Projectile_Cyclops_Mage_C = {}
 
 function ABP_Projectile_Cyclops_Mage_C:ReceiveBeginPlay() end
+
 ---@param EntryPoint int32
 function ABP_Projectile_Cyclops_Mage_C:ExecuteUbergraph_BP_Projectile_Cyclops_Mage(EntryPoint) end
-
-

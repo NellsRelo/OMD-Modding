@@ -6,6 +6,3 @@
 ---@field Tendril_Corrupted_A UStaticMeshComponent
 ---@field StaticMesh UStaticMeshComponent
 ABP_CorruptedTrapGrid_C_C = {}
-
-
-

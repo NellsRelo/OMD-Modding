@@ -8,6 +8,3 @@
 ---@field Geo USceneComponent
 ---@field TrapGrid USceneComponent
 ABP_Crane_A_C = {}
-
-
-

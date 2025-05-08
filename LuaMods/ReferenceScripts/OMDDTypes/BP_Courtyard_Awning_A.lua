@@ -14,6 +14,3 @@
 ---@field Wood_Square_600W_A_Joint UStaticMeshComponent
 ---@field WoodPlank_4x1_Floor UStaticMeshComponent
 ABP_Courtyard_Awning_A_C = {}
-
-
-

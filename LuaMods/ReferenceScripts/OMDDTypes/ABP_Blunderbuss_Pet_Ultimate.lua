@@ -17,6 +17,10 @@ FAnimBlueprintGeneratedConstantData = {}
 
 
 
+---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
+FAnimBlueprintGeneratedMutableData = {}
+
+
 ---@class UABP_Blunderbuss_Pet_Ultimate_C : UAnimInstance
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance
@@ -33,11 +37,13 @@ UABP_Blunderbuss_Pet_Ultimate_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_Blunderbuss_Pet_Ultimate_C:AnimGraph(AnimGraph) end
+
 function UABP_Blunderbuss_Pet_Ultimate_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Blunderbuss_Pet_Ultimate_AnimGraphNode_ModifyBone_EBEC1E474734984728A4539DDA143E25() end
+
 ---@param DeltaTimeX float
 function UABP_Blunderbuss_Pet_Ultimate_C:BlueprintUpdateAnimation(DeltaTimeX) end
+
 function UABP_Blunderbuss_Pet_Ultimate_C:BlueprintInitializeAnimation() end
+
 ---@param EntryPoint int32
 function UABP_Blunderbuss_Pet_Ultimate_C:ExecuteUbergraph_ABP_Blunderbuss_Pet_Ultimate(EntryPoint) end
-
-

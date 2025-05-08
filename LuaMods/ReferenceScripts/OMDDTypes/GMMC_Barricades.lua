@@ -7,5 +7,3 @@ UGMMC_Barricades_C = {}
 ---@param Spec FGameplayEffectSpec
 ---@return float
 function UGMMC_Barricades_C:CalculateBaseMagnitude(Spec) end
-
-

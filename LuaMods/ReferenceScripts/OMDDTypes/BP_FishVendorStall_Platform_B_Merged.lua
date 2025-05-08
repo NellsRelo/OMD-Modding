@@ -67,6 +67,3 @@
 ---@field TrapGrid USceneComponent
 ---@field Collision USceneComponent
 ABP_FishVendorStall_Platform_B_Merged_C = {}
-
-
-

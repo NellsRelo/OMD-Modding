@@ -13,6 +13,3 @@
 ---@field Proto_Dome_C UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Dome_C_Group_C = {}
-
-
-

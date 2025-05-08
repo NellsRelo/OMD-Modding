@@ -480,7 +480,6 @@ IMovieSceneTransformOrigin = {}
 ---@return FTransform
 function IMovieSceneTransformOrigin:BP_GetTransformOrigin() end
 
-
 ---@class UBoolChannelEvaluatorSystem : UMovieSceneEntitySystem
 UBoolChannelEvaluatorSystem = {}
 
@@ -533,9 +532,9 @@ UMovieScene3DConstraintSection = {}
 
 ---@param InConstraintBindingID FMovieSceneObjectBindingID
 function UMovieScene3DConstraintSection:SetConstraintBindingID(InConstraintBindingID) end
+
 ---@return FMovieSceneObjectBindingID
 function UMovieScene3DConstraintSection:GetConstraintBindingID() end
-
 
 ---@class UMovieScene3DConstraintTrack : UMovieSceneTrack
 ---@field ConstraintSections TArray<UMovieSceneSection>
@@ -611,22 +610,24 @@ UMovieSceneAsyncAction_SequencePrediction = {}
 ---@param TimeInSeconds float
 ---@return UMovieSceneAsyncAction_SequencePrediction
 function UMovieSceneAsyncAction_SequencePrediction:PredictWorldTransformAtTime(Player, TargetComponent, TimeInSeconds) end
+
 ---@param Player UMovieSceneSequencePlayer
 ---@param TargetComponent USceneComponent
 ---@param FrameTime FFrameTime
 ---@return UMovieSceneAsyncAction_SequencePrediction
 function UMovieSceneAsyncAction_SequencePrediction:PredictWorldTransformAtFrame(Player, TargetComponent, FrameTime) end
+
 ---@param Player UMovieSceneSequencePlayer
 ---@param TargetComponent USceneComponent
 ---@param TimeInSeconds float
 ---@return UMovieSceneAsyncAction_SequencePrediction
 function UMovieSceneAsyncAction_SequencePrediction:PredictLocalTransformAtTime(Player, TargetComponent, TimeInSeconds) end
+
 ---@param Player UMovieSceneSequencePlayer
 ---@param TargetComponent USceneComponent
 ---@param FrameTime FFrameTime
 ---@return UMovieSceneAsyncAction_SequencePrediction
 function UMovieSceneAsyncAction_SequencePrediction:PredictLocalTransformAtFrame(Player, TargetComponent, FrameTime) end
-
 
 ---@class UMovieSceneAudioSection : UMovieSceneSection
 ---@field Sound USoundBase
@@ -654,29 +655,39 @@ UMovieSceneAudioSection = {}
 
 ---@param bInSuppressSubtitles boolean
 function UMovieSceneAudioSection:SetSuppressSubtitles(bInSuppressSubtitles) end
+
 ---@param InStartOffset FFrameNumber
 function UMovieSceneAudioSection:SetStartOffset(InStartOffset) end
+
 ---@param InSound USoundBase
 function UMovieSceneAudioSection:SetSound(InSound) end
+
 ---@param bInOverrideAttenuation boolean
 function UMovieSceneAudioSection:SetOverrideAttenuation(bInOverrideAttenuation) end
+
 ---@param bInLooping boolean
 function UMovieSceneAudioSection:SetLooping(bInLooping) end
+
 ---@param InAttenuationSettings USoundAttenuation
 function UMovieSceneAudioSection:SetAttenuationSettings(InAttenuationSettings) end
+
 ---@return boolean
 function UMovieSceneAudioSection:GetSuppressSubtitles() end
+
 ---@return FFrameNumber
 function UMovieSceneAudioSection:GetStartOffset() end
+
 ---@return USoundBase
 function UMovieSceneAudioSection:GetSound() end
+
 ---@return boolean
 function UMovieSceneAudioSection:GetOverrideAttenuation() end
+
 ---@return boolean
 function UMovieSceneAudioSection:GetLooping() end
+
 ---@return USoundAttenuation
 function UMovieSceneAudioSection:GetAttenuationSettings() end
-
 
 ---@class UMovieSceneAudioSystem : UMovieSceneEntitySystem
 UMovieSceneAudioSystem = {}
@@ -727,9 +738,9 @@ UMovieSceneCVarSection = {}
 
 ---@param InString FString
 function UMovieSceneCVarSection:SetFromString(InString) end
+
 ---@return FString
 function UMovieSceneCVarSection:GetString() end
-
 
 ---@class UMovieSceneCVarTrack : UMovieSceneNameableTrack
 ---@field Sections TArray<UMovieSceneSection>
@@ -751,9 +762,9 @@ UMovieSceneCameraCutSection = {}
 
 ---@param InCameraBindingID FMovieSceneObjectBindingID
 function UMovieSceneCameraCutSection:SetCameraBindingID(InCameraBindingID) end
+
 ---@return FMovieSceneObjectBindingID
 function UMovieSceneCameraCutSection:GetCameraBindingID() end
-
 
 ---@class UMovieSceneCameraCutTrack : UMovieSceneNameableTrack
 ---@field bCanBlend boolean
@@ -817,9 +828,9 @@ UMovieSceneCinematicShotSection = {}
 
 ---@param InShotDisplayName FString
 function UMovieSceneCinematicShotSection:SetShotDisplayName(InShotDisplayName) end
+
 ---@return FString
 function UMovieSceneCinematicShotSection:GetShotDisplayName() end
-
 
 ---@class UMovieSceneCinematicShotTrack : UMovieSceneSubTrack
 UMovieSceneCinematicShotTrack = {}
@@ -884,25 +895,33 @@ UMovieSceneDataLayerSection = {}
 
 ---@param InPrerollState EDataLayerRuntimeState
 function UMovieSceneDataLayerSection:SetPrerollState(InPrerollState) end
+
 ---@param bFlushOnUnload boolean
 function UMovieSceneDataLayerSection:SetFlushOnUnload(bFlushOnUnload) end
+
 ---@param InDesiredState EDataLayerRuntimeState
 function UMovieSceneDataLayerSection:SetDesiredState(InDesiredState) end
+
 ---@param InDataLayers TArray<FActorDataLayer>
 function UMovieSceneDataLayerSection:SetDataLayers(InDataLayers) end
+
 ---@param InDataLayerAssets TArray<UDataLayerAsset>
 function UMovieSceneDataLayerSection:SetDataLayerAssets(InDataLayerAssets) end
+
 ---@return EDataLayerRuntimeState
 function UMovieSceneDataLayerSection:GetPrerollState() end
+
 ---@return boolean
 function UMovieSceneDataLayerSection:GetFlushOnUnload() end
+
 ---@return EDataLayerRuntimeState
 function UMovieSceneDataLayerSection:GetDesiredState() end
+
 ---@return TArray<FActorDataLayer>
 function UMovieSceneDataLayerSection:GetDataLayers() end
+
 ---@return TArray<UDataLayerAsset>
 function UMovieSceneDataLayerSection:GetDataLayerAssets() end
-
 
 ---@class UMovieSceneDataLayerSystem : UMovieSceneEntitySystem
 UMovieSceneDataLayerSystem = {}
@@ -1120,13 +1139,15 @@ UMovieSceneLevelVisibilitySection = {}
 
 ---@param InVisibility ELevelVisibility
 function UMovieSceneLevelVisibilitySection:SetVisibility(InVisibility) end
+
 ---@param InLevelNames TArray<FName>
 function UMovieSceneLevelVisibilitySection:SetLevelNames(InLevelNames) end
+
 ---@return ELevelVisibility
 function UMovieSceneLevelVisibilitySection:GetVisibility() end
+
 ---@return TArray<FName>
 function UMovieSceneLevelVisibilitySection:GetLevelNames() end
-
 
 ---@class UMovieSceneLevelVisibilitySystem : UMovieSceneEntitySystem
 UMovieSceneLevelVisibilitySystem = {}
@@ -1189,48 +1210,59 @@ UMovieSceneParameterSection = {}
 ---@param InParameterName FName
 ---@return boolean
 function UMovieSceneParameterSection:RemoveVectorParameter(InParameterName) end
+
 ---@param InParameterName FName
 ---@return boolean
 function UMovieSceneParameterSection:RemoveVector2DParameter(InParameterName) end
+
 ---@param InParameterName FName
 ---@return boolean
 function UMovieSceneParameterSection:RemoveTransformParameter(InParameterName) end
+
 ---@param InParameterName FName
 ---@return boolean
 function UMovieSceneParameterSection:RemoveScalarParameter(InParameterName) end
+
 ---@param InParameterName FName
 ---@return boolean
 function UMovieSceneParameterSection:RemoveColorParameter(InParameterName) end
+
 ---@param InParameterName FName
 ---@return boolean
 function UMovieSceneParameterSection:RemoveBoolParameter(InParameterName) end
+
 ---@param ParameterNames TSet<FName>
 function UMovieSceneParameterSection:GetParameterNames(ParameterNames) end
+
 ---@param InParameterName FName
 ---@param InTime FFrameNumber
 ---@param InValue FVector
 function UMovieSceneParameterSection:AddVectorParameterKey(InParameterName, InTime, InValue) end
+
 ---@param InParameterName FName
 ---@param InTime FFrameNumber
 ---@param InValue FVector2D
 function UMovieSceneParameterSection:AddVector2DParameterKey(InParameterName, InTime, InValue) end
+
 ---@param InParameterName FName
 ---@param InTime FFrameNumber
 ---@param InValue FTransform
 function UMovieSceneParameterSection:AddTransformParameterKey(InParameterName, InTime, InValue) end
+
 ---@param InParameterName FName
 ---@param InTime FFrameNumber
 ---@param InValue float
 function UMovieSceneParameterSection:AddScalarParameterKey(InParameterName, InTime, InValue) end
+
 ---@param InParameterName FName
 ---@param InTime FFrameNumber
 ---@param InValue FLinearColor
 function UMovieSceneParameterSection:AddColorParameterKey(InParameterName, InTime, InValue) end
+
 ---@param InParameterName FName
 ---@param InTime FFrameNumber
 ---@param InValue boolean
 function UMovieSceneParameterSection:AddBoolParameterKey(InParameterName, InTime, InValue) end
-
 
 ---@class UMovieSceneParticleParameterTrack : UMovieSceneNameableTrack
 ---@field Sections TArray<UMovieSceneSection>
@@ -1365,9 +1397,9 @@ UMovieSceneSkeletalAnimationTrack = {}
 
 ---@param InValue ESwapRootBone
 function UMovieSceneSkeletalAnimationTrack:SetSwapRootBone(InValue) end
+
 ---@return ESwapRootBone
 function UMovieSceneSkeletalAnimationTrack:GetSwapRootBone() end
-
 
 ---@class UMovieSceneSlomoSection : UMovieSceneSection
 ---@field FloatCurve FMovieSceneFloatChannel
@@ -1427,5 +1459,3 @@ UStringChannelEvaluatorSystem = {}
 
 ---@class UWeightAndEasingEvaluatorSystem : UMovieSceneEntitySystem
 UWeightAndEasingEvaluatorSystem = {}
-
-

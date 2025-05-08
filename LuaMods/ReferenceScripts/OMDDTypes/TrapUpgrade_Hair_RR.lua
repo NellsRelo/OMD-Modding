@@ -189,6 +189,3 @@ URigVMMemory_Work = {}
 ---@field Chains TArray<FRigElementKeyCollection>
 ---@field BaseRots TArray<FQuat>
 UTrapUpgrade_Hair_RR_C = {}
-
-
-

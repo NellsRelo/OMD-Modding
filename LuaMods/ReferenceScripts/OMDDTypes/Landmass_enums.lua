@@ -12,4 +12,3 @@ EBrushFalloffMode = {
     Width = 1,
     EBrushFalloffMode_MAX = 2,
 }
-

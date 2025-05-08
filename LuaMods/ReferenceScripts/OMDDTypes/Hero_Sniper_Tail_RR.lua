@@ -50,6 +50,3 @@ URigVMMemory_Literal = {}
 ---@field RunChainSpring___RunChainSpring_DISPATCH_RigVMDispatch_ArrayIterator_BlockToRun FName
 ---@field RigVMModel___FABRIKItemArray_WorkData TArray<FRigUnit_FABRIK_WorkData>
 URigVMMemory_Work = {}
-
-
-

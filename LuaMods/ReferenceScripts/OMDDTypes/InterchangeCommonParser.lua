@@ -23,6 +23,3 @@ FInterchangeCurveKey = {}
 ---@class FInterchangeStepCurve
 ---@field KeyTimes TArray<float>
 FInterchangeStepCurve = {}
-
-
-

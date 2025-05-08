@@ -4,4 +4,3 @@ ENiagaraSUbUVAnimationMode = {
     NewEnumerator1 = 1,
     ENiagaraSUbUVAnimationMode_MAX = 2,
 }
-

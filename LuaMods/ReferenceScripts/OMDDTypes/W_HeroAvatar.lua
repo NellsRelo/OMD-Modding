@@ -10,21 +10,26 @@
 ---@field OnActorSpawned FW_HeroAvatar_COnActorSpawned
 UW_HeroAvatar_C = {}
 
-UW_HeroAvatar_C['On Hero Load Finished'] = function() end
+UW_HeroAvatar_C['On Hero Load Finished'] = function(self,) end
 function UW_HeroAvatar_C:ResumeSceneCapture() end
+
 function UW_HeroAvatar_C:PauseSceneCapture() end
+
 ---@param Pawn_Tag FGameplayTag
 function UW_HeroAvatar_C:GetPawnTag(Pawn_Tag) end
+
 ---@param HeroActor AWidgetActor_C
 function UW_HeroAvatar_C:GetHeroActor(HeroActor) end
+
 ---@param PawnTag FGameplayTag
----@param SkinTag FGameplayTag
-UW_HeroAvatar_C['Set From Pawn Tag'] = function(PawnTag, SkinTag) end
+---@param SkinTags FGameplayTagContainer
+UW_HeroAvatar_C['Set From Pawn Tag'] = function(self, PawnTag, SkinTags) end
 function UW_HeroAvatar_C:Destruct() end
+
 function UW_HeroAvatar_C:BP_OnDeactivated_1() end
+
 ---@param EntryPoint int32
 function UW_HeroAvatar_C:ExecuteUbergraph_W_HeroAvatar(EntryPoint) end
+
 ---@param NewActor AWidgetActor_C
 function UW_HeroAvatar_C:OnActorSpawned__DelegateSignature(NewActor) end
-
-

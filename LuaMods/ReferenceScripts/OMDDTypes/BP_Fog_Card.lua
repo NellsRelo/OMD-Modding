@@ -23,5 +23,3 @@
 ABP_Fog_Card_C = {}
 
 function ABP_Fog_Card_C:UserConstructionScript() end
-
-

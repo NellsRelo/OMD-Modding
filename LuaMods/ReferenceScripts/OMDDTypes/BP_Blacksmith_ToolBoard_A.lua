@@ -10,6 +10,3 @@
 ---@field Hub_BlackSmith_Hammer_01 UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Blacksmith_ToolBoard_A_C = {}
-
-
-

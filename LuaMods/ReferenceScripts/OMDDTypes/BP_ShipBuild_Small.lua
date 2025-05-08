@@ -87,6 +87,3 @@
 ---@field Scaffold_LargeShipLaunch_1600_A_SM2_StaticMeshComponent0 UStaticMeshComponent
 ---@field SharedRoot USceneComponent
 ABP_ShipBuild_Small_C = {}
-
-
-

@@ -5,6 +5,3 @@
 ---@field TextRender UTextRenderComponent
 ---@field Scene USceneComponent
 ABP_ChestSpawner_C = {}
-
-
-

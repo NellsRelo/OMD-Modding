@@ -32,9 +32,9 @@ UResonanceAudioBlueprintFunctionLibrary = {}
 
 ---@param InPreset UResonanceAudioReverbPluginPreset
 function UResonanceAudioBlueprintFunctionLibrary:SetGlobalReverbPreset(InPreset) end
+
 ---@return UResonanceAudioReverbPluginPreset
 function UResonanceAudioBlueprintFunctionLibrary:GetGlobalReverbPreset() end
-
 
 ---@class UResonanceAudioReverbPluginPreset : USoundEffectSubmixPreset
 ---@field Settings FResonanceAudioReverbPluginSettings
@@ -42,23 +42,30 @@ UResonanceAudioReverbPluginPreset = {}
 
 ---@param InRotation FQuat
 function UResonanceAudioReverbPluginPreset:SetRoomRotation(InRotation) end
+
 ---@param InPosition FVector
 function UResonanceAudioReverbPluginPreset:SetRoomPosition(InPosition) end
+
 ---@param InMaterials TArray<ERaMaterialName>
 function UResonanceAudioReverbPluginPreset:SetRoomMaterials(InMaterials) end
+
 ---@param InDimensions FVector
 function UResonanceAudioReverbPluginPreset:SetRoomDimensions(InDimensions) end
+
 ---@param InReverbTimeModifier float
 function UResonanceAudioReverbPluginPreset:SetReverbTimeModifier(InReverbTimeModifier) end
+
 ---@param InReverbGain float
 function UResonanceAudioReverbPluginPreset:SetReverbGain(InReverbGain) end
+
 ---@param InReverbBrightness float
 function UResonanceAudioReverbPluginPreset:SetReverbBrightness(InReverbBrightness) end
+
 ---@param InReflectionScalar float
 function UResonanceAudioReverbPluginPreset:SetReflectionScalar(InReflectionScalar) end
+
 ---@param bInEnableRoomEffects boolean
 function UResonanceAudioReverbPluginPreset:SetEnableRoomEffects(bInEnableRoomEffects) end
-
 
 ---@class UResonanceAudioSettings : UObject
 ---@field OutputSubmix FSoftObjectPath
@@ -89,8 +96,7 @@ UResonanceAudioSpatializationSourceSettings = {}
 
 ---@param InSpread float
 function UResonanceAudioSpatializationSourceSettings:SetSoundSourceSpread(InSpread) end
+
 ---@param InPattern float
 ---@param InSharpness float
 function UResonanceAudioSpatializationSourceSettings:SetSoundSourceDirectivity(InPattern, InSharpness) end
-
-

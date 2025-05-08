@@ -5,4 +5,3 @@ ENiagara_UnsetDirectSetRandom = {
     NewEnumerator3 = 2,
     ENiagara_MAX = 3,
 }
-

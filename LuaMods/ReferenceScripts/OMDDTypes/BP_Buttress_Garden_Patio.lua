@@ -9,6 +9,3 @@
 ---@field ColumnTrim_CastStone_1200W UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Buttress_Garden_Patio_C = {}
-
-
-

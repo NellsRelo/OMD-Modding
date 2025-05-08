@@ -5,6 +5,3 @@
 ---@field Castle_Lamppost_C UStaticMeshComponent
 ---@field Geometry USceneComponent
 ABP_Resort_Lamp_Hang_B_Unlit_C = {}
-
-
-

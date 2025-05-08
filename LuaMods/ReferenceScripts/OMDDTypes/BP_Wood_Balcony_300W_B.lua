@@ -15,6 +15,3 @@
 ---@field Wood_Square_600W_A_NoTaper_Light1 UStaticMeshComponent
 ---@field Geometry USceneComponent
 ABP_Wood_Balcony_300W_B_C = {}
-
-
-

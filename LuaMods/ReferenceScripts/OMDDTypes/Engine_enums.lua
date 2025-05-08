@@ -279,7 +279,7 @@ EAnimPropertyAccessCallSite = {
 
 ---@enum EAnimSyncGroupScope
 EAnimSyncGroupScope = {
-    Local = 0,
+    = 0,
     Component = 1,
     EAnimSyncGroupScope_MAX = 2,
 }
@@ -705,7 +705,7 @@ ECameraShakeDurationType = {
 
 ---@enum ECameraShakePlaySpace
 ECameraShakePlaySpace = {
-    CameraLocal = 0,
+    Camera= 0,
     World = 1,
     UserDefined = 2,
     ECameraShakePlaySpace_MAX = 3,
@@ -2007,7 +2007,7 @@ EMaterialParameterAssociation = {
 
 ---@enum EMaterialPositionTransformSource
 EMaterialPositionTransformSource = {
-    TRANSFORMPOSSOURCE_Local = 0,
+    TRANSFORMPOSSOURCE_= 0,
     TRANSFORMPOSSOURCE_World = 1,
     TRANSFORMPOSSOURCE_TranslatedWorld = 2,
     TRANSFORMPOSSOURCE_View = 3,
@@ -2170,7 +2170,7 @@ EMaterialUsage = {
 ---@enum EMaterialVectorCoordTransform
 EMaterialVectorCoordTransform = {
     TRANSFORM_Tangent = 0,
-    TRANSFORM_Local = 1,
+    TRANSFORM_= 1,
     TRANSFORM_World = 2,
     TRANSFORM_View = 3,
     TRANSFORM_Camera = 4,
@@ -2182,7 +2182,7 @@ EMaterialVectorCoordTransform = {
 ---@enum EMaterialVectorCoordTransformSource
 EMaterialVectorCoordTransformSource = {
     TRANSFORMSOURCE_Tangent = 0,
-    TRANSFORMSOURCE_Local = 1,
+    TRANSFORMSOURCE_= 1,
     TRANSFORMSOURCE_World = 2,
     TRANSFORMSOURCE_View = 3,
     TRANSFORMSOURCE_Camera = 4,
@@ -4066,7 +4066,7 @@ ESpeedTreeWindType = {
 
 ---@enum ESplineCoordinateSpace
 ESplineCoordinateSpace = {
-    Local = 0,
+    = 0,
     World = 1,
     ESplineCoordinateSpace_MAX = 2,
 }

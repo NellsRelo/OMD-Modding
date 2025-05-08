@@ -27,6 +27,3 @@
 ---@field TrapGrid USceneComponent
 ---@field Geo USceneComponent
 ABP_FishMarket_Bridge_B_C = {}
-
-
-

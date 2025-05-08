@@ -55,6 +55,10 @@
     null,
     "GameplayTagContainer"
   ],
+  "LocationToDeathHeatMapBrush":[
+    "IntVector2",
+    null
+  ],
   "LinkedModifierObjects":[
     "Guid",
     null

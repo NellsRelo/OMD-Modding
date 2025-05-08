@@ -8,7 +8,6 @@ UBTService_SelectNewLocation_C = {}
 ---@param ControlledPawn APawn
 ---@param DeltaSeconds float
 function UBTService_SelectNewLocation_C:ReceiveTickAI(OwnerController, ControlledPawn, DeltaSeconds) end
+
 ---@param EntryPoint int32
 function UBTService_SelectNewLocation_C:ExecuteUbergraph_BTService_SelectNewLocation(EntryPoint) end
-
-

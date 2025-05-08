@@ -9,4 +9,3 @@ EMediaPlateEventState = {
     Rewind = 6,
     MAX = 7,
 }
-

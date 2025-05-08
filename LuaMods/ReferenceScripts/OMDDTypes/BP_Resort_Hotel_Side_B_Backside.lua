@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABP_Resort_Hotel_Side_B_Backside_C : ABP_OMDTrapGrid_C
+---@field Crenel_TrimA_SM32 UStaticMeshComponent
 ---@field Floor_Resort_Stone_4x4_A_SM2 UStaticMeshComponent
 ---@field Floor_Resort_Stone_4x4_A_SM1 UStaticMeshComponent
 ---@field Floor_Resort_Stone_4x4_A_SM UStaticMeshComponent
@@ -62,6 +63,3 @@
 ---@field WallChunk_Half_Window_Resort_Adobe_5x2_A_SM UStaticMeshComponent
 ---@field trap_wall URSTTrapGridBoxComponent
 ABP_Resort_Hotel_Side_B_Backside_C = {}
-
-
-

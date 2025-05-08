@@ -75,7 +75,6 @@ UCommonInputBaseControllerData = {}
 ---@return TArray<FName>
 function UCommonInputBaseControllerData:GetRegisteredGamepads() end
 
-
 ---@class UCommonInputPlatformSettings : UPlatformSettings
 ---@field DefaultInputType ECommonInputType
 ---@field bSupportsMouseAndKeyboard boolean
@@ -108,7 +107,6 @@ UCommonInputSettings = {}
 ---@return boolean
 function UCommonInputSettings:IsEnhancedInputSupportEnabled() end
 
-
 ---@class UCommonInputSubsystem : ULocalPlayerSubsystem
 ---@field OnInputMethodChanged FCommonInputSubsystemOnInputMethodChanged
 ---@field NumberOfInputMethodChangesRecently int32
@@ -124,23 +122,30 @@ UCommonInputSubsystem = {}
 
 ---@return boolean
 function UCommonInputSubsystem:ShouldShowInputKeys() end
+
 ---@param InGamepadInputType FName
 function UCommonInputSubsystem:SetGamepadInputType(InGamepadInputType) end
+
 ---@param NewInputType ECommonInputType
 function UCommonInputSubsystem:SetCurrentInputType(NewInputType) end
+
 ---@return boolean
 function UCommonInputSubsystem:IsUsingPointerInput() end
+
 ---@param InputMethod ECommonInputType
 ---@return boolean
 function UCommonInputSubsystem:IsInputMethodActive(InputMethod) end
+
 ---@return ECommonInputType
 function UCommonInputSubsystem:GetDefaultInputType() end
+
 ---@return ECommonInputType
 function UCommonInputSubsystem:GetCurrentInputType() end
+
 ---@return FName
 function UCommonInputSubsystem:GetCurrentGamepadName() end
-function UCommonInputSubsystem:BroadcastInputMethodChanged() end
 
+function UCommonInputSubsystem:BroadcastInputMethodChanged() end
 
 ---@class UCommonUIHoldData : UObject
 ---@field KeyboardAndMouse FInputHoldData
@@ -157,6 +162,3 @@ UCommonUIHoldData = {}
 ---@field EnhancedInputClickAction UInputAction
 ---@field EnhancedInputBackAction UInputAction
 UCommonUIInputData = {}
-
-
-

@@ -15,40 +15,60 @@ UW_CommunicationWheel_C = {}
 
 ---@return boolean
 function UW_CommunicationWheel_C:BP_OnHandleBackAction() end
+
 function UW_CommunicationWheel_C:CreateWheelOptions() end
+
 ---@param CurrentSection int32
 ---@param NumSections int32
 function UW_CommunicationWheel_C:UpdateRadialSection(CurrentSection, NumSections) end
+
 ---@param HeadingAngle double
 ---@param Section int32
 function UW_CommunicationWheel_C:GetWheelSection(HeadingAngle, Section) end
+
 ---@return double
 function UW_CommunicationWheel_C:GetMouseAngle() end
+
 ---@param InCommunicationWheelAbility URSTGameplayAbility_CommunicationWheel
 function UW_CommunicationWheel_C:LinkToAbility(InCommunicationWheelAbility) end
+
 ---@return UWidget
 function UW_CommunicationWheel_C:BP_GetDesiredFocusTarget() end
+
 ---@param ActionValue FInputActionValue
 ---@param ElapsedTime float
 ---@param TriggeredTime float
 ---@param SourceAction UInputAction
-function UW_CommunicationWheel_C:InpActEvt_IA_UI_Gamepad_Cursor_K2Node_EnhancedInputActionEvent_2(ActionValue, ElapsedTime, TriggeredTime, SourceAction) end
+function UW_CommunicationWheel_C:InpActEvt_IA_UI_Gamepad_Cursor_K2Node_EnhancedInputActionEvent_2(ActionValue,
+                                                                                                  ElapsedTime,
+                                                                                                  TriggeredTime,
+                                                                                                  SourceAction) end
+
 ---@param ActionValue FInputActionValue
 ---@param ElapsedTime float
 ---@param TriggeredTime float
 ---@param SourceAction UInputAction
-function UW_CommunicationWheel_C:InpActEvt_IA_UI_Gamepad_Cursor_K2Node_EnhancedInputActionEvent_1(ActionValue, ElapsedTime, TriggeredTime, SourceAction) end
+function UW_CommunicationWheel_C:InpActEvt_IA_UI_Gamepad_Cursor_K2Node_EnhancedInputActionEvent_1(ActionValue,
+                                                                                                  ElapsedTime,
+                                                                                                  TriggeredTime,
+                                                                                                  SourceAction) end
+
 ---@param ActionValue FInputActionValue
 ---@param ElapsedTime float
 ---@param TriggeredTime float
 ---@param SourceAction UInputAction
-function UW_CommunicationWheel_C:InpActEvt_IA_UI_Gamepad_Cursor_K2Node_EnhancedInputActionEvent_0(ActionValue, ElapsedTime, TriggeredTime, SourceAction) end
+function UW_CommunicationWheel_C:InpActEvt_IA_UI_Gamepad_Cursor_K2Node_EnhancedInputActionEvent_0(ActionValue,
+                                                                                                  ElapsedTime,
+                                                                                                  TriggeredTime,
+                                                                                                  SourceAction) end
+
 function UW_CommunicationWheel_C:BP_OnActivated() end
+
 function UW_CommunicationWheel_C:OnWheelVisible() end
+
 ---@param MyGeometry FGeometry
 ---@param InDeltaTime float
 function UW_CommunicationWheel_C:Tick(MyGeometry, InDeltaTime) end
+
 ---@param EntryPoint int32
 function UW_CommunicationWheel_C:ExecuteUbergraph_W_CommunicationWheel(EntryPoint) end
-
-

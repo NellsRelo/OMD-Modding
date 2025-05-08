@@ -21,38 +21,60 @@
 ABP_Gib_Skeletal_Base_C = {}
 
 function ABP_Gib_Skeletal_Base_C:UserConstructionScript() end
-ABP_Gib_Skeletal_Base_C['Disolve Timeline__FinishedFunc'] = function() end
-ABP_Gib_Skeletal_Base_C['Disolve Timeline__UpdateFunc'] = function() end
+
+ABP_Gib_Skeletal_Base_C['Disolve Timeline__FinishedFunc'] = function(self,) end
+ABP_Gib_Skeletal_Base_C['Disolve Timeline__UpdateFunc'] = function(self,) end
 function ABP_Gib_Skeletal_Base_C:BurnedTimeline__FinishedFunc() end
+
 function ABP_Gib_Skeletal_Base_C:BurnedTimeline__UpdateFunc() end
+
 function ABP_Gib_Skeletal_Base_C:FrozenTimeline__FinishedFunc() end
+
 function ABP_Gib_Skeletal_Base_C:FrozenTimeline__UpdateFunc() end
+
 function ABP_Gib_Skeletal_Base_C:MeltedTimeline__FinishedFunc() end
+
 function ABP_Gib_Skeletal_Base_C:MeltedTimeline__UpdateFunc() end
+
 function ABP_Gib_Skeletal_Base_C:PoisonedTimeline__FinishedFunc() end
+
 function ABP_Gib_Skeletal_Base_C:PoisonedTimeline__UpdateFunc() end
+
 function ABP_Gib_Skeletal_Base_C:Pulled_2DA8779B4E4BD7DF378495B871D98273() end
+
 function ABP_Gib_Skeletal_Base_C:EnteredRift_2DA8779B4E4BD7DF378495B871D98273() end
+
 function ABP_Gib_Skeletal_Base_C:CustomAnimation_2DA8779B4E4BD7DF378495B871D98273() end
+
 function ABP_Gib_Skeletal_Base_C:Gib_2DA8779B4E4BD7DF378495B871D98273() end
+
 function ABP_Gib_Skeletal_Base_C:Ragdoll_2DA8779B4E4BD7DF378495B871D98273() end
+
 function ABP_Gib_Skeletal_Base_C:NoType_2DA8779B4E4BD7DF378495B871D98273() end
+
 ---@param Meshs TArray<USkeletalMeshComponent>
 ---@param LifeSpan double
 function ABP_Gib_Skeletal_Base_C:DisolveFX(Meshs, LifeSpan) end
+
 ---@param LifeSpan float
 ---@param DeathType uint8
 ---@param AnimationTag FGameplayTag
 function ABP_Gib_Skeletal_Base_C:BP_DestroyFX(LifeSpan, DeathType, AnimationTag) end
+
 function ABP_Gib_Skeletal_Base_C:ElectrifiedDeath() end
+
 function ABP_Gib_Skeletal_Base_C:BurnedDeath() end
+
 function ABP_Gib_Skeletal_Base_C:MeltedDeath() end
+
 ---@param LifeSpan double
 function ABP_Gib_Skeletal_Base_C:FrozenDeath(LifeSpan) end
+
 function ABP_Gib_Skeletal_Base_C:PoisonedDeath() end
+
 function ABP_Gib_Skeletal_Base_C:BP_ActorRequestedFromPool() end
+
 function ABP_Gib_Skeletal_Base_C:BP_PrepareActorForReuse() end
+
 ---@param EntryPoint int32
 function ABP_Gib_Skeletal_Base_C:ExecuteUbergraph_BP_Gib_Skeletal_Base(EntryPoint) end
-
-

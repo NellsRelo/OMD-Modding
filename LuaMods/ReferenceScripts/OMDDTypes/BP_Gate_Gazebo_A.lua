@@ -5,6 +5,3 @@
 ---@field Gate_Gazebo_A_SM UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Gate_Gazebo_A_C = {}
-
-
-

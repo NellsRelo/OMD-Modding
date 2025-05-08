@@ -4,4 +4,3 @@ ENiagaraRandomnessEvaluation = {
     NewEnumerator1 = 1,
     ENiagaraRandomnessEvaluation_MAX = 2,
 }
-

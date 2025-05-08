@@ -5,4 +5,3 @@ EActorSequenceObjectReferenceType = {
     Component = 2,
     EActorSequenceObjectReferenceType_MAX = 3,
 }
-

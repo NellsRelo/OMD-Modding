@@ -7,6 +7,3 @@
 ---@field Wood_Manor_Balcony_4x2_A_SM UStaticMeshComponent
 ---@field FloorTrap URSTTrapGridBoxComponent
 ABP_Wood_Manor_Balcony_4x2_A_C = {}
-
-
-

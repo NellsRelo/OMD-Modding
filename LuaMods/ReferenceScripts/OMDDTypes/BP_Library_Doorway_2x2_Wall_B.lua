@@ -53,6 +53,3 @@
 ---@field TrapGrid USceneComponent
 ---@field Collision USceneComponent
 ABP_Library_Doorway_2x2_Wall_B_C = {}
-
-
-

@@ -36,6 +36,3 @@
 ---@field TrapGrid USceneComponent
 ---@field Collision USceneComponent
 ABP_Observatory_BuildingExterior_01_C = {}
-
-
-

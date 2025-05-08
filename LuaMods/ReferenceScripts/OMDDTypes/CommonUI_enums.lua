@@ -44,4 +44,3 @@ ETransitionCurve = {
     CubicInOut = 6,
     ETransitionCurve_MAX = 7,
 }
-

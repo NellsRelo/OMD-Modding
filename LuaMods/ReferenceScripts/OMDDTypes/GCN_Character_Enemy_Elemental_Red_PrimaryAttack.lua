@@ -7,5 +7,3 @@ UGCN_Character_Enemy_Elemental_Red_PrimaryAttack_C = {}
 ---@param Parameters FGameplayCueParameters
 ---@param SpawnResults FGameplayCueNotify_SpawnResult
 function UGCN_Character_Enemy_Elemental_Red_PrimaryAttack_C:OnBurst(Target, Parameters, SpawnResults) end
-
-

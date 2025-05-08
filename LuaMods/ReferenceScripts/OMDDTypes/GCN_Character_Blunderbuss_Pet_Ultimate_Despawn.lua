@@ -7,5 +7,3 @@ UGCN_Character_Blunderbuss_Pet_Ultimate_Despawn_C = {}
 ---@param Parameters FGameplayCueParameters
 ---@param SpawnResults FGameplayCueNotify_SpawnResult
 function UGCN_Character_Blunderbuss_Pet_Ultimate_Despawn_C:OnBurst(Target, Parameters, SpawnResults) end
-
-

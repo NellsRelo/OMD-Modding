@@ -4,6 +4,3 @@
 ---@field SecondaryFirePoint_NonCombat URSTRangedFirePointComponent
 ---@field SecondaryFirePoint_Combat URSTRangedFirePointComponent
 ABP_Hero_Daggers_C = {}
-
-
-

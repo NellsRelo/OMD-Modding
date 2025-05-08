@@ -7,10 +7,11 @@
 UW_NPE_Blocker_C = {}
 
 function UW_NPE_Blocker_C:Construct() end
+
 ---@param InVisibility ESlateVisibility
 function UW_NPE_Blocker_C:OnVisChanged(InVisibility) end
+
 function UW_NPE_Blocker_C:Destruct() end
+
 ---@param EntryPoint int32
 function UW_NPE_Blocker_C:ExecuteUbergraph_W_NPE_Blocker(EntryPoint) end
-
-

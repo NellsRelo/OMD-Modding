@@ -46,6 +46,3 @@
 ---@field Wall_05x2_Wainscot_White UStaticMeshComponent
 ---@field Geometry USceneComponent
 ABP_CastlePlaza_Village_TowerSmall_B_C = {}
-
-
-

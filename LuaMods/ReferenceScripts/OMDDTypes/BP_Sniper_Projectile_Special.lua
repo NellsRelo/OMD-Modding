@@ -14,6 +14,7 @@ ABP_Sniper_Projectile_Special_C = {}
 ---@param HitActor AActor
 ---@return FGameplayTag
 function ABP_Sniper_Projectile_Special_C:GetHitGameplayCue(HitActor) end
+
 ---@param MyComp UPrimitiveComponent
 ---@param OtherActor AActor
 ---@param OtherComp UPrimitiveComponent
@@ -23,11 +24,13 @@ function ABP_Sniper_Projectile_Special_C:GetHitGameplayCue(HitActor) end
 ---@param NormalImpulse FVector
 ---@param Hit FHitResult
 ---@return boolean
-function ABP_Sniper_Projectile_Special_C:BP_ShouldRespondToHit(MyComp, OtherActor, OtherComp, bSelfMoved, HitLocation, HitNormal, NormalImpulse, Hit) end
+function ABP_Sniper_Projectile_Special_C:BP_ShouldRespondToHit(MyComp, OtherActor, OtherComp, bSelfMoved, HitLocation,
+                                                               HitNormal, NormalImpulse, Hit) end
+
 ---@param ImpactResult FHitResult
 ---@param ImpactVelocity FVector
-function ABP_Sniper_Projectile_Special_C:BndEvt__BP_Blunderbuss_Projectile_Secondary_ProjectileMovementComponent_K2Node_ComponentBoundEvent_0_OnProjectileBounceDelegate__DelegateSignature(ImpactResult, ImpactVelocity) end
+function ABP_Sniper_Projectile_Special_C:BndEvt__BP_Blunderbuss_Projectile_Secondary_ProjectileMovementComponent_K2Node_ComponentBoundEvent_0_OnProjectileBounceDelegate__DelegateSignature(
+    ImpactResult, ImpactVelocity) end
+
 ---@param EntryPoint int32
 function ABP_Sniper_Projectile_Special_C:ExecuteUbergraph_BP_Sniper_Projectile_Special(EntryPoint) end
-
-

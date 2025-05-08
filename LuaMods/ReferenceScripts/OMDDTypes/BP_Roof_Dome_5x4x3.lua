@@ -26,6 +26,3 @@
 ---@field Geo USceneComponent
 ---@field SharedRoot USceneComponent
 ABP_Roof_Dome_5x4x3_C = {}
-
-
-

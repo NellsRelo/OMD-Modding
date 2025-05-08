@@ -6,4 +6,3 @@ ENiagaraCurlNoiseQuality = {
     NewEnumerator3 = 3,
     ENiagaraCurlNoiseQuality_MAX = 4,
 }
-

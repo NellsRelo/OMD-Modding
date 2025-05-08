@@ -6,6 +6,3 @@
 ---@field Duration double
 ---@field ['Critical Hit Chance'] double
 ABP_MoltenGold_ItemInstance_C = {}
-
-
-

@@ -44,4 +44,3 @@ FoliageVertexColorMask = {
     FOLIAGEVERTEXCOLORMASK_Alpha = 4,
     FOLIAGEVERTEXCOLORMASK_MAX = 5,
 }
-

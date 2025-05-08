@@ -86,4 +86,3 @@ FCPXMLExportDataSource = {
     SequenceData = 1,
     FCPXMLExportDataSource_MAX = 2,
 }
-

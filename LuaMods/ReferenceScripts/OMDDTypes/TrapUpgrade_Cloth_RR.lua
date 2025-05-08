@@ -181,6 +181,3 @@ URigVMMemory_Work = {}
 ---@class UTrapUpgrade_Cloth_RR_C : UControlRig
 ---@field Chains TArray<FRigElementKeyCollection>
 UTrapUpgrade_Cloth_RR_C = {}
-
-
-

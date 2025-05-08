@@ -10,4 +10,3 @@ ESoundModulationLFOShape = {
     COUNT = 7,
     ESoundModulationLFOShape_MAX = 8,
 }
-

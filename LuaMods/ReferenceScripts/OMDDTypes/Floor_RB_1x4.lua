@@ -5,6 +5,3 @@
 ---@field Wall_Sec_2_2_RB3 UStaticMeshComponent
 ---@field Floor00 URSTTrapGridBoxComponent
 AFloor_RB_1x4_C = {}
-
-
-

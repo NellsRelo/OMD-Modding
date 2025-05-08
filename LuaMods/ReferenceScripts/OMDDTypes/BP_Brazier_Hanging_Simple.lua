@@ -13,6 +13,3 @@
 ---@field Lighting_Brazier_Hanging UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Brazier_Hanging_Simple_C = {}
-
-
-

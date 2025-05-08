@@ -9,5 +9,3 @@ UGA_CursedGround_Fire_C = {}
 
 ---@return float
 function UGA_CursedGround_Fire_C:GetDamageValue() end
-
-

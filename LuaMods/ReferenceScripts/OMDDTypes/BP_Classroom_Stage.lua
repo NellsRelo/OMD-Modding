@@ -110,6 +110,3 @@
 ---@field Floor_Wood_Parquet_2X2_SM5 UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Classroom_Stage_C = {}
-
-
-

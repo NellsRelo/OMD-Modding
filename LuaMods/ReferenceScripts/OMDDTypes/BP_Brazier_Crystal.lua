@@ -6,6 +6,3 @@
 ---@field PointLight UPointLightComponent
 ---@field Geometry USceneComponent
 ABP_Brazier_Crystal_C = {}
-
-
-

@@ -887,7 +887,6 @@ IMovieSceneBoundObjectProxy = {}
 ---@return UObject
 function IMovieSceneBoundObjectProxy:BP_GetBoundObjectForSequencer(ResolvedObject) end
 
-
 ---@class IMovieSceneCachedTrack : IInterface
 IMovieSceneCachedTrack = {}
 
@@ -902,15 +901,17 @@ IMovieSceneCustomClockSource = {}
 ---@param DeltaSeconds float
 ---@param InPlayRate float
 function IMovieSceneCustomClockSource:OnTick(DeltaSeconds, InPlayRate) end
+
 ---@param InStopTime FQualifiedFrameTime
 function IMovieSceneCustomClockSource:OnStopPlaying(InStopTime) end
+
 ---@param InStartTime FQualifiedFrameTime
 function IMovieSceneCustomClockSource:OnStartPlaying(InStartTime) end
+
 ---@param InCurrentTime FQualifiedFrameTime
 ---@param InPlayRate float
 ---@return FFrameTime
 function IMovieSceneCustomClockSource:OnRequestCurrentTime(InCurrentTime, InPlayRate) end
-
 
 ---@class IMovieSceneDeterminismSource : IInterface
 IMovieSceneDeterminismSource = {}
@@ -922,7 +923,6 @@ IMovieSceneEasingFunction = {}
 ---@param Interp float
 ---@return float
 function IMovieSceneEasingFunction:OnEvaluate(Interp) end
-
 
 ---@class IMovieSceneEntityProvider : IInterface
 IMovieSceneEntityProvider = {}
@@ -975,7 +975,6 @@ UBuiltInDynamicBindingResolverLibrary = {}
 ---@param PlayerControllerIndex int32
 ---@return FMovieSceneDynamicBindingResolveResult
 function UBuiltInDynamicBindingResolverLibrary:ResolveToPlayerPawn(WorldContextObject, PlayerControllerIndex) end
-
 
 ---@class UMovieScene : UMovieSceneSignedObject
 ---@field Spawnables TArray<FMovieSceneSpawnable>
@@ -1115,17 +1114,21 @@ UMovieSceneMetaData = {}
 
 ---@param InNotes FString
 function UMovieSceneMetaData:SetNotes(InNotes) end
+
 ---@param InCreated FDateTime
 function UMovieSceneMetaData:SetCreated(InCreated) end
+
 ---@param InAuthor FString
 function UMovieSceneMetaData:SetAuthor(InAuthor) end
+
 ---@return FString
 function UMovieSceneMetaData:GetNotes() end
+
 ---@return FDateTime
 function UMovieSceneMetaData:GetCreated() end
+
 ---@return FString
 function UMovieSceneMetaData:GetAuthor() end
-
 
 ---@class UMovieSceneNameableTrack : UMovieSceneTrack
 UMovieSceneNameableTrack = {}
@@ -1168,41 +1171,57 @@ UMovieSceneSection = {}
 
 ---@param NewRowIndex int32
 function UMovieSceneSection:SetRowIndex(NewRowIndex) end
+
 ---@param InPreRollFrames int32
 function UMovieSceneSection:SetPreRollFrames(InPreRollFrames) end
+
 ---@param InPostRollFrames int32
 function UMovieSceneSection:SetPostRollFrames(InPostRollFrames) end
+
 ---@param NewPriority int32
 function UMovieSceneSection:SetOverlapPriority(NewPriority) end
+
 ---@param bInIsLocked boolean
 function UMovieSceneSection:SetIsLocked(bInIsLocked) end
+
 ---@param bInIsActive boolean
 function UMovieSceneSection:SetIsActive(bInIsActive) end
+
 ---@param InCompletionMode EMovieSceneCompletionMode
 function UMovieSceneSection:SetCompletionMode(InCompletionMode) end
+
 ---@param InColorTint FColor
 function UMovieSceneSection:SetColorTint(InColorTint) end
+
 ---@param InBlendType EMovieSceneBlendType
 function UMovieSceneSection:SetBlendType(InBlendType) end
+
 ---@return boolean
 function UMovieSceneSection:IsLocked() end
+
 ---@return boolean
 function UMovieSceneSection:IsActive() end
+
 ---@return int32
 function UMovieSceneSection:GetRowIndex() end
+
 ---@return int32
 function UMovieSceneSection:GetPreRollFrames() end
+
 ---@return int32
 function UMovieSceneSection:GetPostRollFrames() end
+
 ---@return int32
 function UMovieSceneSection:GetOverlapPriority() end
+
 ---@return EMovieSceneCompletionMode
 function UMovieSceneSection:GetCompletionMode() end
+
 ---@return FColor
 function UMovieSceneSection:GetColorTint() end
+
 ---@return FOptionalMovieSceneBlendType
 function UMovieSceneSection:GetBlendType() end
-
 
 ---@class UMovieSceneSectionChannelOverrideRegistry : UObject
 ---@field Overrides TMap<FName, UMovieSceneChannelOverrideContainer>
@@ -1220,13 +1239,14 @@ UMovieSceneSequence = {}
 
 ---@return FMovieSceneTimecodeSource
 function UMovieSceneSequence:GetEarliestTimecodeSource() end
+
 ---@param InBindingName FName
 ---@return TArray<FMovieSceneObjectBindingID>
 function UMovieSceneSequence:FindBindingsByTag(InBindingName) end
+
 ---@param InBindingName FName
 ---@return FMovieSceneObjectBindingID
 function UMovieSceneSequence:FindBindingByTag(InBindingName) end
-
 
 ---@class UMovieSceneSequencePlayer : UObject
 ---@field Observer TScriptInterface<IMovieSceneSequencePlayerObserver>
@@ -1251,81 +1271,116 @@ function UMovieSceneSequence:FindBindingByTag(InBindingName) end
 UMovieSceneSequencePlayer = {}
 
 function UMovieSceneSequencePlayer:StopAtCurrentTime() end
+
 function UMovieSceneSequencePlayer:Stop() end
+
 ---@param InWeight double
 function UMovieSceneSequencePlayer:SetWeight(InWeight) end
+
 ---@param StartTime float
 ---@param Duration float
 function UMovieSceneSequencePlayer:SetTimeRange(StartTime, Duration) end
+
 ---@param PlayRate float
 function UMovieSceneSequencePlayer:SetPlayRate(PlayRate) end
+
 ---@param PlaybackParams FMovieSceneSequencePlaybackParams
 function UMovieSceneSequencePlayer:SetPlaybackPosition(PlaybackParams) end
+
 ---@param FrameRate FFrameRate
 function UMovieSceneSequencePlayer:SetFrameRate(FrameRate) end
+
 ---@param StartFrame int32
 ---@param Duration int32
 ---@param SubFrames float
 function UMovieSceneSequencePlayer:SetFrameRange(StartFrame, Duration, SubFrames) end
+
 ---@param bInDisableCameraCuts boolean
 function UMovieSceneSequencePlayer:SetDisableCameraCuts(bInDisableCameraCuts) end
+
 function UMovieSceneSequencePlayer:Scrub() end
+
 ---@param StoppedTime FFrameTime
 ---@param NewSerialNumber int32
 function UMovieSceneSequencePlayer:RPC_OnStopEvent(StoppedTime, NewSerialNumber) end
+
 ---@param StoppedTime FFrameTime
 ---@param NewSerialNumber int32
 function UMovieSceneSequencePlayer:RPC_OnFinishPlaybackEvent(StoppedTime, NewSerialNumber) end
+
 ---@param Method EUpdatePositionMethod
 ---@param RelevantTime FFrameTime
 ---@param NewSerialNumber int32
 function UMovieSceneSequencePlayer:RPC_ExplicitServerUpdateEvent(Method, RelevantTime, NewSerialNumber) end
+
 function UMovieSceneSequencePlayer:RestoreState() end
+
 function UMovieSceneSequencePlayer:RemoveWeight() end
+
 ---@param PlaybackParams FMovieSceneSequencePlaybackParams
 ---@param PlayToParams FMovieSceneSequencePlayToParams
 function UMovieSceneSequencePlayer:PlayTo(PlaybackParams, PlayToParams) end
+
 function UMovieSceneSequencePlayer:PlayReverse() end
+
 ---@param NumLoops int32
 function UMovieSceneSequencePlayer:PlayLooping(NumLoops) end
+
 function UMovieSceneSequencePlayer:Play() end
+
 function UMovieSceneSequencePlayer:Pause() end
+
 ---@return boolean
 function UMovieSceneSequencePlayer:IsReversed() end
+
 ---@return boolean
 function UMovieSceneSequencePlayer:IsPlaying() end
+
 ---@return boolean
 function UMovieSceneSequencePlayer:IsPaused() end
+
 function UMovieSceneSequencePlayer:GoToEndAndStop() end
+
 ---@return FQualifiedFrameTime
 function UMovieSceneSequencePlayer:GetStartTime() end
+
 ---@param bAddClientInfo boolean
 ---@return FString
 function UMovieSceneSequencePlayer:GetSequenceName(bAddClientInfo) end
+
 ---@return UMovieSceneSequence
 function UMovieSceneSequencePlayer:GetSequence() end
+
 ---@return float
 function UMovieSceneSequencePlayer:GetPlayRate() end
+
 ---@param InObject UObject
 ---@return TArray<FMovieSceneObjectBindingID>
 function UMovieSceneSequencePlayer:GetObjectBindings(InObject) end
+
 ---@return FFrameRate
 function UMovieSceneSequencePlayer:GetFrameRate() end
+
 ---@return int32
 function UMovieSceneSequencePlayer:GetFrameDuration() end
+
 ---@return FQualifiedFrameTime
 function UMovieSceneSequencePlayer:GetEndTime() end
+
 ---@return FQualifiedFrameTime
 function UMovieSceneSequencePlayer:GetDuration() end
+
 ---@return boolean
 function UMovieSceneSequencePlayer:GetDisableCameraCuts() end
+
 ---@return FQualifiedFrameTime
 function UMovieSceneSequencePlayer:GetCurrentTime() end
+
 ---@param ObjectBinding FMovieSceneObjectBindingID
 ---@return TArray<UObject>
 function UMovieSceneSequencePlayer:GetBoundObjects(ObjectBinding) end
-function UMovieSceneSequencePlayer:ChangePlaybackDirection() end
 
+function UMovieSceneSequencePlayer:ChangePlaybackDirection() end
 
 ---@class UMovieSceneSequenceTickManager : UObject
 UMovieSceneSequenceTickManager = {}
@@ -1363,9 +1418,9 @@ UMovieSceneSubSection = {}
 
 ---@param Sequence UMovieSceneSequence
 function UMovieSceneSubSection:SetSequence(Sequence) end
+
 ---@return UMovieSceneSequence
 function UMovieSceneSubSection:GetSequence() end
-
 
 ---@class UMovieSceneSubTrack : UMovieSceneNameableTrack
 ---@field Sections TArray<UMovieSceneSection>
@@ -1436,6 +1491,3 @@ UTestMovieSceneSubTrack = {}
 ---@field bHighPassFilter boolean
 ---@field SectionArray TArray<UMovieSceneSection>
 UTestMovieSceneTrack = {}
-
-
-

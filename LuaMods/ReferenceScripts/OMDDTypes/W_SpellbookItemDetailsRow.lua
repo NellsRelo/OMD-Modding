@@ -15,8 +15,7 @@
 UW_SpellbookItemDetailsRow_C = {}
 
 function UW_SpellbookItemDetailsRow_C:BP_SynchronizeProperties() end
-UW_SpellbookItemDetailsRow_C['Refresh Upgrade Star Display'] = function() end
+
+UW_SpellbookItemDetailsRow_C['Refresh Upgrade Star Display'] = function(self,) end
 ---@param EntryPoint int32
 function UW_SpellbookItemDetailsRow_C:ExecuteUbergraph_W_SpellbookItemDetailsRow(EntryPoint) end
-
-

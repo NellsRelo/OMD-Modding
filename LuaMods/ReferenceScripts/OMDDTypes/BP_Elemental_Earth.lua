@@ -6,6 +6,3 @@
 ---@field RSTRangedFirePoint URSTRangedFirePointComponent
 ---@field CombatCapsule URSTCombatCapsuleComponent
 ABP_Elemental_Earth_C = {}
-
-
-

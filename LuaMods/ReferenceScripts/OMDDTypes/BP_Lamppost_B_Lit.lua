@@ -6,6 +6,3 @@
 ---@field SM_lamppost_02 UStaticMeshComponent
 ---@field Geometry USceneComponent
 ABP_Lamppost_B_Lit_C = {}
-
-
-

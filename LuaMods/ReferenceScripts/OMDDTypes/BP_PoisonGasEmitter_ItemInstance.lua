@@ -7,6 +7,3 @@
 ---@field CloudDuration double
 ---@field ['Critical Hit Chance'] double
 ABP_PoisonGasEmitter_ItemInstance_C = {}
-
-
-

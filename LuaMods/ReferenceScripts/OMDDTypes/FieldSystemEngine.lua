@@ -32,7 +32,6 @@ UBoxFalloff = {}
 ---@return UBoxFalloff
 function UBoxFalloff:SetBoxFalloff(Magnitude, MinRange, MaxRange, Default, Transform, Falloff) end
 
-
 ---@class UCullingField : UFieldNodeBase
 ---@field Culling UFieldNodeBase
 ---@field Field UFieldNodeBase
@@ -44,7 +43,6 @@ UCullingField = {}
 ---@param Operation EFieldCullingOperationType
 ---@return UCullingField
 function UCullingField:SetCullingField(Culling, Field, Operation) end
-
 
 ---@class UFieldNodeBase : UActorComponent
 UFieldNodeBase = {}
@@ -76,52 +74,61 @@ UFieldSystem = {}
 UFieldSystemComponent = {}
 
 function UFieldSystemComponent:ResetFieldSystem() end
+
 function UFieldSystemComponent:RemovePersistentFields() end
+
 ---@param Enabled boolean
 ---@param Position FVector
 ---@param Direction FVector
 ---@param Radius float
 ---@param Magnitude float
 function UFieldSystemComponent:ApplyUniformVectorFalloffForce(Enabled, Position, Direction, Radius, Magnitude) end
+
 ---@param Enabled boolean
 ---@param Position FVector
 ---@param Radius float
 ---@param Magnitude float
 ---@param Iterations int32
 function UFieldSystemComponent:ApplyStrainField(Enabled, Position, Radius, Magnitude, Iterations) end
+
 ---@param Enabled boolean
 ---@param Position FVector
 ---@param Radius float
 function UFieldSystemComponent:ApplyStayDynamicField(Enabled, Position, Radius) end
+
 ---@param Enabled boolean
 ---@param Position FVector
 ---@param Radius float
 ---@param Magnitude float
 function UFieldSystemComponent:ApplyRadialVectorFalloffForce(Enabled, Position, Radius, Magnitude) end
+
 ---@param Enabled boolean
 ---@param Position FVector
 ---@param Magnitude float
 function UFieldSystemComponent:ApplyRadialForce(Enabled, Position, Magnitude) end
+
 ---@param Enabled boolean
 ---@param Target EFieldPhysicsType
 ---@param MetaData UFieldSystemMetaData
 ---@param Field UFieldNodeBase
 function UFieldSystemComponent:ApplyPhysicsField(Enabled, Target, MetaData, Field) end
+
 ---@param Enabled boolean
 ---@param Direction FVector
 ---@param Magnitude float
 function UFieldSystemComponent:ApplyLinearForce(Enabled, Direction, Magnitude) end
+
 ---@param Enabled boolean
 ---@param Target EFieldPhysicsType
 ---@param MetaData UFieldSystemMetaData
 ---@param Field UFieldNodeBase
 function UFieldSystemComponent:AddPersistentField(Enabled, Target, MetaData, Field) end
+
 ---@param Enabled boolean
 ---@param Target EFieldPhysicsType
 ---@param MetaData UFieldSystemMetaData
 ---@param Field UFieldNodeBase
 function UFieldSystemComponent:AddFieldCommand(Enabled, Target, MetaData, Field) end
-
 
 ---@class UFieldSystemMetaData : UActorComponent
 UFieldSystemMetaData = {}
@@ -139,7 +146,6 @@ UFieldSystemMetaDataFilter = {}
 ---@return UFieldSystemMetaDataFilter
 function UFieldSystemMetaDataFilter:SetMetaDataFilterType(FilterType, ObjectType, PositionType) end
 
-
 ---@class UFieldSystemMetaDataIteration : UFieldSystemMetaData
 ---@field Iterations int32
 UFieldSystemMetaDataIteration = {}
@@ -148,7 +154,6 @@ UFieldSystemMetaDataIteration = {}
 ---@return UFieldSystemMetaDataIteration
 function UFieldSystemMetaDataIteration:SetMetaDataIteration(Iterations) end
 
-
 ---@class UFieldSystemMetaDataProcessingResolution : UFieldSystemMetaData
 ---@field ResolutionType EFieldResolutionType
 UFieldSystemMetaDataProcessingResolution = {}
@@ -156,7 +161,6 @@ UFieldSystemMetaDataProcessingResolution = {}
 ---@param ResolutionType EFieldResolutionType
 ---@return UFieldSystemMetaDataProcessingResolution
 function UFieldSystemMetaDataProcessingResolution:SetMetaDataaProcessingResolutionType(ResolutionType) end
-
 
 ---@class UNoiseField : UFieldNodeFloat
 ---@field MinRange float
@@ -169,7 +173,6 @@ UNoiseField = {}
 ---@param Transform FTransform
 ---@return UNoiseField
 function UNoiseField:SetNoiseField(MinRange, MaxRange, Transform) end
-
 
 ---@class UOperatorField : UFieldNodeBase
 ---@field Magnitude float
@@ -184,7 +187,6 @@ UOperatorField = {}
 ---@param Operation EFieldOperationType
 ---@return UOperatorField
 function UOperatorField:SetOperatorField(Magnitude, LeftField, RightField, Operation) end
-
 
 ---@class UPlaneFalloff : UFieldNodeFloat
 ---@field Magnitude float
@@ -208,7 +210,6 @@ UPlaneFalloff = {}
 ---@return UPlaneFalloff
 function UPlaneFalloff:SetPlaneFalloff(Magnitude, MinRange, MaxRange, Default, Distance, Position, Normal, Falloff) end
 
-
 ---@class URadialFalloff : UFieldNodeFloat
 ---@field Magnitude float
 ---@field MinRange float
@@ -229,7 +230,6 @@ URadialFalloff = {}
 ---@return URadialFalloff
 function URadialFalloff:SetRadialFalloff(Magnitude, MinRange, MaxRange, Default, Radius, Position, Falloff) end
 
-
 ---@class URadialIntMask : UFieldNodeInt
 ---@field Radius float
 ---@field Position FVector
@@ -246,7 +246,6 @@ URadialIntMask = {}
 ---@return URadialIntMask
 function URadialIntMask:SetRadialIntMask(Radius, Position, InteriorValue, ExteriorValue, SetMaskConditionIn) end
 
-
 ---@class URadialVector : UFieldNodeVector
 ---@field Magnitude float
 ---@field Position FVector
@@ -257,7 +256,6 @@ URadialVector = {}
 ---@return URadialVector
 function URadialVector:SetRadialVector(Magnitude, Position) end
 
-
 ---@class URandomVector : UFieldNodeVector
 ---@field Magnitude float
 URandomVector = {}
@@ -266,13 +264,11 @@ URandomVector = {}
 ---@return URandomVector
 function URandomVector:SetRandomVector(Magnitude) end
 
-
 ---@class UReturnResultsTerminal : UFieldNodeBase
 UReturnResultsTerminal = {}
 
 ---@return UReturnResultsTerminal
 function UReturnResultsTerminal:SetReturnResultsTerminal() end
-
 
 ---@class UToFloatField : UFieldNodeFloat
 ---@field IntField UFieldNodeInt
@@ -282,7 +278,6 @@ UToFloatField = {}
 ---@return UToFloatField
 function UToFloatField:SetToFloatField(IntegerField) end
 
-
 ---@class UToIntegerField : UFieldNodeInt
 ---@field FloatField UFieldNodeFloat
 UToIntegerField = {}
@@ -290,7 +285,6 @@ UToIntegerField = {}
 ---@param FloatField UFieldNodeFloat
 ---@return UToIntegerField
 function UToIntegerField:SetToIntegerField(FloatField) end
-
 
 ---@class UUniformInteger : UFieldNodeInt
 ---@field Magnitude int32
@@ -300,7 +294,6 @@ UUniformInteger = {}
 ---@return UUniformInteger
 function UUniformInteger:SetUniformInteger(Magnitude) end
 
-
 ---@class UUniformScalar : UFieldNodeFloat
 ---@field Magnitude float
 UUniformScalar = {}
@@ -308,7 +301,6 @@ UUniformScalar = {}
 ---@param Magnitude float
 ---@return UUniformScalar
 function UUniformScalar:SetUniformScalar(Magnitude) end
-
 
 ---@class UUniformVector : UFieldNodeVector
 ---@field Magnitude float
@@ -319,7 +311,6 @@ UUniformVector = {}
 ---@param Direction FVector
 ---@return UUniformVector
 function UUniformVector:SetUniformVector(Magnitude, Direction) end
-
 
 ---@class UWaveScalar : UFieldNodeFloat
 ---@field Magnitude float
@@ -339,5 +330,3 @@ UWaveScalar = {}
 ---@param Falloff EFieldFalloffType
 ---@return UWaveScalar
 function UWaveScalar:SetWaveScalar(Magnitude, Position, WaveLength, Period, Time, Function, Falloff) end
-
-

@@ -36,6 +36,3 @@ FLocalizableMessageParameterMessage = {}
 ---@class FLocalizableMessageParameterString
 ---@field Value FString
 FLocalizableMessageParameterString = {}
-
-
-

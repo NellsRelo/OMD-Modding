@@ -10,11 +10,12 @@ UW_DraftPlayerName_C = {}
 
 ---@param bIsSelected boolean
 function UW_DraftPlayerName_C:SetIsSelected(bIsSelected) end
+
 ---@param TintColor FSlateColor
 function UW_DraftPlayerName_C:SetFrameColor(TintColor) end
+
 ---@param InText FText
 function UW_DraftPlayerName_C:SetBottomText(InText) end
+
 ---@param InText FText
 function UW_DraftPlayerName_C:SetTopText(InText) end
-
-

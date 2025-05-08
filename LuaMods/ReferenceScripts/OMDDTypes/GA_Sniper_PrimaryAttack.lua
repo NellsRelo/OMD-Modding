@@ -5,5 +5,3 @@ UGA_Sniper_PrimaryAttack_C = {}
 
 ---@return TArray<FGameplayTagPair>
 function UGA_Sniper_PrimaryAttack_C:GetFireCueTagParameters() end
-
-

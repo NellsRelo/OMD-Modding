@@ -25,6 +25,10 @@ FAnimBlueprintGeneratedConstantData = {}
 
 
 
+---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
+FAnimBlueprintGeneratedMutableData = {}
+
+
 ---@class UABP_Sentinel_Cannoneer_Trap_C : URSTAnimInstanceTrap
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance
@@ -57,10 +61,11 @@ UABP_Sentinel_Cannoneer_Trap_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_Sentinel_Cannoneer_Trap_C:AnimGraph(AnimGraph) end
+
 function UABP_Sentinel_Cannoneer_Trap_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Sentinel_Cannoneer_Trap_AnimGraphNode_TransitionResult_4815FA5D4DA8C39A0F9B2F89D28D71E8() end
+
 ---@param DeltaTimeX float
 function UABP_Sentinel_Cannoneer_Trap_C:BlueprintUpdateAnimation(DeltaTimeX) end
+
 ---@param EntryPoint int32
 function UABP_Sentinel_Cannoneer_Trap_C:ExecuteUbergraph_ABP_Sentinel_Cannoneer_Trap(EntryPoint) end
-
-

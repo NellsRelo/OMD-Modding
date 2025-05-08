@@ -38,6 +38,3 @@
 ---@field RSTTrapGridBox URSTTrapGridBoxComponent
 ---@field DisplayCase_StoneBase_2x08x1_SM UStaticMeshComponent
 ABP_DisplayCase_2x8_C = {}
-
-
-

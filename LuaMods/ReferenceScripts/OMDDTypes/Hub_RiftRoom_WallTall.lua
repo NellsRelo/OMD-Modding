@@ -13,6 +13,3 @@
 ---@field Hub_BlackSmith_WallWindow_SM UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 AHub_RiftRoom_WallTall_C = {}
-
-
-

@@ -7,4 +7,3 @@ ESoundwaveSampleRateSettings = {
     Min = 4,
     MatchDevice_DEPRECATED = 5,
 }
-

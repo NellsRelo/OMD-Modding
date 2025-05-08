@@ -8,8 +8,8 @@ ABP_HubSpawnerCoordinator_C = {}
 
 ---@return TArray<APawn>
 function ABP_HubSpawnerCoordinator_C:BP_GetConsiderPawns() end
+
 function ABP_HubSpawnerCoordinator_C:ReceiveBeginPlay() end
+
 ---@param EntryPoint int32
 function ABP_HubSpawnerCoordinator_C:ExecuteUbergraph_BP_HubSpawnerCoordinator(EntryPoint) end
-
-

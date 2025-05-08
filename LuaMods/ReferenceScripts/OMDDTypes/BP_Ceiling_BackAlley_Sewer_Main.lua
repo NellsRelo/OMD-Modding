@@ -27,6 +27,3 @@
 ---@field Ceiling_4x4_Sewer_A_SM5 UStaticMeshComponent
 ---@field Geo USceneComponent
 ABP_Ceiling_BackAlley_Sewer_Main_C = {}
-
-
-

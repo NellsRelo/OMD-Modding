@@ -5,9 +5,9 @@ AQosBeaconClient = {}
 
 ---@param InSessionId FString
 function AQosBeaconClient:ServerQosRequest(InSessionId) end
+
 ---@param Response EQosResponseType
 function AQosBeaconClient:ClientQosResponse(Response) end
-
 
 ---@class AQosBeaconHost : AOnlineBeaconHostObject
 AQosBeaconHost = {}
@@ -91,6 +91,3 @@ UQosEvaluator = {}
 ---@field bRegionForcedViaCommandline boolean
 ---@field SelectedRegionId FString
 UQosRegionManager = {}
-
-
-

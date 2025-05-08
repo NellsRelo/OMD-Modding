@@ -13,13 +13,13 @@
 UW_Doppler_Display_C = {}
 
 ---@param InColorAndOpacity FLinearColor
-UW_Doppler_Display_C['Set Ping Color'] = function(InColorAndOpacity) end
+UW_Doppler_Display_C['Set Ping Color'] = function(self, InColorAndOpacity) end
 function UW_Doppler_Display_C:BP_SynchronizeProperties() end
-UW_Doppler_Display_C['Auto Remove'] = function() end
+
+UW_Doppler_Display_C['Auto Remove'] = function(self,) end
 ---@param Index int32
-UW_Doppler_Display_C['Spawn Pulse'] = function(Index) end
+UW_Doppler_Display_C['Spawn Pulse'] = function(self, Index) end
 function UW_Doppler_Display_C:Construct() end
+
 ---@param EntryPoint int32
 function UW_Doppler_Display_C:ExecuteUbergraph_W_Doppler_Display(EntryPoint) end
-
-

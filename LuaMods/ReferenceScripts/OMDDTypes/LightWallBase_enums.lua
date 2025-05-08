@@ -4,4 +4,3 @@ LightWallBase = {
     NewEnumerator1 = 1,
     LightWallBase_MAX = 2,
 }
-

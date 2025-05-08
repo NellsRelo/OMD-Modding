@@ -5,4 +5,3 @@ EMeshTrackerVertexColorMode = {
     Block = 2,
     EMeshTrackerVertexColorMode_MAX = 3,
 }
-

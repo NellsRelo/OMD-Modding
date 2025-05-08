@@ -109,6 +109,3 @@
 ---@field Proto_Dome_E_Tile_Side1 UStaticMeshComponent
 ---@field Proto_Dome_RiftRoom_C UStaticMeshComponent
 ABP_Museum_Dome_Connection_WestWing_C = {}
-
-
-

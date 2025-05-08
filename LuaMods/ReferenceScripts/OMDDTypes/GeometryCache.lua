@@ -7,7 +7,6 @@ AGeometryCacheActor = {}
 ---@return UGeometryCacheComponent
 function AGeometryCacheActor:GetGeometryCacheComponent() end
 
-
 ---@class FGeometryCacheMeshBatchInfo
 FGeometryCacheMeshBatchInfo = {}
 
@@ -48,20 +47,17 @@ UDEPRECATED_GeometryCacheTrack_FlipbookAnimation = {}
 ---@param SampleTime float
 function UDEPRECATED_GeometryCacheTrack_FlipbookAnimation:AddMeshSample(MeshData, SampleTime) end
 
-
 ---@class UDEPRECATED_GeometryCacheTrack_TransformAnimation : UGeometryCacheTrack
 UDEPRECATED_GeometryCacheTrack_TransformAnimation = {}
 
 ---@param NewMeshData FGeometryCacheMeshData
 function UDEPRECATED_GeometryCacheTrack_TransformAnimation:SetMesh(NewMeshData) end
 
-
 ---@class UDEPRECATED_GeometryCacheTrack_TransformGroupAnimation : UGeometryCacheTrack
 UDEPRECATED_GeometryCacheTrack_TransformGroupAnimation = {}
 
 ---@param NewMeshData FGeometryCacheMeshData
 function UDEPRECATED_GeometryCacheTrack_TransformGroupAnimation:SetMesh(NewMeshData) end
-
 
 ---@class UGeometryCache : UObject
 ---@field Materials TArray<UMaterialInterface>
@@ -112,56 +108,82 @@ UGeometryCacheComponent = {}
 ---@param bInBackwards boolean
 ---@param bInIsLooping boolean
 function UGeometryCacheComponent:TickAtThisTime(Time, bInIsRunning, bInBackwards, bInIsLooping) end
+
 function UGeometryCacheComponent:Stop() end
+
 ---@param Color FLinearColor
 function UGeometryCacheComponent:SetWireframeOverrideColor(Color) end
+
 ---@param NewStartTimeOffset float
 function UGeometryCacheComponent:SetStartTimeOffset(NewStartTimeOffset) end
+
 ---@param NewPlaybackSpeed float
 function UGeometryCacheComponent:SetPlaybackSpeed(NewPlaybackSpeed) end
+
 ---@param bOverride boolean
 function UGeometryCacheComponent:SetOverrideWireframeColor(bOverride) end
+
 ---@param NewMotionVectorScale float
 function UGeometryCacheComponent:SetMotionVectorScale(NewMotionVectorScale) end
+
 ---@param bNewLooping boolean
 function UGeometryCacheComponent:SetLooping(bNewLooping) end
+
 ---@param NewGeomCache UGeometryCache
 ---@return boolean
 function UGeometryCacheComponent:SetGeometryCache(NewGeomCache) end
+
 ---@param bNewExtrapolating boolean
 function UGeometryCacheComponent:SetExtrapolateFrames(bNewExtrapolating) end
+
 function UGeometryCacheComponent:PlayReversedFromEnd() end
+
 function UGeometryCacheComponent:PlayReversed() end
+
 function UGeometryCacheComponent:PlayFromStart() end
+
 function UGeometryCacheComponent:Play() end
+
 function UGeometryCacheComponent:Pause() end
+
 ---@return boolean
 function UGeometryCacheComponent:IsPlayingReversed() end
+
 ---@return boolean
 function UGeometryCacheComponent:IsPlaying() end
+
 ---@return boolean
 function UGeometryCacheComponent:IsLooping() end
+
 ---@return boolean
 function UGeometryCacheComponent:IsExtrapolatingFrames() end
+
 ---@return FLinearColor
 function UGeometryCacheComponent:GetWireframeOverrideColor() end
+
 ---@return float
 function UGeometryCacheComponent:GetStartTimeOffset() end
+
 ---@return float
 function UGeometryCacheComponent:GetPlaybackSpeed() end
+
 ---@return float
 function UGeometryCacheComponent:GetPlaybackDirection() end
+
 ---@return boolean
 function UGeometryCacheComponent:GetOverrideWireframeColor() end
+
 ---@return int32
 function UGeometryCacheComponent:GetNumberOfFrames() end
+
 ---@return float
 function UGeometryCacheComponent:GetMotionVectorScale() end
+
 ---@return float
 function UGeometryCacheComponent:GetDuration() end
+
 ---@return float
 function UGeometryCacheComponent:GetAnimationTime() end
-
 
 ---@class UGeometryCacheTrack : UObject
 ---@field Duration float
@@ -192,6 +214,3 @@ UGeometryCacheTrackStreamable = {}
 ---@field bAssignComponentsOnParticleID boolean
 ---@field MaterialParameters FNiagaraRendererMaterialParameters
 UNiagaraGeometryCacheRendererProperties = {}
-
-
-

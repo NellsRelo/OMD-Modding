@@ -1,0 +1,28 @@
+---@meta
+
+---@class ABP_Lighthouse_Ramp_A_C : ABP_OMDTrapGrid_C
+---@field Wood_Plank_900W_A_Light3 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper_BendJ4 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper_BendJ3 UStaticMeshComponent
+---@field Wood_Plank_900W_A_Light7 UStaticMeshComponent
+---@field Wood_Plank_900W_A_Light6 UStaticMeshComponent
+---@field Wood_Stairs_1200W_A UStaticMeshComponent
+---@field Wood_Plank_900W_A_Light4 UStaticMeshComponent
+---@field Wood_Plank_900W_A_Light2 UStaticMeshComponent
+---@field Wood_Stairs_1200W_A3 UStaticMeshComponent
+---@field Wood_Stairs_1200W_A2 UStaticMeshComponent
+---@field Wood_Stairs_1200W_A1 UStaticMeshComponent
+---@field Wood_Plank_900W_A_Light5 UStaticMeshComponent
+---@field Metal_Cap_D4 UStaticMeshComponent
+---@field Wood_Plank_900W_A_Light14 UStaticMeshComponent
+---@field Wood_Plank_900W_A_Light13 UStaticMeshComponent
+---@field Metal_Cap_D2 UStaticMeshComponent
+---@field Metal_Cap_D3 UStaticMeshComponent
+---@field Metal_Cap_D5 UStaticMeshComponent
+---@field Wood_Plank_900W_A_Light11 UStaticMeshComponent
+---@field Wood_Plank_900W_A_Light10 UStaticMeshComponent
+---@field Wood_Plank_900W_A_Light9 UStaticMeshComponent
+---@field Wood_Plank_900W_A_Light8 UStaticMeshComponent
+---@field Wood_Plank_900W_A_Light12 UStaticMeshComponent
+---@field Geo USceneComponent
+ABP_Lighthouse_Ramp_A_C = {}

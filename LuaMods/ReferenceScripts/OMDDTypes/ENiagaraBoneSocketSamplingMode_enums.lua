@@ -4,4 +4,3 @@ ENiagaraBoneSocketSamplingMode = {
     NewEnumerator5 = 1,
     ENiagaraBoneSocketSamplingMode_MAX = 2,
 }
-

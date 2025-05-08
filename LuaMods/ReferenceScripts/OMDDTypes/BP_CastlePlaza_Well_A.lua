@@ -68,6 +68,3 @@
 ---@field Box UBoxComponent
 ---@field RSTTrapGridBox URSTTrapGridBoxComponent
 ABP_CastlePlaza_Well_A_C = {}
-
-
-

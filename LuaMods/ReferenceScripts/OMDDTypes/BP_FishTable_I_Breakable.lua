@@ -5,6 +5,3 @@
 ---@field BP_Fish_02_Group_I_Breakable UChildActorComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_FishTable_I_Breakable_C = {}
-
-
-

@@ -4,6 +4,3 @@
 ---@field Wall_StoneWall_Castle_4x2_SM UStaticMeshComponent
 ---@field Wall00 URSTTrapGridBoxComponent
 AWallTile_4x4_Stone_C = {}
-
-
-

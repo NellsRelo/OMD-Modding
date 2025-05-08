@@ -12,6 +12,3 @@
 ---@field Geometry USceneComponent
 ---@field TrapGrid USceneComponent
 ABP_Garden_Wall_Half_Planter_B_StoneWalls_C = {}
-
-
-

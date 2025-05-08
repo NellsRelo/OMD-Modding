@@ -11,6 +11,3 @@
 ---@field Window_Wood54_StaticMeshComponent0 UStaticMeshComponent
 ---@field SharedRoot USceneComponent
 ABP_Patio_2x2x8_CastleTower_Vista_C = {}
-
-
-

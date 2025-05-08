@@ -41,6 +41,3 @@
 ---@field Geo USceneComponent
 ---@field TrapGrid USceneComponent
 ABP_Observatory_BuildingExterior_03_C = {}
-
-
-

@@ -61,6 +61,3 @@
 ---@field Ceiling_ArchTileBig_Straight_2x4_Fortress_Coastal_SM UStaticMeshComponent
 ---@field Geo USceneComponent
 ABP_FishMarket_Castle_Main_C = {}
-
-
-

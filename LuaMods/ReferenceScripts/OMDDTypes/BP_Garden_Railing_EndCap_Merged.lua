@@ -7,6 +7,3 @@
 ---@field Collision USceneComponent
 ---@field Geometry USceneComponent
 ABP_Garden_Railing_EndCap_Merged_C = {}
-
-
-

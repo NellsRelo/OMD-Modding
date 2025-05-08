@@ -15,6 +15,3 @@
 ---@field Wall_15x15_Wainscot_Wood_SM_Door_Union30_StaticMeshComponent0 UStaticMeshComponent
 ---@field SharedRoot USceneComponent
 ABP_Warehouse_Gable_C = {}
-
-
-

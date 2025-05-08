@@ -10,7 +10,6 @@ UGA_MeleeAttack02_Lizardman_Thief_C = {}
 ---@param SwingIndex int32
 ---@param HitResult FHitResult
 function UGA_MeleeAttack02_Lizardman_Thief_C:BP_OnSuccessfulHit(SwingIndex, HitResult) end
+
 ---@param EntryPoint int32
 function UGA_MeleeAttack02_Lizardman_Thief_C:ExecuteUbergraph_GA_MeleeAttack02_Lizardman_Thief(EntryPoint) end
-
-

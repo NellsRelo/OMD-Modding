@@ -123,6 +123,14 @@ ERSTAllowBackgroundAudioSetting = {
     ERSTAllowBackgroundAudioSetting_MAX = 3,
 }
 
+---@enum ERSTAttachmentNotifyOperation
+ERSTAttachmentNotifyOperation = {
+    ShowGroup = 0,
+    HideGroup = 1,
+    ShowExclusiveGroups = 2,
+    ERSTAttachmentNotifyOperation_MAX = 3,
+}
+
 ---@enum ERSTAttackLocConfiguration
 ERSTAttackLocConfiguration = {
     BoxExtents = 0,
@@ -147,6 +155,14 @@ ERSTCameraModeBlendFunction = {
     EaseInOut = 3,
     COUNT = 4,
     ERSTCameraModeBlendFunction_MAX = 5,
+}
+
+---@enum ERSTChallengeUpgradeSettings
+ERSTChallengeUpgradeSettings = {
+    Default = 0,
+    None = 1,
+    All = 2,
+    ERSTChallengeUpgradeSettings_MAX = 3,
 }
 
 ---@enum ERSTCharacterWeightClass
@@ -741,4 +757,3 @@ EThreadDisplayType = {
     Trap = 3,
     MAX = 4,
 }
-

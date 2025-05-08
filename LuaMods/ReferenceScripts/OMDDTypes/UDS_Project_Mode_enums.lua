@@ -4,4 +4,3 @@ UDS_Project_Mode = {
     NewEnumerator1 = 1,
     UDS_Project_MAX = 2,
 }
-

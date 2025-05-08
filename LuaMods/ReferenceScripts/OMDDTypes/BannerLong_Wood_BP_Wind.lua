@@ -8,6 +8,3 @@
 ---@field SharedRoot USceneComponent
 ---@field DefaultSceneRoot USceneComponent
 ABannerLong_Wood_BP_Wind_C = {}
-
-
-

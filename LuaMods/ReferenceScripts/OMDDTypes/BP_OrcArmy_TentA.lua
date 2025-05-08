@@ -7,6 +7,3 @@
 ---@field Orc_Tent_Base_03_SM UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_OrcArmy_TentA_C = {}
-
-
-

@@ -137,4 +137,3 @@ EUVLayoutPreviewSide = {
     Right = 1,
     EUVLayoutPreviewSide_MAX = 2,
 }
-

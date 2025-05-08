@@ -74,27 +74,35 @@ UInterchangeAssetImportData = {}
 
 ---@param InPipelines TArray<UObject>
 function UInterchangeAssetImportData:SetPipelines(InPipelines) end
+
 ---@param InNodeContainer UInterchangeBaseNodeContainer
 function UInterchangeAssetImportData:SetNodeContainer(InNodeContainer) end
+
 ---@return FString
 function UInterchangeAssetImportData:ScriptGetFirstFilename() end
+
 ---@return TArray<FString>
 function UInterchangeAssetImportData:ScriptExtractFilenames() end
+
 ---@return TArray<FString>
 function UInterchangeAssetImportData:ScriptExtractDisplayLabels() end
+
 ---@param InNodeUniqueId FString
 ---@return UInterchangeBaseNode
 function UInterchangeAssetImportData:GetStoredNode(InNodeUniqueId) end
+
 ---@param InNodeUniqueId FString
 ---@return UInterchangeFactoryBaseNode
 function UInterchangeAssetImportData:GetStoredFactoryNode(InNodeUniqueId) end
+
 ---@return TArray<UObject>
 function UInterchangeAssetImportData:GetPipelines() end
+
 ---@return int32
 function UInterchangeAssetImportData:GetNumberOfPipelines() end
+
 ---@return UInterchangeBaseNodeContainer
 function UInterchangeAssetImportData:GetNodeContainer() end
-
 
 ---@class UInterchangeBlueprintPipelineBase : UBlueprint
 UInterchangeBlueprintPipelineBase = {}
@@ -108,12 +116,13 @@ UInterchangeFilePickerBase = {}
 ---@param OutFilenames TArray<FString>
 ---@return boolean
 function UInterchangeFilePickerBase:ScriptedFilePickerForTranslatorType(TranslatorType, Parameters, OutFilenames) end
+
 ---@param TranslatorAssetType EInterchangeTranslatorAssetType
 ---@param Parameters FInterchangeFilePickerParameters
 ---@param OutFilenames TArray<FString>
 ---@return boolean
-function UInterchangeFilePickerBase:ScriptedFilePickerForTranslatorAssetType(TranslatorAssetType, Parameters, OutFilenames) end
-
+function UInterchangeFilePickerBase:ScriptedFilePickerForTranslatorAssetType(TranslatorAssetType, Parameters,
+                                                                             OutFilenames) end
 
 ---@class UInterchangeManager : UObject
 ---@field RegisteredTranslatorsClass TSet<TObjectPtr<UClass>>
@@ -126,28 +135,33 @@ UInterchangeManager = {}
 ---@param ImportAssetParameters FImportAssetParameters
 ---@return boolean
 function UInterchangeManager:ImportScene(ContentPath, SourceData, ImportAssetParameters) end
+
 ---@param ContentPath FString
 ---@param SourceData UInterchangeSourceData
 ---@param ImportAssetParameters FImportAssetParameters
 ---@return boolean
 function UInterchangeManager:ImportAsset(ContentPath, SourceData, ImportAssetParameters) end
+
 ---@param ClassToMake UClass
 ---@return UClass
 function UInterchangeManager:GetRegisteredFactoryClass(ClassToMake) end
+
 ---@return UInterchangeManager
 function UInterchangeManager:GetInterchangeManagerScripted() end
+
 ---@param World UObject
 ---@param bIsAutomated boolean
 ---@return boolean
 function UInterchangeManager:ExportScene(World, bIsAutomated) end
+
 ---@param Asset UObject
 ---@param bIsAutomated boolean
 ---@return boolean
 function UInterchangeManager:ExportAsset(Asset, bIsAutomated) end
+
 ---@param InFilename FString
 ---@return UInterchangeSourceData
 function UInterchangeManager:CreateSourceData(InFilename) end
-
 
 ---@class UInterchangeMeshUtilities : UObject
 UInterchangeMeshUtilities = {}
@@ -160,18 +174,22 @@ UInterchangePipelineConfigurationBase = {}
 ---@param OutPipelines TArray<UInterchangePipelineBase>
 ---@param SourceData UInterchangeSourceData
 ---@return EInterchangePipelineConfigurationDialogResult
-function UInterchangePipelineConfigurationBase:ScriptedShowScenePipelineConfigurationDialog(PipelineStacks, OutPipelines, SourceData) end
----@param PipelineStacks TArray<FInterchangeStackInfo>
----@param OutPipelines TArray<UInterchangePipelineBase>
----@param SourceData UInterchangeSourceData
----@return EInterchangePipelineConfigurationDialogResult
-function UInterchangePipelineConfigurationBase:ScriptedShowReimportPipelineConfigurationDialog(PipelineStacks, OutPipelines, SourceData) end
----@param PipelineStacks TArray<FInterchangeStackInfo>
----@param OutPipelines TArray<UInterchangePipelineBase>
----@param SourceData UInterchangeSourceData
----@return EInterchangePipelineConfigurationDialogResult
-function UInterchangePipelineConfigurationBase:ScriptedShowPipelineConfigurationDialog(PipelineStacks, OutPipelines, SourceData) end
+function UInterchangePipelineConfigurationBase:ScriptedShowScenePipelineConfigurationDialog(PipelineStacks, OutPipelines,
+                                                                                            SourceData) end
 
+---@param PipelineStacks TArray<FInterchangeStackInfo>
+---@param OutPipelines TArray<UInterchangePipelineBase>
+---@param SourceData UInterchangeSourceData
+---@return EInterchangePipelineConfigurationDialogResult
+function UInterchangePipelineConfigurationBase:ScriptedShowReimportPipelineConfigurationDialog(PipelineStacks,
+                                                                                               OutPipelines, SourceData) end
+
+---@param PipelineStacks TArray<FInterchangeStackInfo>
+---@param OutPipelines TArray<UInterchangePipelineBase>
+---@param SourceData UInterchangeSourceData
+---@return EInterchangePipelineConfigurationDialogResult
+function UInterchangePipelineConfigurationBase:ScriptedShowPipelineConfigurationDialog(PipelineStacks, OutPipelines,
+                                                                                       SourceData) end
 
 ---@class UInterchangePipelineStackOverride : UObject
 ---@field OverridePipelines TArray<FSoftObjectPath>
@@ -179,11 +197,12 @@ UInterchangePipelineStackOverride = {}
 
 ---@param PipelineBase UInterchangePythonPipelineBase
 function UInterchangePipelineStackOverride:AddPythonPipeline(PipelineBase) end
+
 ---@param PipelineBase UInterchangePipelineBase
 function UInterchangePipelineStackOverride:AddPipeline(PipelineBase) end
+
 ---@param PipelineBase UInterchangeBlueprintPipelineBase
 function UInterchangePipelineStackOverride:AddBlueprintPipeline(PipelineBase) end
-
 
 ---@class UInterchangeProjectSettings : UDeveloperSettings
 ---@field ContentImportSettings FInterchangeContentImportSettings
@@ -209,5 +228,3 @@ UInterchangePythonPipelineBase = {}
 
 ---@class UInterchangeSceneImportAsset : UObject
 UInterchangeSceneImportAsset = {}
-
-

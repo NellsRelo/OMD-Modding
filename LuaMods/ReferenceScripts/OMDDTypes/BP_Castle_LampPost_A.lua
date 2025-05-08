@@ -5,6 +5,3 @@
 ---@field Castle_Lamppost_A UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Castle_LampPost_A_C = {}
-
-
-

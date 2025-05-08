@@ -22,6 +22,3 @@
 ---@field Chain_Ring_End1 UStaticMeshComponent
 ---@field Chain_Ring_End UStaticMeshComponent
 ABP_Courtyard_Stewpot_C = {}
-
-
-

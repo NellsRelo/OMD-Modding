@@ -7,9 +7,10 @@
 UW_RSTOption_Button_C = {}
 
 ---@param Button UCommonButtonBase
-function UW_RSTOption_Button_C:BndEvt__W_RSTOption_Button_W_ButtonBasic_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_RSTOption_Button_C:BndEvt__W_RSTOption_Button_W_ButtonBasic_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(
+    Button) end
+
 ---@param EntryPoint int32
 function UW_RSTOption_Button_C:ExecuteUbergraph_W_RSTOption_Button(EntryPoint) end
+
 function UW_RSTOption_Button_C:OnButtonClicked__DelegateSignature() end
-
-

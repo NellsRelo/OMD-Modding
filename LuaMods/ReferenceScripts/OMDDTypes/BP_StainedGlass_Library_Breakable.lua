@@ -10,6 +10,3 @@
 ---@field StainedGlass_Library_Metal_SM UStaticMeshComponent
 ---@field StainedGlass_Library_Stone_SM UStaticMeshComponent
 ABP_StainedGlass_Library_Breakable_C = {}
-
-
-

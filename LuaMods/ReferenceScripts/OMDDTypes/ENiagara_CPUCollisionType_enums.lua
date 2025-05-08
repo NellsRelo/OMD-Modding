@@ -4,4 +4,3 @@ ENiagara_CPUCollisionType = {
     NewEnumerator3 = 1,
     ENiagara_MAX = 2,
 }
-

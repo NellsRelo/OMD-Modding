@@ -6,4 +6,3 @@ ENiagaraDecalTransforms = {
     NewEnumerator3 = 3,
     ENiagaraDecalTransforms_MAX = 4,
 }
-

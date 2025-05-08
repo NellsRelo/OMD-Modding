@@ -128,6 +128,3 @@
 ---@field ColumnTrim_Shelves_01_Object033 UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 AHub_Elixir_ShelvesWall_01_C = {}
-
-
-

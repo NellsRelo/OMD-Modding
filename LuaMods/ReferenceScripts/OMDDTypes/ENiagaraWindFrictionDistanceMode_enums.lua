@@ -4,4 +4,3 @@ ENiagaraWindFrictionDistanceMode = {
     NewEnumerator1 = 1,
     ENiagaraWindFrictionDistanceMode_MAX = 2,
 }
-

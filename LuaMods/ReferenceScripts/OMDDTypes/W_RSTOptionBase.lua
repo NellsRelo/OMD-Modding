@@ -10,9 +10,9 @@ UW_RSTOptionBase_C = {}
 
 ---@param Text FText
 function UW_RSTOptionBase_C:SetWarningTooltip(Text) end
+
 ---@param Enabled boolean
 function UW_RSTOptionBase_C:SetWarning(Enabled) end
+
 ---@param InText FText
 function UW_RSTOptionBase_C:SetOptionText(InText) end
-
-

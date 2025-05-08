@@ -8,5 +8,3 @@ UGA_WallCharger_Fire_C = {}
 
 ---@param OutSetByCallerValues TMap<FGameplayTag, float>
 function UGA_WallCharger_Fire_C:GetSetByCallerValues(OutSetByCallerValues) end
-
-

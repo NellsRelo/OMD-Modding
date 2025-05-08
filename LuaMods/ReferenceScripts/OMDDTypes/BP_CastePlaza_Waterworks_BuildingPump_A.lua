@@ -72,6 +72,3 @@
 ---@field TrapGrid USceneComponent
 ---@field RSTTrapGridBox URSTTrapGridBoxComponent
 ABP_CastePlaza_Waterworks_BuildingPump_A_C = {}
-
-
-

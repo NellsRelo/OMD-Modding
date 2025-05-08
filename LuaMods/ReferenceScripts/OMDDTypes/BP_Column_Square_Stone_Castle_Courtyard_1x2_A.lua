@@ -7,6 +7,3 @@
 ---@field Wall002 URSTTrapGridBoxComponent
 ---@field Wall001 URSTTrapGridBoxComponent
 ABP_Column_Square_Stone_Castle_Courtyard_1x2_A_C = {}
-
-
-

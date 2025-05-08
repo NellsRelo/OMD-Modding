@@ -5,6 +5,3 @@
 ---@field PointLight UPointLightComponent
 ---@field Geometry USceneComponent
 ABP_Lantern_Wall_Wood_Lit_C = {}
-
-
-

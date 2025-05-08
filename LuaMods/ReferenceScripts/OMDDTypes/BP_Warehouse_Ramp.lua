@@ -11,6 +11,3 @@
 ---@field Scaffold_Plank_300x600_SM UStaticMeshComponent
 ---@field trap_wall URSTTrapGridBoxComponent
 ABP_Warehouse_Ramp_C = {}
-
-
-

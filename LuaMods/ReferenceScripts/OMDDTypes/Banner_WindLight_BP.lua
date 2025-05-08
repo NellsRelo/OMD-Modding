@@ -7,6 +7,3 @@
 ---@field SharedRoot USceneComponent
 ---@field DefaultSceneRoot USceneComponent
 ABanner_WindLight_BP_C = {}
-
-
-

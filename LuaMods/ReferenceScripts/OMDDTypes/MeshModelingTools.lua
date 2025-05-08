@@ -242,8 +242,8 @@ UEditMeshPolygonsTool = {}
 UEditMeshPolygonsToolAcceptCancelAction = {}
 
 function UEditMeshPolygonsToolAcceptCancelAction:Cancel() end
-function UEditMeshPolygonsToolAcceptCancelAction:Apply() end
 
+function UEditMeshPolygonsToolAcceptCancelAction:Apply() end
 
 ---@class UEditMeshPolygonsToolActionPropertySet : UInteractiveToolPropertySet
 UEditMeshPolygonsToolActionPropertySet = {}
@@ -253,41 +253,67 @@ UEditMeshPolygonsToolActionPropertySet = {}
 UEditMeshPolygonsToolActions = {}
 
 function UEditMeshPolygonsToolActions:SimplifyByGroups() end
-function UEditMeshPolygonsToolActions:Retriangulate() end
-function UEditMeshPolygonsToolActions:RecalcNormals() end
-function UEditMeshPolygonsToolActions:PushPull() end
-function UEditMeshPolygonsToolActions:Outset() end
-function UEditMeshPolygonsToolActions:Offset() end
-function UEditMeshPolygonsToolActions:Merge() end
-function UEditMeshPolygonsToolActions:Inset() end
-function UEditMeshPolygonsToolActions:InsertEdgeLoop() end
-function UEditMeshPolygonsToolActions:InsertEdge() end
-function UEditMeshPolygonsToolActions:Flip() end
-function UEditMeshPolygonsToolActions:Extrude() end
-function UEditMeshPolygonsToolActions:Duplicate() end
-function UEditMeshPolygonsToolActions:Disconnect() end
-function UEditMeshPolygonsToolActions:Delete() end
-function UEditMeshPolygonsToolActions:Decompose() end
-function UEditMeshPolygonsToolActions:CutFaces() end
-function UEditMeshPolygonsToolActions:Bevel() end
 
+function UEditMeshPolygonsToolActions:Retriangulate() end
+
+function UEditMeshPolygonsToolActions:RecalcNormals() end
+
+function UEditMeshPolygonsToolActions:PushPull() end
+
+function UEditMeshPolygonsToolActions:Outset() end
+
+function UEditMeshPolygonsToolActions:Offset() end
+
+function UEditMeshPolygonsToolActions:Merge() end
+
+function UEditMeshPolygonsToolActions:Inset() end
+
+function UEditMeshPolygonsToolActions:InsertEdgeLoop() end
+
+function UEditMeshPolygonsToolActions:InsertEdge() end
+
+function UEditMeshPolygonsToolActions:Flip() end
+
+function UEditMeshPolygonsToolActions:Extrude() end
+
+function UEditMeshPolygonsToolActions:Duplicate() end
+
+function UEditMeshPolygonsToolActions:Disconnect() end
+
+function UEditMeshPolygonsToolActions:Delete() end
+
+function UEditMeshPolygonsToolActions:Decompose() end
+
+function UEditMeshPolygonsToolActions:CutFaces() end
+
+function UEditMeshPolygonsToolActions:Bevel() end
 
 ---@class UEditMeshPolygonsToolActions_Triangles : UEditMeshPolygonsToolActionPropertySet
 UEditMeshPolygonsToolActions_Triangles = {}
 
 function UEditMeshPolygonsToolActions_Triangles:RecalcNormals() end
-function UEditMeshPolygonsToolActions_Triangles:PushPull() end
-function UEditMeshPolygonsToolActions_Triangles:Poke() end
-function UEditMeshPolygonsToolActions_Triangles:Outset() end
-function UEditMeshPolygonsToolActions_Triangles:Offset() end
-function UEditMeshPolygonsToolActions_Triangles:Inset() end
-function UEditMeshPolygonsToolActions_Triangles:Flip() end
-function UEditMeshPolygonsToolActions_Triangles:Extrude() end
-function UEditMeshPolygonsToolActions_Triangles:Duplicate() end
-function UEditMeshPolygonsToolActions_Triangles:Disconnect() end
-function UEditMeshPolygonsToolActions_Triangles:Delete() end
-function UEditMeshPolygonsToolActions_Triangles:CutFaces() end
 
+function UEditMeshPolygonsToolActions_Triangles:PushPull() end
+
+function UEditMeshPolygonsToolActions_Triangles:Poke() end
+
+function UEditMeshPolygonsToolActions_Triangles:Outset() end
+
+function UEditMeshPolygonsToolActions_Triangles:Offset() end
+
+function UEditMeshPolygonsToolActions_Triangles:Inset() end
+
+function UEditMeshPolygonsToolActions_Triangles:Flip() end
+
+function UEditMeshPolygonsToolActions_Triangles:Extrude() end
+
+function UEditMeshPolygonsToolActions_Triangles:Duplicate() end
+
+function UEditMeshPolygonsToolActions_Triangles:Disconnect() end
+
+function UEditMeshPolygonsToolActions_Triangles:Delete() end
+
+function UEditMeshPolygonsToolActions_Triangles:CutFaces() end
 
 ---@class UEditMeshPolygonsToolBuilder : USingleTargetWithSelectionToolBuilder
 UEditMeshPolygonsToolBuilder = {}
@@ -298,33 +324,38 @@ UEditMeshPolygonsToolCancelAction = {}
 
 function UEditMeshPolygonsToolCancelAction:Done() end
 
-
 ---@class UEditMeshPolygonsToolEdgeActions : UEditMeshPolygonsToolActionPropertySet
 UEditMeshPolygonsToolEdgeActions = {}
 
 function UEditMeshPolygonsToolEdgeActions:Weld() end
-function UEditMeshPolygonsToolEdgeActions:Straighten() end
-function UEditMeshPolygonsToolEdgeActions:Simplify() end
-function UEditMeshPolygonsToolEdgeActions:FillHole() end
-function UEditMeshPolygonsToolEdgeActions:Bridge() end
-function UEditMeshPolygonsToolEdgeActions:Bevel() end
 
+function UEditMeshPolygonsToolEdgeActions:Straighten() end
+
+function UEditMeshPolygonsToolEdgeActions:Simplify() end
+
+function UEditMeshPolygonsToolEdgeActions:FillHole() end
+
+function UEditMeshPolygonsToolEdgeActions:Bridge() end
+
+function UEditMeshPolygonsToolEdgeActions:Bevel() end
 
 ---@class UEditMeshPolygonsToolEdgeActions_Triangles : UEditMeshPolygonsToolActionPropertySet
 UEditMeshPolygonsToolEdgeActions_Triangles = {}
 
 function UEditMeshPolygonsToolEdgeActions_Triangles:Weld() end
-function UEditMeshPolygonsToolEdgeActions_Triangles:Split() end
-function UEditMeshPolygonsToolEdgeActions_Triangles:Flip() end
-function UEditMeshPolygonsToolEdgeActions_Triangles:FillHole() end
-function UEditMeshPolygonsToolEdgeActions_Triangles:Collapse() end
 
+function UEditMeshPolygonsToolEdgeActions_Triangles:Split() end
+
+function UEditMeshPolygonsToolEdgeActions_Triangles:Flip() end
+
+function UEditMeshPolygonsToolEdgeActions_Triangles:FillHole() end
+
+function UEditMeshPolygonsToolEdgeActions_Triangles:Collapse() end
 
 ---@class UEditMeshPolygonsToolUVActions : UEditMeshPolygonsToolActionPropertySet
 UEditMeshPolygonsToolUVActions = {}
 
 function UEditMeshPolygonsToolUVActions:PlanarProjection() end
-
 
 ---@class UExistingMeshMaterialProperties : UInteractiveToolPropertySet
 ---@field MaterialMode ESetMeshMaterialMode
@@ -337,7 +368,6 @@ UExistingMeshMaterialProperties = {}
 
 ---@return TArray<FString>
 function UExistingMeshMaterialProperties:GetUVChannelNamesFunc() end
-
 
 ---@class UGroupEdgeInsertionProperties : UInteractiveToolPropertySet
 ---@field InsertionMode EGroupEdgeInsertionMode
@@ -368,7 +398,6 @@ UMeshUVChannelProperties = {}
 
 ---@return TArray<FString>
 function UMeshUVChannelProperties:GetUVChannelNamesFunc() end
-
 
 ---@class UModifyGeometrySelectionCommand : UGeometrySelectionEditCommand
 UModifyGeometrySelectionCommand = {}
@@ -553,7 +582,6 @@ UPolyEditSetUVProperties = {}
 UPolyEditTopologyProperties = {}
 
 function UPolyEditTopologyProperties:RegenerateExtraCorners() end
-
 
 ---@class UProceduralArrowToolProperties : UProceduralShapeToolProperties
 ---@field ShaftRadius float
@@ -775,9 +803,10 @@ UUVProjectionToolBuilder = {}
 UUVProjectionToolEditActions = {}
 
 function UUVProjectionToolEditActions:Reset() end
-function UUVProjectionToolEditActions:AutoFitAlign() end
-function UUVProjectionToolEditActions:AutoFit() end
 
+function UUVProjectionToolEditActions:AutoFitAlign() end
+
+function UUVProjectionToolEditActions:AutoFit() end
 
 ---@class UUVProjectionToolProperties : UInteractiveToolPropertySet
 ---@field ProjectionType EUVProjectionMethod
@@ -795,6 +824,3 @@ function UUVProjectionToolEditActions:AutoFit() end
 ---@field bSavedProportionalDimensions boolean
 ---@field SavedTransform FTransform
 UUVProjectionToolProperties = {}
-
-
-

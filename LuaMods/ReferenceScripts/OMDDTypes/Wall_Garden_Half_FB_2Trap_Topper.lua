@@ -9,6 +9,3 @@
 ---@field ColumnTileB_CastStone_Top5_StaticMeshComponent0 UStaticMeshComponent
 ---@field SharedRoot USceneComponent
 AWall_Garden_Half_FB_2Trap_Topper_C = {}
-
-
-

@@ -145,6 +145,3 @@
 ---@field TrapGrid USceneComponent
 ---@field Collision USceneComponent
 ABP_DryDocks_House_4x8_C = {}
-
-
-

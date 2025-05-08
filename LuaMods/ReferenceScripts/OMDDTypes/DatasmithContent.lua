@@ -29,7 +29,6 @@ ADatasmithImportedSequencesActor = {}
 ---@param SequenceToPlay ULevelSequence
 function ADatasmithImportedSequencesActor:PlayLevelSequence(SequenceToPlay) end
 
-
 ---@class ADatasmithSceneActor : AActor
 ---@field Scene UDatasmithScene
 ---@field RelatedActors TMap<FName, TSoftObjectPtr<AActor>>
@@ -253,20 +252,23 @@ UDatasmithContentBlueprintLibrary = {}
 ---@param bPartialMatchKey boolean
 ---@return TArray<FString>
 function UDatasmithContentBlueprintLibrary:GetDatasmithUserDataValuesForKey(Object, Key, bPartialMatchKey) end
+
 ---@param Object UObject
 ---@param Key FName
 ---@param bPartialMatchKey boolean
 ---@return FString
 function UDatasmithContentBlueprintLibrary:GetDatasmithUserDataValueForKey(Object, Key, bPartialMatchKey) end
+
 ---@param Object UObject
 ---@param StringToMatch FString
 ---@param OutKeys TArray<FName>
 ---@param OutValues TArray<FString>
-function UDatasmithContentBlueprintLibrary:GetDatasmithUserDataKeysAndValuesForValue(Object, StringToMatch, OutKeys, OutValues) end
+function UDatasmithContentBlueprintLibrary:GetDatasmithUserDataKeysAndValuesForValue(Object, StringToMatch, OutKeys,
+                                                                                     OutValues) end
+
 ---@param Object UObject
 ---@return UDatasmithAssetUserData
 function UDatasmithContentBlueprintLibrary:GetDatasmithUserData(Object) end
-
 
 ---@class UDatasmithCustomActionBase : UObject
 UDatasmithCustomActionBase = {}
@@ -483,6 +485,3 @@ UDatasmithVREDAssetImportData = {}
 ---@field bImportClipInfo boolean
 ---@field ClipInfoPath FString
 UDatasmithVREDSceneImportData = {}
-
-
-

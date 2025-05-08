@@ -22,4 +22,3 @@ UDLSSSupport = {
     NotSupportedIncompatibleAPICaptureToolActive = 6,
     UDLSSSupport_MAX = 7,
 }
-

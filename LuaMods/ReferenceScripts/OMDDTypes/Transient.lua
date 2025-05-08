@@ -11,6 +11,3 @@
 ---@field Time float
 ---@field Type int32
 FChaosDestructionEvent_SWC = {}
-
-
-

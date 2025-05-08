@@ -8,11 +8,12 @@
 UW_FlyoffCombo_C = {}
 
 function UW_FlyoffCombo_C:Construct() end
+
 function UW_FlyoffCombo_C:BeginAnimation() end
+
 ---@param comboLength int32
 ---@param PlayerIndex int32
 function UW_FlyoffCombo_C:SetData(comboLength, PlayerIndex) end
+
 ---@param EntryPoint int32
 function UW_FlyoffCombo_C:ExecuteUbergraph_W_FlyoffCombo(EntryPoint) end
-
-

@@ -22,6 +22,3 @@
 ---@field Metal_Thin_4_Trim UStaticMeshComponent
 ---@field Wall00 URSTTrapGridBoxComponent
 AWall_RB_MetalTrim_v1_4x4_C = {}
-
-
-

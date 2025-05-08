@@ -6,8 +6,8 @@
 ABP_BossSequencePlayer_Disabler_C = {}
 
 function ABP_BossSequencePlayer_Disabler_C:ReceiveBeginPlay() end
+
 function ABP_BossSequencePlayer_Disabler_C:BossIntroStarted() end
+
 ---@param EntryPoint int32
 function ABP_BossSequencePlayer_Disabler_C:ExecuteUbergraph_BP_BossSequencePlayer_Disabler(EntryPoint) end
-
-

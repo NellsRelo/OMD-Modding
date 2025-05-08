@@ -6,6 +6,3 @@
 ---@field trap_wall URSTTrapGridBoxComponent
 ---@field Trap_Wall1 URSTTrapGridBoxComponent
 ABP_Warehouse_2x1_Wall_Partition_C = {}
-
-
-

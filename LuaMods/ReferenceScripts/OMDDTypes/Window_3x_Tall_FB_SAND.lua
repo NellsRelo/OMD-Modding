@@ -33,6 +33,3 @@
 ---@field Box_Collision UBoxComponent
 ---@field Wall_Sec_2_4_RB UStaticMeshComponent
 AWindow_3x_Tall_FB_SAND_C = {}
-
-
-

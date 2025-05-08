@@ -5,6 +5,3 @@
 ---@field RotatingMovement URotatingMovementComponent
 ---@field DefaultSceneRoot USceneComponent
 AHub_WeaverWheel_02_C = {}
-
-
-

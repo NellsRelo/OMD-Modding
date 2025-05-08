@@ -12,14 +12,14 @@
 ---@field ['Collision Object Type'] ECollisionChannel
 AUDS_Volume_Actor_C = {}
 
-AUDS_Volume_Actor_C['Disable Volume'] = function() end
-AUDS_Volume_Actor_C['Enable Volume'] = function() end
+AUDS_Volume_Actor_C['Disable Volume'] = function(self,) end
+AUDS_Volume_Actor_C['Enable Volume'] = function(self,) end
 ---@param Location FVector
 ---@param Multiplier double
-AUDS_Volume_Actor_C['Query Blend Radius'] = function(Location, Multiplier) end
+AUDS_Volume_Actor_C['Query Blend Radius'] = function(self, Location, Multiplier) end
 function AUDS_Volume_Actor_C:UserConstructionScript() end
+
 function AUDS_Volume_Actor_C:ReceiveBeginPlay() end
+
 ---@param EntryPoint int32
 function AUDS_Volume_Actor_C:ExecuteUbergraph_UDS_Volume_Actor(EntryPoint) end
-
-

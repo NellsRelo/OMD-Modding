@@ -8,4 +8,3 @@ ENiagaraBoneSamplingMode = {
     NewEnumerator6 = 5,
     ENiagaraBoneSamplingMode_MAX = 6,
 }
-

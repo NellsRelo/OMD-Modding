@@ -23,6 +23,3 @@
 ---@field TrapGrid USceneComponent
 ---@field SharedRoot USceneComponent
 ABP_FishVendorStall_Cross_E_Alt_C = {}
-
-
-

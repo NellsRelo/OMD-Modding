@@ -25,6 +25,10 @@ FAnimBlueprintGeneratedConstantData = {}
 
 
 
+---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
+FAnimBlueprintGeneratedMutableData = {}
+
+
 ---@class UABP_RSTHeroSelect_Base_C : URSTAnimInstanceCharacter
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance
@@ -54,7 +58,6 @@ UABP_RSTHeroSelect_Base_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_RSTHeroSelect_Base_C:AnimGraph(AnimGraph) end
+
 ---@param EntryPoint int32
 function UABP_RSTHeroSelect_Base_C:ExecuteUbergraph_ABP_RSTHeroSelect_Base(EntryPoint) end
-
-

@@ -7,6 +7,3 @@
 ---@field Geo USceneComponent
 ---@field TrapGrid USceneComponent
 ABP_DryDock_Basin_Gate_C = {}
-
-
-

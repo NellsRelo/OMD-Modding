@@ -12,6 +12,3 @@
 ---@field TrapGrid USceneComponent
 ---@field Geo USceneComponent
 AColumn_Sec_CastStone_Thin_FB_Merged_C = {}
-
-
-

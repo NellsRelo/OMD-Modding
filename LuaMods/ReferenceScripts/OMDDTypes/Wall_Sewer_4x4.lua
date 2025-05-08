@@ -24,6 +24,3 @@
 ---@field Wall01 URSTTrapGridBoxComponent
 ---@field Wall00 URSTTrapGridBoxComponent
 AWall_Sewer_4x4_C = {}
-
-
-

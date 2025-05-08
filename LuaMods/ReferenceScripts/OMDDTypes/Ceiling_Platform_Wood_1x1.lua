@@ -5,6 +5,3 @@
 ---@field Box UBoxComponent
 ---@field Ceiling00 URSTTrapGridBoxComponent
 ACeiling_Platform_Wood_1x1_C = {}
-
-
-

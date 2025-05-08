@@ -5,6 +5,3 @@
 ---@field Ceiling_2x4 UStaticMeshComponent
 ---@field Ceiling00 URSTTrapGridBoxComponent
 ACeiling_WD_Plank_v1_1x3_C = {}
-
-
-

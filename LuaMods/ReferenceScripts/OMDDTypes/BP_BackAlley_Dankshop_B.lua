@@ -48,6 +48,3 @@
 ---@field TrapGrid USceneComponent
 ---@field Geo USceneComponent
 ABP_BackAlley_Dankshop_B_C = {}
-
-
-

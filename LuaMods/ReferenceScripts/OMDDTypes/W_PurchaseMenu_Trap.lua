@@ -16,31 +16,37 @@ UW_PurchaseMenu_Trap_C = {}
 
 ---@return int32
 function UW_PurchaseMenu_Trap_C:BP_GetNPEStepsNum() end
+
 ---@return boolean
 function UW_PurchaseMenu_Trap_C:BP_ShouldStartNPE() end
+
 ---@param bUseEmptyText boolean
 ---@param Empty_Text FText
-UW_PurchaseMenu_Trap_C['Get Empty Text'] = function(bUseEmptyText, Empty_Text) end
+UW_PurchaseMenu_Trap_C['Get Empty Text'] = function(self, bUseEmptyText, Empty_Text) end
 ---@param Element UObject
 ---@param Should_Enable boolean
-UW_PurchaseMenu_Trap_C['Should Element Be Spawned'] = function(Element, Should_Enable) end
-UW_PurchaseMenu_Trap_C['Perform Yes Button Clicked'] = function() end
+UW_PurchaseMenu_Trap_C['Should Element Be Spawned'] = function(self, Element, Should_Enable) end
+UW_PurchaseMenu_Trap_C['Perform Yes Button Clicked'] = function(self,) end
 ---@param Yes_Visibility ESlateVisibility
-UW_PurchaseMenu_Trap_C['Can Show Yes Button'] = function(Yes_Visibility) end
+UW_PurchaseMenu_Trap_C['Can Show Yes Button'] = function(self, Yes_Visibility) end
 ---@param Category int32
-UW_PurchaseMenu_Trap_C['BndEvt__W_PurchaseMenu_Trap_W_RSTSpellbook_CategorySwitcher_K2Node_ComponentBoundEvent_0_On Category Selected__DelegateSignature'] = function(Category) end
-UW_PurchaseMenu_Trap_C['Load Grid Objects'] = function() end
+UW_PurchaseMenu_Trap_C['BndEvt__W_PurchaseMenu_Trap_W_RSTSpellbook_CategorySwitcher_K2Node_ComponentBoundEvent_0_On Category Selected__DelegateSignature'] = function(
+    self, Category) end
+UW_PurchaseMenu_Trap_C['Load Grid Objects'] = function(self,) end
 ---@param NPC ABP_NPCInteractable_C
 function UW_PurchaseMenu_Trap_C:OnWidgetOpened(NPC) end
+
 ---@param Object UObject
-UW_PurchaseMenu_Trap_C['On Object Selected'] = function(Object) end
+UW_PurchaseMenu_Trap_C['On Object Selected'] = function(self, Object) end
 function UW_PurchaseMenu_Trap_C:BP_EndNPE() end
+
 ---@param Step int32
 function UW_PurchaseMenu_Trap_C:BP_OnNPEStepEntered(Step) end
+
 ---@param Step int32
 function UW_PurchaseMenu_Trap_C:BP_OnNPEStepExited(Step) end
+
 function UW_PurchaseMenu_Trap_C:BP_StartNPE() end
+
 ---@param EntryPoint int32
 function UW_PurchaseMenu_Trap_C:ExecuteUbergraph_W_PurchaseMenu_Trap(EntryPoint) end
-
-

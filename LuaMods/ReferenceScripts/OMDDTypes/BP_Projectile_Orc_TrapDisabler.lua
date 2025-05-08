@@ -5,6 +5,3 @@
 ---@field [' sphere'] UStaticMeshComponent
 ---@field Projectile_LP UAudioComponent
 ABP_Projectile_Orc_TrapDisabler_C = {}
-
-
-

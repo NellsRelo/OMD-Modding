@@ -6,6 +6,3 @@
 ---@field Wood_BookShelves_DoorFrame UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_GardenPatio_SideDoorFrame_C = {}
-
-
-

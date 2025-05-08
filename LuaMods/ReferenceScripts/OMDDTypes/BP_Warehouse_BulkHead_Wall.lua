@@ -8,6 +8,3 @@
 ---@field Geo USceneComponent
 ---@field TrapGrid USceneComponent
 ABP_Warehouse_BulkHead_Wall_C = {}
-
-
-

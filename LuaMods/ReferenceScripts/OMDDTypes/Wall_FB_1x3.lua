@@ -5,6 +5,3 @@
 ---@field Box_Collision UBoxComponent
 ---@field Wall00 URSTTrapGridBoxComponent
 AWall_FB_1x3_C = {}
-
-
-

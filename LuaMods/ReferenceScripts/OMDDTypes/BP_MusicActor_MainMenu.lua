@@ -11,19 +11,24 @@
 ABP_MusicActor_MainMenu_C = {}
 
 function ABP_MusicActor_MainMenu_C:Timeline__FinishedFunc() end
+
 function ABP_MusicActor_MainMenu_C:Timeline__UpdateFunc() end
-ABP_MusicActor_MainMenu_C['Crossfade to Main Menu Full'] = function() end
-ABP_MusicActor_MainMenu_C['Crossfade to Main Menu Light'] = function() end
-ABP_MusicActor_MainMenu_C['Leaving Main Menu'] = function() end
+
+ABP_MusicActor_MainMenu_C['Crossfade to Main Menu Full'] = function(self,) end
+ABP_MusicActor_MainMenu_C['Crossfade to Main Menu Light'] = function(self,) end
+ABP_MusicActor_MainMenu_C['Leaving Main Menu'] = function(self,) end
 ---@param DeltaSeconds float
 function ABP_MusicActor_MainMenu_C:ReceiveTick(DeltaSeconds) end
+
 ---@param Result FOnlineResultInformation
 function ABP_MusicActor_MainMenu_C:OnCreateSessionComplete(Result) end
+
 function ABP_MusicActor_MainMenu_C:MainMenuShown() end
+
 function ABP_MusicActor_MainMenu_C:ReceiveBeginPlay() end
+
 ---@param bIsShowing boolean
 function ABP_MusicActor_MainMenu_C:LoadingScreenChanged(bIsShowing) end
+
 ---@param EntryPoint int32
 function ABP_MusicActor_MainMenu_C:ExecuteUbergraph_BP_MusicActor_MainMenu(EntryPoint) end
-
-

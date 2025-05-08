@@ -4,4 +4,3 @@ ENiagaraMeshOrSprite = {
     NewEnumerator1 = 1,
     ENiagaraMeshOrSprite_MAX = 2,
 }
-

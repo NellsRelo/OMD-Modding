@@ -5,6 +5,3 @@
 ---@field RSTAimAssistTargetPelvis URSTAimAssistTargetComponent
 ---@field CombatCapsule URSTCombatCapsuleComponent
 ABP_Cyclops_Guardian_C = {}
-
-
-

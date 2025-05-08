@@ -21,6 +21,3 @@
 ---@field Wood_Square_600W_A_NoTaper_Light42_StaticMeshComponent0 UStaticMeshComponent
 ---@field SharedRoot USceneComponent
 ABP_Drydocks_Dome_C = {}
-
-
-

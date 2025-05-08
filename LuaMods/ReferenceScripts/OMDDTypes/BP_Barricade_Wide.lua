@@ -16,22 +16,30 @@
 ---@field bAppliedLimitPenalty boolean
 ABP_Barricade_Wide_C = {}
 
+---@param Health_Percentage double
+ABP_Barricade_Wide_C['Set Barricade Static Mesh'] = function(self, Health_Percentage) end
 ---@return boolean
 function ABP_Barricade_Wide_C:ShouldCountTowardPlacementLimit() end
-ABP_Barricade_Wide_C['Apply Limit Penalty'] = function() end
+
+ABP_Barricade_Wide_C['Apply Limit Penalty'] = function(self,) end
 ---@return boolean
 function ABP_Barricade_Wide_C:ShouldShowHealthDisplay() end
+
 ---@return boolean
 function ABP_Barricade_Wide_C:CanEverActivate() end
-ABP_Barricade_Wide_C['Killed Timeline__FinishedFunc'] = function() end
-ABP_Barricade_Wide_C['Killed Timeline__UpdateFunc'] = function() end
+
+ABP_Barricade_Wide_C['Killed Timeline__FinishedFunc'] = function(self,) end
+ABP_Barricade_Wide_C['Killed Timeline__UpdateFunc'] = function(self,) end
 function ABP_Barricade_Wide_C:ReceiveBeginPlay() end
+
 ---@param OwningActor AActor
 ---@param Instigator AActor
-ABP_Barricade_Wide_C['BndEvt__BP_Barricade_Health Component_K2Node_ComponentBoundEvent_1_RSTHealth_DeathEvent__DelegateSignature'] = function(OwningActor, Instigator) end
+ABP_Barricade_Wide_C['BndEvt__BP_Barricade_Health Component_K2Node_ComponentBoundEvent_1_RSTHealth_DeathEvent__DelegateSignature'] = function(
+    self, OwningActor, Instigator) end
 ---@param OwningActor AActor
 ---@param Instigator AActor
-ABP_Barricade_Wide_C['BndEvt__BP_Barricade_Health Component_K2Node_ComponentBoundEvent_2_RSTHealth_DeathEvent__DelegateSignature'] = function(OwningActor, Instigator) end
+ABP_Barricade_Wide_C['BndEvt__BP_Barricade_Health Component_K2Node_ComponentBoundEvent_2_RSTHealth_DeathEvent__DelegateSignature'] = function(
+    self, OwningActor, Instigator) end
 ---@param HealthComponent URSTHealthComponent
 ---@param OldValue float
 ---@param NewValue float
@@ -39,14 +47,16 @@ ABP_Barricade_Wide_C['BndEvt__BP_Barricade_Health Component_K2Node_ComponentBoun
 ---@param HitResult FHitResult
 ---@param bHasSpec boolean
 ---@param Spec FGameplayEffectSpec
-ABP_Barricade_Wide_C['BndEvt__BP_Barricade_Health Component_K2Node_ComponentBoundEvent_3_RSTHealth_AttributeChanged__DelegateSignature'] = function(HealthComponent, OldValue, NewValue, Instigator, HitResult, bHasSpec, Spec) end
----@param DeltaSeconds float
-function ABP_Barricade_Wide_C:ReceiveTick(DeltaSeconds) end
+ABP_Barricade_Wide_C['BndEvt__BP_Barricade_Health Component_K2Node_ComponentBoundEvent_3_RSTHealth_AttributeChanged__DelegateSignature'] = function(
+    self, HealthComponent, OldValue, NewValue, Instigator, HitResult, bHasSpec, Spec) end
 function ABP_Barricade_Wide_C:InitializeHealthDisplay() end
+
 ---@param bIsGoBreakActive boolean
 function ABP_Barricade_Wide_C:BP_GoBreakChanged(bIsGoBreakActive) end
+
 function ABP_Barricade_Wide_C:ReceiveDestroyed() end
+
+function ABP_Barricade_Wide_C:UpdateNearbyActors() end
+
 ---@param EntryPoint int32
 function ABP_Barricade_Wide_C:ExecuteUbergraph_BP_Barricade_Wide(EntryPoint) end
-
-

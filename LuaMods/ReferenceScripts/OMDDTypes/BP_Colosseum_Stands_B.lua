@@ -20,6 +20,3 @@
 ---@field Floor_1x4_StoneBlock_SM3 UStaticMeshComponent
 ---@field ColumnTrim_CastStone_1800W UStaticMeshComponent
 ABP_Colosseum_Stands_B_C = {}
-
-
-

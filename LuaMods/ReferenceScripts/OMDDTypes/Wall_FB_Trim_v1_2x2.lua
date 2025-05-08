@@ -7,6 +7,3 @@
 ---@field Box_Collision UBoxComponent
 ---@field Wall00 URSTTrapGridBoxComponent
 AWall_FB_Trim_v1_2x2_C = {}
-
-
-

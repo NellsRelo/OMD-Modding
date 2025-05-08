@@ -44,6 +44,3 @@
 ---@field Tower_Hollow_Stone_Castle_Courtyard_A_SM UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Courtyard_Castle_Top_A_C = {}
-
-
-

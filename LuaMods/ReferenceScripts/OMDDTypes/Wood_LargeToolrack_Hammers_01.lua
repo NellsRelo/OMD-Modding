@@ -25,6 +25,3 @@
 ---@field Hub_BlackSmith_Hammer_01 UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 AWood_LargeToolrack_Hammers_01_C = {}
-
-
-

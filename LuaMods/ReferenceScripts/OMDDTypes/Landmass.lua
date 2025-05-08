@@ -81,6 +81,3 @@ FLandmassFalloffSettings = {}
 ---@field Effects FLandmassBrushEffectsList
 ---@field Priority int32
 FLandmassTerrainCarvingSettings = {}
-
-
-

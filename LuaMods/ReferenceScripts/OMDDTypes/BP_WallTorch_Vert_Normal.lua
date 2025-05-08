@@ -7,6 +7,3 @@
 ---@field WallTorch UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_WallTorch_Vert_Normal_C = {}
-
-
-

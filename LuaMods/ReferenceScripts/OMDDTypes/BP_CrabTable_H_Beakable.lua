@@ -5,6 +5,3 @@
 ---@field BP_Crab_Group_H_Breakable UChildActorComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_CrabTable_H_Beakable_C = {}
-
-
-

@@ -16,21 +16,29 @@ ABP_Ballista_C = {}
 ---@param OutLocation FVector
 ---@param OutRotation FRotator
 function ABP_Ballista_C:BP_GetActorEyesViewPoint(OutLocation, OutRotation) end
+
 ---@return boolean
 function ABP_Ballista_C:HasValidTarget() end
+
 ---@param Pitch double
 ---@param Yaw double
 function ABP_Ballista_C:GetTargetRotation(Pitch, Yaw) end
+
 function ABP_Ballista_C:UpdateTarget() end
+
 function ABP_Ballista_C:UserConstructionScript() end
+
 function ABP_Ballista_C:ReceiveBeginPlay() end
+
 ---@param DeltaSeconds float
 function ABP_Ballista_C:ReceiveTick(DeltaSeconds) end
+
 ---@param DeltaSeconds double
 function ABP_Ballista_C:UpdateRotation(DeltaSeconds) end
+
 function ABP_Ballista_C:EnablePerception() end
+
 function ABP_Ballista_C:BP_IsBeingPlacedChanged() end
+
 ---@param EntryPoint int32
 function ABP_Ballista_C:ExecuteUbergraph_BP_Ballista(EntryPoint) end
-
-

@@ -167,6 +167,3 @@
 ---@field Collision USceneComponent
 ---@field Geometry USceneComponent
 ABP_BackAlley_Gate_C = {}
-
-
-

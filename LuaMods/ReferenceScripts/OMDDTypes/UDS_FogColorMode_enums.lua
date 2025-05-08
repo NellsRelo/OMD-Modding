@@ -5,4 +5,3 @@ UDS_FogColorMode = {
     NewEnumerator1 = 2,
     UDS_MAX = 3,
 }
-

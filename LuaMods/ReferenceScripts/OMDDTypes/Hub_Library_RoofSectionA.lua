@@ -225,6 +225,3 @@
 ---@field Geometry USceneComponent
 ---@field TrapGrid USceneComponent
 AHub_Library_RoofSectionA_C = {}
-
-
-

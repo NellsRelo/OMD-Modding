@@ -19,6 +19,3 @@
 ---@field Wood_Plank_300W_A_Temp_B UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 AHub_Blacksmith_BellowsWood_C = {}
-
-
-

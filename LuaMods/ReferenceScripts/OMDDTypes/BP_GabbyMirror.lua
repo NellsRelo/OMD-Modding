@@ -17,21 +17,25 @@ ABP_GabbyMirror_C = {}
 ---@param RequestingInteractor AActor
 ---@param RetValue boolean
 function ABP_GabbyMirror_C:BP_CanInteractWith(RequestingInteractor, RetValue) end
+
 ---@param ProxyObject UAsyncAction_ListenForGameplayMessage
 ---@param ActualChannel FGameplayTag
 function ABP_GabbyMirror_C:OnMessageReceived_C0C94D4540B8784DC17F43830D3DA466(ProxyObject, ActualChannel) end
+
 ---@param ProxyObject UAsyncAction_ListenForGameplayMessage
 ---@param ActualChannel FGameplayTag
 function ABP_GabbyMirror_C:OnMessageReceived_137CAB8D4CA8B99EC88DA7B71051CD81(ProxyObject, ActualChannel) end
+
 function ABP_GabbyMirror_C:ReceiveBeginPlay() end
-ABP_GabbyMirror_C['Initialize Visuals'] = function() end
+
+ABP_GabbyMirror_C['Initialize Visuals'] = function(self,) end
 ---@param Target URSTPlayerProfile
-ABP_GabbyMirror_C['Process Keys'] = function(Target) end
+ABP_GabbyMirror_C['Process Keys'] = function(self, Target) end
 ---@param EndPlayReason EEndPlayReason::Type
 function ABP_GabbyMirror_C:ReceiveEndPlay(EndPlayReason) end
+
 ---@param ActorInfo FGameplayAbilityActorInfo
 function ABP_GabbyMirror_C:BP_OnInteract(ActorInfo) end
+
 ---@param EntryPoint int32
 function ABP_GabbyMirror_C:ExecuteUbergraph_BP_GabbyMirror(EntryPoint) end
-
-

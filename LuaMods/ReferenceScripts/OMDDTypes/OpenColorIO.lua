@@ -40,8 +40,8 @@ UOpenColorIOBlueprintLibrary = {}
 ---@param InputTexture UTexture
 ---@param OutputRenderTarget UTextureRenderTarget2D
 ---@return boolean
-function UOpenColorIOBlueprintLibrary:ApplyColorSpaceTransform(WorldContextObject, ConversionSettings, InputTexture, OutputRenderTarget) end
-
+function UOpenColorIOBlueprintLibrary:ApplyColorSpaceTransform(WorldContextObject, ConversionSettings, InputTexture,
+                                                               OutputRenderTarget) end
 
 ---@class UOpenColorIOColorTransform : UObject
 ---@field bIsDisplayViewType boolean
@@ -64,33 +64,34 @@ UOpenColorIOConfiguration = {}
 
 function UOpenColorIOConfiguration:ReloadExistingColorspaces() end
 
-
 ---@class UOpenColorIODisplayExtensionWrapper : UObject
 UOpenColorIODisplayExtensionWrapper = {}
 
 ---@param IsActiveFunctions TArray<FSceneViewExtensionIsActiveFunctor>
 function UOpenColorIODisplayExtensionWrapper:SetSceneExtensionIsActiveFunctions(IsActiveFunctions) end
+
 ---@param IsActiveFunction FSceneViewExtensionIsActiveFunctor
 function UOpenColorIODisplayExtensionWrapper:SetSceneExtensionIsActiveFunction(IsActiveFunction) end
+
 ---@param InDisplayConfiguration FOpenColorIODisplayConfiguration
 function UOpenColorIODisplayExtensionWrapper:SetOpenColorIOConfiguration(InDisplayConfiguration) end
+
 function UOpenColorIODisplayExtensionWrapper:RemoveSceneExtension() end
+
 ---@return FOpenColorIODisplayConfiguration
 function UOpenColorIODisplayExtensionWrapper:GetOpenColorIOConfiguration() end
+
 ---@param InDisplayConfiguration FOpenColorIODisplayConfiguration
 ---@param IsActiveFunction FSceneViewExtensionIsActiveFunctor
 ---@return UOpenColorIODisplayExtensionWrapper
 function UOpenColorIODisplayExtensionWrapper:CreateOpenColorIODisplayExtension(InDisplayConfiguration, IsActiveFunction) end
+
 ---@param InDisplayConfiguration FOpenColorIODisplayConfiguration
 ---@return UOpenColorIODisplayExtensionWrapper
 function UOpenColorIODisplayExtensionWrapper:CreateInGameOpenColorIODisplayExtension(InDisplayConfiguration) end
-
 
 ---@class UOpenColorIOSettings : UDeveloperSettings
 ---@field bUseLegacyProcessor boolean
 ---@field bUse32fLUT boolean
 ---@field bSupportInverseViewTransforms boolean
 UOpenColorIOSettings = {}
-
-
-

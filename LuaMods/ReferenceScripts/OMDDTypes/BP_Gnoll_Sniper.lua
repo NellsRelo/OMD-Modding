@@ -5,6 +5,3 @@
 ---@field RSTAimAssistTargetPelvis URSTAimAssistTargetComponent
 ---@field RSTRangedFirePoint URSTRangedFirePointComponent
 ABP_Gnoll_Sniper_C = {}
-
-
-

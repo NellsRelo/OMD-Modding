@@ -13,6 +13,3 @@
 ---@field RSTTrapGridBox URSTTrapGridBoxComponent
 ---@field TrapGrid USceneComponent
 ABP_DryDock_GroundDirt_North_C = {}
-
-
-

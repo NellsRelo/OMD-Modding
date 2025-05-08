@@ -224,11 +224,12 @@ UCreateMeshObjectTypeProperties = {}
 
 ---@return boolean
 function UCreateMeshObjectTypeProperties:ShouldShowPropertySet() end
+
 ---@return TArray<FString>
 function UCreateMeshObjectTypeProperties:GetOutputTypeNamesFunc() end
+
 ---@return ECreateObjectTypeHint
 function UCreateMeshObjectTypeProperties:GetCurrentCreateMeshType() end
-
 
 ---@class UCurveControlPointsMechanic : UInteractionMechanic
 ---@field ClickBehavior USingleClickInputBehavior
@@ -410,8 +411,8 @@ UMeshTopologySelectionMechanic = {}
 UMeshTopologySelectionMechanicProperties = {}
 
 function UMeshTopologySelectionMechanicProperties:SelectAll() end
-function UMeshTopologySelectionMechanicProperties:InvertSelection() end
 
+function UMeshTopologySelectionMechanicProperties:InvertSelection() end
 
 ---@class UMeshWireframeComponent : UMeshComponent
 ---@field LineDepthBias float
@@ -467,16 +468,18 @@ UModelingObjectsCreationAPI = {}
 ---@param CreateTexParams FCreateTextureObjectParams
 ---@return FCreateTextureObjectResult
 function UModelingObjectsCreationAPI:CreateTextureObject(CreateTexParams) end
+
 ---@param CreateActorParams FCreateActorParams
 ---@return FCreateActorResult
 function UModelingObjectsCreationAPI:CreateNewActor(CreateActorParams) end
+
 ---@param CreateMeshParams FCreateMeshObjectParams
 ---@return FCreateMeshObjectResult
 function UModelingObjectsCreationAPI:CreateMeshObject(CreateMeshParams) end
+
 ---@param CreateMaterialParams FCreateMaterialObjectParams
 ---@return FCreateMaterialObjectResult
 function UModelingObjectsCreationAPI:CreateMaterialObject(CreateMaterialParams) end
-
 
 ---@class UModelingSceneSnappingManager : USceneSnappingManager
 ---@field ParentContext UInteractiveToolsContext
@@ -509,7 +512,6 @@ UOctreeDynamicMeshComponent = {}
 
 ---@param NewMesh UDynamicMesh
 function UOctreeDynamicMeshComponent:SetDynamicMesh(NewMesh) end
-
 
 ---@class UOnAcceptHandleSourcesProperties : UOnAcceptHandleSourcesPropertiesBase
 ---@field HandleInputs EHandleSourcesMethod
@@ -570,7 +572,6 @@ UPolygroupLayersProperties = {}
 ---@return TArray<FString>
 function UPolygroupLayersProperties:GetGroupLayersFunc() end
 
-
 ---@class UPreviewGeometry : UObject
 ---@field ParentActor APreviewGeometryActor
 ---@field TriangleSets TMap<FString, UTriangleSetComponent>
@@ -582,59 +583,76 @@ UPreviewGeometry = {}
 ---@param bVisible boolean
 ---@return boolean
 function UPreviewGeometry:SetPointSetVisibility(PointSetIdentifier, bVisible) end
+
 ---@param PointSetIdentifier FString
 ---@param NewMaterial UMaterialInterface
 ---@return boolean
 function UPreviewGeometry:SetPointSetMaterial(PointSetIdentifier, NewMaterial) end
+
 ---@param LineSetIdentifier FString
 ---@param bVisible boolean
 ---@return boolean
 function UPreviewGeometry:SetLineSetVisibility(LineSetIdentifier, bVisible) end
+
 ---@param LineSetIdentifier FString
 ---@param NewMaterial UMaterialInterface
 ---@return boolean
 function UPreviewGeometry:SetLineSetMaterial(LineSetIdentifier, NewMaterial) end
+
 ---@param Material UMaterialInterface
 function UPreviewGeometry:SetAllPointSetsMaterial(Material) end
+
 ---@param Material UMaterialInterface
 function UPreviewGeometry:SetAllLineSetsMaterial(Material) end
+
 ---@param PointSetIdentifier FString
 ---@param bDestroy boolean
 ---@return boolean
 function UPreviewGeometry:RemovePointSet(PointSetIdentifier, bDestroy) end
+
 ---@param LineSetIdentifier FString
 ---@param bDestroy boolean
 ---@return boolean
 function UPreviewGeometry:RemoveLineSet(LineSetIdentifier, bDestroy) end
+
 ---@param bDestroy boolean
 function UPreviewGeometry:RemoveAllPointSets(bDestroy) end
+
 ---@param bDestroy boolean
 function UPreviewGeometry:RemoveAllLineSets(bDestroy) end
+
 ---@return APreviewGeometryActor
 function UPreviewGeometry:GetActor() end
+
 ---@param TriangleSetIdentifier FString
 ---@return UTriangleSetComponent
 function UPreviewGeometry:FindTriangleSet(TriangleSetIdentifier) end
+
 ---@param PointSetIdentifier FString
 ---@return UPointSetComponent
 function UPreviewGeometry:FindPointSet(PointSetIdentifier) end
+
 ---@param LineSetIdentifier FString
 ---@return ULineSetComponent
 function UPreviewGeometry:FindLineSet(LineSetIdentifier) end
+
 function UPreviewGeometry:Disconnect() end
+
 ---@param World UWorld
 ---@param WithTransform FTransform
 function UPreviewGeometry:CreateInWorld(World, WithTransform) end
+
 ---@param TriangleSetIdentifier FString
 ---@return UTriangleSetComponent
 function UPreviewGeometry:AddTriangleSet(TriangleSetIdentifier) end
+
 ---@param PointSetIdentifier FString
 ---@return UPointSetComponent
 function UPreviewGeometry:AddPointSet(PointSetIdentifier) end
+
 ---@param LineSetIdentifier FString
 ---@return ULineSetComponent
 function UPreviewGeometry:AddLineSet(LineSetIdentifier) end
-
 
 ---@class UPreviewMesh : UObject
 ---@field bBuildSpatialDataStructure boolean
@@ -757,5 +775,3 @@ UWeightMapSetProperties = {}
 
 ---@return TArray<FString>
 function UWeightMapSetProperties:GetWeightMapsFunc() end
-
-

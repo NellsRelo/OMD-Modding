@@ -4,4 +4,3 @@ EClothingWindMethodNv = {
     Accurate = 1,
     EClothingWindMethodNv_MAX = 2,
 }
-

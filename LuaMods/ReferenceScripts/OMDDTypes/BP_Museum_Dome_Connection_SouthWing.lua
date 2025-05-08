@@ -193,6 +193,3 @@
 ---@field Column_Square_1_6_StoneWall_SM UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM14 UStaticMeshComponent
 ABP_Museum_Dome_Connection_SouthWing_C = {}
-
-
-

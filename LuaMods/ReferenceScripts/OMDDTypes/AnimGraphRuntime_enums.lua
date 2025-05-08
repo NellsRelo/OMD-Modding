@@ -288,4 +288,3 @@ EWarpingVectorMode = {
     IKFootRootLocalSpaceVector = 3,
     EWarpingVectorMode_MAX = 4,
 }
-

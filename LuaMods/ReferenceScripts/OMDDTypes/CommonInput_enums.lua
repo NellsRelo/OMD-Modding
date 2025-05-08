@@ -22,4 +22,3 @@ ECommonInputType = {
     Count = 3,
     ECommonInputType_MAX = 4,
 }
-

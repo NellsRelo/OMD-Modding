@@ -4,6 +4,3 @@
 ---@field Cooldown double
 ---@field HoldDuration double
 ABP_WebShooter_ItemInstance_C = {}
-
-
-

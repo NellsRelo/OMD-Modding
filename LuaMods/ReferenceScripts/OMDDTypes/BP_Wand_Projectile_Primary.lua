@@ -7,5 +7,3 @@ ABP_Wand_Projectile_Primary_C = {}
 
 ---@return UNiagaraSystem
 function ABP_Wand_Projectile_Primary_C:GetTrailSystemInternal() end
-
-

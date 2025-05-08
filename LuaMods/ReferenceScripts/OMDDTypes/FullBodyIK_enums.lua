@@ -12,4 +12,3 @@ EPoleVectorOption = {
     Location = 1,
     EPoleVectorOption_MAX = 2,
 }
-

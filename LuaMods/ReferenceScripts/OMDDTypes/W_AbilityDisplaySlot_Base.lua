@@ -76,135 +76,156 @@ UW_AbilityDisplaySlot_Base_C = {}
 
 ---@param NewAmmoDisplayMode ERSTAbilityUIAmmoDisplayType
 ---@param bForce boolean
-UW_AbilityDisplaySlot_Base_C['Set Ammo Display Mode'] = function(NewAmmoDisplayMode, bForce) end
+UW_AbilityDisplaySlot_Base_C['Set Ammo Display Mode'] = function(self, NewAmmoDisplayMode, bForce) end
 ---@param Charges int32
 ---@param FloatCharges double
-UW_AbilityDisplaySlot_Base_C['Get Max Charges'] = function(Charges, FloatCharges) end
+UW_AbilityDisplaySlot_Base_C['Get Max Charges'] = function(self, Charges, FloatCharges) end
 ---@param Charges int32
 ---@return double
-UW_AbilityDisplaySlot_Base_C['Get Current Charges'] = function(Charges) end
+UW_AbilityDisplaySlot_Base_C['Get Current Charges'] = function(self, Charges) end
 ---@param TimeRemaining double
-UW_AbilityDisplaySlot_Base_C['Set Cooldown Time Remaining'] = function(TimeRemaining) end
+UW_AbilityDisplaySlot_Base_C['Set Cooldown Time Remaining'] = function(self, TimeRemaining) end
 ---@return double
-UW_AbilityDisplaySlot_Base_C['Get Cooldown Remaining'] = function() end
+UW_AbilityDisplaySlot_Base_C['Get Cooldown Remaining'] = function(self,) end
 ---@param NewCount int32
 ---@param bChanged boolean
 function UW_AbilityDisplaySlot_Base_C:SetChargeCount(NewCount, bChanged) end
+
 ---@param Index int32
-UW_AbilityDisplaySlot_Base_C['Init Charge Widget'] = function(Index) end
+UW_AbilityDisplaySlot_Base_C['Init Charge Widget'] = function(self, Index) end
 ---@param NewMax int32
 ---@param bChanged boolean
-UW_AbilityDisplaySlot_Base_C['Set Max Charge Count'] = function(NewMax, bChanged) end
-UW_AbilityDisplaySlot_Base_C['Configure Initial Display'] = function() end
+UW_AbilityDisplaySlot_Base_C['Set Max Charge Count'] = function(self, NewMax, bChanged) end
+UW_AbilityDisplaySlot_Base_C['Configure Initial Display'] = function(self,) end
 ---@param Instigator UObject
 ---@return boolean
-UW_AbilityDisplaySlot_Base_C['Should Process Instigator'] = function(Instigator) end
+UW_AbilityDisplaySlot_Base_C['Should Process Instigator'] = function(self, Instigator) end
 ---@param Tag FGameplayTag
 ---@param Count int32
 function UW_AbilityDisplaySlot_Base_C:GetChargeCountFromChargeComponent(Tag, Count) end
+
 ---@param Tag FGameplayTag
 ---@param Count int32
 function UW_AbilityDisplaySlot_Base_C:GetMaxChargeCountFromChargeComponent(Tag, Count) end
+
 ---@param Attribute FGameplayAttribute
 ---@param Found boolean
 ---@param Value double
 function UW_AbilityDisplaySlot_Base_C:GetAttribute(Attribute, Found, Value) end
+
 ---@param ProxyObject UAsyncAction_ListenForGameplayMessage
 ---@param ActualChannel FGameplayTag
 function UW_AbilityDisplaySlot_Base_C:OnMessageReceived_D528E1C246693E0FB6003E8077381E1F(ProxyObject, ActualChannel) end
+
 ---@param ProxyObject UAsyncAction_ListenForGameplayMessage
 ---@param ActualChannel FGameplayTag
 function UW_AbilityDisplaySlot_Base_C:OnMessageReceived_DF122DF14BED44EB016568A985822CC0(ProxyObject, ActualChannel) end
+
 ---@param ProxyObject UAsyncAction_ListenForGameplayMessage
 ---@param ActualChannel FGameplayTag
 function UW_AbilityDisplaySlot_Base_C:OnMessageReceived_960A3371435A59922725518010FBB23E(ProxyObject, ActualChannel) end
+
 ---@param Attribute FGameplayAttribute
 ---@param NewValue float
 ---@param OldValue float
 function UW_AbilityDisplaySlot_Base_C:Changed_88A3A96241B48AA7A9274581B28E9F27(Attribute, NewValue, OldValue) end
+
 ---@param Attribute FGameplayAttribute
 ---@param NewValue float
 ---@param OldValue float
 function UW_AbilityDisplaySlot_Base_C:Changed_5FA0EF2B46192F8C65647FBE6100D945(Attribute, NewValue, OldValue) end
+
 ---@param ProxyObject UAsyncAction_ListenForGameplayMessage
 ---@param ActualChannel FGameplayTag
 function UW_AbilityDisplaySlot_Base_C:OnMessageReceived_36734B87440D9F18472D189DC07DA07D(ProxyObject, ActualChannel) end
+
 function UW_AbilityDisplaySlot_Base_C:Triggered_E7FCDFB84AA4609D3EC7309E2E0787CF() end
+
 function UW_AbilityDisplaySlot_Base_C:Triggered_9DE940A44094C31A1A5B9299A2772A67() end
+
 function UW_AbilityDisplaySlot_Base_C:Triggered_6ABA3BE649F86EAD4BAB1ABCFF92A8EC() end
+
 function UW_AbilityDisplaySlot_Base_C:Triggered_A02E6C8046088CC844D1379146F2A68D() end
+
 function UW_AbilityDisplaySlot_Base_C:Triggered_487526E74D2B21DD2DBF80B0286D7912() end
+
 function UW_AbilityDisplaySlot_Base_C:Triggered_EFC0AF01462767082E63F099A8864D77() end
+
 ---@param Loaded UObject
 function UW_AbilityDisplaySlot_Base_C:OnLoaded_11E8AE6546F5688D0C230D8A2B953D86(Loaded) end
+
 ---@param Loaded UObject
 function UW_AbilityDisplaySlot_Base_C:OnLoaded_ADD1354743CD9B5DF6006881AA0A9A7D(Loaded) end
+
 ---@param IsDesignTime boolean
 function UW_AbilityDisplaySlot_Base_C:PreConstruct(IsDesignTime) end
+
 function UW_AbilityDisplaySlot_Base_C:Construct() end
+
 ---@param MyGeometry FGeometry
 ---@param InDeltaTime float
 function UW_AbilityDisplaySlot_Base_C:Tick(MyGeometry, InDeltaTime) end
+
 ---@param Instigator UObject
 ---@param Tag FGameplayTag
-UW_AbilityDisplaySlot_Base_C['Process Duration Received'] = function(Instigator, Tag) end
+UW_AbilityDisplaySlot_Base_C['Process Duration Received'] = function(self, Instigator, Tag) end
 ---@param Instigator UObject
 ---@param Tag FGameplayTag
-UW_AbilityDisplaySlot_Base_C['Process Recharging Complete'] = function(Instigator, Tag) end
+UW_AbilityDisplaySlot_Base_C['Process Recharging Complete'] = function(self, Instigator, Tag) end
 ---@param Instigator UObject
 ---@param Tag FGameplayTag
-UW_AbilityDisplaySlot_Base_C['Process Recharging Cancelled'] = function(Instigator, Tag) end
-UW_AbilityDisplaySlot_Base_C['Register Message Callbacks'] = function() end
-UW_AbilityDisplaySlot_Base_C['Refresh Max Charge Count'] = function() end
-UW_AbilityDisplaySlot_Base_C['Refresh Charge Count'] = function() end
-UW_AbilityDisplaySlot_Base_C['Hide Ability Icon'] = function() end
-UW_AbilityDisplaySlot_Base_C['Init Charges'] = function() end
-UW_AbilityDisplaySlot_Base_C['Init Ability Icon'] = function() end
+UW_AbilityDisplaySlot_Base_C['Process Recharging Cancelled'] = function(self, Instigator, Tag) end
+UW_AbilityDisplaySlot_Base_C['Register Message Callbacks'] = function(self,) end
+UW_AbilityDisplaySlot_Base_C['Refresh Max Charge Count'] = function(self,) end
+UW_AbilityDisplaySlot_Base_C['Refresh Charge Count'] = function(self,) end
+UW_AbilityDisplaySlot_Base_C['Hide Ability Icon'] = function(self,) end
+UW_AbilityDisplaySlot_Base_C['Init Charges'] = function(self,) end
+UW_AbilityDisplaySlot_Base_C['Init Ability Icon'] = function(self,) end
 ---@param Tag FGameplayTag
 ---@param OldData TSoftObjectPtr<URSTAbilityUIData>
 ---@param NewData TSoftObjectPtr<URSTAbilityUIData>
-UW_AbilityDisplaySlot_Base_C['On Ability UI Data Changed'] = function(Tag, OldData, NewData) end
-UW_AbilityDisplaySlot_Base_C['On Player State Changed'] = function() end
+UW_AbilityDisplaySlot_Base_C['On Ability UI Data Changed'] = function(self, Tag, OldData, NewData) end
+UW_AbilityDisplaySlot_Base_C['On Player State Changed'] = function(self,) end
 ---@param InputPin ARSTPlayerState
-UW_AbilityDisplaySlot_Base_C['Register Ability UI Callbacks'] = function(InputPin) end
+UW_AbilityDisplaySlot_Base_C['Register Ability UI Callbacks'] = function(self, InputPin) end
 ---@param Tag FGameplayTag
-UW_AbilityDisplaySlot_Base_C['On Max Charges Updated'] = function(Tag) end
+UW_AbilityDisplaySlot_Base_C['On Max Charges Updated'] = function(self, Tag) end
 ---@param Tag FGameplayTag
-UW_AbilityDisplaySlot_Base_C['On Current Charges Updated'] = function(Tag) end
+UW_AbilityDisplaySlot_Base_C['On Current Charges Updated'] = function(self, Tag) end
 ---@param OldPawn APawn
 ---@param NewPawn APawn
-UW_AbilityDisplaySlot_Base_C['Register Charge Callbacks'] = function(OldPawn, NewPawn) end
-UW_AbilityDisplaySlot_Base_C['Register Pawn Callback'] = function() end
-UW_AbilityDisplaySlot_Base_C['Register Player State Callbacks'] = function() end
-UW_AbilityDisplaySlot_Base_C['Finish Register Player State Callbacks'] = function() end
-UW_AbilityDisplaySlot_Base_C['On Ability Icon Dirty'] = function() end
+UW_AbilityDisplaySlot_Base_C['Register Charge Callbacks'] = function(self, OldPawn, NewPawn) end
+UW_AbilityDisplaySlot_Base_C['Register Pawn Callback'] = function(self,) end
+UW_AbilityDisplaySlot_Base_C['Register Player State Callbacks'] = function(self,) end
+UW_AbilityDisplaySlot_Base_C['Finish Register Player State Callbacks'] = function(self,) end
+UW_AbilityDisplaySlot_Base_C['On Ability Icon Dirty'] = function(self,) end
 ---@param PlayerState ARSTPlayerState
-UW_AbilityDisplaySlot_Base_C['Register Visibility Callbacks'] = function(PlayerState) end
-UW_AbilityDisplaySlot_Base_C['On Ability Disabled'] = function() end
+UW_AbilityDisplaySlot_Base_C['Register Visibility Callbacks'] = function(self, PlayerState) end
+UW_AbilityDisplaySlot_Base_C['On Ability Disabled'] = function(self,) end
 function UW_AbilityDisplaySlot_Base_C:BP_SynchronizeProperties() end
-UW_AbilityDisplaySlot_Base_C['Update Charge Percentage'] = function() end
-UW_AbilityDisplaySlot_Base_C['Update Charge Count'] = function() end
+
+UW_AbilityDisplaySlot_Base_C['Update Charge Percentage'] = function(self,) end
+UW_AbilityDisplaySlot_Base_C['Update Charge Count'] = function(self,) end
 ---@param Instigator UObject
 ---@param Magnitude double
-UW_AbilityDisplaySlot_Base_C['Process Cooldown Reduced'] = function(Instigator, Magnitude) end
-UW_AbilityDisplaySlot_Base_C['On Ability Enabled'] = function() end
-UW_AbilityDisplaySlot_Base_C['On Ability - Show'] = function() end
-UW_AbilityDisplaySlot_Base_C['On Ability - Hide'] = function() end
+UW_AbilityDisplaySlot_Base_C['Process Cooldown Reduced'] = function(self, Instigator, Magnitude) end
+UW_AbilityDisplaySlot_Base_C['On Ability Enabled'] = function(self,) end
+UW_AbilityDisplaySlot_Base_C['On Ability - Show'] = function(self,) end
+UW_AbilityDisplaySlot_Base_C['On Ability - Hide'] = function(self,) end
 function UW_AbilityDisplaySlot_Base_C:Destruct() end
+
 ---@param Action UCancellableAsyncAction
-UW_AbilityDisplaySlot_Base_C['Try Cancel Async Action'] = function(Action) end
-UW_AbilityDisplaySlot_Base_C['Clear Tasks'] = function() end
-UW_AbilityDisplaySlot_Base_C['Refresh Ability Enabled Visuals'] = function() end
+UW_AbilityDisplaySlot_Base_C['Try Cancel Async Action'] = function(self, Action) end
+UW_AbilityDisplaySlot_Base_C['Clear Tasks'] = function(self,) end
+UW_AbilityDisplaySlot_Base_C['Refresh Ability Enabled Visuals'] = function(self,) end
 ---@param InputPin TSoftObjectPtr<URSTAbilityUIData>
-UW_AbilityDisplaySlot_Base_C['Listen for Activation Failure'] = function(InputPin) end
-UW_AbilityDisplaySlot_Base_C['Clear Activation Failure Listener'] = function() end
+UW_AbilityDisplaySlot_Base_C['Listen for Activation Failure'] = function(self, InputPin) end
+UW_AbilityDisplaySlot_Base_C['Clear Activation Failure Listener'] = function(self,) end
 ---@param Ability_Icon TSoftObjectPtr<URSTAbilityUIData>
-UW_AbilityDisplaySlot_Base_C['Set Ability Icon'] = function(Ability_Icon) end
+UW_AbilityDisplaySlot_Base_C['Set Ability Icon'] = function(self, Ability_Icon) end
 ---@param InputPin URSTAbilityUIData
-UW_AbilityDisplaySlot_Base_C['Do Set Ability Icon'] = function(InputPin) end
+UW_AbilityDisplaySlot_Base_C['Do Set Ability Icon'] = function(self, InputPin) end
 ---@param Target URSTAbilityUIData
-UW_AbilityDisplaySlot_Base_C['Do Listen for Activation Failure'] = function(Target) end
+UW_AbilityDisplaySlot_Base_C['Do Listen for Activation Failure'] = function(self, Target) end
 ---@param EntryPoint int32
 function UW_AbilityDisplaySlot_Base_C:ExecuteUbergraph_W_AbilityDisplaySlot_Base(EntryPoint) end
-
-

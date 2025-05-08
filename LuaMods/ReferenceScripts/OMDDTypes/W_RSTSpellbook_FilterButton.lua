@@ -9,9 +9,10 @@
 UW_RSTSpellbook_FilterButton_C = {}
 
 function UW_RSTSpellbook_FilterButton_C:BP_SynchronizeProperties() end
+
 function UW_RSTSpellbook_FilterButton_C:BndEvt__W_RSTSpellbook_FilterButton_Button_25_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature() end
+
 ---@param EntryPoint int32
 function UW_RSTSpellbook_FilterButton_C:ExecuteUbergraph_W_RSTSpellbook_FilterButton(EntryPoint) end
-UW_RSTSpellbook_FilterButton_C['On Filter Clicked__DelegateSignature'] = function() end
 
-
+UW_RSTSpellbook_FilterButton_C['On Filter Clicked__DelegateSignature'] = function(self,) end

@@ -36,6 +36,3 @@ UMovieSceneGeometryCacheSection = {}
 ---@class UMovieSceneGeometryCacheTrack : UMovieSceneNameableTrack
 ---@field AnimationSections TArray<UMovieSceneSection>
 UMovieSceneGeometryCacheTrack = {}
-
-
-

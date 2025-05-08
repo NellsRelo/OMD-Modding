@@ -6,4 +6,3 @@ ECameraFocusMethod = {
     Disable = 3,
     MAX = 4,
 }
-

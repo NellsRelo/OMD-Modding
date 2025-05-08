@@ -5,6 +5,3 @@
 ---@field RSTAimAssistTargetPelvis URSTAimAssistTargetComponent
 ---@field RSTRangedFirePoint URSTRangedFirePointComponent
 ABP_Orc_Archer_TNT_C = {}
-
-
-

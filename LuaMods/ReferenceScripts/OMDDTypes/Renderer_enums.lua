@@ -10,4 +10,3 @@ ESparseVolumeTexturePreviewAttribute = {
     ESVTPA_AttributesB_A = 7,
     ESVTPA_MAX = 8,
 }
-

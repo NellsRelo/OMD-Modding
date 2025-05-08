@@ -8,7 +8,6 @@ UBTService_CheckForMaster_C = {}
 ---@param ControlledPawn APawn
 ---@param DeltaSeconds float
 function UBTService_CheckForMaster_C:ReceiveTickAI(OwnerController, ControlledPawn, DeltaSeconds) end
+
 ---@param EntryPoint int32
 function UBTService_CheckForMaster_C:ExecuteUbergraph_BTService_CheckForMaster(EntryPoint) end
-
-

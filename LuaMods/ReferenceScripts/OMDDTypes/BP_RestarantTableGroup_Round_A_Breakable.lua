@@ -9,6 +9,3 @@
 ---@field BP_Wood_Table_B_Breakable UChildActorComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_RestarantTableGroup_Round_A_Breakable_C = {}
-
-
-

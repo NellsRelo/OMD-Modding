@@ -6,4 +6,3 @@ ENiagaraMeshTransforms = {
     NewEnumerator3 = 3,
     ENiagaraMeshTransforms_MAX = 4,
 }
-

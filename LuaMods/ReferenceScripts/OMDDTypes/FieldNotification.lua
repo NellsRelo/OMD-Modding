@@ -8,5 +8,3 @@ FFieldNotificationId = {}
 
 ---@class INotifyFieldValueChanged : IInterface
 INotifyFieldValueChanged = {}
-
-

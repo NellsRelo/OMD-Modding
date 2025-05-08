@@ -5,4 +5,3 @@ EProcMeshSliceCapOption = {
     UseLastSectionForCap = 2,
     EProcMeshSliceCapOption_MAX = 3,
 }
-

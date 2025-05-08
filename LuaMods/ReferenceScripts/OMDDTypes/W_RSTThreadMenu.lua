@@ -12,10 +12,12 @@ UW_RSTThreadMenu_C = {}
 
 ---@return UWidget
 function UW_RSTThreadMenu_C:BP_GetDesiredFocusTarget() end
+
 function UW_RSTThreadMenu_C:BP_OnActivated() end
+
 function UW_RSTThreadMenu_C:BP_OnDeactivated() end
+
 function UW_RSTThreadMenu_C:SetupAsTabChild() end
+
 ---@param EntryPoint int32
 function UW_RSTThreadMenu_C:ExecuteUbergraph_W_RSTThreadMenu(EntryPoint) end
-
-

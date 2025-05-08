@@ -22,4 +22,3 @@ EQosResponseType = {
     Failure = 2,
     EQosResponseType_MAX = 3,
 }
-

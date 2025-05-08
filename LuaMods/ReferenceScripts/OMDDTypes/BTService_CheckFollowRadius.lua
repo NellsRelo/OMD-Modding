@@ -8,7 +8,6 @@ UBTService_CheckFollowRadius_C = {}
 ---@param ControlledPawn APawn
 ---@param DeltaSeconds float
 function UBTService_CheckFollowRadius_C:ReceiveTickAI(OwnerController, ControlledPawn, DeltaSeconds) end
+
 ---@param EntryPoint int32
 function UBTService_CheckFollowRadius_C:ExecuteUbergraph_BTService_CheckFollowRadius(EntryPoint) end
-
-

@@ -1,10 +1,9 @@
 ---@meta
 
 ---@class ABP_Museum_Westwing_Exterior_Vista_C : ABP_OMDTrapGrid_C
+---@field Stair_1x4_StoneWallBlock_SM1 UStaticMeshComponent
 ---@field Stair_1x4_StoneWallBlock_SM19 UStaticMeshComponent
----@field Stair_1x4_StoneWallBlock_SM18 UStaticMeshComponent
 ---@field Stair_1x4_StoneWallBlock_SM17 UStaticMeshComponent
----@field Stair_1x4_StoneWallBlock_SM16 UStaticMeshComponent
 ---@field RailingC_2W9 UStaticMeshComponent
 ---@field SupportBlock_11 UStaticMeshComponent
 ---@field RailingC_2W8 UStaticMeshComponent
@@ -42,20 +41,12 @@
 ---@field Column_Pointed_Half_B_SM6 UStaticMeshComponent
 ---@field Column_Pointed_Half_B_SM5 UStaticMeshComponent
 ---@field Stair_1x4_StoneWallBlock_SM15 UStaticMeshComponent
----@field Stair_1x4_StoneWallBlock_SM14 UStaticMeshComponent
 ---@field Stair_1x4_StoneWallBlock_SM13 UStaticMeshComponent
----@field Stair_1x4_StoneWallBlock_SM12 UStaticMeshComponent
 ---@field Stair_1x4_StoneWallBlock_SM11 UStaticMeshComponent
----@field Stair_1x4_StoneWallBlock_SM10 UStaticMeshComponent
 ---@field Stair_1x4_StoneWallBlock_SM9 UStaticMeshComponent
----@field Stair_1x4_StoneWallBlock_SM8 UStaticMeshComponent
 ---@field Stair_1x4_StoneWallBlock_SM7 UStaticMeshComponent
----@field Stair_1x4_StoneWallBlock_SM6 UStaticMeshComponent
 ---@field Stair_1x4_StoneWallBlock_SM5 UStaticMeshComponent
----@field Stair_1x4_StoneWallBlock_SM4 UStaticMeshComponent
 ---@field Stair_1x4_StoneWallBlock_SM3 UStaticMeshComponent
----@field Stair_1x4_StoneWallBlock_SM2 UStaticMeshComponent
----@field Stair_1x4_StoneWallBlock_SM1 UStaticMeshComponent
 ---@field Stair_1x4_StoneWallBlock_SM UStaticMeshComponent
 ---@field Floor_4x4_Drydocks_SM24 UStaticMeshComponent
 ---@field Floor_4x4_Drydocks_SM23 UStaticMeshComponent
@@ -180,6 +171,3 @@
 ---@field Geo USceneComponent
 ---@field TrapGrid USceneComponent
 ABP_Museum_Westwing_Exterior_Vista_C = {}
-
-
-

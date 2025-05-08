@@ -7,6 +7,5 @@ UAutomationUtilsBlueprintLibrary = {}
 ---@param MaxGlobalError float
 ---@param MaxLocalError float
 ---@param MapNameOverride FString
-function UAutomationUtilsBlueprintLibrary:TakeGameplayAutomationScreenshot(ScreenshotName, MaxGlobalError, MaxLocalError, MapNameOverride) end
-
-
+function UAutomationUtilsBlueprintLibrary:TakeGameplayAutomationScreenshot(ScreenshotName, MaxGlobalError, MaxLocalError,
+                                                                           MapNameOverride) end

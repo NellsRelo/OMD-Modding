@@ -9,7 +9,6 @@
 UBP_OverallUILayout_C = {}
 
 function UBP_OverallUILayout_C:OnInitialized() end
+
 ---@param EntryPoint int32
 function UBP_OverallUILayout_C:ExecuteUbergraph_BP_OverallUILayout(EntryPoint) end
-
-

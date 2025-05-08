@@ -15,8 +15,8 @@
 ABP_WandClone_C = {}
 
 function ABP_WandClone_C:ReceiveBeginPlay() end
+
 function ABP_WandClone_C:ReceiveDestroyed() end
+
 ---@param EntryPoint int32
 function ABP_WandClone_C:ExecuteUbergraph_BP_WandClone(EntryPoint) end
-
-

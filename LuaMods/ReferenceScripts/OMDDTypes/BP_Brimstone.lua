@@ -15,15 +15,19 @@
 ABP_Brimstone_C = {}
 
 function ABP_Brimstone_C:UserConstructionScript() end
-ABP_Brimstone_C['0 to 1__FinishedFunc'] = function() end
-ABP_Brimstone_C['0 to 1__UpdateFunc'] = function() end
+
+ABP_Brimstone_C['0 to 1__FinishedFunc'] = function(self,) end
+ABP_Brimstone_C['0 to 1__UpdateFunc'] = function(self,) end
 function ABP_Brimstone_C:ReceiveBeginPlay() end
+
 function ABP_Brimstone_C:BP_IsPlacementValidChanged() end
+
 function ABP_Brimstone_C:BP_IsSoldChanged() end
+
 function ABP_Brimstone_C:BP_IsBeingPlacedChanged() end
-ABP_Brimstone_C['Update FX'] = function() end
+
+ABP_Brimstone_C['Update FX'] = function(self,) end
 function ABP_Brimstone_C:BP_AvailableChargesChanged() end
+
 ---@param EntryPoint int32
 function ABP_Brimstone_C:ExecuteUbergraph_BP_Brimstone(EntryPoint) end
-
-

@@ -10,23 +10,30 @@ AChaosCacheManager = {}
 
 ---@param InCacheName FName
 function AChaosCacheManager:TriggerComponentByCache(InCacheName) end
+
 ---@param InComponent UPrimitiveComponent
 function AChaosCacheManager:TriggerComponent(InComponent) end
+
 function AChaosCacheManager:TriggerAll() end
+
 ---@param InStartTime float
 function AChaosCacheManager:SetStartTime(InStartTime) end
+
 ---@param InCacheCollection UChaosCacheCollection
 function AChaosCacheManager:SetCacheCollection(InCacheCollection) end
+
 ---@param InIndex int32
 function AChaosCacheManager:ResetSingleTransform(InIndex) end
+
 function AChaosCacheManager:ResetAllComponentTransforms() end
+
 ---@param InCacheName FName
 ---@param bEnable boolean
 function AChaosCacheManager:EnablePlaybackByCache(InCacheName, bEnable) end
+
 ---@param Index int32
 ---@param bEnable boolean
 function AChaosCacheManager:EnablePlayback(Index, bEnable) end
-
 
 ---@class AChaosCachePlayer : AChaosCacheManager
 AChaosCachePlayer = {}
@@ -191,6 +198,3 @@ UMovieSceneChaosCacheSection = {}
 ---@class UMovieSceneChaosCacheTrack : UMovieSceneNameableTrack
 ---@field AnimationSections TArray<UMovieSceneSection>
 UMovieSceneChaosCacheTrack = {}
-
-
-

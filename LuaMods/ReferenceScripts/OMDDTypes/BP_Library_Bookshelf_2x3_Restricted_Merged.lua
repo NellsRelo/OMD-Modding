@@ -9,6 +9,3 @@
 ---@field Geo_Shelf USceneComponent
 ---@field Box_Collision_Middle UBoxComponent
 ABP_Library_Bookshelf_2x3_Restricted_Merged_C = {}
-
-
-

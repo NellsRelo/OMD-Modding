@@ -119,6 +119,3 @@
 ---@field Particles USceneComponent
 ---@field SharedRoot USceneComponent
 ABP_ShipBuild_Large_Rammed_C = {}
-
-
-

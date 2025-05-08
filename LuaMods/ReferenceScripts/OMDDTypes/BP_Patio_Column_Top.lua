@@ -6,6 +6,3 @@
 ---@field Crenellation_Pointed_Square_SM_StaticMeshComponent0 UStaticMeshComponent
 ---@field SharedRoot USceneComponent
 ABP_Patio_Column_Top_C = {}
-
-
-

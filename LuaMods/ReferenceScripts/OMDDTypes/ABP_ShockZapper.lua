@@ -23,6 +23,10 @@ FAnimBlueprintGeneratedConstantData = {}
 
 
 
+---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
+FAnimBlueprintGeneratedMutableData = {}
+
+
 ---@class UABP_ShockZapper_C : URSTAnimInstanceTrap
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance
@@ -46,8 +50,8 @@ UABP_ShockZapper_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_ShockZapper_C:AnimGraph(AnimGraph) end
+
 function UABP_ShockZapper_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ShockZapper_AnimGraphNode_TransitionResult_F803CF554A0002681B1EC6A42D0A78DA() end
+
 ---@param EntryPoint int32
 function UABP_ShockZapper_C:ExecuteUbergraph_ABP_ShockZapper(EntryPoint) end
-
-

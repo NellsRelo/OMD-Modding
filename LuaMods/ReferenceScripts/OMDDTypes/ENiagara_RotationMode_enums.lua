@@ -8,4 +8,3 @@ ENiagara_RotationMode = {
     NewEnumerator5 = 5,
     ENiagara_MAX = 6,
 }
-

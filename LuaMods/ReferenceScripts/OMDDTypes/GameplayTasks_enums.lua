@@ -26,4 +26,3 @@ ETaskResourceOverlapPolicy = {
     RequestCancelAndStartAtEnd = 3,
     ETaskResourceOverlapPolicy_MAX = 4,
 }
-

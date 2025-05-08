@@ -5,6 +5,3 @@
 ---@field armillary_sphere_base_SM UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 AArmillary_Sphere_A_SM_C = {}
-
-
-

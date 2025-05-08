@@ -7,6 +7,3 @@
 ---@field CombatCapsule URSTCombatCapsuleComponent
 ---@field ['Druid Magic Loop'] UAudioComponent
 ABP_Cyclops_Mage_C = {}
-
-
-

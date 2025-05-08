@@ -7,4 +7,3 @@ ENiagaraSkelSamplingModeFull = {
     NewEnumerator8 = 4,
     ENiagaraSkelSamplingModeFull_MAX = 5,
 }
-

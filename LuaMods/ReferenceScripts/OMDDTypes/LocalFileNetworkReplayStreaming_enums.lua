@@ -14,4 +14,3 @@ ELocalFileReplayResult = {
     Unknown = 11,
     ELocalFileReplayResult_MAX = 12,
 }
-

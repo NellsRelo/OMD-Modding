@@ -6,6 +6,3 @@
 ---@field CSC_300_GardenWall1 UStaticMeshComponent
 ---@field CSC_300_GardenWall UStaticMeshComponent
 AWall_Garden_1_5_Straight_3X_C = {}
-
-
-

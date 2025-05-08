@@ -38,4 +38,3 @@ ACLVisualFidelityChangeResult = {
     Failed = 2,
     ACLVisualFidelityChangeResult_MAX = 3,
 }
-

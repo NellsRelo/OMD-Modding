@@ -298,4 +298,3 @@ ERigVMUserWorkflowType = {
     All = 7,
     ERigVMUserWorkflowType_MAX = 8,
 }
-

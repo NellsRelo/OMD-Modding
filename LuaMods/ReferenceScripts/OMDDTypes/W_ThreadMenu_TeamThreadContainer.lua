@@ -18,22 +18,25 @@ UW_ThreadMenu_TeamThreadContainer_C = {}
 
 ---@param Index int32
 ---@param Horizontal_Box UHorizontalBox
-UW_ThreadMenu_TeamThreadContainer_C['Ensure Container Exists'] = function(Index, Horizontal_Box) end
+UW_ThreadMenu_TeamThreadContainer_C['Ensure Container Exists'] = function(self, Index, Horizontal_Box) end
 function UW_ThreadMenu_TeamThreadContainer_C:Construct() end
-UW_ThreadMenu_TeamThreadContainer_C['Refresh Team Threads'] = function() end
-UW_ThreadMenu_TeamThreadContainer_C['Create Threads'] = function() end
-UW_ThreadMenu_TeamThreadContainer_C['Hide Thread Display'] = function() end
-UW_ThreadMenu_TeamThreadContainer_C['Refresh Button Visibility'] = function() end
+
+UW_ThreadMenu_TeamThreadContainer_C['Refresh Team Threads'] = function(self,) end
+UW_ThreadMenu_TeamThreadContainer_C['Create Threads'] = function(self,) end
+UW_ThreadMenu_TeamThreadContainer_C['Hide Thread Display'] = function(self,) end
+UW_ThreadMenu_TeamThreadContainer_C['Refresh Button Visibility'] = function(self,) end
 ---@param Button UCommonButtonBase
-function UW_ThreadMenu_TeamThreadContainer_C:BndEvt__W_ThreadMenu_DistortionContainer_DistortionLeftArrow_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_ThreadMenu_TeamThreadContainer_C:BndEvt__W_ThreadMenu_DistortionContainer_DistortionLeftArrow_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(
+    Button) end
+
 ---@param Button UCommonButtonBase
-function UW_ThreadMenu_TeamThreadContainer_C:BndEvt__W_ThreadMenu_DistortionContainer_DistortionRightArrow_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_ThreadMenu_TeamThreadContainer_C:BndEvt__W_ThreadMenu_DistortionContainer_DistortionRightArrow_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(
+    Button) end
+
 ---@param Diff int32
-UW_ThreadMenu_TeamThreadContainer_C['Adjust Paging'] = function(Diff) end
+UW_ThreadMenu_TeamThreadContainer_C['Adjust Paging'] = function(self, Diff) end
 ---@param InputPin int32
-UW_ThreadMenu_TeamThreadContainer_C['Set Current Page'] = function(InputPin) end
-UW_ThreadMenu_TeamThreadContainer_C['Scroll To End'] = function() end
+UW_ThreadMenu_TeamThreadContainer_C['Set Current Page'] = function(self, InputPin) end
+UW_ThreadMenu_TeamThreadContainer_C['Scroll To End'] = function(self,) end
 ---@param EntryPoint int32
 function UW_ThreadMenu_TeamThreadContainer_C:ExecuteUbergraph_W_ThreadMenu_TeamThreadContainer(EntryPoint) end
-
-

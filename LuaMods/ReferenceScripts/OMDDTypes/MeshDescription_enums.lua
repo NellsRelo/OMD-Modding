@@ -6,4 +6,3 @@ EComputeNTBsOptions = {
     WeightedNTBs = 4,
     EComputeNTBsOptions_MAX = 5,
 }
-

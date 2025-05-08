@@ -37,4 +37,3 @@ ERuntimeGenerationType = {
     LegacyGeneration = 3,
     ERuntimeGenerationType_MAX = 4,
 }
-

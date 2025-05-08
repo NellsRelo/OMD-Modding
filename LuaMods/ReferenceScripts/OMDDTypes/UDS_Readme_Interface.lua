@@ -4,8 +4,6 @@
 IUDS_Readme_Interface_C = {}
 
 ---@param Category int32
-IUDS_Readme_Interface_C['Show Category'] = function(Category) end
+IUDS_Readme_Interface_C['Show Category'] = function(self, Category) end
 ---@param Entries TArray<FName>
-IUDS_Readme_Interface_C['Show Set of Entries'] = function(Entries) end
-
-
+IUDS_Readme_Interface_C['Show Set of Entries'] = function(self, Entries) end

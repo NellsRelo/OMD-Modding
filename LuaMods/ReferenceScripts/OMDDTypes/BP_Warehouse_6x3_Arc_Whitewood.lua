@@ -10,6 +10,3 @@
 ---@field Warehouse_4x_Window_Single_Wall_SM UStaticMeshComponent
 ---@field Trap_Wall2 URSTTrapGridBoxComponent
 ABP_Warehouse_6x3_Arc_Whitewood_C = {}
-
-
-

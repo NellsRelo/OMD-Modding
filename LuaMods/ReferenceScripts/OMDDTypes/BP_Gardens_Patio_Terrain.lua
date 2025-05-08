@@ -8,6 +8,3 @@
 ---@field Gardens_Patio_Terrain_Planter_A UStaticMeshComponent
 ---@field Gardens_Patio_Terrain_A UStaticMeshComponent
 ABP_Gardens_Patio_Terrain_C = {}
-
-
-

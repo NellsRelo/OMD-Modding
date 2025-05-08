@@ -4,6 +4,3 @@
 ---@field RSTHitFlash URSTHitFlashComponent
 ---@field RSTRangedFirePoint URSTRangedFirePointComponent
 ABP_Warhero_Priestess_C = {}
-
-
-

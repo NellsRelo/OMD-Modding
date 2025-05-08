@@ -38,6 +38,3 @@
 ---@field TunnelLarge_Straight_4x_Bottom_Sewer_SM UStaticMeshComponent
 ---@field Geo USceneComponent
 ABP_BackAlley_Sewer_BigDrain_C = {}
-
-
-

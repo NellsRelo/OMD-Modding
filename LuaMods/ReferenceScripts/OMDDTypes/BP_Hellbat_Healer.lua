@@ -10,7 +10,6 @@
 ABP_Hellbat_Healer_C = {}
 
 function ABP_Hellbat_Healer_C:BP_OnDeathStarted() end
+
 ---@param EntryPoint int32
 function ABP_Hellbat_Healer_C:ExecuteUbergraph_BP_Hellbat_Healer(EntryPoint) end
-
-

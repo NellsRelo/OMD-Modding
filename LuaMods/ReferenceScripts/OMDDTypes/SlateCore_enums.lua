@@ -441,4 +441,3 @@ EWidgetPixelSnapping = {
     SnapToPixel = 2,
     EWidgetPixelSnapping_MAX = 3,
 }
-

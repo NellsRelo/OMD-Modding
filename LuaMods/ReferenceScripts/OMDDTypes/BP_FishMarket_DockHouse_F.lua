@@ -21,6 +21,3 @@
 ---@field Collision USceneComponent
 ---@field Geo USceneComponent
 ABP_FishMarket_DockHouse_F_C = {}
-
-
-

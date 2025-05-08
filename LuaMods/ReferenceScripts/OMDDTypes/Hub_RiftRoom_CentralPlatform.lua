@@ -16,6 +16,3 @@
 ---@field Stair_2x_90_StoneWallBlock_SM UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 AHub_RiftRoom_CentralPlatform_C = {}
-
-
-

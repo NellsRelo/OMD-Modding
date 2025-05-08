@@ -7,6 +7,3 @@
 ---@field ChildActor_Chair01 UChildActorComponent
 ---@field ChildActor_Table UChildActorComponent
 ABP_Wood_Table_Grouping_Breakable_C = {}
-
-
-

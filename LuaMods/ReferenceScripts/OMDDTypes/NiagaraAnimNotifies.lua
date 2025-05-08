@@ -18,10 +18,10 @@ UAnimNotifyState_TimedNiagaraEffect = {}
 ---@param MeshComp USkeletalMeshComponent
 ---@return UNiagaraSystem
 function UAnimNotifyState_TimedNiagaraEffect:GetSystemTemplate(MeshComp) end
+
 ---@param MeshComp UMeshComponent
 ---@return UFXSystemComponent
 function UAnimNotifyState_TimedNiagaraEffect:GetSpawnedEffect(MeshComp) end
-
 
 ---@class UAnimNotifyState_TimedNiagaraEffectAdvanced : UAnimNotifyState_TimedNiagaraEffect
 ---@field bEnableNormalizedNotifyProgress boolean
@@ -32,7 +32,6 @@ UAnimNotifyState_TimedNiagaraEffectAdvanced = {}
 ---@param MeshComp UMeshComponent
 ---@return float
 function UAnimNotifyState_TimedNiagaraEffectAdvanced:GetNotifyProgress(MeshComp) end
-
 
 ---@class UAnimNotify_PlayNiagaraEffect : UAnimNotify
 ---@field Template UNiagaraSystem
@@ -47,7 +46,6 @@ UAnimNotify_PlayNiagaraEffect = {}
 ---@param MeshComp USkeletalMeshComponent
 ---@return UNiagaraSystem
 function UAnimNotify_PlayNiagaraEffect:GetSystemTemplate(MeshComp) end
+
 ---@return UFXSystemComponent
 function UAnimNotify_PlayNiagaraEffect:GetSpawnedEffect() end
-
-

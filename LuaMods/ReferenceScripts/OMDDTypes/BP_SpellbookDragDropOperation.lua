@@ -4,6 +4,3 @@
 ---@field InventoryItem ARSTInventoryItemInstance
 ---@field SlotIndex int32
 UBP_SpellbookDragDropOperation_C = {}
-
-
-

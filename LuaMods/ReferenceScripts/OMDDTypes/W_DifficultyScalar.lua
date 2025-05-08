@@ -23,25 +23,36 @@ UW_DifficultyScalar_C = {}
 ---@param bStackActive boolean
 ---@return UWidgetAnimation
 function UW_DifficultyScalar_C:BP_GetOnHideAnimation(bStackActive) end
+
 ---@param bStackActive boolean
 ---@return UWidgetAnimation
 function UW_DifficultyScalar_C:BP_GetOnShowAnimation(bStackActive) end
+
 ---@return UWidget
 function UW_DifficultyScalar_C:BP_GetDesiredFocusTarget() end
+
 function UW_DifficultyScalar_C:Construct() end
+
 ---@param Value float
-function UW_DifficultyScalar_C:BndEvt__W_DifficultyScalar_Slider_Difficulty_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature(Value) end
+function UW_DifficultyScalar_C:BndEvt__W_DifficultyScalar_Slider_Difficulty_K2Node_ComponentBoundEvent_0_OnFloatValueChangedEvent__DelegateSignature(
+    Value) end
+
 ---@param NPC ABP_NPCInteractable_C
 function UW_DifficultyScalar_C:OnWidgetOpened(NPC) end
+
 ---@param MyGeometry FGeometry
 ---@param InDeltaTime float
 function UW_DifficultyScalar_C:Tick(MyGeometry, InDeltaTime) end
+
 ---@param Button UCommonButtonBase
-function UW_DifficultyScalar_C:BndEvt__W_DifficultyScalar_Button_Yes_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_DifficultyScalar_C:BndEvt__W_DifficultyScalar_Button_Yes_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(
+    Button) end
+
 ---@param Button UCommonButtonBase
-function UW_DifficultyScalar_C:BndEvt__W_DifficultyScalar_Button_No_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_DifficultyScalar_C:BndEvt__W_DifficultyScalar_Button_No_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature(
+    Button) end
+
 function UW_DifficultyScalar_C:ConfirmValue() end
+
 ---@param EntryPoint int32
 function UW_DifficultyScalar_C:ExecuteUbergraph_W_DifficultyScalar(EntryPoint) end
-
-

@@ -5,7 +5,6 @@
 ABP_BriarPatch_Growth_C = {}
 
 function ABP_BriarPatch_Growth_C:ReceiveBeginPlay() end
+
 ---@param EntryPoint int32
 function ABP_BriarPatch_Growth_C:ExecuteUbergraph_BP_BriarPatch_Growth(EntryPoint) end
-
-

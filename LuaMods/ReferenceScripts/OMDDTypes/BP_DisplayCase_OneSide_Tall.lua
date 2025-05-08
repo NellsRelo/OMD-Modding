@@ -16,6 +16,3 @@
 ---@field BP USceneComponent
 ---@field DisplayCase_WoodFloor_2x8_SM UStaticMeshComponent
 ABP_DisplayCase_OneSide_Tall_C = {}
-
-
-

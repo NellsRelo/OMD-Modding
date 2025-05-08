@@ -24,5 +24,3 @@ ULocalizedOverlays = {}
 
 ---@class UOverlays : UObject
 UOverlays = {}
-
-

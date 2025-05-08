@@ -44,6 +44,3 @@
 ---@field ArchWall_4x2_StoneWall_SM_StaticMeshComponent0 UStaticMeshComponent
 ---@field SharedRoot USceneComponent
 ABP_Drydocks_Bridge_Arch_Far_C = {}
-
-
-

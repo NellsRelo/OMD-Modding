@@ -10,6 +10,3 @@
 ---@field Trap_Wall1 URSTTrapGridBoxComponent
 ---@field trap_wall URSTTrapGridBoxComponent
 ABP_Wall_Stairside_4x2_StoneWalls_C = {}
-
-
-

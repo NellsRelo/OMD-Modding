@@ -7,7 +7,6 @@
 UW_DistortionSeparator_C = {}
 
 function UW_DistortionSeparator_C:Construct() end
+
 ---@param EntryPoint int32
 function UW_DistortionSeparator_C:ExecuteUbergraph_W_DistortionSeparator(EntryPoint) end
-
-

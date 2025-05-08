@@ -48,6 +48,3 @@ FWaveTableTransform = {}
 ---@field bBipolar boolean
 ---@field Entries TArray<FWaveTableBankEntry>
 UWaveTableBank = {}
-
-
-

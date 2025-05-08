@@ -15,9 +15,10 @@ IGameplayTaskOwnerInterface = {}
 UGameplayTask = {}
 
 function UGameplayTask:ReadyForActivation() end
-function UGameplayTask:GenericGameplayTaskDelegate__DelegateSignature() end
-function UGameplayTask:EndTask() end
 
+function UGameplayTask:GenericGameplayTaskDelegate__DelegateSignature() end
+
+function UGameplayTask:EndTask() end
 
 ---@class UGameplayTaskResource : UObject
 ---@field ManualResourceID int32
@@ -36,13 +37,13 @@ UGameplayTask_ClaimResource = {}
 ---@param TaskInstanceName FName
 ---@return UGameplayTask_ClaimResource
 function UGameplayTask_ClaimResource:ClaimResources(InTaskOwner, ResourceClasses, Priority, TaskInstanceName) end
+
 ---@param InTaskOwner TScriptInterface<IGameplayTaskOwnerInterface>
 ---@param ResourceClass TSubclassOf<UGameplayTaskResource>
 ---@param Priority uint8
 ---@param TaskInstanceName FName
 ---@return UGameplayTask_ClaimResource
 function UGameplayTask_ClaimResource:ClaimResource(InTaskOwner, ResourceClass, Priority, TaskInstanceName) end
-
 
 ---@class UGameplayTask_SpawnActor : UGameplayTask
 ---@field Success FGameplayTask_SpawnActorSuccess
@@ -57,14 +58,15 @@ UGameplayTask_SpawnActor = {}
 ---@param bSpawnOnlyOnAuthority boolean
 ---@return UGameplayTask_SpawnActor
 function UGameplayTask_SpawnActor:SpawnActor(TaskOwner, SpawnLocation, SpawnRotation, Class, bSpawnOnlyOnAuthority) end
+
 ---@param WorldContextObject UObject
 ---@param SpawnedActor AActor
 function UGameplayTask_SpawnActor:FinishSpawningActor(WorldContextObject, SpawnedActor) end
+
 ---@param WorldContextObject UObject
 ---@param SpawnedActor AActor
 ---@return boolean
 function UGameplayTask_SpawnActor:BeginSpawningActor(WorldContextObject, SpawnedActor) end
-
 
 ---@class UGameplayTask_TimeLimitedExecution : UGameplayTask
 ---@field OnFinished FGameplayTask_TimeLimitedExecutionOnFinished
@@ -82,8 +84,8 @@ UGameplayTask_WaitDelay = {}
 ---@param Priority uint8
 ---@return UGameplayTask_WaitDelay
 function UGameplayTask_WaitDelay:TaskWaitDelay(TaskOwner, Time, Priority) end
-function UGameplayTask_WaitDelay:TaskDelayDelegate__DelegateSignature() end
 
+function UGameplayTask_WaitDelay:TaskDelayDelegate__DelegateSignature() end
 
 ---@class UGameplayTasksComponent : UActorComponent
 ---@field TaskPriorityQueue TArray<UGameplayTask>
@@ -95,12 +97,12 @@ UGameplayTasksComponent = {}
 
 ---@param PreviousSimulatedTasks TArray<UGameplayTask>
 function UGameplayTasksComponent:OnRep_SimulatedTasks(PreviousSimulatedTasks) end
+
 ---@param TaskOwner TScriptInterface<IGameplayTaskOwnerInterface>
 ---@param Task UGameplayTask
 ---@param Priority uint8
 ---@param AdditionalRequiredResources TArray<TSubclassOf<UGameplayTaskResource>>
 ---@param AdditionalClaimedResources TArray<TSubclassOf<UGameplayTaskResource>>
 ---@return EGameplayTaskRunResult
-function UGameplayTasksComponent:K2_RunGameplayTask(TaskOwner, Task, Priority, AdditionalRequiredResources, AdditionalClaimedResources) end
-
-
+function UGameplayTasksComponent:K2_RunGameplayTask(TaskOwner, Task, Priority, AdditionalRequiredResources,
+                                                    AdditionalClaimedResources) end

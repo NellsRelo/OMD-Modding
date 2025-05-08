@@ -16,7 +16,6 @@ AOnlineBeaconClient = {}
 
 function AOnlineBeaconClient:ClientOnConnected() end
 
-
 ---@class AOnlineBeaconHost : AOnlineBeacon
 ---@field ListenPort int32
 ---@field bReuseAddressAndPort boolean
@@ -46,25 +45,32 @@ APartyBeaconClient = {}
 ---@param SessionId FString
 ---@param ReservationUpdate FPartyReservation
 function APartyBeaconClient:ServerUpdateReservationRequest(SessionId, ReservationUpdate) end
+
 ---@param SessionId FString
 ---@param Reservation FPartyReservation
 function APartyBeaconClient:ServerReservationRequest(SessionId, Reservation) end
+
 ---@param SessionId FString
 ---@param ReservationUpdate FPartyReservation
 function APartyBeaconClient:ServerRemoveMemberFromReservationRequest(SessionId, ReservationUpdate) end
+
 ---@param PartyLeader FUniqueNetIdRepl
 function APartyBeaconClient:ServerCancelReservationRequest(PartyLeader) end
+
 ---@param SessionId FString
 ---@param Reservation FPartyReservation
 function APartyBeaconClient:ServerAddOrUpdateReservationRequest(SessionId, Reservation) end
+
 ---@param NumRemainingReservations int32
 function APartyBeaconClient:ClientSendReservationUpdates(NumRemainingReservations) end
+
 function APartyBeaconClient:ClientSendReservationFull() end
+
 ---@param ReservationResponse EPartyReservationResult::Type
 function APartyBeaconClient:ClientReservationResponse(ReservationResponse) end
+
 ---@param ReservationResponse EPartyReservationResult::Type
 function APartyBeaconClient:ClientCancelReservationResponse(ReservationResponse) end
-
 
 ---@class APartyBeaconHost : AOnlineBeaconHostObject
 ---@field State UPartyBeaconState
@@ -87,16 +93,20 @@ ASpectatorBeaconClient = {}
 ---@param SessionId FString
 ---@param Reservation FSpectatorReservation
 function ASpectatorBeaconClient:ServerReservationRequest(SessionId, Reservation) end
+
 ---@param Spectator FUniqueNetIdRepl
 function ASpectatorBeaconClient:ServerCancelReservationRequest(Spectator) end
+
 ---@param NumRemainingReservations int32
 function ASpectatorBeaconClient:ClientSendReservationUpdates(NumRemainingReservations) end
+
 function ASpectatorBeaconClient:ClientSendReservationFull() end
+
 ---@param ReservationResponse ESpectatorReservationResult::Type
 function ASpectatorBeaconClient:ClientReservationResponse(ReservationResponse) end
+
 ---@param ReservationResponse ESpectatorReservationResult::Type
 function ASpectatorBeaconClient:ClientCancelReservationResponse(ReservationResponse) end
-
 
 ---@class ASpectatorBeaconHost : AOnlineBeaconHostObject
 ---@field State USpectatorBeaconState
@@ -112,8 +122,8 @@ ASpectatorBeaconHost = {}
 ATestBeaconClient = {}
 
 function ATestBeaconClient:ServerPong() end
-function ATestBeaconClient:ClientPing() end
 
+function ATestBeaconClient:ClientPing() end
 
 ---@class ATestBeaconHost : AOnlineBeaconHostObject
 ATestBeaconHost = {}
@@ -232,7 +242,9 @@ UAchievementBlueprintLibrary = {}
 ---@param AchievementID FName
 ---@param bFoundID boolean
 ---@param Progress float
-function UAchievementBlueprintLibrary:GetCachedAchievementProgress(WorldContextObject, PlayerController, AchievementID, bFoundID, Progress) end
+function UAchievementBlueprintLibrary:GetCachedAchievementProgress(WorldContextObject, PlayerController, AchievementID,
+                                                                   bFoundID, Progress) end
+
 ---@param WorldContextObject UObject
 ---@param PlayerController APlayerController
 ---@param AchievementID FName
@@ -241,8 +253,9 @@ function UAchievementBlueprintLibrary:GetCachedAchievementProgress(WorldContextO
 ---@param LockedDescription FText
 ---@param UnlockedDescription FText
 ---@param bHidden boolean
-function UAchievementBlueprintLibrary:GetCachedAchievementDescription(WorldContextObject, PlayerController, AchievementID, bFoundID, Title, LockedDescription, UnlockedDescription, bHidden) end
-
+function UAchievementBlueprintLibrary:GetCachedAchievementDescription(WorldContextObject, PlayerController, AchievementID,
+                                                                      bFoundID, Title, LockedDescription,
+                                                                      UnlockedDescription, bHidden) end
 
 ---@class UAchievementQueryCallbackProxy : UOnlineBlueprintCallProxyBase
 ---@field OnSuccess FAchievementQueryCallbackProxyOnSuccess
@@ -253,11 +266,11 @@ UAchievementQueryCallbackProxy = {}
 ---@param PlayerController APlayerController
 ---@return UAchievementQueryCallbackProxy
 function UAchievementQueryCallbackProxy:CacheAchievements(WorldContextObject, PlayerController) end
+
 ---@param WorldContextObject UObject
 ---@param PlayerController APlayerController
 ---@return UAchievementQueryCallbackProxy
 function UAchievementQueryCallbackProxy:CacheAchievementDescriptions(WorldContextObject, PlayerController) end
-
 
 ---@class UAchievementWriteCallbackProxy : UOnlineBlueprintCallProxyBase
 ---@field OnSuccess FAchievementWriteCallbackProxyOnSuccess
@@ -270,8 +283,8 @@ UAchievementWriteCallbackProxy = {}
 ---@param Progress float
 ---@param UserTag int32
 ---@return UAchievementWriteCallbackProxy
-function UAchievementWriteCallbackProxy:WriteAchievementProgress(WorldContextObject, PlayerController, AchievementName, Progress, UserTag) end
-
+function UAchievementWriteCallbackProxy:WriteAchievementProgress(WorldContextObject, PlayerController, AchievementName,
+                                                                 Progress, UserTag) end
 
 ---@class UConnectionCallbackProxy : UOnlineBlueprintCallProxyBase
 ---@field OnSuccess FConnectionCallbackProxyOnSuccess
@@ -282,7 +295,6 @@ UConnectionCallbackProxy = {}
 ---@param PlayerController APlayerController
 ---@return UConnectionCallbackProxy
 function UConnectionCallbackProxy:ConnectToService(WorldContextObject, PlayerController) end
-
 
 ---@class UCreateSessionCallbackProxy : UOnlineBlueprintCallProxyBase
 ---@field OnSuccess FCreateSessionCallbackProxyOnSuccess
@@ -296,7 +308,6 @@ UCreateSessionCallbackProxy = {}
 ---@return UCreateSessionCallbackProxy
 function UCreateSessionCallbackProxy:CreateSession(WorldContextObject, PlayerController, PublicConnections, bUseLAN) end
 
-
 ---@class UDestroySessionCallbackProxy : UOnlineBlueprintCallProxyBase
 ---@field OnSuccess FDestroySessionCallbackProxyOnSuccess
 ---@field OnFailure FDestroySessionCallbackProxyOnFailure
@@ -306,7 +317,6 @@ UDestroySessionCallbackProxy = {}
 ---@param PlayerController APlayerController
 ---@return UDestroySessionCallbackProxy
 function UDestroySessionCallbackProxy:DestroySession(WorldContextObject, PlayerController) end
-
 
 ---@class UEndMatchCallbackProxy : UOnlineBlueprintCallProxyBase
 ---@field OnSuccess FEndMatchCallbackProxyOnSuccess
@@ -320,8 +330,8 @@ UEndMatchCallbackProxy = {}
 ---@param LocalPlayerOutcome EMPMatchOutcome::Type
 ---@param OtherPlayersOutcome EMPMatchOutcome::Type
 ---@return UEndMatchCallbackProxy
-function UEndMatchCallbackProxy:EndMatch(WorldContextObject, PlayerController, MatchActor, MatchID, LocalPlayerOutcome, OtherPlayersOutcome) end
-
+function UEndMatchCallbackProxy:EndMatch(WorldContextObject, PlayerController, MatchActor, MatchID, LocalPlayerOutcome,
+                                         OtherPlayersOutcome) end
 
 ---@class UEndTurnCallbackProxy : UOnlineBlueprintCallProxyBase
 ---@field OnSuccess FEndTurnCallbackProxyOnSuccess
@@ -335,7 +345,6 @@ UEndTurnCallbackProxy = {}
 ---@return UEndTurnCallbackProxy
 function UEndTurnCallbackProxy:EndTurn(WorldContextObject, PlayerController, MatchID, TurnBasedMatchInterface) end
 
-
 ---@class UFindSessionsCallbackProxy : UOnlineBlueprintCallProxyBase
 ---@field OnSuccess FFindSessionsCallbackProxyOnSuccess
 ---@field OnFailure FFindSessionsCallbackProxyOnFailure
@@ -344,22 +353,25 @@ UFindSessionsCallbackProxy = {}
 ---@param Result FBlueprintSessionResult
 ---@return FString
 function UFindSessionsCallbackProxy:GetServerName(Result) end
+
 ---@param Result FBlueprintSessionResult
 ---@return int32
 function UFindSessionsCallbackProxy:GetPingInMs(Result) end
+
 ---@param Result FBlueprintSessionResult
 ---@return int32
 function UFindSessionsCallbackProxy:GetMaxPlayers(Result) end
+
 ---@param Result FBlueprintSessionResult
 ---@return int32
 function UFindSessionsCallbackProxy:GetCurrentPlayers(Result) end
+
 ---@param WorldContextObject UObject
 ---@param PlayerController APlayerController
 ---@param MaxResults int32
 ---@param bUseLAN boolean
 ---@return UFindSessionsCallbackProxy
 function UFindSessionsCallbackProxy:FindSessions(WorldContextObject, PlayerController, MaxResults, bUseLAN) end
-
 
 ---@class UFindTurnBasedMatchCallbackProxy : UOnlineBlueprintCallProxyBase
 ---@field OnSuccess FFindTurnBasedMatchCallbackProxyOnSuccess
@@ -374,8 +386,8 @@ UFindTurnBasedMatchCallbackProxy = {}
 ---@param PlayerGroup int32
 ---@param ShowExistingMatches boolean
 ---@return UFindTurnBasedMatchCallbackProxy
-function UFindTurnBasedMatchCallbackProxy:FindTurnBasedMatch(WorldContextObject, PlayerController, MatchActor, MinPlayers, MaxPlayers, PlayerGroup, ShowExistingMatches) end
-
+function UFindTurnBasedMatchCallbackProxy:FindTurnBasedMatch(WorldContextObject, PlayerController, MatchActor, MinPlayers,
+                                                             MaxPlayers, PlayerGroup, ShowExistingMatches) end
 
 ---@class UInAppPurchaseCallbackProxy2 : UObject
 ---@field OnSuccess FInAppPurchaseCallbackProxy2OnSuccess
@@ -385,14 +397,15 @@ UInAppPurchaseCallbackProxy2 = {}
 ---@param PlayerController APlayerController
 ---@return UInAppPurchaseCallbackProxy2
 function UInAppPurchaseCallbackProxy2:CreateProxyObjectForInAppPurchaseUnprocessedPurchases(PlayerController) end
+
 ---@param PlayerController APlayerController
 ---@return UInAppPurchaseCallbackProxy2
 function UInAppPurchaseCallbackProxy2:CreateProxyObjectForInAppPurchaseQueryOwned(PlayerController) end
+
 ---@param PlayerController APlayerController
 ---@param ProductRequest FInAppPurchaseProductRequest2
 ---@return UInAppPurchaseCallbackProxy2
 function UInAppPurchaseCallbackProxy2:CreateProxyObjectForInAppPurchase(PlayerController, ProductRequest) end
-
 
 ---@class UInAppPurchaseCheckoutCallbackProxy : UObject
 ---@field OnSuccess FInAppPurchaseCheckoutCallbackProxyOnSuccess
@@ -404,7 +417,6 @@ UInAppPurchaseCheckoutCallbackProxy = {}
 ---@return UInAppPurchaseCheckoutCallbackProxy
 function UInAppPurchaseCheckoutCallbackProxy:CreateProxyObjectForInAppPurchaseCheckout(PlayerController, ProductRequest) end
 
-
 ---@class UInAppPurchaseFinalizeProxy : UObject
 UInAppPurchaseFinalizeProxy = {}
 
@@ -412,7 +424,6 @@ UInAppPurchaseFinalizeProxy = {}
 ---@param PlayerController APlayerController
 ---@return UInAppPurchaseFinalizeProxy
 function UInAppPurchaseFinalizeProxy:CreateProxyObjectForInAppPurchaseFinalize(InAppPurchaseReceipt, PlayerController) end
-
 
 ---@class UInAppPurchaseQueryCallbackProxy2 : UObject
 ---@field OnSuccess FInAppPurchaseQueryCallbackProxy2OnSuccess
@@ -424,7 +435,6 @@ UInAppPurchaseQueryCallbackProxy2 = {}
 ---@return UInAppPurchaseQueryCallbackProxy2
 function UInAppPurchaseQueryCallbackProxy2:CreateProxyObjectForInAppPurchaseQuery(PlayerController, ProductIdentifiers) end
 
-
 ---@class UInAppPurchaseReceiptsCallbackProxy : UObject
 ---@field OnSuccess FInAppPurchaseReceiptsCallbackProxyOnSuccess
 ---@field OnFailure FInAppPurchaseReceiptsCallbackProxyOnFailure
@@ -433,13 +443,14 @@ UInAppPurchaseReceiptsCallbackProxy = {}
 ---@param PlayerController APlayerController
 ---@return UInAppPurchaseReceiptsCallbackProxy
 function UInAppPurchaseReceiptsCallbackProxy:CreateProxyObjectForInAppPurchaseRestoreOwnedProducts(PlayerController) end
+
 ---@param PlayerController APlayerController
 ---@return UInAppPurchaseReceiptsCallbackProxy
 function UInAppPurchaseReceiptsCallbackProxy:CreateProxyObjectForInAppPurchaseQueryOwnedProducts(PlayerController) end
+
 ---@param PlayerController APlayerController
 ---@return UInAppPurchaseReceiptsCallbackProxy
 function UInAppPurchaseReceiptsCallbackProxy:CreateProxyObjectForInAppPurchaseGetKnownReceipts(PlayerController) end
-
 
 ---@class UInAppPurchaseRestoreCallbackProxy2 : UObject
 ---@field OnSuccess FInAppPurchaseRestoreCallbackProxy2OnSuccess
@@ -449,8 +460,8 @@ UInAppPurchaseRestoreCallbackProxy2 = {}
 ---@param ConsumableProductFlags TArray<FInAppPurchaseProductRequest2>
 ---@param PlayerController APlayerController
 ---@return UInAppPurchaseRestoreCallbackProxy2
-function UInAppPurchaseRestoreCallbackProxy2:CreateProxyObjectForInAppPurchaseRestore(ConsumableProductFlags, PlayerController) end
-
+function UInAppPurchaseRestoreCallbackProxy2:CreateProxyObjectForInAppPurchaseRestore(ConsumableProductFlags,
+                                                                                      PlayerController) end
 
 ---@class UIpConnection : UNetConnection
 ---@field SocketErrorDisconnectDelay float
@@ -485,7 +496,6 @@ UJoinSessionCallbackProxy = {}
 ---@return UJoinSessionCallbackProxy
 function UJoinSessionCallbackProxy:JoinSession(WorldContextObject, PlayerController, SearchResult) end
 
-
 ---@class ULeaderboardBlueprintLibrary : UBlueprintFunctionLibrary
 ULeaderboardBlueprintLibrary = {}
 
@@ -494,7 +504,6 @@ ULeaderboardBlueprintLibrary = {}
 ---@param StatValue int32
 ---@return boolean
 function ULeaderboardBlueprintLibrary:WriteLeaderboardInteger(PlayerController, StatName, StatValue) end
-
 
 ---@class ULeaderboardFlushCallbackProxy : UObject
 ---@field OnSuccess FLeaderboardFlushCallbackProxyOnSuccess
@@ -506,7 +515,6 @@ ULeaderboardFlushCallbackProxy = {}
 ---@return ULeaderboardFlushCallbackProxy
 function ULeaderboardFlushCallbackProxy:CreateProxyObjectForFlush(PlayerController, SessionName) end
 
-
 ---@class ULeaderboardQueryCallbackProxy : UObject
 ---@field OnSuccess FLeaderboardQueryCallbackProxyOnSuccess
 ---@field OnFailure FLeaderboardQueryCallbackProxyOnFailure
@@ -517,7 +525,6 @@ ULeaderboardQueryCallbackProxy = {}
 ---@return ULeaderboardQueryCallbackProxy
 function ULeaderboardQueryCallbackProxy:CreateProxyObjectForIntQuery(PlayerController, StatName) end
 
-
 ---@class ULogoutCallbackProxy : UBlueprintAsyncActionBase
 ---@field OnSuccess FLogoutCallbackProxyOnSuccess
 ---@field OnFailure FLogoutCallbackProxyOnFailure
@@ -527,7 +534,6 @@ ULogoutCallbackProxy = {}
 ---@param PlayerController APlayerController
 ---@return ULogoutCallbackProxy
 function ULogoutCallbackProxy:Logout(WorldContextObject, PlayerController) end
-
 
 ---@class UOnlineEngineInterfaceImpl : UOnlineEngineInterface
 ---@field MappedUniqueNetIdTypes TMap<FName, FName>
@@ -587,7 +593,6 @@ UQuitMatchCallbackProxy = {}
 ---@return UQuitMatchCallbackProxy
 function UQuitMatchCallbackProxy:QuitMatch(WorldContextObject, PlayerController, MatchID, Outcome, TurnTimeoutInSeconds) end
 
-
 ---@class UShowLoginUICallbackProxy : UBlueprintAsyncActionBase
 ---@field OnSuccess FShowLoginUICallbackProxyOnSuccess
 ---@field OnFailure FShowLoginUICallbackProxyOnFailure
@@ -597,7 +602,6 @@ UShowLoginUICallbackProxy = {}
 ---@param InPlayerController APlayerController
 ---@return UShowLoginUICallbackProxy
 function UShowLoginUICallbackProxy:ShowExternalLoginUI(WorldContextObject, InPlayerController) end
-
 
 ---@class USpectatorBeaconState : UObject
 ---@field SessionName FName
@@ -616,28 +620,29 @@ UTurnBasedBlueprintLibrary = {}
 ---@param PlayerController APlayerController
 ---@param Object UObject
 function UTurnBasedBlueprintLibrary:RegisterTurnBasedMatchInterfaceObject(WorldContextObject, PlayerController, Object) end
+
 ---@param WorldContextObject UObject
 ---@param PlayerController APlayerController
 ---@param MatchID FString
 ---@param PlayerIndex int32
 ---@param PlayerDisplayName FString
-function UTurnBasedBlueprintLibrary:GetPlayerDisplayName(WorldContextObject, PlayerController, MatchID, PlayerIndex, PlayerDisplayName) end
+function UTurnBasedBlueprintLibrary:GetPlayerDisplayName(WorldContextObject, PlayerController, MatchID, PlayerIndex,
+                                                         PlayerDisplayName) end
+
 ---@param WorldContextObject UObject
 ---@param PlayerController APlayerController
 ---@param MatchID FString
 ---@param PlayerIndex int32
 function UTurnBasedBlueprintLibrary:GetMyPlayerIndex(WorldContextObject, PlayerController, MatchID, PlayerIndex) end
+
 ---@param WorldContextObject UObject
 ---@param PlayerController APlayerController
 ---@param MatchID FString
 ---@param bIsMyTurn boolean
 function UTurnBasedBlueprintLibrary:GetIsMyTurn(WorldContextObject, PlayerController, MatchID, bIsMyTurn) end
 
-
 ---@class UVoipListenerSynthComponent : USynthComponent
 UVoipListenerSynthComponent = {}
 
 ---@return boolean
 function UVoipListenerSynthComponent:IsIdling() end
-
-

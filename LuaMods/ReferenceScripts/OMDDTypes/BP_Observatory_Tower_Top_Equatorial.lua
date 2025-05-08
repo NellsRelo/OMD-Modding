@@ -13,6 +13,3 @@
 ---@field Temp USceneComponent
 ---@field TrapGrid USceneComponent
 ABP_Observatory_Tower_Top_Equatorial_C = {}
-
-
-

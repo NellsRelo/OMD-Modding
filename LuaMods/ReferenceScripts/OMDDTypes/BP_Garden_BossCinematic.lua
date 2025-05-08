@@ -82,6 +82,3 @@
 ---@field ColumnTrim_CastStone_DoorFrameA14 UStaticMeshComponent
 ---@field Props USceneComponent
 ABP_Garden_BossCinematic_C = {}
-
-
-

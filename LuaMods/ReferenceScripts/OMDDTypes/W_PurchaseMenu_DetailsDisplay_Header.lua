@@ -5,6 +5,4 @@
 ---@field HeaderSlot UNamedSlot
 UW_PurchaseMenu_DetailsDisplay_Header_C = {}
 
-UW_PurchaseMenu_DetailsDisplay_Header_C['Init Display'] = function() end
-
-
+UW_PurchaseMenu_DetailsDisplay_Header_C['Init Display'] = function(self,) end

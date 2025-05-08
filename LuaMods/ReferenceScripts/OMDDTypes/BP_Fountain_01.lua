@@ -23,6 +23,3 @@
 ---@field Metal_Trim_Straight_Deco_ UStaticMeshComponent
 ---@field Hero_Fountain_A_SM UStaticMeshComponent
 ABP_Fountain_01_C = {}
-
-
-

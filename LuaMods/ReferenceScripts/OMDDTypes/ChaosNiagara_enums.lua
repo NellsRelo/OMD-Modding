@@ -64,4 +64,3 @@ ERandomVelocityGenerationTypeEnum = {
     ChaosNiagara_RandomVelocityGenerationType_CollisionNormalBased = 2,
     ChaosNiagara_Max = 3,
 }
-

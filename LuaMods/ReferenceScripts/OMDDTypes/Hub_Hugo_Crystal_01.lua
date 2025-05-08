@@ -22,11 +22,14 @@
 AHub_Hugo_Crystal_01_C = {}
 
 function AHub_Hugo_Crystal_01_C:Timeline__FinishedFunc() end
+
 function AHub_Hugo_Crystal_01_C:Timeline__UpdateFunc() end
+
 function AHub_Hugo_Crystal_01_C:Timeline_0__FinishedFunc() end
+
 function AHub_Hugo_Crystal_01_C:Timeline_0__UpdateFunc() end
+
 function AHub_Hugo_Crystal_01_C:ReceiveBeginPlay() end
+
 ---@param EntryPoint int32
 function AHub_Hugo_Crystal_01_C:ExecuteUbergraph_Hub_Hugo_Crystal_01(EntryPoint) end
-
-

@@ -6,6 +6,3 @@
 ---@field RSTRangedFirePoint URSTRangedFirePointComponent
 ---@field CombatCapsule URSTCombatCapsuleComponent
 ABP_Orc_Drummer_C = {}
-
-
-

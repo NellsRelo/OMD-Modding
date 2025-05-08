@@ -7,6 +7,3 @@
 ---@field SharedRoot USceneComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Coastal_Chevron_B_Stand_C = {}
-
-
-

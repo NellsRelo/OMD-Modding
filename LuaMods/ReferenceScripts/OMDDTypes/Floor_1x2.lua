@@ -4,6 +4,3 @@
 ---@field Floor_1x3 UStaticMeshComponent
 ---@field Floor00 URSTTrapGridBoxComponent
 AFloor_1x2_C = {}
-
-
-

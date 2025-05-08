@@ -497,4 +497,3 @@ ETransferBoneWeightsMethod = {
     InpaintWeights = 1,
     ETransferBoneWeightsMethod_MAX = 2,
 }
-

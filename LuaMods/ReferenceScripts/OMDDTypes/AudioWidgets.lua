@@ -140,25 +140,33 @@ UAudioMeter = {}
 
 ---@param InValue FLinearColor
 function UAudioMeter:SetMeterValueColor(InValue) end
+
 ---@param InValue FLinearColor
 function UAudioMeter:SetMeterScaleLabelColor(InValue) end
+
 ---@param InValue FLinearColor
 function UAudioMeter:SetMeterScaleColor(InValue) end
+
 ---@param InValue FLinearColor
 function UAudioMeter:SetMeterPeakColor(InValue) end
+
 ---@param InValue FLinearColor
 function UAudioMeter:SetMeterClippingColor(InValue) end
+
 ---@param InMeterChannelInfo TArray<FMeterChannelInfo>
 function UAudioMeter:SetMeterChannelInfo(InMeterChannelInfo) end
+
 ---@param InValue FLinearColor
 function UAudioMeter:SetMeterBackgroundColor(InValue) end
+
 ---@param InValue FLinearColor
 function UAudioMeter:SetBackgroundColor(InValue) end
+
 ---@return TArray<FMeterChannelInfo>
 function UAudioMeter:GetMeterChannelInfo__DelegateSignature() end
+
 ---@return TArray<FMeterChannelInfo>
 function UAudioMeter:GetMeterChannelInfo() end
-
 
 ---@class UAudioRadialSlider : UWidget
 ---@field Value float
@@ -181,37 +189,50 @@ UAudioRadialSlider = {}
 
 ---@param InLayout EAudioRadialSliderLayout
 function UAudioRadialSlider:SetWidgetLayout(InLayout) end
+
 ---@param bIsReadOnly boolean
 function UAudioRadialSlider:SetValueTextReadOnly(bIsReadOnly) end
+
 ---@param bIsReadOnly boolean
 function UAudioRadialSlider:SetUnitsTextReadOnly(bIsReadOnly) end
+
 ---@param Units FText
 function UAudioRadialSlider:SetUnitsText(Units) end
+
 ---@param InColor FSlateColor
 function UAudioRadialSlider:SetTextLabelBackgroundColor(InColor) end
+
 ---@param InThickness float
 function UAudioRadialSlider:SetSliderThickness(InThickness) end
+
 ---@param InValue FLinearColor
 function UAudioRadialSlider:SetSliderProgressColor(InValue) end
+
 ---@param InValue FLinearColor
 function UAudioRadialSlider:SetSliderBarColor(InValue) end
+
 ---@param bShowUnitsText boolean
 function UAudioRadialSlider:SetShowUnitsText(bShowUnitsText) end
+
 ---@param bShowLabelOnlyOnHover boolean
 function UAudioRadialSlider:SetShowLabelOnlyOnHover(bShowLabelOnlyOnHover) end
+
 ---@param InOutputRange FVector2D
 function UAudioRadialSlider:SetOutputRange(InOutputRange) end
+
 ---@param InHandStartEndRatio FVector2D
 function UAudioRadialSlider:SetHandStartEndRatio(InHandStartEndRatio) end
+
 ---@param InValue FLinearColor
 function UAudioRadialSlider:SetCenterBackgroundColor(InValue) end
+
 ---@param OutputValue float
 ---@return float
 function UAudioRadialSlider:GetSliderValue(OutputValue) end
+
 ---@param InSliderValue float
 ---@return float
 function UAudioRadialSlider:GetOutputValue(InSliderValue) end
-
 
 ---@class UAudioSlider : UAudioSliderBase
 ---@field LinToOutputCurve TWeakObjectPtr<UCurveFloat>
@@ -244,34 +265,45 @@ UAudioSliderBase = {}
 
 ---@param InValue FLinearColor
 function UAudioSliderBase:SetWidgetBackgroundColor(InValue) end
+
 ---@param bIsReadOnly boolean
 function UAudioSliderBase:SetValueTextReadOnly(bIsReadOnly) end
+
 ---@param bIsReadOnly boolean
 function UAudioSliderBase:SetUnitsTextReadOnly(bIsReadOnly) end
+
 ---@param Units FText
 function UAudioSliderBase:SetUnitsText(Units) end
+
 ---@param InColor FSlateColor
 function UAudioSliderBase:SetTextLabelBackgroundColor(InColor) end
+
 ---@param InValue FLinearColor
 function UAudioSliderBase:SetSliderThumbColor(InValue) end
+
 ---@param InValue FLinearColor
 function UAudioSliderBase:SetSliderBarColor(InValue) end
+
 ---@param InValue FLinearColor
 function UAudioSliderBase:SetSliderBackgroundColor(InValue) end
+
 ---@param bShowUnitsText boolean
 function UAudioSliderBase:SetShowUnitsText(bShowUnitsText) end
+
 ---@param bShowLabelOnlyOnHover boolean
 function UAudioSliderBase:SetShowLabelOnlyOnHover(bShowLabelOnlyOnHover) end
+
 ---@param OutputValue float
 ---@return float
 function UAudioSliderBase:GetSliderValue(OutputValue) end
+
 ---@param InSliderValue float
 ---@return float
 function UAudioSliderBase:GetOutputValue(InSliderValue) end
+
 ---@param OutputValue float
 ---@return float
 function UAudioSliderBase:GetLinValue(OutputValue) end
-
 
 ---@class UAudioVolumeRadialSlider : UAudioRadialSlider
 UAudioVolumeRadialSlider = {}
@@ -279,5 +311,3 @@ UAudioVolumeRadialSlider = {}
 
 ---@class UAudioVolumeSlider : UAudioSlider
 UAudioVolumeSlider = {}
-
-

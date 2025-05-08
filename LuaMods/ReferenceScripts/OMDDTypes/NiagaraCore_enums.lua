@@ -5,4 +5,3 @@ ENiagaraIterationSource = {
     DirectSet = 2,
     ENiagaraIterationSource_MAX = 3,
 }
-

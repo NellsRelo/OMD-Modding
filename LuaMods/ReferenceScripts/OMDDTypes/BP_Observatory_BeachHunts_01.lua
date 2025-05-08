@@ -21,6 +21,3 @@
 ---@field Observatory_BeachHuts_Roof_01 UStaticMeshComponent
 ---@field Geo USceneComponent
 ABP_Observatory_BeachHunts_01_C = {}
-
-
-

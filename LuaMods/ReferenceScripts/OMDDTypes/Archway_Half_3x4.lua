@@ -7,6 +7,3 @@
 ---@field ColumnTrim_CastStone_900W_2 UStaticMeshComponent
 ---@field ColumnTrim_CastStone_900W_1 UStaticMeshComponent
 AArchway_Half_3x4_C = {}
-
-
-

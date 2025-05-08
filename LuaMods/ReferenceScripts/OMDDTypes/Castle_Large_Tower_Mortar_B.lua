@@ -22,6 +22,3 @@
 ---@field Crenellation_1_RB UStaticMeshComponent
 ---@field Tower USceneComponent
 ACastle_Large_Tower_Mortar_B_C = {}
-
-
-

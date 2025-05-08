@@ -21,33 +21,40 @@
 UW_RSTSpellbook_CategorySwitcher_C = {}
 
 ---@param CursorAdjustRate double
-UW_RSTSpellbook_CategorySwitcher_C['Get Adjust Rate'] = function(CursorAdjustRate) end
+UW_RSTSpellbook_CategorySwitcher_C['Get Adjust Rate'] = function(self, CursorAdjustRate) end
 ---@param InputPin float
-UW_RSTSpellbook_CategorySwitcher_C['Update Cursor Val'] = function(InputPin) end
-UW_RSTSpellbook_CategorySwitcher_C['BndEvt__W_RSTSpellbook_CategorySwitcher_W_RSTSpellbook_FilterButton_K2Node_ComponentBoundEvent_0_On Filter Clicked__DelegateSignature'] = function() end
-UW_RSTSpellbook_CategorySwitcher_C['BndEvt__W_RSTSpellbook_CategorySwitcher_W_RSTSpellbook_FilterButton_1_K2Node_ComponentBoundEvent_1_On Filter Clicked__DelegateSignature'] = function() end
-UW_RSTSpellbook_CategorySwitcher_C['BndEvt__W_RSTSpellbook_CategorySwitcher_W_RSTSpellbook_FilterButton_2_K2Node_ComponentBoundEvent_2_On Filter Clicked__DelegateSignature'] = function() end
-UW_RSTSpellbook_CategorySwitcher_C['BndEvt__W_RSTSpellbook_CategorySwitcher_W_RSTSpellbook_FilterButton_3_K2Node_ComponentBoundEvent_3_On Filter Clicked__DelegateSignature'] = function() end
+UW_RSTSpellbook_CategorySwitcher_C['Update Cursor Val'] = function(self, InputPin) end
+UW_RSTSpellbook_CategorySwitcher_C['BndEvt__W_RSTSpellbook_CategorySwitcher_W_RSTSpellbook_FilterButton_K2Node_ComponentBoundEvent_0_On Filter Clicked__DelegateSignature'] = function(
+    self,) end
+UW_RSTSpellbook_CategorySwitcher_C['BndEvt__W_RSTSpellbook_CategorySwitcher_W_RSTSpellbook_FilterButton_1_K2Node_ComponentBoundEvent_1_On Filter Clicked__DelegateSignature'] = function(
+    self,) end
+UW_RSTSpellbook_CategorySwitcher_C['BndEvt__W_RSTSpellbook_CategorySwitcher_W_RSTSpellbook_FilterButton_2_K2Node_ComponentBoundEvent_2_On Filter Clicked__DelegateSignature'] = function(
+    self,) end
+UW_RSTSpellbook_CategorySwitcher_C['BndEvt__W_RSTSpellbook_CategorySwitcher_W_RSTSpellbook_FilterButton_3_K2Node_ComponentBoundEvent_3_On Filter Clicked__DelegateSignature'] = function(
+    self,) end
 ---@param Index int32
-UW_RSTSpellbook_CategorySwitcher_C['Set Target Display'] = function(Index) end
+UW_RSTSpellbook_CategorySwitcher_C['Set Target Display'] = function(self, Index) end
 function UW_RSTSpellbook_CategorySwitcher_C:BP_SynchronizeProperties() end
+
 ---@param MyGeometry FGeometry
 ---@param InDeltaTime float
 function UW_RSTSpellbook_CategorySwitcher_C:Tick(MyGeometry, InDeltaTime) end
+
 ---@param Index int32
-UW_RSTSpellbook_CategorySwitcher_C['Set Current Display'] = function(Index) end
+UW_RSTSpellbook_CategorySwitcher_C['Set Current Display'] = function(self, Index) end
 function UW_RSTSpellbook_CategorySwitcher_C:Init() end
+
 ---@param InputPin int32
-UW_RSTSpellbook_CategorySwitcher_C['Trigger Index Selected'] = function(InputPin) end
+UW_RSTSpellbook_CategorySwitcher_C['Trigger Index Selected'] = function(self, InputPin) end
 ---@param Index int32
-UW_RSTSpellbook_CategorySwitcher_C['Refresh Indicator Display'] = function(Index) end
-UW_RSTSpellbook_CategorySwitcher_C['Update Cursor Position'] = function() end
-UW_RSTSpellbook_CategorySwitcher_C['Tab Up'] = function() end
+UW_RSTSpellbook_CategorySwitcher_C['Refresh Indicator Display'] = function(self, Index) end
+UW_RSTSpellbook_CategorySwitcher_C['Update Cursor Position'] = function(self,) end
+UW_RSTSpellbook_CategorySwitcher_C['Tab Up'] = function(self,) end
 function UW_RSTSpellbook_CategorySwitcher_C:Construct() end
-UW_RSTSpellbook_CategorySwitcher_C['Tab Down'] = function() end
+
+UW_RSTSpellbook_CategorySwitcher_C['Tab Down'] = function(self,) end
 ---@param EntryPoint int32
 function UW_RSTSpellbook_CategorySwitcher_C:ExecuteUbergraph_W_RSTSpellbook_CategorySwitcher(EntryPoint) end
+
 ---@param Category int32
-UW_RSTSpellbook_CategorySwitcher_C['On Category Selected__DelegateSignature'] = function(Category) end
-
-
+UW_RSTSpellbook_CategorySwitcher_C['On Category Selected__DelegateSignature'] = function(self, Category) end

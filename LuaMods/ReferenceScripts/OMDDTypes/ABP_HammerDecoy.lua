@@ -72,13 +72,16 @@ UABP_HammerDecoy_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_HammerDecoy_C:AnimGraph(AnimGraph) end
+
 ---@param bVal boolean
 function UABP_HammerDecoy_C:ShowDeathAnims(bVal) end
+
 ---@param DeltaTime float
 function UABP_HammerDecoy_C:BlueprintThreadSafeUpdateAnimation(DeltaTime) end
+
 function UABP_HammerDecoy_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HammerDecoy_AnimGraphNode_BlendListByBool_00BB28E74D8C56DADDA9F5918F27ED0E() end
+
 function UABP_HammerDecoy_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HammerDecoy_AnimGraphNode_RotateRootBone_2B55A7FB45E4D263A295D7BF7133B5DD() end
+
 ---@param EntryPoint int32
 function UABP_HammerDecoy_C:ExecuteUbergraph_ABP_HammerDecoy(EntryPoint) end
-
-

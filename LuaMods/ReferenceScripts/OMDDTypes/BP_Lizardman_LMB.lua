@@ -20,7 +20,9 @@
 ABP_Lizardman_LMB_C = {}
 
 function ABP_Lizardman_LMB_C:SpawnPickup() end
+
 function ABP_Lizardman_LMB_C:ReceiveBeginPlay() end
+
 ---@param HealthComponent URSTHealthComponent
 ---@param OldValue float
 ---@param NewValue float
@@ -29,9 +31,10 @@ function ABP_Lizardman_LMB_C:ReceiveBeginPlay() end
 ---@param bHasSpec boolean
 ---@param Spec FGameplayEffectSpec
 function ABP_Lizardman_LMB_C:HealthChanged(HealthComponent, OldValue, NewValue, Instigator, HitResult, bHasSpec, Spec) end
+
 function ABP_Lizardman_LMB_C:DoEscape() end
+
 function ABP_Lizardman_LMB_C:CheckForLast() end
+
 ---@param EntryPoint int32
 function ABP_Lizardman_LMB_C:ExecuteUbergraph_BP_Lizardman_LMB(EntryPoint) end
-
-

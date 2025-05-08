@@ -6,6 +6,3 @@
 ---@field PointLight UPointLightComponent
 ---@field Geometry USceneComponent
 ABP_Library_Lamppost_A_Lit_C = {}
-
-
-

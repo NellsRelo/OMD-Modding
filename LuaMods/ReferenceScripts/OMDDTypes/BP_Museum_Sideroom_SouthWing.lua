@@ -108,6 +108,3 @@
 ---@field Proto_Dome_E_Tile_Side1 UStaticMeshComponent
 ---@field Proto_Dome_E_Tile_Side UStaticMeshComponent
 ABP_Museum_Sideroom_SouthWing_C = {}
-
-
-

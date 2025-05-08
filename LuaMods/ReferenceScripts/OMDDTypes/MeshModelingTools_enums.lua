@@ -267,4 +267,3 @@ EUVProjectionToolInitializationMode = {
     AutoFitAlign = 3,
     EUVProjectionToolInitializationMode_MAX = 4,
 }
-

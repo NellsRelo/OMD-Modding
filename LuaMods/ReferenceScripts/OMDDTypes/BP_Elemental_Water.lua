@@ -11,6 +11,3 @@
 ---@field RSTAimAssistTargetPelvis URSTAimAssistTargetComponent
 ---@field CombatCapsule URSTCombatCapsuleComponent
 ABP_Elemental_Water_C = {}
-
-
-

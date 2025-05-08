@@ -18,8 +18,7 @@
 UW_RecordBook_MissionDisplay_C = {}
 
 function UW_RecordBook_MissionDisplay_C:Construct() end
-UW_RecordBook_MissionDisplay_C['Init Team Thread'] = function() end
+
+UW_RecordBook_MissionDisplay_C['Init Team Thread'] = function(self,) end
 ---@param EntryPoint int32
 function UW_RecordBook_MissionDisplay_C:ExecuteUbergraph_W_RecordBook_MissionDisplay(EntryPoint) end
-
-

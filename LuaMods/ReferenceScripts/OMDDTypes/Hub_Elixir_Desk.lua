@@ -212,6 +212,3 @@
 ---@field Column_BaseD_CastStone_Sub UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 AHub_Elixir_Desk_C = {}
-
-
-

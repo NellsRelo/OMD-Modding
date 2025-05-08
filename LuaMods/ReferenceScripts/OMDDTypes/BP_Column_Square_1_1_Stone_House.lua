@@ -7,6 +7,3 @@
 ---@field Wall002 URSTTrapGridBoxComponent
 ---@field Wall001 URSTTrapGridBoxComponent
 ABP_Column_Square_1_1_Stone_House_C = {}
-
-
-

@@ -5,6 +5,4 @@
 UGA_RiftPointChange_UltCharge_C = {}
 
 ---@param Diff int32
-UGA_RiftPointChange_UltCharge_C['On Rift Points Lost - Authority'] = function(Diff) end
-
-
+UGA_RiftPointChange_UltCharge_C['On Rift Points Lost - Authority'] = function(self, Diff) end

@@ -15,25 +15,36 @@
 ABP_WispBaseTest_C = {}
 
 function ABP_WispBaseTest_C:UserConstructionScript() end
+
 function ABP_WispBaseTest_C:DissolveTimeline__FinishedFunc() end
+
 function ABP_WispBaseTest_C:DissolveTimeline__UpdateFunc() end
+
 function ABP_WispBaseTest_C:EnterRiftMoveTimeline__FinishedFunc() end
+
 function ABP_WispBaseTest_C:EnterRiftMoveTimeline__UpdateFunc() end
+
 function ABP_WispBaseTest_C:Pulled_A6D1935E41ED8B570C49B8A25C632E2A() end
+
 function ABP_WispBaseTest_C:EnteredRift_A6D1935E41ED8B570C49B8A25C632E2A() end
+
 function ABP_WispBaseTest_C:CustomAnimation_A6D1935E41ED8B570C49B8A25C632E2A() end
+
 function ABP_WispBaseTest_C:Gib_A6D1935E41ED8B570C49B8A25C632E2A() end
+
 function ABP_WispBaseTest_C:Ragdoll_A6D1935E41ED8B570C49B8A25C632E2A() end
+
 function ABP_WispBaseTest_C:NoType_A6D1935E41ED8B570C49B8A25C632E2A() end
+
 ---@param Meshes TArray<USkeletalMeshComponent>
 ---@param LifeSpan double
 function ABP_WispBaseTest_C:DissolveFX(Meshes, LifeSpan) end
+
 ---@param LifeSpan float
 ---@param DeathType uint8
 ---@param AnimationTag FGameplayTag
 function ABP_WispBaseTest_C:BP_DestroyFX(LifeSpan, DeathType, AnimationTag) end
-ABP_WispBaseTest_C['Event OnEnteredRift'] = function() end
+
+ABP_WispBaseTest_C['Event OnEnteredRift'] = function(self,) end
 ---@param EntryPoint int32
 function ABP_WispBaseTest_C:ExecuteUbergraph_BP_WispBaseTest(EntryPoint) end
-
-

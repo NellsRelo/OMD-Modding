@@ -6,6 +6,3 @@
 ---@field Collision USceneComponent
 ---@field Geometry USceneComponent
 ABP_Garden_Railing_B_Merged_C = {}
-
-
-

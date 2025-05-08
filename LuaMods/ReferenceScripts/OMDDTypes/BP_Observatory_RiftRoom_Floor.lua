@@ -8,6 +8,3 @@
 ---@field Observatory_RiftRoom_Floor_Corners_SM1 UStaticMeshComponent
 ---@field Observatory_RiftRoom_Floor_Corners_SM UStaticMeshComponent
 ABP_Observatory_RiftRoom_Floor_C = {}
-
-
-

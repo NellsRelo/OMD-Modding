@@ -18,10 +18,11 @@ ABP_SawBladeLauncher_Projectile_C = {}
 ---@param HitNormal FVector
 ---@param NormalImpulse FVector
 ---@param Hit FHitResult
-function ABP_SawBladeLauncher_Projectile_C:ReceiveHit(MyComp, Other, OtherComp, bSelfMoved, HitLocation, HitNormal, NormalImpulse, Hit) end
+function ABP_SawBladeLauncher_Projectile_C:ReceiveHit(MyComp, Other, OtherComp, bSelfMoved, HitLocation, HitNormal,
+                                                      NormalImpulse, Hit) end
+
 ---@param DeltaSeconds float
 function ABP_SawBladeLauncher_Projectile_C:ReceiveTick(DeltaSeconds) end
+
 ---@param EntryPoint int32
 function ABP_SawBladeLauncher_Projectile_C:ExecuteUbergraph_BP_SawBladeLauncher_Projectile(EntryPoint) end
-
-

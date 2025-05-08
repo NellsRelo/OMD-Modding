@@ -8,7 +8,6 @@ UBTService_IsLaunched_C = {}
 ---@param ControlledPawn APawn
 ---@param DeltaSeconds float
 function UBTService_IsLaunched_C:ReceiveTickAI(OwnerController, ControlledPawn, DeltaSeconds) end
+
 ---@param EntryPoint int32
 function UBTService_IsLaunched_C:ExecuteUbergraph_BTService_IsLaunched(EntryPoint) end
-
-

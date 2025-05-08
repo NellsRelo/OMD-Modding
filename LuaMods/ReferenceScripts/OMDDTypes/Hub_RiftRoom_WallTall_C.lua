@@ -16,6 +16,3 @@
 ---@field Hub_BlackSmith_WallWindow_SM1 UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 AHub_RiftRoom_WallTall_C_C = {}
-
-
-

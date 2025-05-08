@@ -14,6 +14,3 @@
 ---@field Column_Octo_1x2_StoneWall_SM UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 AHub_RiftRoom_ColumnTower_C = {}
-
-
-

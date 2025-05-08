@@ -40,6 +40,3 @@
 ---@field Wall_2x15_WhiteBrick_SM_Union UStaticMeshComponent
 ---@field Geometry USceneComponent
 ABP_CastlePlaza_Guildhall_Tower_A_C = {}
-
-
-

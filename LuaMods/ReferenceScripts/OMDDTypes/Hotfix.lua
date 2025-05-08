@@ -20,7 +20,6 @@ UOnlineHotfixManager = {}
 
 function UOnlineHotfixManager:StartHotfixProcess() end
 
-
 ---@class UUpdateManager : UObject
 ---@field UpdateCheckStartDelay float
 ---@field UpdateCheckCachedResponseDelay float
@@ -42,6 +41,3 @@ function UOnlineHotfixManager:StartHotfixProcess() end
 ---@field UpdateContextDefinitionUnknown FUpdateContextDefinition
 ---@field UpdateContextDefinitions TArray<FUpdateContextDefinition>
 UUpdateManager = {}
-
-
-

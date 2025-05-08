@@ -69,19 +69,24 @@ UPropertyPathTestObject = {}
 
 ---@param InStruct FPropertyPathTestStruct
 function UPropertyPathTestObject:SetStructRef(InStruct) end
+
 ---@param InStruct FPropertyPathTestStruct
 function UPropertyPathTestObject:SetStructConstRef(InStruct) end
+
 ---@param InStruct FPropertyPathTestStruct
 function UPropertyPathTestObject:SetStruct(InStruct) end
+
 ---@param InFloat float
 function UPropertyPathTestObject:SetFloat(InFloat) end
+
 ---@return FPropertyPathTestStruct
 function UPropertyPathTestObject:GetStructRef() end
+
 ---@return FPropertyPathTestStruct
 function UPropertyPathTestObject:GetStructConstRef() end
+
 ---@return FPropertyPathTestStruct
 function UPropertyPathTestObject:GetStruct() end
+
 ---@return float
 function UPropertyPathTestObject:GetFloat() end
-
-

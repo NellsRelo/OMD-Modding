@@ -12,6 +12,3 @@
 ---@field Box_Collision_TopTrim UBoxComponent
 ---@field Wall URSTTrapGridBoxComponent
 AWall_FB_MT_1x4_SAND_C = {}
-
-
-

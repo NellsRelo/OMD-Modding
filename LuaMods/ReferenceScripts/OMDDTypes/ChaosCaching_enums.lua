@@ -12,4 +12,3 @@ EStartMode = {
     Triggered = 1,
     EStartMode_MAX = 2,
 }
-

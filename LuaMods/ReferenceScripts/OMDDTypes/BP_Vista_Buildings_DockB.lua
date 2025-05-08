@@ -68,6 +68,3 @@
 ---@field Fortress_Coastal_BigWallEnd_B_16x5_SM UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Vista_Buildings_DockB_C = {}
-
-
-

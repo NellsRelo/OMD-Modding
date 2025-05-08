@@ -5,4 +5,3 @@ ELobbyBeaconJoinState = {
     JoinRequestAcknowledged = 2,
     ELobbyBeaconJoinState_MAX = 3,
 }
-

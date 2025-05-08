@@ -87,4 +87,3 @@ ECommonUserPrivilegeResult = {
     PlatformFailure = 9,
     ECommonUserPrivilegeResult_MAX = 10,
 }
-

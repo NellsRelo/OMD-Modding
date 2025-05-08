@@ -26,8 +26,8 @@
 ABP_MinecartProjectile_Explosive_C = {}
 
 function ABP_MinecartProjectile_Explosive_C:ReceiveBeginPlay() end
+
 function ABP_MinecartProjectile_Explosive_C:DeathVFX() end
+
 ---@param EntryPoint int32
 function ABP_MinecartProjectile_Explosive_C:ExecuteUbergraph_BP_MinecartProjectile_Explosive(EntryPoint) end
-
-

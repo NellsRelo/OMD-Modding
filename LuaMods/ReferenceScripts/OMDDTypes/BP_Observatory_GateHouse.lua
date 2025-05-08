@@ -67,6 +67,3 @@
 ---@field Geo USceneComponent
 ---@field TrapGrid USceneComponent
 ABP_Observatory_GateHouse_C = {}
-
-
-

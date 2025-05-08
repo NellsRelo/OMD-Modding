@@ -55,7 +55,6 @@ UGLTFExportOptions = {}
 
 function UGLTFExportOptions:ResetToDefault() end
 
-
 ---@class UGLTFExporter : UExporter
 UGLTFExporter = {}
 
@@ -66,7 +65,6 @@ UGLTFExporter = {}
 ---@param OutMessages FGLTFExportMessages
 ---@return boolean
 function UGLTFExporter:ExportToGLTF(Object, FilePath, Options, SelectedActors, OutMessages) end
-
 
 ---@class UGLTFLevelExporter : UGLTFExporter
 UGLTFLevelExporter = {}
@@ -102,12 +100,9 @@ UGLTFProxyOptions = {}
 
 function UGLTFProxyOptions:ResetToDefault() end
 
-
 ---@class UGLTFSkeletalMeshExporter : UGLTFExporter
 UGLTFSkeletalMeshExporter = {}
 
 
 ---@class UGLTFStaticMeshExporter : UGLTFExporter
 UGLTFStaticMeshExporter = {}
-
-

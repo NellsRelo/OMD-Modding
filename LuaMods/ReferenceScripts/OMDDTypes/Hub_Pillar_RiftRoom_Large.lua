@@ -7,6 +7,3 @@
 ---@field Hub_Base1x1_01 UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 AHub_Pillar_RiftRoom_Large_C = {}
-
-
-

@@ -620,6 +620,3 @@ USphereWithOwnerBoostNetObjectPrioritizer = {}
 ---@class USphereWithOwnerBoostNetObjectPrioritizerConfig : USphereNetObjectPrioritizerConfig
 ---@field OwnerPriorityBoost float
 USphereWithOwnerBoostNetObjectPrioritizerConfig = {}
-
-
-

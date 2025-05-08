@@ -32,10 +32,10 @@ UAnimationBudgetBlueprintLibrary = {}
 ---@param WorldContextObject UObject
 ---@param InParameters FAnimationBudgetAllocatorParameters
 function UAnimationBudgetBlueprintLibrary:SetAnimationBudgetParameters(WorldContextObject, InParameters) end
+
 ---@param WorldContextObject UObject
 ---@param bEnabled boolean
 function UAnimationBudgetBlueprintLibrary:EnableAnimationBudget(WorldContextObject, bEnabled) end
-
 
 ---@class USkeletalMeshComponentBudgeted : USkeletalMeshComponent
 ---@field bAutoRegisterWithBudgetAllocator boolean
@@ -45,5 +45,3 @@ USkeletalMeshComponentBudgeted = {}
 
 ---@param bInAutoRegisterWithBudgetAllocator boolean
 function USkeletalMeshComponentBudgeted:SetAutoRegisterWithBudgetAllocator(bInAutoRegisterWithBudgetAllocator) end
-
-

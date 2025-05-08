@@ -1,0 +1,37 @@
+---@meta
+
+---@class ABP_Giftshop_Stairs_C : ABP_OMDTrapGrid_C
+---@field Trap_Wall2 URSTTrapGridBoxComponent
+---@field Warehouse_4x4_WallArch_WoodWork_SM1 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper_BendN20 UStaticMeshComponent
+---@field GIftshop_Resort_StairWood_Slant_A_SM UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper_BendN19 UStaticMeshComponent
+---@field Trap_Wall1 URSTTrapGridBoxComponent
+---@field trap_wall URSTTrapGridBoxComponent
+---@field TrapGrid USceneComponent
+---@field Wood_Square_1200W_A_Light_NoTaper_BendN18 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper_BendN17 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper_BendN16 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper_BendN3 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper_BendN2 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper_BendN1 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper_BendN UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper_BendN4 UStaticMeshComponent
+---@field Stair_Manor_Wood_4x2_A_SM UStaticMeshComponent
+---@field WoodPlank_2x2_Floor_A UStaticMeshComponent
+---@field Wood_Stairs_4x2_A_SM1 UStaticMeshComponent
+---@field Wood_Stairs_4x2_A_SM UStaticMeshComponent
+---@field Warehouse_4x4_WallArch_WoodWork_SM UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper_BendN14 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper_BendN13 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper_BendN12 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper_BendN10 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper_BendN11 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper_BendN15 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper_BendN8 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper_BendN7 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper_BendN6 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper_BendN5 UStaticMeshComponent
+---@field Wood_Square_1200W_A_Light_NoTaper_BendN9 UStaticMeshComponent
+---@field Wood_Geo USceneComponent
+ABP_Giftshop_Stairs_C = {}

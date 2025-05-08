@@ -108,6 +108,3 @@
 ---@field Hub_Done_Classroom_Cut_SM UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 AHub_Classroom_C = {}
-
-
-

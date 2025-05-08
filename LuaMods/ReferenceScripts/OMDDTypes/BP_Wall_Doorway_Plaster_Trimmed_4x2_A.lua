@@ -5,6 +5,3 @@
 ---@field Trap_Wall1 URSTTrapGridBoxComponent
 ---@field trap_wall URSTTrapGridBoxComponent
 ABP_Wall_Doorway_Plaster_Trimmed_4x2_A_C = {}
-
-
-

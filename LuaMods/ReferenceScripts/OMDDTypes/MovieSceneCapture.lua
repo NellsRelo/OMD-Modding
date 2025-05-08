@@ -138,28 +138,33 @@ UMovieSceneCapture = {}
 
 ---@param ProtocolType TSubclassOf<UMovieSceneCaptureProtocolBase>
 function UMovieSceneCapture:SetImageCaptureProtocolType(ProtocolType) end
+
 ---@param ProtocolType TSubclassOf<UMovieSceneCaptureProtocolBase>
 function UMovieSceneCapture:SetAudioCaptureProtocolType(ProtocolType) end
+
 ---@return UMovieSceneCaptureProtocolBase
 function UMovieSceneCapture:GetImageCaptureProtocol() end
+
 ---@return UMovieSceneCaptureProtocolBase
 function UMovieSceneCapture:GetAudioCaptureProtocol() end
-
 
 ---@class UMovieSceneCaptureEnvironment : UObject
 UMovieSceneCaptureEnvironment = {}
 
 ---@return boolean
 function UMovieSceneCaptureEnvironment:IsCaptureInProgress() end
+
 ---@return int32
 function UMovieSceneCaptureEnvironment:GetCaptureFrameNumber() end
+
 ---@return float
 function UMovieSceneCaptureEnvironment:GetCaptureElapsedTime() end
+
 ---@return UMovieSceneImageCaptureProtocolBase
 function UMovieSceneCaptureEnvironment:FindImageCaptureProtocol() end
+
 ---@return UMovieSceneAudioCaptureProtocolBase
 function UMovieSceneCaptureEnvironment:FindAudioCaptureProtocol() end
-
 
 ---@class UMovieSceneCaptureProtocolBase : UObject
 ---@field State EMovieSceneCaptureProtocolState
@@ -167,9 +172,9 @@ UMovieSceneCaptureProtocolBase = {}
 
 ---@return boolean
 function UMovieSceneCaptureProtocolBase:IsCapturing() end
+
 ---@return EMovieSceneCaptureProtocolState
 function UMovieSceneCaptureProtocolBase:GetState() end
-
 
 ---@class UMovieSceneImageCaptureProtocolBase : UMovieSceneCaptureProtocolBase
 UMovieSceneImageCaptureProtocolBase = {}
@@ -184,33 +189,47 @@ UNullAudioCaptureProtocol = {}
 UUserDefinedCaptureProtocol = {}
 
 function UUserDefinedCaptureProtocol:StopCapturingFinalPixels() end
+
 ---@param StreamID FCapturedPixelsID
 function UUserDefinedCaptureProtocol:StartCapturingFinalPixels(StreamID) end
+
 ---@param Buffer UTexture
 ---@param BufferID FCapturedPixelsID
 function UUserDefinedCaptureProtocol:ResolveBuffer(Buffer, BufferID) end
+
 function UUserDefinedCaptureProtocol:OnWarmUp() end
+
 function UUserDefinedCaptureProtocol:OnTick() end
+
 function UUserDefinedCaptureProtocol:OnStartCapture() end
+
 ---@return boolean
 function UUserDefinedCaptureProtocol:OnSetup() end
+
 function UUserDefinedCaptureProtocol:OnPreTick() end
+
 ---@param Pixels FCapturedPixels
 ---@param ID FCapturedPixelsID
 ---@param FrameMetrics FFrameMetrics
 function UUserDefinedCaptureProtocol:OnPixelsReceived(Pixels, ID, FrameMetrics) end
+
 function UUserDefinedCaptureProtocol:OnPauseCapture() end
+
 function UUserDefinedCaptureProtocol:OnFinalize() end
+
 function UUserDefinedCaptureProtocol:OnCaptureFrame() end
+
 ---@return boolean
 function UUserDefinedCaptureProtocol:OnCanFinalize() end
+
 function UUserDefinedCaptureProtocol:OnBeginFinalize() end
+
 ---@return FFrameMetrics
 function UUserDefinedCaptureProtocol:GetCurrentFrameMetrics() end
+
 ---@param InFrameMetrics FFrameMetrics
 ---@return FString
 function UUserDefinedCaptureProtocol:GenerateFilename(InFrameMetrics) end
-
 
 ---@class UUserDefinedImageCaptureProtocol : UUserDefinedCaptureProtocol
 ---@field Format EDesiredImageFormat
@@ -223,18 +242,16 @@ UUserDefinedImageCaptureProtocol = {}
 ---@param FrameMetrics FFrameMetrics
 ---@param bCopyImageData boolean
 function UUserDefinedImageCaptureProtocol:WriteImageToDisk(PixelData, StreamID, FrameMetrics, bCopyImageData) end
+
 ---@return FString
 function UUserDefinedImageCaptureProtocol:GenerateFilenameForCurrentFrame() end
+
 ---@param Buffer UTexture
 ---@param StreamID FCapturedPixelsID
 ---@return FString
 function UUserDefinedImageCaptureProtocol:GenerateFilenameForBuffer(Buffer, StreamID) end
 
-
 ---@class UVideoCaptureProtocol : UFrameGrabberProtocol
 ---@field bUseCompression boolean
 ---@field CompressionQuality float
 UVideoCaptureProtocol = {}
-
-
-

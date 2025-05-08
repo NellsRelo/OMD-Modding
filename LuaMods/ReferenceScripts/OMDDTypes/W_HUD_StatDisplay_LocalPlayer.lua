@@ -33,16 +33,17 @@ UW_HUD_StatDisplay_LocalPlayer_C = {}
 
 ---@param Player ARSTPlayerState
 ---@param bIsTalking boolean
-UW_HUD_StatDisplay_LocalPlayer_C['On Player Talking Updated'] = function(Player, bIsTalking) end
-UW_HUD_StatDisplay_LocalPlayer_C['Refresh Voice Chat Display'] = function() end
-UW_HUD_StatDisplay_LocalPlayer_C['On Voice Chat Enabled Updated'] = function() end
+UW_HUD_StatDisplay_LocalPlayer_C['On Player Talking Updated'] = function(self, Player, bIsTalking) end
+UW_HUD_StatDisplay_LocalPlayer_C['Refresh Voice Chat Display'] = function(self,) end
+UW_HUD_StatDisplay_LocalPlayer_C['On Voice Chat Enabled Updated'] = function(self,) end
 ---@param bDowned boolean
-UW_HUD_StatDisplay_LocalPlayer_C['Refresh Downed Display'] = function(bDowned) end
+UW_HUD_StatDisplay_LocalPlayer_C['Refresh Downed Display'] = function(self, bDowned) end
 ---@param bUseShield boolean
-UW_HUD_StatDisplay_LocalPlayer_C['Set Bar BG Texture'] = function(bUseShield) end
-UW_HUD_StatDisplay_LocalPlayer_C['Update Shield Text'] = function() end
-UW_HUD_StatDisplay_LocalPlayer_C['Update Health Text'] = function() end
+UW_HUD_StatDisplay_LocalPlayer_C['Set Bar BG Texture'] = function(self, bUseShield) end
+UW_HUD_StatDisplay_LocalPlayer_C['Update Shield Text'] = function(self,) end
+UW_HUD_StatDisplay_LocalPlayer_C['Update Health Text'] = function(self,) end
 function UW_HUD_StatDisplay_LocalPlayer_C:UpdateMuteVisibility() end
+
 ---@param HealthComponent URSTHealthComponent
 ---@param OldValue float
 ---@param NewValue float
@@ -50,7 +51,9 @@ function UW_HUD_StatDisplay_LocalPlayer_C:UpdateMuteVisibility() end
 ---@param HitResult FHitResult
 ---@param bHasSpec boolean
 ---@param Spec FGameplayEffectSpec
-function UW_HUD_StatDisplay_LocalPlayer_C:OnPlayerCharacterShieldMaxChanged(HealthComponent, OldValue, NewValue, Instigator, HitResult, bHasSpec, Spec) end
+function UW_HUD_StatDisplay_LocalPlayer_C:OnPlayerCharacterShieldMaxChanged(HealthComponent, OldValue, NewValue,
+                                                                            Instigator, HitResult, bHasSpec, Spec) end
+
 ---@param HealthComponent URSTHealthComponent
 ---@param OldValue float
 ---@param NewValue float
@@ -58,17 +61,24 @@ function UW_HUD_StatDisplay_LocalPlayer_C:OnPlayerCharacterShieldMaxChanged(Heal
 ---@param HitResult FHitResult
 ---@param bHasSpec boolean
 ---@param Spec FGameplayEffectSpec
-function UW_HUD_StatDisplay_LocalPlayer_C:OnPlayerCharacterShieldChanged(HealthComponent, OldValue, NewValue, Instigator, HitResult, bHasSpec, Spec) end
+function UW_HUD_StatDisplay_LocalPlayer_C:OnPlayerCharacterShieldChanged(HealthComponent, OldValue, NewValue, Instigator,
+                                                                         HitResult, bHasSpec, Spec) end
+
 ---@param PlayerState ARSTPlayerState
 function UW_HUD_StatDisplay_LocalPlayer_C:OnPlayerIndexSet(PlayerState) end
+
 ---@return UWidgetAnimation
 function UW_HUD_StatDisplay_LocalPlayer_C:BP_GetOnShowAnimation() end
+
 ---@param NewUserFacingData URSTPawnUserFacingData
 function UW_HUD_StatDisplay_LocalPlayer_C:OnPawnUserFacingDataUpdated(NewUserFacingData) end
+
 ---@param newPlayerName FString
 function UW_HUD_StatDisplay_LocalPlayer_C:OnPlayerNameChanged(newPlayerName) end
+
 ---@param PlayerState ARSTPlayerState
 function UW_HUD_StatDisplay_LocalPlayer_C:SetPlayerState(PlayerState) end
+
 ---@param HealthComponent URSTHealthComponent
 ---@param OldValue float
 ---@param NewValue float
@@ -76,7 +86,9 @@ function UW_HUD_StatDisplay_LocalPlayer_C:SetPlayerState(PlayerState) end
 ---@param HitResult FHitResult
 ---@param bHasSpec boolean
 ---@param Spec FGameplayEffectSpec
-function UW_HUD_StatDisplay_LocalPlayer_C:OnPlayerCharacterHealthMaxChanged(HealthComponent, OldValue, NewValue, Instigator, HitResult, bHasSpec, Spec) end
+function UW_HUD_StatDisplay_LocalPlayer_C:OnPlayerCharacterHealthMaxChanged(HealthComponent, OldValue, NewValue,
+                                                                            Instigator, HitResult, bHasSpec, Spec) end
+
 ---@param HealthComponent URSTHealthComponent
 ---@param OldValue float
 ---@param NewValue float
@@ -84,32 +96,42 @@ function UW_HUD_StatDisplay_LocalPlayer_C:OnPlayerCharacterHealthMaxChanged(Heal
 ---@param HitResult FHitResult
 ---@param bHasSpec boolean
 ---@param Spec FGameplayEffectSpec
-function UW_HUD_StatDisplay_LocalPlayer_C:OnPlayerCharacterHealthChanged(HealthComponent, OldValue, NewValue, Instigator, HitResult, bHasSpec, Spec) end
+function UW_HUD_StatDisplay_LocalPlayer_C:OnPlayerCharacterHealthChanged(HealthComponent, OldValue, NewValue, Instigator,
+                                                                         HitResult, bHasSpec, Spec) end
+
 ---@param ProxyObject UAsyncAction_ListenForGameplayMessage
 ---@param ActualChannel FGameplayTag
 function UW_HUD_StatDisplay_LocalPlayer_C:OnMessageReceived_40CF6FFA45C158CFE3EC3FBF6EC5059B(ProxyObject, ActualChannel) end
+
 function UW_HUD_StatDisplay_LocalPlayer_C:OnPlayerStateChanged() end
+
 function UW_HUD_StatDisplay_LocalPlayer_C:Destruct() end
+
 ---@param PRSTag FGameplayTag
 ---@param PlayerNetID FUniqueNetIdRepl
 ---@param IsReady boolean
 function UW_HUD_StatDisplay_LocalPlayer_C:OnPlayerReadyChanged(PRSTag, PlayerNetID, IsReady) end
+
 function UW_HUD_StatDisplay_LocalPlayer_C:Construct() end
+
 function UW_HUD_StatDisplay_LocalPlayer_C:RefreshIsReady() end
+
 ---@param PRSTag FGameplayTag
 function UW_HUD_StatDisplay_LocalPlayer_C:OnInterruptOrComplete(PRSTag) end
+
 ---@param OldShield double
 ---@param NewShield double
-UW_HUD_StatDisplay_LocalPlayer_C['Refresh Shield Visibility'] = function(OldShield, NewShield) end
+UW_HUD_StatDisplay_LocalPlayer_C['Refresh Shield Visibility'] = function(self, OldShield, NewShield) end
 function UW_HUD_StatDisplay_LocalPlayer_C:BP_SynchronizeProperties() end
+
 ---@param MyGeometry FGeometry
 ---@param InDeltaTime float
-UW_HUD_StatDisplay_LocalPlayer_C['On Conditional Tick'] = function(MyGeometry, InDeltaTime) end
-UW_HUD_StatDisplay_LocalPlayer_C['Tick Downed Display'] = function() end
+UW_HUD_StatDisplay_LocalPlayer_C['On Conditional Tick'] = function(self, MyGeometry, InDeltaTime) end
+UW_HUD_StatDisplay_LocalPlayer_C['Tick Downed Display'] = function(self,) end
 function UW_HUD_StatDisplay_LocalPlayer_C:OnInitialized() end
+
 ---@param PlayerState APlayerState
 function UW_HUD_StatDisplay_LocalPlayer_C:UpdatePlatformIcon(PlayerState) end
+
 ---@param EntryPoint int32
 function UW_HUD_StatDisplay_LocalPlayer_C:ExecuteUbergraph_W_HUD_StatDisplay_LocalPlayer(EntryPoint) end
-
-

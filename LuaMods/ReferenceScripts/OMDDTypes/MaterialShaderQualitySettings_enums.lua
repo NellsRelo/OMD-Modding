@@ -6,4 +6,3 @@ EMobileShadowQuality = {
     PCF_5x5 = 3,
     EMobileShadowQuality_MAX = 4,
 }
-

@@ -7,5 +7,3 @@ UGCN_Character_Hit_Hero_C = {}
 ---@param Parameters FGameplayCueParameters
 ---@param SpawnResults FGameplayCueNotify_SpawnResult
 function UGCN_Character_Hit_Hero_C:OnBurst(Target, Parameters, SpawnResults) end
-
-

@@ -125,4 +125,3 @@ ETriggerType = {
     Blocker = 2,
     ETriggerType_MAX = 3,
 }
-

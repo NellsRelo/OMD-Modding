@@ -24,19 +24,25 @@ UW_SessionBrowserEntryButton_C = {}
 
 ---@param HasPassword boolean
 function UW_SessionBrowserEntryButton_C:HasPassword(HasPassword) end
+
 function UW_SessionBrowserEntryButton_C:UpdateFriendsText() end
+
 ---@param Options FString
 function UW_SessionBrowserEntryButton_C:MakeJoinOptionsString(Options) end
+
 ---@param Text FText
 function UW_SessionBrowserEntryButton_C:SetPassword(Text) end
+
 ---@param Text FText
 function UW_SessionBrowserEntryButton_C:CancelPassword(Text) end
+
 function UW_SessionBrowserEntryButton_C:InvalidPasswordClose() end
+
 function UW_SessionBrowserEntryButton_C:BP_OnClicked() end
+
 ---@param ListItemObject UObject
 ---@param ListWidget UW_SessionBrowserEntry_C
 function UW_SessionBrowserEntryButton_C:OnListObjectSet(ListItemObject, ListWidget) end
+
 ---@param EntryPoint int32
 function UW_SessionBrowserEntryButton_C:ExecuteUbergraph_W_SessionBrowserEntryButton(EntryPoint) end
-
-

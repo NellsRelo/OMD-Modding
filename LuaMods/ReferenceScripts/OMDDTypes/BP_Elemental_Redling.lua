@@ -9,7 +9,6 @@
 ABP_Elemental_Redling_C = {}
 
 function ABP_Elemental_Redling_C:BP_OnDeathStarted() end
+
 ---@param EntryPoint int32
 function ABP_Elemental_Redling_C:ExecuteUbergraph_BP_Elemental_Redling(EntryPoint) end
-
-

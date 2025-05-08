@@ -24,6 +24,10 @@ FAnimBlueprintGeneratedConstantData = {}
 
 
 
+---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
+FAnimBlueprintGeneratedMutableData = {}
+
+
 ---@class UABP_Sniper_Attachment_C : UAnimInstance
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance
@@ -47,9 +51,9 @@ UABP_Sniper_Attachment_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_Sniper_Attachment_C:AnimGraph(AnimGraph) end
+
 ---@param DeltaTimeX float
 function UABP_Sniper_Attachment_C:BlueprintUpdateAnimation(DeltaTimeX) end
+
 ---@param EntryPoint int32
 function UABP_Sniper_Attachment_C:ExecuteUbergraph_ABP_Sniper_Attachment(EntryPoint) end
-
-

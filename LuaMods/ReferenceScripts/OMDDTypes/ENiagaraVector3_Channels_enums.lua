@@ -5,4 +5,3 @@ ENiagaraVector3_Channels = {
     NewEnumerator2 = 2,
     ENiagaraVector3_MAX = 3,
 }
-

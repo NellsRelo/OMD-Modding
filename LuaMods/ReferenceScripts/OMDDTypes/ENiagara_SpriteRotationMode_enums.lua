@@ -6,4 +6,3 @@ ENiagara_SpriteRotationMode = {
     NewEnumerator1 = 3,
     ENiagara_MAX = 4,
 }
-

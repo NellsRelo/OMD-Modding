@@ -4,4 +4,3 @@ ENiagaraEmitterScalabilityMode_Limited = {
     NewEnumerator1 = 1,
     ENiagaraEmitterScalabilityMode_MAX = 2,
 }
-

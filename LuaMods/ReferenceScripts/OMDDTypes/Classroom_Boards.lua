@@ -11,6 +11,3 @@
 ---@field Posters_OMDT_05 UStaticMeshComponent
 ---@field Boards USceneComponent
 AClassroom_Boards_C = {}
-
-
-

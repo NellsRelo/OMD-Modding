@@ -65,4 +65,3 @@ EVertexRotationMethode = {
     Axis = 1,
     EVertexRotationMethode_MAX = 2,
 }
-

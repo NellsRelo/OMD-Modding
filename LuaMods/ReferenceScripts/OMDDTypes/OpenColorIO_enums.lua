@@ -4,4 +4,3 @@ EOpenColorIOViewTransformDirection = {
     Inverse = 1,
     EOpenColorIOViewTransformDirection_MAX = 2,
 }
-

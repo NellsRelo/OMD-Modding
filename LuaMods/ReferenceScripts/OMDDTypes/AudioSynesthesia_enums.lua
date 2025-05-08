@@ -47,4 +47,3 @@ EMeterPeakType = {
     Count = 3,
     EMeterPeakType_MAX = 4,
 }
-

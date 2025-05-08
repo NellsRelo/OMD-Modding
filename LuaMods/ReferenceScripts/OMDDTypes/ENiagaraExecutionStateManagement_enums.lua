@@ -7,4 +7,3 @@ ENiagaraExecutionStateManagement = {
     NewEnumerator4 = 4,
     ENiagaraExecutionStateManagement_MAX = 5,
 }
-

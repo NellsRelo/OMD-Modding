@@ -7,8 +7,8 @@
 ABP_Projectile_Hellbat_Baby_C = {}
 
 function ABP_Projectile_Hellbat_Baby_C:ReceiveBeginPlay() end
+
 function ABP_Projectile_Hellbat_Baby_C:ReceiveDestroyed() end
+
 ---@param EntryPoint int32
 function ABP_Projectile_Hellbat_Baby_C:ExecuteUbergraph_BP_Projectile_Hellbat_Baby(EntryPoint) end
-
-

@@ -13,6 +13,3 @@
 ---@field ClassRoom_DeskTopMiddle_SM UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 AWarRoom_WoodStand_SM_C = {}
-
-
-

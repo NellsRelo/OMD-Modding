@@ -79,6 +79,3 @@
 ---@field TrapGrid USceneComponent
 ---@field Collision USceneComponent
 ABP_FishMarket_WallHouse_C_Bakery_C = {}
-
-
-

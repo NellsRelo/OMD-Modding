@@ -79,7 +79,7 @@ FIKRigInputSkeleton = {}
 ---@field ParentIndices TArray<int32>
 ---@field ExcludedBones TArray<FName>
 ---@field CurrentPoseGlobal TArray<FTransform>
----@field CurrentPoseLocal TArray<FTransform>
+---@field CurrentPoseTArray<FTransform>
 ---@field RefPoseGlobal TArray<FTransform>
 FIKRigSkeleton = {}
 
@@ -217,7 +217,6 @@ IIKGoalCreatorInterface = {}
 ---@param OutGoals TMap<FName, FIKRigGoal>
 function IIKGoalCreatorInterface:AddIKGoals(OutGoals) end
 
-
 ---@class UIKRetargetGlobalSettings : UObject
 ---@field Settings FRetargetGlobalSettings
 UIKRetargetGlobalSettings = {}
@@ -250,53 +249,64 @@ UIKRetargeter = {}
 ---@param RetargetProfile FRetargetProfile
 ---@param RootSettings FTargetRootSettings
 function UIKRetargeter:SetRootSettingsInRetargetProfile(RetargetProfile, RootSettings) end
+
 ---@param RetargetProfile FRetargetProfile
 ---@param GlobalSettings FRetargetGlobalSettings
 function UIKRetargeter:SetGlobalSettingsInRetargetProfile(RetargetProfile, GlobalSettings) end
+
 ---@param RetargetProfile FRetargetProfile
 ---@param SpeedPlantSettings FTargetChainSpeedPlantSettings
 ---@param TargetChainName FName
 function UIKRetargeter:SetChainSpeedPlantSettingsInRetargetProfile(RetargetProfile, SpeedPlantSettings, TargetChainName) end
+
 ---@param RetargetProfile FRetargetProfile
 ---@param ChainSettings FTargetChainSettings
 ---@param TargetChainName FName
 function UIKRetargeter:SetChainSettingsInRetargetProfile(RetargetProfile, ChainSettings, TargetChainName) end
+
 ---@param RetargetProfile FRetargetProfile
 ---@param IKSettings FTargetChainIKSettings
 ---@param TargetChainName FName
 function UIKRetargeter:SetChainIKSettingsInRetargetProfile(RetargetProfile, IKSettings, TargetChainName) end
+
 ---@param RetargetProfile FRetargetProfile
 ---@param FKSettings FTargetChainFKSettings
 ---@param TargetChainName FName
 function UIKRetargeter:SetChainFKSettingsInRetargetProfile(RetargetProfile, FKSettings, TargetChainName) end
+
 ---@param RetargetProfile FRetargetProfile
 ---@return FTargetRootSettings
 function UIKRetargeter:GetRootSettingsFromRetargetProfile(RetargetProfile) end
+
 ---@param RetargetAsset UIKRetargeter
 ---@param OptionalProfileName FName
 ---@param OutSettings FTargetRootSettings
 function UIKRetargeter:GetRootSettingsFromRetargetAsset(RetargetAsset, OptionalProfileName, OutSettings) end
+
 ---@param RetargetProfile FRetargetProfile
 ---@return FRetargetGlobalSettings
 function UIKRetargeter:GetGlobalSettingsFromRetargetProfile(RetargetProfile) end
+
 ---@param RetargetAsset UIKRetargeter
 ---@param OptionalProfileName FName
 ---@param OutSettings FRetargetGlobalSettings
 function UIKRetargeter:GetGlobalSettingsFromRetargetAsset(RetargetAsset, OptionalProfileName, OutSettings) end
+
 ---@param RetargetAsset UIKRetargeter
 ---@param IKGoalName FName
 ---@return FTargetChainSettings
 function UIKRetargeter:GetChainUsingGoalFromRetargetAsset(RetargetAsset, IKGoalName) end
+
 ---@param RetargetProfile FRetargetProfile
 ---@param TargetChainName FName
 ---@return FTargetChainSettings
 function UIKRetargeter:GetChainSettingsFromRetargetProfile(RetargetProfile, TargetChainName) end
+
 ---@param RetargetAsset UIKRetargeter
 ---@param TargetChainName FName
 ---@param OptionalProfileName FName
 ---@return FTargetChainSettings
 function UIKRetargeter:GetChainSettingsFromRetargetAsset(RetargetAsset, TargetChainName, OptionalProfileName) end
-
 
 ---@class UIKRigComponent : UActorComponent
 UIKRigComponent = {}
@@ -306,16 +316,18 @@ UIKRigComponent = {}
 ---@param PositionAlpha float
 ---@param RotationAlpha float
 function UIKRigComponent:SetIKRigGoalTransform(GoalName, Transform, PositionAlpha, RotationAlpha) end
+
 ---@param GoalName FName
 ---@param Position FVector
 ---@param Rotation FQuat
 ---@param PositionAlpha float
 ---@param RotationAlpha float
 function UIKRigComponent:SetIKRigGoalPositionAndRotation(GoalName, Position, Rotation, PositionAlpha, RotationAlpha) end
+
 ---@param Goal FIKRigGoal
 function UIKRigComponent:SetIKRigGoal(Goal) end
-function UIKRigComponent:ClearAllGoals() end
 
+function UIKRigComponent:ClearAllGoals() end
 
 ---@class UIKRigDefinition : UObject
 ---@field PreviewSkeletalMesh TSoftObjectPtr<USkeletalMesh>
@@ -490,6 +502,3 @@ URetargetChainSettings = {}
 ---@class URetargetRootSettings : UObject
 ---@field Settings FTargetRootSettings
 URetargetRootSettings = {}
-
-
-

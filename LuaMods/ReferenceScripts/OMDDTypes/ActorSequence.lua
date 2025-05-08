@@ -35,11 +35,10 @@ UActorSequence = {}
 UActorSequenceComponent = {}
 
 function UActorSequenceComponent:StopSequence() end
-function UActorSequenceComponent:PlaySequence() end
-function UActorSequenceComponent:PauseSequence() end
 
+function UActorSequenceComponent:PlaySequence() end
+
+function UActorSequenceComponent:PauseSequence() end
 
 ---@class UActorSequencePlayer : UMovieSceneSequencePlayer
 UActorSequencePlayer = {}
-
-

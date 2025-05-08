@@ -22,13 +22,15 @@ FAudioInputDeviceInfo = {}
 UAudioCapture = {}
 
 function UAudioCapture:StopCapturingAudio() end
+
 function UAudioCapture:StartCapturingAudio() end
+
 ---@return boolean
 function UAudioCapture:IsCapturingAudio() end
+
 ---@param OutInfo FAudioCaptureDeviceInfo
 ---@return boolean
 function UAudioCapture:GetAudioCaptureDeviceInfo(OutInfo) end
-
 
 ---@class UAudioCaptureBlueprintLibrary : UBlueprintFunctionLibrary
 UAudioCaptureBlueprintLibrary = {}
@@ -36,10 +38,10 @@ UAudioCaptureBlueprintLibrary = {}
 ---@param WorldContextObject UObject
 ---@param OnObtainDevicesEvent FGetAvailableAudioInputDevicesOnObtainDevicesEvent
 function UAudioCaptureBlueprintLibrary:GetAvailableAudioInputDevices(WorldContextObject, OnObtainDevicesEvent) end
+
 ---@param Info FAudioInputDeviceInfo
 ---@return FString
 function UAudioCaptureBlueprintLibrary:Conv_AudioInputDeviceInfoToString(Info) end
-
 
 ---@class UAudioCaptureComponent : USynthComponent
 ---@field JitterLatencyFrames int32
@@ -52,5 +54,3 @@ UAudioCaptureFunctionLibrary = {}
 
 ---@return UAudioCapture
 function UAudioCaptureFunctionLibrary:CreateAudioCapture() end
-
-

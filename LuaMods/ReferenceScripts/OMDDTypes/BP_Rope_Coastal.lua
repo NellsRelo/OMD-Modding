@@ -7,5 +7,3 @@
 ABP_Rope_Coastal_C = {}
 
 function ABP_Rope_Coastal_C:UserConstructionScript() end
-
-

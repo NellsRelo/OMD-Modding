@@ -5,6 +5,3 @@
 ---@field Proto_Dome_Large_Corner UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Dome_Large_Corner_C = {}
-
-
-

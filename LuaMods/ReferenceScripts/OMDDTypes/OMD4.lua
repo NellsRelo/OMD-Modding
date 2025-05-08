@@ -7,14 +7,16 @@ ARSTAIAttachment = {}
 
 ---@return UMeshComponent
 function ARSTAIAttachment:GetMesh() end
+
 ---@return UMeshComponent
 function ARSTAIAttachment:GetFXMesh() end
+
 function ARSTAIAttachment:BP_SpawnedFromRiftFX() end
+
 ---@param LifeSpan float
 ---@param DeathType uint8
 ---@param AnimationTag FGameplayTag
 function ARSTAIAttachment:BP_DestroyFX(LifeSpan, DeathType, AnimationTag) end
-
 
 ---@class ARSTAIAttachmentStatic : ARSTAIAttachment
 ---@field Mesh UStaticMeshComponent
@@ -56,17 +58,24 @@ ARSTAICharacter = {}
 
 ---@return boolean
 function ARSTAICharacter:UseHealthBars() end
+
 function ARSTAICharacter:UnFreeze() end
+
 ---@param getUpMontage TSoftObjectPtr<UAnimMontage>
 function ARSTAICharacter:StartGetUp(getUpMontage) end
+
 ---@param bVisible boolean
 function ARSTAICharacter:SetMeshVisibility(bVisible) end
+
 function ARSTAICharacter:OnRep_MeshVisibility() end
+
 ---@param ImpactResult FHitResult
 ---@param ImpactVelocity FVector
 function ARSTAICharacter:OnLaunchImpact(ImpactResult, ImpactVelocity) end
+
 ---@param Parms FActorInitStateChangedParams
 function ARSTAICharacter:OnInitStateChanged(Parms) end
+
 ---@param HealthComp URSTHealthComponent
 ---@param Healing float
 ---@param HealingCauser AActor
@@ -74,42 +83,58 @@ function ARSTAICharacter:OnInitStateChanged(Parms) end
 ---@param bHasSpec boolean
 ---@param Spec FGameplayEffectSpec
 function ARSTAICharacter:OnHealingTaken(HealthComp, Healing, HealingCauser, HitResult, bHasSpec, Spec) end
+
 function ARSTAICharacter:NetMulticast_Ground() end
+
 function ARSTAICharacter:NetMulticast_DoDeathAnimOverride() end
+
 ---@param FlyoffComboPointCount int32
 ---@param Player ARSTPlayerState
 function ARSTAICharacter:Multicast_SpawnComboFlyoff(FlyoffComboPointCount, Player) end
+
 ---@param EffectContext FGameplayEffectContextHandle
 ---@return boolean
 function ARSTAICharacter:IsHeadshot(EffectContext) end
+
 function ARSTAICharacter:Ground() end
+
 ---@param BaseVelocity float
 ---@return float
 function ARSTAICharacter:GetAdjustedLaunchVelocity(BaseVelocity) end
+
 function ARSTAICharacter:Freeze() end
+
 function ARSTAICharacter:EndGetUp() end
+
 function ARSTAICharacter:DoDeathAnimOverride() end
+
 ---@param GibMask int32
 ---@param bDisableCollision boolean
 ---@param bSpawnGibs boolean
 ---@param DeathEvent URSTDeathEvent_AIDeathStarted
 function ARSTAICharacter:DetachLimbs(GibMask, bDisableCollision, bSpawnGibs, DeathEvent) end
+
 ---@param ActorInfo FGameplayAbilityActorInfo
 function ARSTAICharacter:BP_OnInteract(ActorInfo) end
+
 function ARSTAICharacter:BP_Launched() end
+
 function ARSTAICharacter:BP_Ground() end
+
 ---@param blood boolean
 ---@param headExploded boolean
 function ARSTAICharacter:BP_Gibbed(blood, headExploded) end
+
 function ARSTAICharacter:BP_EvaluateNearbyBreakables() end
+
 ---@param LifeSpan float
 ---@param DeathType uint8
 ---@param AnimationTag FGameplayTag
 function ARSTAICharacter:BP_DestroyFX(LifeSpan, DeathType, AnimationTag) end
+
 ---@param RequestingInteractor AActor
 ---@param RetValue boolean
 function ARSTAICharacter:BP_CanInteractWith(RequestingInteractor, RetValue) end
-
 
 ---@class ARSTAIController : ANavPowerAIController
 ---@field MyTeamID FGenericTeamId
@@ -149,128 +174,187 @@ function ARSTAICharacter:BP_CanInteractWith(RequestingInteractor, RetValue) end
 ARSTAIController = {}
 
 function ARSTAIController:UpdatePathNodeCosts() end
+
 function ARSTAIController:UpdateNodeNetwork() end
+
 ---@return boolean
 function ARSTAIController:UpdateCurrentNode() end
+
 ---@param bResetThreatList boolean
 function ARSTAIController:SuspendAI(bResetThreatList) end
+
 ---@param TimerUse ERSTEnemyTimer
 function ARSTAIController:StartAITimer(TimerUse) end
+
 ---@param bRunning boolean
 function ARSTAIController:SetRunning(bRunning) end
+
 ---@param bNewResting boolean
 function ARSTAIController:SetIsResting(bNewResting) end
+
 ---@param bNewLeashing boolean
 function ARSTAIController:SetIsLeashing(bNewLeashing) end
+
 ---@param bIsInteracting boolean
 function ARSTAIController:SetInteractingTag(bIsInteracting) end
+
 ---@param NewCombat boolean
 function ARSTAIController:SetInCombat(NewCombat) end
+
 ---@param NewState ERSTEnemyState
 ---@param InstigatorActor AActor
 function ARSTAIController:SetCurrentState(NewState, InstigatorActor) end
+
 ---@return FTransform
 function ARSTAIController:SelectRandomLocation() end
+
 ---@param bResetPathNode boolean
 function ARSTAIController:ResumeAI(bResetPathNode) end
+
 function ARSTAIController:ReachedCurrentNode() end
+
 ---@param UpdatedActors TArray<AActor>
 function ARSTAIController:OnSenseActors(UpdatedActors) end
+
 ---@param OwningActor AActor
 ---@param InInstigator AActor
 function ARSTAIController:OnRevived(OwningActor, InInstigator) end
+
 ---@param OwningActor AActor
 ---@param bAdded boolean
 function ARSTAIController:OnObstructionsUpdated(OwningActor, bAdded) end
+
 ---@param OwningActor AActor
 ---@param InInstigator AActor
 function ARSTAIController:OnGuardianMasterDeath(OwningActor, InInstigator) end
+
 ---@param bIsGoBreakActive boolean
 function ARSTAIController:OnGoBreakChanged(bIsGoBreakActive) end
+
 ---@param OwningActor AActor
 ---@param InInstigator AActor
 function ARSTAIController:OnDowned(OwningActor, InInstigator) end
+
 function ARSTAIController:OnAIDeath() end
+
 ---@return boolean
 function ARSTAIController:IsCurrentTargetInAbilityRange() end
+
 ---@return boolean
 function ARSTAIController:IsCurrentAbilityRanged() end
+
 ---@return boolean
 function ARSTAIController:IsBlockedToNode() end
+
 ---@return boolean
 function ARSTAIController:InitAIParms() end
+
 function ARSTAIController:HandleThreatEvaluation() end
+
 function ARSTAIController:HandleStuckTimer() end
+
 function ARSTAIController:HandleAITimer() end
+
 ---@return ERSTThreatGroup
 function ARSTAIController:GetThreatGroup() end
+
 ---@return float
 function ARSTAIController:GetSightRadius() end
+
 ---@return FVector
 function ARSTAIController:GetLastKnownTargetLoc() end
+
 ---@return boolean
 function ARSTAIController:GetIsRunning() end
+
 ---@return boolean
 function ARSTAIController:GetIsResting() end
+
 ---@return boolean
 function ARSTAIController:GetIsMesmerized() end
+
 ---@return boolean
 function ARSTAIController:GetIsLeashing() end
+
 ---@return boolean
 function ARSTAIController:GetIsInteracting() end
+
 ---@return boolean
 function ARSTAIController:GetInCombat() end
+
 ---@return boolean
 function ARSTAIController:GetHasBeenAssignedMaster() end
+
 ---@return FRotator
 function ARSTAIController:GetGuardRot() end
+
 ---@return FVector
 function ARSTAIController:GetGuardLoc() end
+
 ---@return AActor
 function ARSTAIController:GetGuardianMaster() end
+
 ---@return float
 function ARSTAIController:GetFollowRadius() end
+
 ---@return AActor
 function ARSTAIController:GetCurrentTarget() end
+
 ---@return ERSTEnemyState
 function ARSTAIController:GetCurrentState() end
+
 ---@return FRSTRange
 function ARSTAIController:GetCurrentAbilityRange() end
+
 ---@return float
 function ARSTAIController:GetAITimerRemaining() end
+
 ---@param TimerUse ERSTEnemyTimer
 ---@return float
 function ARSTAIController:GetAITimerDuration(TimerUse) end
+
 function ARSTAIController:EvaluateThreatList() end
+
 ---@return boolean
 function ARSTAIController:EvaluateTargetlessAbilities() end
+
 ---@param Master AActor
 ---@param FollowRadius float
 ---@return boolean
 function ARSTAIController:DoMinionMesmerize(Master, FollowRadius) end
+
 ---@return boolean
 function ARSTAIController:DidLastTargetDie() end
+
 function ARSTAIController:ConfigureSenses() end
+
 ---@return boolean
 function ARSTAIController:CheckRoamingDistance() end
+
 function ARSTAIController:CheckForDeferredDeath() end
+
 ---@return boolean
 function ARSTAIController:CheckFollowDistance() end
+
 function ARSTAIController:CancelAITimer() end
+
 ---@return boolean
 function ARSTAIController:ActivateSpawnAbility() end
+
 ---@return boolean
 function ARSTAIController:ActivateReviveAbility() end
+
 ---@param bIsBeginningInteraction boolean
 ---@param InstigatorActor AActor
 ---@return boolean
 function ARSTAIController:ActivateInteractResponseAbility(bIsBeginningInteraction, InstigatorActor) end
+
 ---@param bEnforceRangeCheck boolean
 ---@return boolean
 function ARSTAIController:ActivateCurrentAttackAbility(bEnforceRangeCheck) end
+
 ---@return boolean
 function ARSTAIController:ActivateAggroAbility() end
-
 
 ---@class ARSTAIPath : AActor
 ---@field PathPoints TArray<ARSTPathPoint>
@@ -306,14 +390,17 @@ ARSTAIPath = {}
 ARSTAISpawner = {}
 
 function ARSTAISpawner:OnRespawnTimer() end
+
 function ARSTAISpawner:OnDelayedSpawnTimer() end
+
 ---@return int32
 function ARSTAISpawner:GetCurrentAliveCount() end
+
 ---@param SpawnerName FString
 function ARSTAISpawner:CNBAISPawnerOnAllPawnsDeadSignature__DelegateSignature(SpawnerName) end
+
 ---@param spawedPawns TArray<APawn>
 function ARSTAISpawner:BeginSpawning(spawedPawns) end
-
 
 ---@class ARSTActiveSubobject : ARNetworkProxyActor
 ---@field AbilitySystemComponent URSTAbilitySystemComponent
@@ -330,14 +417,18 @@ ARSTActiveSubobject = {}
 
 ---@param bNewHidden boolean
 function ARSTActiveSubobject:SetActorHiddenLocally(bNewHidden) end
+
 ---@param bNewHidden boolean
 function ARSTActiveSubobject:Server_SetActorHidden(bNewHidden) end
+
 function ARSTActiveSubobject:Server_RequestDestroy() end
+
 function ARSTActiveSubobject:RequestDestroyOnServer() end
+
 function ARSTActiveSubobject:OnLifetimeLapsed() end
+
 ---@param DestroyedActor AActor
 function ARSTActiveSubobject:OnControllerDestroyed(DestroyedActor) end
-
 
 ---@class ARSTAttachment : AActor
 ---@field bUseDefaultVisibilityBehavior boolean
@@ -347,55 +438,77 @@ ARSTAttachment = {}
 ---@param Tag FGameplayTag
 ---@param Count int32
 function ARSTAttachment:OnVisualVariantTagsChanged(Tag, Count) end
+
 ---@param VisualTagContainer FGameplayTagContainer
 ---@param bRevertToDefaults boolean
 function ARSTAttachment:OnCurrentVisualVariantChanged(VisualTagContainer, bRevertToDefaults) end
+
 ---@param UpdatedTag FGameplayTag
 function ARSTAttachment:OnCurrentChargeUpdated(UpdatedTag) end
+
 ---@return USceneComponent
 function ARSTAttachment:GetPrimaryComponent() end
+
 ---@param OutComponents TArray<UMeshComponent>
 function ARSTAttachment:GetMeshComponents(OutComponents) end
+
 ---@param OutComponents TArray<UFXSystemComponent>
 function ARSTAttachment:GetFXComponents(OutComponents) end
+
 ---@param GameplayTag FGameplayTag
 ---@return int32
 function ARSTAttachment:GetChargeCount(GameplayTag) end
+
 ---@param AdditionalContextData FGameplayTagContainer
 function ARSTAttachment:BP_UltimateFired(AdditionalContextData) end
+
 ---@param AdditionalContextData FGameplayTagContainer
 function ARSTAttachment:BP_SpecialFired(AdditionalContextData) end
+
 ---@param bVisible boolean
 function ARSTAttachment:BP_SetAttachmentVisibility(bVisible) end
+
 ---@param AdditionalContextData FGameplayTagContainer
 function ARSTAttachment:BP_SecondaryFired(AdditionalContextData) end
+
 ---@param AdditionalContextData FGameplayTagContainer
 function ARSTAttachment:BP_Reload(AdditionalContextData) end
+
 ---@param AdditionalContextData FGameplayTagContainer
 function ARSTAttachment:BP_PrimaryFired(AdditionalContextData) end
+
 ---@return USceneComponent
 function ARSTAttachment:BP_GetPrimaryComponent() end
+
 ---@return TArray<UMeshComponent>
 function ARSTAttachment:BP_GetMeshComponents() end
+
 ---@return TArray<UFXSystemComponent>
 function ARSTAttachment:BP_GetFXComponents() end
+
 ---@param AdditionalContextData FGameplayTagContainer
 function ARSTAttachment:BP_Deactivated(AdditionalContextData) end
+
 ---@param AdditionalContextData FGameplayTagContainer
 function ARSTAttachment:BP_ChargeStarted(AdditionalContextData) end
+
 ---@param AdditionalContextData FGameplayTagContainer
 function ARSTAttachment:BP_ChargeLevelIncreased(AdditionalContextData) end
+
 ---@param AdditionalContextData FGameplayTagContainer
 function ARSTAttachment:BP_ChargeEnded(AdditionalContextData) end
+
 ---@param AdditionalContextData FGameplayTagContainer
 function ARSTAttachment:BP_Cancelled(AdditionalContextData) end
+
 ---@param AdditionalContextData FGameplayTagContainer
 function ARSTAttachment:BP_AttachmentUnequipped(AdditionalContextData) end
+
 ---@param AdditionalContextData FGameplayTagContainer
 function ARSTAttachment:BP_AttachmentEquipped(AdditionalContextData) end
+
 ---@param AdditionalContextData FGameplayTagContainer
 function ARSTAttachment:BP_AmmoCountChanged(AdditionalContextData) end
-
 
 ---@class ARSTBlessingTrapGridsVolume : ARSTTrapGridsVolume
 ARSTBlessingTrapGridsVolume = {}
@@ -409,9 +522,9 @@ ARSTBlunderbussPet = {}
 ---@param Other AActor
 ---@return ETeamAttitude::Type
 function ARSTBlunderbussPet:GetTeamAttitudeTowardsActor(Other) end
+
 ---@return ERSTTeams
 function ARSTBlunderbussPet:GetTeam() end
-
 
 ---@class ARSTBlunderbussPetUltimate : ARSTBlunderbussPet
 ---@field CollisionComponent UCapsuleComponent
@@ -461,15 +574,21 @@ ARSTBlunderbussPetUltimate = {}
 ARSTCharacter = {}
 
 function ARSTCharacter:StartAdvance() end
+
 function ARSTCharacter:SelfDestruct() end
+
 ---@param Guid FGuid
 function ARSTCharacter:RemoveRootCollisionOverride(Guid) end
+
 ---@param Guid FGuid
 function ARSTCharacter:RemoveMeshCollisionOverride(Guid) end
+
 ---@param bApplyForce boolean
 function ARSTCharacter:RagdollDeath(bApplyForce) end
+
 ---@param bDetachFromRoot boolean
 function ARSTCharacter:Ragdoll(bDetachFromRoot) end
+
 ---@param HealthComponent URSTHealthComponent
 ---@param OldValue float
 ---@param NewValue float
@@ -478,33 +597,44 @@ function ARSTCharacter:Ragdoll(bDetachFromRoot) end
 ---@param bHasSpec boolean
 ---@param Spec FGameplayEffectSpec
 function ARSTCharacter:OnShieldMaxChanged(HealthComponent, OldValue, NewValue, DamageCauser, HitResult, bHasSpec, Spec) end
+
 ---@param HealthComp URSTHealthComponent
 ---@param OldValue float
 ---@param NewValue float
 ---@param Spec FGameplayEffectSpec
 function ARSTCharacter:OnShieldChangedAuthority(HealthComp, OldValue, NewValue, Spec) end
+
 ---@param OwningActor AActor
 ---@param InInstigator AActor
 function ARSTCharacter:OnRevived(OwningActor, InInstigator) end
+
 function ARSTCharacter:OnRep_RSTReplicatedMovement() end
+
 function ARSTCharacter:OnRep_ReplicatedAcceleration() end
+
 ---@param OldTeamID FGenericTeamId
 function ARSTCharacter:OnRep_MyTeamID(OldTeamID) end
+
 function ARSTCharacter:OnRep_ComponentCollisionOverrides() end
+
 ---@param HealthComp URSTHealthComponent
 ---@param OldValue float
 ---@param NewValue float
 ---@param Spec FGameplayEffectSpec
 function ARSTCharacter:OnHealthChangedAuthority(HealthComp, OldValue, NewValue, Spec) end
+
 ---@param OwningActor AActor
 ---@param InInstigator AActor
 function ARSTCharacter:OnDowned(OwningActor, InInstigator) end
+
 ---@param OwningActor AActor
 ---@param InInstigator AActor
 function ARSTCharacter:OnDeathStarted(OwningActor, InInstigator) end
+
 ---@param OwningActor AActor
 ---@param InInstigator AActor
 function ARSTCharacter:OnDeathFinished(OwningActor, InInstigator) end
+
 ---@param HealthComp URSTHealthComponent
 ---@param Damage float
 ---@param DamageCauser AActor
@@ -512,50 +642,72 @@ function ARSTCharacter:OnDeathFinished(OwningActor, InInstigator) end
 ---@param bHasSpec boolean
 ---@param Spec FGameplayEffectSpec
 function ARSTCharacter:OnDamageTaken(HealthComp, Damage, DamageCauser, HitResult, bHasSpec, Spec) end
+
 function ARSTCharacter:OnAttachmentsChanged() end
+
 ---@param LaunchVelocity FVector
 ---@param bXYOverride boolean
 ---@param bZOverride boolean
 function ARSTCharacter:LaunchCharacter_NoSpec(LaunchVelocity, bXYOverride, bZOverride) end
+
 ---@return boolean
 function ARSTCharacter:IsDeadOrDying() end
+
 ---@return boolean
 function ARSTCharacter:IsBeingGrappled() end
+
 ---@param PrimComp UPrimitiveComponent
 ---@return boolean
 function ARSTCharacter:HasCollisionOverride(PrimComp) end
+
 ---@param Tag FGameplayTag
 ---@return boolean
 function ARSTCharacter:HasAirborneRecoveryTag(Tag) end
+
 ---@return ERSTCharacterWeightClass
 function ARSTCharacter:GetWeightClass() end
+
 ---@return ARSTPlayerState
 function ARSTCharacter:GetRSTPlayerState() end
+
 ---@return ARSTPlayerController
 function ARSTCharacter:GetRSTPlayerController() end
+
 ---@return URSTAbilitySystemComponent
 function ARSTCharacter:GetRSTAbilitySystemComponent() end
+
 ---@return float
 function ARSTCharacter:GetRiftPointIgnoreChance() end
+
 ---@return int32
 function ARSTCharacter:GetRiftPointCost() end
+
 ---@return URSTPawnDefinition
 function ARSTCharacter:GetPawnDefinition() end
+
 function ARSTCharacter:FinishAdvance() end
+
 ---@param GrappleID int32
 function ARSTCharacter:EndGrapple(GrappleID) end
+
+function ARSTCharacter:EndAnyGrapple() end
+
 function ARSTCharacter:BP_OnDeathStarted() end
+
 function ARSTCharacter:BP_OnDeathFinished() end
+
 function ARSTCharacter:BP_AbilitySystemInitialized() end
+
 ---@param NewCollisionProfile FName
 ---@return FGuid
 function ARSTCharacter:ApplyRootCollisionOverride(NewCollisionProfile) end
+
 ---@param NewCollisionProfile FName
 ---@return FGuid
 function ARSTCharacter:ApplyMeshCollisionOverride(NewCollisionProfile) end
+
 ---@param Tag FGameplayTag
 function ARSTCharacter:ApplyAirborneRecovery(Tag) end
-
 
 ---@class ARSTChest : AActor
 ---@field InteractionOption FRSTInteractionOption
@@ -563,10 +715,10 @@ ARSTChest = {}
 
 ---@param ActorInfo FGameplayAbilityActorInfo
 function ARSTChest:BP_OnInteract(ActorInfo) end
+
 ---@param RequestingInteractor AActor
 ---@param RetValue boolean
 function ARSTChest:BP_CanInteractWith(RequestingInteractor, RetValue) end
-
 
 ---@class ARSTChestSpawner : AActor
 ---@field ChestClass TSubclassOf<ARSTChest>
@@ -609,16 +761,23 @@ ARSTDebugCameraController = {}
 ARSTDoor = {}
 
 function ARSTDoor:UpdateNearbyPlayers() end
+
 function ARSTDoor:OpenDoor() end
+
 function ARSTDoor:OnRep_UpdateHealthbar() end
+
 function ARSTDoor:OnRep_IsOpen() end
+
 function ARSTDoor:OnRep_IsExpectingMobs() end
+
 ---@param OwningActor AActor
 ---@param InInstigator AActor
 function ARSTDoor:OnDeathStarted(OwningActor, InInstigator) end
+
 ---@param OwningActor AActor
 ---@param InInstigator AActor
 function ARSTDoor:OnDeathFinished(OwningActor, InInstigator) end
+
 ---@param InHealthComponent URSTHealthComponent
 ---@param Damage float
 ---@param InInstigator AActor
@@ -626,19 +785,23 @@ function ARSTDoor:OnDeathFinished(OwningActor, InInstigator) end
 ---@param bHasSpec boolean
 ---@param Spec FGameplayEffectSpec
 function ARSTDoor:OnDamageTaken(InHealthComponent, Damage, InInstigator, HitResult, bHasSpec, Spec) end
+
 ---@param OverlappedComponent UPrimitiveComponent
 ---@param OtherActor AActor
 ---@param OtherComp UPrimitiveComponent
 ---@param OtherBodyIndex int32
 ---@param bFromSweep boolean
 ---@param SweepResult FHitResult
-function ARSTDoor:OnComponentBeginOverlap(OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex, bFromSweep, SweepResult) end
+function ARSTDoor:OnComponentBeginOverlap(OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex, bFromSweep,
+                                          SweepResult) end
+
 ---@return URSTAbilitySystemComponent
 function ARSTDoor:GetRSTAbilitySystemComponent() end
+
 ---@return URSTHealthComponent
 function ARSTDoor:GetHealthComponent() end
-function ARSTDoor:BP_DoorOpened() end
 
+function ARSTDoor:BP_DoorOpened() end
 
 ---@class ARSTEditorPlacementActor : AActor
 ---@field OnActorMoved FRSTEditorPlacementActorOnActorMoved
@@ -647,8 +810,8 @@ ARSTEditorPlacementActor = {}
 ---@param Tag FGameplayTag
 ---@param Val int32
 function ARSTEditorPlacementActor:K2_SetIntValue(Tag, Val) end
-function ARSTEditorPlacementActor:K2_OnPropertyChanged() end
 
+function ARSTEditorPlacementActor:K2_OnPropertyChanged() end
 
 ---@class ARSTFirePointCueNotify_Looping : ARSTWeaponCueNotify_Looping
 ---@field ApplicationFirePointParticles TArray<FGameplayCueNotify_ParticleInfo>
@@ -663,13 +826,15 @@ ARSTFirePointCueNotify_Looping = {}
 
 ---@param SpawnResults FGameplayCueNotify_SpawnResult
 function ARSTFirePointCueNotify_Looping:K2_OnRemovalFirePointProcessed(SpawnResults) end
+
 ---@param SpawnResults FGameplayCueNotify_SpawnResult
 function ARSTFirePointCueNotify_Looping:K2_OnRecurringFirePointProcessed(SpawnResults) end
+
 ---@param SpawnResults FGameplayCueNotify_SpawnResult
 function ARSTFirePointCueNotify_Looping:K2_OnLoopingFirePointProcessed(SpawnResults) end
+
 ---@param SpawnResults FGameplayCueNotify_SpawnResult
 function ARSTFirePointCueNotify_Looping:K2_OnApplicationFirePointProcessed(SpawnResults) end
-
 
 ---@class ARSTFlyoff : AActor
 ---@field SceneComponent USceneComponent
@@ -680,12 +845,14 @@ ARSTFlyoff = {}
 
 ---@param isAvailable boolean
 function ARSTFlyoff:SetIsAvailable(isAvailable) end
+
 function ARSTFlyoff:InitializeFlyoff() end
+
 ---@return boolean
 function ARSTFlyoff:GetIsAvailable() end
+
 ---@return float
 function ARSTFlyoff:GetFlyoffLifeSpan() end
-
 
 ---@class ARSTGameModeBase : AModularGameModeBase
 ---@field PropertyMappings FRSTInheritableGameplayTagPropertyMap
@@ -725,36 +892,52 @@ ARSTGameModeBase = {}
 
 ---@return boolean
 function ARSTGameModeBase:ShouldProcessModifiers() end
+
 function ARSTGameModeBase:RSTHotbarSlotCountChanged__DelegateSignature() end
-function ARSTGameModeBase:ReturnToHubPostGame() end
+
+---@param bRecordAnalytics boolean
+function ARSTGameModeBase:ReturnToHubPostGame(bRecordAnalytics) end
+
 function ARSTGameModeBase:ReturnToHub() end
+
 ---@param PRSTag FGameplayTag
 function ARSTGameModeBase:OnPRSComplete(PRSTag) end
+
 ---@param Character ARSTCharacter
 function ARSTGameModeBase:OnPlayerDowned(Character) end
+
 ---@param Character ARSTCharacter
 function ARSTGameModeBase:OnPlayerDeath(Character) end
+
 function ARSTGameModeBase:OnGamePhasePostGame() end
+
 ---@param AmountToShare int32
 ---@param GrantReason ERSTCoinGrantReason
 function ARSTGameModeBase:GrantCoinToPlayers(AmountToShare, GrantReason) end
+
 ---@return float
 function ARSTGameModeBase:GetLeashTimeout() end
+
 ---@return float
 function ARSTGameModeBase:GetIgnoreTargetTimeout() end
+
 ---@param TransitionTag FGameplayTag
 ---@param bCancelled boolean
 ---@param AdditionalTags FGameplayTagContainer
 ---@param BreakTag FGameplayTag
 function ARSTGameModeBase:FinishGoBreakTransition(TransitionTag, bCancelled, AdditionalTags, BreakTag) end
+
 function ARSTGameModeBase:CommitGamble() end
+
 ---@param Tag FGameplayTag
 function ARSTGameModeBase:BP_OnPropertyPreModify(Tag) end
+
 ---@param Tag FGameplayTag
 function ARSTGameModeBase:BP_OnPropertyModified(Tag) end
-function ARSTGameModeBase:BP_AddWinGameScore() end
-function ARSTGameModeBase:BP_AddDefaultGameScore() end
 
+function ARSTGameModeBase:BP_AddWinGameScore() end
+
+function ARSTGameModeBase:BP_AddDefaultGameScore() end
 
 ---@class ARSTGameModeBase_MainMenu : ARSTGameModeBase
 ARSTGameModeBase_MainMenu = {}
@@ -767,10 +950,11 @@ ARSTGameMode_HUB = {}
 
 ---@param Password FString
 function ARSTGameMode_HUB:SetPassword(Password) end
+
 ---@return boolean
 function ARSTGameMode_HUB:IsPasswordProtected() end
-function ARSTGameMode_HUB:CacheWhitelistedPlayers() end
 
+function ARSTGameMode_HUB:CacheWhitelistedPlayers() end
 
 ---@class ARSTGameSession : AGameSession
 ---@field MissionDefinition URSTMissionDefinition
@@ -835,6 +1019,7 @@ ARSTGameSession = {}
 ---@field ChallengeRunCode FString
 ---@field GrantedKeys FGameplayTagContainer
 ---@field SelectedMissions TArray<URSTMissionDefinition>
+---@field InitialDistortions TArray<URSTMetaDistortionDefinition>
 ---@field SelectedDistortions TArray<URSTMetaDistortionDefinition>
 ---@field SelectedTeamThreads TArray<FRSTTeamThreadData>
 ---@field OnMissionChoiceChanged FRSTGameStateBaseOnMissionChoiceChanged
@@ -842,6 +1027,7 @@ ARSTGameSession = {}
 ---@field GoBreakTagParent FGameplayTag
 ---@field GoBreakTag_GameBegin FGameplayTag
 ---@field OnGoBreakChanged FRSTGameStateBaseOnGoBreakChanged
+---@field RemovedPlayerCount int32
 ---@field OnBonusTrapPlacementLimitsChanged FRSTGameStateBaseOnBonusTrapPlacementLimitsChanged
 ---@field BonusTrapPlacementLimits TMap<FGameplayTag, int32>
 ---@field BonusTrapPlacementLimitArr TArray<FRSTTrapPlacementLimitRepl>
@@ -866,220 +1052,334 @@ ARSTGameSession = {}
 ---@field ReplicatedDifficulty FRSTReplicatedDifficultyData
 ---@field OnDifficultyChanged FRSTGameStateBaseOnDifficultyChanged
 ---@field bNewPatchVersionAvailable boolean
+---@field DeathHeatMapReplList TArray<FRSTHeatMapDataRepl>
 ARSTGameStateBase = {}
 
 ---@param Target AActor
 ---@param bAdded boolean
 function ARSTGameStateBase:UpdateBarricadesArray(Target, bAdded) end
+
 ---@param isTimedBreakActive boolean
 function ARSTGameStateBase:TimedBreak(isTimedBreakActive) end
+
 ---@param LossReason ERSTRiftPointLossReason
 ---@param riftPointsSubtracted int32
 function ARSTGameStateBase:SubtractRiftPoints(LossReason, riftPointsSubtracted) end
+
 ---@param LocationToSpawnAt FVector
 ---@param PickupTableTag FGameplayTag
 function ARSTGameStateBase:SpawnPickupAtLocation(LocationToSpawnAt, PickupTableTag) end
+
 ---@param IsActive boolean
 function ARSTGameStateBase:SetTimedBreakActive(IsActive) end
+
 ---@param NewValue float
 function ARSTGameStateBase:SetPickupDropChanceMultiplier(NewValue) end
+
 ---@param NewValue float
 function ARSTGameStateBase:SetPickupDropChanceAddition(NewValue) end
+
 ---@param IsActive boolean
 ---@param BreakTag FGameplayTag
 function ARSTGameStateBase:SetGoBreakActive(IsActive, BreakTag) end
+
 ---@param NewPhase ERSTGamePhase
 function ARSTGameStateBase:SetGamePhase(NewPhase) end
+
 ---@param bInCinematicMode boolean
 function ARSTGameStateBase:SetCinematicMode(bInCinematicMode) end
+
 ---@param LocationToSpawnAt FVector
 ---@param PickupTableTag FGameplayTag
 function ARSTGameStateBase:Server_SpawnPickupAtLocation(LocationToSpawnAt, PickupTableTag) end
+
 ---@param NewValue float
 function ARSTGameStateBase:Server_SetPickupDropChanceMultiplier(NewValue) end
+
 ---@param NewValue float
 function ARSTGameStateBase:Server_SetPickupDropChanceAddition(NewValue) end
+
 ---@param GameState ARSTGameStateBase
 function ARSTGameStateBase:RSTWaveChangedDelegate__DelegateSignature(GameState) end
+
 function ARSTGameStateBase:RSTTeamCompositionDelegate__DelegateSignature() end
+
 function ARSTGameStateBase:RSTOnslaughtInitializedDelegate__DelegateSignature() end
+
 ---@param OldValue int32
 ---@param NewValue int32
 function ARSTGameStateBase:RSTOnRiftPointsChangedDelegate__DelegateSignature(OldValue, NewValue) end
+
 ---@param Value int32
 function ARSTGameStateBase:RSTOnInitialRiftPointsSetDelegate__DelegateSignature(Value) end
+
 function ARSTGameStateBase:RSTOnGambledSkullsChangedDelegate__DelegateSignature() end
+
 function ARSTGameStateBase:RSTOnAllPlayerStatesReplicated__DelegateSignature() end
+
 function ARSTGameStateBase:RSTMissionChoiceHostDelegate__DelegateSignature() end
+
 ---@param GameState ARSTGameStateBase
 function ARSTGameStateBase:RSTMissionChoiceDelegate__DelegateSignature(GameState) end
+
 function ARSTGameStateBase:RSTDifficultyChangedDelegate__DelegateSignature() end
+
 ---@param BossCharacter ARSTCharacter
 function ARSTGameStateBase:RSTBossDelegate__DelegateSignature(BossCharacter) end
+
 function ARSTGameStateBase:RSTBonusTrapPlacementLimitChanged__DelegateSignature() end
+
 function ARSTGameStateBase:RSTAccoladesUpdated__DelegateSignature() end
+
 ---@param Target AActor
 function ARSTGameStateBase:ReleaseSpecialTarget(Target) end
+
 ---@param NewTarget AActor
 function ARSTGameStateBase:RegisterSpecialTarget(NewTarget) end
+
 ---@param Character ARSTCharacter
 function ARSTGameStateBase:ProcessBossDied(Character) end
+
+---@param InSessionMissionSeed int32
+function ARSTGameStateBase:OnSessionMissionSeedChanged(InSessionMissionSeed) end
+
 ---@param PreviousBoss ARSTCharacter
 function ARSTGameStateBase:OnRep_SpawnedBoss(PreviousBoss) end
+
 function ARSTGameStateBase:OnRep_SessionMissionSeed() end
+
 function ARSTGameStateBase:OnRep_SessionChallengeRun() end
+
 function ARSTGameStateBase:OnRep_SelectedTeamThreads() end
+
 function ARSTGameStateBase:OnRep_SelectedMissions() end
+
 function ARSTGameStateBase:OnRep_SelectedDistortions() end
+
 ---@param OldCounts TArray<int32>
 function ARSTGameStateBase:OnRep_RiftProtectedCounts(OldCounts) end
+
 ---@param PreviousRiftPoints int32
 function ARSTGameStateBase:OnRep_RiftPoints(PreviousRiftPoints) end
+
+function ARSTGameStateBase:OnRep_RemovedPlayerCount() end
+
 function ARSTGameStateBase:OnRep_RandomizeHotbar() end
+
 function ARSTGameStateBase:OnRep_NPEMissionIndex() end
+
 function ARSTGameStateBase:OnRep_MissionChoices() end
+
 function ARSTGameStateBase:OnRep_IsTimedBreakActive() end
+
 function ARSTGameStateBase:OnRep_IsHUB() end
+
+function ARSTGameStateBase:OnRep_InitialDistortions() end
+
 function ARSTGameStateBase:OnRep_GrantedSkullsCarriedOver() end
+
 function ARSTGameStateBase:OnRep_GrantedKeys() end
+
 ---@param PreviousPhase ERSTGamePhase
 function ARSTGameStateBase:OnRep_GamePhase(PreviousPhase) end
+
 function ARSTGameStateBase:OnRep_GambledSkullsCarriedOver() end
+
 function ARSTGameStateBase:OnRep_GambledSkulls() end
+
 function ARSTGameStateBase:OnRep_DifficultyData() end
+
+function ARSTGameStateBase:OnRep_DeathHeatMap() end
+
 function ARSTGameStateBase:OnRep_CurrentWave() end
+
 function ARSTGameStateBase:OnRep_CurrentMissionIndex() end
+
 function ARSTGameStateBase:OnRep_BonusTrapPlacementLimitArr() end
+
 function ARSTGameStateBase:OnRep_AccoladeData() end
+
 ---@param PRSTag FGameplayTag
 function ARSTGameStateBase:OnPRSInterruptedAndFinished_GoBreak(PRSTag) end
+
 ---@param PRSTag FGameplayTag
 function ARSTGameStateBase:OnPRSBegin(PRSTag) end
+
 ---@param TransitionTag FGameplayTag
 ---@param bCancelled boolean
 ---@param AdditionalTags FGameplayTagContainer
 function ARSTGameStateBase:OnPostGameTransitionFinished(TransitionTag, bCancelled, AdditionalTags) end
+
 ---@param PlayerState ARSTPlayerState
 function ARSTGameStateBase:OnPawnDefinitionChanged(PlayerState) end
+
 ---@param bSuccess boolean
 function ARSTGameStateBase:OnPatchNotesVersionReceived(bSuccess) end
+
 ---@param AiCharacter ARSTAICharacter
 function ARSTGameStateBase:OnOnslaughtCoordinatorSpawnEntity(AiCharacter) end
+
 ---@param AiCharacter ARSTAICharacter
 function ARSTGameStateBase:OnOnslaughtCoordinatorSpawnBoss(AiCharacter) end
+
 function ARSTGameStateBase:OnLoadingScreenRemoved() end
+
 function ARSTGameStateBase:OnLoadingScreenAdded() end
+
 ---@param TransitionTag FGameplayTag
 ---@param bCancelled boolean
 ---@param AdditionalTags FGameplayTagContainer
 function ARSTGameStateBase:OnIntroTransitionFinished(TransitionTag, bCancelled, AdditionalTags) end
+
 function ARSTGameStateBase:OnAccoladeDataLoaded() end
+
 ---@param SelectedHeroes TArray<FGameplayTag>
 function ARSTGameStateBase:NetMulticast_SetSelectedHeroes(SelectedHeroes) end
+
 ---@param InDraftOrder TArray<int32>
 function ARSTGameStateBase:NetMulticast_SetDraftOrder(InDraftOrder) end
+
 ---@param DesiredHeroes TArray<FGameplayTag>
 function ARSTGameStateBase:NetMulticast_SetDesiredHeroes(DesiredHeroes) end
+
 ---@param HitParams TArray<FRSTCharacterHitParams>
 function ARSTGameStateBase:NetMulticast_BatchedCharacterHitGameplayCues(HitParams) end
+
 ---@param isGoBreakActive boolean
 function ARSTGameStateBase:K2_GoBreakIsActiveChanged(isGoBreakActive) end
+
 ---@return boolean
 function ARSTGameStateBase:IsPlayingSolo() end
+
 ---@return boolean
 function ARSTGameStateBase:IsGameStarted() end
+
 ---@return boolean
 function ARSTGameStateBase:IsGamePostGame() end
+
 ---@return boolean
 function ARSTGameStateBase:IsGameEnded() end
+
 ---@return boolean
 function ARSTGameStateBase:IsDraftActive() end
+
 ---@return boolean
 function ARSTGameStateBase:IsAnyBreakActive() end
+
 ---@param initialRiftPointCount int32
 function ARSTGameStateBase:InitialRiftPointsSet(initialRiftPointCount) end
+
 ---@param Reasons TArray<ERSTRiftPointLossReason>
 ---@return boolean
 function ARSTGameStateBase:IncrementRiftProtection(Reasons) end
+
 ---@return boolean
 function ARSTGameStateBase:HasCommittedGamble() end
+
 ---@return FGameplayTagContainer
 function ARSTGameStateBase:GetUnlockedSessionHeroes() end
+
 ---@return URSTTransitionManagerComponent
 function ARSTGameStateBase:GetTransitionManagerComponent() end
+
 ---@return int32
 function ARSTGameStateBase:GetTotalScore() end
+
 ---@return ARSTCharacter
 function ARSTGameStateBase:GetSpawnedBoss() end
+
 ---@param PlacementLimitGroup FGameplayTag
 ---@param OutPlacementLimit int32
 ---@param OutExtraForHost int32
 ---@return boolean
 function ARSTGameStateBase:GetSharedTrapPlacementLimit(PlacementLimitGroup, OutPlacementLimit, OutExtraForHost) end
+
 ---@param ScoreTag FGameplayTag
 ---@return int32
 function ARSTGameStateBase:GetScoreIndex(ScoreTag) end
+
 ---@return int32
 function ARSTGameStateBase:GetRiftPoints() end
+
 ---@param Reason ERSTRiftPointLossReason
 ---@return boolean
 function ARSTGameStateBase:GetRiftIsProtectedForReason(Reason) end
+
 ---@return boolean
 function ARSTGameStateBase:GetRiftIsProtected() end
+
 ---@param Location FVector
 ---@param Radius float
 ---@param OutActors TArray<AActor>
 function ARSTGameStateBase:GetPossibleTargetsInRange(Location, Radius, OutActors) end
+
 ---@param InStatTags FGameplayTagContainer
 ---@param InSubStatTag FGameplayTag
 ---@param bRunStats boolean
 ---@return TArray<ARSTPlayerState>
 function ARSTGameStateBase:GetPlayersWithHighestStatValue(InStatTags, InSubStatTag, bRunStats) end
+
 ---@param PlayerIndex int32
 ---@return ARSTPlayerState
 function ARSTGameStateBase:GetPlayerStateByPlayerIndex(PlayerIndex) end
+
 ---@return float
 function ARSTGameStateBase:GetPickupDropChanceMultiplier() end
+
 ---@return float
 function ARSTGameStateBase:GetPickupDropChanceAddition() end
+
 ---@param tagToCheck FGameplayTag
 ---@return boolean
 function ARSTGameStateBase:GetIsGoBreakTag(tagToCheck) end
+
 ---@return boolean
 function ARSTGameStateBase:GetIsGoBreakActive() end
+
 ---@return int32
 function ARSTGameStateBase:GetInitialRiftPoints() end
+
 ---@return URSTGameStatePRSComponent
 function ARSTGameStateBase:GetGameStatePRSComponent() end
+
 ---@return ERSTGamePhase
 function ARSTGameStateBase:GetGamePhase() end
+
 ---@return int32
 function ARSTGameStateBase:GetCostToGamble() end
+
 ---@return TArray<FRSTAppliedAccoladeData>
 function ARSTGameStateBase:GetAccolades() end
+
 ---@param Reasons TArray<ERSTRiftPointLossReason>
 ---@return boolean
 function ARSTGameStateBase:DecrementRiftProtection(Reasons) end
+
 ---@param PotentialTag FGameplayTag
 ---@param SelectedHeroes TArray<FGameplayTag>
 ---@param bIgnoreCurrentlyPending boolean
 ---@return boolean
 function ARSTGameStateBase:CanSelectHero(PotentialTag, SelectedHeroes, bIgnoreCurrentlyPending) end
+
 ---@return boolean
 function ARSTGameStateBase:CanEditHotbar() end
+
 ---@param riftPointsInitial int32
 function ARSTGameStateBase:CalcInitialRiftPoints(riftPointsInitial) end
+
 ---@param InGamePhase ERSTGamePhase
 function ARSTGameStateBase:BP_OnGamePhaseChanged(InGamePhase) end
+
 ---@return boolean
 function ARSTGameStateBase:AllPlayerStatesReplicated() end
+
 ---@param ScoreTag FGameplayTag
 ---@param Count int32
 ---@param Instances int32
 function ARSTGameStateBase:AddScore(ScoreTag, Count, Instances) end
+
 ---@param riftPointsAdded int32
 function ARSTGameStateBase:AddRiftPoints(riftPointsAdded) end
-
 
 ---@class ARSTGib : AActor
 ---@field Lifetime float
@@ -1089,11 +1389,11 @@ ARSTGib = {}
 
 ---@param LifeSpan float
 function ARSTGib:BP_DroppedTail(LifeSpan) end
+
 ---@param LifeSpan float
 ---@param DeathType uint8
 ---@param AnimationTag FGameplayTag
 function ARSTGib:BP_DestroyFX(LifeSpan, DeathType, AnimationTag) end
-
 
 ---@class ARSTGibSkeletal : ARSTGib
 ---@field Mesh USkeletalMeshComponent
@@ -1118,8 +1418,11 @@ ARSTGnomeSentinel = {}
 ---@field GnomeSentinelClass TSubclassOf<ARSTGnomeSentinel>
 ARSTGnomeSentinelSpawner = {}
 
+---@return boolean
 function ARSTGnomeSentinelSpawner:SpawnGnomeSentinel() end
 
+---@return boolean
+function ARSTGnomeSentinelSpawner:IsTrapGridBlocked() end
 
 ---@class ARSTHUD : AHUD
 ARSTHUD = {}
@@ -1141,21 +1444,20 @@ ARSTHammerDecoy = {}
 ---@param Other AActor
 ---@return ETeamAttitude::Type
 function ARSTHammerDecoy:GetTeamAttitudeTowardsActor(Other) end
+
 ---@return ERSTTeams
 function ARSTHammerDecoy:GetTeam() end
-
 
 ---@class ARSTHeroSelectProxyActor : AActor
 ---@field SkeletalMeshComp USkeletalMeshComponentBudgeted
 ---@field AttachmentManager URSTAttachmentManagerComponent
----@field SkinDefinition URSTSkinDefinition
+---@field SkinDefinitions TArray<URSTSkinDefinition>
 ---@field DialogueComponent URDialogueComponent
 ---@field SkinComponent URSTSkinComponent
 ---@field SkinVisuals URSTSkinVisualsComponent
 ARSTHeroSelectProxyActor = {}
 
 function ARSTHeroSelectProxyActor:NotifyCharacterSelected() end
-
 
 ---@class ARSTHubSpawnerCoordinator : AActor
 ARSTHubSpawnerCoordinator = {}
@@ -1164,10 +1466,11 @@ ARSTHubSpawnerCoordinator = {}
 ---@param bTargetIncludeAnyFilterTags boolean
 ---@param TargetIgnoreFilterTags FGameplayTagContainer
 ---@return TArray<APawn>
-function ARSTHubSpawnerCoordinator:GetAllPawnsWithTags(TargetIncludeFilterTags, bTargetIncludeAnyFilterTags, TargetIgnoreFilterTags) end
+function ARSTHubSpawnerCoordinator:GetAllPawnsWithTags(TargetIncludeFilterTags, bTargetIncludeAnyFilterTags,
+                                                       TargetIgnoreFilterTags) end
+
 ---@return TArray<APawn>
 function ARSTHubSpawnerCoordinator:BP_GetConsiderPawns() end
-
 
 ---@class ARSTInteractableActor : AActor
 ---@field InteractionOption FRSTInteractionOption
@@ -1175,17 +1478,19 @@ ARSTInteractableActor = {}
 
 ---@return FVector
 function ARSTInteractableActor:GetInteractableLocationInternal() end
+
 ---@param ActorInfo FGameplayAbilityActorInfo
 function ARSTInteractableActor:BP_OnInteract(ActorInfo) end
+
 ---@param RequestingInteractor AActor
 ---@param RetValue boolean
 function ARSTInteractableActor:BP_CanInteractWith(RequestingInteractor, RetValue) end
-
 
 ---@class ARSTInventoryItemInstance : AInfo
 ---@field ModifierComponent URSTModifierComponent
 ---@field PropertyMappings FRSTInheritableGameplayTagPropertyMap
 ---@field ItemDef URSTInventoryItemDefinition
+---@field ReplacedItem ARSTInventoryItemInstance
 ---@field bIsInHotbar boolean
 ---@field ConfirmedUpgradeLevels FRSTItemUpgradeList
 ---@field PreviousUpgradeLevels TMap<URSTItemUpgradeDefinition, int32>
@@ -1195,38 +1500,50 @@ ARSTInventoryItemInstance = {}
 ---@param ItemUpgrade URSTItemUpgradeDefinition
 ---@param UpgradeLevel int32
 function ARSTInventoryItemInstance:SetItemUpgradePreview(ItemUpgrade, UpgradeLevel) end
+
 ---@param InDef URSTInventoryItemDefinition
 function ARSTInventoryItemInstance:SetItemDef(InDef) end
+
 ---@param Requests TArray<FRSTInventoryItemUpgradeRequest>
 ---@param TotalSkullCost int32
 function ARSTInventoryItemInstance:Server_ConfirmItemUpgrades(Requests, TotalSkullCost) end
+
 ---@return boolean
 function ARSTInventoryItemInstance:RequestItemUpgrades() end
+
 ---@return boolean
 function ARSTInventoryItemInstance:IsHiddenInSpellbook() end
+
 ---@return int32
 function ARSTInventoryItemInstance:GetTotalPreviewUpgradeSkullCost() end
+
 ---@param ItemUpgrade URSTItemUpgradeDefinition
 ---@return int32
 function ARSTInventoryItemInstance:GetPreviewItemUpgradeLevel(ItemUpgrade) end
+
 ---@return int32
 function ARSTInventoryItemInstance:GetNextPreviewUpgradeSkullCost() end
+
 ---@return TArray<URSTItemUpgradeDefinition>
 function ARSTInventoryItemInstance:GetItemUpgrades() end
+
 ---@return FText
 function ARSTInventoryItemInstance:GetDisplayName() end
+
 ---@return FText
 function ARSTInventoryItemInstance:GetDisplayDescription() end
+
 ---@param ItemUpgrade URSTItemUpgradeDefinition
 ---@return int32
 function ARSTInventoryItemInstance:GetConfirmedItemUpgradeLevel(ItemUpgrade) end
+
 ---@param FragmentClass TSubclassOf<URSTInventoryItemFragment>
 ---@return URSTInventoryItemFragment
 function ARSTInventoryItemInstance:FindFragmentByClass(FragmentClass) end
+
 ---@param bSuccess boolean
 ---@param TotalSkullCost int32
 function ARSTInventoryItemInstance:Client_ConfirmItemUpgrades(bSuccess, TotalSkullCost) end
-
 
 ---@class ARSTInventoryItemInstance_Trap : ARSTInventoryItemInstance
 ---@field TrapPlacementTypes ERSTTrapPlacementFlags
@@ -1235,18 +1552,23 @@ function ARSTInventoryItemInstance:Client_ConfirmItemUpgrades(bSuccess, TotalSku
 ARSTInventoryItemInstance_Trap = {}
 
 function ARSTInventoryItemInstance_Trap:Server_SellAllPlacedTraps() end
+
 function ARSTInventoryItemInstance_Trap:SellAllPlacedTraps() end
+
 ---@return boolean
 function ARSTInventoryItemInstance_Trap:IsTrapPlacementTypesModified() end
+
 ---@return boolean
 function ARSTInventoryItemInstance_Trap:IsPlacementCostModified() end
+
 ---@return int32
 function ARSTInventoryItemInstance_Trap:GetPlacementCostUpgradeLevel() end
+
 ---@return int32
 function ARSTInventoryItemInstance_Trap:GetPlacementCostPreviewUpgradeLevel() end
+
 ---@return int32
 function ARSTInventoryItemInstance_Trap:GetPlacementCost() end
-
 
 ---@class ARSTKillZVolume : AKillZVolume
 ARSTKillZVolume = {}
@@ -1257,8 +1579,8 @@ ARSTKillZVolume = {}
 ---@param OtherBodyIndex int32
 ---@param bFromSweep boolean
 ---@param SweepResult FHitResult
-function ARSTKillZVolume:OnComponentBeginOverlap(OverlappedComp, Other, OtherComp, OtherBodyIndex, bFromSweep, SweepResult) end
-
+function ARSTKillZVolume:OnComponentBeginOverlap(OverlappedComp, Other, OtherComp, OtherBodyIndex, bFromSweep,
+                                                 SweepResult) end
 
 ---@class ARSTLevelScriptActor : ALevelScriptActor
 ARSTLevelScriptActor = {}
@@ -1279,14 +1601,16 @@ ARSTMeleeAdvanceDestination = {}
 ---@param InTarget AActor
 ---@param InTargetDistance float
 function ARSTMeleeAdvanceDestination:SetTarget(InTarget, InTargetDistance) end
+
 ---@param InMoveSpeed float
 function ARSTMeleeAdvanceDestination:SetMoveSpeed(InMoveSpeed) end
+
 ---@param InMaxDistance float
 function ARSTMeleeAdvanceDestination:SetMaxDistance(InMaxDistance) end
+
 ---@param bEnabled boolean
 ---@param HalfHeight float
 function ARSTMeleeAdvanceDestination:SetGroundDistanceEnabled(bEnabled, HalfHeight) end
-
 
 ---@class ARSTMinirift : ARSTActiveSubobject
 ---@field RiftInnerRadius float
@@ -1296,9 +1620,9 @@ ARSTMinirift = {}
 ---@param Other AActor
 ---@return ETeamAttitude::Type
 function ARSTMinirift:GetTeamAttitudeTowardsActor(Other) end
+
 ---@return ERSTTeams
 function ARSTMinirift:GetTeam() end
-
 
 ---@class ARSTOnslaughtCoordinator : AActor
 ---@field MaxAICharacters int32
@@ -1330,12 +1654,15 @@ function ARSTMinirift:GetTeam() end
 ARSTOnslaughtCoordinator = {}
 
 ---@param fromEntity ARSTAICharacter
+---@param spawnOffset FVector
 ---@param PawnDefinition URSTPawnDefinition
 ---@param numToSpawn int32
 ---@param AdditionalGrantedTags FGameplayTagContainer
 ---@param outSpawned TArray<APawn>
 ---@return boolean
-function ARSTOnslaughtCoordinator:SpawnEntityFromEntity(fromEntity, PawnDefinition, numToSpawn, AdditionalGrantedTags, outSpawned) end
+function ARSTOnslaughtCoordinator:SpawnEntityFromEntity(fromEntity, spawnOffset, PawnDefinition, numToSpawn,
+                                                        AdditionalGrantedTags, outSpawned) end
+
 ---@param ControllingCharacter ARSTAICharacter
 ---@param positionToSpawn FVector
 ---@param rotationToSpawn FRotator
@@ -1345,45 +1672,64 @@ function ARSTOnslaughtCoordinator:SpawnEntityFromEntity(fromEntity, PawnDefiniti
 ---@param AdditionalGrantedTags FGameplayTagContainer
 ---@param outSpawned TArray<APawn>
 ---@return boolean
-function ARSTOnslaughtCoordinator:SpawnEntityForEntity(ControllingCharacter, positionToSpawn, rotationToSpawn, PawnDefinition, numToSpawn, bMarkAsResurrected, AdditionalGrantedTags, outSpawned) end
+function ARSTOnslaughtCoordinator:SpawnEntityForEntity(ControllingCharacter, positionToSpawn, rotationToSpawn,
+                                                       PawnDefinition, numToSpawn, bMarkAsResurrected,
+                                                       AdditionalGrantedTags, outSpawned) end
+
 ---@param AiCharacter ARSTAICharacter
 function ARSTOnslaughtCoordinator:SpawnEntityDelegate__DelegateSignature(AiCharacter) end
+
 ---@param SpawnLoc FVector
 ---@param SpawnRot FRotator
 ---@param PawnDefinition URSTPawnDefinition
 ---@param numToSpawn int32
 ---@param AdditionalGrantedTags FGameplayTagContainer
+---@param AdditionalAbilitySets TArray<URSTAbilitySet>
 ---@param outSpawned TArray<APawn>
 ---@return boolean
-function ARSTOnslaughtCoordinator:SpawnEntityAtTransform(SpawnLoc, SpawnRot, PawnDefinition, numToSpawn, AdditionalGrantedTags, outSpawned) end
+function ARSTOnslaughtCoordinator:SpawnEntityAtTransform(SpawnLoc, SpawnRot, PawnDefinition, numToSpawn,
+                                                         AdditionalGrantedTags, AdditionalAbilitySets, outSpawned) end
+
 ---@param PawnDefinition URSTPawnDefinition
 function ARSTOnslaughtCoordinator:SetAllAICharactersClass(PawnDefinition) end
+
 ---@param amountPerSpawn int32
 function ARSTOnslaughtCoordinator:SetAllAICharactersAmount(amountPerSpawn) end
+
 ---@param GameState ARSTGameStateBase
 function ARSTOnslaughtCoordinator:RSTOnslaughtProcessInitialGameStateDelegate__DelegateSignature(GameState) end
+
 function ARSTOnslaughtCoordinator:RSTOnslaughtInitializeRifts__DelegateSignature() end
+
 function ARSTOnslaughtCoordinator:ResetOnslaught() end
+
 ---@param Wisp ARSTAICharacter
 ---@param bAlsoDestroy boolean
 function ARSTOnslaughtCoordinator:RemoveWisp(Wisp, bAlsoDestroy) end
+
 ---@param WaveNumber int32
 ---@param SpawnerIndex int32
 function ARSTOnslaughtCoordinator:PreWave(WaveNumber, SpawnerIndex) end
+
 ---@param WaveNumber int32
 ---@param SpawnerIndex int32
 function ARSTOnslaughtCoordinator:PostWave(WaveNumber, SpawnerIndex) end
+
 ---@param deadPawn APawn
 function ARSTOnslaughtCoordinator:PawnHasDied(deadPawn) end
+
 function ARSTOnslaughtCoordinator:OnWispSpawnTimer() end
+
 ---@param waveBreakTimer float
 ---@param onePlayer boolean
 ---@param twoPlayer boolean
 ---@param threePlayer boolean
 ---@param fourPlusPlayers boolean
 function ARSTOnslaughtCoordinator:OnslaughtWaveBreak(waveBreakTimer, onePlayer, twoPlayer, threePlayer, fourPlusPlayers) end
+
 ---@param waitUntilPreviousGroupDeadPercent float
 function ARSTOnslaughtCoordinator:OnslaughtStartGroup(waitUntilPreviousGroupDeadPercent) end
+
 ---@param BiomeDefinition UDataTable
 ---@param SpawnWithShield boolean
 ---@param SpawnLocationType EOnslaughtSpawnLocationType
@@ -1391,7 +1737,9 @@ function ARSTOnslaughtCoordinator:OnslaughtStartGroup(waitUntilPreviousGroupDead
 ---@param twoPlayer boolean
 ---@param threePlayer boolean
 ---@param fourPlusPlayers boolean
-function ARSTOnslaughtCoordinator:OnslaughtSpawnEntitiesBiome(BiomeDefinition, SpawnWithShield, SpawnLocationType, onePlayer, twoPlayer, threePlayer, fourPlusPlayers) end
+function ARSTOnslaughtCoordinator:OnslaughtSpawnEntitiesBiome(BiomeDefinition, SpawnWithShield, SpawnLocationType,
+                                                              onePlayer, twoPlayer, threePlayer, fourPlusPlayers) end
+
 ---@param PawnDefinition URSTPawnDefinition
 ---@param Count int32
 ---@param SpawnWithShield boolean
@@ -1400,86 +1748,114 @@ function ARSTOnslaughtCoordinator:OnslaughtSpawnEntitiesBiome(BiomeDefinition, S
 ---@param twoPlayer boolean
 ---@param threePlayer boolean
 ---@param fourPlusPlayers boolean
-function ARSTOnslaughtCoordinator:OnslaughtSpawnEntities(PawnDefinition, Count, SpawnWithShield, SpawnLocationType, onePlayer, twoPlayer, threePlayer, fourPlusPlayers) end
+function ARSTOnslaughtCoordinator:OnslaughtSpawnEntities(PawnDefinition, Count, SpawnWithShield, SpawnLocationType,
+                                                         onePlayer, twoPlayer, threePlayer, fourPlusPlayers) end
+
 ---@param PawnDefinition URSTPawnDefinition
 ---@param SpawnLocationType EOnslaughtSpawnLocationType
 function ARSTOnslaughtCoordinator:OnslaughtSpawnBoss(PawnDefinition, SpawnLocationType) end
+
 ---@param BreakTag FGameplayTag
 ---@param onePlayer boolean
 ---@param twoPlayer boolean
 ---@param threePlayer boolean
 ---@param fourPlusPlayers boolean
 function ARSTOnslaughtCoordinator:OnslaughtGoBreak(BreakTag, onePlayer, twoPlayer, threePlayer, fourPlusPlayers) end
+
 ---@param amount int32
 ---@param bInitialGrant boolean
 ---@param onePlayer boolean
 ---@param twoPlayer boolean
 ---@param threePlayer boolean
 ---@param fourPlusPlayers boolean
-function ARSTOnslaughtCoordinator:OnslaughtGiveCoin(amount, bInitialGrant, onePlayer, twoPlayer, threePlayer, fourPlusPlayers) end
+function ARSTOnslaughtCoordinator:OnslaughtGiveCoin(amount, bInitialGrant, onePlayer, twoPlayer, threePlayer,
+                                                    fourPlusPlayers) end
+
 function ARSTOnslaughtCoordinator:OnslaughtEnd() end
+
 ---@param delayActionName FString
 ---@param onePlayer boolean
 ---@param twoPlayers boolean
 ---@param threePlayers boolean
 ---@param fourPlusPlayers boolean
-function ARSTOnslaughtCoordinator:OnslaughtDelayUntilAction(delayActionName, onePlayer, twoPlayers, threePlayers, fourPlusPlayers) end
+function ARSTOnslaughtCoordinator:OnslaughtDelayUntilAction(delayActionName, onePlayer, twoPlayers, threePlayers,
+                                                            fourPlusPlayers) end
+
 ---@param Delay float
 ---@param onePlayer boolean
 ---@param twoPlayer boolean
 ---@param threePlayer boolean
 ---@param fourPlusPlayers boolean
 function ARSTOnslaughtCoordinator:OnslaughtDelay(Delay, onePlayer, twoPlayer, threePlayer, fourPlusPlayers) end
+
 ---@param ActionName FString
 ---@param onePlayer boolean
 ---@param twoPlayer boolean
 ---@param threePlayer boolean
 ---@param fourPlusPlayers boolean
 function ARSTOnslaughtCoordinator:OnslaughtAction(ActionName, onePlayer, twoPlayer, threePlayer, fourPlusPlayers) end
+
 ---@param WaveNumber int32
 ---@param SpawnerIndex int32
 function ARSTOnslaughtCoordinator:Onslaught_Start(WaveNumber, SpawnerIndex) end
+
 ---@return boolean
 function ARSTOnslaughtCoordinator:IsOnslaughtActive() end
+
 ---@param TestPawn AActor
 ---@param ExcludeOtherTags FGameplayTagContainer
 ---@return boolean
 function ARSTOnslaughtCoordinator:IsLastPawnStanding(TestPawn, ExcludeOtherTags) end
+
 ---@return boolean
 function ARSTOnslaughtCoordinator:GetShowAIHud() end
+
 ---@return int32
 function ARSTOnslaughtCoordinator:GetNumPawnsWaitingForSpawn() end
+
 ---@return int32
 function ARSTOnslaughtCoordinator:GetNumPawnsApprovedForSpawn() end
+
 ---@return int32
 function ARSTOnslaughtCoordinator:GetNumPawnsAlive() end
+
 ---@return int32
 function ARSTOnslaughtCoordinator:GetMaxAICharacters() end
+
 ---@param TargetIncludeFilterTags FGameplayTagContainer
 ---@param bTargetIncludeAnyFilterTags boolean
 ---@param TargetIgnoreFilterTags FGameplayTagContainer
 ---@return TArray<APawn>
-function ARSTOnslaughtCoordinator:GetAllPawnsWithTags(TargetIncludeFilterTags, bTargetIncludeAnyFilterTags, TargetIgnoreFilterTags) end
+function ARSTOnslaughtCoordinator:GetAllPawnsWithTags(TargetIncludeFilterTags, bTargetIncludeAnyFilterTags,
+                                                      TargetIgnoreFilterTags) end
+
 ---@return TArray<APawn>
 function ARSTOnslaughtCoordinator:GetAllPawns() end
+
 ---@param ActionName FString
 function ARSTOnslaughtCoordinator:DoOnslaughtAction(ActionName) end
+
 function ARSTOnslaughtCoordinator:ClearOnslaught() end
+
 function ARSTOnslaughtCoordinator:CheckOnslaughtModifiersCompleted() end
+
 ---@param modifier URSTModifierBase
 function ARSTOnslaughtCoordinator:CheckOnslaughtModifier(modifier) end
+
 ---@param spawnedEntity ARSTAICharacter
 function ARSTOnslaughtCoordinator:BroadcastEntitySpawn(spawnedEntity) end
+
 ---@param spawnedEntity ARSTAICharacter
 function ARSTOnslaughtCoordinator:BroadcastBossSpawn(spawnedEntity) end
+
 ---@param bShowBreakableObjects boolean
 function ARSTOnslaughtCoordinator:BP_ShowBreakableObjectsChanged(bShowBreakableObjects) end
+
 ---@param PawnDefinition URSTPawnDefinition
 ---@param numToAdd int32
 ---@param SpawnLocationType EOnslaughtSpawnLocationType
 ---@param chanceToSpawn float
 function ARSTOnslaughtCoordinator:AddDistortionEnemies(PawnDefinition, numToAdd, SpawnLocationType, chanceToSpawn) end
-
 
 ---@class ARSTPathPoint : ATargetPoint
 ---@field PathPointType ERSTPathPointType
@@ -1502,7 +1878,9 @@ ARSTPickup = {}
 ---@param LaunchVector FVector
 ---@param LaunchForce float
 function ARSTPickup:PhysicsLaunch(LaunchVector, LaunchForce) end
+
 function ARSTPickup:OnPostGame() end
+
 ---@param OverlappedComp UPrimitiveComponent
 ---@param Other AActor
 ---@param OtherComp UPrimitiveComponent
@@ -1510,16 +1888,15 @@ function ARSTPickup:OnPostGame() end
 ---@param bFromSweep boolean
 ---@param SweepResult FHitResult
 function ARSTPickup:OnBeginOverlap(OverlappedComp, Other, OtherComp, OtherBodyIndex, bFromSweep, SweepResult) end
+
 ---@param PlayerCharacter ARSTPlayerCharacter
 function ARSTPickup:BP_OnPlayerOverlap(PlayerCharacter) end
-
 
 ---@class ARSTPlacementPreview : AActor
 ARSTPlacementPreview = {}
 
 ---@param bIsValid boolean
 function ARSTPlacementPreview:BP_SetValidPlacement(bIsValid) end
-
 
 ---@class ARSTPlayerBlockingVolume : AVolume
 ARSTPlayerBlockingVolume = {}
@@ -1550,25 +1927,34 @@ ARSTPlayerCameraManager = {}
 ---@field bSpawningFromRejoin boolean
 ---@field SkinVisualsComponent URSTSkinVisualsComponent
 ---@field SkinComponent URSTSkinComponent
+---@field DataMapComponent URSTDataMapComponent
 ARSTPlayerCharacter = {}
 
 function ARSTPlayerCharacter:RecallNearbyActorsBP() end
+
 ---@param Trap ARSTTrap
 ---@param FailureReason ERSTTrapPlacementFailureReason
 function ARSTPlayerCharacter:OnTrapPlacementFailed(Trap, FailureReason) end
+
 ---@param Trap ARSTTrap
 function ARSTPlayerCharacter:OnTrapPlaced(Trap) end
+
 ---@param RSTPlayerState ARSTPlayerState
 function ARSTPlayerCharacter:OnSkinDefinitionChanged(RSTPlayerState) end
+
 ---@param Data FRSTReviveData
 function ARSTPlayerCharacter:OnReviveDataChanged(Data) end
+
 ---@param PRSTag FGameplayTag
 function ARSTPlayerCharacter:OnPRSBegin(PRSTag) end
+
 ---@param PRSTag FGameplayTag
 ---@param PlayerNetID FUniqueNetIdRepl
 ---@param bIsReady boolean
 function ARSTPlayerCharacter:OnPlayerReadyStateChanged(PRSTag, PlayerNetID, bIsReady) end
+
 function ARSTPlayerCharacter:OnPlayerControllerPlayerStateChanged() end
+
 ---@param InHealthComponent URSTHealthComponent
 ---@param OldValue float
 ---@param NewValue float
@@ -1576,30 +1962,39 @@ function ARSTPlayerCharacter:OnPlayerControllerPlayerStateChanged() end
 ---@param HitResult FHitResult
 ---@param bHasSpec boolean
 ---@param Spec FGameplayEffectSpec
-function ARSTPlayerCharacter:OnHealthChanged(InHealthComponent, OldValue, NewValue, InInstigator, HitResult, bHasSpec, Spec) end
+function ARSTPlayerCharacter:OnHealthChanged(InHealthComponent, OldValue, NewValue, InInstigator, HitResult, bHasSpec,
+                                             Spec) end
+
 function ARSTPlayerCharacter:OnGameEnding() end
+
 function ARSTPlayerCharacter:OnGameEnded() end
+
 ---@return URSTAttachmentManagerComponent
 function ARSTPlayerCharacter:GetAttachmentManager() end
+
 ---@param nearbyActor AActor
 ---@param distSquaredFromPlayer float
 function ARSTPlayerCharacter:EvaluateNearbyActor(nearbyActor, distSquaredFromPlayer) end
+
 function ARSTPlayerCharacter:EnableCameraRendering() end
+
 function ARSTPlayerCharacter:DisableCameraRendering() end
+
 ---@param nearbyActorRemoved AActor
 function ARSTPlayerCharacter:BP_OnNearbyActorRemoved(nearbyActorRemoved) end
+
 ---@param nearbyActorAdded AActor
 function ARSTPlayerCharacter:BP_OnNearbyActorAdded(nearbyActorAdded) end
+
 ---@param ActorInfo FGameplayAbilityActorInfo
 function ARSTPlayerCharacter:BP_OnInteract(ActorInfo) end
-
 
 ---@class ARSTPlayerController : ACommonPlayerController
 ---@field MyTeamID FGenericTeamId
 ---@field OnTeamChangedDelegate FRSTPlayerControllerOnTeamChangedDelegate
 ---@field PawnLoadingData FRSTPawnLoadingData
 ---@field CachedPawnDefinitionTag FGameplayTag
----@field CachedSkinDefinitionTag FGameplayTag
+---@field CachedSkinDefinitionTags FGameplayTagContainer
 ---@field OnPostInitializeComponents FRSTPlayerControllerOnPostInitializeComponents
 ---@field OnPlayerStateChanged FRSTPlayerControllerOnPlayerStateChanged
 ---@field NetworkProxyOwnerComponent URNetworkProxyOwnerComponent
@@ -1614,132 +2009,204 @@ ARSTPlayerController = {}
 
 ---@param LevelName FName
 function ARSTPlayerController:UnloadStreamLevel(LevelName) end
-function ARSTPlayerController:SkinDefinitionLoaded() end
+
+function ARSTPlayerController:SkinDefinitionsLoaded() end
+
 ---@param bEnabled boolean
 function ARSTPlayerController:SetIsAutoRunning(bEnabled) end
+
 function ARSTPlayerController:SetHasViewedIntro() end
+
 ---@param Msg FString
 function ARSTPlayerController:ServerCheatAll(Msg) end
+
 ---@param Msg FString
 function ARSTPlayerController:ServerCheat(Msg) end
+
 ---@param UnlockedHeroes FGameplayTagContainer
 function ARSTPlayerController:Server_SetUnlockedHeroes(UnlockedHeroes) end
+
 ---@param Upgrades TArray<URSTUpgradeDefinition>
 function ARSTPlayerController:Server_SetSelectedUpgrades(Upgrades) end
+
 ---@param SelectedSkins TArray<FRSTSelectedSkinRepl>
 function ARSTPlayerController:Server_SetSelectedSkins(SelectedSkins) end
+
 ---@param HotbarItems TArray<URSTInventoryItemDefinition>
 function ARSTPlayerController:Server_SetHotbarItems(HotbarItems) end
+
 ---@param KeyGrants TArray<FGameplayTag>
 function ARSTPlayerController:Server_SetGrantedKeys(KeyGrants) end
+
 ---@param SelectedHeroTag FGameplayTag
 function ARSTPlayerController:Server_SelectHero(SelectedHeroTag) end
+
 ---@param PawnTag FGameplayTag
----@param SkinTag FGameplayTag
-function ARSTPlayerController:Server_RequestSetPawnAndSkinDefinitions(PawnTag, SkinTag) end
+---@param SkinTags FGameplayTagContainer
+function ARSTPlayerController:Server_RequestSetPawnAndSkinDefinitions(PawnTag, SkinTags) end
+
+function ARSTPlayerController:Server_NotifyDisconnected() end
+
 function ARSTPlayerController:Server_LockInHero() end
+
 function ARSTPlayerController:Server_HasViewedIntro() end
+
 ---@param bIsInteracting boolean
 ---@param InteractingNPC AActor
 function ARSTPlayerController:Server_HandleNPCInteraction(bIsInteracting, InteractingNPC) end
+
 ---@param UpgradeDefinition URSTUpgradeDefinition
 function ARSTPlayerController:Server_ChooseUpgrade(UpgradeDefinition) end
+
 ---@param ThreadDefinition URSTMetaThreadDefinition
 function ARSTPlayerController:Server_ChooseThread(ThreadDefinition) end
+
 ---@param PotionDefinition URSTPotionDefinition
 function ARSTPlayerController:Server_ChoosePotion(PotionDefinition) end
+
 ---@param SelectedMissionIndex int32
-function ARSTPlayerController:Server_ChooseMissionByIndex(SelectedMissionIndex) end
+---@param InChallengeRunCode FString
+function ARSTPlayerController:Server_ChooseMissionByIndex(SelectedMissionIndex, InChallengeRunCode) end
+
 ---@param InventoryItems TArray<FRSTInventoryItemRequest>
 function ARSTPlayerController:Server_AddInventoryItems(InventoryItems) end
+
 ---@param KeyName FName
 ---@param inputEventType EInputEvent
 function ARSTPlayerController:SendInputKey(KeyName, inputEventType) end
+
 function ARSTPlayerController:SelectRandomThread() end
+
 ---@param SelectedHeroTag FGameplayTag
 function ARSTPlayerController:SelectHero(SelectedHeroTag) end
+
 function ARSTPlayerController:RunPerfCommands() end
+
 ---@param bPurchased boolean
 function ARSTPlayerController:RerollThreadSelection(bPurchased) end
----@param SkinTag FGameplayTag
+
+---@param SkinTags FGameplayTagContainer
 ---@return boolean
-function ARSTPlayerController:RequestSetSkinDefinition(SkinTag) end
+function ARSTPlayerController:RequestSetSkinDefinitions(SkinTags) end
+
 ---@param PawnTag FGameplayTag
----@param SkinTag FGameplayTag
+---@param SkinTags FGameplayTagContainer
 ---@return boolean
-function ARSTPlayerController:RequestSetPawnAndSkinDefinitions(PawnTag, SkinTag) end
+function ARSTPlayerController:RequestSetPawnAndSkinDefinitions(PawnTag, SkinTags) end
+
 function ARSTPlayerController:RefreshHotbarSlotCount() end
+
 function ARSTPlayerController:PawnDefinitionLoaded() end
+
 function ARSTPlayerController:OnToggleTabWidget() end
+
 function ARSTPlayerController:OnThreadSelectionRerolledValidated() end
+
 function ARSTPlayerController:OnThreadSelectionRerolledBegin() end
+
 function ARSTPlayerController:OnSkinSelectionUpdated() end
+
 ---@param shouldForceSelect boolean
 function ARSTPlayerController:OnRemoveThreadSelection(shouldForceSelect) end
+
 ---@param InTag FGameplayTag
 ---@param NewCount int32
 function ARSTPlayerController:OnHideHUDChanged(InTag, NewCount) end
+
 function ARSTPlayerController:OnHeroUnlocksUpdated() end
+
 ---@param SelectedHeroes TArray<FGameplayTag>
 function ARSTPlayerController:OnHeroDraftSelectedHeroes(SelectedHeroes) end
+
 ---@param DesiredHeroes TArray<FGameplayTag>
 function ARSTPlayerController:OnHeroDraftDesiredHeroes(DesiredHeroes) end
+
 function ARSTPlayerController:OnGrantedKeysChanged() end
+
 function ARSTPlayerController:OnEndGame() end
+
 function ARSTPlayerController:OnDisplayThreadSelection() end
+
 ---@param SelectedHeroes TArray<FGameplayTag>
 function ARSTPlayerController:OnDisplayHeroDraftSelectedHeroes(SelectedHeroes) end
+
 ---@param DesiredHeroes TArray<FGameplayTag>
 function ARSTPlayerController:OnDisplayHeroDraftDesiredHeroes(DesiredHeroes) end
+
 function ARSTPlayerController:LockInHero() end
+
 ---@param LevelName FName
 function ARSTPlayerController:LoadStreamLevel(LevelName) end
+
 ---@param PlayerToKick ARSTPlayerState
 function ARSTPlayerController:KickPlayer(PlayerToKick) end
+
 function ARSTPlayerController:K2_OnStartAutoRun() end
+
 function ARSTPlayerController:K2_OnEndAutoRun() end
+
 ---@param SkullCount int32
 function ARSTPlayerController:GrantSkulls(SkullCount) end
+
 ---@return ARSTPlayerState
 function ARSTPlayerController:GetRSTPlayerState() end
+
 ---@return URSTAbilitySystemComponent
 function ARSTPlayerController:GetRSTAbilitySystemComponent() end
+
 ---@return boolean
 function ARSTPlayerController:GetIsAutoRunning() end
----@return FGameplayTag
-function ARSTPlayerController:GetCachedSkinDefinitionTag() end
+
+---@return FGameplayTagContainer
+function ARSTPlayerController:GetCachedSkinDefinitionTags() end
+
 ---@return FGameplayTag
 function ARSTPlayerController:GetCachedPawnDefinitionTag() end
+
 ---@param bIsInteracting boolean
 ---@param InteractingNPC AActor
 function ARSTPlayerController:DoNPCInteraction(bIsInteracting, InteractingNPC) end
+
+function ARSTPlayerController:DisconnectFromSession() end
+
 ---@param BanReason FText
 function ARSTPlayerController:ClientWasBanned(BanReason) end
+
 ---@param HotbarItems TArray<URSTInventoryItemDefinition>
 function ARSTPlayerController:Client_SetProfileHotbarItems(HotbarItems) end
+
 ---@param shouldForceSelect boolean
 function ARSTPlayerController:Client_RemoveThreadSelection(shouldForceSelect) end
+
 function ARSTPlayerController:Client_OnRerollsReplicated() end
+
 function ARSTPlayerController:Client_NotifyHubStarted() end
+
 ---@param HeroTag FGameplayTag
 function ARSTPlayerController:Client_NotifyHeroSelected(HeroTag) end
+
 ---@param TagContainer FGameplayTagContainer
 ---@param bRecordAnalytics boolean
 function ARSTPlayerController:Client_GrantTags(TagContainer, bRecordAnalytics) end
+
 ---@param SkullCount int32
 function ARSTPlayerController:Client_GrantSkulls(SkullCount) end
+
 ---@param FlushStats FRSTReplicatedStatList
 function ARSTPlayerController:Client_FlushGameStats(FlushStats) end
+
 ---@param bDidWin boolean
 ---@param PostGameStats FRSTReplicatedStatList
 function ARSTPlayerController:Client_EndGame(bDidWin, PostGameStats) end
+
 ---@param threadIndex int32
 function ARSTPlayerController:Client_DisplayThreadSelection(threadIndex) end
+
 ---@param PlayerToBan ARSTPlayerState
 function ARSTPlayerController:BanPlayer(PlayerToBan) end
+
 ---@param SuggestedTarget AActor
 function ARSTPlayerController:AutoManageActiveCameraTarget(SuggestedTarget) end
-
 
 ---@class ARSTPlayerStart : APlayerStart
 ARSTPlayerStart = {}
@@ -1759,7 +2226,7 @@ ARSTPlayerStart = {}
 ---@field OnPawnDefinitionChanged FRSTPlayerStateOnPawnDefinitionChanged
 ---@field OnSkinDefinitionChanged FRSTPlayerStateOnSkinDefinitionChanged
 ---@field PawnDefinition URSTPawnDefinition
----@field SkinDefinition URSTSkinDefinition
+---@field SkinDefinitions TArray<URSTSkinDefinition>
 ---@field GrantedAbilityHandles TArray<FRSTAbilitySet_GrantedHandles>
 ---@field GrantedTagHandles TArray<FRSTLooseTagHandle>
 ---@field InventoryManagerComponent URSTInventoryManagerComponent
@@ -1820,185 +2287,271 @@ ARSTPlayerState = {}
 ---@param SpendReason ERSTCoinSpendReason
 ---@return boolean
 function ARSTPlayerState:SpendCoin(amount, SpendReason) end
+
 ---@param RequestingPlayer APlayerController
 function ARSTPlayerState:ShowProfileUI(RequestingPlayer) end
+
 ---@param InThreadsSkippedCount int32
 function ARSTPlayerState:SetThreadsSkippedCount(InThreadsSkippedCount) end
+
 ---@param amount int32
 ---@param SpendReason ERSTCoinSpendReason
 function ARSTPlayerState:Server_SpendCoin(amount, SpendReason) end
+
 ---@param bInVoiceEnabled boolean
 function ARSTPlayerState:Server_SetVoiceEnabled(bInVoiceEnabled) end
+
 ---@param InThreadsSkippedCount int32
 function ARSTPlayerState:Server_SetThreadsSkippedCount(InThreadsSkippedCount) end
+
 ---@param Data FRSTRerollData
 function ARSTPlayerState:Server_SetRerollData(Data) end
+
 ---@param InOwnedThreads TArray<URSTMetaThreadDefinition>
 ---@param bEvenIfNotHub boolean
 function ARSTPlayerState:Server_SetOwnedThreads(InOwnedThreads, bEvenIfNotHub) end
+
 ---@param InGrantedKeys FGameplayTagContainer
 ---@param bEvenIfNotHub boolean
 function ARSTPlayerState:Server_SetGrantedKeys(InGrantedKeys, bEvenIfNotHub) end
+
 ---@param PingTrackerId int32
 function ARSTPlayerState:Server_RemovePing(PingTrackerId) end
+
 ---@param bPurchased boolean
 function ARSTPlayerState:Server_IncrementRerolls(bPurchased) end
+
 ---@param Message FString
+---@param BlockedPlayerBitMask int32
 ---@param bSanitize boolean
-function ARSTPlayerState:Server_AddPlayerChatMessage(Message, bSanitize) end
+---@param bIsPrivate boolean
+function ARSTPlayerState:Server_AddPlayerChatMessage(Message, BlockedPlayerBitMask, bSanitize, bIsPrivate) end
+
 ---@param CommunicationOption URSTCommunicationDefinition
 ---@param AttachedActor AActor
 ---@param PingPosition FVector
 ---@param PingTrackerId int32
 ---@param ResponseInstigator ARSTPlayerState
 ---@param ResponsePingId int32
-function ARSTPlayerState:Server_AddPing(CommunicationOption, AttachedActor, PingPosition, PingTrackerId, ResponseInstigator, ResponsePingId) end
+function ARSTPlayerState:Server_AddPing(CommunicationOption, AttachedActor, PingPosition, PingTrackerId,
+                                        ResponseInstigator, ResponsePingId) end
+
 function ARSTPlayerState:RSTUniqueIdSet__DelegateSignature() end
+
 ---@param Trap ARSTTrap
 function ARSTPlayerState:RSTTrapStateChangedWithTrap__DelegateSignature(Trap) end
+
 function ARSTPlayerState:RSTTrapStateChanged__DelegateSignature() end
+
 function ARSTPlayerState:RSTPlayerVoiceEnabledUpdateDelegate__DelegateSignature() end
+
 ---@param RSTPlayerState ARSTPlayerState
 function ARSTPlayerState:RSTPlayerIndexSet__DelegateSignature(RSTPlayerState) end
+
 ---@param PlayerState ARSTPlayerState
 function ARSTPlayerState:RSTPawnDefinitionChanged__DelegateSignature(PlayerState) end
+
 function ARSTPlayerState:RSTIsDisconnectedChangedDelegate__DelegateSignature() end
+
 ---@param Tag FGameplayTag
 ---@param OldData TSoftObjectPtr<URSTAbilityUIData>
 ---@param Data TSoftObjectPtr<URSTAbilityUIData>
 function ARSTPlayerState:RSTAbilityUIDataDelegate__DelegateSignature(Tag, OldData, Data) end
+
 ---@param Tag FGameplayTag
 ---@param Delegate FRemoveAbilityUIDataUpdatedCallbackDelegate
 function ARSTPlayerState:RemoveAbilityUIDataUpdatedCallback(Tag, Delegate) end
+
 ---@param ComboPoints int32
-function ARSTPlayerState:ProcessComboPoints(ComboPoints) end
+---@param EventInstigator AActor
+function ARSTPlayerState:ProcessComboPoints(ComboPoints, EventInstigator) end
+
 ---@param TagIdentifier FGameplayTag
 ---@param Payload FRSTVoiceChatGenericMessageData
 function ARSTPlayerState:OnVoiceChatSettingsUpdated(TagIdentifier, Payload) end
+
 function ARSTPlayerState:OnRSTSeamlessTravelStateChanged__DelegateSignature() end
+
 function ARSTPlayerState:OnRep_VoiceEnabled() end
-function ARSTPlayerState:OnRep_SkinDefinition() end
+
+function ARSTPlayerState:OnRep_SkinDefinitions() end
+
 function ARSTPlayerState:OnRep_SelectedUpgrades() end
+
 function ARSTPlayerState:OnRep_SelectedThreads() end
+
 function ARSTPlayerState:OnRep_SelectedPotion() end
+
 function ARSTPlayerState:OnRep_RerollData() end
+
 function ARSTPlayerState:OnRep_RawUniqueNetIdStr() end
+
 function ARSTPlayerState:OnRep_RandomizeHotbar() end
+
 function ARSTPlayerState:OnRep_PlayerIndex() end
+
 function ARSTPlayerState:OnRep_PawnDefinition() end
+
 function ARSTPlayerState:OnRep_IsDisconnected() end
+
 ---@param PreviousCoin int32
 function ARSTPlayerState:OnRep_Coin(PreviousCoin) end
+
 ---@param PRSTag FGameplayTag
 function ARSTPlayerState:OnPlayerReadyStateInterruptOrComplete(PRSTag) end
+
 ---@param PRSTag FGameplayTag
 ---@param PlayerNetID FUniqueNetIdRepl
 ---@param bIsReady boolean
 function ARSTPlayerState:OnPlayerReadyStateChanged(PRSTag, PlayerNetID, bIsReady) end
+
 ---@param InTag FGameplayTag
 ---@param NewCount int32
 ---@param AbilityTag FGameplayTag
 function ARSTPlayerState:OnAbilityUITagChanged(InTag, NewCount, AbilityTag) end
+
 ---@param Ability UGameplayAbility
 function ARSTPlayerState:OnAbilityCommit(Ability) end
+
 function ARSTPlayerState:NotifyOwnedTrapSold() end
+
 ---@param PingTrackerId int32
 function ARSTPlayerState:NetMulticast_RemovePing(PingTrackerId) end
+
 function ARSTPlayerState:NetMulticast_PlayerJoined() end
+
 ---@param CommunicationOption URSTCommunicationDefinition
 ---@param AttachedActor AActor
 ---@param PingPosition FVector
 ---@param PingTrackerId int32
 ---@param ResponseInstigator ARSTPlayerState
 ---@param ResponsePingId int32
-function ARSTPlayerState:NetMulticast_AddPing(CommunicationOption, AttachedActor, PingPosition, PingTrackerId, ResponseInstigator, ResponsePingId) end
+function ARSTPlayerState:NetMulticast_AddPing(CommunicationOption, AttachedActor, PingPosition, PingTrackerId,
+                                              ResponseInstigator, ResponsePingId) end
+
 ---@param Tag FGameplayTag
 function ARSTPlayerState:K2_OnPropertyPreModify(Tag) end
+
 ---@param Tag FGameplayTag
 function ARSTPlayerState:K2_OnPropertyModified(Tag) end
+
 ---@return boolean
 function ARSTPlayerState:IsVoiceEnabled() end
+
 ---@return boolean
 function ARSTPlayerState:IsHost() end
+
 ---@return boolean
 function ARSTPlayerState:IsDisconnected() end
+
 ---@param amount int32
 ---@param GrantReason ERSTCoinGrantReason
 ---@return int32
 function ARSTPlayerState:GrantCoin(amount, GrantReason) end
+
 ---@return FGameplayTagContainer
 function ARSTPlayerState:GetUnlockedHeroes() end
+
 ---@return URSTTrapLimitComponent
 function ARSTPlayerState:GetTrapLimitComponent() end
+
 ---@return int32
 function ARSTPlayerState:GetThreadsSkippedCount() end
+
 ---@return FGameplayTag
 function ARSTPlayerState:GetTagIdentifier() end
+
 ---@param InStatTag FGameplayTag
 ---@param InSubStatTag FGameplayTag
 ---@param bRunStats boolean
 ---@return int32
 function ARSTPlayerState:GetStatValue(InStatTag, InSubStatTag, bRunStats) end
----@param OutSkins TMap<FGameplayTag, FGameplayTag>
-function ARSTPlayerState:GetSelectedSkins(OutSkins) end
+
 ---@param HeroTag FGameplayTag
----@return FGameplayTag
-function ARSTPlayerState:GetSelectedSkin(HeroTag) end
+---@return FGameplayTagContainer
+function ARSTPlayerState:GetSelectedSkinsForHero(HeroTag) end
+
 ---@return URSTAbilitySystemComponent
 function ARSTPlayerState:GetRSTAbilitySystemComponent() end
+
 ---@return int32
 function ARSTPlayerState:GetRerollsUsed() end
+
 ---@return int32
 function ARSTPlayerState:GetRerollsPurchased() end
+
 ---@return URSTPlayerStatusEffectComponent
 function ARSTPlayerState:GetPlayerStatusEffectComponent() end
+
 ---@return int32
 function ARSTPlayerState:GetPlayerIndex() end
+
 ---@return int32
 function ARSTPlayerState:GetLoadoutThreadCount() end
+
 ---@return int32
 function ARSTPlayerState:GetGeneralThreadCount() end
+
 ---@return FString
 function ARSTPlayerState:GetCrossplayPlatform() end
+
 ---@param Tag FGameplayTag
 ---@return TSoftObjectPtr<URSTAbilityUIData>
 function ARSTPlayerState:GetAbilityUIData(Tag) end
+
 ---@param JoiningPlayerName FString
 function ARSTPlayerState:DisplayPlayerJoinedMessage(JoiningPlayerName) end
+
 ---@param amount int32
 ---@param SpendReason ERSTCoinSpendReason
 function ARSTPlayerState:Client_SpendCoin(amount, SpendReason) end
+
 function ARSTPlayerState:Client_NotifyOwnedTrapSold() end
+
 function ARSTPlayerState:Client_NotifyOwnedTrapPlaced() end
+
 function ARSTPlayerState:Client_NotifyOwnedTrapDestroyed() end
+
+---@param FlushedStats FRSTReplicatedStatList
+function ARSTPlayerState:Client_FlushRunStats(FlushedStats) end
+
 ---@param Sender ARSTPlayerState
 ---@param Message FString
 ---@param bSanitize boolean
-function ARSTPlayerState:Client_AddPlayerChatMessage(Sender, Message, bSanitize) end
+---@param bIsPrivate boolean
+function ARSTPlayerState:Client_AddPlayerChatMessage(Sender, Message, bSanitize, bIsPrivate) end
+
 ---@param amount int32
 ---@param GrantReason ERSTCoinGrantReason
 function ARSTPlayerState:Client_AddCoin(amount, GrantReason) end
+
 ---@param RequestingPlayer APlayerController
 ---@return boolean
 function ARSTPlayerState:CanShowProfileUI(RequestingPlayer) end
+
 ---@return boolean
 function ARSTPlayerState:CanEditHotbar() end
+
 ---@return boolean
 function ARSTPlayerState:CanAddUltimateCharge() end
+
 ---@param Tag FGameplayTag
 ---@param Delegate FCallAndRegister_OnAbilityUIDataUpdatedDelegate
 function ARSTPlayerState:CallAndRegister_OnAbilityUIDataUpdated(Tag, Delegate) end
+
 function ARSTPlayerState:BP_OnPlayerJoined() end
+
 ---@param AmountPercentage float
 function ARSTPlayerState:AddUltimateChargePercentage(AmountPercentage) end
+
 ---@param amount float
 function ARSTPlayerState:AddUltimateCharge(amount) end
-
 
 ---@class ARSTPostGameLevelSequenceActor : AActor
 ---@field OnProxyActorReady FRSTPostGameLevelSequenceActorOnProxyActorReady
 ---@field SpawnedProxies TArray<AActor>
 ---@field ProxyHeroData TArray<FRSTPostGameHeroData>
+---@field PostGameAssets TArray<FRSTPostGameLoadData>
 ---@field OnSequenceReady FRSTPostGameLevelSequenceActorOnSequenceReady
 ---@field OnSequenceFinished FRSTPostGameLevelSequenceActorOnSequenceFinished
 ---@field OnSequencePlaying FRSTPostGameLevelSequenceActorOnSequencePlaying
@@ -2008,30 +2561,42 @@ function ARSTPlayerState:AddUltimateCharge(amount) end
 ARSTPostGameLevelSequenceActor = {}
 
 function ARSTPostGameLevelSequenceActor:SequencePlaying() end
+
 function ARSTPostGameLevelSequenceActor:SequenceFinished() end
+
 ---@param ProxyActor AActor
 ---@param Index int32
 function ARSTPostGameLevelSequenceActor:RSTProxyActorReadyDelegate__DelegateSignature(ProxyActor, Index) end
+
 ---@param SequenceActor ARSTPostGameLevelSequenceActor
 function ARSTPostGameLevelSequenceActor:RSTPostGameSequenceReady__DelegateSignature(SequenceActor) end
+
 function ARSTPostGameLevelSequenceActor:RSTPostGameSequenceCallback__DelegateSignature() end
+
 function ARSTPostGameLevelSequenceActor:PlayLevelSequenceWhenReady() end
+
 ---@param SequenceActor ARSTPostGameLevelSequenceActor
 function ARSTPostGameLevelSequenceActor:PlayLevelSequenceDeferred(SequenceActor) end
+
 function ARSTPostGameLevelSequenceActor:PlayLevelSequence() end
+
 ---@param ProxyActor AActor
 ---@param Index int32
 function ARSTPostGameLevelSequenceActor:K2_ProxyActorReady(ProxyActor, Index) end
+
 function ARSTPostGameLevelSequenceActor:K2_OnSequencePlaying() end
+
 function ARSTPostGameLevelSequenceActor:K2_OnSequenceFinished() end
+
 ---@param SpawnedProxy AActor
 ---@param Index int32
 ---@param bVictory boolean
 function ARSTPostGameLevelSequenceActor:K2_InitSpawnedProxyPawn(SpawnedProxy, Index, bVictory) end
+
 ---@param bVictory boolean
 function ARSTPostGameLevelSequenceActor:InitPostGameSequence(bVictory) end
-function ARSTPostGameLevelSequenceActor:CancelLevelSequence() end
 
+function ARSTPostGameLevelSequenceActor:CancelLevelSequence() end
 
 ---@class ARSTPostGameProxyActor : ARSTCinematicProxyActor
 ---@field SkinComponent URSTSkinComponent
@@ -2090,99 +2655,142 @@ ARSTPostGameProxyActor = {}
 ARSTProjectile = {}
 
 function ARSTProjectile:StopPlayingLocally() end
+
 ---@param bNewStartDormant boolean
 function ARSTProjectile:SetStartDormant(bNewStartDormant) end
+
 ---@param PropertyTags FGameplayTagContainer
 function ARSTProjectile:SetPiercePropertyTags(PropertyTags) end
+
 ---@param InPierceCount int32
 function ARSTProjectile:SetPierceCount(InPierceCount) end
+
 ---@param InPierceChance float
 function ARSTProjectile:SetPierceChance(InPierceChance) end
+
 ---@param InInterruptScale float
 function ARSTProjectile:SetInterruptScale(InInterruptScale) end
+
 ---@param InHitGameplayCue FGameplayTag
 ---@param bAllowEmpty boolean
 function ARSTProjectile:SetHitGameplayCue(InHitGameplayCue, bAllowEmpty) end
+
 ---@param InHitData URSTRangedHitData
 function ARSTProjectile:SetHitData(InHitData) end
+
 ---@param InHeadshotDamageFactor float
 function ARSTProjectile:SetHeadshotDamageFactor(InHeadshotDamageFactor) end
+
 ---@param InGravityScale float
 function ARSTProjectile:SetGravityScale(InGravityScale) end
+
 ---@param InDistanceDamageFalloff UCurveFloat
 function ARSTProjectile:SetDistanceDamageFalloff(InDistanceDamageFalloff) end
+
 ---@param InDamageValue float
 function ARSTProjectile:SetDamageValue(InDamageValue) end
+
 ---@param InDamageEffectClass TSubclassOf<UGameplayEffect>
 function ARSTProjectile:SetDamageEffectClass(InDamageEffectClass) end
+
 ---@param InCriticalHitFactor float
 function ARSTProjectile:SetCriticalHitFactor(InCriticalHitFactor) end
+
 ---@param InCriticalHitDamageScale float
 function ARSTProjectile:SetCriticalHitDamageScale(InCriticalHitDamageScale) end
+
 ---@param GameplayTagFilter FGameplayTagContainer
 function ARSTProjectile:SetContinuousHomingTargetFilter(GameplayTagFilter) end
+
 ---@param InBounceCount int32
 function ARSTProjectile:SetBounceCount(InBounceCount) end
+
 ---@param bInApplyInterrupt boolean
 function ARSTProjectile:SetApplyInterrupt(bInApplyInterrupt) end
+
 ---@param OverrideValues TMap<FGameplayTag, float>
 function ARSTProjectile:SetAdditionalEffectTagOverrides(OverrideValues) end
+
 ---@param InAdditionalEffects TArray<FRSTAdditionalGameplayEffectData>
 function ARSTProjectile:SetAdditionalEffectData(InAdditionalEffects) end
+
 ---@param InAbilityCDO UGameplayAbility
 function ARSTProjectile:SetAbilityCDO(InAbilityCDO) end
+
 ---@param TargetData FGameplayAbilityTargetDataHandle
 ---@param PredictionKey FPredictionKey
 function ARSTProjectile:Server_SetTargetData(TargetData, PredictionKey) end
+
 ---@param Projectile ARSTProjectile
 function ARSTProjectile:RSTProjectileDormancyChanged__DelegateSignature(Projectile) end
+
 ---@param TargetComponent USceneComponent
 ---@param TargetSocket FName
 function ARSTProjectile:RegisterHomingTarget(TargetComponent, TargetSocket) end
+
 function ARSTProjectile:OnRep_IsDormant() end
+
 function ARSTProjectile:OnRep_BouncesAcknowledged() end
+
 ---@param ImpactResult FHitResult
 ---@param ImpactVelocity FVector
 function ARSTProjectile:OnProjectileBounce(ImpactResult, ImpactVelocity) end
+
 function ARSTProjectile:OnPostGame() end
+
 ---@param InTag FGameplayTag
 ---@param NewCount int32
 function ARSTProjectile:OnHomingTargetInvisible(InTag, NewCount) end
+
 ---@param OwningActor AActor
 ---@param InInstigator AActor
 function ARSTProjectile:OnHomingTargetDied(OwningActor, InInstigator) end
+
 ---@param OverlappedComponent UPrimitiveComponent
 ---@param OtherActor AActor
 ---@param OtherComp UPrimitiveComponent
 ---@param OtherBodyIndex int32
 ---@param bFromSweep boolean
 ---@param SweepResult FHitResult
-function ARSTProjectile:OnCollisionComponentBeginOverlap(OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex, bFromSweep, SweepResult) end
+function ARSTProjectile:OnCollisionComponentBeginOverlap(OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex,
+                                                         bFromSweep, SweepResult) end
+
 ---@param ASC UAbilitySystemComponent
 ---@param bIncludeDamage boolean
 ---@param bIncludeAdditionalEffects boolean
 ---@return TArray<FGameplayEffectSpecHandle>
 function ARSTProjectile:MakeEffectSpecs(ASC, bIncludeDamage, bIncludeAdditionalEffects) end
+
 ---@return boolean
 function ARSTProjectile:IsPiercingRound() end
+
 ---@return boolean
 function ARSTProjectile:IsHomingProjectile() end
+
 ---@return boolean
 function ARSTProjectile:IsDormant() end
+
 ---@return UNiagaraSystem
 function ARSTProjectile:GetTrailSystemInternal() end
+
 ---@param HitActor AActor
 ---@return FGameplayTag
 function ARSTProjectile:GetHitGameplayCue(HitActor) end
+
 ---@return int32
 function ARSTProjectile:GetBounceCount() end
+
 ---@return UAbilitySystemComponent
 function ARSTProjectile:GetAbilitySystemComponent() end
+
 ---@param GameplayTagFilter FGameplayTagContainer
 function ARSTProjectile:FindAndRegisterHomingTarget(GameplayTagFilter) end
+
 ---@param TargetData FGameplayAbilityTargetDataHandle
 function ARSTProjectile:BP_TargetDataSet(TargetData) end
+
 function ARSTProjectile:BP_StopPlayingLocally() end
+
 ---@param OverlappedComponent UPrimitiveComponent
 ---@param OtherActor AActor
 ---@param OtherComp UPrimitiveComponent
@@ -2190,7 +2798,9 @@ function ARSTProjectile:BP_StopPlayingLocally() end
 ---@param bFromSweep boolean
 ---@param SweepResult FHitResult
 ---@return boolean
-function ARSTProjectile:BP_ShouldRespondToOverlap(OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex, bFromSweep, SweepResult) end
+function ARSTProjectile:BP_ShouldRespondToOverlap(OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex, bFromSweep,
+                                                  SweepResult) end
+
 ---@param MyComp UPrimitiveComponent
 ---@param OtherActor AActor
 ---@param OtherComp UPrimitiveComponent
@@ -2200,15 +2810,19 @@ function ARSTProjectile:BP_ShouldRespondToOverlap(OverlappedComponent, OtherActo
 ---@param NormalImpulse FVector
 ---@param Hit FHitResult
 ---@return boolean
-function ARSTProjectile:BP_ShouldRespondToHit(MyComp, OtherActor, OtherComp, bSelfMoved, HitLocation, HitNormal, NormalImpulse, Hit) end
+function ARSTProjectile:BP_ShouldRespondToHit(MyComp, OtherActor, OtherComp, bSelfMoved, HitLocation, HitNormal,
+                                              NormalImpulse, Hit) end
+
 function ARSTProjectile:BP_OnLifespanExpired() end
+
 function ARSTProjectile:BP_DormancyChanged() end
+
 ---@param OtherActor AActor
 ---@return boolean
 function ARSTProjectile:AllowedToPierce(OtherActor) end
+
 ---@param Velocity FVector
 function ARSTProjectile:ActivateProjectile(Velocity) end
-
 
 ---@class ARSTProjectileDamageable : ARSTProjectile
 ---@field HealthComponent URSTHealthComponent
@@ -2221,14 +2835,16 @@ ARSTProjectileDamageable = {}
 ---@param OwningActor AActor
 ---@param InInstigator AActor
 function ARSTProjectileDamageable:OnDeathStarted(OwningActor, InInstigator) end
+
 ---@param OwningActor AActor
 ---@param InInstigator AActor
 function ARSTProjectileDamageable:OnDeathFinished(OwningActor, InInstigator) end
+
 ---@return URSTAbilitySystemComponent
 function ARSTProjectileDamageable:GetRSTAbilitySystemComponent() end
+
 ---@return UAbilitySystemComponent
 function ARSTProjectileDamageable:GetOwnerAbilitySystemComponent() end
-
 
 ---@class ARSTProjectileTrail : AActor
 ---@field TrailFX UNiagaraComponent
@@ -2236,9 +2852,9 @@ ARSTProjectileTrail = {}
 
 ---@param PSystem UNiagaraComponent
 function ARSTProjectileTrail:OnTrailFXFinished(PSystem) end
+
 ---@return int32
 function ARSTProjectileTrail:GetNumTrails() end
-
 
 ---@class ARSTRift : AActor
 ---@field bCanBePrimary boolean
@@ -2266,18 +2882,22 @@ ARSTRift = {}
 ---@param bFromSweep boolean
 ---@param SweepResult FHitResult
 function ARSTRift:RiftEnterBeginOverlap(OverlappedComp, OtherActor, OtherComp, OtherBodyIndex, bFromSweep, SweepResult) end
+
 ---@return FTransform
 function ARSTRift:GetRiftTeleportTransform() end
+
 ---@return FVector
 function ARSTRift:GetRiftFXLocation() end
+
 ---@param ActorInfo FGameplayAbilityActorInfo
 function ARSTRift:BP_OnInteract(ActorInfo) end
+
 ---@return FTransform
 function ARSTRift:BP_GetRiftTeleportTransform() end
+
 ---@param InteractQuery FRSTInteractionQuery
 ---@return TArray<FRSTInteractionOption>
 function ARSTRift:BP_GatherInteractionOptions(InteractQuery) end
-
 
 ---@class ARSTRiftCrystal : ARSTRift
 ---@field HealthComponent URSTHealthComponent
@@ -2293,6 +2913,7 @@ ARSTRiftCrystal = {}
 ---@param OwningActor AActor
 ---@param InInstigator AActor
 function ARSTRiftCrystal:OnDeathStarted(OwningActor, InInstigator) end
+
 ---@param HealthComp URSTHealthComponent
 ---@param Damage float
 ---@param DamageCauser AActor
@@ -2300,7 +2921,6 @@ function ARSTRiftCrystal:OnDeathStarted(OwningActor, InInstigator) end
 ---@param bHasSpec boolean
 ---@param Spec FGameplayEffectSpec
 function ARSTRiftCrystal:OnDamageTaken(HealthComp, Damage, DamageCauser, HitResult, bHasSpec, Spec) end
-
 
 ---@class ARSTSpectatorPawn : ASpectatorPawn
 ARSTSpectatorPawn = {}
@@ -2319,14 +2939,16 @@ ARSTStatusFXVolume = {}
 ---@param MyActor AActor
 ---@param OtherActor AActor
 function ARSTStatusFXVolume:OnReceivedOverlap(MyActor, OtherActor) end
+
 ---@param MyActor AActor
 ---@param OtherActor AActor
 function ARSTStatusFXVolume:OnReceivedEndOverlap(MyActor, OtherActor) end
+
 ---@return URSTAbilitySystemComponent
 function ARSTStatusFXVolume:GetRSTAbilitySystemComponent() end
+
 ---@param TargetActor AActor
 function ARSTStatusFXVolume:ApplyGameplayEffects(TargetActor) end
-
 
 ---@class ARSTTrap : ARNetworkProxyActor
 ---@field TargetMeshScale FVector
@@ -2343,6 +2965,7 @@ function ARSTStatusFXVolume:ApplyGameplayEffects(TargetActor) end
 ---@field OnEndOverlapTarget FRSTTrapOnEndOverlapTarget
 ---@field TriggerBoxComponent UBoxComponent
 ---@field AdditionalTargetFilters TArray<FGameplayTag>
+---@field ActiveCooldownTimeRemaining float
 ---@field MaxCharges int32
 ---@field AvailableCharges int32
 ---@field ResetCooldownOnApplicationChance float
@@ -2368,6 +2991,7 @@ function ARSTStatusFXVolume:ApplyGameplayEffects(TargetActor) end
 ---@field TrapPlacementTypes ERSTTrapPlacementFlags
 ---@field OnTrapSold FRSTTrapOnTrapSold
 ---@field VisualFlags uint8
+---@field BuffCount int32
 ---@field AdjacencyBuffCount int32
 ---@field TrapDefinition URSTTrapDefinition
 ---@field ThreatValue float
@@ -2385,83 +3009,131 @@ function ARSTStatusFXVolume:ApplyGameplayEffects(TargetActor) end
 ---@field TrapDisplayName FText
 ---@field TrapPrimaryAssetName FName
 ---@field DynamicVolumeProfileName FCollisionProfileName
----@field MaterialParameterStackComponent URSTMaterialParameterStackComponent
+---@field OverlayMaterialStackComponent URSTOverlayMaterialStackComponent
 ---@field NS_SummoningSquare_2 UNiagaraComponent
 ---@field bReplicatedHasActiveCooldownModifier boolean
 ---@field TrapDamageDealt float
 ---@field TrapKills int32
 ---@field bTooltipStatsDirty boolean
+---@field bAwardComboAlways boolean
 ARSTTrap = {}
 
 ---@return boolean
 function ARSTTrap:UsesHalfSizePlacement() end
+
 ---@return boolean
 function ARSTTrap:UsesDynamicTriggerVolume() end
+
 function ARSTTrap:UpdateTriggerDisplay() end
+
 function ARSTTrap:UpdateSummoningSquare() end
+
 ---@param Count int32
 function ARSTTrap:UpdateBuffCount(Count) end
+
 ---@param InModifier TScriptInterface<IRSTTrapCooldownModifierInterface>
 function ARSTTrap:UnregisterCooldownModifier(InModifier) end
+
 ---@param TrapToPlace TSubclassOf<ARSTTrap>
 ---@param Direction FVector
 ---@return ARSTTrap
 function ARSTTrap:TryPlaceAdjacentTrap(TrapToPlace, Direction) end
+
 ---@param SoldTrap ARSTTrap
 function ARSTTrap:TrapSoldDelegate__DelegateSignature(SoldTrap) end
+
 ---@return boolean
 function ARSTTrap:ShouldDisplayAsValid() end
+
 ---@return boolean
 function ARSTTrap:ShouldCountTowardPlacementLimit() end
+
+---@param InTrapOwner ARSTPlayerState
+function ARSTTrap:SetTrapOwner(InTrapOwner) end
+
 ---@param InMaxCharges int32
 function ARSTTrap:SetMaxCharges(InMaxCharges) end
+
 ---@param bSuperTrap boolean
 function ARSTTrap:SetIsSuperTrap(bSuperTrap) end
+
 ---@param bDisabled boolean
 function ARSTTrap:SetIsDisabled(bDisabled) end
+
 ---@param bBuffed boolean
 function ARSTTrap:SetBuffPreview(bBuffed) end
+
 ---@param InAvailableCharges int32
 function ARSTTrap:SetAvailableCharges(InAvailableCharges) end
+
 ---@param bBuffed boolean
 function ARSTTrap:SetAdjacencyBuff(bBuffed) end
+
 ---@return boolean
 function ARSTTrap:Sell() end
+
 function ARSTTrap:ResetTrap() end
+
 ---@param InModifier TScriptInterface<IRSTTrapCooldownModifierInterface>
 function ARSTTrap:RegisterCooldownModifier(InModifier) end
+
 ---@param Target AActor
 function ARSTTrap:OverlapDelegate__DelegateSignature(Target) end
+
 function ARSTTrap:OnRep_TrapOwner() end
-function ARSTTrap:OnRep_TrapKills() end
-function ARSTTrap:OnRep_TrapDamageDealt() end
+
+---@param PreviousTrapKills int32
+function ARSTTrap:OnRep_TrapKills(PreviousTrapKills) end
+
+---@param PreviousTrapDamageDealt float
+function ARSTTrap:OnRep_TrapDamageDealt(PreviousTrapDamageDealt) end
+
 function ARSTTrap:OnRep_ParentTrap() end
+
 function ARSTTrap:OnRep_MaxCharges() end
+
 ---@param bPreviousValue boolean
 function ARSTTrap:OnRep_IsSold(bPreviousValue) end
+
 ---@param bPreviousValue boolean
 function ARSTTrap:OnRep_IsPlacementValid(bPreviousValue) end
+
 ---@param bPreviousValue boolean
 function ARSTTrap:OnRep_IsBeingPlaced(bPreviousValue) end
+
 ---@param bPreviousValue boolean
 function ARSTTrap:OnRep_HasReachedPlacementLimit(bPreviousValue) end
+
 ---@param bPreviousValue boolean
 function ARSTTrap:OnRep_HasEnoughCoin(bPreviousValue) end
+
+function ARSTTrap:OnRep_BuffCount() end
+
 function ARSTTrap:OnRep_bReplicatedHasActiveCooldownModifier() end
+
 function ARSTTrap:OnRep_AvailableCharges() end
+
 function ARSTTrap:OnRep_AdjacencyBuffCount() end
+
+function ARSTTrap:OnRep_ActiveCooldownTimeRemaining() end
+
 function ARSTTrap:OnPostGame() end
+
 ---@param bIsGoBreakActive boolean
 function ARSTTrap:OnGoBreakChanged(bIsGoBreakActive) end
+
 function ARSTTrap:OnGameEnding() end
+
 ---@param OverlappedComponent UPrimitiveComponent
 ---@param OtherActor AActor
 ---@param OtherComp UPrimitiveComponent
 ---@param OtherBodyIndex int32
 function ARSTTrap:OnEndOverlap(OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex) end
+
 ---@param OwningActor AActor
 ---@param InInstigator AActor
 function ARSTTrap:OnDeathStarted(OwningActor, InInstigator) end
+
 ---@param OverlappedComp UPrimitiveComponent
 ---@param Other AActor
 ---@param OtherComp UPrimitiveComponent
@@ -2469,145 +3141,228 @@ function ARSTTrap:OnDeathStarted(OwningActor, InInstigator) end
 ---@param bFromSweep boolean
 ---@param SweepResult FHitResult
 function ARSTTrap:OnBeginOverlap(OverlappedComp, Other, OtherComp, OtherBodyIndex, bFromSweep, SweepResult) end
+
 ---@param Ability UGameplayAbility
 function ARSTTrap:OnAbilityRemoved(Ability) end
+
 ---@param Ability UGameplayAbility
 function ARSTTrap:OnAbilityAdded(Ability) end
+
 ---@param OtherActor AActor
 ---@return boolean
 function ARSTTrap:IsValidTarget(OtherActor) end
+
 ---@return boolean
 function ARSTTrap:IsReadyForActivation() end
+
 ---@return boolean
 function ARSTTrap:IsDisabled() end
+
 ---@return boolean
 function ARSTTrap:IsCooldownActive() end
+
 ---@return boolean
 function ARSTTrap:IsAbilityActive() end
+
 ---@return boolean
 function ARSTTrap:IgnoresGridSnapping() end
+
 ---@return boolean
 function ARSTTrap:HasValidTarget() end
+
 ---@return boolean
 function ARSTTrap:HasCooldownModifier() end
+
 ---@return boolean
 function ARSTTrap:HasActiveCooldownModifier() end
+
 ---@param Ability URSTGameplayAbility_TrapBase
 ---@param InBaseDuration float
 ---@return float
 function ARSTTrap:HandleCooldownApplication(Ability, InBaseDuration) end
+
 ---@return ERSTTrapPlacementFlags
 function ARSTTrap:GetTrapPlacementTypes() end
+
 ---@return TArray<FText>
 function ARSTTrap:GetTooltipStatText() end
+
 ---@param Other AActor
 ---@return ETeamAttitude::Type
 function ARSTTrap:GetTeamAttitudeTowardsActor(Other) end
+
 ---@return ERSTTeams
 function ARSTTrap:GetTeam() end
+
 ---@return FGameplayTag
 function ARSTTrap:GetSellTrapCue() end
+
 ---@return URSTAbilitySystemComponent
 function ARSTTrap:GetRSTAbilitySystemComponent() end
+
 ---@return int32
 function ARSTTrap:GetRefundValue() end
+
 ---@return FGameplayTag
 function ARSTTrap:GetPlacementLimitGroup() end
+
 ---@return FGameplayTag
 function ARSTTrap:GetPlacementCue() end
+
 ---@return FGameplayAbilitySpecHandle
 function ARSTTrap:GetPassiveAbilitySpecHandle() end
+
 ---@return URSTGameplayAbility_TrapBase
 function ARSTTrap:GetPassiveAbilityInstance() end
+
 ---@return URSTGameplayAbility_TrapBase
 function ARSTTrap:GetPassiveAbility() end
+
 ---@param OutOverlappedActors TArray<AActor>
 ---@return boolean
 function ARSTTrap:GetOverlappedActors(OutOverlappedActors) end
+
 ---@return EAxis::Type
 function ARSTTrap:GetDynamicTriggerVolumeAxis() end
+
 ---@return ERSTTrapPlacementFlags
 function ARSTTrap:GetDefaultTrapPlacementTypes() end
+
 ---@return float
 function ARSTTrap:GetActiveCooldownTimeRemaining_Authority() end
+
+---@return float
+function ARSTTrap:GetActiveCooldownTimeRemaining() end
+
 ---@return FGameplayAbilitySpecHandle
 function ARSTTrap:GetActiveAbilitySpecHandle() end
+
 ---@return URSTGameplayAbility_TrapBase
 function ARSTTrap:GetActiveAbilityInstance() end
+
 ---@return URSTGameplayAbility_TrapBase
 function ARSTTrap:GetActiveAbilityCDO() end
+
 ---@param OutActivatingActors TArray<AActor>
 ---@return boolean
 function ARSTTrap:GetActivatingActors(OutActivatingActors) end
+
 ---@param modifier TScriptInterface<IRSTTrapCooldownModifierInterface>
 function ARSTTrap:CooldownModificationChangedDelegate__DelegateSignature(modifier) end
+
 ---@param OutActivatingActors TArray<AActor>
 ---@param Count int32
 ---@return boolean
 function ARSTTrap:ConsumeActivatingActors(OutActivatingActors, Count) end
+
 function ARSTTrap:ClearTooltipTextDirty() end
+
 ---@return boolean
 function ARSTTrap:CanRotate() end
+
 ---@return boolean
 function ARSTTrap:CanModifyCooldown() end
+
 ---@return boolean
 function ARSTTrap:CanEverActivate() end
+
 function ARSTTrap:CancelCurrentAbility() end
+
 function ARSTTrap:BroadcastCooldownModificationChanged() end
+
 ---@param bHit boolean
 ---@param HitResult FHitResult
 function ARSTTrap:BP_TriggerVolumeDynamicallyAdjusted(bHit, HitResult) end
+
 ---@param NewFlags int32
 ---@param OldFlags int32
 function ARSTTrap:BP_TrapVisualsUpdated(NewFlags, OldFlags) end
+
+---@param KillDelta int32
+function ARSTTrap:BP_TrapKillsChanged(KillDelta) end
+
+---@param DamageDelta float
+function ARSTTrap:BP_TrapDamageDealtChanged(DamageDelta) end
+
 function ARSTTrap:BP_SellableEnd() end
+
 function ARSTTrap:BP_SellableBegin() end
+
 function ARSTTrap:BP_OnRotateTrap() end
+
 function ARSTTrap:BP_OnPostGame() end
+
 ---@param ActorInfo FGameplayAbilityActorInfo
 function ARSTTrap:BP_OnInteract(ActorInfo) end
+
 function ARSTTrap:BP_OnGameEnding() end
+
 function ARSTTrap:BP_OnDeactivated() end
+
 function ARSTTrap:BP_OnActivated() end
+
 ---@param Tag FGameplayTag
 function ARSTTrap:BP_NotifyPropertyPreModify(Tag) end
+
 ---@param Tag FGameplayTag
 function ARSTTrap:BP_NotifyPropertyModified(Tag) end
+
 function ARSTTrap:BP_MaxChargesChanged() end
+
 function ARSTTrap:BP_LastPlacementFailureReasonChanged() end
+
 function ARSTTrap:BP_IsSoldChanged() end
+
 function ARSTTrap:BP_IsPlacementValidChanged() end
+
 function ARSTTrap:BP_IsBeingPlacedChanged() end
+
 function ARSTTrap:BP_HasReachedPlacementLimitChanged() end
+
 function ARSTTrap:BP_HasEnoughCoinChanged() end
+
 ---@param InBaseDuration float
 ---@param ModifiedDuration float
 ---@return float
 function ARSTTrap:BP_HandleCooldownApplication(InBaseDuration, ModifiedDuration) end
+
 ---@param bIsGoBreakActive boolean
 function ARSTTrap:BP_GoBreakChanged(bIsGoBreakActive) end
+
 ---@return FVector
 function ARSTTrap:BP_GetInteractableLocation() end
+
 ---@param OutLocation FVector
 ---@param OutRotation FRotator
 function ARSTTrap:BP_GetActorEyesViewPoint(OutLocation, OutRotation) end
+
 ---@param InteractQuery FRSTInteractionQuery
 ---@return TArray<FRSTInteractionOption>
 function ARSTTrap:BP_GatherInteractionOptions(InteractQuery) end
+
 function ARSTTrap:BP_DisabledEnded() end
+
 ---@param InModifier TScriptInterface<IRSTTrapCooldownModifierInterface>
 function ARSTTrap:BP_CooldownModifierUnregistered(InModifier) end
+
 function ARSTTrap:BP_CooldownModifiersChanged() end
+
 ---@param InModifier TScriptInterface<IRSTTrapCooldownModifierInterface>
 function ARSTTrap:BP_CooldownModifierRegistered(InModifier) end
-function ARSTTrap:BP_CooldownEnded() end
-function ARSTTrap:BP_CooldownBegan() end
-function ARSTTrap:BP_AvailableChargesChanged() end
-function ARSTTrap:BP_ActiveAbilityFired() end
-function ARSTTrap:AdjustPlacementHeight() end
-function ARSTTrap:ActivateWithoutDelay() end
-function ARSTTrap:Activate() end
 
+function ARSTTrap:BP_CooldownEnded() end
+
+function ARSTTrap:BP_CooldownBegan() end
+
+function ARSTTrap:BP_AvailableChargesChanged() end
+
+function ARSTTrap:BP_ActiveAbilityFired() end
+
+function ARSTTrap:AdjustPlacementHeight() end
+
+function ARSTTrap:ActivateWithoutDelay() end
+
+function ARSTTrap:Activate() end
 
 ---@class ARSTTrapGrid : AActor
 ---@field GridScale float
@@ -2616,8 +3371,8 @@ ARSTTrapGrid = {}
 ---@param World UWorld
 function ARSTTrapGrid:ToggleDrawTrapGrid(World) end
 
-
 ---@class ARSTTrapGridDecorator : AActor
+---@field RequiredSentinelName FName
 ---@field TransformVariance FRSTTrapGridTransformVariance
 ---@field bOverrideTransformVariance boolean
 ARSTTrapGridDecorator = {}
@@ -2633,9 +3388,10 @@ ARSTTrapGridsVolume = {}
 
 ---@param bInIsEnabled boolean
 function ARSTTrapGridsVolume:SetIsEnabled(bInIsEnabled) end
-function ARSTTrapGridsVolume:RegenerateVisuals() end
-function ARSTTrapGridsVolume:OnRep_IsEnabled() end
 
+function ARSTTrapGridsVolume:RegenerateVisuals() end
+
+function ARSTTrapGridsVolume:OnRep_IsEnabled() end
 
 ---@class ARSTVertexAnimationMesh : AActor
 ARSTVertexAnimationMesh = {}
@@ -2650,11 +3406,13 @@ ARSTWandClone = {}
 
 ---@param bNewHidden boolean
 function ARSTWandClone:SetActorHiddenLocally(bNewHidden) end
+
 ---@param bNewHidden boolean
 function ARSTWandClone:Server_SetActorHidden(bNewHidden) end
-function ARSTWandClone:Server_RequestDestroy() end
-function ARSTWandClone:RequestDestroyOnServer() end
 
+function ARSTWandClone:Server_RequestDestroy() end
+
+function ARSTWandClone:RequestDestroyOnServer() end
 
 ---@class ARSTWeaponCueNotify_Looping : AGameplayCueNotify_Looping
 ---@field ApplicationWeaponEvents TArray<FRSTAttachmentCueData>
@@ -2673,7 +3431,6 @@ ARSTWorldSettings = {}
 
 ---@return boolean
 function ARSTWorldSettings:UseReducedDeathFX() end
-
 
 ---@class FAimAssistTargetData
 ---@field TargetComponent TWeakObjectPtr<USceneComponent>
@@ -3214,6 +3971,8 @@ FRSTComponentCollisionOverride = {}
 
 ---@class FRSTConditionalNiagaraAnimData
 ---@field ConditionalTemplates TArray<FRSTConditionalNiagaraEntry>
+---@field RequiredTags FGameplayTagContainer
+---@field BlockedTags FGameplayTagContainer
 FRSTConditionalNiagaraAnimData = {}
 
 
@@ -3385,6 +4144,12 @@ FRSTForceFeedbackParams = {}
 
 
 
+---@class FRSTGEArr
+---@field Arr TArray<UGameplayEffect>
+FRSTGEArr = {}
+
+
+
 ---@class FRSTGameFeatureAbilitiesEntry
 ---@field ActorClass TSoftClassPtr<AActor>
 ---@field GrantedAbilities TArray<FRSTAbilityGrant>
@@ -3511,6 +4276,13 @@ FRSTHUDLayoutRequest = {}
 ---@class FRSTHealingFlyoffRequest : FRSTFlyoffRequest
 ---@field HealingValue float
 FRSTHealingFlyoffRequest = {}
+
+
+
+---@class FRSTHeatMapDataRepl
+---@field Location FIntVector2
+---@field Count int32
+FRSTHeatMapDataRepl = {}
 
 
 
@@ -3674,13 +4446,6 @@ FRSTItemUpgradeListEntry = {}
 
 
 
----@class FRSTKeyMappingTuple
----@field InputMappingContext UInputMappingContext
----@field KeyMapping FEnhancedActionKeyMapping
-FRSTKeyMappingTuple = {}
-
-
-
 ---@class FRSTKeywordToolTipData
 ---@field TooltipDescription FText
 ---@field KeywordColor FLinearColor
@@ -3756,6 +4521,7 @@ FRSTMapVolumeInfo = {}
 ---@field TagToInteriorColorMap TArray<FRSTTagMapColor>
 ---@field TagToOutlineColorMap TArray<FRSTTagMapColor>
 ---@field TagToStyleBrushMap TArray<FRSTTagStyleBrush>
+---@field HeatMapBrush FSlateBrush
 ---@field Font FSlateFontInfo
 FRSTMapWidgetStyle = {}
 
@@ -3805,6 +4571,7 @@ FRSTMissionDistortionChoice = {}
 
 ---@class FRSTMissionDistortionChoiceList
 ---@field AvailableMissionChoices TArray<FRSTMissionDistortionChoice>
+---@field RiftBlessing TSoftObjectPtr<URSTMetaTeamThreadDefinition>
 FRSTMissionDistortionChoiceList = {}
 
 
@@ -3936,6 +4703,12 @@ FRSTNewTrapData = {}
 
 
 
+---@class FRSTNiagaraParameterCollection
+---@field ObjectParameterMapping TMap<FGameplayTag, FName>
+FRSTNiagaraParameterCollection = {}
+
+
+
 ---@class FRSTPatchNoteVersionURL
 ---@field Version FString
 ---@field URL FString
@@ -3973,7 +4746,7 @@ FRSTPawnDefinitionAdditionalHUDElement = {}
 
 ---@class FRSTPawnLoadingData
 ---@field PawnDefinition URSTPawnDefinition
----@field SkinDefinition URSTSkinDefinition
+---@field SkinDefinitions TArray<URSTSkinDefinition>
 FRSTPawnLoadingData = {}
 
 
@@ -4139,6 +4912,7 @@ FRSTPlayerProfileMessage_UpgradesChanged = {}
 ---@class FRSTPlayerSelectionParameters
 ---@field PlayerState ARSTPlayerState
 ---@field ChosenIndex int32
+---@field ChallengeRunCode FString
 FRSTPlayerSelectionParameters = {}
 
 
@@ -4161,6 +4935,10 @@ FRSTPlayerStatusEffectDataRepl = {}
 
 ---@class FRSTPostGameHeroData
 FRSTPostGameHeroData = {}
+
+
+---@class FRSTPostGameLoadData
+FRSTPostGameLoadData = {}
 
 
 ---@class FRSTPostGameSequence
@@ -4379,7 +5157,7 @@ FRSTSavedItemUpgradeData = {}
 ---@class FRSTSavedPlayerIndex
 ---@field NetId FUniqueNetIdRepl
 ---@field Index int32
----@field bLocal boolean
+---@field bboolean
 FRSTSavedPlayerIndex = {}
 
 
@@ -4394,6 +5172,7 @@ FRSTSavedPlayerLoadout = {}
 ---@field SaveName FString
 ---@field PerPlayerPawnDefinition TArray<URSTPawnDefinitionHero>
 ---@field PerPlayerSkinTag TArray<FGameplayTag>
+---@field PerPlayerSkinTags TArray<FGameplayTagContainer>
 ---@field PerPlayerUserName TArray<FString>
 ---@field PerPlayerLoadouts TArray<FRSTSavedPlayerLoadout>
 ---@field PerPlayerCoins TArray<int32>
@@ -4404,8 +5183,10 @@ FRSTSavedPlayerLoadout = {}
 ---@field PerPlayerOwnedThreads TArray<FRSTPerPlayerOwnedThreadList>
 ---@field PerPlayerPotion TArray<URSTPotionDefinition>
 ---@field PerPlayerRunStats TArray<FRSTReplicatedStatList>
+---@field PerPlayerAdditionalData TArray<FRSTSavedRunAdditionalData>
 ---@field SelectedMissions TArray<URSTMissionDefinition>
 ---@field SelectedDistortions TArray<URSTMetaDistortionDefinition>
+---@field InitialDistortions TArray<URSTMetaDistortionDefinition>
 ---@field SelectedTeamThreads TArray<FRSTTeamThreadData>
 ---@field RiftPointsCarryover int32
 ---@field GrantedSkulls int32
@@ -4419,6 +5200,14 @@ FRSTSavedPlayerLoadout = {}
 ---@field PerPlayerRerollData TArray<FRSTRerollData>
 ---@field PerPlayerThreadsSkippedCount TArray<int32>
 FRSTSavedRun = {}
+
+
+
+---@class FRSTSavedRunAdditionalData
+---@field BoolValues TMap<FGameplayTag, boolean>
+---@field IntValues TMap<FGameplayTag, int32>
+---@field FloatValues TMap<FGameplayTag, float>
+FRSTSavedRunAdditionalData = {}
 
 
 
@@ -4440,7 +5229,7 @@ FRSTScalabilitySnapshot = {}
 
 ---@class FRSTSelectedSkinRepl
 ---@field HeroTag FGameplayTag
----@field SkinTag FGameplayTag
+---@field SkinTags FGameplayTagContainer
 FRSTSelectedSkinRepl = {}
 
 
@@ -4476,6 +5265,19 @@ FRSTSkinFragment_MaterialOverride_ReferenceMeshes = {}
 ---@field NiagaraSystem TSoftObjectPtr<UNiagaraSystem>
 ---@field AttachMethod EAttachLocation::Type
 FRSTSkinNiagaraSystem = {}
+
+
+
+---@class FRSTSkinSlotOptions
+---@field SlotData URSTSkinSlotData
+---@field SkinArr TArray<URSTSkinUserFacingData>
+FRSTSkinSlotOptions = {}
+
+
+
+---@class FRSTSkinSlots
+---@field SkinSlots TMap<FGameplayTag, FGameplayTag>
+FRSTSkinSlots = {}
 
 
 
@@ -4581,6 +5383,15 @@ FRSTTargetingRule = {}
 
 
 
+---@class FRSTTeamAgentRequirements
+---@field RequiredAttitude ETeamAttitude::Type
+---@field IgnoredAttitude ETeamAttitude::Type
+---@field bUseRequiredAttitude boolean
+---@field bUseIgnoredAttitude boolean
+FRSTTeamAgentRequirements = {}
+
+
+
 ---@class FRSTTeamCountTrapLimitData
 ---@field TeamData TMap<int32, int32>
 FRSTTeamCountTrapLimitData = {}
@@ -4681,6 +5492,7 @@ FRSTTrapPlacementRequest = {}
 
 ---@class FRSTUnstableRiftMissionProperties
 ---@field UnstableRiftDistortion URSTMetaDistortionDefinition
+---@field KoboldMoundDistortion URSTMetaDistortionDefinition
 FRSTUnstableRiftMissionProperties = {}
 
 
@@ -4762,7 +5574,6 @@ IRSTAbilityPlaceable = {}
 ---@return UPrimitiveComponent
 function IRSTAbilityPlaceable:GetCollisionComponent() end
 
-
 ---@class IRSTAbilitySourceInterface : IInterface
 IRSTAbilitySourceInterface = {}
 
@@ -4771,20 +5582,22 @@ IRSTAbilitySourceInterface = {}
 IRSTActorOpacityControllable = {}
 
 function IRSTActorOpacityControllable:TriggerMeshesChangedCallback() end
+
 ---@param OutObscureMeshes TArray<UMeshComponent>
 function IRSTActorOpacityControllable:GetOpacityControlledMeshes(OutObscureMeshes) end
+
 ---@param OutObscureFXSystems TArray<UFXSystemComponent>
 function IRSTActorOpacityControllable:GetOpacityControlledFXSystems(OutObscureFXSystems) end
+
 ---@return URSTActorOpacityComponent
 function IRSTActorOpacityControllable:GetActorOpacityComponent() end
-
 
 ---@class IRSTActorPoolInterface : IInterface
 IRSTActorPoolInterface = {}
 
 function IRSTActorPoolInterface:BP_PrepareActorForReuse() end
-function IRSTActorPoolInterface:BP_ActorRequestedFromPool() end
 
+function IRSTActorPoolInterface:BP_ActorRequestedFromPool() end
 
 ---@class IRSTAnimNotifiable : IInterface
 IRSTAnimNotifiable = {}
@@ -4792,43 +5605,48 @@ IRSTAnimNotifiable = {}
 ---@param Tag FGameplayTag
 function IRSTAnimNotifiable:ProcessNotify(Tag) end
 
-
 ---@class IRSTAttachmentReceiver : IInterface
 IRSTAttachmentReceiver = {}
 
 ---@return USkeletalMeshComponent
 function IRSTAttachmentReceiver:GetSkeletalMesh() end
 
-
 ---@class IRSTAttackableInterface : IInterface
 IRSTAttackableInterface = {}
 
 ---@return boolean
 function IRSTAttackableInterface:UsesAggroCap() end
+
 ---@return boolean
 function IRSTAttackableInterface:IsFixed() end
+
 ---@return boolean
 function IRSTAttackableInterface:IsAggroImmune() end
+
 ---@return boolean
 function IRSTAttackableInterface:HasPendingAttackLoc() end
+
 ---@return float
 function IRSTAttackableInterface:GetThreatValue() end
+
 ---@param ThreatGroup ERSTThreatGroup
 ---@return uint8
 function IRSTAttackableInterface:GetThreatCap(ThreatGroup) end
+
 ---@return FGameplayTagContainer
 function IRSTAttackableInterface:GetIgnoredAggroTags() end
+
 ---@param AttackerLoc FVector
 ---@param Attacker AActor
 ---@param RangeToCheck float
 ---@param bRangedAttack boolean
 ---@return FVector
 function IRSTAttackableInterface:GetAttackLoc(AttackerLoc, Attacker, RangeToCheck, bRangedAttack) end
+
 ---@param Attacker APawn
 ---@param ThreatGroup ERSTThreatGroup
 ---@return boolean
 function IRSTAttackableInterface:CanBeAggroed(Attacker, ThreatGroup) end
-
 
 ---@class IRSTBreakable : IInterface
 IRSTBreakable = {}
@@ -4850,20 +5668,18 @@ IRSTCommunicationReceiver = {}
 ---@param Communication URSTCommunicationDefinition
 function IRSTCommunicationReceiver:ReceiveCommunication(Instigator, LocalPingTrackerId, Communication) end
 
-
 ---@class IRSTDamageModifiable : IInterface
 IRSTDamageModifiable = {}
 
 ---@return URSTDamageModifierComponent
 function IRSTDamageModifiable:GetDamageModifierComponent() end
 
-
 ---@class IRSTExternalInputAbility : IInterface
 IRSTExternalInputAbility = {}
 
 function IRSTExternalInputAbility:OnInputUp() end
-function IRSTExternalInputAbility:OnInputDown() end
 
+function IRSTExternalInputAbility:OnInputDown() end
 
 ---@class IRSTHitReactLimiterInterface : IInterface
 IRSTHitReactLimiterInterface = {}
@@ -4871,20 +5687,21 @@ IRSTHitReactLimiterInterface = {}
 ---@param Target AActor
 ---@return boolean
 function IRSTHitReactLimiterInterface:CanPlayHitReact(Target) end
+
 ---@param Target AActor
 function IRSTHitReactLimiterInterface:AddHitReactTarget(Target) end
-
 
 ---@class IRSTHomingTargetable : IInterface
 IRSTHomingTargetable = {}
 
 ---@return FVector
 function IRSTHomingTargetable:GetHomingSocketLocation() end
+
 ---@return FName
 function IRSTHomingTargetable:GetHomingSocket() end
+
 ---@return USceneComponent
 function IRSTHomingTargetable:GetHomingComponent() end
-
 
 ---@class IRSTHotbarInterface : IInterface
 IRSTHotbarInterface = {}
@@ -4895,11 +5712,12 @@ IRSTIndicatorWidgetInterface = {}
 
 ---@param Indicator URSTIndicatorDescriptor
 function IRSTIndicatorWidgetInterface:UnbindIndicator(Indicator) end
+
 ---@return UWidget
 function IRSTIndicatorWidgetInterface:GetRelevantWidget() end
+
 ---@param Indicator URSTIndicatorDescriptor
 function IRSTIndicatorWidgetInterface:BindIndicator(Indicator) end
-
 
 ---@class IRSTInteractableTarget : IInterface
 IRSTInteractableTarget = {}
@@ -4907,28 +5725,29 @@ IRSTInteractableTarget = {}
 ---@param InteractingActor AActor
 function IRSTInteractableTarget:StopInteraction(InteractingActor) end
 
-
 ---@class IRSTMovementBaseTagSource : IInterface
 IRSTMovementBaseTagSource = {}
 
 ---@return FGameplayTag
 function IRSTMovementBaseTagSource:GetMovementBaseTag() end
 
-
 ---@class IRSTPingableInterface : IInterface
 IRSTPingableInterface = {}
 
 ---@return FName
 function IRSTPingableInterface:GetPingSocketName() end
+
 ---@return USceneComponent
 function IRSTPingableInterface:GetPingSceneComponent() end
+
 ---@return FText
 function IRSTPingableInterface:GetPingDisplayName() end
+
 ---@return FString
 function IRSTPingableInterface:GetPingChatTooltipString() end
+
 ---@return boolean
 function IRSTPingableInterface:CanBePinged() end
-
 
 ---@class IRSTPlayerIdInterface : IInterface
 IRSTPlayerIdInterface = {}
@@ -4952,7 +5771,6 @@ IRSTSkinnable = {}
 ---@return UMeshComponent
 function IRSTSkinnable:GetSkinnableMeshComponent() end
 
-
 ---@class IRSTTagIdentifierInterface : IInterface
 IRSTTagIdentifierInterface = {}
 
@@ -4966,14 +5784,16 @@ IRSTTrapCooldownModifierInterface = {}
 
 ---@return boolean
 function IRSTTrapCooldownModifierInterface:IsCooldownModifierActive() end
+
 ---@param InBaseDuration float
 ---@return float
 function IRSTTrapCooldownModifierInterface:HandleCooldownModification(InBaseDuration) end
+
 ---@return FGameplayTag
 function IRSTTrapCooldownModifierInterface:GetCooldownModifierIdentifier() end
+
 ---@return boolean
 function IRSTTrapCooldownModifierInterface:CanCooldownModifierStack() end
-
 
 ---@class UAbilityTask_RSTOgreCharge : UAbilityTask
 ---@field OnOgreChargeOverlap FAbilityTask_RSTOgreChargeOnOgreChargeOverlap
@@ -4988,15 +5808,17 @@ UAbilityTask_RSTOgreCharge = {}
 ---@param CombatCapsuleID FGameplayTag
 ---@param Duration float
 ---@return UAbilityTask_RSTOgreCharge
-function UAbilityTask_RSTOgreCharge:RSTOgreCharge(OwningAbility, TaskInstanceName, DestActor, DesiredRadius, CombatCapsuleID, Duration) end
+function UAbilityTask_RSTOgreCharge:RSTOgreCharge(OwningAbility, TaskInstanceName, DestActor, DesiredRadius,
+                                                  CombatCapsuleID, Duration) end
+
 ---@param OverlappedComponent UPrimitiveComponent
 ---@param OtherActor AActor
 ---@param OtherComp UPrimitiveComponent
 ---@param OtherBodyIndex int32
 ---@param bFromSweep boolean
 ---@param SweepResult FHitResult
-function UAbilityTask_RSTOgreCharge:OnOverlapCallback(OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex, bFromSweep, SweepResult) end
-
+function UAbilityTask_RSTOgreCharge:OnOverlapCallback(OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex,
+                                                      bFromSweep, SweepResult) end
 
 ---@class UBTTask_MoveToBBRange : UBTTask_BlackboardBase
 ---@field RadiusBlackboardKey FBlackboardKeySelector
@@ -5066,12 +5888,12 @@ URSTAbilityCollisionBlueprintLibrary = {}
 ---@param Level float
 ---@return FRSTAbilityCollisionSpecHandle
 function URSTAbilityCollisionBlueprintLibrary:MakeAbilityCollisionSpec(Definition, AbilitySystemComponent, Level) end
+
 ---@param Spec FRSTAbilityCollisionSpecHandle
 ---@param DataTag FGameplayTag
 ---@param Magnitude float
 ---@return FRSTAbilityCollisionSpecHandle
 function URSTAbilityCollisionBlueprintLibrary:AssignSetByCallerMagnitude(Spec, DataTag, Magnitude) end
-
 
 ---@class URSTAbilityCollisionDefinition : UDataAsset
 ---@field Triggers TArray<URSTAbilityCollisionTrigger>
@@ -5139,10 +5961,10 @@ URSTAbilitySet = {}
 ---@param Tag FGameplayTag
 ---@return URSTGameplayAbility
 function URSTAbilitySet:FindAbilityWithTag(Tag) end
+
 ---@param TagQuery FGameplayTagQuery
 ---@return URSTGameplayAbility
 function URSTAbilitySet:FindAbility(TagQuery) end
-
 
 ---@class URSTAbilitySystemBlueprintLibrary : UAbilitySystemBlueprintLibrary
 URSTAbilitySystemBlueprintLibrary = {}
@@ -5159,7 +5981,11 @@ URSTAbilitySystemBlueprintLibrary = {}
 ---@param OutOverlappedActors TArray<AActor>
 ---@param bDebugDraw boolean
 ---@param DebugDrawLifetime float
-function URSTAbilitySystemBlueprintLibrary:TraceSphere(OwningAbility, SourceLocation, Radius, CollisionProfile, IgnoreActors, bIgnoreSelf, bTraceLineOfSight, LineOfSightProfile, LineOfSightHitTolerance, OutOverlappedActors, bDebugDraw, DebugDrawLifetime) end
+function URSTAbilitySystemBlueprintLibrary:TraceSphere(OwningAbility, SourceLocation, Radius, CollisionProfile,
+                                                       IgnoreActors, bIgnoreSelf, bTraceLineOfSight, LineOfSightProfile,
+                                                       LineOfSightHitTolerance, OutOverlappedActors, bDebugDraw,
+                                                       DebugDrawLifetime) end
+
 ---@param OwningAbility UGameplayAbility
 ---@param SourceLocation FVector
 ---@param SourceForward FVector
@@ -5175,171 +6001,222 @@ function URSTAbilitySystemBlueprintLibrary:TraceSphere(OwningAbility, SourceLoca
 ---@param OutOverlappedActors TArray<AActor>
 ---@param bDebugDraw boolean
 ---@param DebugDrawLifetime float
-function URSTAbilitySystemBlueprintLibrary:TraceForwardArc(OwningAbility, SourceLocation, SourceForward, SourceUp, Radius, Angle, InitialRadius, CollisionProfile, IgnoreActors, bIgnoreSelf, bTraceLineOfSight, LineOfSightProfile, OutOverlappedActors, bDebugDraw, DebugDrawLifetime) end
+function URSTAbilitySystemBlueprintLibrary:TraceForwardArc(OwningAbility, SourceLocation, SourceForward, SourceUp, Radius,
+                                                           Angle, InitialRadius, CollisionProfile, IgnoreActors,
+                                                           bIgnoreSelf, bTraceLineOfSight, LineOfSightProfile,
+                                                           OutOverlappedActors, bDebugDraw, DebugDrawLifetime) end
+
 ---@param InHandle FGameplayAbilityTargetDataHandle
 ---@param OutHandles TArray<FGameplayAbilityTargetDataHandle>
 function URSTAbilitySystemBlueprintLibrary:SplitTargetDataHandle(InHandle, OutHandles) end
+
 ---@param Target AActor
 ---@param Spec FGameplayEffectSpec
 ---@return boolean
 function URSTAbilitySystemBlueprintLibrary:ShouldPreventHitFromFriendlyFire(Target, Spec) end
+
 ---@param SpecHandle FGameplayEffectSpecHandle
 ---@param SetByCallerValues TMap<FGameplayTag, float>
 ---@return FGameplayEffectSpecHandle
 function URSTAbilitySystemBlueprintLibrary:SetSetByCallerValues(SpecHandle, SetByCallerValues) end
+
 ---@param SpecHandle FGameplayEffectSpecHandle
 ---@param InterruptScale float
 ---@return FGameplayEffectSpecHandle
 function URSTAbilitySystemBlueprintLibrary:SetInterruptScale(SpecHandle, InterruptScale) end
+
 ---@param SpecHandle FGameplayEffectSpecHandle
 ---@param Period float
 ---@return FGameplayEffectSpecHandle
 function URSTAbilitySystemBlueprintLibrary:SetEffectPeriod(SpecHandle, Period) end
+
 ---@param SpecHandle FGameplayEffectSpecHandle
 ---@param KnockbackData URSTKnockbackData
 ---@return FGameplayEffectSpecHandle
 function URSTAbilitySystemBlueprintLibrary:SetEffectKnockbackData(SpecHandle, KnockbackData) end
+
 ---@param SpecHandle FGameplayEffectSpecHandle
 ---@param GibChance float
 ---@return FGameplayEffectSpecHandle
 function URSTAbilitySystemBlueprintLibrary:SetEffectGibChance(SpecHandle, GibChance) end
+
 ---@param SpecHandle FGameplayEffectSpecHandle
 ---@param Damage float
 ---@return FGameplayEffectSpecHandle
 function URSTAbilitySystemBlueprintLibrary:SetEffectDamage(SpecHandle, Damage) end
+
 ---@param Context FGameplayEffectContextHandle
 ---@param NewInstigator AActor
 ---@return FGameplayEffectContextHandle
 function URSTAbilitySystemBlueprintLibrary:SetEffectContextInstigator(Context, NewInstigator) end
+
 ---@param Context FGameplayEffectContextHandle
 ---@param NewEffectCauser AActor
 ---@return FGameplayEffectContextHandle
 function URSTAbilitySystemBlueprintLibrary:SetEffectContextEffectCauser(Context, NewEffectCauser) end
+
 ---@param InContext FGameplayEffectContextHandle
 ---@param DeathImpulse float
 ---@return FGameplayEffectContextHandle
 function URSTAbilitySystemBlueprintLibrary:SetEffectContextDeathImpulse(InContext, DeathImpulse) end
+
 ---@param InContext FGameplayEffectContextHandle
 ---@param AdditionalComboPoints TMap<FGameplayTag, float>
 ---@return FGameplayEffectContextHandle
 function URSTAbilitySystemBlueprintLibrary:SetEffectContextAdditionalComboPoints(InContext, AdditionalComboPoints) end
+
 ---@param Context FGameplayEffectContextHandle
 ---@param Ability UGameplayAbility
 function URSTAbilitySystemBlueprintLibrary:SetEffectContextAbility(Context, Ability) end
+
 ---@param SpecHandle FGameplayEffectSpecHandle
 ---@param bApplyInterrupt boolean
 ---@return FGameplayEffectSpecHandle
 function URSTAbilitySystemBlueprintLibrary:SetApplyInterrupt(SpecHandle, bApplyInterrupt) end
+
 ---@param Source UAbilitySystemComponent
 ---@param Target AActor
 ---@return boolean
 function URSTAbilitySystemBlueprintLibrary:RSTAOECheckDynamic__DelegateSignature(Source, Target) end
+
 ---@param TargetASC UAbilitySystemComponent
 ---@param SourceASC UAbilitySystemComponent
 ---@param AdditionalData TArray<FRSTAdditionalGameplayEffectData>
 function URSTAbilitySystemBlueprintLibrary:RemoveEffectsFromTarget(TargetASC, SourceASC, AdditionalData) end
+
 ---@param Handle FRSTActorOpacityHandle
 ---@param bInstant boolean
 ---@return boolean
 function URSTAbilitySystemBlueprintLibrary:RemoveAndInvalidateOpacity(Handle, bInstant) end
+
 ---@param AttachmentHandle FRSTAttachmentTransactionHandle
 ---@return boolean
 function URSTAbilitySystemBlueprintLibrary:RemoveAndInvalidateAttachment(AttachmentHandle) end
+
 ---@param Handle FRSTAnimLayerHandle
 ---@return boolean
 function URSTAbilitySystemBlueprintLibrary:RemoveAndInvalidateAnimLayer(Handle) end
+
 ---@param LooseTagHandle FRSTLooseTagHandle
 ---@return boolean
 function URSTAbilitySystemBlueprintLibrary:RemoveAndInvalidate(LooseTagHandle) end
+
 ---@param Actor AActor
 ---@return FGameplayAbilityTargetDataHandle
 function URSTAbilitySystemBlueprintLibrary:MakeTargetDataForActor(Actor) end
+
 ---@param Spec FGameplayAbilitySpecHandle
 ---@return boolean
 function URSTAbilitySystemBlueprintLibrary:IsValidSpec(Spec) end
+
 ---@param LooseTagHandle FRSTLooseTagHandle
 ---@return boolean
 function URSTAbilitySystemBlueprintLibrary:IsTagHandleValid(LooseTagHandle) end
+
 ---@param WorldContextObject UObject
 ---@param Location FVector
 ---@param ActorClass TSubclassOf<AActor>
 ---@param Threshold float
 ---@param bExtendUp boolean
 ---@return boolean
-function URSTAbilitySystemBlueprintLibrary:IsPointOnNavMeshForClass(WorldContextObject, Location, ActorClass, Threshold, bExtendUp) end
+function URSTAbilitySystemBlueprintLibrary:IsPointOnNavMeshForClass(WorldContextObject, Location, ActorClass, Threshold,
+                                                                    bExtendUp) end
+
 ---@param WorldContextObject UObject
 ---@param Location FVector
 ---@param Actor AActor
 ---@param Threshold float
 ---@param bExtendUp boolean
 ---@return boolean
-function URSTAbilitySystemBlueprintLibrary:IsPointOnNavMeshForActor(WorldContextObject, Location, Actor, Threshold, bExtendUp) end
+function URSTAbilitySystemBlueprintLibrary:IsPointOnNavMeshForActor(WorldContextObject, Location, Actor, Threshold,
+                                                                    bExtendUp) end
+
 ---@param WorldContextObject UObject
 ---@param Location FVector
 ---@param Threshold float
 ---@param bExtendUp boolean
 ---@return boolean
 function URSTAbilitySystemBlueprintLibrary:IsPointOnNavMesh(WorldContextObject, Location, Threshold, bExtendUp) end
+
 ---@param Handle FActiveGameplayEffectHandle
 ---@return boolean
 function URSTAbilitySystemBlueprintLibrary:IsEffectHandleValid(Handle) end
+
 ---@param Handle FRSTAttachmentTransactionHandle
 ---@return boolean
 function URSTAbilitySystemBlueprintLibrary:IsAttachmentHandleValid(Handle) end
+
 ---@param Handle FRSTAnimLayerHandle
 ---@return boolean
 function URSTAbilitySystemBlueprintLibrary:IsAnimLayerHandleValid(Handle) end
+
 ---@param Spec FGameplayEffectSpec
 ---@return UWorld
 function URSTAbilitySystemBlueprintLibrary:GetWorldFromGameplayEffectSpec(Spec) end
+
 ---@param Instigator AActor
 ---@param Target AActor
 ---@return ETeamAttitude::Type
 function URSTAbilitySystemBlueprintLibrary:GetTeamAttitudeTowards(Instigator, Target) end
+
 ---@param Spec FGameplayEffectSpec
 ---@return ARSTTrap
 function URSTAbilitySystemBlueprintLibrary:GetSourceTrapFromGameplayEffectSpec(Spec) end
+
 ---@param Spec FGameplayEffectSpec
 ---@return ARSTPlayerState
 function URSTAbilitySystemBlueprintLibrary:GetSourcePlayerStateFromGameplayEffectSpec(Spec) end
+
 ---@param TargetActor AActor
 ---@param SourceLocation FVector
 ---@param Speed float
 ---@param CurrentTargetLocation FVector
 ---@param OutTargetLocation FVector
 ---@return boolean
-function URSTAbilitySystemBlueprintLibrary:GetPredictiveAimingLocationWithTarget(TargetActor, SourceLocation, Speed, CurrentTargetLocation, OutTargetLocation) end
+function URSTAbilitySystemBlueprintLibrary:GetPredictiveAimingLocationWithTarget(TargetActor, SourceLocation, Speed,
+                                                                                 CurrentTargetLocation, OutTargetLocation) end
+
 ---@param TargetComponent USceneComponent
 ---@param SourceLocation FVector
 ---@param Speed float
 ---@param OutTargetLocation FVector
 ---@return boolean
-function URSTAbilitySystemBlueprintLibrary:GetPredictiveAimingLocationForComponent(TargetComponent, SourceLocation, Speed, OutTargetLocation) end
+function URSTAbilitySystemBlueprintLibrary:GetPredictiveAimingLocationForComponent(TargetComponent, SourceLocation, Speed,
+                                                                                   OutTargetLocation) end
+
 ---@param TargetActor AActor
 ---@param SourceLocation FVector
 ---@param Speed float
 ---@param OutTargetLocation FVector
 ---@return boolean
-function URSTAbilitySystemBlueprintLibrary:GetPredictiveAimingLocation(TargetActor, SourceLocation, Speed, OutTargetLocation) end
+function URSTAbilitySystemBlueprintLibrary:GetPredictiveAimingLocation(TargetActor, SourceLocation, Speed,
+                                                                       OutTargetLocation) end
+
 ---@return ARSTOnslaughtCoordinator
 function URSTAbilitySystemBlueprintLibrary:GetOnslaughtCoordinator() end
+
 ---@param WorldContextObject UObject
 ---@param ActorClass TSubclassOf<AActor>
 ---@return ANavPowerNavigationData
 function URSTAbilitySystemBlueprintLibrary:GetNavigationDataForClass(WorldContextObject, ActorClass) end
+
 ---@param WorldContextObject UObject
 ---@param Actor AActor
 ---@return ANavPowerNavigationData
 function URSTAbilitySystemBlueprintLibrary:GetNavigationDataForActor(WorldContextObject, Actor) end
+
 ---@param Spec FGameplayEffectSpec
 ---@return ARSTGameStateBase
 function URSTAbilitySystemBlueprintLibrary:GetGameStateFromGameplayEffectSpec(Spec) end
+
 ---@param Spec FGameplayEffectSpec
 ---@return FGameplayTagContainer
 function URSTAbilitySystemBlueprintLibrary:GetGameplayEffectSpecTags(Spec) end
+
 ---@param Spec FGameplayEffectSpec
 ---@return FGameplayTagContainer
 function URSTAbilitySystemBlueprintLibrary:GetGameplayEffectSpecCapturedSourceTags(Spec) end
+
 ---@param Montage UAnimMontage
 ---@param Tag FGameplayTag
 ---@param OutTime float
@@ -5347,6 +6224,7 @@ function URSTAbilitySystemBlueprintLibrary:GetGameplayEffectSpecCapturedSourceTa
 ---@param bApplyRateScale boolean
 ---@return boolean
 function URSTAbilitySystemBlueprintLibrary:GetAnimNotifyTime(Montage, Tag, OutTime, bMatchExact, bApplyRateScale) end
+
 ---@param Montage UAnimMontage
 ---@param Tag FGameplayTag
 ---@param OutStart float
@@ -5354,13 +6232,17 @@ function URSTAbilitySystemBlueprintLibrary:GetAnimNotifyTime(Montage, Tag, OutTi
 ---@param bMatchExact boolean
 ---@param bApplyRateScale boolean
 ---@return boolean
-function URSTAbilitySystemBlueprintLibrary:GetAnimNotifyStateTimes(Montage, Tag, OutStart, OutEnd, bMatchExact, bApplyRateScale) end
+function URSTAbilitySystemBlueprintLibrary:GetAnimNotifyStateTimes(Montage, Tag, OutStart, OutEnd, bMatchExact,
+                                                                   bApplyRateScale) end
+
 ---@param Ability UGameplayAbility
 ---@param OutTags FGameplayTagContainer
 function URSTAbilitySystemBlueprintLibrary:GetAbilityTags(Ability, OutTags) end
+
 ---@param InContext FGameplayEffectContextHandle
 ---@return UGameplayAbility
 function URSTAbilitySystemBlueprintLibrary:GetAbilityInstanceFromContext_NotReplicated(InContext) end
+
 ---@param WorldContextObject UObject
 ---@param Location FVector
 ---@param Radius float
@@ -5369,7 +6251,9 @@ function URSTAbilitySystemBlueprintLibrary:GetAbilityInstanceFromContext_NotRepl
 ---@param Source UAbilitySystemComponent
 ---@param CheckFunc FGatherAOETargetsByObjectTypeCheckFunc
 ---@return FGameplayAbilityTargetDataHandle
-function URSTAbilitySystemBlueprintLibrary:GatherAOETargetsByObjectType(WorldContextObject, Location, Radius, ObjectTypes, IgnoreActors, Source, CheckFunc) end
+function URSTAbilitySystemBlueprintLibrary:GatherAOETargetsByObjectType(WorldContextObject, Location, Radius, ObjectTypes,
+                                                                        IgnoreActors, Source, CheckFunc) end
+
 ---@param WorldContextObject UObject
 ---@param Location FVector
 ---@param Radius float
@@ -5378,47 +6262,66 @@ function URSTAbilitySystemBlueprintLibrary:GatherAOETargetsByObjectType(WorldCon
 ---@param Source UAbilitySystemComponent
 ---@param CheckFunc FGatherAOETargetsCheckFunc
 ---@return FGameplayAbilityTargetDataHandle
-function URSTAbilitySystemBlueprintLibrary:GatherAOETargets(WorldContextObject, Location, Radius, CollisionProfile, IgnoreActors, Source, CheckFunc) end
+function URSTAbilitySystemBlueprintLibrary:GatherAOETargets(WorldContextObject, Location, Radius, CollisionProfile,
+                                                            IgnoreActors, Source, CheckFunc) end
+
 ---@param Spec FGameplayEffectSpec
 ---@param bAllowPendingKill boolean
 ---@return ARSTPlayerState
 function URSTAbilitySystemBlueprintLibrary:FindPlayerStateFromGameplayEffectSpec(Spec, bAllowPendingKill) end
+
 ---@param InHandle FGameplayAbilityTargetDataHandle
 ---@param Filters TArray<FRSTRankedTargetFilter>
 ---@param FilterCount int32
 ---@param OutSelected FGameplayAbilityTargetDataHandle
 ---@param OutUnselected FGameplayAbilityTargetDataHandle
-function URSTAbilitySystemBlueprintLibrary:FilterTargetPriority(InHandle, Filters, FilterCount, OutSelected, OutUnselected) end
+function URSTAbilitySystemBlueprintLibrary:FilterTargetPriority(InHandle, Filters, FilterCount, OutSelected,
+                                                                OutUnselected) end
+
 ---@param Ability UGameplayAbility
 ---@param Tags FGameplayTagContainer
 function URSTAbilitySystemBlueprintLibrary:EnsureAbilityTagsPresent(Ability, Tags) end
+
 ---@param Spec FGameplayEffectSpec
 ---@param Tag FGameplayTag
 ---@return boolean
 function URSTAbilitySystemBlueprintLibrary:DoesGameplayEffectSpecContainTag(Spec, Tag) end
+
 ---@param AffectedActors TArray<AActor>
 ---@param bNewIsDeferringDeath boolean
 function URSTAbilitySystemBlueprintLibrary:DeferDeath(AffectedActors, bNewIsDeferringDeath) end
+
 ---@param WorldContextObject UObject
 ---@param ProjectileClass TSubclassOf<ARSTProjectile>
 ---@param Location FVector
 ---@param Velocity FVector
 function URSTAbilitySystemBlueprintLibrary:Debug_FireProjectile(WorldContextObject, ProjectileClass, Location, Velocity) end
+
 ---@param ASC UAbilitySystemComponent
 ---@param AdditionalData TArray<FRSTAdditionalGameplayEffectData>
 ---@param OptionalSourceAbility URSTGameplayAbility
 ---@param SetByCallerOverrides TMap<FGameplayTag, float>
 ---@return TArray<FGameplayEffectSpecHandle>
-function URSTAbilitySystemBlueprintLibrary:CreateSpecHandlesForAdditionalEffects(ASC, AdditionalData, OptionalSourceAbility, SetByCallerOverrides) end
+function URSTAbilitySystemBlueprintLibrary:CreateSpecHandlesForAdditionalEffects(ASC, AdditionalData,
+                                                                                 OptionalSourceAbility,
+                                                                                 SetByCallerOverrides) end
+
+---@param A FGameplayTagContainer
+---@param B FGameplayTagContainer
+---@return FGameplayTagContainer
+function URSTAbilitySystemBlueprintLibrary:CombineTags(A, B) end
+
 ---@param InContext FGameplayEffectContextHandle
 ---@param bResetOrigin boolean
 ---@return FGameplayEffectContextHandle
 function URSTAbilitySystemBlueprintLibrary:ClearEffectContextHitResult(InContext, bResetOrigin) end
+
 ---@param ASC UAbilitySystemComponent
 ---@param Handle FGameplayAbilityTargetDataHandle
 ---@param Spec FGameplayEffectSpecHandle
 ---@param OutAppliedHandles TArray<FActiveGameplayEffectHandle>
 function URSTAbilitySystemBlueprintLibrary:ApplyGameplayEffectSpecToTargetData(ASC, Handle, Spec, OutAppliedHandles) end
+
 ---@param WorldContextObject UObject
 ---@param SourceObject AActor
 ---@param Location FVector
@@ -5431,19 +6334,24 @@ function URSTAbilitySystemBlueprintLibrary:ApplyGameplayEffectSpecToTargetData(A
 ---@param SetByCallerValues TMap<FGameplayTag, float>
 ---@param CheckFunc FApplyAOEEffectCheckFunc
 ---@param DeathImpulseForce float
-function URSTAbilitySystemBlueprintLibrary:ApplyAOEEffect(WorldContextObject, SourceObject, Location, Radius, CollisionProfile, IgnoreActors, Source, Effect, Damage, SetByCallerValues, CheckFunc, DeathImpulseForce) end
+function URSTAbilitySystemBlueprintLibrary:ApplyAOEEffect(WorldContextObject, SourceObject, Location, Radius,
+                                                          CollisionProfile, IgnoreActors, Source, Effect, Damage,
+                                                          SetByCallerValues, CheckFunc, DeathImpulseForce) end
+
 ---@param ASC UAbilitySystemComponent
 ---@param AdditionalData TArray<FRSTAdditionalGameplayEffectData>
 ---@param Handle FGameplayAbilityTargetDataHandle
 ---@param OptionalSourceAbility URSTGameplayAbility
 ---@param SetByCallerOverrides TMap<FGameplayTag, float>
 ---@param OutAppliedHandles TArray<FActiveGameplayEffectHandle>
-function URSTAbilitySystemBlueprintLibrary:ApplyAdditionalEffectsToTarget(ASC, AdditionalData, Handle, OptionalSourceAbility, SetByCallerOverrides, OutAppliedHandles) end
+function URSTAbilitySystemBlueprintLibrary:ApplyAdditionalEffectsToTarget(ASC, AdditionalData, Handle,
+                                                                          OptionalSourceAbility, SetByCallerOverrides,
+                                                                          OutAppliedHandles) end
+
 ---@param InHandle FGameplayAbilityTargetDataHandle
 ---@param Actors TArray<AActor>
 ---@return FGameplayAbilityTargetDataHandle
 function URSTAbilitySystemBlueprintLibrary:AddActorArrayTargetData(InHandle, Actors) end
-
 
 ---@class URSTAbilitySystemComponent : UAbilitySystemComponent
 ---@field OnAbilityAdded FRSTAbilitySystemComponentOnAbilityAdded
@@ -5463,165 +6371,224 @@ URSTAbilitySystemComponent = {}
 
 ---@param EndedData FAbilityEndedData
 function URSTAbilitySystemComponent:TrackAbilityEnded(EndedData) end
+
 ---@param Hit FHitResult
 ---@param Source URSTAbilitySystemComponent
 ---@param Context FRSTMeleeAbilityHitContext
 ---@param PredictionKey FPredictionKey
 function URSTAbilitySystemComponent:Server_ApplyMeleeWeaponHitFromSource(Hit, Source, Context, PredictionKey) end
+
 ---@param Hit FHitResult
 ---@param Target URSTAbilitySystemComponent
 ---@param Context FRSTMeleeAbilityHitContext
 ---@param PredictionKey FPredictionKey
 function URSTAbilitySystemComponent:Server_ApplyMeleeWeaponHit(Hit, Target, Context, PredictionKey) end
+
 ---@param Ability UGameplayAbility
 function URSTAbilitySystemComponent:RSTAbilityGrantDelegate__DelegateSignature(Ability) end
+
 ---@param Handle FTimerHandle
 function URSTAbilitySystemComponent:RemoveTimedLooseTagByTimerHandle(Handle) end
+
 ---@param InHandle FRSTLooseTagHandle
 function URSTAbilitySystemComponent:RemoveManagedLooseTagsByHandle(InHandle) end
+
 ---@param InHandle FRSTLooseTagHandle
 function URSTAbilitySystemComponent:RemoveManagedLooseTagByHandle(InHandle) end
+
 ---@param GameplayCueTag FGameplayTag
 ---@param GameplayCueParameters FGameplayCueParameters
 function URSTAbilitySystemComponent:RemoveGameplayCueLocal(GameplayCueTag, GameplayCueParameters) end
+
 function URSTAbilitySystemComponent:RemoveAllManagedLooseTags() end
+
 ---@param Tag FGameplayTag
 ---@param CueDataClass TSubclassOf<URSTCueData>
 function URSTAbilitySystemComponent:RegisterCueDataFromClass(Tag, CueDataClass) end
+
 ---@param Tag FGameplayTag
 ---@param CueData URSTCueData
 function URSTAbilitySystemComponent:RegisterCueData(Tag, CueData) end
+
 ---@return FString
 function URSTAbilitySystemComponent:PrintAbilityEndTimes() end
+
 ---@param Handle FRSTLooseTagHandle
 function URSTAbilitySystemComponent:OnTimedLooseTagFinished(Handle) end
+
 function URSTAbilitySystemComponent:OnStatusChangedDelegate__DelegateSignature() end
+
 function URSTAbilitySystemComponent:OnRep_CueData() end
+
+---@param Effect FActiveGameplayEffect
+function URSTAbilitySystemComponent:OnGameplayEffectRemoved(Effect) end
+
 ---@param Character ARSTCharacter
 ---@param LaunchVelocity FVector
 ---@param MaxWeightClass ERSTCharacterWeightClass
 ---@param AbilityCDO UGameplayAbility
 ---@param bRagdoll boolean
 ---@param Priority int32
-function URSTAbilitySystemComponent:NetMulticast_Launch(Character, LaunchVelocity, MaxWeightClass, AbilityCDO, bRagdoll, Priority) end
+function URSTAbilitySystemComponent:NetMulticast_Launch(Character, LaunchVelocity, MaxWeightClass, AbilityCDO, bRagdoll,
+                                                        Priority) end
+
+---@param HostGrappleID uint16
 ---@param Location FVector
 ---@param Speed float
 ---@param HoldDuration float
 ---@param MaxWeightClass ERSTCharacterWeightClass
 ---@param SourceASC URSTAbilitySystemComponent
 ---@param AbilityCDO UGameplayAbility
-function URSTAbilitySystemComponent:NetMulticast_GrappleSelfToLocation(Location, Speed, HoldDuration, MaxWeightClass, SourceASC, AbilityCDO) end
+function URSTAbilitySystemComponent:NetMulticast_GrappleSelfToLocation(HostGrappleID, Location, Speed, HoldDuration,
+                                                                       MaxWeightClass, SourceASC, AbilityCDO) end
+
+---@param HostGrappleID uint16
+function URSTAbilitySystemComponent:NetMulticast_EndGrapple(HostGrappleID) end
+
+function URSTAbilitySystemComponent:NetMulticast_EndAnyGrapple() end
+
 ---@param SpecHandle FGameplayAbilitySpecHandle
 ---@return boolean
 function URSTAbilitySystemComponent:IsAbilityActive(SpecHandle) end
+
 ---@param Tag FGameplayTag
 ---@return boolean
 function URSTAbilitySystemComponent:HasCueData(Tag) end
+
 ---@param WithTags FGameplayTagContainer
 ---@return boolean
 function URSTAbilitySystemComponent:HasActiveAbilitiesWithTags(WithTags) end
+
 ---@param Tags FGameplayTagContainer
 ---@param OutTime float
 ---@return boolean
 function URSTAbilitySystemComponent:GetLowestAbilityEndedTime(Tags, OutTime) end
+
 ---@param Tags FGameplayTagContainer
 ---@param OutTime float
 ---@return boolean
 function URSTAbilitySystemComponent:GetLowestAbilityEndedElapsedTime(Tags, OutTime) end
+
 ---@param Tags FGameplayTagContainer
 ---@param OutTime float
 ---@return boolean
 function URSTAbilitySystemComponent:GetHighestAbilityEndedTime(Tags, OutTime) end
+
 ---@param Tags FGameplayTagContainer
 ---@param OutTime float
 ---@return boolean
 function URSTAbilitySystemComponent:GetHighestAbilityEndedElapsedTime(Tags, OutTime) end
+
 ---@param Tag FGameplayTag
 ---@return URSTCueData
 function URSTAbilitySystemComponent:GetCueData(Tag) end
+
 ---@param Tag FGameplayTag
 ---@param OutTime float
 ---@return boolean
 function URSTAbilitySystemComponent:GetAbilityEndedTime(Tag, OutTime) end
+
 ---@param Tag FGameplayTag
 ---@param OutTime float
 ---@return boolean
 function URSTAbilitySystemComponent:GetAbilityEndedElapsedTime(Tag, OutTime) end
+
 ---@param Tag FGameplayTag
 function URSTAbilitySystemComponent:FreeCueData(Tag) end
+
 ---@param Tags FGameplayTagContainer
 ---@param bExact boolean
 ---@param OptionalSourceObject UObject
 ---@return TArray<FGameplayAbilitySpecHandle>
 function URSTAbilitySystemComponent:FindAllAbilitySpecHandlesWithTags(Tags, bExact, OptionalSourceObject) end
+
 ---@param Tag FGameplayTag
 ---@param bExact boolean
 ---@param OptionalSourceObject UObject
 ---@return TArray<FGameplayAbilitySpecHandle>
 function URSTAbilitySystemComponent:FindAllAbilitySpecHandlesWithTag(Tag, bExact, OptionalSourceObject) end
+
 ---@param Tags FGameplayTagContainer
 ---@param bExact boolean
 ---@param OptionalSourceObject UObject
 ---@return FGameplayAbilitySpecHandle
 function URSTAbilitySystemComponent:FindAbilitySpecHandleWithTags(Tags, bExact, OptionalSourceObject) end
+
 ---@param Tag FGameplayTag
 ---@param bExact boolean
 ---@param OptionalSourceObject UObject
 ---@return FGameplayAbilitySpecHandle
 function URSTAbilitySystemComponent:FindAbilitySpecHandleWithTag(Tag, bExact, OptionalSourceObject) end
+
 ---@param AbilityClass TSubclassOf<UGameplayAbility>
 ---@param OptionalSourceObject UObject
 ---@return FGameplayAbilitySpecHandle
 function URSTAbilitySystemComponent:FindAbilitySpecHandleForClass(AbilityClass, OptionalSourceObject) end
+
 ---@param GameplayCueTag FGameplayTag
 ---@param GameplayCueParameters FGameplayCueParameters
 function URSTAbilitySystemComponent:ExecuteGameplayCueLocal(GameplayCueTag, GameplayCueParameters) end
+
+---@param GrappleID int32
+function URSTAbilitySystemComponent:EndGrapple(GrappleID) end
+
+function URSTAbilitySystemComponent:EndAnyGrapple() end
+
 ---@param Ability UGameplayAbility
 ---@param FailureReason FGameplayTagContainer
 function URSTAbilitySystemComponent:ClientNotifyAbilityFailed(Ability, FailureReason) end
+
 ---@param KnockbackTaskName FName
 ---@param Direction FVector
 ---@param Distance float
 ---@param Height float
 ---@param Duration float
 function URSTAbilitySystemComponent:Client_NotifyKnockback(KnockbackTaskName, Direction, Distance, Height, Duration) end
+
 ---@param WithTags FGameplayTagContainer
 ---@param WithoutTags FGameplayTagContainer
 ---@param IgnoreAbility UGameplayAbility
 function URSTAbilitySystemComponent:CancelAbilitiesWithTag(WithTags, WithoutTags, IgnoreAbility) end
+
 ---@param Tag FGameplayTag
 ---@param Data FGameplayEventData
 function URSTAbilitySystemComponent:BP_HandleGameplayEvent(Tag, Data) end
+
 ---@param InTags FGameplayTagContainer
 ---@param bReplicateTag boolean
 ---@param Duration float
 ---@return FTimerHandle
 function URSTAbilitySystemComponent:AddTimedLooseTags(InTags, bReplicateTag, Duration) end
+
 ---@param InTag FGameplayTag
 ---@param bReplicateTag boolean
 ---@param Duration float
 ---@return FTimerHandle
 function URSTAbilitySystemComponent:AddTimedLooseTag(InTag, bReplicateTag, Duration) end
+
 ---@param InTags FGameplayTagContainer
 ---@return FTimerHandle
 function URSTAbilitySystemComponent:AddSingleTickLooseTags(InTags) end
+
 ---@param InTag FGameplayTag
 ---@return FTimerHandle
 function URSTAbilitySystemComponent:AddSingleTickLooseTag(InTag) end
+
 ---@param InTags FGameplayTagContainer
 ---@param bReplicateTag boolean
 ---@param bAllowOnSimulatedProxy boolean
 ---@return FRSTLooseTagHandle
 function URSTAbilitySystemComponent:AddManagedLooseTags(InTags, bReplicateTag, bAllowOnSimulatedProxy) end
+
 ---@param InTag FGameplayTag
 ---@param bReplicate boolean
 ---@param bAllowOnSimulatedProxy boolean
 ---@return FRSTLooseTagHandle
 function URSTAbilitySystemComponent:AddManagedLooseTag(InTag, bReplicate, bAllowOnSimulatedProxy) end
+
 ---@param GameplayCueTag FGameplayTag
 ---@param GameplayCueParameters FGameplayCueParameters
 function URSTAbilitySystemComponent:AddGameplayCueLocal(GameplayCueTag, GameplayCueParameters) end
-
 
 ---@class URSTAbilitySystemGlobals : UAbilitySystemGlobals
 URSTAbilitySystemGlobals = {}
@@ -5647,7 +6614,10 @@ URSTAbilityTask_AICollectPawns = {}
 ---@param Duration float
 ---@param bShowDebugCircle boolean
 ---@return URSTAbilityTask_AICollectPawns
-function URSTAbilityTask_AICollectPawns:RSTAICollectPawns_AttributeRadius(OwningAbility, TaskInstanceName, MovingActor, RadiusAttribute, ScanRate, Duration, bShowDebugCircle) end
+function URSTAbilityTask_AICollectPawns:RSTAICollectPawns_AttributeRadius(OwningAbility, TaskInstanceName, MovingActor,
+                                                                          RadiusAttribute, ScanRate, Duration,
+                                                                          bShowDebugCircle) end
+
 ---@param OwningAbility UGameplayAbility
 ---@param TaskInstanceName FName
 ---@param MovingActor AActor
@@ -5656,10 +6626,11 @@ function URSTAbilityTask_AICollectPawns:RSTAICollectPawns_AttributeRadius(Owning
 ---@param Duration float
 ---@param bShowDebugCircle boolean
 ---@return URSTAbilityTask_AICollectPawns
-function URSTAbilityTask_AICollectPawns:RSTAICollectPawns(OwningAbility, TaskInstanceName, MovingActor, Radius, ScanRate, Duration, bShowDebugCircle) end
+function URSTAbilityTask_AICollectPawns:RSTAICollectPawns(OwningAbility, TaskInstanceName, MovingActor, Radius, ScanRate,
+                                                          Duration, bShowDebugCircle) end
+
 ---@return TArray<APawn>
 function URSTAbilityTask_AICollectPawns:GetCurrentCollection() end
-
 
 ---@class URSTAbilityTask_AmortizeArray : UAbilityTask
 ---@field OnProcessElements FRSTAbilityTask_AmortizeArrayOnProcessElements
@@ -5668,15 +6639,17 @@ URSTAbilityTask_AmortizeArray = {}
 
 ---@param Elements TArray<UObject>
 function URSTAbilityTask_AmortizeArray:RSTProcessElement__DelegateSignature(Elements) end
+
 function URSTAbilityTask_AmortizeArray:RSTElementsFinished__DelegateSignature() end
+
 ---@param OwningAbility UGameplayAbility
 ---@param TaskInstanceName FName
 ---@param Elements TArray<UObject>
 ---@param ElementsPerSecond int32
 ---@param InitialElementsToProcess int32
 ---@return URSTAbilityTask_AmortizeArray
-function URSTAbilityTask_AmortizeArray:AmortizeArray(OwningAbility, TaskInstanceName, Elements, ElementsPerSecond, InitialElementsToProcess) end
-
+function URSTAbilityTask_AmortizeArray:AmortizeArray(OwningAbility, TaskInstanceName, Elements, ElementsPerSecond,
+                                                     InitialElementsToProcess) end
 
 ---@class URSTAbilityTask_CyclopsEyeBeam : UAbilityTask
 ---@field OnReadyToFire FRSTAbilityTask_CyclopsEyeBeamOnReadyToFire
@@ -5690,8 +6663,8 @@ URSTAbilityTask_CyclopsEyeBeam = {}
 ---@param RotationRate float
 ---@param ShowDebug boolean
 ---@return URSTAbilityTask_CyclopsEyeBeam
-function URSTAbilityTask_CyclopsEyeBeam:RSTCyclopsEyeBeam(OwningAbility, TaskInstanceName, SourceSocketName, DestActor, PeriodLength, RotationRate, ShowDebug) end
-
+function URSTAbilityTask_CyclopsEyeBeam:RSTCyclopsEyeBeam(OwningAbility, TaskInstanceName, SourceSocketName, DestActor,
+                                                          PeriodLength, RotationRate, ShowDebug) end
 
 ---@class URSTAbilityTask_FireHookshotClaw : UAbilityTask
 ---@field OnTargetHit FRSTAbilityTask_FireHookshotClawOnTargetHit
@@ -5713,8 +6686,8 @@ URSTAbilityTask_FireHookshotClaw = {}
 ---@param HoldDuration float
 ---@param MaxWeightClass ERSTCharacterWeightClass
 ---@return URSTAbilityTask_FireHookshotClaw
-function URSTAbilityTask_FireHookshotClaw:FireHookshotClaw(OwningAbility, StartLocation, TargetLocation, HookshotSpeed, HoldDuration, MaxWeightClass) end
-
+function URSTAbilityTask_FireHookshotClaw:FireHookshotClaw(OwningAbility, StartLocation, TargetLocation, HookshotSpeed,
+                                                           HoldDuration, MaxWeightClass) end
 
 ---@class URSTAbilityTask_GrappleCharacter : UAbilityTask
 ---@field OnGrappleStarted FRSTAbilityTask_GrappleCharacterOnGrappleStarted
@@ -5729,8 +6702,8 @@ URSTAbilityTask_GrappleCharacter = {}
 ---@param InHoldDuration float
 ---@param InMaxWeightClass ERSTCharacterWeightClass
 ---@return URSTAbilityTask_GrappleCharacter
-function URSTAbilityTask_GrappleCharacter:GrappleCharacterToLocation(OwningAbility, InCharacter, InTargetLocation, InSpeed, InHoldDuration, InMaxWeightClass) end
-
+function URSTAbilityTask_GrappleCharacter:GrappleCharacterToLocation(OwningAbility, InCharacter, InTargetLocation,
+                                                                     InSpeed, InHoldDuration, InMaxWeightClass) end
 
 ---@class URSTAbilityTask_LaunchCharacter : UAbilityTask
 URSTAbilityTask_LaunchCharacter = {}
@@ -5741,8 +6714,8 @@ URSTAbilityTask_LaunchCharacter = {}
 ---@param InMaxWeightClass ERSTCharacterWeightClass
 ---@param bInRagdoll boolean
 ---@return URSTAbilityTask_LaunchCharacter
-function URSTAbilityTask_LaunchCharacter:LaunchCharacter(OwningAbility, InToLaunchCharacter, InLaunchVelocity, InMaxWeightClass, bInRagdoll) end
-
+function URSTAbilityTask_LaunchCharacter:LaunchCharacter(OwningAbility, InToLaunchCharacter, InLaunchVelocity,
+                                                         InMaxWeightClass, bInRagdoll) end
 
 ---@class URSTAbilityTask_MoveToLocationDynamic : UAbilityTask
 ---@field OnLocationReached FRSTAbilityTask_MoveToLocationDynamicOnLocationReached
@@ -5757,8 +6730,9 @@ URSTAbilityTask_MoveToLocationDynamic = {}
 ---@param bEndTaskOnReached boolean
 ---@param CallbackTolerance float
 ---@return URSTAbilityTask_MoveToLocationDynamic
-function URSTAbilityTask_MoveToLocationDynamic:MoveToLocationDynamic(OwningAbility, MovingActor, LocationDelegate, Speed, MaxDistance, bRelativeLocation, bEndTaskOnReached, CallbackTolerance) end
-
+function URSTAbilityTask_MoveToLocationDynamic:MoveToLocationDynamic(OwningAbility, MovingActor, LocationDelegate, Speed,
+                                                                     MaxDistance, bRelativeLocation, bEndTaskOnReached,
+                                                                     CallbackTolerance) end
 
 ---@class URSTAbilityTask_PredictProjectilePath : UAbilityTask
 ---@field ParticleSystem UFXSystemAsset
@@ -5788,7 +6762,17 @@ URSTAbilityTask_PredictProjectilePath = {}
 ---@param MaxSimTime float
 ---@param SimFrequency float
 ---@return URSTAbilityTask_PredictProjectilePath
-function URSTAbilityTask_PredictProjectilePath:PredictProjectilePath_TraceChannel(OwningAbility, ParticleSystem, HitIndicatorClass, ProjectileClass, ProjectileRadius, bOverrideProjectileGravity, ProjectileGravity, bIgnoreSelf, ActorsToIgnore, TraceChannel, LocationDelegate, VelocityDelegate, HitIndicatorScale, OverrideGravityZ, bTraceComplex, DrawDebugTime, DrawDebugType, MaxSimTime, SimFrequency) end
+function URSTAbilityTask_PredictProjectilePath:PredictProjectilePath_TraceChannel(OwningAbility, ParticleSystem,
+                                                                                  HitIndicatorClass, ProjectileClass,
+                                                                                  ProjectileRadius,
+                                                                                  bOverrideProjectileGravity,
+                                                                                  ProjectileGravity, bIgnoreSelf,
+                                                                                  ActorsToIgnore, TraceChannel,
+                                                                                  LocationDelegate, VelocityDelegate,
+                                                                                  HitIndicatorScale, OverrideGravityZ,
+                                                                                  bTraceComplex, DrawDebugTime,
+                                                                                  DrawDebugType, MaxSimTime, SimFrequency) end
+
 ---@param OwningAbility UGameplayAbility
 ---@param ParticleSystem UFXSystemAsset
 ---@param HitIndicatorClass TSubclassOf<AActor>
@@ -5809,7 +6793,16 @@ function URSTAbilityTask_PredictProjectilePath:PredictProjectilePath_TraceChanne
 ---@param MaxSimTime float
 ---@param SimFrequency float
 ---@return URSTAbilityTask_PredictProjectilePath
-function URSTAbilityTask_PredictProjectilePath:PredictProjectilePath_Profile(OwningAbility, ParticleSystem, HitIndicatorClass, ProjectileClass, ProjectileRadius, bOverrideProjectileGravity, ProjectileGravity, bIgnoreSelf, ActorsToIgnore, TraceProfile, LocationDelegate, VelocityDelegate, HitIndicatorScale, OverrideGravityZ, bTraceComplex, DrawDebugTime, DrawDebugType, MaxSimTime, SimFrequency) end
+function URSTAbilityTask_PredictProjectilePath:PredictProjectilePath_Profile(OwningAbility, ParticleSystem,
+                                                                             HitIndicatorClass, ProjectileClass,
+                                                                             ProjectileRadius, bOverrideProjectileGravity,
+                                                                             ProjectileGravity, bIgnoreSelf,
+                                                                             ActorsToIgnore, TraceProfile,
+                                                                             LocationDelegate, VelocityDelegate,
+                                                                             HitIndicatorScale, OverrideGravityZ,
+                                                                             bTraceComplex, DrawDebugTime, DrawDebugType,
+                                                                             MaxSimTime, SimFrequency) end
+
 ---@param OwningAbility UGameplayAbility
 ---@param ParticleSystem UFXSystemAsset
 ---@param HitIndicatorClass TSubclassOf<AActor>
@@ -5830,8 +6823,17 @@ function URSTAbilityTask_PredictProjectilePath:PredictProjectilePath_Profile(Own
 ---@param MaxSimTime float
 ---@param SimFrequency float
 ---@return URSTAbilityTask_PredictProjectilePath
-function URSTAbilityTask_PredictProjectilePath:PredictProjectilePath_ObjectChannel(OwningAbility, ParticleSystem, HitIndicatorClass, ProjectileClass, ProjectileRadius, bOverrideProjectileGravity, ProjectileGravity, bIgnoreSelf, ActorsToIgnore, ObjectTypes, LocationDelegate, VelocityDelegate, HitIndicatorScale, OverrideGravityZ, bTraceComplex, DrawDebugTime, DrawDebugType, MaxSimTime, SimFrequency) end
-
+function URSTAbilityTask_PredictProjectilePath:PredictProjectilePath_ObjectChannel(OwningAbility, ParticleSystem,
+                                                                                   HitIndicatorClass, ProjectileClass,
+                                                                                   ProjectileRadius,
+                                                                                   bOverrideProjectileGravity,
+                                                                                   ProjectileGravity, bIgnoreSelf,
+                                                                                   ActorsToIgnore, ObjectTypes,
+                                                                                   LocationDelegate, VelocityDelegate,
+                                                                                   HitIndicatorScale, OverrideGravityZ,
+                                                                                   bTraceComplex, DrawDebugTime,
+                                                                                   DrawDebugType, MaxSimTime,
+                                                                                   SimFrequency) end
 
 ---@class URSTAbilityTask_PriestessSpecial : UAbilityTask
 ---@field OnPriestessSpecialComplete FRSTAbilityTask_PriestessSpecialOnPriestessSpecialComplete
@@ -5845,8 +6847,9 @@ URSTAbilityTask_PriestessSpecial = {}
 ---@param ProjectilePeriod float
 ---@param TotalDuration float
 ---@return URSTAbilityTask_PriestessSpecial
-function URSTAbilityTask_PriestessSpecial:RSTPriestessSpecialTask(OwningAbility, TaskInstanceName, ProjectileClass, DamageValue, TaskRadius, ProjectilePeriod, TotalDuration) end
-
+function URSTAbilityTask_PriestessSpecial:RSTPriestessSpecialTask(OwningAbility, TaskInstanceName, ProjectileClass,
+                                                                  DamageValue, TaskRadius, ProjectilePeriod,
+                                                                  TotalDuration) end
 
 ---@class URSTAbilityTask_SpawnActorDefer : UAbilityTask
 ---@field OnInitActor FRSTAbilityTask_SpawnActorDeferOnInitActor
@@ -5861,11 +6864,13 @@ URSTAbilityTask_SpawnActorDefer = {}
 ---@param Owner AActor
 ---@param Instigator APawn
 ---@return URSTAbilityTask_SpawnActorDefer
-function URSTAbilityTask_SpawnActorDefer:SpawnActorWithDeferredInit(OwningAbility, ActorClass, SpawnTransform, CollisionHandling, Owner, Instigator) end
+function URSTAbilityTask_SpawnActorDefer:SpawnActorWithDeferredInit(OwningAbility, ActorClass, SpawnTransform,
+                                                                    CollisionHandling, Owner, Instigator) end
+
 function URSTAbilityTask_SpawnActorDefer:RSTSpawnActorDeferSpawnFail__DelegateSignature() end
+
 ---@param SpawnedActor AActor
 function URSTAbilityTask_SpawnActorDefer:RSTSpawnActorDeferInitCallback__DelegateSignature(SpawnedActor) end
-
 
 ---@class URSTAbilityTask_SphereOverlap : UAbilityTask
 ---@field OnObjectsEntered FRSTAbilityTask_SphereOverlapOnObjectsEntered
@@ -5883,7 +6888,11 @@ URSTAbilityTask_SphereOverlap = {}
 ---@param ScanRate float
 ---@param bShowDebug boolean
 ---@return URSTAbilityTask_SphereOverlap
-function URSTAbilityTask_SphereOverlap:WaitForSphereOverlap_Dynamic(OwningAbility, UnscaledRadius, StartTransformDelegate, EndTransformDelegate, TraceProfile, InitialOverlaps, IgnoreActors, bRunTraceInstantly, ScanRate, bShowDebug) end
+function URSTAbilityTask_SphereOverlap:WaitForSphereOverlap_Dynamic(OwningAbility, UnscaledRadius, StartTransformDelegate,
+                                                                    EndTransformDelegate, TraceProfile, InitialOverlaps,
+                                                                    IgnoreActors, bRunTraceInstantly, ScanRate,
+                                                                    bShowDebug) end
+
 ---@param OwningAbility UGameplayAbility
 ---@param RadiusDelegate FWaitForSphereOverlap_Delegate_DynamicRadiusDelegate
 ---@param StartTransformDelegate FWaitForSphereOverlap_Delegate_DynamicStartTransformDelegate
@@ -5895,7 +6904,11 @@ function URSTAbilityTask_SphereOverlap:WaitForSphereOverlap_Dynamic(OwningAbilit
 ---@param ScanRate float
 ---@param bShowDebug boolean
 ---@return URSTAbilityTask_SphereOverlap
-function URSTAbilityTask_SphereOverlap:WaitForSphereOverlap_Delegate_Dynamic(OwningAbility, RadiusDelegate, StartTransformDelegate, EndTransformDelegate, TraceProfile, InitialOverlaps, IgnoreActors, bRunTraceInstantly, ScanRate, bShowDebug) end
+function URSTAbilityTask_SphereOverlap:WaitForSphereOverlap_Delegate_Dynamic(OwningAbility, RadiusDelegate,
+                                                                             StartTransformDelegate, EndTransformDelegate,
+                                                                             TraceProfile, InitialOverlaps, IgnoreActors,
+                                                                             bRunTraceInstantly, ScanRate, bShowDebug) end
+
 ---@param OwningAbility UGameplayAbility
 ---@param RadiusDelegate FWaitForSphereOverlap_DelegateRadiusDelegate
 ---@param StartTransform FTransform
@@ -5907,7 +6920,11 @@ function URSTAbilityTask_SphereOverlap:WaitForSphereOverlap_Delegate_Dynamic(Own
 ---@param ScanRate float
 ---@param bShowDebug boolean
 ---@return URSTAbilityTask_SphereOverlap
-function URSTAbilityTask_SphereOverlap:WaitForSphereOverlap_Delegate(OwningAbility, RadiusDelegate, StartTransform, EndTransform, TraceProfile, InitialOverlaps, IgnoreActors, bRunTraceInstantly, ScanRate, bShowDebug) end
+function URSTAbilityTask_SphereOverlap:WaitForSphereOverlap_Delegate(OwningAbility, RadiusDelegate, StartTransform,
+                                                                     EndTransform, TraceProfile, InitialOverlaps,
+                                                                     IgnoreActors, bRunTraceInstantly, ScanRate,
+                                                                     bShowDebug) end
+
 ---@param OwningAbility UGameplayAbility
 ---@param RadiusAttribute FGameplayAttribute
 ---@param StartTransformDelegate FWaitForSphereOverlap_AttributeRadius_DynamicStartTransformDelegate
@@ -5919,7 +6936,13 @@ function URSTAbilityTask_SphereOverlap:WaitForSphereOverlap_Delegate(OwningAbili
 ---@param ScanRate float
 ---@param bShowDebug boolean
 ---@return URSTAbilityTask_SphereOverlap
-function URSTAbilityTask_SphereOverlap:WaitForSphereOverlap_AttributeRadius_Dynamic(OwningAbility, RadiusAttribute, StartTransformDelegate, EndTransformDelegate, TraceProfile, InitialOverlaps, IgnoreActors, bRunTraceInstantly, ScanRate, bShowDebug) end
+function URSTAbilityTask_SphereOverlap:WaitForSphereOverlap_AttributeRadius_Dynamic(OwningAbility, RadiusAttribute,
+                                                                                    StartTransformDelegate,
+                                                                                    EndTransformDelegate, TraceProfile,
+                                                                                    InitialOverlaps, IgnoreActors,
+                                                                                    bRunTraceInstantly, ScanRate,
+                                                                                    bShowDebug) end
+
 ---@param OwningAbility UGameplayAbility
 ---@param RadiusAttribute FGameplayAttribute
 ---@param StartTransform FTransform
@@ -5931,7 +6954,11 @@ function URSTAbilityTask_SphereOverlap:WaitForSphereOverlap_AttributeRadius_Dyna
 ---@param ScanRate float
 ---@param bShowDebug boolean
 ---@return URSTAbilityTask_SphereOverlap
-function URSTAbilityTask_SphereOverlap:WaitForSphereOverlap_AttributeRadius(OwningAbility, RadiusAttribute, StartTransform, EndTransform, TraceProfile, InitialOverlaps, IgnoreActors, bRunTraceInstantly, ScanRate, bShowDebug) end
+function URSTAbilityTask_SphereOverlap:WaitForSphereOverlap_AttributeRadius(OwningAbility, RadiusAttribute,
+                                                                            StartTransform, EndTransform, TraceProfile,
+                                                                            InitialOverlaps, IgnoreActors,
+                                                                            bRunTraceInstantly, ScanRate, bShowDebug) end
+
 ---@param OwningAbility UGameplayAbility
 ---@param UnscaledRadius float
 ---@param StartTransform FTransform
@@ -5943,10 +6970,12 @@ function URSTAbilityTask_SphereOverlap:WaitForSphereOverlap_AttributeRadius(Owni
 ---@param ScanRate float
 ---@param bShowDebug boolean
 ---@return URSTAbilityTask_SphereOverlap
-function URSTAbilityTask_SphereOverlap:WaitForSphereOverlap(OwningAbility, UnscaledRadius, StartTransform, EndTransform, TraceProfile, InitialOverlaps, IgnoreActors, bRunTraceInstantly, ScanRate, bShowDebug) end
+function URSTAbilityTask_SphereOverlap:WaitForSphereOverlap(OwningAbility, UnscaledRadius, StartTransform, EndTransform,
+                                                            TraceProfile, InitialOverlaps, IgnoreActors,
+                                                            bRunTraceInstantly, ScanRate, bShowDebug) end
+
 ---@return TArray<AActor>
 function URSTAbilityTask_SphereOverlap:GetCurrentOverlaps() end
-
 
 ---@class URSTAbilityTask_TraceDefinedOverlap : UAbilityTask
 ---@field OnBeginOverlap FRSTAbilityTask_TraceDefinedOverlapOnBeginOverlap
@@ -5963,7 +6992,9 @@ URSTAbilityTask_TraceDefinedOverlap = {}
 ---@param bIgnoreSelf boolean
 ---@param bDebugDraw boolean
 ---@return URSTAbilityTask_TraceDefinedOverlap
-function URSTAbilityTask_TraceDefinedOverlap:TraceDefinedOverlap(OwningAbility, Spec, Location, Rotation, ActorsToIgnore, AttachToActor, TraceColor, bIgnoreSelf, bDebugDraw) end
+function URSTAbilityTask_TraceDefinedOverlap:TraceDefinedOverlap(OwningAbility, Spec, Location, Rotation, ActorsToIgnore,
+                                                                 AttachToActor, TraceColor, bIgnoreSelf, bDebugDraw) end
+
 ---@param OwningAbility UGameplayAbility
 ---@param Spec FRSTAbilityCollisionSpecHandle
 ---@param Start FVector
@@ -5974,10 +7005,11 @@ function URSTAbilityTask_TraceDefinedOverlap:TraceDefinedOverlap(OwningAbility, 
 ---@param bIgnoreSelf boolean
 ---@param bDebugDraw boolean
 ---@return URSTAbilityTask_TraceDefinedOverlap
-function URSTAbilityTask_TraceDefinedOverlap:SweepDefinedOverlap(OwningAbility, Spec, Start, End, Rotation, ActorsToIgnore, TraceColor, bIgnoreSelf, bDebugDraw) end
+function URSTAbilityTask_TraceDefinedOverlap:SweepDefinedOverlap(OwningAbility, Spec, Start, End, Rotation,
+                                                                 ActorsToIgnore, TraceColor, bIgnoreSelf, bDebugDraw) end
+
 ---@return FGameplayAbilityTargetDataHandle
 function URSTAbilityTask_TraceDefinedOverlap:GetAllCurrentActors() end
-
 
 ---@class URSTAbilityTask_TraceLineOfSight : UAbilityTask
 ---@field OnEnteredLineOfSight FRSTAbilityTask_TraceLineOfSightOnEnteredLineOfSight
@@ -5998,7 +7030,11 @@ URSTAbilityTask_TraceLineOfSight = {}
 ---@param ScanRate float
 ---@param bShowDebug boolean
 ---@return URSTAbilityTask_TraceLineOfSight
-function URSTAbilityTask_TraceLineOfSight:TraceLineOfSight_Dynamic(OwningAbility, ActorsDelegate, TransformDelegate, TraceProfile, bIgnoreSelf, IgnoreActors, MoveRecheckThreshold, MinConsiderRadius, HitTolerance, bRunTraceInstantly, ScanRate, bShowDebug) end
+function URSTAbilityTask_TraceLineOfSight:TraceLineOfSight_Dynamic(OwningAbility, ActorsDelegate, TransformDelegate,
+                                                                   TraceProfile, bIgnoreSelf, IgnoreActors,
+                                                                   MoveRecheckThreshold, MinConsiderRadius, HitTolerance,
+                                                                   bRunTraceInstantly, ScanRate, bShowDebug) end
+
 ---@param OwningAbility UGameplayAbility
 ---@param ActorsDelegate FTraceLineOfSightActorsDelegate
 ---@param Transform FTransform
@@ -6012,11 +7048,15 @@ function URSTAbilityTask_TraceLineOfSight:TraceLineOfSight_Dynamic(OwningAbility
 ---@param ScanRate float
 ---@param bShowDebug boolean
 ---@return URSTAbilityTask_TraceLineOfSight
-function URSTAbilityTask_TraceLineOfSight:TraceLineOfSight(OwningAbility, ActorsDelegate, Transform, TraceProfile, bIgnoreSelf, IgnoreActors, MoveRecheckThreshold, MinConsiderRadius, HitTolerance, bRunTraceInstantly, ScanRate, bShowDebug) end
+function URSTAbilityTask_TraceLineOfSight:TraceLineOfSight(OwningAbility, ActorsDelegate, Transform, TraceProfile,
+                                                           bIgnoreSelf, IgnoreActors, MoveRecheckThreshold,
+                                                           MinConsiderRadius, HitTolerance, bRunTraceInstantly, ScanRate,
+                                                           bShowDebug) end
+
 ---@return TArray<AActor>
 function URSTAbilityTask_TraceLineOfSight:GetCurrentLineOfSightActors() end
-function URSTAbilityTask_TraceLineOfSight:CheckLineOfSight() end
 
+function URSTAbilityTask_TraceLineOfSight:CheckLineOfSight() end
 
 ---@class URSTAbilityTask_TrackCharacterInput : UAbilityTask
 ---@field OnInputDetected FRSTAbilityTask_TrackCharacterInputOnInputDetected
@@ -6027,12 +7067,14 @@ URSTAbilityTask_TrackCharacterInput = {}
 ---@param bGatherInputOnly boolean
 ---@param Threshold float
 ---@return URSTAbilityTask_TrackCharacterInput
-function URSTAbilityTask_TrackCharacterInput:TrackCharacterInput(OwningAbility, bTerminateOnDetection, bGatherInputOnly, Threshold) end
+function URSTAbilityTask_TrackCharacterInput:TrackCharacterInput(OwningAbility, bTerminateOnDetection, bGatherInputOnly,
+                                                                 Threshold) end
+
 ---@return boolean
 function URSTAbilityTask_TrackCharacterInput:HasMovementInput() end
+
 ---@return FVector
 function URSTAbilityTask_TrackCharacterInput:GetMovementInput() end
-
 
 ---@class URSTAbilityTask_TrackMoveAngle : URSTAbilityTask_TrackVelocity
 ---@field OnWithinThreshold FRSTAbilityTask_TrackMoveAngleOnWithinThreshold
@@ -6043,9 +7085,10 @@ URSTAbilityTask_TrackMoveAngle = {}
 ---@param ForwardAngleThresholdDegrees float
 ---@param bTriggerOnInitialVelocity boolean
 ---@return URSTAbilityTask_TrackMoveAngle
-function URSTAbilityTask_TrackMoveAngle:TrackMoveAngle(OwningAbility, ForwardAngleThresholdDegrees, bTriggerOnInitialVelocity) end
-function URSTAbilityTask_TrackMoveAngle:RSTMoveAngleTask__DelegateSignature() end
+function URSTAbilityTask_TrackMoveAngle:TrackMoveAngle(OwningAbility, ForwardAngleThresholdDegrees,
+                                                       bTriggerOnInitialVelocity) end
 
+function URSTAbilityTask_TrackMoveAngle:RSTMoveAngleTask__DelegateSignature() end
 
 ---@class URSTAbilityTask_TrackMovePoints : UAbilityTask
 ---@field OnRecordingStopped FRSTAbilityTask_TrackMovePointsOnRecordingStopped
@@ -6057,15 +7100,19 @@ URSTAbilityTask_TrackMovePoints = {}
 ---@param RelativeLocationOffset FVector
 ---@param CueDataTag FGameplayTag
 ---@return URSTAbilityTask_TrackMovePoints
-function URSTAbilityTask_TrackMovePoints:TrackMovePoints(OwningAbility, Frequency, MoveThreshold, RelativeLocationOffset, CueDataTag) end
+function URSTAbilityTask_TrackMovePoints:TrackMovePoints(OwningAbility, Frequency, MoveThreshold, RelativeLocationOffset,
+                                                         CueDataTag) end
+
 ---@param bLogCurrent boolean
 function URSTAbilityTask_TrackMovePoints:StopRecording(bLogCurrent) end
+
 function URSTAbilityTask_TrackMovePoints:ResumeRecording() end
+
 ---@return boolean
 function URSTAbilityTask_TrackMovePoints:IsRecording() end
+
 ---@return TArray<FRSTVectorArray>
 function URSTAbilityTask_TrackMovePoints:GetMoveLocations() end
-
 
 ---@class URSTAbilityTask_TrackMoveSpeed : URSTAbilityTask_TrackVelocity
 ---@field OnBelowThreshold FRSTAbilityTask_TrackMoveSpeedOnBelowThreshold
@@ -6077,9 +7124,9 @@ URSTAbilityTask_TrackMoveSpeed = {}
 ---@param bTriggerOnInitialVelocity boolean
 ---@return URSTAbilityTask_TrackMoveSpeed
 function URSTAbilityTask_TrackMoveSpeed:TrackMoveSpeed(OwningAbility, MagnitudeThreshold, bTriggerOnInitialVelocity) end
+
 ---@param MoveSpeed float
 function URSTAbilityTask_TrackMoveSpeed:RSTMoveSpeedTask__DelegateSignature(MoveSpeed) end
-
 
 ---@class URSTAbilityTask_TrackVelocity : UAbilityTask
 ---@field CachedMovementComponent UMovementComponent
@@ -6098,8 +7145,8 @@ URSTAbilityTask_TurnToControlRotation = {}
 ---@param bRotateRoll boolean
 ---@param Tolerance float
 ---@return URSTAbilityTask_TurnToControlRotation
-function URSTAbilityTask_TurnToControlRotation:TurnToControlRotation(OwningAbility, bUseCharacterTurnRate, TurnRate, bRotateYaw, bRotatePitch, bRotateRoll, Tolerance) end
-
+function URSTAbilityTask_TurnToControlRotation:TurnToControlRotation(OwningAbility, bUseCharacterTurnRate, TurnRate,
+                                                                     bRotateYaw, bRotatePitch, bRotateRoll, Tolerance) end
 
 ---@class URSTAbilityTask_TurnToFaceActor : URSTAbilityTask_TurnToRotation
 URSTAbilityTask_TurnToFaceActor = {}
@@ -6113,8 +7160,8 @@ URSTAbilityTask_TurnToFaceActor = {}
 ---@param bRotateRoll boolean
 ---@param Tolerance float
 ---@return URSTAbilityTask_TurnToFaceActor
-function URSTAbilityTask_TurnToFaceActor:TurnToFaceActor(OwningAbility, TargetActor, bUseCharacterTurnRate, TurnRate, bRotateYaw, bRotatePitch, bRotateRoll, Tolerance) end
-
+function URSTAbilityTask_TurnToFaceActor:TurnToFaceActor(OwningAbility, TargetActor, bUseCharacterTurnRate, TurnRate,
+                                                         bRotateYaw, bRotatePitch, bRotateRoll, Tolerance) end
 
 ---@class URSTAbilityTask_TurnToRotation : UAbilityTask
 ---@field OnTargetReached FRSTAbilityTask_TurnToRotationOnTargetReached
@@ -6131,8 +7178,9 @@ URSTAbilityTask_TurnToRotation = {}
 ---@param bRotateRoll boolean
 ---@param Tolerance float
 ---@return URSTAbilityTask_TurnToRotation
-function URSTAbilityTask_TurnToRotation:TurnToRotation(OwningAbility, TargetRotation, bRelativeRotation, bUseCharacterTurnRate, TurnRate, bRotateYaw, bRotatePitch, bRotateRoll, Tolerance) end
-
+function URSTAbilityTask_TurnToRotation:TurnToRotation(OwningAbility, TargetRotation, bRelativeRotation,
+                                                       bUseCharacterTurnRate, TurnRate, bRotateYaw, bRotatePitch,
+                                                       bRotateRoll, Tolerance) end
 
 ---@class URSTAbilityTask_WaitAbilityEnd : UAbilityTask
 ---@field OnEnded FRSTAbilityTask_WaitAbilityEndOnEnded
@@ -6143,15 +7191,16 @@ URSTAbilityTask_WaitAbilityEnd = {}
 ---@param TriggerOnce boolean
 ---@return URSTAbilityTask_WaitAbilityEnd
 function URSTAbilityTask_WaitAbilityEnd:WaitForAbilityEnd_Query(OwningAbility, Query, TriggerOnce) end
+
 ---@param OwningAbility UGameplayAbility
 ---@param WithTag FGameplayTag
 ---@param WithoutTage FGameplayTag
 ---@param TriggerOnce boolean
 ---@return URSTAbilityTask_WaitAbilityEnd
 function URSTAbilityTask_WaitAbilityEnd:WaitForAbilityEnd(OwningAbility, WithTag, WithoutTage, TriggerOnce) end
+
 ---@param EndedAbility UGameplayAbility
 function URSTAbilityTask_WaitAbilityEnd:OnAbilityEnded(EndedAbility) end
-
 
 ---@class URSTAbilityTask_WaitActorAlive : UAbilityTask
 ---@field OnActorDied FRSTAbilityTask_WaitActorAliveOnActorDied
@@ -6164,10 +7213,12 @@ URSTAbilityTask_WaitActorAlive = {}
 ---@param bRequireLOS boolean
 ---@param TargetActor AActor
 ---@return URSTAbilityTask_WaitActorAlive
-function URSTAbilityTask_WaitActorAlive:RSTWaitActorAlive(OwningAbility, TaskInstanceName, Duration, bRequireLOS, TargetActor) end
-function URSTAbilityTask_WaitActorAlive:OnFinishedDelegate__DelegateSignature() end
-function URSTAbilityTask_WaitActorAlive:OnActorDiedDelegate__DelegateSignature() end
+function URSTAbilityTask_WaitActorAlive:RSTWaitActorAlive(OwningAbility, TaskInstanceName, Duration, bRequireLOS,
+                                                          TargetActor) end
 
+function URSTAbilityTask_WaitActorAlive:OnFinishedDelegate__DelegateSignature() end
+
+function URSTAbilityTask_WaitActorAlive:OnActorDiedDelegate__DelegateSignature() end
 
 ---@class URSTAbilityTask_WaitAttributeTime : UAbilityTask
 ---@field OnFinished FRSTAbilityTask_WaitAttributeTimeOnFinished
@@ -6177,10 +7228,11 @@ URSTAbilityTask_WaitAttributeTime = {}
 ---@param Attribute FGameplayAttribute
 ---@return URSTAbilityTask_WaitAttributeTime
 function URSTAbilityTask_WaitAttributeTime:WaitAttributeTime(OwningAbility, Attribute) end
+
 function URSTAbilityTask_WaitAttributeTime:RSTWaitAttributeTimeFinished__DelegateSignature() end
+
 ---@param TimeToDeduct float
 function URSTAbilityTask_WaitAttributeTime:DeductTime(TimeToDeduct) end
-
 
 ---@class URSTAbilityTask_WaitInteract : UAbilityTask
 ---@field InteractableObjectsChanged FRSTAbilityTask_WaitInteractInteractableObjectsChanged
@@ -6200,8 +7252,10 @@ URSTAbilityTask_WaitInteract_MultiTrace = {}
 ---@param InteractionScanRate float
 ---@param bShowDebug boolean
 ---@return URSTAbilityTask_WaitInteract_MultiTrace
-function URSTAbilityTask_WaitInteract_MultiTrace:WaitForInteractableTargets_MultiSweep(OwningAbility, InteractionQuery, StartLocation, InteractionScanRange, InteractionScanRate, bShowDebug) end
-
+function URSTAbilityTask_WaitInteract_MultiTrace:WaitForInteractableTargets_MultiSweep(OwningAbility, InteractionQuery,
+                                                                                       StartLocation,
+                                                                                       InteractionScanRange,
+                                                                                       InteractionScanRate, bShowDebug) end
 
 ---@class URSTAbilityTask_WaitInteract_Sphere : URSTAbilityTask_WaitInteract
 ---@field InteractionQuery FRSTInteractionQuery
@@ -6215,8 +7269,9 @@ URSTAbilityTask_WaitInteract_Sphere = {}
 ---@param InteractionScanRate float
 ---@param bShowDebug boolean
 ---@return URSTAbilityTask_WaitInteract_Sphere
-function URSTAbilityTask_WaitInteract_Sphere:WaitForInteractableTargets_Sphere(OwningAbility, InteractionQuery, StartLocation, InteractionScanRange, InteractionScanRate, bShowDebug) end
-
+function URSTAbilityTask_WaitInteract_Sphere:WaitForInteractableTargets_Sphere(OwningAbility, InteractionQuery,
+                                                                               StartLocation, InteractionScanRange,
+                                                                               InteractionScanRate, bShowDebug) end
 
 ---@class URSTAbilityUIData : UDataAsset
 ---@field DisplayName FText
@@ -6236,24 +7291,30 @@ URSTAchievementHelpers = {}
 ---@param MaxLevel int32
 ---@return boolean
 function URSTAchievementHelpers:HasFullyUpgradedTrap(PlayerProfile, MaxLevel) end
+
 ---@param OutTags FGameplayTagContainer
 function URSTAchievementHelpers:GetSkillTreeUpgrades(OutTags) end
+
 ---@param OutTags FGameplayTagContainer
 function URSTAchievementHelpers:GetPurchaseableThreadIdentifiers(OutTags) end
+
 ---@param PlayerProfile URSTPlayerProfile
 ---@return int32
 function URSTAchievementHelpers:GetNumPurchasedTraps(PlayerProfile) end
+
 ---@param PlayerProfile URSTPlayerProfile
 ---@return int32
 function URSTAchievementHelpers:GetNumPurchasedThreads(PlayerProfile) end
+
 ---@param PlayerProfile URSTPlayerProfile
 ---@return int32
 function URSTAchievementHelpers:GetNumMilestoneUnlockedThreads(PlayerProfile) end
+
 ---@param OutTags FGameplayTagContainer
 function URSTAchievementHelpers:GetAllThreadMilestones(OutTags) end
+
 ---@return int32
 function URSTAchievementHelpers:CountThreadsWithMilestones() end
-
 
 ---@class URSTActivatableWidget : UCommonActivatableWidget
 ---@field OnWidgetRemoved FRSTActivatableWidgetOnWidgetRemoved
@@ -6267,6 +7328,7 @@ function URSTAchievementHelpers:CountThreadsWithMilestones() end
 ---@field bApplyNPEIMCOnPossess boolean
 ---@field bNPEIsActive boolean
 ---@field CurrentNPEStep int32
+---@field bShouldMoveCursorAfterShow boolean
 ---@field bIsTabMenuHandler boolean
 ---@field bCanToggleTabWidget boolean
 ---@field bCanToggleUIMode boolean
@@ -6277,64 +7339,104 @@ URSTActivatableWidget = {}
 
 ---@param Action UInputAction
 function URSTActivatableWidget:UnregisterInputAction(Action) end
+
 function URSTActivatableWidget:StartNPE() end
+
 ---@return boolean
 function URSTActivatableWidget:ShouldStartNPE() end
+
 ---@param Step int32
 function URSTActivatableWidget:SetNPEStep(Step) end
+
 ---@param Enabled boolean
 function URSTActivatableWidget:SetInteractableInternals(Enabled) end
+
 function URSTActivatableWidget:RSTWidgetInputActionDelegate__DelegateSignature() end
+
 function URSTActivatableWidget:ReregisterMappingContext() end
+
 ---@param Action UInputAction
 ---@param Delegate FRegisterInputActionDelegate
 ---@param ReleasedDelegate FRegisterInputActionReleasedDelegate
 function URSTActivatableWidget:RegisterInputAction(Action, Delegate, ReleasedDelegate) end
+
+function URSTActivatableWidget:RefreshScrollRecipient() end
+
 ---@param bBypassAnimations boolean
 function URSTActivatableWidget:PopSelfFromLayer(bBypassAnimations) end
+
 function URSTActivatableWidget:OnUnPossess() end
+
 ---@param Enabled boolean
 function URSTActivatableWidget:OnSetInteractableInternals(Enabled) end
+
 function URSTActivatableWidget:OnPossess() end
+
 function URSTActivatableWidget:IncreaseNPEStep() end
+
 function URSTActivatableWidget:HandleToggleTabWidget() end
+
 ---@return UWidget
 function URSTActivatableWidget:GetScrollRecipient() end
+
 function URSTActivatableWidget:EndNPE() end
+
 function URSTActivatableWidget:DecreaseNPEStep() end
+
 ---@return boolean
 function URSTActivatableWidget:CanToggleTabWidget() end
+
 ---@return boolean
 function URSTActivatableWidget:CanToggleCursorMode() end
+
 function URSTActivatableWidget:BP_SynchronizeProperties() end
+
 function URSTActivatableWidget:BP_StartNPE() end
+
 ---@return boolean
 function URSTActivatableWidget:BP_ShouldStartNPE() end
+
 function URSTActivatableWidget:BP_OnUnPossess() end
+
 function URSTActivatableWidget:BP_OnStartShow() end
+
 function URSTActivatableWidget:BP_OnStartHide() end
+
 function URSTActivatableWidget:BP_OnPossess() end
+
 ---@param Step int32
 function URSTActivatableWidget:BP_OnNPEStepExited(Step) end
+
 ---@param Step int32
 function URSTActivatableWidget:BP_OnNPEStepEntered(Step) end
+
 ---@param OldStep int32
 ---@param NewStep int32
 function URSTActivatableWidget:BP_OnNPEStepChanged(OldStep, NewStep) end
+
 function URSTActivatableWidget:BP_OnFinishShow() end
+
 function URSTActivatableWidget:BP_OnFinishHide() end
+
 function URSTActivatableWidget:BP_HandleTabForwardAction() end
+
 function URSTActivatableWidget:BP_HandleTabBackwardAction() end
+
 ---@param bStackActive boolean
 ---@return UWidgetAnimation
 function URSTActivatableWidget:BP_GetOnShowAnimation(bStackActive) end
+
 ---@param bStackActive boolean
 ---@return UWidgetAnimation
 function URSTActivatableWidget:BP_GetOnHideAnimation(bStackActive) end
+
 ---@return int32
 function URSTActivatableWidget:BP_GetNPEStepsNum() end
-function URSTActivatableWidget:BP_EndNPE() end
 
+---@return FVector2D
+function URSTActivatableWidget:BP_GetCursorInitialPosition() end
+
+function URSTActivatableWidget:BP_EndNPE() end
 
 ---@class URSTActorOpacityComponent : UActorComponent
 ---@field OpacityAdjustRate float
@@ -6344,14 +7446,16 @@ URSTActorOpacityComponent = {}
 ---@param InOutOperationHandle FRSTActorOpacityHandle
 ---@param InOpacity float
 function URSTActorOpacityComponent:SetTargetOpacity(InOutOperationHandle, InOpacity) end
+
 ---@param InOutOperationHandle FRSTActorOpacityHandle
 ---@param InOpacity float
 function URSTActorOpacityComponent:SetCurrentOpacity(InOutOperationHandle, InOpacity) end
+
 function URSTActorOpacityComponent:OnMeshesChanged() end
+
 ---@param InOutOperationHandle FRSTActorOpacityHandle
 ---@param bInstant boolean
 function URSTActorOpacityComponent:ClearOpacityTarget(InOutOperationHandle, bInstant) end
-
 
 ---@class URSTActorPoolSubsystem : UWorldSubsystem
 ---@field ActorPools TMap<TObjectPtr<UClass>, FRSTActorPool>
@@ -6386,14 +7490,17 @@ URSTAimSensitivityData = {}
 URSTAnalyticsSubsystem = {}
 
 function URSTAnalyticsSubsystem:StopAnalyticsSession() end
+
 function URSTAnalyticsSubsystem:StartAnalyticsSession() end
+
 ---@return boolean
 function URSTAnalyticsSubsystem:IsAllowedToCollectAnalytics() end
+
 ---@param bIsConsentGranted boolean
 function URSTAnalyticsSubsystem:ConsentChanged(bIsConsentGranted) end
+
 ---@return boolean
 function URSTAnalyticsSubsystem:AreAnalyticsSupported() end
-
 
 ---@class URSTAnimInstance : UAnimInstance
 ---@field GameplayTagPropertyMap FGameplayTagBlueprintPropertyMap
@@ -6404,13 +7511,14 @@ URSTAnimInstance = {}
 ---@param Owner AActor
 ---@param Reason EEndPlayReason::Type
 function URSTAnimInstance:OnOwnerEndPlay(Owner, Reason) end
+
 ---@param InMoveSpeed float
 ---@return float
 function URSTAnimInstance:ModifyMoveSpeed(InMoveSpeed) end
+
 ---@param SlotName FName
 ---@return boolean
 function URSTAnimInstance:IsMontageSlotPlaying(SlotName) end
-
 
 ---@class URSTAnimInstanceCharacter : URSTAnimInstance
 ---@field bNormalizeSpeed boolean
@@ -6430,21 +7538,27 @@ URSTAnimInstanceCharacter = {}
 
 ---@return boolean
 function URSTAnimInstanceCharacter:ShouldNormalizeSpeed() end
+
 ---@return boolean
 function URSTAnimInstanceCharacter:IsInAir() end
+
 ---@return float
 function URSTAnimInstanceCharacter:GetSpeed() end
+
 ---@return float
 function URSTAnimInstanceCharacter:GetRightLocomotionValue() end
+
 ---@return float
 function URSTAnimInstanceCharacter:GetNormalizedSpeed() end
+
 ---@return float
 function URSTAnimInstanceCharacter:GetMaxSpeed() end
+
 ---@return float
 function URSTAnimInstanceCharacter:GetForwardLocomotionValue() end
+
 ---@return FVector
 function URSTAnimInstanceCharacter:GetDirection() end
-
 
 ---@class URSTAnimInstanceEnemy : URSTAnimInstanceCharacter
 ---@field bIsDead boolean
@@ -6454,9 +7568,9 @@ function URSTAnimInstanceCharacter:GetDirection() end
 URSTAnimInstanceEnemy = {}
 
 function URSTAnimInstanceEnemy:EnableRagdoll() end
+
 ---@param StatusAnimationTag FGameplayTag
 function URSTAnimInstanceEnemy:DoDie(StatusAnimationTag) end
-
 
 ---@class URSTAnimInstanceInheritOwner : URSTAnimInstance
 ---@field bNormalizeSpeed boolean
@@ -6471,9 +7585,9 @@ URSTAnimInstanceInheritOwner = {}
 
 ---@return ACharacter
 function URSTAnimInstanceInheritOwner:GetOwningCharacter() end
+
 ---@return URSTAnimInstanceCharacter
 function URSTAnimInstanceInheritOwner:GetOwningAnimInstance() end
-
 
 ---@class URSTAnimInstancePostProcess : UAnimInstance
 ---@field bRagdoll boolean
@@ -6489,11 +7603,11 @@ URSTAnimInstancePostProcess = {}
 ---@field bIsPlacementValid boolean
 ---@field bIsDisabled boolean
 ---@field CooldownProgression float
+---@field ActiveCooldownTimeRemaining float
 URSTAnimInstanceTrap = {}
 
 ---@return ARSTTrap
 function URSTAnimInstanceTrap:GetTrap() end
-
 
 ---@class URSTAnimInstanceTrap_Ballista : URSTAnimInstanceTrap
 ---@field TargetPitch float
@@ -6507,6 +7621,13 @@ URSTAnimInstanceTrap_Ballista = {}
 ---@param InTargetSeconds float
 function URSTAnimInstanceTrap_Ballista:SetTargetRotation(InPitch, InYaw, InTargetSeconds) end
 
+---@param InYaw float
+---@return FRotator
+function URSTAnimInstanceTrap_Ballista:ConvertYawToBallistaSpaceRotation(InYaw) end
+
+---@param InRotation FRotator
+---@return float
+function URSTAnimInstanceTrap_Ballista:ConvertBallistaSpaceRotationToYaw(InRotation) end
 
 ---@class URSTAnimInstanceTrap_Hookshot : URSTAnimInstanceTrap_Ballista
 ---@field TargetTransform FTransform
@@ -6523,10 +7644,10 @@ URSTAnimLayerManagerComponent = {}
 ---@param Actor AActor
 ---@return URSTAnimLayerManagerComponent
 function URSTAnimLayerManagerComponent:FindAnimLayerManagerComponent(Actor) end
+
 ---@param LayerClass TSubclassOf<UAnimInstance>
 ---@return FRSTAnimLayerHandle
 function URSTAnimLayerManagerComponent:AddAnimLayer(LayerClass) end
-
 
 ---@class URSTAnimNotifyState_ForceFeedback : UAnimNotifyState
 ---@field ForceFeedbackParams FRSTForceFeedbackParams
@@ -6536,6 +7657,7 @@ URSTAnimNotifyState_ForceFeedback = {}
 
 ---@class URSTAnimNotifyState_Niagara_Conditional : UAnimNotifyState_TimedNiagaraEffect
 ---@field ConditionalTemplates FRSTConditionalNiagaraAnimData
+---@field NiagaraParams FRSTNiagaraParameterCollection
 URSTAnimNotifyState_Niagara_Conditional = {}
 
 
@@ -6570,7 +7692,17 @@ URSTAnimNotify_ForceFeedback = {}
 
 ---@class URSTAnimNotify_Niagara_Conditional : UAnimNotify_PlayNiagaraEffect
 ---@field ConditionalTemplates FRSTConditionalNiagaraAnimData
+---@field NiagaraParams FRSTNiagaraParameterCollection
 URSTAnimNotify_Niagara_Conditional = {}
+
+
+
+---@class URSTAnimNotify_ShowAttachments : UAnimNotifyState
+---@field ShowGroups FGameplayTagContainer
+---@field IgnoreGroups FGameplayTagContainer
+---@field Operation ERSTAttachmentNotifyOperation
+---@field Handle FRSTAttachmentTransactionHandle
+URSTAnimNotify_ShowAttachments = {}
 
 
 
@@ -6614,11 +7746,18 @@ URSTAppliedHitReactData = {}
 ---@param InDamageImmunityDuration float
 ---@param InInterruptDuration float
 ---@return URSTAppliedHitReactData
-function URSTAppliedHitReactData:CreateAppliedHitReactData(InKnockbackDirection, InKnockbackDistance, InKnockbackHeight, InKnockbackType, InKnockbackDuration, InDamageImmunityDuration, InInterruptDuration) end
-
+function URSTAppliedHitReactData:CreateAppliedHitReactData(InKnockbackDirection, InKnockbackDistance, InKnockbackHeight,
+                                                           InKnockbackType, InKnockbackDuration, InDamageImmunityDuration,
+                                                           InInterruptDuration) end
 
 ---@class URSTAppliedSkinData : UObject
 URSTAppliedSkinData = {}
+
+
+---@class URSTAppliedSkinData_Dialogue : URSTAppliedSkinData
+---@field PreviousRuleset TSoftObjectPtr<URDialogueRuleset>
+URSTAppliedSkinData_Dialogue = {}
+
 
 
 ---@class URSTAppliedSkinData_NiagaraSystem : URSTAppliedSkinData
@@ -6657,8 +7796,8 @@ URSTAsyncAction_ExperienceReady = {}
 ---@param WorldContextObject UObject
 ---@return URSTAsyncAction_ExperienceReady
 function URSTAsyncAction_ExperienceReady:WaitForExperienceReady(WorldContextObject) end
-function URSTAsyncAction_ExperienceReady:AsyncActionDelegate__DelegateSignature() end
 
+function URSTAsyncAction_ExperienceReady:AsyncActionDelegate__DelegateSignature() end
 
 ---@class URSTAttachmentAnimMetaData : UAnimMetaData
 ---@field ShowGroups FGameplayTagContainer
@@ -6690,72 +7829,96 @@ URSTAttachmentManagerComponent = {}
 ---@param AttachmentSlot FGameplayTag
 ---@param AdditionalContextData FGameplayTagContainer
 function URSTAttachmentManagerComponent:TriggerPlayerAttachmentEvent(Event, AttachmentSlot, AdditionalContextData) end
+
 ---@param Groups FGameplayTagContainer
 ---@return FRSTAttachmentTransactionHandle
 function URSTAttachmentManagerComponent:ShowGroup(Groups) end
+
 ---@param Groups FGameplayTagContainer
 ---@param Ignore FGameplayTagContainer
 ---@return FRSTAttachmentTransactionHandle
 function URSTAttachmentManagerComponent:ShowExclusiveGroups(Groups, Ignore) end
+
 ---@param Groups FGameplayTagContainer
 ---@param bVisible boolean
 ---@return FRSTAttachmentTransactionHandle
 function URSTAttachmentManagerComponent:SetGroupVisibility(Groups, bVisible) end
+
 ---@param StencilDepth int32
 function URSTAttachmentManagerComponent:SetCustomStencilDepth(StencilDepth) end
+
 function URSTAttachmentManagerComponent:RSTAttachmentManagerCallback__DelegateSignature() end
+
 function URSTAttachmentManagerComponent:ResetAttachmentStack() end
+
 ---@param SkinFragments TArray<URSTSkinFragment>
 ---@return boolean
 function URSTAttachmentManagerComponent:RemoveSkinVisuals(SkinFragments) end
+
 ---@param InOutHandle FRSTAttachmentTransactionHandle
 function URSTAttachmentManagerComponent:RemoveAttachmentTransactionByHandle(InOutHandle) end
+
 ---@param AttachmentDefinition URSTAttachmentDefinition
 ---@param bReplicate boolean
 function URSTAttachmentManagerComponent:RemoveAttachmentFromDefinition(AttachmentDefinition, bReplicate) end
+
 ---@param SlotIdentifier FGameplayTag
 ---@param bReplicate boolean
 function URSTAttachmentManagerComponent:RemoveAttachment(SlotIdentifier, bReplicate) end
+
 function URSTAttachmentManagerComponent:RemoveAllAttachments() end
+
 ---@param InSource AActor
 ---@param Reason EEndPlayReason::Type
 function URSTAttachmentManagerComponent:OnSpawnedAttachementEndPlay(InSource, Reason) end
+
 function URSTAttachmentManagerComponent:OnRep_ReplicatedSlotData() end
+
 function URSTAttachmentManagerComponent:OnRep_ReplicatedShownGroups() end
+
 ---@param SelfActor AActor
 ---@param bIsHidden boolean
 function URSTAttachmentManagerComponent:OnParentHiddenInGame(SelfActor, bIsHidden) end
+
 ---@param Groups FGameplayTagContainer
 ---@return FRSTAttachmentTransactionHandle
 function URSTAttachmentManagerComponent:HideGroup(Groups) end
+
 ---@param SlotIdentifier FGameplayTag
 ---@return boolean
 function URSTAttachmentManagerComponent:HasAttachment(SlotIdentifier) end
+
 ---@param SlotIdentifier FGameplayTag
 ---@return ARSTAttachment
 function URSTAttachmentManagerComponent:GetSpawnedAttachmentForSlot(SlotIdentifier) end
+
 ---@param Attachments TArray<ARSTAttachment>
 function URSTAttachmentManagerComponent:GetAttachments(Attachments) end
+
 ---@param AttachmentMeshes TArray<UMeshComponent>
 ---@param bClearArray boolean
 function URSTAttachmentManagerComponent:GetAttachmentMeshes(AttachmentMeshes, bClearArray) end
+
 ---@param AttachmentFXSystems TArray<UFXSystemComponent>
 ---@param bClearArray boolean
 function URSTAttachmentManagerComponent:GetAttachmentFXSystems(AttachmentFXSystems, bClearArray) end
+
 ---@param SlotIdentifier FGameplayTag
 ---@return URSTAttachmentDefinition
 function URSTAttachmentManagerComponent:GetAttachmentDefinitionForSlot(SlotIdentifier) end
+
 ---@param Actor AActor
 ---@return URSTAttachmentManagerComponent
 function URSTAttachmentManagerComponent:FindAttachmentManagerComponent(Actor) end
+
 ---@param SkinFragments TArray<URSTSkinFragment>
 ---@return boolean
 function URSTAttachmentManagerComponent:ApplySkinVisuals(SkinFragments) end
+
 ---@param AttachmentDefinition URSTAttachmentDefinition
 ---@param bWarnDuplicates boolean
 ---@param bReplicate boolean
 function URSTAttachmentManagerComponent:AddAttachment(AttachmentDefinition, bWarnDuplicates, bReplicate) end
-
 
 ---@class URSTAttackLocationsComponent : UPrimitiveComponent
 ---@field AttackLocConfiguration ERSTAttackLocConfiguration
@@ -6768,14 +7931,19 @@ URSTAttackLocationsComponent = {}
 
 ---@param bNewOrientationSetting boolean
 function URSTAttackLocationsComponent:SetUseDoorOrientation(bNewOrientationSetting) end
+
 ---@param InPerimeterBoxExtent FVector
 function URSTAttackLocationsComponent:SetPerimeterBoxExtent(InPerimeterBoxExtent) end
+
 ---@param InSpacing float
 function URSTAttackLocationsComponent:SetAttackLocSpacing(InSpacing) end
+
 ---@param InCount int32
 function URSTAttackLocationsComponent:SetAttackLocCount(InCount) end
+
 ---@param InConfig ERSTAttackLocConfiguration
 function URSTAttackLocationsComponent:SetAttackLocConfiguration(InConfig) end
+
 ---@param AttackerLoc FVector
 ---@param Attacker AActor
 ---@param RangeToCheck float
@@ -6784,15 +7952,18 @@ function URSTAttackLocationsComponent:SetAttackLocConfiguration(InConfig) end
 ---@param bReserveSlot boolean
 ---@param bForceRecalc boolean
 ---@return boolean
-function URSTAttackLocationsComponent:RequestAttackTransform(AttackerLoc, Attacker, RangeToCheck, OutTransform, bMustPath, bReserveSlot, bForceRecalc) end
+function URSTAttackLocationsComponent:RequestAttackTransform(AttackerLoc, Attacker, RangeToCheck, OutTransform, bMustPath,
+                                                             bReserveSlot, bForceRecalc) end
+
 ---@return boolean
 function URSTAttackLocationsComponent:HasPendingAttackLoc() end
+
 ---@return ERSTAttackLocConfiguration
 function URSTAttackLocationsComponent:GetAttackLocConfiguration() end
+
 ---@param Actor AActor
 ---@return URSTAttackLocationsComponent
 function URSTAttackLocationsComponent:FindAttackLocationsComponent(Actor) end
-
 
 ---@class URSTAttributeSet : UAttributeSet
 URSTAttributeSet = {}
@@ -6848,58 +8019,74 @@ URSTBlueprintLibrary = {}
 ---@param TextStyleClass UCommonTextStyle
 ---@param OutTextBlockStyle FTextBlockStyle
 function URSTBlueprintLibrary:ToTextBlockStyle(TextStyleClass, OutTextBlockStyle) end
+
+---@param PrimitiveComp UPrimitiveComponent
+function URSTBlueprintLibrary:SetRecentlyRendered(PrimitiveComp) end
+
 ---@param Controller APlayerController
 function URSTBlueprintLibrary:SaveCurrentRun(Controller) end
+
 ---@param WorldContextObject UObject
 ---@return boolean
 function URSTBlueprintLibrary:IsLoadingScreenVisible(WorldContextObject) end
+
 ---@param Value ERSTTrapPlacementFlags
 ---@param ToMatch ERSTTrapPlacementFlags
 ---@return boolean
 function URSTBlueprintLibrary:HasTrapPlacementFlag(Value, ToMatch) end
+
 ---@param UserWidget UUserWidget
 ---@param ItemInstance ARSTInventoryItemInstance
 ---@return int32
 function URSTBlueprintLibrary:GetTrapPlacementCost(UserWidget, ItemInstance) end
+
 ---@param InPlayerArray TArray<APlayerState>
 ---@return TArray<ARSTPlayerState>
 function URSTBlueprintLibrary:GetSortedPlayerArray(InPlayerArray) end
+
 ---@param InTextArray TArray<FText>
 ---@return TArray<FText>
 function URSTBlueprintLibrary:GetSortedPeopleNamesArray(InTextArray) end
+
 ---@param AnimAsset UAnimationAsset
 ---@param MetadataClass TSubclassOf<UAnimMetaData>
 ---@param OutMetadata UAnimMetaData
 ---@return boolean
 function URSTBlueprintLibrary:GetMetaDataForAnim(AnimAsset, MetadataClass, OutMetadata) end
+
 ---@param ObjectClass UClass
 ---@param bSuccess boolean
 ---@return UObject
 function URSTBlueprintLibrary:GetDefaultObjectForClass(ObjectClass, bSuccess) end
+
 ---@param PlayerController APlayerController
 ---@param OutHardwareDeviceIdentifier FHardwareDeviceIdentifier
 function URSTBlueprintLibrary:GetCurrentInputDeviceForPlayer(PlayerController, OutHardwareDeviceIdentifier) end
+
 ---@param WorldContextObject UObject
 ---@return FString
 function URSTBlueprintLibrary:GetClientString(WorldContextObject) end
+
 ---@param WorldContextObject UObject
 ---@param ActorClass TSubclassOf<AActor>
 ---@param OutActors TArray<AActor>
 function URSTBlueprintLibrary:GetAllActorsOfClass(WorldContextObject, ActorClass, OutActors) end
+
 ---@param Location FVector
 ---@param Radius float
 ---@param IgnoreActors TArray<AActor>
 ---@param OutPawns TArray<APawn>
 function URSTBlueprintLibrary:GatherOnslaughtPawnsInRadius(Location, Radius, IgnoreActors, OutPawns) end
+
 ---@param Curve FRuntimeFloatCurve
 ---@param Time float
 ---@return float
 function URSTBlueprintLibrary:EvaluateRuntimeFloatCurve(Curve, Time) end
+
 ---@param TrapToDisable AActor
 ---@param Duration float
 ---@return boolean
 function URSTBlueprintLibrary:DisableTrap(TrapToDisable, Duration) end
-
 
 ---@class URSTBlueprintSubsystemSettings : UDeveloperSettings
 ---@field WorldSubsystems TArray<TSubclassOf<UWorldSubsystem>>
@@ -6921,7 +8108,6 @@ URSTBoundActionButton = {}
 ---@param newText FText
 function URSTBoundActionButton:SetActionText(newText) end
 
-
 ---@class URSTButtonBase : UCommonButtonBase
 ---@field bOverride_ButtonText boolean
 ---@field ButtonText FText
@@ -6929,10 +8115,11 @@ URSTButtonBase = {}
 
 ---@param InText FText
 function URSTButtonBase:UpdateButtonText(InText) end
+
 function URSTButtonBase:UpdateButtonStyle() end
+
 ---@param InText FText
 function URSTButtonBase:SetButtonText(InText) end
-
 
 ---@class URSTCameraComponent : UCameraComponent
 ---@field CameraModeStack URSTCameraModeStack
@@ -6941,7 +8128,6 @@ URSTCameraComponent = {}
 ---@param Actor AActor
 ---@return URSTCameraComponent
 function URSTCameraComponent:FindCameraComponent(Actor) end
-
 
 ---@class URSTCameraMode : UObject
 ---@field CameraTypeTag FGameplayTag
@@ -6992,8 +8178,11 @@ URSTCameraMode_ThirdPerson = {}
 
 
 ---@class URSTChallengeRunDefinition : UPrimaryDataAsset
+---@field InitialDistortions TArray<TSoftObjectPtr<URSTMetaDistortionDefinition>>
 ---@field PreselectedMissions TArray<FRSTMissionDistortionChoiceList>
 ---@field BarricadeLimit int32
+---@field OverrideDifficulty int32
+---@field UpgradeSettings ERSTChallengeUpgradeSettings
 ---@field TotalNumberOfMissions int32
 ---@field MinNumPlayers int32
 ---@field MaxNumPlayers int32
@@ -7004,26 +8193,28 @@ URSTChallengeRunDefinition = {}
 ---@return TArray<FGameplayTag>
 function URSTChallengeRunDefinition:GetAvailableCharacterArray(NumPlayers) end
 
-
 ---@class URSTChallengeRunSubsystem : UWorldSubsystem
 ---@field AvailableMissions TArray<TSoftObjectPtr<URSTMissionDefinition>>
 ---@field RandomMission TSoftObjectPtr<URSTMissionDefinition>
 ---@field AvailableDistortions TArray<TSoftObjectPtr<URSTMetaDistortionDefinition>>
 ---@field RandomDistortion TSoftObjectPtr<URSTMetaDistortionDefinition>
 ---@field AvailableDesignChallenges TArray<TSoftObjectPtr<URSTDesignChallengeRunDefinition>>
+---@field AvailableTeamThreads TArray<TSoftObjectPtr<URSTMetaTeamThreadDefinition>>
+---@field NoEffectTeamThreadDefinition TSoftObjectPtr<URSTMetaTeamThreadDefinition>
 ---@field AvailableCharacters TArray<FGameplayTag>
 URSTChallengeRunSubsystem = {}
 
 ---@return boolean
 function URSTChallengeRunSubsystem:IsEnabled() end
+
 ---@param StringCode FString
 ---@param ImportResult ERSTPlayerChallengeImportCode
 ---@return URSTChallengeRunDefinition
 function URSTChallengeRunSubsystem:ImportFromString(StringCode, ImportResult) end
+
 ---@param ChallengeRun URSTChallengeRunDefinition
 ---@return FString
 function URSTChallengeRunSubsystem:ExportToString(ChallengeRun) end
-
 
 ---@class URSTCharacterMovementComponent : UCharacterMovementComponent
 ---@field bHasReplicatedAcceleration boolean
@@ -7042,12 +8233,13 @@ URSTCharacterMovementComponent = {}
 ---@param ImpactResult FHitResult
 ---@param ImpactVelocity FVector
 function URSTCharacterMovementComponent:OnRagdollBounceDelegate__DelegateSignature(ImpactResult, ImpactVelocity) end
+
 ---@param BounceVelocity FVector
 ---@return boolean
 function URSTCharacterMovementComponent:IsBounceVelocityUnderSimulationThreshold(BounceVelocity) end
+
 ---@return FRSTCharacterGroundInfo
 function URSTCharacterMovementComponent:GetGroundInfo() end
-
 
 ---@class URSTChargeComponent : UActorComponent
 ---@field OnMaxChargesUpdated FRSTChargeComponentOnMaxChargesUpdated
@@ -7057,27 +8249,33 @@ function URSTCharacterMovementComponent:GetGroundInfo() end
 URSTChargeComponent = {}
 
 function URSTChargeComponent:UninitializeFromAbilitySystem() end
+
 ---@param Tag FGameplayTag
 function URSTChargeComponent:RSTChargeDelegate__DelegateSignature(Tag) end
+
 ---@return boolean
 function URSTChargeComponent:IsInitialized() end
+
 ---@param InASC URSTAbilitySystemComponent
 function URSTChargeComponent:InitializeWithAbilitySystem(InASC) end
+
 ---@return URSTAbilitySystemComponent
 function URSTChargeComponent:GetOwningAbilitySystemComponent() end
+
 ---@param Tag FGameplayTag
 ---@param OutMaxCharges int32
 ---@param bIncludeBonus boolean
 ---@return boolean
 function URSTChargeComponent:GetMaxCharges(Tag, OutMaxCharges, bIncludeBonus) end
+
 ---@param Tag FGameplayTag
 ---@param OutVal int32
 ---@return boolean
 function URSTChargeComponent:GetCurrentCharges(Tag, OutVal) end
+
 ---@param Actor AActor
 ---@return URSTChargeComponent
 function URSTChargeComponent:FindChargeComponent(Actor) end
-
 
 ---@class URSTChatTooltipWidget : URSTUserWidget
 ---@field DisplayText FText
@@ -7085,189 +8283,296 @@ function URSTChargeComponent:FindChargeComponent(Actor) end
 URSTChatTooltipWidget = {}
 
 function URSTChatTooltipWidget:BP_Refresh() end
+
 ---@param PrimaryDataAsset UPrimaryDataAsset
 function URSTChatTooltipWidget:BP_ConstructFromText(PrimaryDataAsset) end
-
 
 ---@class URSTCheatManager : UCheatManager
 URSTCheatManager = {}
 
 function URSTCheatManager:WinGame() end
+
 ---@param MilestoneTag FGameplayTag
 function URSTCheatManager:UnlockMilestone(MilestoneTag) end
+
 ---@param HeroTag FGameplayTag
 function URSTCheatManager:UnlockHero(HeroTag) end
+
 function URSTCheatManager:UnlockAllThreads() end
+
 function URSTCheatManager:UnlockAllMilestones() end
+
 function URSTCheatManager:UnlockAllHeroes() end
+
 function URSTCheatManager:UnlimitedAmmo() end
+
 function URSTCheatManager:ToggleWisps() end
+
 function URSTCheatManager:ToggleOneShot() end
+
 function URSTCheatManager:ToggleHUD() end
+
 function URSTCheatManager:ToggleHenry() end
+
 function URSTCheatManager:ToggleFriendlyFire() end
+
 function URSTCheatManager:ToggleAimAssistDebug() end
+
 ---@param IndexA int32
 ---@param IndexB int32
 function URSTCheatManager:SwapPlayerIndices(IndexA, IndexB) end
+
 function URSTCheatManager:Suicide() end
+
 ---@param PickupTableTag FGameplayTag
 function URSTCheatManager:SpawnPickupFromTable(PickupTableTag) end
+
 ---@param Name FString
 ---@param Index int32
 ---@param Count int32
 function URSTCheatManager:SpawnAICharactersOfClassAtDoor(Name, Index, Count) end
+
 ---@param Name FString
 ---@param Count int32
 function URSTCheatManager:SpawnAICharactersOfClass(Name, Count) end
+
 function URSTCheatManager:ShowSkulls() end
+
 function URSTCheatManager:ShowDifficulty() end
+
 ---@param TagName FString
 function URSTCheatManager:SetSkinDefinition(TagName) end
+
 ---@param RiftPoints int32
 function URSTCheatManager:SetRiftPoints(RiftPoints) end
+
 ---@param Tag FGameplayTag
 ---@param Value int32
 ---@param StatType ERSTStatType
 ---@param Subtag FGameplayTag
 function URSTCheatManager:SetProfileStat(Tag, Value, StatType, Subtag) end
+
 ---@param TagName FString
 function URSTCheatManager:SetPawnDefinition(TagName) end
+
 ---@param numPlayersDifficulty uint8
 function URSTCheatManager:SetNumPlayersDifficulty(numPlayersDifficulty) end
+
 ---@param DistortionName FString
 function URSTCheatManager:SetNextDistortion(DistortionName) end
+
 ---@param NewLayer int32
 function URSTCheatManager:SetNavRenderLayer(NewLayer) end
+
 ---@param isInfiniteRift boolean
 function URSTCheatManager:SetInfiniteRift(isInfiniteRift) end
+
 ---@param NumSlots int32
 function URSTCheatManager:SetHotbarSize(NumSlots) end
+
 ---@param Enabled boolean
 function URSTCheatManager:SetHealthDisplays(Enabled) end
+
 ---@param GameDifficulty uint8
 function URSTCheatManager:SetGameDifficulty(GameDifficulty) end
+
 ---@param DistortionName FString
 ---@param MissionIndex int32
 function URSTCheatManager:SetDistortion(DistortionName, MissionIndex) end
+
 ---@param Name FString
 function URSTCheatManager:SetAllAICharactersClass(Name) end
+
 ---@param amount int32
 function URSTCheatManager:SetAllAICharactersAmount(amount) end
+
 ---@param Key FGameplayTag
 function URSTCheatManager:RevokeKey(Key) end
+
 function URSTCheatManager:RevokeAllGrantedKeys() end
+
 ---@param ReviverMultiplier float
 function URSTCheatManager:ReviveFromDowned(ReviverMultiplier) end
+
 function URSTCheatManager:ResetProfile() end
+
 function URSTCheatManager:ResetAllTraps() end
+
 function URSTCheatManager:RerollSessionMissionSeed() end
+
 ---@param UpgradeName FString
 function URSTCheatManager:RemoveUpgrade(UpgradeName) end
+
 ---@param ThreadName FString
 function URSTCheatManager:RemoveThread(ThreadName) end
+
 ---@param TagName FString
 function URSTCheatManager:RemoveTagFromSelf(TagName) end
+
 ---@param CueTag FGameplayTag
 function URSTCheatManager:RemoveGameplayCue(CueTag) end
+
 ---@param DistortionName FString
 function URSTCheatManager:RemoveDistortion(DistortionName) end
+
 function URSTCheatManager:RefreshMilestones() end
+
 function URSTCheatManager:RefreshConnectLogin() end
+
+function URSTCheatManager:PurgeGECache() end
+
 ---@param threadIndex int32
 function URSTCheatManager:PrintValidThreads(threadIndex) end
+
 ---@param MissionIndex int32
 function URSTCheatManager:PrintValidMissions(MissionIndex) end
+
 ---@param MissionIndex int32
 ---@param ChoiceIndex int32
 function URSTCheatManager:PrintValidDistortions(MissionIndex, ChoiceIndex) end
+
 function URSTCheatManager:PrintTeamThreads() end
+
 ---@param Tag FGameplayTag
 ---@param Subtag FGameplayTag
 function URSTCheatManager:PrintStat(Tag, Subtag) end
+
 function URSTCheatManager:PrintProfileStats() end
+
 function URSTCheatManager:PrintPlayerArray() end
+
 function URSTCheatManager:PrintMilestoneProgress() end
+
 function URSTCheatManager:PrintGrantedKeys() end
+
+function URSTCheatManager:PrintGECache() end
+
 function URSTCheatManager:PrintCrystalRiftHealth() end
+
 ---@param LightingName FString
 function URSTCheatManager:PreviewLighting(LightingName) end
+
 function URSTCheatManager:NextWave() end
+
 function URSTCheatManager:LoseGame() end
+
 ---@param Event FString
 ---@param Value float
 function URSTCheatManager:LogAnalyticsEvent(Event, Value) end
+
 ---@param MissionName FString
 ---@param DistortionName FString
 function URSTCheatManager:LaunchMission(MissionName, DistortionName) end
+
 function URSTCheatManager:KillAllMobs() end
+
 function URSTCheatManager:InstantRestartPlayer() end
+
 function URSTCheatManager:InfiniteRift() end
+
 ---@param Filename FString
 function URSTCheatManager:ImportSoloQuicksave(Filename) end
+
 ---@param Index int32
 ---@param Filename FString
 function URSTCheatManager:ImportMultiplayerQuicksave(Index, Filename) end
+
 function URSTCheatManager:ForceGarbageCollection() end
+
 function URSTCheatManager:FinishWave() end
+
 ---@param Filename FString
 function URSTCheatManager:ExportSoloQuicksave(Filename) end
+
 ---@param Index int32
 ---@param Filename FString
 function URSTCheatManager:ExportMultiplayerQuicksave(Index, Filename) end
+
 ---@param Filename FString
 function URSTCheatManager:ExportLastRun(Filename) end
+
 ---@param bApplyImmediately boolean
 function URSTCheatManager:ExpireTeamThreads(bApplyImmediately) end
+
 ---@param CueTag FGameplayTag
 function URSTCheatManager:ExecuteGameplayCue(CueTag) end
+
 function URSTCheatManager:DumpAllPlayerGameplayTags() end
+
+---@param N int32
+---@param Command FString
+function URSTCheatManager:DoNTimes(N, Command) end
+
 function URSTCheatManager:DisplayUpgrades() end
+
 function URSTCheatManager:DisplayMissionHistory() end
+
 ---@param Time float
 function URSTCheatManager:DisableAllTraps(Time) end
+
 function URSTCheatManager:DebugSelectThread() end
+
 ---@param TransitionTag FGameplayTag
 function URSTCheatManager:DebugPlayTransition(TransitionTag) end
+
 function URSTCheatManager:DebugCancelDraft() end
+
 ---@param DamageAmount float
 function URSTCheatManager:DamageSelf(DamageAmount) end
+
 function URSTCheatManager:CrashTest() end
+
 ---@param MilestoneTag FGameplayTag
 function URSTCheatManager:CompleteMilestoneProgress(MilestoneTag) end
+
 function URSTCheatManager:CompleteAllMilestones() end
+
+---@param SlotName FString
+function URSTCheatManager:ClearSkinSlot(SlotName) end
+
 function URSTCheatManager:ClearPotion() end
+
 ---@param UpgradeName FString
 function URSTCheatManager:ApplyUpgrade(UpgradeName) end
+
 ---@param ThreadName FString
 function URSTCheatManager:ApplyThread(ThreadName) end
+
 ---@param ThreadName FString
 ---@param bApplyImmediately boolean
 function URSTCheatManager:ApplyTeamThread(ThreadName, bApplyImmediately) end
+
 ---@param PotionName FString
 function URSTCheatManager:ApplyPotion(PotionName) end
+
 ---@param DistortionName FString
 function URSTCheatManager:ApplyDistortion(DistortionName) end
+
 ---@param bAllowModifiers boolean
 function URSTCheatManager:AllowApplyModifiers(bAllowModifiers) end
+
 ---@param TagName FString
 function URSTCheatManager:AddTagToSelf(TagName) end
+
 ---@param RiftPoints int32
 function URSTCheatManager:AddRiftPoints(RiftPoints) end
+
 ---@param Tag FGameplayTag
 ---@param Value int32
 ---@param StatType ERSTStatType
 ---@param Subtag FGameplayTag
 function URSTCheatManager:AddProfileStat(Tag, Value, StatType, Subtag) end
+
 ---@param ItemName FString
 ---@param Slot int32
 function URSTCheatManager:AddItemToHotbar(ItemName, Slot) end
+
 ---@param CueTag FGameplayTag
 function URSTCheatManager:AddGameplayCue(CueTag) end
+
 ---@param ChargeName FString
 ---@param Count float
 function URSTCheatManager:AddCharges(ChargeName, Count) end
-
 
 ---@class URSTChestSubsystem : UWorldSubsystem
 URSTChestSubsystem = {}
@@ -7280,7 +8585,6 @@ URSTCoinFlyoffWidget = {}
 ---@param CoinPerPlayer int32
 ---@param ExtraCoinForKiller int32
 function URSTCoinFlyoffWidget:SetData(KillerPlayer, CoinPerPlayer, ExtraCoinForKiller) end
-
 
 ---@class URSTCombatCapsuleComponent : UCapsuleComponent
 ---@field Identifier FGameplayTag
@@ -7296,7 +8600,6 @@ URSTCombatComponent = {}
 
 ---@param InASC URSTAbilitySystemComponent
 function URSTCombatComponent:InitializeWithAbilitySystem(InASC) end
-
 
 ---@class URSTCombatSet : URSTAttributeSet
 ---@field BaseDamage FGameplayAttributeData
@@ -7321,41 +8624,57 @@ URSTCombatSet = {}
 
 ---@param OldValue FGameplayAttributeData
 function URSTCombatSet:OnRep_StatusEffectDurationScale(OldValue) end
+
 ---@param OldValue FGameplayAttributeData
 function URSTCombatSet:OnRep_SpecialRechargeRate(OldValue) end
+
 ---@param OldValue FGameplayAttributeData
 function URSTCombatSet:OnRep_SpecialCharges(OldValue) end
+
 ---@param OldValue FGameplayAttributeData
 function URSTCombatSet:OnRep_SecondaryRechargeRate(OldValue) end
+
 ---@param OldValue FGameplayAttributeData
 function URSTCombatSet:OnRep_SecondaryCharges(OldValue) end
+
 ---@param OldValue FGameplayAttributeData
 function URSTCombatSet:OnRep_PrimaryCharges(OldValue) end
+
 ---@param OldValue FGameplayAttributeData
 function URSTCombatSet:OnRep_NonHeadshotDamageFactor(OldValue) end
+
 ---@param OldValue FGameplayAttributeData
 function URSTCombatSet:OnRep_MaxSpecialCharges(OldValue) end
+
 ---@param OldValue FGameplayAttributeData
 function URSTCombatSet:OnRep_MaxSecondaryCharges(OldValue) end
+
 ---@param OldValue FGameplayAttributeData
 function URSTCombatSet:OnRep_MaxPrimaryCharges(OldValue) end
+
 ---@param OldValue FGameplayAttributeData
 function URSTCombatSet:OnRep_MaxPrimaryChargeBonus(OldValue) end
+
 ---@param OldValue FGameplayAttributeData
 function URSTCombatSet:OnRep_HealPercentMaxHealth(OldValue) end
+
 ---@param OldValue FGameplayAttributeData
 function URSTCombatSet:OnRep_HeadshotDamageFactor(OldValue) end
+
 ---@param OldValue FGameplayAttributeData
 function URSTCombatSet:OnRep_CriticalHitFactor(OldValue) end
+
 ---@param OldValue FGameplayAttributeData
 function URSTCombatSet:OnRep_CriticalHitDamageScale(OldValue) end
+
 ---@param OldValue FGameplayAttributeData
 function URSTCombatSet:OnRep_BaseShieldHeal(OldValue) end
+
 ---@param OldValue FGameplayAttributeData
 function URSTCombatSet:OnRep_BaseHeal(OldValue) end
+
 ---@param OldValue FGameplayAttributeData
 function URSTCombatSet:OnRep_BaseDamage(OldValue) end
-
 
 ---@class URSTComboFlyoffWidget : URSTUserWidget
 URSTComboFlyoffWidget = {}
@@ -7363,14 +8682,18 @@ URSTComboFlyoffWidget = {}
 ---@param comboLength int32
 ---@param PlayerIndex int32
 function URSTComboFlyoffWidget:SetData(comboLength, PlayerIndex) end
-function URSTComboFlyoffWidget:BeginAnimation() end
 
+function URSTComboFlyoffWidget:BeginAnimation() end
 
 ---@class URSTCommonSession_HostSessionRequest : UCommonSession_HostSessionRequest
 ---@field CurrentWorld UWorld
 ---@field bUseCurrentWorldURL boolean
 URSTCommonSession_HostSessionRequest = {}
 
+
+
+---@class URSTCommonUIVisibilitySubsystem : UCommonUIVisibilitySubsystem
+URSTCommonUIVisibilitySubsystem = {}
 
 
 ---@class URSTCommunicationDefinition : UDataAsset
@@ -7431,7 +8754,6 @@ URSTCriticalHitFlyoffWidget = {}
 ---@param CriticalHitStrength float
 function URSTCriticalHitFlyoffWidget:SetData(CriticalHitStrength) end
 
-
 ---@class URSTCrystalDefenseComponent : URSTGameStateComponent
 ---@field OnRiftHealthUpdated FRSTCrystalDefenseComponentOnRiftHealthUpdated
 ---@field AccumulatedDamage float
@@ -7442,10 +8764,12 @@ URSTCrystalDefenseComponent = {}
 ---@param RemainingRatio float
 ---@param DamageTaken float
 ---@param DamageRatio float
-function URSTCrystalDefenseComponent:RSTCrystalDefenseHealthUpdated__DelegateSignature(NewRemaining, RemainingRatio, DamageTaken, DamageRatio) end
-function URSTCrystalDefenseComponent:OnRep_HealthPerRiftPoint() end
-function URSTCrystalDefenseComponent:OnRep_AccumulatedDamage() end
+function URSTCrystalDefenseComponent:RSTCrystalDefenseHealthUpdated__DelegateSignature(NewRemaining, RemainingRatio,
+                                                                                       DamageTaken, DamageRatio) end
 
+function URSTCrystalDefenseComponent:OnRep_HealthPerRiftPoint() end
+
+function URSTCrystalDefenseComponent:OnRep_AccumulatedDamage() end
 
 ---@class URSTCueData : UObject
 URSTCueData = {}
@@ -7462,10 +8786,11 @@ URSTCueData_DaggerSpecial = {}
 URSTCueData_MovePoints = {}
 
 function URSTCueData_MovePoints:StartNewPath() end
+
 function URSTCueData_MovePoints:ResetPath() end
+
 ---@param Point FVector
 function URSTCueData_MovePoints:AddPoint(Point) end
-
 
 ---@class URSTCueNotify_Magnitude : UGameplayCueNotify_Burst
 ---@field bUseRawMagnitude boolean
@@ -7488,10 +8813,10 @@ URSTCueNotify_TrapPlacement = {}
 URSTCueSimulatorComponent = {}
 
 function URSTCueSimulatorComponent:OnEndTimerLapsed() end
+
 ---@param Actor AActor
 ---@return URSTCueSimulatorComponent
 function URSTCueSimulatorComponent:FindCueSimulatorComponent(Actor) end
-
 
 ---@class URSTCustomHitCueGEComponent : UGameplayEffectComponent
 ---@field CustomHitReactCue FGameplayTag
@@ -7515,7 +8840,6 @@ URSTDamageFlyoffWidget = {}
 ---@param NewRequest FRSTDamageFlyoffRequest
 function URSTDamageFlyoffWidget:Update(NewRequest) end
 
-
 ---@class URSTDamageImmunityData : URSTHitDataElement
 ---@field DamageImmunityDuration float
 URSTDamageImmunityData = {}
@@ -7538,6 +8862,21 @@ URSTDamageModifierComponent = {}
 ---@return URSTDamageModifierComponent
 function URSTDamageModifierComponent:FindDamageModifierComponent(Actor) end
 
+---@class URSTDataMapComponent : UActorComponent
+---@field TaggedDataObjects TMap<FGameplayTag, UObject>
+URSTDataMapComponent = {}
+
+---@param Tag FGameplayTag
+---@return boolean
+function URSTDataMapComponent:HasTaggedDataObject(Tag) end
+
+---@param Tag FGameplayTag
+---@return UObject
+function URSTDataMapComponent:GetTaggedDataObject(Tag) end
+
+---@param Actor AActor
+---@return URSTDataMapComponent
+function URSTDataMapComponent:FindDataMapComponent(Actor) end
 
 ---@class URSTDataTableManagerSettings : UDeveloperSettings
 ---@field LimbRemovalTable TSoftObjectPtr<UDataTable>
@@ -7599,13 +8938,11 @@ URSTDeathTypeSwitch = {}
 ---@return URSTDeathTypeSwitch
 function URSTDeathTypeSwitch:SwitchOnDeathType(deathTypeMask) end
 
-
 ---@class URSTDelayedInvalidationBox : UInvalidationBox
 ---@field InitialDelay float
 URSTDelayedInvalidationBox = {}
 
 function URSTDelayedInvalidationBox:OnTimeElapsed() end
-
 
 ---@class URSTDesignChallengeRunDefinition : URSTChallengeRunDefinition
 ---@field ChallengeTitle FText
@@ -7636,36 +8973,48 @@ URSTDeveloperSettings = {}
 URSTDifficultyManager = {}
 
 function URSTDifficultyManager:ShowDifficulty() end
+
 ---@param RiftPointsCarryover int32
 function URSTDifficultyManager:SetRiftPointsCarryover(RiftPointsCarryover) end
+
 ---@param numPlayersDifficulty int32
 function URSTDifficultyManager:SetNumPlayersDifficulty(numPlayersDifficulty) end
+
 ---@param InitialDifficulty int32
 function URSTDifficultyManager:SetInitialDifficulty(InitialDifficulty) end
+
 ---@param GameDifficulty int32
 function URSTDifficultyManager:SetGameDifficulty(GameDifficulty) end
+
 ---@param numPlayersDifficulty int32
 function URSTDifficultyManager:SetDebugNumPlayersDifficulty(numPlayersDifficulty) end
+
 ---@param GameDifficulty int32
 function URSTDifficultyManager:SetDebugGameDifficulty(GameDifficulty) end
+
 ---@param onePlayer boolean
 ---@param twoPlayers boolean
 ---@param threePlayers boolean
 ---@param fourPlusPlayers boolean
 ---@return boolean
 function URSTDifficultyManager:IsNumPlayersDifficultySet(onePlayer, twoPlayers, threePlayers, fourPlusPlayers) end
+
 ---@return int32
 function URSTDifficultyManager:GetRiftPointsCarryover() end
+
 ---@return int32
 function URSTDifficultyManager:GetNumPlayersDifficulty() end
+
 ---@return int32
 function URSTDifficultyManager:GetInitialDifficulty() end
+
 ---@return int32
 function URSTDifficultyManager:GetGameDifficulty() end
+
 ---@return int32
 function URSTDifficultyManager:GetDifficulty() end
-function URSTDifficultyManager:CalcGameDifficulty() end
 
+function URSTDifficultyManager:CalcGameDifficulty() end
 
 ---@class URSTDownedChargeAttributeSet : URSTAttributeSet
 ---@field DownedCharge FGameplayAttributeData
@@ -7674,9 +9023,9 @@ URSTDownedChargeAttributeSet = {}
 
 ---@param OldValue FGameplayAttributeData
 function URSTDownedChargeAttributeSet:OnRep_MaxDownedCharge(OldValue) end
+
 ---@param OldValue FGameplayAttributeData
 function URSTDownedChargeAttributeSet:OnRep_DownedCharge(OldValue) end
-
 
 ---@class URSTDroppableAttributeSet : URSTAttributeSet
 ---@field GoldCoinChance FGameplayAttributeData
@@ -7693,28 +9042,36 @@ URSTDynamicFoliageComponent = {}
 ---@param OtherBodyIndex int32
 ---@param bFromSweep boolean
 ---@param SweepResult FHitResult
-function URSTDynamicFoliageComponent:HandleComponentBeginOverlap(OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex, bFromSweep, SweepResult) end
-
+function URSTDynamicFoliageComponent:HandleComponentBeginOverlap(OverlappedComponent, OtherActor, OtherComp,
+                                                                 OtherBodyIndex, bFromSweep, SweepResult) end
 
 ---@class URSTEditorBlueprintLibrary : UBlueprintFunctionLibrary
 URSTEditorBlueprintLibrary = {}
 
 ---@return boolean
 function URSTEditorBlueprintLibrary:IsShippingBuild() end
+
 ---@param WorldContextObject UObject
 ---@return boolean
 function URSTEditorBlueprintLibrary:IsEditTime(WorldContextObject) end
+
 ---@return boolean
 function URSTEditorBlueprintLibrary:IsEditor() end
+
 ---@param Effect UGameplayEffect
 ---@return EGameplayEffectDurationType
 function URSTEditorBlueprintLibrary:GetGEDurationType(Effect) end
+
 ---@return int32
 function URSTEditorBlueprintLibrary:GetBuildChangelist() end
+
 ---@param EffectClass TSubclassOf<UGameplayEffect>
 ---@param GECompClass TSubclassOf<UGameplayEffectComponent>
 ---@return boolean
 function URSTEditorBlueprintLibrary:DoesGameplayEffectContainComponent(EffectClass, GECompClass) end
+
+---@class URSTEndGrappleGameplayEffectComponent : UGameplayEffectComponent
+URSTEndGrappleGameplayEffectComponent = {}
 
 
 ---@class URSTEntitlementDefinition : UPrimaryDataAsset
@@ -7732,25 +9089,29 @@ URSTEntitlementSubsystem = {}
 ---@param Identifier FGameplayTag
 ---@return boolean
 function URSTEntitlementSubsystem:IsEntitledToSkin(Identifier) end
+
 ---@param Identifier FGameplayTag
 ---@return boolean
 function URSTEntitlementSubsystem:IsEntitledToHero(Identifier) end
+
 ---@param Identifier FGameplayTag
 ---@return boolean
 function URSTEntitlementSubsystem:HasEntitlement(Identifier) end
+
 ---@param UserInfo UCommonUserInfo
 ---@param bSuccess boolean
 ---@param Error FText
 ---@param RequestedPrivilege ECommonUserPrivilege
 ---@param OnlineContext ECommonUserOnlineContext
 function URSTEntitlementSubsystem:HandlerUserInitialized(UserInfo, bSuccess, Error, RequestedPrivilege, OnlineContext) end
+
 ---@param Identifier FGameplayTag
 ---@return URSTEntitlementDefinition
 function URSTEntitlementSubsystem:GetEntitlementForSkin(Identifier) end
+
 ---@param Identifier FGameplayTag
 ---@return URSTEntitlementDefinition
 function URSTEntitlementSubsystem:GetEntitlementForHero(Identifier) end
-
 
 ---@class URSTEquipmentManagerComponent : UPawnComponent
 ---@field EquippedItem ARSTInventoryItemInstance
@@ -7763,12 +9124,13 @@ URSTEquipmentManagerComponent = {}
 ---@param OwningActor AActor
 ---@param InInstigator AActor
 function URSTEquipmentManagerComponent:OnRevived(OwningActor, InInstigator) end
+
 ---@param UnequippedItem ARSTInventoryItemInstance
 function URSTEquipmentManagerComponent:OnRep_EquippedItem(UnequippedItem) end
+
 ---@param OwningActor AActor
 ---@param InInstigator AActor
 function URSTEquipmentManagerComponent:OnDowned(OwningActor, InInstigator) end
-
 
 ---@class URSTExperienceActionSet : UPrimaryDataAsset
 ---@field Actions TArray<UGameFeatureAction>
@@ -7797,7 +9159,6 @@ URSTExperienceManagerComponent = {}
 
 function URSTExperienceManagerComponent:OnRep_CurrentExperience() end
 
-
 ---@class URSTFilterFriendlyGEComponent : UGameplayEffectComponent
 URSTFilterFriendlyGEComponent = {}
 
@@ -7809,29 +9170,36 @@ URSTFireGroupDataHelpers = {}
 ---@param OutData FRSTEnabledFireGroupData
 ---@param ProfileName FCollisionProfileName
 function URSTFireGroupDataHelpers:SetTargetingProfile(Data, OutData, ProfileName) end
+
 ---@param Data FRSTEnabledFireGroupData
 ---@param OutData FRSTEnabledFireGroupData
 ---@param Radius float
 function URSTFireGroupDataHelpers:SetSphereTraceRadius(Data, OutData, Radius) end
+
 ---@param Data FRSTEnabledFireGroupData
 ---@param OutData FRSTEnabledFireGroupData
 ---@param RangeOverride float
 function URSTFireGroupDataHelpers:SetRangeOverride(Data, OutData, RangeOverride) end
+
 ---@param Data FRSTEnabledFireGroupData
 ---@param OutData FRSTEnabledFireGroupData
 ---@param InterpSpeed float
 function URSTFireGroupDataHelpers:SetInterpSpeedOverride(Data, OutData, InterpSpeed) end
+
 ---@param Data FRSTEnabledFireGroupData
 ---@param OutData FRSTEnabledFireGroupData
 ---@param bInterpAim boolean
 function URSTFireGroupDataHelpers:SetInterpAim(Data, OutData, bInterpAim) end
+
 ---@param Data FRSTEnabledFireGroupData
 ---@param OutData FRSTEnabledFireGroupData
 ---@param Method ERSTRangedAimCollisionResolutionMethod
 function URSTFireGroupDataHelpers:SetCollisionMethod(Data, OutData, Method) end
+
 ---@param TargetingMethod ERSTRangedFireGroupTargetingMethod
 ---@return FRSTEnabledFireGroupData
 function URSTFireGroupDataHelpers:MakeFireGroupData(TargetingMethod) end
+
 ---@param TargetingMethod ERSTRangedFireGroupTargetingMethod
 ---@param bHasRangeOverride boolean
 ---@param RangeOverride float
@@ -7842,8 +9210,10 @@ function URSTFireGroupDataHelpers:MakeFireGroupData(TargetingMethod) end
 ---@param bHasOverrideTargetingProfile boolean
 ---@param OverrideTargetingProfile FCollisionProfileName
 ---@return FRSTEnabledFireGroupData
-function URSTFireGroupDataHelpers:InitFromParameters(TargetingMethod, bHasRangeOverride, RangeOverride, OverrideCollisionResolutionMethod, bInterpAim, bOverrideInterpSpeed, OverrideInterpSpeed, bHasOverrideTargetingProfile, OverrideTargetingProfile) end
-
+function URSTFireGroupDataHelpers:InitFromParameters(TargetingMethod, bHasRangeOverride, RangeOverride,
+                                                     OverrideCollisionResolutionMethod, bInterpAim, bOverrideInterpSpeed,
+                                                     OverrideInterpSpeed, bHasOverrideTargetingProfile,
+                                                     OverrideTargetingProfile) end
 
 ---@class URSTFirePointCueNotify_Burst : URSTWeaponCueNotify_Burst
 ---@field BurstFirePointParticles TArray<FGameplayCueNotify_ParticleInfo>
@@ -7852,7 +9222,6 @@ URSTFirePointCueNotify_Burst = {}
 ---@param SpawnResults FGameplayCueNotify_SpawnResult
 function URSTFirePointCueNotify_Burst:K2_OnBurstFirePointProcessed(SpawnResults) end
 
-
 ---@class URSTFlyoffComponent : UControllerComponent
 ---@field DamageFlyoffClass TSubclassOf<ARSTFlyoff>
 ---@field HealingFlyoffClass TSubclassOf<ARSTFlyoff>
@@ -7860,9 +9229,9 @@ URSTFlyoffComponent = {}
 
 ---@param NewRequest FRSTHealingFlyoffRequest
 function URSTFlyoffComponent:RequestHealingFlyoff(NewRequest) end
+
 ---@param NewRequest FRSTDamageFlyoffRequest
 function URSTFlyoffComponent:RequestDamageFlyoff(NewRequest) end
-
 
 ---@class URSTFrontEndStateComponent : URSTGameStateComponent
 ---@field RobotLogoScreenClass TSoftClassPtr<UCommonActivatableWidget>
@@ -7878,7 +9247,6 @@ URSTFrontEndStateComponent = {}
 ---@param RequestedPrivilege ECommonUserPrivilege
 ---@param OnlineContext ECommonUserOnlineContext
 function URSTFrontEndStateComponent:OnUserInitialized(UserInfo, bSuccess, Error, RequestedPrivilege, OnlineContext) end
-
 
 ---@class URSTGCN_Burst_Duration : UGameplayCueNotify_Burst
 URSTGCN_Burst_Duration = {}
@@ -7899,7 +9267,6 @@ URSTGMMC_Threads = {}
 ---@return URSTSessionMissionSubsystem
 function URSTGMMC_Threads:GetSessionMissionSubsystem(Spec) end
 
-
 ---@class URSTGameData : UPrimaryDataAsset
 ---@field DamageFlyoffIconCollection TArray<FRSTFlyoffIconData>
 ---@field MinimumCombo int32
@@ -7914,7 +9281,6 @@ function URSTGMMC_Threads:GetSessionMissionSubsystem(Spec) end
 ---@field Modal_OneChoice TSoftClassPtr<URSTModal_OneChoice>
 ---@field Modal_TwoChoices TSoftClassPtr<URSTModal_TwoChoices>
 ---@field Modal_TextPrompt TSoftClassPtr<URSTModal_TextPrompt>
----@field Modal_KeyMapping TSoftClassPtr<URSTModal_KeyMapping>
 ---@field Modal_Video TSoftClassPtr<URSTModal_Video>
 ---@field SharedTrapPlacementLimits TMap<FGameplayTag, int32>
 ---@field TeamSizeSharedTrapPlacementLimits TMap<FGameplayTag, FRSTTeamCountTrapLimitData>
@@ -7968,9 +9334,9 @@ URSTGameData = {}
 
 ---@return TArray<FRSTStatusTagToGameplayCues>
 function URSTGameData:GetStatusToGameplayCuesList() end
+
 ---@return URSTGameData
 function URSTGameData:GetPtr() end
-
 
 ---@class URSTGameDataGlobals : UObject
 ---@field OnSupplementalGameDataChanged FRSTGameDataGlobalsOnSupplementalGameDataChanged
@@ -7979,11 +9345,30 @@ function URSTGameData:GetPtr() end
 URSTGameDataGlobals = {}
 
 function URSTGameDataGlobals:RSTOnSupplementalGameDataChanged__DelegateSignature() end
+
 ---@return TArray<FRSTStatusTagToGameplayCues>
 function URSTGameDataGlobals:GetStatusToGameplayCuesList() end
+
 ---@return URSTGameDataGlobals
 function URSTGameDataGlobals:GetPtr() end
 
+---@class URSTGameDataSubsystem : UGameInstanceSubsystem
+---@field OnSkinSlotDataLoaded FRSTGameDataSubsystemOnSkinSlotDataLoaded
+---@field SkinSlots TArray<URSTSkinSlotData>
+---@field SkinApplicationOrder TMap<FGameplayTag, int32>
+URSTGameDataSubsystem = {}
+
+function URSTGameDataSubsystem:RSTSkinSlotsLoaded__DelegateSignature() end
+
+---@param SlotIds TArray<FPrimaryAssetId>
+function URSTGameDataSubsystem:OnSkinSlotsLoaded(SlotIds) end
+
+---@return TArray<URSTSkinSlotData>
+function URSTGameDataSubsystem:GetSkinSlots() end
+
+---@param Slot FGameplayTag
+---@return int32
+function URSTGameDataSubsystem:GetSkinSlotApplicationIndex(Slot) end
 
 ---@class URSTGameEngine : UGameEngine
 URSTGameEngine = {}
@@ -8061,38 +9446,54 @@ URSTGameInstance = {}
 
 ---@param bShown boolean
 function URSTGameInstance:SetHasShownStartupVideo(bShown) end
+
 function URSTGameInstance:RSTOnRejoinStatusUpdated__DelegateSignature() end
+
 function URSTGameInstance:RSTGameStateSetDelegate__DelegateSignature() end
+
 ---@param bRecordRejoin boolean
 function URSTGameInstance:RejoinLastSession(bRecordRejoin) end
+
 ---@param MessageTag FGameplayTag
 function URSTGameInstance:RecreateSession(MessageTag) end
+
 ---@param Result FOnlineResultInformation
 function URSTGameInstance:OnJoinSessionComplete(Result) end
+
 ---@param GameState AGameStateBase
 function URSTGameInstance:OnGameStateSet(GameState) end
+
 ---@param Result FOnlineResultInformation
 function URSTGameInstance:OnCreateSessionComplete(Result) end
+
 ---@param Password FString
 function URSTGameInstance:JoinRequestedSessionWithPassword(Password) end
+
 ---@return boolean
 function URSTGameInstance:IsRejoinPending() end
+
 ---@return boolean
 function URSTGameInstance:HasShownStartupVideo() end
+
 ---@param HostingPlayer APlayerController
 ---@param OnlineMode ECommonSessionOnlineMode
 ---@param bCanUseCrossplay boolean
 ---@return URSTCommonSession_HostSessionRequest
 function URSTGameInstance:CreateHostingRequest(HostingPlayer, OnlineMode, bCanUseCrossplay) end
+
 function URSTGameInstance:CheckRejoinStatus() end
+
 ---@return boolean
 function URSTGameInstance:CanRejoinLastSession() end
+
 function URSTGameInstance:BP_RequestPasswordForSession() end
+
 function URSTGameInstance:BP_OnInvalidPassword() end
+
 function URSTGameInstance:BP_EndGame() end
+
 ---@param bRecordAbandon boolean
 function URSTGameInstance:AbandonRejoin(bRecordAbandon) end
-
 
 ---@class URSTGameScoreBase : UObject
 ---@field ScoreTag FGameplayTag
@@ -8133,55 +9534,72 @@ URSTGameStatePRSComponent = {}
 ---@param StopPriority int32
 ---@return boolean
 function URSTGameStatePRSComponent:StopPlayerReadySync(PRSTag, StopPriority) end
+
 ---@param PRSTag FGameplayTag
 function URSTGameStatePRSComponent:RSTGameStatePRSTag__DelegateSignature(PRSTag) end
+
 ---@param PRSTag FGameplayTag
 ---@param PlayerNetID FUniqueNetIdRepl
 ---@param bIsReady boolean
 function URSTGameStatePRSComponent:RSTGameStatePRSPlayerReadyState__DelegateSignature(PRSTag, PlayerNetID, bIsReady) end
+
 function URSTGameStatePRSComponent:OnRep_PRSCollection() end
+
 ---@param PlayerStateRemoved APlayerState
 function URSTGameStatePRSComponent:OnPlayerStateRemovedCallback(PlayerStateRemoved) end
+
 ---@param PlayerStateAdded APlayerState
 function URSTGameStatePRSComponent:OnPlayerStateAddedCallback(PlayerStateAdded) end
+
 ---@param PRSTag FGameplayTag
 function URSTGameStatePRSComponent:NetMulticast_OnPRSTimerStart(PRSTag) end
+
 ---@param PRSTag FGameplayTag
 function URSTGameStatePRSComponent:NetMulticast_OnPRSTimerShortStart(PRSTag) end
+
 ---@param PRSTag FGameplayTag
 function URSTGameStatePRSComponent:NetMulticast_OnPRSTimerComplete(PRSTag) end
+
 ---@param PRSTag FGameplayTag
 ---@param PlayerNetID FUniqueNetIdRepl
 ---@param bIsReady boolean
 function URSTGameStatePRSComponent:NetMulticast_OnPRSPlayerReadyStateChanged(PRSTag, PlayerNetID, bIsReady) end
+
 ---@param PRSTag FGameplayTag
 function URSTGameStatePRSComponent:NetMulticast_OnPRSInterruptOrComplete(PRSTag) end
+
 ---@param PRSTag FGameplayTag
 function URSTGameStatePRSComponent:NetMulticast_OnPRSInterrupt(PRSTag) end
+
 ---@param ToCheck FGameplayTag
 ---@return float
 function URSTGameStatePRSComponent:GetTimeRemainingForTag(ToCheck) end
+
 ---@param ToCheck FGameplayTag
 ---@return int32
 function URSTGameStatePRSComponent:GetSyncCountForTag(ToCheck) end
+
 ---@param ToCheck FGameplayTag
 ---@return int32
 function URSTGameStatePRSComponent:GetNumPlayersReadyForTag(ToCheck) end
+
 ---@param ToCheck FGameplayTag
 ---@param bUseExactMatch boolean
 ---@return boolean
 function URSTGameStatePRSComponent:GetIsSyncActiveForTag(ToCheck, bUseExactMatch) end
+
 ---@param ToCheck FGameplayTag
 ---@return boolean
 function URSTGameStatePRSComponent:GetIsInShortTimerForTag(ToCheck) end
+
 ---@param ToCheck FGameplayTag
 ---@return boolean
 function URSTGameStatePRSComponent:DidTimerBeginForTag(ToCheck) end
+
 ---@param PRSTag FGameplayTag
 ---@param SyncPriority int32
 ---@return boolean
 function URSTGameStatePRSComponent:BeginNewPlayerReadySync(PRSTag, SyncPriority) end
-
 
 ---@class URSTGameViewportClient : UCommonGameViewportClient
 URSTGameViewportClient = {}
@@ -8226,137 +9644,186 @@ URSTGameViewportClient = {}
 URSTGameplayAbility = {}
 
 function URSTGameplayAbility:UnlockRotation() end
+
 function URSTGameplayAbility:UnlockMovement() end
+
 ---@param CameraMode TSubclassOf<URSTCameraMode>
 function URSTGameplayAbility:SetCameraMode(CameraMode) end
+
 ---@param Tag FGameplayTag
 ---@param Key FPredictionKey
 ---@param TargetDataHandle FGameplayAbilityTargetDataHandle
 function URSTGameplayAbility:Server_PerformTaggedPrediction_WithTarget(Tag, Key, TargetDataHandle) end
+
 ---@param Tag FGameplayTag
 ---@param Key FPredictionKey
 function URSTGameplayAbility:Server_PerformTaggedPrediction(Tag, Key) end
+
 ---@param FailedReason FGameplayTagContainer
 function URSTGameplayAbility:ScriptOnAbilityFailedToActivate(FailedReason) end
+
 function URSTGameplayAbility:RestoreAvatarSkeletalMeshTickSettings() end
+
 ---@param InHandle FRSTLooseTagHandle
 function URSTGameplayAbility:RemoveManagedLooseTag(InHandle) end
+
 function URSTGameplayAbility:RemoveInvalidManagedLooseTags() end
+
 function URSTGameplayAbility:RemoveAllManagedLooseTags() end
+
 ---@param Tag FGameplayTag
 ---@param TargetDataHandle FGameplayAbilityTargetDataHandle
 function URSTGameplayAbility:PerformTaggedPrediction_WithTarget(Tag, TargetDataHandle) end
+
 ---@param Tag FGameplayTag
 function URSTGameplayAbility:PerformTaggedPrediction(Tag) end
+
 ---@param TickOption EVisibilityBasedAnimTickOption
 ---@param OptionalMeshComp USkeletalMeshComponent
 function URSTGameplayAbility:OverrideAvatarSkeletalMeshTickSettings(TickOption, OptionalMeshComp) end
+
 ---@return FName
 function URSTGameplayAbility:MontageGetSectionName() end
+
 ---@param StartSectionName FName
 ---@param LoopSectionName FName
 ---@param EndSectionName FName
 function URSTGameplayAbility:MontageConcludeLoop(StartSectionName, LoopSectionName, EndSectionName) end
+
 function URSTGameplayAbility:LockRotation() end
+
 ---@param bReplicate boolean
 function URSTGameplayAbility:LockMovement(bReplicate) end
+
 ---@param Tag FGameplayTag
 function URSTGameplayAbility:K2_OnPropertyPreModify(Tag) end
+
 ---@param Tag FGameplayTag
 function URSTGameplayAbility:K2_OnPropertyModified(Tag) end
+
 function URSTGameplayAbility:K2_OnPreRemoveAbility() end
+
 function URSTGameplayAbility:K2_OnNewAvatarSet() end
+
 ---@param NotifyTag FGameplayTag
 ---@param NotifyEvent FAnimNotifyEvent
 function URSTGameplayAbility:K2_OnAnimNotifyStateEnd(NotifyTag, NotifyEvent) end
+
 ---@param NotifyTag FGameplayTag
 ---@param NotifyEvent FAnimNotifyEvent
 function URSTGameplayAbility:K2_OnAnimNotifyStateBegin(NotifyTag, NotifyEvent) end
+
 ---@param NotifyTag FGameplayTag
 ---@param NotifyEvent FAnimNotifyEvent
 function URSTGameplayAbility:K2_OnAnimNotify(NotifyTag, NotifyEvent) end
+
 function URSTGameplayAbility:K2_OnAbilityAdded() end
+
 ---@return boolean
 function URSTGameplayAbility:IsPlayer() end
+
 ---@return boolean
 function URSTGameplayAbility:IsLocalPlayer() end
+
 ---@return boolean
 function URSTGameplayAbility:IsEnding() end
+
 ---@return boolean
 function URSTGameplayAbility:IsActive() end
+
 ---@param OutSetByCallerValues TMap<FGameplayTag, float>
 function URSTGameplayAbility:GetSetByCallerValues(OutSetByCallerValues) end
+
 ---@return ARSTPlayerController
 function URSTGameplayAbility:GetRSTPlayerControllerFromActorInfo() end
+
 ---@return ARSTCharacter
 function URSTGameplayAbility:GetRSTCharacterFromActorInfo() end
+
 ---@return URSTAbilitySystemComponent
 function URSTGameplayAbility:GetRSTAbilitySystemComponentFromActorInfo() end
+
 ---@return URSTHeroComponent
 function URSTGameplayAbility:GetHeroComponentFromActorInfo() end
+
 ---@param GameplayTag FGameplayTag
 ---@param DefaultValue float
 ---@return float
 function URSTGameplayAbility:GetGrantedBySetByCallerValue(GameplayTag, DefaultValue) end
+
 ---@return float
 function URSTGameplayAbility:GetCooldownDuration() end
+
 ---@return AController
 function URSTGameplayAbility:GetControllerFromActorInfo() end
+
 ---@param Handle FGameplayAbilitySpecHandle
 ---@param ActorInfo FGameplayAbilityActorInfo
 ---@return int32
 function URSTGameplayAbility:GetCheckCostEffectLevel(Handle, ActorInfo) end
+
 ---@param Handle FGameplayAbilitySpecHandle
 ---@param ActorInfo FGameplayAbilityActorInfo
 ---@return int32
 function URSTGameplayAbility:GetApplyCostEffectLevel(Handle, ActorInfo) end
+
 ---@param Target ARSTCharacter
 ---@param DeathEvent URSTDeathEvent
 function URSTGameplayAbility:ConfigureDeathEvent(Target, DeathEvent) end
+
 function URSTGameplayAbility:ClearCameraMode() end
+
 ---@param NewGroup ERSTAbilityActivationGroup
 ---@return boolean
 function URSTGameplayAbility:ChangeActivationGroup(NewGroup) end
+
 ---@param NewGroup ERSTAbilityActivationGroup
 ---@return boolean
 function URSTGameplayAbility:CanChangeActivationGroup(NewGroup) end
+
 ---@param Tag FGameplayTag
 ---@param TargetDataHandle FGameplayAbilityTargetDataHandle
 function URSTGameplayAbility:BP_PerformTaggedPrediction_WithTarget(Tag, TargetDataHandle) end
+
 ---@param Tag FGameplayTag
 function URSTGameplayAbility:BP_PerformTaggedPrediction(Tag) end
+
 function URSTGameplayAbility:BlockTrapSelling() end
+
 function URSTGameplayAbility:BlockTrapPlacement() end
+
 ---@param Tags FGameplayTagContainer
 ---@param bReplicate boolean
 ---@return FRSTLooseTagHandle
 function URSTGameplayAbility:ApplyManagedLooseTags(Tags, bReplicate) end
+
 ---@param Tag FGameplayTag
 ---@param bReplicate boolean
 ---@return FRSTLooseTagHandle
 function URSTGameplayAbility:ApplyManagedLooseTag(Tag, bReplicate) end
-function URSTGameplayAbility:AllowTrapSelling() end
-function URSTGameplayAbility:AllowTrapPlacement() end
 
+function URSTGameplayAbility:AllowTrapSelling() end
+
+function URSTGameplayAbility:AllowTrapPlacement() end
 
 ---@class URSTGameplayAbility_AICollection : URSTGameplayAbility_CombatBase
 URSTGameplayAbility_AICollection = {}
 
 function URSTGameplayAbility_AICollection:StopAICollection() end
-function URSTGameplayAbility_AICollection:StartAICollection() end
 
+function URSTGameplayAbility_AICollection:StartAICollection() end
 
 ---@class URSTGameplayAbility_AITeleport : URSTGameplayAbility
 URSTGameplayAbility_AITeleport = {}
 
 ---@return boolean
 function URSTGameplayAbility_AITeleport:CompleteTeleport() end
+
 ---@param bUseEnemyGroupLocations boolean
 ---@param EnemyGroupSize int32
 ---@param EnemyGroupRadius float
 ---@return boolean
 function URSTGameplayAbility_AITeleport:BeginTeleport(bUseEnemyGroupLocations, EnemyGroupSize, EnemyGroupRadius) end
-
 
 ---@class URSTGameplayAbility_Aggro : URSTGameplayAbility
 ---@field SpawnMontage UAnimMontage
@@ -8396,63 +9863,87 @@ URSTGameplayAbility_Aggro = {}
 URSTGameplayAbility_BuffVolume = {}
 
 function URSTGameplayAbility_BuffVolume:StopBuffVolume() end
+
 function URSTGameplayAbility_BuffVolume:StartBuffVolume() end
+
 ---@param Actors TArray<AActor>
 function URSTGameplayAbility_BuffVolume:Server_OnActorsLeft(Actors) end
+
 ---@param Actors TArray<AActor>
 function URSTGameplayAbility_BuffVolume:Server_OnActorsEntered(Actors) end
+
 function URSTGameplayAbility_BuffVolume:OnRecurringEventTimerFinished() end
+
 function URSTGameplayAbility_BuffVolume:OnLifetimeElapsed() end
+
 ---@param Actor AActor
 function URSTGameplayAbility_BuffVolume:OnLeftLineOfSight(Actor) end
+
 ---@param Actor AActor
 function URSTGameplayAbility_BuffVolume:OnEnteredLineOfSight(Actor) end
+
 ---@param Actors TArray<AActor>
 function URSTGameplayAbility_BuffVolume:OnActorsLeft(Actors) end
+
 ---@param Actors TArray<AActor>
 function URSTGameplayAbility_BuffVolume:OnActorsEntered(Actors) end
+
 ---@return FTransform
 function URSTGameplayAbility_BuffVolume:GetStartTransform() end
+
 ---@return float
 function URSTGameplayAbility_BuffVolume:GetRadius() end
+
 ---@return FTransform
 function URSTGameplayAbility_BuffVolume:GetLineOfSightTransform() end
+
 ---@return TArray<AActor>
 function URSTGameplayAbility_BuffVolume:GetLineOfSightActors() end
+
 ---@return FTransform
 function URSTGameplayAbility_BuffVolume:GetEndTransform() end
+
 ---@param OutTargets TArray<AActor>
 function URSTGameplayAbility_BuffVolume:GetCurrentTargets(OutTargets) end
+
 ---@param TargetedActor AActor
 ---@param InSpecHandle FGameplayEffectSpecHandle
 ---@param CustomLogicTag FGameplayTag
 ---@return FGameplayEffectSpecHandle
 function URSTGameplayAbility_BuffVolume:BP_RunCustomEffectSpecLogic(TargetedActor, InSpecHandle, CustomLogicTag) end
+
 ---@param Actor AActor
 ---@param TypeTag FGameplayTag
 ---@param AdditionalData FGameplayTag
 function URSTGameplayAbility_BuffVolume:BP_ProcessActorRecurringEvent(Actor, TypeTag, AdditionalData) end
+
 ---@param Actor AActor
 ---@param TypeTag FGameplayTag
 ---@param AdditionalData FGameplayTag
 function URSTGameplayAbility_BuffVolume:BP_ProcessActorLeft(Actor, TypeTag, AdditionalData) end
+
 ---@param Actor AActor
 ---@param TypeTag FGameplayTag
 ---@param AdditionalData FGameplayTag
 function URSTGameplayAbility_BuffVolume:BP_ProcessActorEntered(Actor, TypeTag, AdditionalData) end
+
 function URSTGameplayAbility_BuffVolume:BP_LifetimeElapsed() end
+
 ---@return FTransform
 function URSTGameplayAbility_BuffVolume:BP_GetStartTransform() end
+
 ---@return float
 function URSTGameplayAbility_BuffVolume:BP_GetRadius() end
+
 ---@param InActors TArray<AActor>
 ---@return TArray<AActor>
 function URSTGameplayAbility_BuffVolume:BP_GetIgnoreActors(InActors) end
+
 ---@return FTransform
 function URSTGameplayAbility_BuffVolume:BP_GetEndTransform() end
+
 ---@return float
 function URSTGameplayAbility_BuffVolume:BP_GetDuration() end
-
 
 ---@class URSTGameplayAbility_CombatBase : URSTGameplayAbility
 ---@field bUseCloseDistance boolean
@@ -8490,49 +9981,67 @@ function URSTGameplayAbility_BuffVolume:BP_GetDuration() end
 URSTGameplayAbility_CombatBase = {}
 
 function URSTGameplayAbility_CombatBase:UnlockAiming() end
+
 ---@param Scale float
 function URSTGameplayAbility_CombatBase:SetAimSpeedScale(Scale) end
+
 ---@return boolean
 function URSTGameplayAbility_CombatBase:SelectOnCooldown() end
+
 ---@return boolean
 function URSTGameplayAbility_CombatBase:OrientToTarget() end
+
 ---@param LastInput FVector
 function URSTGameplayAbility_CombatBase:OnMoveCancelInputDetected(LastInput) end
+
 function URSTGameplayAbility_CombatBase:LockAiming() end
+
 ---@param SourceActor AActor
 ---@param TargetActor AActor
 ---@param bIsBlockedToRift boolean
 ---@param OutThreatAdj float
 ---@param OutInvalidReason ERSTInvalidTargetReason
 ---@return boolean
-function URSTGameplayAbility_CombatBase:IsValidTarget(SourceActor, TargetActor, bIsBlockedToRift, OutThreatAdj, OutInvalidReason) end
+function URSTGameplayAbility_CombatBase:IsValidTarget(SourceActor, TargetActor, bIsBlockedToRift, OutThreatAdj,
+                                                      OutInvalidReason) end
+
 ---@return boolean
 function URSTGameplayAbility_CombatBase:IsRanged() end
+
 ---@param bIncludeTarget boolean
 ---@return boolean
 function URSTGameplayAbility_CombatBase:InitAIVariables(bIncludeTarget) end
+
 ---@param OutRange FRSTRange
 function URSTGameplayAbility_CombatBase:GetRange(OutRange) end
+
 ---@return float
 function URSTGameplayAbility_CombatBase:GetCloseDistance() end
+
 ---@return float
 function URSTGameplayAbility_CombatBase:GetAIWeight() end
+
 function URSTGameplayAbility_CombatBase:ClearAimSlowing() end
+
 ---@return boolean
 function URSTGameplayAbility_CombatBase:BP_IsRanged() end
+
 ---@param OutRange FRSTRange
 function URSTGameplayAbility_CombatBase:BP_GetRange(OutRange) end
+
 ---@param TargetHandle FGameplayAbilityTargetDataHandle
 ---@return boolean
 function URSTGameplayAbility_CombatBase:ApplyDamageEffectToTarget(TargetHandle) end
+
 ---@param TargetASC URSTAbilitySystemComponent
 ---@param Hit FHitResult
 ---@return boolean
 function URSTGameplayAbility_CombatBase:ApplyDamageEffect(TargetASC, Hit) end
+
 function URSTGameplayAbility_CombatBase:ApplyAimSlowing() end
+
 ---@return boolean
 function URSTGameplayAbility_CombatBase:AllowHeadshots() end
-
 
 ---@class URSTGameplayAbility_CommunicationWheel : URSTGameplayAbility_WheelBase
 ---@field CommunicationWheelClass TSoftClassPtr<UCommonActivatableWidget>
@@ -8546,9 +10055,9 @@ URSTGameplayAbility_CommunicationWheel = {}
 
 ---@param WasCancelled boolean
 function URSTGameplayAbility_CommunicationWheel:SetWidgetCancelled(WasCancelled) end
+
 ---@return TArray<URSTCommunicationDefinition>
 function URSTGameplayAbility_CommunicationWheel:GetCommunicationWheelOptions() end
-
 
 ---@class URSTGameplayAbility_DaggerSpecial : URSTGameplayAbility_CombatBase
 ---@field CueDataTag FGameplayTag
@@ -8590,23 +10099,34 @@ URSTGameplayAbility_DaggerSpecial = {}
 ---@param bExpired boolean
 ---@param Key FPredictionKey
 function URSTGameplayAbility_DaggerSpecial:Server_OnTargetDataSet(TargetHandle, BreakableLocations, bExpired, Key) end
+
 ---@param Ability UGameplayAbility
 function URSTGameplayAbility_DaggerSpecial:OnTriggeringAbilityActivated(Ability) end
+
 function URSTGameplayAbility_DaggerSpecial:OnMontageFinishedNormally() end
+
 function URSTGameplayAbility_DaggerSpecial:OnMontageFinishedAbnormally() end
+
 function URSTGameplayAbility_DaggerSpecial:OnExplosionDelayFinished_Triggered() end
+
 function URSTGameplayAbility_DaggerSpecial:OnExplosionDelayFinished_Expired() end
+
 function URSTGameplayAbility_DaggerSpecial:OnDashTimerExpired() end
+
 function URSTGameplayAbility_DaggerSpecial:BP_StartDash() end
+
 function URSTGameplayAbility_DaggerSpecial:BP_PerformPreMontageEffects() end
+
 function URSTGameplayAbility_DaggerSpecial:BP_PerformPostMontageEffects() end
+
 ---@param Actor AActor
 ---@return boolean
 function URSTGameplayAbility_DaggerSpecial:BP_IsValidTarget(Actor) end
+
 ---@param bExpired boolean
 function URSTGameplayAbility_DaggerSpecial:BP_FinishDash(bExpired) end
-function URSTGameplayAbility_DaggerSpecial:BP_CleanUpDash() end
 
+function URSTGameplayAbility_DaggerSpecial:BP_CleanUpDash() end
 
 ---@class URSTGameplayAbility_DaggerUlt : URSTGameplayAbility_Placement
 ---@field NavQueryExtent FVector
@@ -8620,9 +10140,9 @@ URSTGameplayAbility_DaggerUlt = {}
 
 ---@param OwningActor ARSTCharacter
 function URSTGameplayAbility_DaggerUlt:OnSpawnedActorDeathStarted(OwningActor) end
+
 ---@return ARSTCharacter
 function URSTGameplayAbility_DaggerUlt:GetSummonedActor() end
-
 
 ---@class URSTGameplayAbility_Death : URSTGameplayAbility
 ---@field bProcessDeathDeferral boolean
@@ -8639,23 +10159,29 @@ URSTGameplayAbility_Death = {}
 
 ---@param Instigator AActor
 function URSTGameplayAbility_Death:StartDowned(Instigator) end
+
 ---@param NewDeathTime float
 function URSTGameplayAbility_Death:SetDeathTime(NewDeathTime) end
+
 ---@param OwningActor AActor
 ---@param InInstigator AActor
 function URSTGameplayAbility_Death:OnDownedDeathTimerComplete(OwningActor, InInstigator) end
+
 ---@param OwningActor AActor
 ---@param InInstigator AActor
 function URSTGameplayAbility_Death:OnDowned(OwningActor, InInstigator) end
+
 ---@param OwningActor AActor
 ---@param InInstigator AActor
 function URSTGameplayAbility_Death:OnDeathStarted(OwningActor, InInstigator) end
+
 ---@param OwningActor AActor
 ---@param InInstigator AActor
 function URSTGameplayAbility_Death:OnDeathFinished(OwningActor, InInstigator) end
-function URSTGameplayAbility_Death:FinishDeath() end
-function URSTGameplayAbility_Death:BP_OnDeathFinished() end
 
+function URSTGameplayAbility_Death:FinishDeath() end
+
+function URSTGameplayAbility_Death:BP_OnDeathFinished() end
 
 ---@class URSTGameplayAbility_DeferDeath : URSTGameplayAbility
 URSTGameplayAbility_DeferDeath = {}
@@ -8677,11 +10203,12 @@ URSTGameplayAbility_FindInteractions = {}
 
 ---@param InteractiveOptions TArray<FRSTInteractionOption>
 function URSTGameplayAbility_FindInteractions:UpdateInteractions(InteractiveOptions) end
+
 ---@param TimeWaited float
 function URSTGameplayAbility_FindInteractions:TriggerInteractionStart(TimeWaited) end
+
 ---@param TimeElapsed float
 function URSTGameplayAbility_FindInteractions:TriggerInteractionEnd(TimeElapsed) end
-
 
 ---@class URSTGameplayAbility_GatherTargets : URSTGameplayAbility
 ---@field bTargetIncludeAnyFilterTags boolean
@@ -8704,47 +10231,65 @@ function URSTGameplayAbility_FindInteractions:TriggerInteractionEnd(TimeElapsed)
 URSTGameplayAbility_GatherTargets = {}
 
 function URSTGameplayAbility_GatherTargets:StopGatheringTargets() end
+
 function URSTGameplayAbility_GatherTargets:StartGatheringTargets() end
+
 ---@param Actors TArray<AActor>
 function URSTGameplayAbility_GatherTargets:OnOverlapsLeft(Actors) end
+
 ---@param Actors TArray<AActor>
 function URSTGameplayAbility_GatherTargets:OnOverlapsEntered(Actors) end
+
 function URSTGameplayAbility_GatherTargets:OnLineOfSightUpdated() end
+
 ---@return float
 function URSTGameplayAbility_GatherTargets:GetTargetRadius() end
+
 ---@return FTransform
 function URSTGameplayAbility_GatherTargets:GetSphereSourceTransform() end
+
 ---@return FTransform
 function URSTGameplayAbility_GatherTargets:GetLineOfSightSourceTransformConst() end
+
 ---@return FTransform
 function URSTGameplayAbility_GatherTargets:GetLineOfSightSourceTransform() end
+
 ---@return TArray<AActor>
 function URSTGameplayAbility_GatherTargets:GetCurrentTargets() end
+
 function URSTGameplayAbility_GatherTargets:BP_TargetGatheringStopped() end
+
 function URSTGameplayAbility_GatherTargets:BP_TargetGatheringStarted() end
+
 ---@param NewTarget AActor
 function URSTGameplayAbility_GatherTargets:BP_ProcessTargetFound(NewTarget) end
+
 ---@param PotentialTargets TArray<AActor>
 function URSTGameplayAbility_GatherTargets:BP_ProcessAllLineOfSightTargets(PotentialTargets) end
+
 ---@param Actor AActor
 ---@return boolean
 function URSTGameplayAbility_GatherTargets:BP_IsValidTarget(Actor) end
+
 ---@param Actor AActor
 ---@param CurrentTarget AActor
 ---@param CurrentValue float
 ---@param OutEvalValue float
 ---@return boolean
 function URSTGameplayAbility_GatherTargets:BP_IsBetterTarget(Actor, CurrentTarget, CurrentValue, OutEvalValue) end
+
 ---@return FTransform
 function URSTGameplayAbility_GatherTargets:BP_GetSphereSourceTransform() end
+
 ---@param PotentialTargets TArray<AActor>
 ---@return AActor
 function URSTGameplayAbility_GatherTargets:BP_GetOptimalTarget(PotentialTargets) end
+
 ---@return FTransform
 function URSTGameplayAbility_GatherTargets:BP_GetLineOfSightSourceTransform() end
+
 ---@return TArray<AActor>
 function URSTGameplayAbility_GatherTargets:BP_GetIgnoreActorsList() end
-
 
 ---@class URSTGameplayAbility_HitReaction : URSTGameplayAbility
 URSTGameplayAbility_HitReaction = {}
@@ -8755,9 +10300,9 @@ URSTGameplayAbility_HitReaction = {}
 ---@param Height float
 ---@param Duration float
 function URSTGameplayAbility_HitReaction:NotifyClientKnockback(TaskName, Direction, Distance, Height, Duration) end
+
 ---@param KnockbackData URSTAppliedHitReactData
 function URSTGameplayAbility_HitReaction:BP_ReceiveHitData(KnockbackData) end
-
 
 ---@class URSTGameplayAbility_Interact : URSTGameplayAbility
 ---@field ChannelTime float
@@ -8766,9 +10311,9 @@ function URSTGameplayAbility_HitReaction:BP_ReceiveHitData(KnockbackData) end
 URSTGameplayAbility_Interact = {}
 
 function URSTGameplayAbility_Interact:TriggerInteractSuccess() end
+
 ---@return AActor
 function URSTGameplayAbility_Interact:GetTargetActor() end
-
 
 ---@class URSTGameplayAbility_InteractRsp : URSTGameplayAbility
 ---@field ResponseMontage UAnimMontage
@@ -8778,16 +10323,16 @@ URSTGameplayAbility_InteractRsp = {}
 ---@param InstigatorActor AActor
 ---@param bExitingInteraction boolean
 function URSTGameplayAbility_InteractRsp:PlayResponseDialog(InstigatorActor, bExitingInteraction) end
+
 ---@return float
 function URSTGameplayAbility_InteractRsp:GetResponseDuration() end
-
 
 ---@class URSTGameplayAbility_Jump : URSTGameplayAbility
 URSTGameplayAbility_Jump = {}
 
 function URSTGameplayAbility_Jump:CharacterJumpStop() end
-function URSTGameplayAbility_Jump:CharacterJumpStart() end
 
+function URSTGameplayAbility_Jump:CharacterJumpStart() end
 
 ---@class URSTGameplayAbility_ManagedInput : URSTGameplayAbility
 ---@field ControlledAbilityTag FGameplayTag
@@ -8799,13 +10344,16 @@ URSTGameplayAbility_ManagedInput = {}
 
 ---@param Duration float
 function URSTGameplayAbility_ManagedInput:OnInputReleased(Duration) end
+
 ---@param Duration float
 function URSTGameplayAbility_ManagedInput:OnInputPressed(Duration) end
+
 ---@param AbilityData FAbilityEndedData
 function URSTGameplayAbility_ManagedInput:OnAbilityEndedCallback(AbilityData) end
-function URSTGameplayAbility_ManagedInput:BP_ProcessInputReleased() end
-function URSTGameplayAbility_ManagedInput:BP_ProcessInputPressed() end
 
+function URSTGameplayAbility_ManagedInput:BP_ProcessInputReleased() end
+
+function URSTGameplayAbility_ManagedInput:BP_ProcessInputPressed() end
 
 ---@class URSTGameplayAbility_MeleeWeapon : URSTGameplayAbility_CombatBase
 ---@field AbilityRange FRSTRange
@@ -8842,75 +10390,102 @@ URSTGameplayAbility_MeleeWeapon = {}
 ---@param InIndex int32
 ---@return int32
 function URSTGameplayAbility_MeleeWeapon:SwingIndexToConditionalIndex(InIndex) end
+
 function URSTGameplayAbility_MeleeWeapon:OnSwingInterrupted() end
+
 function URSTGameplayAbility_MeleeWeapon:OnSwingCompleted() end
+
 function URSTGameplayAbility_MeleeWeapon:OnSwingCancelled() end
+
 function URSTGameplayAbility_MeleeWeapon:OnSwingBlendOut() end
+
 ---@param Duration float
 function URSTGameplayAbility_MeleeWeapon:OnDesiredRotationReached(Duration) end
+
 function URSTGameplayAbility_MeleeWeapon:OnDesiredRotationFailed() end
+
 function URSTGameplayAbility_MeleeWeapon:OnAutoSwingTimer() end
+
 function URSTGameplayAbility_MeleeWeapon:OnAdvanceFinished_Force() end
+
 ---@param bDestinationReached boolean
 ---@param bTimedOut boolean
 ---@param FinalTargetLocation FVector
 function URSTGameplayAbility_MeleeWeapon:OnAdvanceFinished_Actor(bDestinationReached, bTimedOut, FinalTargetLocation) end
+
 ---@param SwingIndex int32
 ---@return boolean
 function URSTGameplayAbility_MeleeWeapon:IsFinalSwing(SwingIndex) end
+
 ---@return boolean
 function URSTGameplayAbility_MeleeWeapon:IsAirborne() end
+
 ---@return int32
 function URSTGameplayAbility_MeleeWeapon:GetSwingIndex() end
+
 ---@param SwingIndex int32
 ---@return URSTMeleeWeaponSwingData
 function URSTGameplayAbility_MeleeWeapon:GetSwingData(SwingIndex) end
+
 ---@return int32
 function URSTGameplayAbility_MeleeWeapon:GetMaxComboSwings() end
+
 ---@param SwingIndex int32
 ---@return FGameplayTag
 function URSTGameplayAbility_MeleeWeapon:GetHitGameplayCue(SwingIndex) end
+
 ---@return float
 function URSTGameplayAbility_MeleeWeapon:GetCurrentSwingPlayRate() end
+
 ---@return URSTAdvanceData
 function URSTGameplayAbility_MeleeWeapon:GetCurrentAdvanceData() end
+
 ---@return URSTCombatComponent
 function URSTGameplayAbility_MeleeWeapon:GetCombatComponent() end
+
 ---@param InIndex int32
 ---@return int32
 function URSTGameplayAbility_MeleeWeapon:ConditionalIndexToSwingIndex(InIndex) end
+
 function URSTGameplayAbility_MeleeWeapon:BP_SwingTriggering() end
+
 ---@param CurrentSwing int32
 ---@param MaxSwings int32
 ---@return boolean
 function URSTGameplayAbility_MeleeWeapon:BP_ShouldAllowAutoSwing(CurrentSwing, MaxSwings) end
+
 ---@param SwingIndex int32
 ---@param HitResult FHitResult
 function URSTGameplayAbility_MeleeWeapon:BP_OnSuccessfulHit(SwingIndex, HitResult) end
+
 function URSTGameplayAbility_MeleeWeapon:BP_OnAdvanceStopped() end
+
 ---@param Duration float
 ---@param Forward FVector
 function URSTGameplayAbility_MeleeWeapon:BP_OnAdvanceStarted(Duration, Forward) end
+
 function URSTGameplayAbility_MeleeWeapon:BP_OnAdvanceFinished() end
+
 ---@param DynamicTarget AActor
 ---@return boolean
 function URSTGameplayAbility_MeleeWeapon:BP_IsAdvanceAllowed(DynamicTarget) end
+
 function URSTGameplayAbility_MeleeWeapon:BP_CleanUpPreviousSwing() end
+
 ---@return boolean
 function URSTGameplayAbility_MeleeWeapon:AllowAerialCombat() end
-
 
 ---@class URSTGameplayAbility_Melee_Target : URSTGameplayAbility_MeleeWeapon
 URSTGameplayAbility_Melee_Target = {}
 
 ---@return AActor
 function URSTGameplayAbility_Melee_Target:GetTargetedActor() end
+
 ---@param Actor AActor
 ---@param MaxAngle float
 ---@param MaxDistance float
 ---@return boolean
 function URSTGameplayAbility_Melee_Target:FilterTargetActor(Actor, MaxAngle, MaxDistance) end
-
 
 ---@class URSTGameplayAbility_Pickup : URSTGameplayAbility
 URSTGameplayAbility_Pickup = {}
@@ -8966,33 +10541,47 @@ URSTGameplayAbility_Placement = {}
 ---@param Key FPredictionKey
 ---@param SpawnTransform FTransform
 function URSTGameplayAbility_Placement:Server_ProcessSuccessfulPlacement(Key, SpawnTransform) end
+
 function URSTGameplayAbility_Placement:OnSilencedStatusAdded() end
+
 function URSTGameplayAbility_Placement:OnPreviewTimerElapsed() end
+
 function URSTGameplayAbility_Placement:OnMontageFinishedNormally() end
+
 function URSTGameplayAbility_Placement:OnMontageFinishedAbnormally() end
+
 ---@param Ability UGameplayAbility
 function URSTGameplayAbility_Placement:OnConfirmationCommitted(Ability) end
+
 ---@return FVector
 function URSTGameplayAbility_Placement:GetPreviewLocation() end
+
 ---@param SpawnedActor AActor
 function URSTGameplayAbility_Placement:BP_OnPlacementFinished(SpawnedActor) end
+
 function URSTGameplayAbility_Placement:BP_OnMontageFinished() end
+
 ---@param SpawnedPlaceableActor AActor
 function URSTGameplayAbility_Placement:BP_InitializeSpawnedActor(SpawnedPlaceableActor) end
+
 ---@param PreviewActor ARSTPlacementPreview
 function URSTGameplayAbility_Placement:BP_InitializePreviewActor(PreviewActor) end
+
 ---@return UClass
 function URSTGameplayAbility_Placement:BP_GetPlaceableClass() end
+
 ---@return TArray<AActor>
 function URSTGameplayAbility_Placement:BP_GetIgnoreActors() end
+
 function URSTGameplayAbility_Placement:BP_FailedPlacement() end
+
 ---@param TargetLocation FVector
 ---@param SourceTransform FTransform
 ---@param OutHasAdjustment boolean
 ---@param OutAdjustedLocation FVector
 ---@return boolean
-function URSTGameplayAbility_Placement:BP_CheckValidPlacement(TargetLocation, SourceTransform, OutHasAdjustment, OutAdjustedLocation) end
-
+function URSTGameplayAbility_Placement:BP_CheckValidPlacement(TargetLocation, SourceTransform, OutHasAdjustment,
+                                                              OutAdjustedLocation) end
 
 ---@class URSTGameplayAbility_RangedTrap : URSTGameplayAbility_TrapBase
 ---@field ProjectileClass TSubclassOf<ARSTProjectile>
@@ -9009,18 +10598,21 @@ URSTGameplayAbility_RangedTrap = {}
 
 ---@return float
 function URSTGameplayAbility_RangedTrap:GetProjectileLifespan() end
+
 ---@return float
 function URSTGameplayAbility_RangedTrap:GetProjectileGravityScale() end
+
 ---@return TSubclassOf<ARSTProjectile>
 function URSTGameplayAbility_RangedTrap:GetProjectileClass() end
+
 ---@param SpawnTransform FTransform
 ---@return ARSTProjectile
 function URSTGameplayAbility_RangedTrap:FireProjectileWithTransform(SpawnTransform) end
+
 ---@param Location FVector
 ---@param Direction FVector
 ---@return ARSTProjectile
 function URSTGameplayAbility_RangedTrap:FireProjectile(Location, Direction) end
-
 
 ---@class URSTGameplayAbility_RangedWeapon : URSTGameplayAbility_CombatBase
 ---@field AbilityRange FRSTRange
@@ -9090,49 +10682,68 @@ URSTGameplayAbility_RangedWeapon = {}
 ---@param OutTargetLocation FVector
 ---@return boolean
 function URSTGameplayAbility_RangedWeapon:TryOverrideTargetLocation(FireLocation, OutTargetLocation) end
+
 function URSTGameplayAbility_RangedWeapon:StartFiringSequence() end
+
 ---@param PredictionKey FPredictionKey
 ---@param FirePointIdentifier FGameplayTag
 ---@param FireData TArray<FRSTProjectileFiringParameters>
 function URSTGameplayAbility_RangedWeapon:Server_ProcessFireProjectile(PredictionKey, FirePointIdentifier, FireData) end
+
 function URSTGameplayAbility_RangedWeapon:OnMontageInterrupted() end
+
 function URSTGameplayAbility_RangedWeapon:OnMontageCompleted() end
+
 function URSTGameplayAbility_RangedWeapon:OnMontageCancelled() end
+
 function URSTGameplayAbility_RangedWeapon:OnMontageBlendOut() end
+
 ---@param Source FVector
 ---@param OutLocation FVector
 ---@return boolean
 function URSTGameplayAbility_RangedWeapon:GetTargetedActorLocation(Source, OutLocation) end
+
 ---@return AActor
 function URSTGameplayAbility_RangedWeapon:GetTargetedActor() end
+
 ---@return float
 function URSTGameplayAbility_RangedWeapon:GetProjectileSpeed() end
+
 ---@param FirePointIdentifier FGameplayTag
 ---@param AnimationTime float
 ---@param OutFireData TArray<FRSTProjectileFiringParameters>
 ---@return boolean
 function URSTGameplayAbility_RangedWeapon:GetProjectileLaunchParameters(FirePointIdentifier, AnimationTime, OutFireData) end
+
 ---@return float
 function URSTGameplayAbility_RangedWeapon:GetProjectileGravityScale() end
+
 ---@return TSubclassOf<ARSTProjectile>
 function URSTGameplayAbility_RangedWeapon:GetPrimaryProjectileClass() end
+
 ---@return TArray<FGameplayTagPair>
 function URSTGameplayAbility_RangedWeapon:GetFireCueTagParameters() end
+
 ---@return TMap<FGameplayTag, float>
 function URSTGameplayAbility_RangedWeapon:GetAdditionalEffectTagOverrides() end
+
 ---@param InOutFireData TArray<FRSTProjectileFiringParameters>
 ---@return TArray<FRSTProjectileFiringParameters>
 function URSTGameplayAbility_RangedWeapon:BP_ModifyFireData(InOutFireData) end
+
 function URSTGameplayAbility_RangedWeapon:BP_MisfireAbility() end
+
 ---@param Projectile ARSTProjectile
 function URSTGameplayAbility_RangedWeapon:BP_InitializeProjectile(Projectile) end
+
 ---@param FirePoint FGameplayTag
 ---@param Index int32
 ---@return TSubclassOf<ARSTProjectile>
 function URSTGameplayAbility_RangedWeapon:BP_GetProjectileClass(FirePoint, Index) end
-function URSTGameplayAbility_RangedWeapon:BP_FireProjectile() end
-function URSTGameplayAbility_RangedWeapon:BP_FireMontageStarted() end
 
+function URSTGameplayAbility_RangedWeapon:BP_FireProjectile() end
+
+function URSTGameplayAbility_RangedWeapon:BP_FireMontageStarted() end
 
 ---@class URSTGameplayAbility_Ranged_Burst : URSTGameplayAbility_RangedWeapon
 ---@field StartSection FName
@@ -9165,11 +10776,12 @@ URSTGameplayAbility_Ranged_Held = {}
 
 ---@return FVector
 function URSTGameplayAbility_Ranged_Held:GetAimIndicatorVelocity() end
+
 ---@return FVector
 function URSTGameplayAbility_Ranged_Held:GetAimIndicatorSource() end
+
 ---@return float
 function URSTGameplayAbility_Ranged_Held:BP_GetHitIndicatorScale() end
-
 
 ---@class URSTGameplayAbility_Ranged_Refire : URSTGameplayAbility_RangedWeapon
 ---@field RefireStartTime float
@@ -9185,7 +10797,6 @@ function URSTGameplayAbility_Ranged_Held:BP_GetHitIndicatorScale() end
 URSTGameplayAbility_Ranged_Refire = {}
 
 function URSTGameplayAbility_Ranged_Refire:OnRefireDelayFinished() end
-
 
 ---@class URSTGameplayAbility_Ranged_Spread : URSTGameplayAbility_Ranged_Refire
 ---@field Points TArray<FVector2D>
@@ -9212,13 +10823,14 @@ URSTGameplayAbility_ReviveAlly = {}
 
 ---@param ActorToRevive AActor
 function URSTGameplayAbility_ReviveAlly:Server_ReviveAlly(ActorToRevive) end
+
 ---@param OwningActor AActor
 ---@param InInstigator AActor
 function URSTGameplayAbility_ReviveAlly:OnRevived(OwningActor, InInstigator) end
+
 ---@param OwningActor AActor
 ---@param InInstigator AActor
 function URSTGameplayAbility_ReviveAlly:OnDeathStarted(OwningActor, InInstigator) end
-
 
 ---@class URSTGameplayAbility_SellTrap : URSTGameplayAbility
 ---@field Requests TMap<uint8, FRSTSellTrapAbilityRequest>
@@ -9230,14 +10842,16 @@ URSTGameplayAbility_SellTrap = {}
 ---@param TrapToSell ARSTTrap
 ---@param PredictionKey FPredictionKey
 function URSTGameplayAbility_SellTrap:Server_SellTrap(RequestID, TrapToSell, PredictionKey) end
+
 ---@param Duration float
 function URSTGameplayAbility_SellTrap:OnInputReleased(Duration) end
+
 ---@param Duration float
 function URSTGameplayAbility_SellTrap:OnInputPressed(Duration) end
+
 ---@param RequestID uint8
 ---@param Status ERSTSellTrapAbilityResult
 function URSTGameplayAbility_SellTrap:Client_ConfirmTrapSold(RequestID, Status) end
-
 
 ---@class URSTGameplayAbility_Spawn : URSTGameplayAbility
 ---@field SpawnMontage UAnimMontage
@@ -9246,7 +10860,6 @@ URSTGameplayAbility_Spawn = {}
 
 ---@return float
 function URSTGameplayAbility_Spawn:GetSpawnDuration() end
-
 
 ---@class URSTGameplayAbility_Sprint : URSTGameplayAbility
 ---@field SprintEffect TSubclassOf<UGameplayEffect>
@@ -9264,15 +10877,19 @@ URSTGameplayAbility_Sprint = {}
 
 ---@return boolean
 function URSTGameplayAbility_Sprint:ShouldHoldToSprint() end
+
 function URSTGameplayAbility_Sprint:OnWithinForwardThreshold() end
+
 function URSTGameplayAbility_Sprint:OnOutsideForwardThreshold() end
+
 ---@param Duration float
 function URSTGameplayAbility_Sprint:OnInputReleased(Duration) end
+
 ---@param Duration float
 function URSTGameplayAbility_Sprint:OnInputPressed(Duration) end
+
 ---@param Speed float
 function URSTGameplayAbility_Sprint:OnBelowSpeedThreshold(Speed) end
-
 
 ---@class URSTGameplayAbility_TrapBase : URSTGameplayAbility
 ---@field Cooldown float
@@ -9305,19 +10922,22 @@ URSTGameplayAbility_TrapBase = {}
 
 ---@param TargetASC UAbilitySystemComponent
 function URSTGameplayAbility_TrapBase:RemoveDamageEffectsFromTarget(TargetASC) end
+
 ---@return ARSTTrap
 function URSTGameplayAbility_TrapBase:GetTrap() end
+
 ---@return float
 function URSTGameplayAbility_TrapBase:GetDamageValue() end
+
 ---@param AllTargets TArray<AActor>
 ---@param NewTargets TArray<AActor>
 ---@return boolean
 function URSTGameplayAbility_TrapBase:GatherNewTargets(AllTargets, NewTargets) end
+
 ---@param TargetHandle FGameplayAbilityTargetDataHandle
 ---@param AdditionalSetByCallerOverrides TMap<FGameplayTag, float>
 ---@return boolean
 function URSTGameplayAbility_TrapBase:ApplyDamageEffectToTarget(TargetHandle, AdditionalSetByCallerOverrides) end
-
 
 ---@class URSTGameplayAbility_TrapPlacement : URSTGameplayAbility
 ---@field InputWaitTaskHandle UAbilityTask_WaitInputPress
@@ -9326,9 +10946,9 @@ URSTGameplayAbility_TrapPlacement = {}
 
 ---@param Duration float
 function URSTGameplayAbility_TrapPlacement:OnInputReleased(Duration) end
+
 ---@param Duration float
 function URSTGameplayAbility_TrapPlacement:OnInputPressed(Duration) end
-
 
 ---@class URSTGameplayAbility_TrapWheel : URSTGameplayAbility_WheelBase
 URSTGameplayAbility_TrapWheel = {}
@@ -9351,20 +10971,26 @@ URSTGameplayAbility_TrapWheel = {}
 URSTGameplayAbility_WheelBase = {}
 
 function URSTGameplayAbility_WheelBase:OnWheelVisibilitySet__DelegateSignature() end
+
 function URSTGameplayAbility_WheelBase:OnShowWheelTask() end
+
 ---@param Duration float
 function URSTGameplayAbility_WheelBase:OnInputReleased(Duration) end
+
 ---@param ActivatedAbility UGameplayAbility
 function URSTGameplayAbility_WheelBase:OnCancelAbilityCommit(ActivatedAbility) end
+
 ---@return TArray<FRSTWheelOptionData>
 function URSTGameplayAbility_WheelBase:GetWheelOptions() end
+
 ---@return boolean
 function URSTGameplayAbility_WheelBase:GetShouldShowTraceLine() end
+
 ---@param ReleasedIndex int32
 function URSTGameplayAbility_WheelBase:BP_OnInputReleased(ReleasedIndex) end
+
 ---@param Widget UCommonActivatableWidget
 function URSTGameplayAbility_WheelBase:BP_InitializeWheelWidget(Widget) end
-
 
 ---@class URSTGameplayCueManager : UGameplayCueManager
 ---@field PreloadedCues TSet<TObjectPtr<UClass>>
@@ -9404,209 +11030,292 @@ URSTGameplayStatics = {}
 ---@param bFavorHighArc boolean
 ---@param bDrawDebug boolean
 ---@return boolean
-function URSTGameplayStatics:SuggestProjectileVelocity(WorldContextObject, TossVelocity, StartLocation, EndLocation, LaunchSpeed, OverrideGravityZ, ProjectileGravityScale, TraceOption, CollisionRadius, bFavorHighArc, bDrawDebug) end
+function URSTGameplayStatics:SuggestProjectileVelocity(WorldContextObject, TossVelocity, StartLocation, EndLocation,
+                                                       LaunchSpeed, OverrideGravityZ, ProjectileGravityScale, TraceOption,
+                                                       CollisionRadius, bFavorHighArc, bDrawDebug) end
+
 ---@param Profile URSTPlayerProfile
 ---@param InMetaThreadDefinitions TArray<URSTMetaThreadDefinition>
 ---@param OutMetaThreadDefinitions TArray<URSTMetaThreadDefinition>
 ---@param bSortOwned boolean
 function URSTGameplayStatics:SortThreadDefinitions(Profile, InMetaThreadDefinitions, OutMetaThreadDefinitions, bSortOwned) end
+
 ---@param InMetaPotionDefinitions TArray<URSTPotionDefinition>
 ---@param OutMetaPotionDefinitions TArray<URSTPotionDefinition>
 function URSTGameplayStatics:SortPotions(InMetaPotionDefinitions, OutMetaPotionDefinitions) end
+
 ---@param InMetaModifierDefinitions TArray<URSTMetaModifierDefinition>
 ---@param OutMetaModifierDefinitions TArray<URSTMetaModifierDefinition>
 function URSTGameplayStatics:SortModifierDefinitions(InMetaModifierDefinitions, OutMetaModifierDefinitions) end
+
 ---@param InInventoryItems TArray<ARSTInventoryItemInstance>
 ---@param OutFilteredItems TArray<ARSTInventoryItemInstance>
 function URSTGameplayStatics:SortInventoryItemInstances(InInventoryItems, OutFilteredItems) end
+
 ---@param InInventoryItems TArray<URSTInventoryItemDefinition>
 ---@param OutFilteredItems TArray<URSTInventoryItemDefinition>
 function URSTGameplayStatics:SortInventoryItemDefinitions(InInventoryItems, OutFilteredItems) end
+
 ---@param InHeroTags TArray<FGameplayTag>
 ---@param OutHeroTags TArray<FGameplayTag>
 function URSTGameplayStatics:SortHeroArray(InHeroTags, OutHeroTags) end
+
 ---@param CmdLine FString
 function URSTGameplayStatics:RestartApplicationWithCmdLine(CmdLine) end
+
+---@param SkinSlots TArray<URSTSkinSlotData>
+---@param Skins TArray<URSTSkinUserFacingData>
+---@param SkinOptions TArray<FRSTSkinSlotOptions>
+function URSTGameplayStatics:PopulateSkinSlots(SkinSlots, Skins, SkinOptions) end
+
 ---@param A FUniqueNetIdRepl
 ---@param B FUniqueNetIdRepl
 ---@return boolean
 function URSTGameplayStatics:NetIdEqual(A, B) end
+
 ---@param InLevel ULevelStreaming
 function URSTGameplayStatics:MarkLevelClientOnlyVisible(InLevel) end
+
 ---@param WorldContextObject UObject
 ---@param LatentInfo FLatentActionInfo
 ---@param Player APlayerController
 ---@param PotionDefinitions TArray<URSTPotionDefinition>
 function URSTGameplayStatics:LoadPotionIcons(WorldContextObject, LatentInfo, Player, PotionDefinitions) end
+
 ---@return boolean
 function URSTGameplayStatics:IsSteamRunningOnSteamDeck() end
+
 ---@param Hero FGameplayTag
 ---@param Skin FGameplayTag
 ---@return boolean
 function URSTGameplayStatics:IsSkinValidForHero(Hero, Skin) end
+
 ---@param WorldContextObject UObject
 ---@param Skin FGameplayTag
 ---@return boolean
 function URSTGameplayStatics:IsSkinUnlocked(WorldContextObject, Skin) end
+
 ---@param WorldContextObject UObject
 ---@param Profile URSTPlayerProfile
 ---@param HeroTag FGameplayTag
 ---@return boolean
 function URSTGameplayStatics:IsHeroValidForProfile(WorldContextObject, Profile, HeroTag) end
+
+---@param TagContainer FGameplayTagContainer
+---@return boolean
+function URSTGameplayStatics:IsGameplayTagContainerValid(TagContainer) end
+
 function URSTGameplayStatics:InvalidateAllWidgets() end
+
 ---@param Trait FGameplayTag
 ---@return boolean
 function URSTGameplayStatics:HasPlatformTrait(Trait) end
+
 ---@param Traits FGameplayTagContainer
 ---@return boolean
 function URSTGameplayStatics:HasAllPlatformTraits(Traits) end
+
 ---@param WorldContextObject UObject
 ---@param bCheckStreamingPersistent boolean
 ---@return ARSTWorldSettings
 function URSTGameplayStatics:GetWorldSettings(WorldContextObject, bCheckStreamingPersistent) end
+
 ---@param WorldContextObject UObject
 ---@param Profile URSTPlayerProfile
 ---@param OutHeroTags FGameplayTagContainer
 function URSTGameplayStatics:GetValidHeroesForProfile(WorldContextObject, Profile, OutHeroTags) end
+
 ---@param WorldContextObject UObject
 ---@param Profile URSTPlayerProfile
 ---@param OutHeroTags TArray<FGameplayTag>
 function URSTGameplayStatics:GetValidHeroArrayForProfile(WorldContextObject, Profile, OutHeroTags) end
+
 ---@param Data FAssetData
 ---@param OutThreadName FText
 ---@return boolean
 function URSTGameplayStatics:GetThreadNameFromAssetData(Data, OutThreadName) end
+
 ---@param Data FAssetData
 ---@param PropertyName FName
 ---@return FGameplayTagQuery
 function URSTGameplayStatics:GetTagQueryFromAssetData(Data, PropertyName) end
+
 ---@param String FString
 ---@return FGameplayTag
 function URSTGameplayStatics:GetTagFromString(String) end
+
 ---@param Data FAssetData
 ---@param PropertyName FName
 ---@return FGameplayTag
 function URSTGameplayStatics:GetTagFromAssetData(Data, PropertyName) end
+
 ---@param Data FAssetData
 ---@param PropertyName FName
 ---@return FGameplayTagContainer
 function URSTGameplayStatics:GetTagContainerFromAssetData(Data, PropertyName) end
+
 ---@return double
 function URSTGameplayStatics:GetSlateTime() end
+
 ---@param WorldContextObject UObject
 ---@param LatentInfo FLatentActionInfo
 ---@param Player APlayerController
 ---@param HeroTag FGameplayTag
 ---@param LoadBundles TArray<FName>
 ---@param OutSkins TArray<URSTSkinUserFacingData>
-function URSTGameplayStatics:GetSkinUserFacingDataForHero(WorldContextObject, LatentInfo, Player, HeroTag, LoadBundles, OutSkins) end
+function URSTGameplayStatics:GetSkinUserFacingDataForHero(WorldContextObject, LatentInfo, Player, HeroTag, LoadBundles,
+                                                          OutSkins) end
+
 ---@param WorldContextObject UObject
 ---@param HeroTag FGameplayTag
 ---@param OutSkinTags TArray<FGameplayTag>
 function URSTGameplayStatics:GetSkinTagsForHero(WorldContextObject, HeroTag, OutSkinTags) end
+
+---@param WorldContextObject UObject
+---@param LatentInfo FLatentActionInfo
+---@param Player APlayerController
+---@param InSkins TArray<URSTSkinUserFacingData>
+---@param LoadBundles TArray<FName>
+---@param OutSkinSlots TArray<URSTSkinSlotData>
+function URSTGameplayStatics:GetSkinSlots(WorldContextObject, LatentInfo, Player, InSkins, LoadBundles, OutSkinSlots) end
+
 ---@param WorldContextObject UObject
 ---@return float
 function URSTGameplayStatics:GetServerTime(WorldContextObject) end
+
 ---@return FString
 function URSTGameplayStatics:GetProjectVersion() end
+
 ---@return FGameplayTagContainer
 function URSTGameplayStatics:GetPlatformTraits() end
+
 ---@param InputString FString
 ---@param Salt FString
 ---@return FString
 function URSTGameplayStatics:GetPasswordHash(InputString, Salt) end
+
 ---@return int64
 function URSTGameplayStatics:GetNetworkCompatibleChangelist() end
+
 ---@param MilestoneTag FGameplayTag
 ---@return URSTMilestone
 function URSTGameplayStatics:GetMilestoneFromTag(MilestoneTag) end
+
 ---@param MilestoneTag FGameplayTag
 ---@param OutData FAssetData
 ---@return boolean
 function URSTGameplayStatics:GetMilestoneAssetDataFromTag(MilestoneTag, OutData) end
+
 ---@param SceneComponent USceneComponent
 ---@param Min FVector
 ---@param Max FVector
 function URSTGameplayStatics:GetComponentBoundsMinMax(SceneComponent, Min, Max) end
+
 ---@param WorldContextObject UObject
 ---@param LatentInfo FLatentActionInfo
 ---@param Player APlayerController
 ---@param OutVideoDefinitions TArray<URSTVideoDefinition>
 function URSTGameplayStatics:GetAllVideos(WorldContextObject, LatentInfo, Player, OutVideoDefinitions) end
+
 ---@param WorldContextObject UObject
 ---@param LatentInfo FLatentActionInfo
 ---@param Player APlayerController
 ---@param OutThreadDefinitions TArray<URSTMetaThreadDefinition>
 function URSTGameplayStatics:GetAllThreads(WorldContextObject, LatentInfo, Player, OutThreadDefinitions) end
+
 ---@param WorldContextObject UObject
 ---@param LatentInfo FLatentActionInfo
 ---@param OutInventoryItems TArray<URSTInventoryItemDefinition>
 function URSTGameplayStatics:GetAllPurchasableInventoryItems(WorldContextObject, LatentInfo, OutInventoryItems) end
+
 ---@param WorldContextObject UObject
 ---@param LatentInfo FLatentActionInfo
 ---@param Player APlayerController
 ---@param OutPotionDefinitions TArray<URSTPotionDefinition>
 function URSTGameplayStatics:GetAllPotions(WorldContextObject, LatentInfo, Player, OutPotionDefinitions) end
+
+---@param OutHeroTags TArray<FGameplayTag>
+function URSTGameplayStatics:GetAllEnabledHeroes(OutHeroTags) end
+
 ---@param MilestoneTag FGameplayTag
 ---@param OutData FAssetData
 ---@return boolean
 function URSTGameplayStatics:FindThreadWithMilestoneRequirement(MilestoneTag, OutData) end
+
 ---@param WorldContextObject UObject
 ---@param LocalPlayer ULocalPlayer
 ---@param InThreadDefinitions TArray<URSTMetaThreadDefinition>
 ---@param Filter ERSTThreadFilter
 ---@param OUtFilteredThreadDefinitions TArray<URSTMetaThreadDefinition>
-function URSTGameplayStatics:FilterThreads(WorldContextObject, LocalPlayer, InThreadDefinitions, Filter, OUtFilteredThreadDefinitions) end
+function URSTGameplayStatics:FilterThreads(WorldContextObject, LocalPlayer, InThreadDefinitions, Filter,
+                                           OUtFilteredThreadDefinitions) end
+
 ---@param A FGameplayTagContainer
 ---@param B FGameplayTagContainer
 ---@param bExact boolean
 ---@return FGameplayTagContainer
 function URSTGameplayStatics:FilterTagContainer(A, B, bExact) end
+
 ---@param InPotionDefinitions TArray<URSTPotionDefinition>
 ---@param OutFilteredPotionDefinitions TArray<URSTPotionDefinition>
 function URSTGameplayStatics:FilterPotions(InPotionDefinitions, OutFilteredPotionDefinitions) end
+
 ---@param InInventoryItems TArray<ARSTInventoryItemInstance>
 ---@param Filter ERSTInventoryItemFilter
 ---@param OutFilteredItems TArray<ARSTInventoryItemInstance>
 function URSTGameplayStatics:FilterInventoryItemInstances(InInventoryItems, Filter, OutFilteredItems) end
+
 ---@param InInventoryItems TArray<URSTInventoryItemDefinition>
 ---@param Filter ERSTInventoryItemFilter
 ---@param OutFilteredItems TArray<URSTInventoryItemDefinition>
 function URSTGameplayStatics:FilterInventoryItemDefinitions(InInventoryItems, Filter, OutFilteredItems) end
+
 ---@param InHeroTags TArray<FGameplayTag>
 ---@param OutHeroTags TArray<FGameplayTag>
 function URSTGameplayStatics:FilterEnabledHeroes(InHeroTags, OutHeroTags) end
+
 ---@param Tag FGameplayTag
 ---@param Root FGameplayTag
 ---@return FString
 function URSTGameplayStatics:ConvertTagToString(Tag, Root) end
+
 ---@param Leaf FString
 ---@param Root FGameplayTag
 ---@return FGameplayTag
 function URSTGameplayStatics:ConvertStringToTag(Leaf, Root) end
-
 
 ---@class URSTGauntletController : UGauntletTestController
 ---@field missionsToTest TArray<FString>
 URSTGauntletController = {}
 
 function URSTGauntletController:StopTesting() end
+
 function URSTGauntletController:StopProfiling() end
+
 function URSTGauntletController:StartTesting() end
+
 function URSTGauntletController:StartProfiling() end
+
 function URSTGauntletController:PlayerActionsOncePerLevel() end
+
 ---@param DeltaTime float
 function URSTGauntletController:PlayerActions(DeltaTime) end
+
 function URSTGauntletController:OnCurrentWaveChanged() end
+
 function URSTGauntletController:NextWave() end
+
 function URSTGauntletController:LaunchMissionFromCmdLine() end
+
 function URSTGauntletController:LaunchMission() end
+
 ---@param waveNum int32
 function URSTGauntletController:GoToWave(waveNum) end
+
 ---@param Distortion URSTMetaDistortionDefinition
 function URSTGauntletController:ApplyDistortion(Distortion) end
-function URSTGauntletController:AddRandomDistortions() end
 
+function URSTGauntletController:AddRandomDistortions() end
 
 ---@class URSTGenericInputData : UCommonUIInputData
 ---@field PushToTalkInputAction UInputAction
@@ -9633,23 +11342,29 @@ URSTGenericTabWidget = {}
 ---@param bForceNotify boolean
 ---@return boolean
 function URSTGenericTabWidget:SetCurrentTabID(NewTabID, bAutoCorrect, bForceNotify) end
+
 ---@param amount int32
 function URSTGenericTabWidget:IncreaseTabID(amount) end
+
 ---@return int32
 function URSTGenericTabWidget:GetTabIDMax() end
+
 ---@return int32
 function URSTGenericTabWidget:GetCurrentTabID() end
+
 ---@param amount int32
 function URSTGenericTabWidget:DecreaseTabID(amount) end
+
 ---@param amount int32
 ---@return boolean
 function URSTGenericTabWidget:CanIncreaseTabID(amount) end
+
 ---@param amount int32
 ---@return boolean
 function URSTGenericTabWidget:CanDecreaseTabID(amount) end
+
 ---@param NewTabID int32
 function URSTGenericTabWidget:BP_OnTabIDSet(NewTabID) end
-
 
 ---@class URSTGetItemDefinitionAsync : UBlueprintAsyncActionBase
 ---@field OnStreamableFinished FRSTGetItemDefinitionAsyncOnStreamableFinished
@@ -9658,8 +11373,8 @@ URSTGetItemDefinitionAsync = {}
 ---@param GameplayTag FGameplayTag
 ---@return URSTGetItemDefinitionAsync
 function URSTGetItemDefinitionAsync:GetItemDefinitionAsyncTag(GameplayTag) end
-function URSTGetItemDefinitionAsync:ExecuteAfterStreamableFinished() end
 
+function URSTGetItemDefinitionAsync:ExecuteAfterStreamableFinished() end
 
 ---@class URSTGetPawnDefinitionAsync : UBlueprintAsyncActionBase
 ---@field OnStreamableFinished FRSTGetPawnDefinitionAsyncOnStreamableFinished
@@ -9668,11 +11383,12 @@ URSTGetPawnDefinitionAsync = {}
 ---@param GameplayTag FGameplayTag
 ---@return URSTGetPawnDefinitionAsync
 function URSTGetPawnDefinitionAsync:GetPawnDefinitionAsyncTag(GameplayTag) end
+
 ---@param PawnUserFacingData URSTPawnUserFacingData
 ---@return URSTGetPawnDefinitionAsync
 function URSTGetPawnDefinitionAsync:GetPawnDefinitionAsync(PawnUserFacingData) end
-function URSTGetPawnDefinitionAsync:ExecuteAfterStreamableFinished() end
 
+function URSTGetPawnDefinitionAsync:ExecuteAfterStreamableFinished() end
 
 ---@class URSTGetPawnUserFacingDataAsync : UBlueprintAsyncActionBase
 ---@field OnStreamableFinished FRSTGetPawnUserFacingDataAsyncOnStreamableFinished
@@ -9683,47 +11399,97 @@ URSTGetPawnUserFacingDataAsync = {}
 ---@param OwningWidget UCommonActivatableWidget
 ---@return URSTGetPawnUserFacingDataAsync
 function URSTGetPawnUserFacingDataAsync:GetPawnUserFacingDataAsyncTag(Tag, InBundles, OwningWidget) end
+
 ---@param TagString FString
 ---@param InBundles TArray<FName>
 ---@param OwningWidget UCommonActivatableWidget
 ---@return URSTGetPawnUserFacingDataAsync
 function URSTGetPawnUserFacingDataAsync:GetPawnUserFacingDataAsyncString(TagString, InBundles, OwningWidget) end
+
 ---@param PawnDefinition URSTPawnDefinition
 ---@param InBundles TArray<FName>
 ---@param OwningWidget UCommonActivatableWidget
 ---@return URSTGetPawnUserFacingDataAsync
 function URSTGetPawnUserFacingDataAsync:GetPawnUserFacingDataAsyncPD(PawnDefinition, InBundles, OwningWidget) end
+
 ---@param PawnExtension URSTPawnExtensionComponent
 ---@param InBundles TArray<FName>
 ---@param OwningWidget UCommonActivatableWidget
 ---@return URSTGetPawnUserFacingDataAsync
 function URSTGetPawnUserFacingDataAsync:GetPawnUserFacingDataAsync(PawnExtension, InBundles, OwningWidget) end
+
 function URSTGetPawnUserFacingDataAsync:ExecuteAfterStreamableFinished() end
 
-
----@class URSTGetSkinDefinitionAsync : UBlueprintAsyncActionBase
+---@class URSTGetSkinDefinitionAsync : URSTGetSkinDefinitionAsync_Base
 ---@field OnStreamableFinished FRSTGetSkinDefinitionAsyncOnStreamableFinished
 URSTGetSkinDefinitionAsync = {}
+
+---@param SkinDefinition URSTSkinDefinition
+---@param DidFind boolean
+function URSTGetSkinDefinitionAsync:GetSkinDefinitionOutputPin__DelegateSignature(SkinDefinition, DidFind) end
 
 ---@param Tag FGameplayTag
 ---@param InBundles TArray<FName>
 ---@param OwningWidget UCommonActivatableWidget
 ---@return URSTGetSkinDefinitionAsync
 function URSTGetSkinDefinitionAsync:GetSkinDefinitionAsyncTag(Tag, InBundles, OwningWidget) end
-function URSTGetSkinDefinitionAsync:ExecuteAfterStreamableFinished() end
 
+---@class URSTGetSkinDefinitionAsync_Base : UBlueprintAsyncActionBase
+URSTGetSkinDefinitionAsync_Base = {}
 
----@class URSTGetSkinUserFacingDataAsync : UBlueprintAsyncActionBase
+function URSTGetSkinDefinitionAsync_Base:ExecuteAfterStreamableFinished() end
+
+---@class URSTGetSkinDefinitionAsync_Multi : URSTGetSkinDefinitionAsync_Base
+---@field OnStreamableFinished FRSTGetSkinDefinitionAsync_MultiOnStreamableFinished
+URSTGetSkinDefinitionAsync_Multi = {}
+
+---@param SkinDefinition TArray<URSTSkinDefinition>
+---@param DidFind boolean
+---@param Identifiers FGameplayTagContainer
+function URSTGetSkinDefinitionAsync_Multi:GetSkinDefinitionsOutputPin__DelegateSignature(SkinDefinition, DidFind,
+                                                                                         Identifiers) end
+
+---@param Tags FGameplayTagContainer
+---@param InBundles TArray<FName>
+---@param OwningWidget UCommonActivatableWidget
+---@return URSTGetSkinDefinitionAsync_Multi
+function URSTGetSkinDefinitionAsync_Multi:GetSkinDefinitionAsyncTagContainer(Tags, InBundles, OwningWidget) end
+
+---@class URSTGetSkinUserFacingDataAsync : URSTGetSkinUserFacingDataAsync_Base
 ---@field OnStreamableFinished FRSTGetSkinUserFacingDataAsyncOnStreamableFinished
 URSTGetSkinUserFacingDataAsync = {}
+
+---@param UserFacingData URSTSkinUserFacingData
+---@param DidFind boolean
+function URSTGetSkinUserFacingDataAsync:GetSkinUserFacingDataOutputPin__DelegateSignature(UserFacingData, DidFind) end
 
 ---@param Tag FGameplayTag
 ---@param InBundles TArray<FName>
 ---@param OwningWidget UCommonActivatableWidget
 ---@return URSTGetSkinUserFacingDataAsync
 function URSTGetSkinUserFacingDataAsync:GetSkinUserFacingDataAsyncTag(Tag, InBundles, OwningWidget) end
-function URSTGetSkinUserFacingDataAsync:ExecuteAfterStreamableFinished() end
 
+---@class URSTGetSkinUserFacingDataAsync_Base : UBlueprintAsyncActionBase
+URSTGetSkinUserFacingDataAsync_Base = {}
+
+function URSTGetSkinUserFacingDataAsync_Base:ExecuteAfterStreamableFinished() end
+
+---@class URSTGetSkinUserFacingDataAsync_Multi : URSTGetSkinUserFacingDataAsync_Base
+---@field OnStreamableFinished FRSTGetSkinUserFacingDataAsync_MultiOnStreamableFinished
+URSTGetSkinUserFacingDataAsync_Multi = {}
+
+---@param Elements TArray<URSTSkinUserFacingData>
+---@param DidFind boolean
+---@param Identifiers FGameplayTagContainer
+function URSTGetSkinUserFacingDataAsync_Multi:GetSkinUserFacingDataContainerOutputPin__DelegateSignature(Elements,
+                                                                                                         DidFind,
+                                                                                                         Identifiers) end
+
+---@param Tag FGameplayTagContainer
+---@param InBundles TArray<FName>
+---@param OwningWidget UCommonActivatableWidget
+---@return URSTGetSkinUserFacingDataAsync_Multi
+function URSTGetSkinUserFacingDataAsync_Multi:GetSkinUserFacingDataAsyncTagContainer(Tag, InBundles, OwningWidget) end
 
 ---@class URSTGetStatusEffectUserFacingDataAsync : UBlueprintAsyncActionBase
 ---@field OnStreamableFinished FRSTGetStatusEffectUserFacingDataAsyncOnStreamableFinished
@@ -9731,12 +11497,14 @@ URSTGetStatusEffectUserFacingDataAsync = {}
 
 ---@param StatusEffectTag FGameplayTag
 ---@param UserFacingData URSTStatusEffectUserFacingData
-function URSTGetStatusEffectUserFacingDataAsync:GetStatusEffectUserFacingDataOutputPin__DelegateSignature(StatusEffectTag, UserFacingData) end
+function URSTGetStatusEffectUserFacingDataAsync:GetStatusEffectUserFacingDataOutputPin__DelegateSignature(
+    StatusEffectTag, UserFacingData) end
+
 ---@param InStatusEffectTag FGameplayTag
 ---@return URSTGetStatusEffectUserFacingDataAsync
 function URSTGetStatusEffectUserFacingDataAsync:GetStatusEffectUserFacingDataAsync(InStatusEffectTag) end
-function URSTGetStatusEffectUserFacingDataAsync:ExecuteAfterStreamableFinished() end
 
+function URSTGetStatusEffectUserFacingDataAsync:ExecuteAfterStreamableFinished() end
 
 ---@class URSTGetUpgradeUserFacingDataAsync : UBlueprintAsyncActionBase
 ---@field OnStreamableFinished FRSTGetUpgradeUserFacingDataAsyncOnStreamableFinished
@@ -9746,37 +11514,44 @@ URSTGetUpgradeUserFacingDataAsync = {}
 ---@param OwningWidget UCommonActivatableWidget
 ---@return URSTGetUpgradeUserFacingDataAsync
 function URSTGetUpgradeUserFacingDataAsync:GetUpgradeUserFacingDataAsync(InUpgradeDefinition, OwningWidget) end
-function URSTGetUpgradeUserFacingDataAsync:ExecuteAfterStreamableFinished() end
 
+function URSTGetUpgradeUserFacingDataAsync:ExecuteAfterStreamableFinished() end
 
 ---@class URSTGlobalAbilitySystem : UWorldSubsystem
 ---@field AppliedAbilities TMap<TSubclassOf<UGameplayAbility>, FRSTGlobalAppliedAbilityList>
 ---@field AppliedEffects TMap<TSubclassOf<UGameplayEffect>, FRSTGlobalAppliedEffectList>
 ---@field RegisteredASCs TArray<URSTAbilitySystemComponent>
+---@field ModifierHandles TMap<FActiveGameplayEffectHandle, FRSTGEArr>
+---@field EffectCounts TMap<UGameplayEffect, int32>
 URSTGlobalAbilitySystem = {}
 
 ---@param Target AActor
 ---@param CueTag FGameplayTag
 ---@param GameplayCueParameters FGameplayCueParameters
 function URSTGlobalAbilitySystem:RemoveGameplayCueLocal(Target, CueTag, GameplayCueParameters) end
+
 ---@param Effect TSubclassOf<UGameplayEffect>
 function URSTGlobalAbilitySystem:RemoveEffectFromAll(Effect) end
+
 ---@param Ability TSubclassOf<UGameplayAbility>
 function URSTGlobalAbilitySystem:RemoveAbilityFromAll(Ability) end
+
 ---@param Target AActor
 ---@param CueTag FGameplayTag
 ---@param GameplayCueParameters FGameplayCueParameters
 function URSTGlobalAbilitySystem:ExecuteGameplayCueLocal(Target, CueTag, GameplayCueParameters) end
+
 ---@param Effect TSubclassOf<UGameplayEffect>
 function URSTGlobalAbilitySystem:ApplyEffectToAll(Effect) end
+
 ---@param Ability TSubclassOf<UGameplayAbility>
 ---@param SourceObject UObject
 function URSTGlobalAbilitySystem:ApplyAbilityToAll(Ability, SourceObject) end
+
 ---@param Target AActor
 ---@param CueTag FGameplayTag
 ---@param GameplayCueParameters FGameplayCueParameters
 function URSTGlobalAbilitySystem:AddGameplayCueLocal(Target, CueTag, GameplayCueParameters) end
-
 
 ---@class URSTGnomeSentinelSubsystem : UWorldSubsystem
 URSTGnomeSentinelSubsystem = {}
@@ -9795,7 +11570,6 @@ URSTHealingFlyoffWidget = {}
 
 ---@param NewRequest FRSTHealingFlyoffRequest
 function URSTHealingFlyoffWidget:Update(NewRequest) end
-
 
 ---@class URSTHealthComponent : UGameFrameworkComponent
 ---@field OnDamageTaken FRSTHealthComponentOnDamageTaken
@@ -9821,64 +11595,91 @@ function URSTHealingFlyoffWidget:Update(NewRequest) end
 URSTHealthComponent = {}
 
 function URSTHealthComponent:UninitializeFromAbilitySystem() end
+
 ---@param ReviveData FRSTReviveData
 function URSTHealthComponent:RSTHealthComponentReviveDataUpdated__DelegateSignature(ReviveData) end
+
 ---@param ReviverMultiplier float
 ---@param Instigator AActor
 function URSTHealthComponent:ReviveFromDowned(ReviverMultiplier, Instigator) end
+
 function URSTHealthComponent:ProcessDownedDeathTimeComplete() end
+
 function URSTHealthComponent:OnRep_ReviveData() end
+
 function URSTHealthComponent:OnRep_LastDeathEvent() end
+
 ---@return boolean
 function URSTHealthComponent:IsReviveInProgress() end
+
 ---@return boolean
 function URSTHealthComponent:IsDowned() end
+
 ---@return boolean
 function URSTHealthComponent:IsDeadOrDying() end
+
 ---@param Damage float
 ---@return boolean
 function URSTHealthComponent:IsDamageFatal(Damage) end
+
 ---@param InASC URSTAbilitySystemComponent
 function URSTHealthComponent:InitializeWithAbilitySystem(InASC) end
+
 ---@return float
 function URSTHealthComponent:GetShieldNormalized() end
+
 ---@return float
 function URSTHealthComponent:GetShield() end
+
 ---@return float
 function URSTHealthComponent:GetRevivingAllyStrength() end
+
 ---@return float
 function URSTHealthComponent:GetMaxShield() end
+
 ---@return float
 function URSTHealthComponent:GetMaxHealth() end
+
 ---@return URSTDeathEvent
 function URSTHealthComponent:GetLastDeathEvent() end
+
 ---@return boolean
 function URSTHealthComponent:GetIsDisplaying() end
+
 ---@return float
 function URSTHealthComponent:GetHealthNormalized() end
+
 ---@return float
 function URSTHealthComponent:GetHealth() end
+
 ---@return float
 function URSTHealthComponent:GetDownedRemaining() end
+
 ---@return float
 function URSTHealthComponent:GetDownedDuration() end
+
 ---@return float
 function URSTHealthComponent:GetDisplayDuration() end
+
 ---@return ERSTDeathState
 function URSTHealthComponent:GetDeathState() end
+
 ---@param Actor AActor
 ---@return URSTHealthComponent
 function URSTHealthComponent:FindHealthComponent(Actor) end
+
 ---@param Duration float
 function URSTHealthComponent:EnableDisplay(Duration) end
+
 function URSTHealthComponent:DisableDisplay() end
+
 ---@param bFellOutOfWorld boolean
 ---@param Instigator AActor
 function URSTHealthComponent:DamageSelfDestruct(bFellOutOfWorld, Instigator) end
+
 ---@param Duration float
 ---@return boolean
 function URSTHealthComponent:CanEnableDisplay(Duration) end
-
 
 ---@class URSTHealthSet : URSTAttributeSet
 ---@field Health FGameplayAttributeData
@@ -9897,15 +11698,18 @@ URSTHealthSet = {}
 
 ---@param OldValue FGameplayAttributeData
 function URSTHealthSet:OnRep_Shield(OldValue) end
+
 ---@param OldValue FGameplayAttributeData
 function URSTHealthSet:OnRep_MaxShield(OldValue) end
+
 ---@param OldValue FGameplayAttributeData
 function URSTHealthSet:OnRep_MaxHealth(OldValue) end
+
 ---@param OldValue FGameplayAttributeData
 function URSTHealthSet:OnRep_Lifespan(OldValue) end
+
 ---@param OldValue FGameplayAttributeData
 function URSTHealthSet:OnRep_Health(OldValue) end
-
 
 ---@class URSTHeroComponent : UPawnComponent
 ---@field DefaultInputMappings TArray<FRSTInputMappingContextAndPriority>
@@ -9920,10 +11724,10 @@ URSTHeroComponent = {}
 ---@param YawScale float
 ---@param PitchScale float
 function URSTHeroComponent:SetLookScale(YawScale, PitchScale) end
+
 ---@param Actor AActor
 ---@return URSTHeroComponent
 function URSTHeroComponent:FindHeroComponent(Actor) end
-
 
 ---@class URSTHitData : UPrimaryDataAsset
 ---@field HitCue FGameplayTag
@@ -9947,11 +11751,12 @@ URSTHitDataElement = {}
 URSTHitFlashComponent = {}
 
 function URSTHitFlashComponent:TriggerHitFlash() end
+
 function URSTHitFlashComponent:OnMeshesChanged() end
+
 ---@param Actor AActor
 ---@return URSTHitFlashComponent
 function URSTHitFlashComponent:FindHitFlashComponent(Actor) end
-
 
 ---@class URSTHotbarBlueprintLibrary : UBlueprintFunctionLibrary
 URSTHotbarBlueprintLibrary = {}
@@ -9959,7 +11764,6 @@ URSTHotbarBlueprintLibrary = {}
 ---@param Actor AActor
 ---@return URSTHotbarComponent
 function URSTHotbarBlueprintLibrary:GetHotbarComponent(Actor) end
-
 
 ---@class URSTHotbarComponent : UPlayerStateComponent
 ---@field HotbarChangeBlockedTags FGameplayTagContainer
@@ -9970,42 +11774,57 @@ URSTHotbarComponent = {}
 
 ---@param NewIndex int32
 function URSTHotbarComponent:SetActiveSlotIndex(NewIndex) end
+
 ---@param NewIndex int32
 function URSTHotbarComponent:Server_SetActiveSlotIndex(NewIndex) end
+
 ---@param SlotIndex int32
 function URSTHotbarComponent:Server_RemoveItemFromSlot(SlotIndex) end
+
 ---@param SlotIndex int32
 ---@param Item ARSTInventoryItemInstance
 function URSTHotbarComponent:Server_AddItemToSlot(SlotIndex, Item) end
+
 ---@param SlotIndex int32
 ---@return ARSTInventoryItemInstance
 function URSTHotbarComponent:RemoveItemFromSlot(SlotIndex) end
+
 function URSTHotbarComponent:OnRep_Slots() end
+
 function URSTHotbarComponent:OnRep_SlotCount() end
+
 ---@param PreviousSlotIndex int32
 function URSTHotbarComponent:OnRep_ActiveSlotIndex(PreviousSlotIndex) end
+
 ---@param Item ARSTInventoryItemInstance
 ---@return int32
 function URSTHotbarComponent:IndexOfItem(Item) end
+
 ---@return TArray<ARSTInventoryItemInstance>
 function URSTHotbarComponent:GetSlots() end
+
 ---@param SlotIndex int32
 ---@return ARSTInventoryItemInstance
 function URSTHotbarComponent:GetSlotItem(SlotIndex) end
+
 ---@return ARSTInventoryItemInstance
 function URSTHotbarComponent:GetActiveSlotItem() end
+
 ---@return int32
 function URSTHotbarComponent:GetActiveSlotIndex() end
+
 function URSTHotbarComponent:CycleActiveSlotForward() end
+
 function URSTHotbarComponent:CycleActiveSlotBackward() end
+
 ---@param NewIndex int32
 function URSTHotbarComponent:Client_SetActiveSlotIndex(NewIndex) end
+
 ---@param SlotIndex int32
 ---@param Item ARSTInventoryItemInstance
 ---@param OutRemovedItem ARSTInventoryItemInstance
 ---@return boolean
 function URSTHotbarComponent:AddItemToSlot(SlotIndex, Item, OutRemovedItem) end
-
 
 ---@class URSTIndicatorDescriptor : UObject
 ---@field WasClampedChanged FRSTIndicatorDescriptorWasClampedChanged
@@ -10034,77 +11853,112 @@ function URSTHotbarComponent:AddItemToSlot(SlotIndex, Item, OutRemovedItem) end
 URSTIndicatorDescriptor = {}
 
 function URSTIndicatorDescriptor:UnregisterIndicator() end
+
 ---@param Offset FVector
 function URSTIndicatorDescriptor:SetWorldPositionOffset(Offset) end
+
 ---@param bNewWasClamped boolean
 function URSTIndicatorDescriptor:SetWasClamped(bNewWasClamped) end
+
 ---@param InVAlignment EVerticalAlignment
 function URSTIndicatorDescriptor:SetVAlign(InVAlignment) end
+
 ---@param bValue boolean
 function URSTIndicatorDescriptor:SetShowClampToScreenArrow(bValue) end
+
 ---@param Offset FVector2D
 function URSTIndicatorDescriptor:SetScreenSpaceOffset(Offset) end
+
 ---@param InComponent USceneComponent
 function URSTIndicatorDescriptor:SetSceneComponent(InComponent) end
+
 ---@param InProjectionMode ERSTActorCanvasProjectionMode
 function URSTIndicatorDescriptor:SetProjectionMode(InProjectionMode) end
+
 ---@param InPriority int32
 function URSTIndicatorDescriptor:SetPriority(InPriority) end
+
 ---@param InIndicatorWidgetClass TSoftClassPtr<UUserWidget>
 function URSTIndicatorDescriptor:SetIndicatorClass(InIndicatorWidgetClass) end
+
 ---@param InHAlignment EHorizontalAlignment
 function URSTIndicatorDescriptor:SetHAlign(InHAlignment) end
+
 ---@param InVisible boolean
 function URSTIndicatorDescriptor:SetDesiredVisibility(InVisible) end
+
 ---@param InDataObject UObject
 function URSTIndicatorDescriptor:SetDataObject(InDataObject) end
+
 ---@param SocketName FName
 function URSTIndicatorDescriptor:SetComponentSocketName(SocketName) end
+
 ---@param bValue boolean
 function URSTIndicatorDescriptor:SetClampToScreen(bValue) end
+
 ---@param bNewCenteredInView boolean
 function URSTIndicatorDescriptor:SetCenteredInView(bNewCenteredInView) end
+
 ---@param InBoundingBoxAnchor FVector
 function URSTIndicatorDescriptor:SetBoundingBoxAnchor(InBoundingBoxAnchor) end
+
 ---@param CanAutomaticallyRemove boolean
 function URSTIndicatorDescriptor:SetAutoRemoveWhenIndicatorComponentIsNull(CanAutomaticallyRemove) end
+
 function URSTIndicatorDescriptor:RSTIndicatorWasClampedDelegate__DelegateSignature() end
+
 function URSTIndicatorDescriptor:RSTIndicatorCenteredDelegate__DelegateSignature() end
+
 ---@return FVector
 function URSTIndicatorDescriptor:GetWorldPositionOffset() end
+
 ---@return boolean
 function URSTIndicatorDescriptor:GetWasClamped() end
+
 ---@return EVerticalAlignment
 function URSTIndicatorDescriptor:GetVAlign() end
+
 ---@return boolean
 function URSTIndicatorDescriptor:GetShowClampToScreenArrow() end
+
 ---@return FVector2D
 function URSTIndicatorDescriptor:GetScreenSpaceOffset() end
+
 ---@return USceneComponent
 function URSTIndicatorDescriptor:GetSceneComponent() end
+
 ---@return ERSTActorCanvasProjectionMode
 function URSTIndicatorDescriptor:GetProjectionMode() end
+
 ---@return int32
 function URSTIndicatorDescriptor:GetPriority() end
+
 ---@return boolean
 function URSTIndicatorDescriptor:GetIsVisible() end
+
 ---@return TSoftClassPtr<UUserWidget>
 function URSTIndicatorDescriptor:GetIndicatorClass() end
+
 ---@return EHorizontalAlignment
 function URSTIndicatorDescriptor:GetHAlign() end
+
 ---@return UObject
 function URSTIndicatorDescriptor:GetDataObject() end
+
 ---@return FName
 function URSTIndicatorDescriptor:GetComponentSocketName() end
+
 ---@return boolean
 function URSTIndicatorDescriptor:GetClampToScreen() end
+
 ---@return boolean
 function URSTIndicatorDescriptor:GetCenteredInView() end
+
 ---@return FVector
 function URSTIndicatorDescriptor:GetBoundingBoxAnchor() end
+
 ---@return boolean
 function URSTIndicatorDescriptor:GetAutoRemoveWhenIndicatorComponentIsNull() end
-
 
 ---@class URSTIndicatorLayer : UWidget
 ---@field ArrowBrush FSlateBrush
@@ -10120,9 +11974,9 @@ URSTIndicatorManagerComponent = {}
 
 ---@param IndicatorDescriptor URSTIndicatorDescriptor
 function URSTIndicatorManagerComponent:RemoveIndicator(IndicatorDescriptor) end
+
 ---@param IndicatorDescriptor URSTIndicatorDescriptor
 function URSTIndicatorManagerComponent:AddIndicator(IndicatorDescriptor) end
-
 
 ---@class URSTInputComponent : UEnhancedInputComponent
 URSTInputComponent = {}
@@ -10137,11 +11991,11 @@ URSTInputConfig = {}
 ---@param bLogNotFound boolean
 ---@return UInputAction
 function URSTInputConfig:FindNativeInputActionForTag(InputTag, bLogNotFound) end
+
 ---@param InputTag FGameplayTag
 ---@param bLogNotFound boolean
 ---@return UInputAction
 function URSTInputConfig:FindAbilityInputActionForTag(InputTag, bLogNotFound) end
-
 
 ---@class URSTInputKeySelector : UInputKeySelector
 URSTInputKeySelector = {}
@@ -10187,6 +12041,15 @@ URSTInputModifier_SniperADS = {}
 ---@class URSTInputSubsystem : UCommonInputSubsystem
 URSTInputSubsystem = {}
 
+function URSTInputSubsystem:OnSettingsApplied() end
+
+---@param IMC UInputMappingContext
+function URSTInputSubsystem:OnMappingContextRegistered(IMC) end
+
+---@param InArgs FMapPlayerKeyArgs
+---@param FailureReason FGameplayTagContainer
+---@param ModifiedKeys TArray<FMapPlayerKeyArgs>
+function URSTInputSubsystem:MapPlayerKey(InArgs, FailureReason, ModifiedKeys) end
 
 ---@class URSTInstakillGEComponent : UGameplayEffectComponent
 ---@field InstakillEntries TArray<FRSTInstakillEntry>
@@ -10218,7 +12081,6 @@ URSTInventoryFunctionLibrary = {}
 ---@return URSTInventoryItemFragment
 function URSTInventoryFunctionLibrary:FindItemDefinitionFragment(ItemDef, FragmentClass) end
 
-
 ---@class URSTInventoryItemDefinition : UPrimaryDataAsset
 ---@field InstanceClass TSubclassOf<ARSTInventoryItemInstance>
 ---@field Identifier FGameplayTag
@@ -10239,7 +12101,6 @@ URSTInventoryItemDefinition = {}
 ---@return ARSTInventoryItemInstance
 function URSTInventoryItemDefinition:SpawnInstanceActor(Owner, ItemDef) end
 
-
 ---@class URSTInventoryItemFragment : UObject
 URSTInventoryItemFragment = {}
 
@@ -10250,18 +12111,30 @@ URSTInventoryItemFragment = {}
 ---@field InventoryList FRSTInventoryList
 URSTInventoryManagerComponent = {}
 
+---@param ItemDefToReplace URSTInventoryItemDefinition
+---@param NewItemDef URSTInventoryItemDefinition
+---@param OutReplacedItem ARSTInventoryItemInstance
+---@return ARSTInventoryItemInstance
+function URSTInventoryManagerComponent:ReplaceItemDefinition(ItemDefToReplace, NewItemDef, OutReplacedItem) end
+
 ---@return TArray<ARSTInventoryItemInstance>
 function URSTInventoryManagerComponent:GetAllItems() end
+
+---@param OrigItemDef URSTInventoryItemDefinition
+---@return ARSTInventoryItemInstance
+function URSTInventoryManagerComponent:FindItemWithReplacedDefinition(OrigItemDef) end
+
 ---@param ItemDef URSTInventoryItemDefinition
 ---@return ARSTInventoryItemInstance
 function URSTInventoryManagerComponent:FindItemWithDefinition(ItemDef) end
+
 ---@param InActor AActor
 ---@return URSTInventoryManagerComponent
 function URSTInventoryManagerComponent:FindInventoryManagerComponent(InActor) end
+
 ---@param ItemDef URSTInventoryItemDefinition
 ---@return ARSTInventoryItemInstance
 function URSTInventoryManagerComponent:AddItemDefinition(ItemDef) end
-
 
 ---@class URSTItemAttribute : UObject
 ---@field DisplayName FText
@@ -10275,14 +12148,12 @@ URSTItemAttribute = {}
 ---@return FText
 function URSTItemAttribute:GetValueText() end
 
-
 ---@class URSTItemAttributeBlueprintLibrary : UBlueprintFunctionLibrary
 URSTItemAttributeBlueprintLibrary = {}
 
 ---@param ItemInstance ARSTInventoryItemInstance
 ---@return FRSTItemAttributeCollection
 function URSTItemAttributeBlueprintLibrary:GetAttributesForItemInstance(ItemInstance) end
-
 
 ---@class URSTItemAttribute_Double : URSTItemAttribute
 ---@field Value double
@@ -10314,7 +12185,6 @@ URSTKeywordTooltipWidget = {}
 
 ---@param TooltipData FRSTKeywordToolTipData
 function URSTKeywordTooltipWidget:BP_ConstructFromText(TooltipData) end
-
 
 ---@class URSTKnockbackData : URSTHitDataElement
 ---@field KnockbackDistance float
@@ -10362,11 +12232,12 @@ URSTLoadingScreenSubsystem = {}
 
 ---@param NewWidgetClass TSubclassOf<UUserWidget>
 function URSTLoadingScreenSubsystem:SetLoadingScreenContentWidget(NewWidgetClass) end
+
 ---@param bIsShowing boolean
 function URSTLoadingScreenSubsystem:RSTLoadingScreenStatusChanged__DelegateSignature(bIsShowing) end
+
 ---@return TSubclassOf<UUserWidget>
 function URSTLoadingScreenSubsystem:GetLoadingScreenContentWidget() end
-
 
 ---@class URSTLocalPlayer : UCommonLocalPlayer
 ---@field OnVoiceChatPlayerTalkingUpdatedDelegate FRSTLocalPlayerOnVoiceChatPlayerTalkingUpdatedDelegate
@@ -10377,13 +12248,15 @@ URSTLocalPlayer = {}
 
 ---@param SwapResult FSwapAudioOutputResult
 function URSTLocalPlayer:OnCompletedAudioDeviceSwap(SwapResult) end
+
 ---@return URSTSettingsShared
 function URSTLocalPlayer:GetSharedSettings() end
+
 ---@return URSTPlayerProfile
 function URSTLocalPlayer:GetPlayerProfile() end
+
 ---@return URSTSettingsLocal
 function URSTLocalPlayer:GetLocalSettings() end
-
 
 ---@class URSTMapData : UAssetUserData
 ---@field MapVolumes TArray<FRSTMapVolumeInfo>
@@ -10396,8 +12269,8 @@ URSTMapData = {}
 URSTMapDisplayComponent = {}
 
 function URSTMapDisplayComponent:ShowMarker() end
-function URSTMapDisplayComponent:HideMarker() end
 
+function URSTMapDisplayComponent:HideMarker() end
 
 ---@class URSTMapSubsystem : UWorldSubsystem
 URSTMapSubsystem = {}
@@ -10410,15 +12283,20 @@ URSTMapSubsystem = {}
 ---@field MapCommunicationOption URSTCommunicationDefinition
 ---@field mapData URSTMapData
 ---@field GameplayTagToSlateBrushMap TMap<FString, FSlateBrush>
+---@field LocationToDeathHeatMapBrush TMap<FIntVector2, FSlateBrush>
 URSTMapWidget = {}
 
 function URSTMapWidget:UpdateWidgetStyle() end
+
+function URSTMapWidget:ToggleHeatMap() end
+
 ---@param mapData URSTMapData
 function URSTMapWidget:SetMapData(mapData) end
+
 function URSTMapWidget:OnGameDataChanged() end
+
 ---@param NormalizedPosition FVector2D
 function URSTMapWidget:AddMapPing(NormalizedPosition) end
-
 
 ---@class URSTMappingContextMetadata : UCommonMappingContextMetadata
 ---@field bCanRemapGamepad boolean
@@ -10436,11 +12314,12 @@ URSTMaterialParameterStackComponent = {}
 
 ---@param InMeshComponent UMeshComponent
 function URSTMaterialParameterStackComponent:SetMeshComponent(InMeshComponent) end
+
 ---@param Collection UMaterialParameterCollection
 function URSTMaterialParameterStackComponent:RemoveMaterialParameterCollection(Collection) end
+
 ---@param Collection UMaterialParameterCollection
 function URSTMaterialParameterStackComponent:PushMaterialParameterCollection(Collection) end
-
 
 ---@class URSTMathBlueprintLibrary : UKismetMathLibrary
 URSTMathBlueprintLibrary = {}
@@ -10448,13 +12327,14 @@ URSTMathBlueprintLibrary = {}
 ---@param Range FRSTInt32Range
 ---@return int32
 function URSTMathBlueprintLibrary:RandRange_Int(Range) end
+
 ---@param Range FRSTFloatRange
 ---@return float
 function URSTMathBlueprintLibrary:RandRange_Float(Range) end
+
 ---@param InRotation FRotator
 ---@return FRotator
 function URSTMathBlueprintLibrary:CreateDirectionRotator(InRotation) end
-
 
 ---@class URSTMeleeHitData : URSTHitData
 ---@field AdvanceData URSTAdvanceData
@@ -10483,6 +12363,12 @@ URSTMeleeWeaponSwingData = {}
 
 ---@class URSTMenuScreenWidget : URSTActivatableWidget
 URSTMenuScreenWidget = {}
+
+
+---@class URSTMeshHairIndexData : UAssetUserData
+---@field HairIndices TArray<int32>
+URSTMeshHairIndexData = {}
+
 
 
 ---@class URSTMetaDistortionDefinition : URSTMetaModifierDefinition
@@ -10544,7 +12430,6 @@ URSTMetaThreadDefinition = {}
 ---@return boolean
 function URSTMetaThreadDefinition:RequiresOwnership() end
 
-
 ---@class URSTMilestone : UDataAsset
 ---@field bRecordAchievement boolean
 ---@field AchievementName FName
@@ -10560,18 +12445,21 @@ URSTMilestone = {}
 
 ---@return boolean
 function URSTMilestone:ShouldDisplayProgress() end
+
 ---@return boolean
 function URSTMilestone:IsEnabled() end
+
 ---@param Profile URSTPlayerProfile
 ---@return int32
 function URSTMilestone:GetTarget(Profile) end
+
 ---@param Profile URSTPlayerProfile
 ---@return int32
 function URSTMilestone:GetProgress(Profile) end
+
 ---@param Profile URSTPlayerProfile
 ---@return FText
 function URSTMilestone:GetDisplayText(Profile) end
-
 
 ---@class URSTMilestoneOperationBase : UObject
 URSTMilestoneOperationBase = {}
@@ -10579,29 +12467,32 @@ URSTMilestoneOperationBase = {}
 ---@param Profile URSTPlayerProfile
 ---@return int32
 function URSTMilestoneOperationBase:GetTarget(Profile) end
+
 ---@param Profile URSTPlayerProfile
 ---@return int32
 function URSTMilestoneOperationBase:GetProgress(Profile) end
-
 
 ---@class URSTMilestoneOperationCustom : URSTMilestoneOperationBase
 URSTMilestoneOperationCustom = {}
 
 ---@return boolean
 function URSTMilestoneOperationCustom:BP_ShouldDisplayProgress() end
+
 ---@param Profile URSTPlayerProfile
 ---@return int32
 function URSTMilestoneOperationCustom:BP_GetTarget(Profile) end
+
 ---@param Profile URSTPlayerProfile
 ---@return int32
 function URSTMilestoneOperationCustom:BP_GetProgress(Profile) end
+
 ---@param Profile URSTPlayerProfile
 ---@return boolean
 function URSTMilestoneOperationCustom:BP_EvaluateMilestone(Profile) end
+
 ---@param Profile URSTPlayerProfile
 ---@return int32
 function URSTMilestoneOperationCustom:BP_DebugCompleteProgress(Profile) end
-
 
 ---@class URSTMilestoneOperationNested : URSTMilestoneOperationBase
 ---@field Operations TArray<URSTMilestoneOperationBase>
@@ -10619,7 +12510,6 @@ URSTMilestoneOperationRequireKey = {}
 
 ---@return FGameplayTagContainer
 function URSTMilestoneOperationRequireKey:GetRequiredKeys() end
-
 
 ---@class URSTMilestoneOperationStat : URSTMilestoneOperationBase
 ---@field StatEntries TArray<FRSTMilestoneStatEntry>
@@ -10639,35 +12529,52 @@ URSTMilestoneSubsystem = {}
 
 ---@param PlayerProfile URSTPlayerProfile
 function URSTMilestoneSubsystem:UpdateMilestones(PlayerProfile) end
+
 function URSTMilestoneSubsystem:RSTMilestoneThreadUnlockDelegate__DelegateSignature() end
+
 function URSTMilestoneSubsystem:RSTMilestoneSkinUnlockDelegate__DelegateSignature() end
+
 function URSTMilestoneSubsystem:RSTMilestoneHeroUnlockDelegate__DelegateSignature() end
+
 ---@param LocalPlayer ULocalPlayer
 function URSTMilestoneSubsystem:OnLocalPlayerAdded(LocalPlayer) end
+
 ---@return boolean
 function URSTMilestoneSubsystem:HasAnyNewlyUnlockedThreads() end
+
 ---@return boolean
 function URSTMilestoneSubsystem:HasAnyNewlyUnlockedSkins() end
+
 ---@return boolean
 function URSTMilestoneSubsystem:HasAnyNewlyUnlockedHeroes() end
+
 ---@return int32
 function URSTMilestoneSubsystem:GetNumNewlyUnlockedThreads() end
+
 ---@return int32
 function URSTMilestoneSubsystem:GetNumNewlyUnlockedSkins() end
+
 ---@return int32
 function URSTMilestoneSubsystem:GetNumNewlyUnlockedHeroes() end
+
 ---@return TArray<URSTMetaThreadDefinition>
 function URSTMilestoneSubsystem:GetNewlyUnlockedThreads() end
+
 ---@return FGameplayTagContainer
 function URSTMilestoneSubsystem:GetNewlyUnlockedSkins() end
+
 ---@return FGameplayTagContainer
 function URSTMilestoneSubsystem:GetNewlyUnlockedHeroes() end
+
 function URSTMilestoneSubsystem:ClearNewUnlockCache() end
+
+function URSTMilestoneSubsystem:ClearNewSkinUnlockCache() end
+
 ---@param SkinTag FGameplayTag
 function URSTMilestoneSubsystem:AcknowledgeNewSkinUnlock(SkinTag) end
+
 ---@param HeroTag FGameplayTag
 function URSTMilestoneSubsystem:AcknowledgeNewHeroUnlock(HeroTag) end
-
 
 ---@class URSTMinimapOverrideGameplayEffectComponent : UGameplayEffectComponent
 ---@field MinimapOverrideKey FString
@@ -10709,21 +12616,12 @@ URSTModal = {}
 
 
 
----@class URSTModal_KeyMapping : URSTModal
----@field KeySelector UInputKeySelector
----@field KeyMappedDynamicDelegate FRSTModal_KeyMappingKeyMappedDynamicDelegate
-URSTModal_KeyMapping = {}
-
-function URSTModal_KeyMapping:OnKeyMapped() end
-
-
 ---@class URSTModal_OneChoice : URSTModal
 ---@field BoundActionButton_ChoiceOne URSTBoundActionButton
 ---@field ChoiceOneDynamicDelegate FRSTModal_OneChoiceChoiceOneDynamicDelegate
 URSTModal_OneChoice = {}
 
 function URSTModal_OneChoice:OnChoiceClickedOne() end
-
 
 ---@class URSTModal_TextPrompt : URSTModal
 ---@field TextBox_Input UEditableTextBox
@@ -10735,11 +12633,13 @@ URSTModal_TextPrompt = {}
 
 ---@param bInIsPasswordField boolean
 function URSTModal_TextPrompt:SetIsPasswordField(bInIsPasswordField) end
+
 ---@param Text FText
 function URSTModal_TextPrompt:OnTextChanged(Text) end
-function URSTModal_TextPrompt:OnChoiceClickedTwo() end
-function URSTModal_TextPrompt:OnChoiceClickedOne() end
 
+function URSTModal_TextPrompt:OnChoiceClickedTwo() end
+
+function URSTModal_TextPrompt:OnChoiceClickedOne() end
 
 ---@class URSTModal_TwoChoices : URSTModal
 ---@field BoundActionButton_ChoiceOne URSTBoundActionButton
@@ -10749,8 +12649,8 @@ function URSTModal_TextPrompt:OnChoiceClickedOne() end
 URSTModal_TwoChoices = {}
 
 function URSTModal_TwoChoices:OnChoiceClickedTwo() end
-function URSTModal_TwoChoices:OnChoiceClickedOne() end
 
+function URSTModal_TwoChoices:OnChoiceClickedOne() end
 
 ---@class URSTModal_Video : URSTModal
 ---@field VideoDefinition URSTVideoDefinition
@@ -10759,8 +12659,8 @@ function URSTModal_TwoChoices:OnChoiceClickedOne() end
 URSTModal_Video = {}
 
 function URSTModal_Video:OnModalComplete() end
-function URSTModal_Video:BP_OnMediaPlayerAssigned() end
 
+function URSTModal_Video:BP_OnMediaPlayerAssigned() end
 
 ---@class URSTModifiableSubobjectComponent : UActorComponent
 ---@field Identifier FGameplayTag
@@ -10769,13 +12669,15 @@ URSTModifiableSubobjectComponent = {}
 
 ---@param Ability UGameplayAbility
 function URSTModifiableSubobjectComponent:OnAbilityRemoved(Ability) end
+
 ---@param Ability UGameplayAbility
 function URSTModifiableSubobjectComponent:OnAbilityInstanceRemoved(Ability) end
+
 ---@param Ability UGameplayAbility
 function URSTModifiableSubobjectComponent:OnAbilityInstanceAdded(Ability) end
+
 ---@param Ability UGameplayAbility
 function URSTModifiableSubobjectComponent:OnAbilityAdded(Ability) end
-
 
 ---@class URSTModifierBase : UObject
 ---@field bIsTemporary boolean
@@ -10794,18 +12696,20 @@ URSTModifierBase = {}
 ---@param InContextObject UObject
 ---@return boolean
 function URSTModifierBase:BP_RemoveModifier(Target, InContextObject) end
+
 ---@param OwningComponent URSTModifierComponent
 ---@param TargetActors TArray<AActor>
 ---@return TArray<UObject>
 function URSTModifierBase:BP_GetTargets(OwningComponent, TargetActors) end
+
 ---@param Target UObject
 ---@return boolean
 function URSTModifierBase:BP_ExecuteModifier(Target) end
+
 ---@param Target UObject
 ---@param OutContextObject UObject
 ---@return boolean
 function URSTModifierBase:BP_ApplyModifier(Target, OutContextObject) end
-
 
 ---@class URSTModifierComponent : UActorComponent
 ---@field TargetType ERSTModifierTargetType
@@ -10817,25 +12721,33 @@ function URSTModifierBase:BP_ApplyModifier(Target, OutContextObject) end
 URSTModifierComponent = {}
 
 function URSTModifierComponent:OnRep_ModifierInstances() end
+
 ---@param Spec FRSTModifierSpec
 function URSTModifierComponent:OnPreviewModifierRemoved(Spec) end
+
 ---@param Spec FRSTModifierSpec
 function URSTModifierComponent:OnPreviewModifierAdded(Spec) end
+
 ---@param Spec FRSTModifierSpec
 function URSTModifierComponent:OnModifierRemoved(Spec) end
+
 ---@param Spec FRSTModifierSpec
 function URSTModifierComponent:OnModifierExecuted(Spec) end
+
 ---@param Spec FRSTModifierSpec
 function URSTModifierComponent:OnModifierAdded(Spec) end
+
 ---@param Ability UGameplayAbility
 function URSTModifierComponent:OnAbilityRemoved(Ability) end
+
 ---@param Ability UGameplayAbility
 function URSTModifierComponent:OnAbilityInstanceRemoved(Ability) end
+
 ---@param Ability UGameplayAbility
 function URSTModifierComponent:OnAbilityInstanceAdded(Ability) end
+
 ---@param Ability UGameplayAbility
 function URSTModifierComponent:OnAbilityAdded(Ability) end
-
 
 ---@class URSTModifierSubsystem : UGameInstanceSubsystem
 ---@field AppliedModifiers TMap<ERSTModifierTargetType, FRSTModifierSpecArray>
@@ -10844,39 +12756,48 @@ URSTModifierSubsystem = {}
 ---@param PlayerId FUniqueNetIdRepl
 ---@param Upgrade URSTUpgradeDefinition
 function URSTModifierSubsystem:OnUpgradeRemoved(PlayerId, Upgrade) end
+
 ---@param PlayerId FUniqueNetIdRepl
 ---@param Upgrade URSTUpgradeDefinition
 function URSTModifierSubsystem:OnUpgradeAdded(PlayerId, Upgrade) end
+
 ---@param PlayerId FUniqueNetIdRepl
 ---@param Thread URSTMetaThreadDefinition
 ---@param bFromQuicksave boolean
 function URSTModifierSubsystem:OnThreadRemoved(PlayerId, Thread, bFromQuicksave) end
+
 ---@param PlayerId FUniqueNetIdRepl
 ---@param Thread URSTMetaThreadDefinition
 ---@param bFromQuicksave boolean
 function URSTModifierSubsystem:OnThreadAdded(PlayerId, Thread, bFromQuicksave) end
+
 ---@param TeamThread URSTMetaTeamThreadDefinition
 ---@param bFromQuicksave boolean
 function URSTModifierSubsystem:OnTeamThreadRemoved(TeamThread, bFromQuicksave) end
+
 ---@param TeamThread URSTMetaTeamThreadDefinition
 ---@param bFromQuicksave boolean
 function URSTModifierSubsystem:OnTeamThreadAdded(TeamThread, bFromQuicksave) end
+
 ---@param PlayerId FUniqueNetIdRepl
 ---@param Potion URSTPotionDefinition
 ---@param bFromQuicksave boolean
 function URSTModifierSubsystem:OnPotionRemoved(PlayerId, Potion, bFromQuicksave) end
+
 ---@param PlayerId FUniqueNetIdRepl
 ---@param Potion URSTPotionDefinition
 ---@param bFromQuicksave boolean
 function URSTModifierSubsystem:OnPotionAdded(PlayerId, Potion, bFromQuicksave) end
+
 function URSTModifierSubsystem:OnGameReset() end
+
 ---@param Distortion URSTMetaDistortionDefinition
 ---@param bFromQuicksave boolean
 function URSTModifierSubsystem:OnDistortionRemoved(Distortion, bFromQuicksave) end
+
 ---@param Distortion URSTMetaDistortionDefinition
 ---@param bFromQuicksave boolean
 function URSTModifierSubsystem:OnDistortionAdded(Distortion, bFromQuicksave) end
-
 
 ---@class URSTModifierSubtargetMethod : UObject
 URSTModifierSubtargetMethod = {}
@@ -10884,11 +12805,11 @@ URSTModifierSubtargetMethod = {}
 ---@param PotentialTarget UObject
 ---@return boolean
 function URSTModifierSubtargetMethod:BP_ShouldTarget(PotentialTarget) end
+
 ---@param OwningComponent URSTModifierComponent
 ---@param TargetObjects TArray<UObject>
 ---@return TArray<UObject>
 function URSTModifierSubtargetMethod:BP_GetTargets(OwningComponent, TargetObjects) end
-
 
 ---@class URSTModifierSubtargetMethod_Ability : URSTModifierSubtargetMethod
 ---@field AbilityTagQuery FGameplayTagQuery
@@ -10914,7 +12835,6 @@ URSTModifierTargetFilter = {}
 ---@return boolean
 function URSTModifierTargetFilter:BP_ShouldApplyModifier(OwningComponent, Spec) end
 
-
 ---@class URSTModifierTargetFilter_HasTags : URSTModifierTargetFilter
 ---@field Tags FGameplayTagContainer
 ---@field bRequireAll boolean
@@ -10936,6 +12856,16 @@ URSTModifier_ApplyGameplayEffect = {}
 
 
 
+---@class URSTModifier_SuperTrapVisuals : URSTModifierBase
+---@field RequiredTag FGameplayTag
+URSTModifier_SuperTrapVisuals = {}
+
+
+
+---@class URSTModifier_SuperTrapVisuals_Context : UObject
+URSTModifier_SuperTrapVisuals_Context = {}
+
+
 ---@class URSTMovementAttributeSet : URSTAttributeSet
 ---@field MovementSpeed FGameplayAttributeData
 ---@field GravityScale FGameplayAttributeData
@@ -10946,15 +12876,18 @@ URSTMovementAttributeSet = {}
 
 ---@param OldValue FGameplayAttributeData
 function URSTMovementAttributeSet:OnRep_TimeDilation(OldValue) end
+
 ---@param OldValue FGameplayAttributeData
 function URSTMovementAttributeSet:OnRep_MovementSpeed(OldValue) end
+
 ---@param OldValue FGameplayAttributeData
 function URSTMovementAttributeSet:OnRep_GravityScale(OldValue) end
+
 ---@param OldValue FGameplayAttributeData
 function URSTMovementAttributeSet:OnRep_FallingLateralFriction(OldValue) end
+
 ---@param OldValue FGameplayAttributeData
 function URSTMovementAttributeSet:OnRep_AirControl(OldValue) end
-
 
 ---@class URSTMusicWorldSubsystem : UWorldSubsystem
 URSTMusicWorldSubsystem = {}
@@ -10966,7 +12899,6 @@ URSTNameplateManagerComponent = {}
 
 function URSTNameplateManagerComponent:DestroyForProxies() end
 
-
 ---@class URSTNameplateSourceComponent : UActorComponent
 ---@field NameplateIndicatorClass TSoftClassPtr<UUserWidget>
 ---@field bClampToScreen boolean
@@ -10976,7 +12908,6 @@ URSTNameplateSourceComponent = {}
 ---@param Actor AActor
 ---@return URSTNameplateSourceComponent
 function URSTNameplateSourceComponent:FindNameplateSourceComponent(Actor) end
-
 
 ---@class URSTObstructionComponent : UNavPowerObstructionComponent
 URSTObstructionComponent = {}
@@ -10990,35 +12921,42 @@ URSTOnlineBlueprintLibrary = {}
 ---@param Player APlayerController
 ---@param Privilege ECommonUserPrivilege
 ---@param bOutSuccess boolean
-function URSTOnlineBlueprintLibrary:ResolveUserPrivilegeWithUI(WorldContextObject, LatentInfo, Player, Privilege, bOutSuccess) end
+function URSTOnlineBlueprintLibrary:ResolveUserPrivilegeWithUI(WorldContextObject, LatentInfo, Player, Privilege,
+                                                               bOutSuccess) end
+
 ---@return boolean
 function URSTOnlineBlueprintLibrary:IsNetworkOnline() end
+
 ---@param WorldContextObject UObject
 ---@param LatentInfo FLatentActionInfo
 ---@param Player APlayerController
 ---@param Privilege ECommonUserPrivilege
 ---@param OutResult ECommonUserPrivilegeResult
-function URSTOnlineBlueprintLibrary:GetUserPrivilegeWithResolveUI(WorldContextObject, LatentInfo, Player, Privilege, OutResult) end
+function URSTOnlineBlueprintLibrary:GetUserPrivilegeWithResolveUI(WorldContextObject, LatentInfo, Player, Privilege,
+                                                                  OutResult) end
+
 ---@param WorldContextObject UObject
 ---@param LatentInfo FLatentActionInfo
 ---@param Player APlayerController
 ---@param Privilege ECommonUserPrivilege
 ---@param OutResult ECommonUserPrivilegeResult
 function URSTOnlineBlueprintLibrary:GetUserPrivilege(WorldContextObject, LatentInfo, Player, Privilege, OutResult) end
+
 ---@return boolean
 function URSTOnlineBlueprintLibrary:CanPlatformLinkAccount() end
-
 
 ---@class URSTOnlineSession : UOnlineSession
 URSTOnlineSession = {}
 
 function URSTOnlineSession:OnRejoinStatusUpdate() end
+
 ---@param Result FOnlineResultInformation
 function URSTOnlineSession:OnJoinSessionComplete(Result) end
+
 function URSTOnlineSession:OnDestroySession() end
+
 ---@param Result FOnlineResultInformation
 function URSTOnlineSession:OnCreateSessionComplete(Result) end
-
 
 ---@class URSTOnslaughtComponentCrystalDefense : URSTOnslaughtComponentRiftDefense
 ---@field HealthPerRiftPoint float
@@ -11032,14 +12970,15 @@ URSTOnslaughtComponentCrystalDefense = {}
 ---@param bHasSpec boolean
 ---@param Spec FGameplayEffectSpec
 function URSTOnslaughtComponentCrystalDefense:OnRiftHealingTaken(HealthComp, Healing, Causer, HitResult, bHasSpec, Spec) end
+
 ---@param HealthComp URSTHealthComponent
 ---@param Damage float
 ---@param DamageCauser AActor
 ---@param HitResult FHitResult
 ---@param bHasSpec boolean
 ---@param Spec FGameplayEffectSpec
-function URSTOnslaughtComponentCrystalDefense:OnRiftDamageTaken(HealthComp, Damage, DamageCauser, HitResult, bHasSpec, Spec) end
-
+function URSTOnslaughtComponentCrystalDefense:OnRiftDamageTaken(HealthComp, Damage, DamageCauser, HitResult, bHasSpec,
+                                                                Spec) end
 
 ---@class URSTOnslaughtComponentRiftDefense : URSTOnslaughtCoordinatorComponent
 ---@field RiftPoints int32
@@ -11048,11 +12987,11 @@ URSTOnslaughtComponentRiftDefense = {}
 
 ---@param Callback FRegisterPreEnemyEnterRiftCallback
 function URSTOnslaughtComponentRiftDefense:RegisterPreEnemyEnterRift(Callback) end
+
 ---@param Rift ARSTRift
 ---@param Actor AActor
 ---@param RiftLocation FVector
 function URSTOnslaughtComponentRiftDefense:OnRiftEntered(Rift, Actor, RiftLocation) end
-
 
 ---@class URSTOnslaughtCoordinatorComponent : UActorComponent
 ---@field PropertyMappings FRSTInheritableGameplayTagPropertyMap
@@ -11060,8 +12999,22 @@ URSTOnslaughtCoordinatorComponent = {}
 
 ---@param GameState ARSTGameStateBase
 function URSTOnslaughtCoordinatorComponent:OnProcessInitialGameState(GameState) end
+
 function URSTOnslaughtCoordinatorComponent:OnInitializeRifts() end
 
+---@class URSTOverlayMaterialStackComponent : UActorComponent
+---@field OverlayMaterialStack TArray<UMaterialInterface>
+---@field MeshComponent UMeshComponent
+URSTOverlayMaterialStackComponent = {}
+
+---@param InMeshComponent UMeshComponent
+function URSTOverlayMaterialStackComponent:SetMeshComponent(InMeshComponent) end
+
+---@param OverlayMaterial UMaterialInterface
+function URSTOverlayMaterialStackComponent:RemoveOverlayMaterial(OverlayMaterial) end
+
+---@param OverlayMaterial UMaterialInterface
+function URSTOverlayMaterialStackComponent:PushOverlayMaterial(OverlayMaterial) end
 
 ---@class URSTPatchNotesSubsystem : UGameInstanceSubsystem
 ---@field OnPatchNotesVersionReceived FRSTPatchNotesSubsystemOnPatchNotesVersionReceived
@@ -11072,17 +13025,19 @@ URSTPatchNotesSubsystem = {}
 
 ---@param bSuccess boolean
 function URSTPatchNotesSubsystem:RSTPatchNotesVersionReceived__DelegateSignature(bSuccess) end
+
 ---@param bSuccess boolean
 function URSTPatchNotesSubsystem:RSTPatchNotesReceived__DelegateSignature(bSuccess) end
+
 ---@param Index int32
 function URSTPatchNotesSubsystem:RequestPatchNotes(Index) end
-function URSTPatchNotesSubsystem:CheckPatchNotesVersion() end
 
+function URSTPatchNotesSubsystem:CheckPatchNotesVersion() end
 
 ---@class URSTPawnDefinition : UPrimaryDataAsset
 ---@field PawnTag FGameplayTag
 ---@field PawnClass TSoftClassPtr<APawn>
----@field AbilitySets TArray<URSTAbilitySet>
+---@field AbilitySets TArray<TSoftObjectPtr<URSTAbilitySet>>
 ---@field TagRelationshipMapping TSoftObjectPtr<URSTAbilityTagRelationshipMapping>
 ---@field InputConfig TSoftObjectPtr<URSTInputConfig>
 ---@field DefaultCameraMode TSoftClassPtr<URSTCameraMode>
@@ -11159,6 +13114,7 @@ URSTPawnDefinitionEnemy = {}
 ---@field AdditionalHUDElements TArray<FRSTPawnDefinitionAdditionalHUDElement>
 ---@field ReviveMontages TArray<TSoftObjectPtr<UAnimMontage>>
 ---@field IntroSpawnMontages TArray<TSoftObjectPtr<UAnimMontage>>
+---@field PotionDrinkMontages TArray<TSoftObjectPtr<UAnimMontage>>
 ---@field bEnabled boolean
 ---@field UnlockMilestone FGameplayTag
 ---@field bRequiresEntitlement boolean
@@ -11167,10 +13123,10 @@ URSTPawnDefinitionHero = {}
 ---@param Tag FGameplayTag
 ---@return boolean
 function URSTPawnDefinitionHero:IsHeroEnabled(Tag) end
+
 ---@param Tag FGameplayTag
 ---@return boolean
 function URSTPawnDefinitionHero:IsEntitlementRequired(Tag) end
-
 
 ---@class URSTPawnExtensionComponent : UPawnComponent
 ---@field PawnDefinition URSTPawnDefinition
@@ -11178,14 +13134,16 @@ function URSTPawnDefinitionHero:IsEntitlementRequired(Tag) end
 URSTPawnExtensionComponent = {}
 
 function URSTPawnExtensionComponent:OnRep_PawnDefinition() end
+
 ---@return boolean
 function URSTPawnExtensionComponent:IsPawnReadyToInitialize() end
+
 ---@return URSTAbilitySystemComponent
 function URSTPawnExtensionComponent:GetRSTAbilitySystemComponent() end
+
 ---@param Actor AActor
 ---@return URSTPawnExtensionComponent
 function URSTPawnExtensionComponent:FindPawnExtensionComponent(Actor) end
-
 
 ---@class URSTPawnUserFacingData : UPrimaryDataAsset
 ---@field PawnTag FGameplayTag
@@ -11208,10 +13166,10 @@ URSTPawnUserFacingData = {}
 ---@param UserFacingArray TArray<URSTPawnUserFacingData>
 ---@param OutUserFacingArray TArray<URSTPawnUserFacingData>
 function URSTPawnUserFacingData:SortUserFacingArray(UserFacingArray, OutUserFacingArray) end
+
 ---@param InTags TArray<FGameplayTag>
 ---@param OutTags TArray<FGameplayTag>
 function URSTPawnUserFacingData:SortHeroTagArray(InTags, OutTags) end
-
 
 ---@class URSTPerformanceSettings : UDeveloperSettingsBackedByCVars
 ---@field PerPlatformSettings FPerPlatformSettings
@@ -11246,9 +13204,9 @@ URSTPlatformEmulationSettings = {}
 
 ---@return TArray<FName>
 function URSTPlatformEmulationSettings:GetKnownPlatformIds() end
+
 ---@return TArray<FName>
 function URSTPlatformEmulationSettings:GetKnownDeviceProfiles() end
-
 
 ---@class URSTPlatformSharedIconSettings : UPlatformSettings
 ---@field NativePlatformIcon TSoftObjectPtr<UTexture2D>
@@ -11315,49 +13273,59 @@ URSTPlayerChallengeRunDefinition = {}
 URSTPlayerCommunicationSubsystem = {}
 
 function URSTPlayerCommunicationSubsystem:RSTLookedAtPingChangedDelegate__DelegateSignature() end
+
 ---@param Instigator ARSTPlayerState
 ---@param PingTrackerId int32
 ---@param bNotifyRemote boolean
 function URSTPlayerCommunicationSubsystem:RemovePing(Instigator, PingTrackerId, bNotifyRemote) end
+
 ---@param PingBeingLookedAt FRSTPingTrackerData
 ---@return boolean
 function URSTPlayerCommunicationSubsystem:IsLocalPlayerPing(PingBeingLookedAt) end
+
 ---@param Indicator URSTIndicatorDescriptor
 ---@param PingTrackerData FRSTPingTrackerData
 ---@return boolean
 function URSTPlayerCommunicationSubsystem:GetPingTrackerFromIndicator(Indicator, PingTrackerData) end
+
 ---@param PingTrackerData FRSTPingTrackerData
 ---@return FLinearColor
 function URSTPlayerCommunicationSubsystem:GetPingLinearColorFromTracker(PingTrackerData) end
+
 ---@param PlayerState ARSTPlayerState
 ---@return FLinearColor
 function URSTPlayerCommunicationSubsystem:GetPingLinearColorFromPlayerState(PlayerState) end
+
 ---@param PlayerIndex int32
 ---@return FLinearColor
 function URSTPlayerCommunicationSubsystem:GetPingLinearColorFromPlayerIndex(PlayerIndex) end
+
 ---@param CurrentPing FRSTPingTrackerData
 ---@return boolean
 function URSTPlayerCommunicationSubsystem:GetLookedAtPing(CurrentPing) end
+
 ---@param CommunicationOption URSTCommunicationDefinition
 ---@param AttachedToActor AActor
 ---@param PingPosition FVector
 ---@param OutPingId int32
 ---@return boolean
-function URSTPlayerCommunicationSubsystem:AddSystemCommunication(CommunicationOption, AttachedToActor, PingPosition, OutPingId) end
-
+function URSTPlayerCommunicationSubsystem:AddSystemCommunication(CommunicationOption, AttachedToActor, PingPosition,
+                                                                 OutPingId) end
 
 ---@class URSTPlayerModifierComponent : URSTModifierComponent
 URSTPlayerModifierComponent = {}
 
 function URSTPlayerModifierComponent:OnUniqueNetIdSet() end
+
 function URSTPlayerModifierComponent:OnSeamlessTravelHandled() end
+
 ---@param PlayerState APlayerState
 ---@param NewPawn APawn
 ---@param OldPawn APawn
 function URSTPlayerModifierComponent:OnPawnSet(PlayerState, NewPawn, OldPawn) end
+
 ---@param RSTPlayerState ARSTPlayerState
 function URSTPlayerModifierComponent:OnPawnDefinitionChanged(RSTPlayerState) end
-
 
 ---@class URSTPlayerNameSubsystem : UWorldSubsystem
 URSTPlayerNameSubsystem = {}
@@ -11370,16 +13338,20 @@ URSTPlayerNameSubsystem = {}
 URSTPlayerNotificationSubsystem = {}
 
 function URSTPlayerNotificationSubsystem:RSTNoMessagesDelegate__DelegateSignature() end
+
 function URSTPlayerNotificationSubsystem:RemoveLoadingScreenSuspend() end
+
 function URSTPlayerNotificationSubsystem:PopMessage() end
+
 ---@param PlayerNotificationData FRSTPlayerNotificationData
 function URSTPlayerNotificationSubsystem:EnqueueMessage(PlayerNotificationData) end
+
 ---@param LocalPlayer ULocalPlayer
 function URSTPlayerNotificationSubsystem:DisplayTopMessage(LocalPlayer) end
+
 ---@param LocalPlayer ULocalPlayer
 ---@param Message FRSTPlayerNotificationUserFacingData
 function URSTPlayerNotificationSubsystem:BP_DisplayTopMessage(LocalPlayer, Message) end
-
 
 ---@class URSTPlayerProfile : ULocalPlayerSaveGame
 ---@field PlayerNetIdOnLoad FUniqueNetIdRepl
@@ -11392,6 +13364,7 @@ function URSTPlayerNotificationSubsystem:BP_DisplayTopMessage(LocalPlayer, Messa
 ---@field SavedProjectVersion FString
 ---@field Character FGameplayTag
 ---@field SkinSelections TMap<FGameplayTag, FGameplayTag>
+---@field CurrentSkinSelections TMap<FGameplayTag, FRSTSkinSlots>
 ---@field Upgrades TArray<URSTUpgradeDefinition>
 ---@field Threads TArray<URSTMetaThreadDefinition>
 ---@field CachedNewUnlocks TArray<URSTMetaThreadDefinition>
@@ -11422,168 +13395,236 @@ URSTPlayerProfile = {}
 
 ---@param TagContainer FGameplayTagContainer
 function URSTPlayerProfile:UnlockSkins(TagContainer) end
+
 ---@param Tag FGameplayTag
 function URSTPlayerProfile:UnlockSkin(Tag) end
+
 ---@param TagContainer FGameplayTagContainer
 function URSTPlayerProfile:UnlockHeroes(TagContainer) end
+
 ---@param Tag FGameplayTag
 function URSTPlayerProfile:UnlockHero(Tag) end
+
 ---@param amount int32
 ---@return boolean
 function URSTPlayerProfile:SpendSkulls(amount) end
+
 ---@param amount int32
 ---@return boolean
 function URSTPlayerProfile:SpendGoldSkulls(amount) end
+
 ---@param SaveSlot int32
 ---@param InSavedRun FRSTSavedRun
 function URSTPlayerProfile:SetSoloQuicksave(SaveSlot, InSavedRun) end
+
 ---@param InCharacter FGameplayTag
+---@param InSlot FGameplayTag
 ---@param InSkin FGameplayTag
-function URSTPlayerProfile:SetSkin(InCharacter, InSkin) end
+function URSTPlayerProfile:SetSkin(InCharacter, InSlot, InSkin) end
+
 ---@param bInCanBeRestored boolean
 function URSTPlayerProfile:SetSavedRunCanBeRestored(bInCanBeRestored) end
+
 ---@param InPotion URSTPotionDefinition
 function URSTPlayerProfile:SetPendingPotion(InPotion) end
+
 ---@param InPassword FString
 function URSTPlayerProfile:SetPassword(InPassword) end
+
 ---@param SaveSlot int32
 ---@param InSavedRun FRSTSavedRun
 function URSTPlayerProfile:SetMultiplayerQuicksave(SaveSlot, InSavedRun) end
+
 ---@param InHotbarItems TArray<ARSTInventoryItemInstance>
 function URSTPlayerProfile:SetHotbarItems(InHotbarItems) end
+
 ---@param InDifficultyScaling int32
 function URSTPlayerProfile:SetDifficultyScaling(InDifficultyScaling) end
+
 ---@param InCharacter FGameplayTag
 function URSTPlayerProfile:SetCharacter(InCharacter) end
+
 ---@param WorldContextObject UObject
 ---@param SaveSlot int32
 function URSTPlayerProfile:SaveSoloQuicksave(WorldContextObject, SaveSlot) end
+
 ---@param WorldContextObject UObject
 ---@param SaveSlot int32
 function URSTPlayerProfile:SaveMultiplayerQuicksave(WorldContextObject, SaveSlot) end
+
 ---@param WorldContextObject UObject
 function URSTPlayerProfile:SaveCurrentRun(WorldContextObject) end
+
 ---@param KeyToRevoke FGameplayTag
 ---@return boolean
 function URSTPlayerProfile:RevokeKey(KeyToRevoke) end
+
 function URSTPlayerProfile:ResetKeys() end
+
 ---@param TagContainer FGameplayTagContainer
 function URSTPlayerProfile:ProcessSkinUnlocks(TagContainer) end
+
 ---@param TagContainer FGameplayTagContainer
 function URSTPlayerProfile:ProcessHeroUnlocks(TagContainer) end
+
 ---@param WorldContextObject UObject
 ---@param SaveSlot int32
 function URSTPlayerProfile:LoadSoloQuicksave(WorldContextObject, SaveSlot) end
+
 ---@param WorldContextObject UObject
 function URSTPlayerProfile:LoadSavedRun(WorldContextObject) end
+
 ---@param WorldContextObject UObject
 ---@param SaveSlot int32
 function URSTPlayerProfile:LoadMultiplayerQuicksave(WorldContextObject, SaveSlot) end
+
 ---@param Tag FGameplayTag
 ---@return boolean
 function URSTPlayerProfile:IsThreadOwnedByTag(Tag) end
+
 ---@param Thread URSTMetaThreadDefinition
 ---@return boolean
 function URSTPlayerProfile:IsThreadOwned(Thread) end
+
 ---@param Tag FGameplayTag
 ---@return boolean
 function URSTPlayerProfile:IsSkinUnlocked(Tag) end
+
 ---@return boolean
 function URSTPlayerProfile:IsQuicksaveAllowed() end
+
 ---@param OutError FText
 ---@return boolean
 function URSTPlayerProfile:IsPlayerProfileValid(OutError) end
+
 ---@param Tag FGameplayTag
 ---@return boolean
 function URSTPlayerProfile:IsInventoryItemOwnedByTag(Tag) end
+
 ---@param InventoryItem URSTInventoryItemDefinition
 ---@return boolean
 function URSTPlayerProfile:IsInventoryItemOwned(InventoryItem) end
+
 ---@param Tag FGameplayTag
 ---@return boolean
 function URSTPlayerProfile:IsHeroUnlocked(Tag) end
+
+function URSTPlayerProfile:InvalidateCurrentRestoringQuicksave() end
+
 ---@param UpgradeTag FGameplayTag
 ---@return boolean
 function URSTPlayerProfile:HasUpgrade(UpgradeTag) end
+
 ---@param KeyToCheck FGameplayTag
 ---@return boolean
 function URSTPlayerProfile:HasGrantedKey(KeyToCheck) end
+
 ---@param amount int32
 ---@return boolean
 function URSTPlayerProfile:GrantSkulls(amount) end
+
 ---@param KeysToGrant FGameplayTagContainer
 ---@param OutNewGrants FGameplayTagContainer
 function URSTPlayerProfile:GrantKeys_RecordNewGrants(KeysToGrant, OutNewGrants) end
+
 ---@param KeysToGrant FGameplayTagContainer
 function URSTPlayerProfile:GrantKeys(KeysToGrant) end
+
 ---@param KeyToGrant FGameplayTag
 ---@return boolean
 function URSTPlayerProfile:GrantKey(KeyToGrant) end
+
 ---@param amount int32
 ---@return boolean
 function URSTPlayerProfile:GrantGoldSkulls(amount) end
+
 ---@return FGameplayTagContainer
 function URSTPlayerProfile:GetUnlockedSkins() end
+
 ---@return TArray<FGameplayTag>
 function URSTPlayerProfile:GetUnlockedSkinArray() end
+
 ---@return FGameplayTagContainer
 function URSTPlayerProfile:GetUnlockedHeroes() end
+
 ---@return TArray<FGameplayTag>
 function URSTPlayerProfile:GetUnlockedHeroArray() end
+
 ---@param SaveSlot int32
 ---@return FRSTSavedRun
 function URSTPlayerProfile:GetSoloQuicksave(SaveSlot) end
+
 ---@return int32
 function URSTPlayerProfile:GetSkulls() end
----@return TMap<FGameplayTag, FGameplayTag>
+
+---@return TMap<FGameplayTag, FRSTSkinSlots>
 function URSTPlayerProfile:GetSkinSelections() end
+
 ---@param InCharacter FGameplayTag
----@return FGameplayTag
-function URSTPlayerProfile:GetSkin(InCharacter) end
+---@return FRSTSkinSlots
+function URSTPlayerProfile:GetSkins(InCharacter) end
+
 ---@return FRSTSavedRun
 function URSTPlayerProfile:GetSavedRun() end
+
 ---@return URSTPotionDefinition
 function URSTPlayerProfile:GetPendingPotion() end
+
 ---@return int32
 function URSTPlayerProfile:GetNumUpgrades() end
+
 ---@return int32
 function URSTPlayerProfile:GetNumThreads() end
+
 ---@param SaveSlot int32
 ---@return FRSTSavedRun
 function URSTPlayerProfile:GetMultiplayerQuicksave(SaveSlot) end
+
 ---@return FGameplayTagContainer
 function URSTPlayerProfile:GetGrantedKeys() end
+
 ---@return int32
 function URSTPlayerProfile:GetGoldSkulls() end
+
 ---@return int32
 function URSTPlayerProfile:GetFirstEmptyMultiplayerQuicksaveSlot() end
+
 ---@return int32
 function URSTPlayerProfile:GetDifficultyScaling() end
+
 ---@return FRSTSavedRun
 function URSTPlayerProfile:GetCurrentRestoringQuicksave() end
+
 ---@return FGameplayTag
 function URSTPlayerProfile:GetCharacter() end
+
 function URSTPlayerProfile:ConsumePendingPotion() end
+
 function URSTPlayerProfile:ClearSavedRun() end
+
 ---@param InThread URSTMetaThreadDefinition
 ---@return boolean
 function URSTPlayerProfile:CanUnlock(InThread) end
+
 ---@return boolean
 function URSTPlayerProfile:CanResumeSavedRun() end
+
 ---@param InThreads TArray<URSTMetaThreadDefinition>
 ---@param OutGrantedThreads TArray<URSTMetaThreadDefinition>
 ---@return boolean
 function URSTPlayerProfile:AddThreads(InThreads, OutGrantedThreads) end
+
 ---@param InThread URSTMetaThreadDefinition
 ---@return boolean
 function URSTPlayerProfile:AddThread(InThread) end
+
 ---@param Tag FGameplayTag
 ---@param Value int32
 ---@param Subtag FGameplayTag
 function URSTPlayerProfile:AddProfileStat(Tag, Value, Subtag) end
+
 ---@param InventoryItem URSTInventoryItemDefinition
 function URSTPlayerProfile:AddInventoryItem(InventoryItem) end
-
 
 ---@class URSTPlayerProfileBlueprintLibrary : UBlueprintFunctionLibrary
 URSTPlayerProfileBlueprintLibrary = {}
@@ -11592,61 +13633,76 @@ URSTPlayerProfileBlueprintLibrary = {}
 ---@param SlotIndex int32
 ---@param ProfileName FString
 function URSTPlayerProfileBlueprintLibrary:RenamePlayerProfile(Player, SlotIndex, ProfileName) end
+
 ---@param Player APlayerController
 ---@param SlotIndex int32
 ---@return boolean
 function URSTPlayerProfileBlueprintLibrary:LoadPlayerProfileBackup(Player, SlotIndex) end
+
 ---@param Player APlayerController
 ---@return boolean
 function URSTPlayerProfileBlueprintLibrary:IsLoadingPlayerProfile(Player) end
+
 ---@param Player APlayerController
 ---@param OutError FText
 ---@return boolean
 function URSTPlayerProfileBlueprintLibrary:IsCurrentPlayerProfileValid(Player, OutError) end
+
 ---@param Player APlayerController
 ---@param SlotIndex int32
 ---@return double
 function URSTPlayerProfileBlueprintLibrary:GetPlayerProfilePlayTime(Player, SlotIndex) end
+
 ---@param Player APlayerController
 ---@param SlotIndex int32
 ---@return FString
 function URSTPlayerProfileBlueprintLibrary:GetPlayerProfileName(Player, SlotIndex) end
+
 ---@param Player APlayerController
 ---@return URSTPlayerProfile
 function URSTPlayerProfileBlueprintLibrary:GetPlayerProfile(Player) end
+
 ---@param Player APlayerController
 ---@return int32
 function URSTPlayerProfileBlueprintLibrary:GetCurrentPlayerProfileSlotIndex(Player) end
+
 ---@param WorldContextObject UObject
 ---@param LatentInfo FLatentActionInfo
 ---@param Player APlayerController
 ---@param OutPlayerProfiles TArray<URSTPlayerProfileInfo>
 ---@param OutSuccess boolean
-function URSTPlayerProfileBlueprintLibrary:GetAllPlayerProfiles(WorldContextObject, LatentInfo, Player, OutPlayerProfiles, OutSuccess) end
+function URSTPlayerProfileBlueprintLibrary:GetAllPlayerProfiles(WorldContextObject, LatentInfo, Player, OutPlayerProfiles,
+                                                                OutSuccess) end
+
 ---@param Player APlayerController
 ---@param SlotIndex int32
 ---@return boolean
 function URSTPlayerProfileBlueprintLibrary:DoesPlayerProfileBackupExist(Player, SlotIndex) end
+
 ---@param WorldContextObject UObject
 ---@param LatentInfo FLatentActionInfo
 ---@param Player APlayerController
 ---@param SlotIndex int32
 ---@param OutSuccess boolean
-function URSTPlayerProfileBlueprintLibrary:DeletePlayerProfile(WorldContextObject, LatentInfo, Player, SlotIndex, OutSuccess) end
+function URSTPlayerProfileBlueprintLibrary:DeletePlayerProfile(WorldContextObject, LatentInfo, Player, SlotIndex,
+                                                               OutSuccess) end
+
 ---@param WorldContextObject UObject
 ---@param LatentInfo FLatentActionInfo
 ---@param Player APlayerController
 ---@param ProfileName FString
 ---@param OutSuccess boolean
-function URSTPlayerProfileBlueprintLibrary:CreatePlayerProfile(WorldContextObject, LatentInfo, Player, ProfileName, OutSuccess) end
+function URSTPlayerProfileBlueprintLibrary:CreatePlayerProfile(WorldContextObject, LatentInfo, Player, ProfileName,
+                                                               OutSuccess) end
+
 ---@param WorldContextObject UObject
 ---@param LatentInfo FLatentActionInfo
 ---@param Player APlayerController
 ---@param SlotIndex int32
 ---@param OutSuccess boolean
 ---@param OutErrorText FText
-function URSTPlayerProfileBlueprintLibrary:ChangePlayerProfile(WorldContextObject, LatentInfo, Player, SlotIndex, OutSuccess, OutErrorText) end
-
+function URSTPlayerProfileBlueprintLibrary:ChangePlayerProfile(WorldContextObject, LatentInfo, Player, SlotIndex,
+                                                               OutSuccess, OutErrorText) end
 
 ---@class URSTPlayerProfileInfo : UObject
 ---@field SlotIndex int32
@@ -11667,17 +13723,21 @@ URSTPlayerProfileInfo = {}
 URSTPlayerReadySync = {}
 
 function URSTPlayerReadySync:OnRep_PRSTag() end
+
 ---@return float
 function URSTPlayerReadySync:GetTimeRemaining() end
+
 ---@return int32
 function URSTPlayerReadySync:GetNumPlayersReady() end
+
 ---@return boolean
 function URSTPlayerReadySync:GetIsInShortTimer() end
+
 ---@return boolean
 function URSTPlayerReadySync:GetAreMajorityOfPlayersReady() end
+
 ---@return boolean
 function URSTPlayerReadySync:GetAreAllPlayersReady() end
-
 
 ---@class URSTPlayerReadySyncData : UPrimaryDataAsset
 ---@field PlayerReadySyncTag FGameplayTag
@@ -11705,8 +13765,10 @@ URSTPlayerReadySyncData = {}
 ---@field FreeRerollsPerWave int32
 URSTPlayerStateMiscModsComponent = {}
 
-function URSTPlayerStateMiscModsComponent:ConsumeNextChestFree() end
+---@param bInNextFree boolean
+function URSTPlayerStateMiscModsComponent:SetNextChestFree(bInNextFree) end
 
+function URSTPlayerStateMiscModsComponent:ConsumeNextChestFree() end
 
 ---@class URSTPlayerStatePRSComponent : UActorComponent
 URSTPlayerStatePRSComponent = {}
@@ -11714,15 +13776,17 @@ URSTPlayerStatePRSComponent = {}
 ---@param PRSTag FGameplayTag
 ---@param bIsReady boolean
 function URSTPlayerStatePRSComponent:SetIsReadyStateForTag(PRSTag, bIsReady) end
+
 ---@param PRSTag FGameplayTag
 ---@param bIsReady boolean
 function URSTPlayerStatePRSComponent:Server_SetIsReadyStateForTag(PRSTag, bIsReady) end
+
 ---@return FUniqueNetIdRepl
 function URSTPlayerStatePRSComponent:GetUniqueNetIdRepl() end
+
 ---@param PRSTag FGameplayTag
 ---@return boolean
 function URSTPlayerStatePRSComponent:GetIsReadyStateForTag(PRSTag) end
-
 
 ---@class URSTPlayerStatusEffectComponent : UActorComponent
 ---@field OnAppliedStatusEffectsUpdated FRSTPlayerStatusEffectComponentOnAppliedStatusEffectsUpdated
@@ -11732,22 +13796,27 @@ URSTPlayerStatusEffectComponent = {}
 
 ---@param Data TArray<FRSTPlayerStatusEffectDataRepl>
 function URSTPlayerStatusEffectComponent:RSTPlayerStatusEffectDelegate__DelegateSignature(Data) end
+
 function URSTPlayerStatusEffectComponent:OnRep_ReplicatedStatusEffectData() end
+
 ---@param GameplayEffect FActiveGameplayEffect
 function URSTPlayerStatusEffectComponent:OnGameplayEffectRemoved(GameplayEffect) end
+
 ---@param Target UAbilitySystemComponent
 ---@param SpecApplied FGameplayEffectSpec
 ---@param ActiveHandle FActiveGameplayEffectHandle
 function URSTPlayerStatusEffectComponent:OnGameplayEffectApplied(Target, SpecApplied, ActiveHandle) end
+
 ---@return TArray<FRSTPlayerStatusEffectDataRepl>
 function URSTPlayerStatusEffectComponent:GetStatusEffectData() end
+
 ---@param InTag FGameplayTag
 ---@param NewCount int32
 function URSTPlayerStatusEffectComponent:GameplayTagCallback(InTag, NewCount) end
+
 ---@param Actor AActor
 ---@return URSTPlayerStatusEffectComponent
 function URSTPlayerStatusEffectComponent:FindPlayerStatusEffectComponent(Actor) end
-
 
 ---@class URSTPostGameAccoladeData : UPrimaryDataAsset
 ---@field AccoladeData TArray<FRSTAccoladeDefinition>
@@ -11757,7 +13826,6 @@ URSTPostGameAccoladeData = {}
 ---@param OutData FRSTAccoladeDefinition
 ---@return boolean
 function URSTPostGameAccoladeData:GetAccoladeDataByTag(Identifier, OutData) end
-
 
 ---@class URSTPostGamePawnData : UPrimaryDataAsset
 ---@field PawnTag FGameplayTag
@@ -11788,7 +13856,6 @@ URSTPotionDefinition = {}
 ---@return boolean
 function URSTPotionDefinition:IsPotionCleanser() end
 
-
 ---@class URSTPrimaryGameLayout : UPrimaryGameLayout
 ---@field OnLayoutWidgetChanged FRSTPrimaryGameLayoutOnLayoutWidgetChanged
 URSTPrimaryGameLayout = {}
@@ -11796,7 +13863,6 @@ URSTPrimaryGameLayout = {}
 ---@param ShownWidget UCommonActivatableWidget
 ---@param LayerTag FGameplayTag
 function URSTPrimaryGameLayout:OnDisplayedLayerWidgetChanged(ShownWidget, LayerTag) end
-
 
 ---@class URSTProjectileMovementComponent : UProjectileMovementComponent
 ---@field HomingTargetSocketName FName
@@ -11815,7 +13881,6 @@ URSTPropertyCustomOperation_ActiveSubobjectAbility = {}
 ---@return FRSTActiveSubobjectAbility
 function URSTPropertyCustomOperation_ActiveSubobjectAbility:K2_GetCustomValue(Val) end
 
-
 ---@class URSTPropertyCustomOperation_AdditionalGameplayEffect : URSTPropertyCustomOperation
 URSTPropertyCustomOperation_AdditionalGameplayEffect = {}
 
@@ -11823,14 +13888,12 @@ URSTPropertyCustomOperation_AdditionalGameplayEffect = {}
 ---@return FRSTAdditionalGameplayEffectData
 function URSTPropertyCustomOperation_AdditionalGameplayEffect:K2_GetCustomValue(Val) end
 
-
 ---@class URSTPropertyCustomOperation_AdditionalGameplayEffectArray : URSTPropertyCustomOperation
 URSTPropertyCustomOperation_AdditionalGameplayEffectArray = {}
 
 ---@param InVal TArray<FRSTAdditionalGameplayEffectData>
 ---@return TArray<FRSTAdditionalGameplayEffectData>
 function URSTPropertyCustomOperation_AdditionalGameplayEffectArray:K2_GetCustomValue(InVal) end
-
 
 ---@class URSTPropertyCustomOperation_AdditionalGameplayEffectArray_ModifySetByCaller : URSTPropertyCustomOperation_AdditionalGameplayEffectArray
 ---@field GameplayEffect TSubclassOf<UGameplayEffect>
@@ -11847,14 +13910,12 @@ URSTPropertyCustomOperation_AdditionalPickupTable = {}
 ---@return FRSTAdditionalPickupTable
 function URSTPropertyCustomOperation_AdditionalPickupTable:K2_GetCustomValue(Val) end
 
-
 ---@class URSTPropertyCustomOperation_Bool : URSTPropertyCustomOperation
 URSTPropertyCustomOperation_Bool = {}
 
 ---@param Val boolean
 ---@return boolean
 function URSTPropertyCustomOperation_Bool:K2_GetCustomValue(Val) end
-
 
 ---@class URSTPropertyCustomOperation_EnumField : URSTPropertyCustomOperation
 URSTPropertyCustomOperation_EnumField = {}
@@ -11874,14 +13935,12 @@ URSTPropertyCustomOperation_Float = {}
 ---@return float
 function URSTPropertyCustomOperation_Float:K2_GetCustomValue(Val) end
 
-
 ---@class URSTPropertyCustomOperation_FloatRange : URSTPropertyCustomOperation
 URSTPropertyCustomOperation_FloatRange = {}
 
 ---@param Val FRSTFloatRange
 ---@return FRSTFloatRange
 function URSTPropertyCustomOperation_FloatRange:K2_GetCustomValue(Val) end
-
 
 ---@class URSTPropertyCustomOperation_GameplayEffect : URSTPropertyCustomOperation
 URSTPropertyCustomOperation_GameplayEffect = {}
@@ -11890,14 +13949,12 @@ URSTPropertyCustomOperation_GameplayEffect = {}
 ---@return TSubclassOf<UGameplayEffect>
 function URSTPropertyCustomOperation_GameplayEffect:K2_GetCustomValue(Val) end
 
-
 ---@class URSTPropertyCustomOperation_Int : URSTPropertyCustomOperation
 URSTPropertyCustomOperation_Int = {}
 
 ---@param Val int32
 ---@return int32
 function URSTPropertyCustomOperation_Int:K2_GetCustomValue(Val) end
-
 
 ---@class URSTPropertyCustomOperation_MapTagFloat : URSTPropertyCustomOperation
 URSTPropertyCustomOperation_MapTagFloat = {}
@@ -11906,14 +13963,12 @@ URSTPropertyCustomOperation_MapTagFloat = {}
 ---@return TMap<FGameplayTag, float>
 function URSTPropertyCustomOperation_MapTagFloat:K2_GetCustomValue(Val) end
 
-
 ---@class URSTPropertyCustomOperation_MapTagInt : URSTPropertyCustomOperation
 URSTPropertyCustomOperation_MapTagInt = {}
 
 ---@param Val TMap<FGameplayTag, int32>
 ---@return TMap<FGameplayTag, int32>
 function URSTPropertyCustomOperation_MapTagInt:K2_GetCustomValue(Val) end
-
 
 ---@class URSTPropertyCustomOperation_ObjectClass : URSTPropertyCustomOperation
 URSTPropertyCustomOperation_ObjectClass = {}
@@ -11922,14 +13977,12 @@ URSTPropertyCustomOperation_ObjectClass = {}
 ---@return UClass
 function URSTPropertyCustomOperation_ObjectClass:K2_GetCustomValue(InVal) end
 
-
 ---@class URSTPropertyCustomOperation_PickupParameterMods : URSTPropertyCustomOperation
 URSTPropertyCustomOperation_PickupParameterMods = {}
 
 ---@param Val FRSTPickupParameterMods
 ---@return FRSTPickupParameterMods
 function URSTPropertyCustomOperation_PickupParameterMods:K2_GetCustomValue(Val) end
-
 
 ---@class URSTPropertyCustomOperation_ProjectileClass : URSTPropertyCustomOperation
 URSTPropertyCustomOperation_ProjectileClass = {}
@@ -11938,14 +13991,12 @@ URSTPropertyCustomOperation_ProjectileClass = {}
 ---@return TSubclassOf<ARSTProjectile>
 function URSTPropertyCustomOperation_ProjectileClass:K2_GetCustomValue(Val) end
 
-
 ---@class URSTPropertyCustomOperation_ScalableFloat : URSTPropertyCustomOperation
 URSTPropertyCustomOperation_ScalableFloat = {}
 
 ---@param Val FScalableFloat
 ---@return FScalableFloat
 function URSTPropertyCustomOperation_ScalableFloat:K2_GetCustomValue(Val) end
-
 
 ---@class URSTPropertyCustomOperation_SpawnGroupOnDeath : URSTPropertyCustomOperation
 URSTPropertyCustomOperation_SpawnGroupOnDeath = {}
@@ -11954,7 +14005,6 @@ URSTPropertyCustomOperation_SpawnGroupOnDeath = {}
 ---@return FRSTSpawnGroupOnDeathParameters
 function URSTPropertyCustomOperation_SpawnGroupOnDeath:K2_GetCustomValue(Val) end
 
-
 ---@class URSTPropertyCustomOperation_Tag : URSTPropertyCustomOperation
 URSTPropertyCustomOperation_Tag = {}
 
@@ -11962,14 +14012,12 @@ URSTPropertyCustomOperation_Tag = {}
 ---@return FGameplayTag
 function URSTPropertyCustomOperation_Tag:K2_GetCustomValue(Val) end
 
-
 ---@class URSTPropertyCustomOperation_TrapDiscount : URSTPropertyCustomOperation
 URSTPropertyCustomOperation_TrapDiscount = {}
 
 ---@param Val FRSTTrapDiscount
 ---@return FRSTTrapDiscount
 function URSTPropertyCustomOperation_TrapDiscount:K2_GetCustomValue(Val) end
-
 
 ---@class URSTPropertyModifier : URSTModifierBase
 ---@field Operations TArray<URSTPropertyModifierOperation>
@@ -11981,19 +14029,26 @@ URSTPropertyModifier = {}
 URSTPropertyModifierCustomLogicBase = {}
 
 function URSTPropertyModifierCustomLogicBase:UnregisterChangeCallbacks() end
+
 ---@param Attribute FGameplayAttribute
 function URSTPropertyModifierCustomLogicBase:ReleaseAttributeDelegate(Attribute) end
+
 function URSTPropertyModifierCustomLogicBase:RegisterChangeCallbacks() end
+
 function URSTPropertyModifierCustomLogicBase:MarkPropertyDirty() end
+
 function URSTPropertyModifierCustomLogicBase:K2_UnregisterChangeCallbacks() end
+
 function URSTPropertyModifierCustomLogicBase:K2_RegisterChangeCallbacks() end
+
 ---@return UObject
 function URSTPropertyModifierCustomLogicBase:GetTarget() end
+
 ---@return URSTModifierComponent
 function URSTPropertyModifierCustomLogicBase:GetOwningComponent() end
+
 ---@param Attribute FGameplayAttribute
 function URSTPropertyModifierCustomLogicBase:BindAttributeDelegate(Attribute) end
-
 
 ---@class URSTPropertyModifierCustomValueGetter : URSTPropertyModifierCustomLogicBase
 URSTPropertyModifierCustomValueGetter = {}
@@ -12006,14 +14061,12 @@ URSTPropertyModifierCustomValue_ActiveSubobjectAbility = {}
 ---@return boolean
 function URSTPropertyModifierCustomValue_ActiveSubobjectAbility:K2_CalculateValue(OutVal) end
 
-
 ---@class URSTPropertyModifierCustomValue_AdditionalGameplayEffect : URSTPropertyModifierCustomValueGetter
 URSTPropertyModifierCustomValue_AdditionalGameplayEffect = {}
 
 ---@param OutVal FRSTAdditionalGameplayEffectData
 ---@return boolean
 function URSTPropertyModifierCustomValue_AdditionalGameplayEffect:K2_CalculateValue(OutVal) end
-
 
 ---@class URSTPropertyModifierCustomValue_AdditionalPickupTable : URSTPropertyModifierCustomValueGetter
 URSTPropertyModifierCustomValue_AdditionalPickupTable = {}
@@ -12022,14 +14075,12 @@ URSTPropertyModifierCustomValue_AdditionalPickupTable = {}
 ---@return boolean
 function URSTPropertyModifierCustomValue_AdditionalPickupTable:K2_CalculateValue(OutVal) end
 
-
 ---@class URSTPropertyModifierCustomValue_Bool : URSTPropertyModifierCustomValueGetter
 URSTPropertyModifierCustomValue_Bool = {}
 
 ---@param OutVal boolean
 ---@return boolean
 function URSTPropertyModifierCustomValue_Bool:K2_CalculateValue(OutVal) end
-
 
 ---@class URSTPropertyModifierCustomValue_EnumField : URSTPropertyModifierCustomValueGetter
 URSTPropertyModifierCustomValue_EnumField = {}
@@ -12038,14 +14089,12 @@ URSTPropertyModifierCustomValue_EnumField = {}
 ---@return boolean
 function URSTPropertyModifierCustomValue_EnumField:K2_CalculateValue(OutVal) end
 
-
 ---@class URSTPropertyModifierCustomValue_Float : URSTPropertyModifierCustomValueGetter
 URSTPropertyModifierCustomValue_Float = {}
 
 ---@param OutVal float
 ---@return boolean
 function URSTPropertyModifierCustomValue_Float:K2_CalculateValue(OutVal) end
-
 
 ---@class URSTPropertyModifierCustomValue_FloatRange : URSTPropertyModifierCustomValueGetter
 URSTPropertyModifierCustomValue_FloatRange = {}
@@ -12054,14 +14103,12 @@ URSTPropertyModifierCustomValue_FloatRange = {}
 ---@return boolean
 function URSTPropertyModifierCustomValue_FloatRange:K2_CalculateValue(OutVal) end
 
-
 ---@class URSTPropertyModifierCustomValue_GameplayEffect : URSTPropertyModifierCustomValueGetter
 URSTPropertyModifierCustomValue_GameplayEffect = {}
 
 ---@param OutVal TSubclassOf<UGameplayEffect>
 ---@return boolean
 function URSTPropertyModifierCustomValue_GameplayEffect:K2_CalculateValue(OutVal) end
-
 
 ---@class URSTPropertyModifierCustomValue_Int : URSTPropertyModifierCustomValueGetter
 URSTPropertyModifierCustomValue_Int = {}
@@ -12070,14 +14117,12 @@ URSTPropertyModifierCustomValue_Int = {}
 ---@return boolean
 function URSTPropertyModifierCustomValue_Int:K2_CalculateValue(OutVal) end
 
-
 ---@class URSTPropertyModifierCustomValue_MapTagFloat : URSTPropertyModifierCustomValueGetter
 URSTPropertyModifierCustomValue_MapTagFloat = {}
 
 ---@param OutVal TMap<FGameplayTag, float>
 ---@return boolean
 function URSTPropertyModifierCustomValue_MapTagFloat:K2_CalculateValue(OutVal) end
-
 
 ---@class URSTPropertyModifierCustomValue_MapTagInt : URSTPropertyModifierCustomValueGetter
 URSTPropertyModifierCustomValue_MapTagInt = {}
@@ -12086,14 +14131,12 @@ URSTPropertyModifierCustomValue_MapTagInt = {}
 ---@return boolean
 function URSTPropertyModifierCustomValue_MapTagInt:K2_CalculateValue(OutVal) end
 
-
 ---@class URSTPropertyModifierCustomValue_ObjectClass : URSTPropertyModifierCustomValueGetter
 URSTPropertyModifierCustomValue_ObjectClass = {}
 
 ---@param OutVal UClass
 ---@return boolean
 function URSTPropertyModifierCustomValue_ObjectClass:K2_CalculateValue(OutVal) end
-
 
 ---@class URSTPropertyModifierCustomValue_PickupParameterMods : URSTPropertyModifierCustomValueGetter
 URSTPropertyModifierCustomValue_PickupParameterMods = {}
@@ -12102,14 +14145,12 @@ URSTPropertyModifierCustomValue_PickupParameterMods = {}
 ---@return boolean
 function URSTPropertyModifierCustomValue_PickupParameterMods:K2_CalculateValue(OutVal) end
 
-
 ---@class URSTPropertyModifierCustomValue_ProjectileClass : URSTPropertyModifierCustomValueGetter
 URSTPropertyModifierCustomValue_ProjectileClass = {}
 
 ---@param OutVal TSubclassOf<ARSTProjectile>
 ---@return boolean
 function URSTPropertyModifierCustomValue_ProjectileClass:K2_CalculateValue(OutVal) end
-
 
 ---@class URSTPropertyModifierCustomValue_ScalableFloat : URSTPropertyModifierCustomValueGetter
 URSTPropertyModifierCustomValue_ScalableFloat = {}
@@ -12118,14 +14159,12 @@ URSTPropertyModifierCustomValue_ScalableFloat = {}
 ---@return boolean
 function URSTPropertyModifierCustomValue_ScalableFloat:K2_CalculateValue(OutVal) end
 
-
 ---@class URSTPropertyModifierCustomValue_SpawnGroupOnDeath : URSTPropertyModifierCustomValueGetter
 URSTPropertyModifierCustomValue_SpawnGroupOnDeath = {}
 
 ---@param OutVal FRSTSpawnGroupOnDeathParameters
 ---@return boolean
 function URSTPropertyModifierCustomValue_SpawnGroupOnDeath:K2_CalculateValue(OutVal) end
-
 
 ---@class URSTPropertyModifierCustomValue_Tag : URSTPropertyModifierCustomValueGetter
 URSTPropertyModifierCustomValue_Tag = {}
@@ -12134,14 +14173,12 @@ URSTPropertyModifierCustomValue_Tag = {}
 ---@return boolean
 function URSTPropertyModifierCustomValue_Tag:K2_CalculateValue(OutVal) end
 
-
 ---@class URSTPropertyModifierCustomValue_TrapDiscount : URSTPropertyModifierCustomValueGetter
 URSTPropertyModifierCustomValue_TrapDiscount = {}
 
 ---@param OutVal FRSTTrapDiscount
 ---@return boolean
 function URSTPropertyModifierCustomValue_TrapDiscount:K2_CalculateValue(OutVal) end
-
 
 ---@class URSTPropertyModifierGameplayEffectComponent : UGameplayEffectComponent
 ---@field ModifierData TArray<URSTModifierBase>
@@ -12348,7 +14385,6 @@ URSTPropertyOperationValidityCheck = {}
 ---@return boolean
 function URSTPropertyOperationValidityCheck:K2_IsModifierValid() end
 
-
 ---@class URSTPropertyOperationValidityCheck_GameplayTags : URSTPropertyOperationValidityCheck
 ---@field TagQuery FGameplayTagQuery
 URSTPropertyOperationValidityCheck_GameplayTags = {}
@@ -12375,15 +14411,19 @@ URSTQuickPlaySessionSubsystem = {}
 
 ---@param JoiningOrHostingPlayer ARSTPlayerController
 function URSTQuickPlaySessionSubsystem:QuickPlaySession(JoiningOrHostingPlayer) end
+
 function URSTQuickPlaySessionSubsystem:OnQuickplayTimerComplete() end
+
 ---@param Result ECommonSessionQuickPlayResult
 function URSTQuickPlaySessionSubsystem:OnQuickplaySearchComplete(Result) end
+
 ---@return boolean
 function URSTQuickPlaySessionSubsystem:IsQuickplaySearchActive() end
+
 ---@return boolean
 function URSTQuickPlaySessionSubsystem:IsQuickplayAvailable() end
-function URSTQuickPlaySessionSubsystem:CancelQuickplaySearch() end
 
+function URSTQuickPlaySessionSubsystem:CancelQuickplaySearch() end
 
 ---@class URSTRagdollData : URSTHitDataElement
 ---@field RagdollChance float
@@ -12418,129 +14458,161 @@ URSTRangedCombatComponent = {}
 
 ---@param FirePoint URSTRangedFirePointComponent
 function URSTRangedCombatComponent:UnregisterFirePoint(FirePoint) end
+
 ---@param Identifier FGameplayTag
 ---@return boolean
 function URSTRangedCombatComponent:RemoveBloomValues(Identifier) end
+
 ---@param Identifier FGameplayTag
 ---@param Source FGameplayTag
 function URSTRangedCombatComponent:RemoveBloomBlend(Identifier, Source) end
+
 ---@param FirePoint URSTRangedFirePointComponent
 function URSTRangedCombatComponent:RegisterFirePoint(FirePoint) end
+
 ---@param Identifier FGameplayTag
 ---@param Data FRSTBloomData
 ---@return boolean
 function URSTRangedCombatComponent:RegisterBloomValues(Identifier, Data) end
+
 ---@param Identifier FGameplayTag
 function URSTRangedCombatComponent:PurgeExpiredBloomBlends(Identifier) end
+
 ---@param PreviousData TArray<FRSTRangedFirePointReplicatedData>
 function URSTRangedCombatComponent:OnRep_ClientFirePointData(PreviousData) end
+
 ---@param Identifier FGameplayTag
 ---@param bOutObstructed boolean
 ---@param ObstructionDistanceMax float
 ---@return boolean
 function URSTRangedCombatComponent:IsFirePointObstructed(Identifier, bOutObstructed, ObstructionDistanceMax) end
+
 ---@param Identifier FGameplayTag
 ---@return boolean
 function URSTRangedCombatComponent:HasTargetPoint(Identifier) end
+
 ---@param Identifier FGameplayTag
 ---@return boolean
 function URSTRangedCombatComponent:HasFirePoint(Identifier) end
+
 ---@param Identifier FGameplayTag
 ---@return boolean
 function URSTRangedCombatComponent:HasBloomData(Identifier) end
+
 ---@param Identifier FGameplayTag
 ---@param OutTargetPoints TArray<FVector>
 ---@return boolean
 function URSTRangedCombatComponent:GetTargetPointsForTag(Identifier, OutTargetPoints) end
+
 ---@param Identifier FGameplayTag
 ---@param OutHorizontalAngle float
 ---@param OutVerticalAngle float
 ---@return boolean
 function URSTRangedCombatComponent:GetRawBloomValues(Identifier, OutHorizontalAngle, OutVerticalAngle) end
+
 ---@param Identifier FGameplayTag
 ---@param OutHorizontalOffset float
 ---@param OutVerticalOffset float
 ---@return boolean
 function URSTRangedCombatComponent:GetRawBloomOffset(Identifier, OutHorizontalOffset, OutVerticalOffset) end
+
 ---@param Identifier FGameplayTag
 ---@param OutTraceNormal FVector
 ---@return boolean
 function URSTRangedCombatComponent:GetPrimaryTargetTraceHitNormal(Identifier, OutTraceNormal) end
+
 ---@param Identifier FGameplayTag
 ---@param OutLocation FVector
 ---@return boolean
 function URSTRangedCombatComponent:GetPrimaryTargetPointForTag(Identifier, OutLocation) end
+
 ---@param Identifier FGameplayTag
 ---@param OutHitResult FHitResult
 ---@return boolean
 function URSTRangedCombatComponent:GetPrimaryHitResultForTag(Identifier, OutHitResult) end
+
 ---@param Identifier FGameplayTag
 ---@param OutLocation FVector
 ---@return boolean
 function URSTRangedCombatComponent:GetPrimaryFirePointForTag(Identifier, OutLocation) end
+
 ---@param Identifier FGameplayTag
 ---@return URSTRangedFirePointComponent
 function URSTRangedCombatComponent:GetPrimaryFirePointComponent(Identifier) end
+
 ---@param Identifier FGameplayTag
 ---@param OutFireVectors TArray<FRSTFiringParams>
 ---@return boolean
 function URSTRangedCombatComponent:GetFireVectorsForTag(Identifier, OutFireVectors) end
+
 ---@param Identifier FGameplayTag
 ---@param OutLocation TArray<FVector>
 ---@return boolean
 function URSTRangedCombatComponent:GetFirePointsForTag(Identifier, OutLocation) end
+
 ---@param Identifer FGameplayTag
 ---@param OutFirePointComponents TArray<USceneComponent>
 ---@return boolean
 function URSTRangedCombatComponent:GetFirePointComponentsForTag(Identifer, OutFirePointComponents) end
+
 ---@param Identifier FGameplayTag
 ---@param OutHorizontalAngle float
 ---@param OutVerticalAngle float
 ---@return boolean
 function URSTRangedCombatComponent:GetBloomValues(Identifier, OutHorizontalAngle, OutVerticalAngle) end
+
 ---@param Identifier FGameplayTag
 ---@param OutHorizontalOffset float
 ---@param OutVerticalOffset float
 ---@return boolean
 function URSTRangedCombatComponent:GetBloomOffset(Identifier, OutHorizontalOffset, OutVerticalOffset) end
+
 ---@param Identifier FGameplayTag
 ---@param OutHorizontalAngle float
 ---@param OutVerticalAngle float
 ---@return boolean
 function URSTRangedCombatComponent:GetBloomMin(Identifier, OutHorizontalAngle, OutVerticalAngle) end
+
 ---@param Identifier FGameplayTag
 ---@param OutHorizontalAngle float
 ---@param OutVerticalAngle float
 ---@return boolean
 function URSTRangedCombatComponent:GetBloomMax(Identifier, OutHorizontalAngle, OutVerticalAngle) end
+
 ---@param Actor AActor
 ---@return URSTRangedCombatComponent
 function URSTRangedCombatComponent:FindRangedCombatComponent(Actor) end
+
 ---@param GroupTag FGameplayTag
 ---@param Settings FRSTEnabledFireGroupData
 function URSTRangedCombatComponent:EnableRangedTargetingWithSettings(GroupTag, Settings) end
+
 ---@param GroupTag FGameplayTag
 function URSTRangedCombatComponent:DisableRangedTargeting(GroupTag) end
+
 ---@param Identifier FGameplayTag
 function URSTRangedCombatComponent:ClearBloomBlends(Identifier) end
+
 ---@param Identifier FGameplayTag
 ---@param InOutDirection FVector
 ---@return boolean
 function URSTRangedCombatComponent:ApplyOffset(Identifier, InOutDirection) end
+
 ---@param Identifier FGameplayTag
 ---@param Source FGameplayTag
 ---@param Duration float
 ---@param Weight float
 function URSTRangedCombatComponent:ApplyBloomBlend(Identifier, Source, Duration, Weight) end
+
 ---@param Identifier FGameplayTag
 ---@param InOutDirection FVector
 ---@param Seed int32
 ---@return boolean
 function URSTRangedCombatComponent:ApplyBloom(Identifier, InOutDirection, Seed) end
+
 ---@param Identifier FGameplayTag
 ---@param IncrementPercentage float
 function URSTRangedCombatComponent:AddBloomIncrement(Identifier, IncrementPercentage) end
-
 
 ---@class URSTRangedFirePointComponent : USceneComponent
 ---@field Identifier FGameplayTag
@@ -12564,12 +14636,13 @@ URSTRecoilComponent = {}
 
 ---@param bSnapToOriginalAim boolean
 function URSTRecoilComponent:StopRecoil(bSnapToOriginalAim) end
+
 ---@param Actor AActor
 ---@return URSTRecoilComponent
 function URSTRecoilComponent:FindRecoilComponent(Actor) end
+
 ---@param RecoilData FRSTRecoilData
 function URSTRecoilComponent:ApplyRecoil(RecoilData) end
-
 
 ---@class URSTRejoinCheck : URejoinCheck
 URSTRejoinCheck = {}
@@ -12580,7 +14653,6 @@ URSTRejoinCheck = {}
 ---@param RequestedPrivilege ECommonUserPrivilege
 ---@param OnlineContext ECommonUserOnlineContext
 function URSTRejoinCheck:OnUserInitialized(UserInfo, bSuccess, Error, RequestedPrivilege, OnlineContext) end
-
 
 ---@class URSTRichTextBlockTooltipDecorator : URichTextBlockDecorator
 URSTRichTextBlockTooltipDecorator = {}
@@ -12595,13 +14667,15 @@ URSTRiftAttributeSet = {}
 
 ---@param OldValue FGameplayAttributeData
 function URSTRiftAttributeSet:OnRep_LightningRadius(OldValue) end
+
 ---@param OldValue FGameplayAttributeData
 function URSTRiftAttributeSet:OnRep_LightningCooldownMin(OldValue) end
+
 ---@param OldValue FGameplayAttributeData
 function URSTRiftAttributeSet:OnRep_LightningCooldownMax(OldValue) end
+
 ---@param OldValue FGameplayAttributeData
 function URSTRiftAttributeSet:OnRep_InfluenceRadius(OldValue) end
-
 
 ---@class URSTRiftSubsystem : UWorldSubsystem
 ---@field RiftProtectionCue FGameplayTag
@@ -12615,25 +14689,31 @@ URSTRiftSubsystem = {}
 ---@param CurrentReasons TArray<ERSTRiftPointLossReason>
 ---@param PreviousReasons TArray<ERSTRiftPointLossReason>
 function URSTRiftSubsystem:RSTRiftProtectionChanged__DelegateSignature(CurrentReasons, PreviousReasons) end
+
 ---@param Effect TSubclassOf<UGameplayEffect>
 function URSTRiftSubsystem:RemoveEffectFromAll(Effect) end
+
 ---@param Ability TSubclassOf<UGameplayAbility>
 function URSTRiftSubsystem:RemoveAbilityFromAll(Ability) end
+
 ---@param Rift ARSTRift
 ---@param Character ARSTCharacter
 ---@param OutTransform FTransform
 ---@return boolean
 function URSTRiftSubsystem:GetSpawnTransformForCharacter(Rift, Character, OutTransform) end
+
 ---@return TArray<ARSTRift>
 function URSTRiftSubsystem:GetRifts() end
+
 ---@return ARSTRift
 function URSTRiftSubsystem:GetPrimaryRift() end
+
 ---@param Effect TSubclassOf<UGameplayEffect>
 function URSTRiftSubsystem:ApplyEffectToAll(Effect) end
+
 ---@param Ability TSubclassOf<UGameplayAbility>
 ---@param SourceObject UObject
 function URSTRiftSubsystem:ApplyAbilityToAll(Ability, SourceObject) end
-
 
 ---@class URSTSavedRunFunctionLibrary : UBlueprintFunctionLibrary
 URSTSavedRunFunctionLibrary = {}
@@ -12641,27 +14721,32 @@ URSTSavedRunFunctionLibrary = {}
 ---@param WorldContextObject UObject
 ---@param SavedRun FRSTSavedRun
 function URSTSavedRunFunctionLibrary:RefundGambledSkulls(WorldContextObject, SavedRun) end
+
 ---@param SavedRun FRSTSavedRun
 ---@return boolean
 function URSTSavedRunFunctionLibrary:IsRunValid(SavedRun) end
+
 ---@param SavedRun FRSTSavedRun
 ---@param PlayerIndex int32
 ---@param StatTag FGameplayTag
 ---@return float
 function URSTSavedRunFunctionLibrary:GetStatValue(SavedRun, PlayerIndex, StatTag) end
+
 ---@param SavedRun FRSTSavedRun
 ---@return int32
 function URSTSavedRunFunctionLibrary:GetNumSkullsEarned(SavedRun) end
+
 ---@param SavedRun FRSTSavedRun
 ---@return int32
 function URSTSavedRunFunctionLibrary:GetNumPlayers(SavedRun) end
+
 ---@param SavedRun FRSTSavedRun
 ---@return int32
 function URSTSavedRunFunctionLibrary:GetNumMissionsCompleted(SavedRun) end
+
 ---@param SavedRun FRSTSavedRun
 ---@return TArray<int32>
 function URSTSavedRunFunctionLibrary:GetDisplayIndexOrder(SavedRun) end
-
 
 ---@class URSTSessionMissionSubsystem : UGameInstanceSubsystem
 ---@field MissionProgressionTagQuery TMap<int32, FGameplayTagQuery>
@@ -12670,6 +14755,7 @@ function URSTSavedRunFunctionLibrary:GetDisplayIndexOrder(SavedRun) end
 ---@field CurrentThreadChoices TArray<FRSTThreadOption>
 ---@field ValidDistortions TArray<URSTMetaDistortionDefinition>
 ---@field MaxValidMissions int32
+---@field OnCurrentSeedChanged FRSTSessionMissionSubsystemOnCurrentSeedChanged
 ---@field OnMissionAdded FRSTSessionMissionSubsystemOnMissionAdded
 ---@field OnMissionRemoved FRSTSessionMissionSubsystemOnMissionRemoved
 ---@field OnMissionSelected FRSTSessionMissionSubsystemOnMissionSelected
@@ -12683,6 +14769,7 @@ function URSTSavedRunFunctionLibrary:GetDisplayIndexOrder(SavedRun) end
 ---@field OnTeamThreadAdded FRSTSessionMissionSubsystemOnTeamThreadAdded
 ---@field OnTeamThreadRemoved FRSTSessionMissionSubsystemOnTeamThreadRemoved
 ---@field SelectedDistortions TArray<URSTMetaDistortionDefinition>
+---@field InitialDistortions TArray<URSTMetaDistortionDefinition>
 ---@field SelectedTeamThreads TArray<FRSTTeamThreadData>
 ---@field SelectedMissions TArray<URSTMissionDefinition>
 ---@field SelectedThreads TArray<URSTMetaThreadDefinition>
@@ -12692,75 +14779,109 @@ URSTSessionMissionSubsystem = {}
 
 ---@return boolean
 function URSTSessionMissionSubsystem:ShouldEndRunOnCompletion() end
+
 ---@param InThreadIndex int32
 function URSTSessionMissionSubsystem:SetCurrentThreadIndex(InThreadIndex) end
+
 ---@param InSeed int32
 function URSTSessionMissionSubsystem:SetCurrentSeed(InSeed) end
----@param InChallengeRunCode FString
-function URSTSessionMissionSubsystem:SetChallengeRun(InChallengeRunCode) end
+
 ---@param PlayerId FUniqueNetIdRepl
 ---@param Thread URSTMetaThreadDefinition
 ---@param bFromQuicksave boolean
 function URSTSessionMissionSubsystem:RSTThreadChange__DelegateSignature(PlayerId, Thread, bFromQuicksave) end
+
 ---@param Thread URSTMetaTeamThreadDefinition
 ---@param bFromQuicksave boolean
 function URSTSessionMissionSubsystem:RSTTeamThreadChange__DelegateSignature(Thread, bFromQuicksave) end
+
 ---@param PlayerId FUniqueNetIdRepl
 function URSTSessionMissionSubsystem:RSTPotionChangePlayer__DelegateSignature(PlayerId) end
+
 ---@param PlayerId FUniqueNetIdRepl
 ---@param Potion URSTPotionDefinition
 ---@param bFromQuicksave boolean
 function URSTSessionMissionSubsystem:RSTPotionChange__DelegateSignature(PlayerId, Potion, bFromQuicksave) end
+
 ---@param PreviousMission URSTMissionDefinition
 ---@param CurrentMission URSTMissionDefinition
 function URSTSessionMissionSubsystem:RSTMissionSelectedChange__DelegateSignature(PreviousMission, CurrentMission) end
+
 ---@param Mission URSTMissionDefinition
 function URSTSessionMissionSubsystem:RSTMissionChange__DelegateSignature(Mission) end
+
 ---@param Distortion URSTMetaDistortionDefinition
 ---@param bFromQuicksave boolean
 function URSTSessionMissionSubsystem:RSTDistortionChange__DelegateSignature(Distortion, bFromQuicksave) end
+
+---@param newSeed int32
+function URSTSessionMissionSubsystem:RSTCurrentSeedChanged__DelegateSignature(newSeed) end
+
+function URSTSessionMissionSubsystem:RerollMissionSeed() end
+
 ---@param PlayerState ARSTPlayerState
 ---@return TArray<URSTMetaThreadDefinition>
 function URSTSessionMissionSubsystem:GetSelectedThreads(PlayerState) end
+
 ---@return TArray<FRSTTeamThreadData>
 function URSTSessionMissionSubsystem:GetSelectedTeamThreadData() end
+
 ---@param PlayerState APlayerState
 ---@return URSTPotionDefinition
 function URSTSessionMissionSubsystem:GetSelectedPotion(PlayerState) end
+
 ---@param MissionIndex int32
 ---@return URSTMissionDefinition
 function URSTSessionMissionSubsystem:GetSelectedMission(MissionIndex) end
+
 ---@param PlayerState ARSTPlayerState
 ---@param NumThreads int32
 ---@return TArray<URSTMetaThreadDefinition>
 function URSTSessionMissionSubsystem:GetRecentlySelectedThreads(PlayerState, NumThreads) end
+
 ---@return int32
 function URSTSessionMissionSubsystem:GetNPEMissionIndex() end
+
 ---@param MissionIndex int32
 ---@param TagQuery FGameplayTagQuery
 ---@return boolean
 function URSTSessionMissionSubsystem:GetNextProgressionMissionIndex(MissionIndex, TagQuery) end
+
 ---@return int32
 function URSTSessionMissionSubsystem:GetCurrentThreadIndex() end
+
 ---@return int32
 function URSTSessionMissionSubsystem:GetCurrentSeed() end
+
 ---@return int32
 function URSTSessionMissionSubsystem:GetCurrentMissionIndex() end
+
 ---@return FGameplayTagContainer
 function URSTSessionMissionSubsystem:GetAllPlayerGameplayTagContainer() end
+
 ---@param SelectingPlayerController ARSTPlayerController
 ---@param ThreadDefinition URSTMetaThreadDefinition
 function URSTSessionMissionSubsystem:ChooseThread(SelectingPlayerController, ThreadDefinition) end
+
 ---@param SelectingPlayerController ARSTPlayerController
 ---@param PotionDefinition URSTPotionDefinition
 function URSTSessionMissionSubsystem:ChoosePotion(SelectingPlayerController, PotionDefinition) end
+
 ---@param SelectingPlayerController ARSTPlayerController
 ---@param ChosenMissionIndex int32
+---@param InChallengeRunCode FString
 ---@return ERSTMissionChosenResult
-function URSTSessionMissionSubsystem:ChooseMissionByIndex(SelectingPlayerController, ChosenMissionIndex) end
+function URSTSessionMissionSubsystem:ChooseMissionByIndex(SelectingPlayerController, ChosenMissionIndex,
+                                                          InChallengeRunCode) end
+
 ---@param Profile URSTPlayerProfile
 ---@return int32
 function URSTSessionMissionSubsystem:BP_GetMissionNPEIndex(Profile) end
+
+---@class URSTSessionMissionSubsystemSettings : UDeveloperSettingsBackedByCVars
+---@field SessionMissionSubsystemClass TSubclassOf<URSTSessionMissionSubsystem>
+URSTSessionMissionSubsystemSettings = {}
+
 
 
 ---@class URSTSetByCallerChanceGEComponent : UGameplayEffectComponent
@@ -12785,22 +14906,24 @@ URSTSettingStringOptionHelpers = {}
 ---@param Options TArray<FRSTSettingsStringOption>
 ---@param OutStrings TArray<FString>
 function URSTSettingStringOptionHelpers:GetUIStrings(Options, OutStrings) end
+
 ---@param Options TArray<FRSTSettingsStringOption>
 ---@param BackingValue int32
 ---@param OutUIText FText
 ---@return boolean
 function URSTSettingStringOptionHelpers:GetUIString(Options, BackingValue, OutUIText) end
+
 ---@param Option FRSTSettingsStringOption
 ---@return FText
 function URSTSettingStringOptionHelpers:GetText(Option) end
+
 ---@param Options TArray<FRSTSettingsStringOption>
 ---@param UISelectedOption FString
 ---@param BackingValue int32
 ---@return boolean
 function URSTSettingStringOptionHelpers:GetBackingValue(Options, UISelectedOption, BackingValue) end
 
-
----@class URSTSettingsLocal : UGameUserSettings
+---@class URSTSettings: UGameUserSettings
 ---@field DisplayStatList TMap<ERSTDisplayablePerformanceStat, ERSTStatDisplayMode>
 ---@field DisplayGamma float
 ---@field FrameRateLimit_OnBattery float
@@ -12865,281 +14988,411 @@ function URSTSettingStringOptionHelpers:GetBackingValue(Options, UISelectedOptio
 ---@field LastSeenPatchNotesVersion FString
 ---@field bShowBreakableObjects boolean
 ---@field bLinkToExternalAccount boolean
-URSTSettingsLocal = {}
+URSTSettings = {}
 
 ---@return boolean
 function URSTSettingsLocal:ShouldShowBreakableObjects() end
+
 ---@return boolean
 function URSTSettingsLocal:ShouldRunAutoBenchmarkAtStartup() end
+
 ---@param LocalPlayer ULocalPlayer
 ---@param InEnabled boolean
 function URSTSettingsLocal:SetVoiceChatPushToTalk(LocalPlayer, InEnabled) end
+
 ---@param LocalPlayer ULocalPlayer
 ---@param bInVerified boolean
 function URSTSettingsLocal:SetVoiceChatPermissionAvailable(LocalPlayer, bInVerified) end
+
 ---@param LocalPlayer ULocalPlayer
 ---@param InVolume float
 function URSTSettingsLocal:SetVoiceChatOutputVolume(LocalPlayer, InVolume) end
+
 ---@param LocalPlayer ULocalPlayer
 ---@param DeviceID FString
 function URSTSettingsLocal:SetVoiceChatOutputDeviceId(LocalPlayer, DeviceID) end
+
 ---@param LocalPlayer ULocalPlayer
 ---@param InVolume float
 function URSTSettingsLocal:SetVoiceChatInputVolume(LocalPlayer, InVolume) end
+
 ---@param LocalPlayer ULocalPlayer
 ---@param DeviceID FString
 function URSTSettingsLocal:SetVoiceChatInputDeviceId(LocalPlayer, DeviceID) end
+
 ---@param LocalPlayer ULocalPlayer
 ---@param InEnabled boolean
 function URSTSettingsLocal:SetVoiceChatEnabled(LocalPlayer, InEnabled) end
+
 ---@param bEnabled boolean
 function URSTSettingsLocal:SetUseVirtualShadowMaps(bEnabled) end
+
 ---@param bEnabled boolean
 function URSTSettingsLocal:SetUseHealthBars(bEnabled) end
+
 ---@param ShouldUseCursor boolean
 function URSTSettingsLocal:SetUseGamepadAsCursor(ShouldUseCursor) end
+
 ---@param AreSubtitlesEnabled boolean
 function URSTSettingsLocal:SetSubtitlesEnabled(AreSubtitlesEnabled) end
+
 ---@param Sens float
 function URSTSettingsLocal:SetSplitLookSensitivityY(Sens) end
+
 ---@param Sens float
 function URSTSettingsLocal:SetSplitLookSensitivityX(Sens) end
+
 ---@param InVolume float
 function URSTSettingsLocal:SetSoundFXVolume(InVolume) end
+
 ---@param bInShowBreakableObjects boolean
 function URSTSettingsLocal:SetShowBreakableObjects(bInShowBreakableObjects) end
+
 ---@param InScreenPercentage float
 function URSTSettingsLocal:SetScreenPercentage(InScreenPercentage) end
+
 ---@param Value float
 function URSTSettingsLocal:SetSafeZone(Value) end
+
 ---@param InMethod FString
 function URSTSettingsLocal:SetReflectionMethod(InMethod) end
+
 ---@param InVolume float
 function URSTSettingsLocal:SetOverallVolume(InVolume) end
+
 ---@param bEnabled boolean
 function URSTSettingsLocal:SetOptimizedHitDetectionPartial(bEnabled) end
+
 ---@param bEnabled boolean
 function URSTSettingsLocal:SetOptimizedHitDetectionFull(bEnabled) end
+
 ---@param bEnabled boolean
 function URSTSettingsLocal:SetOctreeTriggerVolumes(bEnabled) end
+
 ---@param bEnabled boolean
 function URSTSettingsLocal:SetNavWalking(bEnabled) end
+
 ---@param bEnabled boolean
 function URSTSettingsLocal:SetNaniteEnabled(bEnabled) end
+
 ---@param InVolume float
 function URSTSettingsLocal:SetMusicVolume(InVolume) end
+
 ---@param bEnabled boolean
 function URSTSettingsLocal:SetLumenHardwareRayTracing(bEnabled) end
+
 ---@param Sens float
 function URSTSettingsLocal:SetLookSensitivity(Sens) end
+
 ---@param Value boolean
 function URSTSettingsLocal:SetLinkToExternalAccount(Value) end
+
 ---@param InLastSeenPatchNotesVersion FString
 function URSTSettingsLocal:SetLastSeenPatchNotesVersion(InLastSeenPatchNotesVersion) end
+
 ---@param IsSplitLookSens boolean
 function URSTSettingsLocal:SetIsSplitLookSensitivity(IsSplitLookSens) end
+
 ---@param IsLookInvert boolean
 function URSTSettingsLocal:SetIsLookInvert(IsLookInvert) end
+
 ---@param IsSplitLookSens boolean
 function URSTSettingsLocal:SetIsADSSplitLookSensitivity(IsSplitLookSens) end
+
 ---@param bEnabled boolean
 function URSTSettingsLocal:SetHeadphoneModeEnabled(bEnabled) end
+
 ---@param bEnabled boolean
 function URSTSettingsLocal:SetHDRAudioModeEnabled(bEnabled) end
+
 ---@param InGraphicsQuality int32
 function URSTSettingsLocal:SetGraphicsQuality(InGraphicsQuality) end
+
 ---@param InMethod FString
 function URSTSettingsLocal:SetGlobalIlluminationMethod(InMethod) end
+
 ---@param NewSpeedNormalized float
 function URSTSettingsLocal:SetGamepadCursorSpeed(NewSpeedNormalized) end
+
 ---@param DeadZone float
 function URSTSettingsLocal:SetGamepadCursorDeadzone(DeadZone) end
+
 ---@param GamepadAimAssistEnabled boolean
 function URSTSettingsLocal:SetGamepadAimAssistEnabled(GamepadAimAssistEnabled) end
+
 ---@param NewLimitFPS float
 function URSTSettingsLocal:SetFrameRateLimit_WhenBackgrounded(NewLimitFPS) end
+
 ---@param NewLimitFPS float
 function URSTSettingsLocal:SetFrameRateLimit_OnBattery(NewLimitFPS) end
+
 ---@param NewLimitFPS float
 function URSTSettingsLocal:SetFrameRateLimit_InMenu(NewLimitFPS) end
+
 ---@param NewLimitFPS float
 function URSTSettingsLocal:SetFrameRateLimit_Always(NewLimitFPS) end
+
 ---@param InDensity float
 function URSTSettingsLocal:SetFoliageDensity(InDensity) end
+
 ---@param InCullDistance float
 function URSTSettingsLocal:SetFoliageCullDistance(InCullDistance) end
+
 ---@param InVolume float
 function URSTSettingsLocal:SetEnemyDialogueVolume(InVolume) end
+
 ---@param bEnabled boolean
 function URSTSettingsLocal:SetEnableGlobalInvalidation(bEnabled) end
+
 ---@param bEnabled boolean
 function URSTSettingsLocal:SetDrawMapWidgets(bEnabled) end
+
 ---@param InDLSSMode UDLSSMode
 function URSTSettingsLocal:SetDLSSMode(InDLSSMode) end
+
 ---@param InGamma float
 function URSTSettingsLocal:SetDisplayGamma(InGamma) end
+
 ---@param InVolume float
 function URSTSettingsLocal:SetDialogueVolume(InVolume) end
+
 ---@param InDesiredSuffix FString
 function URSTSettingsLocal:SetDesiredDeviceProfileQualitySuffix(InDesiredSuffix) end
+
 ---@param InControllerPlatform FName
 function URSTSettingsLocal:SetControllerPlatform(InControllerPlatform) end
+
 ---@param InAudioOutputDeviceId FString
 function URSTSettingsLocal:SetAudioOutputDeviceId(InAudioOutputDeviceId) end
+
 ---@param InAntiAliasingMethod FString
 function URSTSettingsLocal:SetAntiAliasingMethod(InAntiAliasingMethod) end
+
 ---@param Sens float
 function URSTSettingsLocal:SetADSSplitLookSensitivityY(Sens) end
+
 ---@param Sens float
 function URSTSettingsLocal:SetADSSplitLookSensitivityX(Sens) end
+
 ---@param Sens float
 function URSTSettingsLocal:SetADSLookSensitivity(Sens) end
+
 ---@param bSaveImmediately boolean
 function URSTSettingsLocal:RunAutoBenchmark(bSaveImmediately) end
+
 ---@return boolean
 function URSTSettingsLocal:IsSafeZoneSet() end
+
 ---@return boolean
 function URSTSettingsLocal:IsHeadphoneModeEnabled() end
+
 ---@return boolean
 function URSTSettingsLocal:IsHDRAudioModeEnabled() end
+
 ---@return boolean
 function URSTSettingsLocal:IsDLSSSupported() end
+
 ---@return boolean
 function URSTSettingsLocal:IsDLSSEnabled() end
+
 ---@return boolean
 function URSTSettingsLocal:GetVoiceChatPushToTalk() end
+
 ---@return boolean
 function URSTSettingsLocal:GetVoiceChatPermissionAvailable() end
+
 ---@return float
 function URSTSettingsLocal:GetVoiceChatOutputVolume() end
+
 ---@return FString
 function URSTSettingsLocal:GetVoiceChatOutputDeviceId() end
+
 ---@return float
 function URSTSettingsLocal:GetVoiceChatInputVolume() end
+
 ---@return FString
 function URSTSettingsLocal:GetVoiceChatInputDeviceId() end
+
 ---@return boolean
 function URSTSettingsLocal:GetVoiceChatEnabled() end
+
 ---@return boolean
 function URSTSettingsLocal:GetUseVirtualShadowMaps() end
+
 ---@return boolean
 function URSTSettingsLocal:GetUseHealthBars() end
+
 ---@return boolean
 function URSTSettingsLocal:GetUseGamepadAsCursor() end
+
 ---@return float
 function URSTSettingsLocal:GetSplitLookSensivityY() end
+
 ---@return float
 function URSTSettingsLocal:GetSplitLookSensivityX() end
+
 ---@return float
 function URSTSettingsLocal:GetSoundFXVolume() end
+
 ---@param OutOptions TArray<FRSTSettingsStringOption>
 function URSTSettingsLocal:GetShadowsQualtiyOptions(OutOptions) end
+
 ---@return float
 function URSTSettingsLocal:GetScreenPercentage() end
+
 ---@return float
 function URSTSettingsLocal:GetSafeZone() end
+
 ---@param OutOptions TArray<FString>
 function URSTSettingsLocal:GetReflectionMethodOptions(OutOptions) end
+
 ---@return FString
 function URSTSettingsLocal:GetReflectionMethod() end
+
 ---@return float
 function URSTSettingsLocal:GetOverallVolume() end
+
 ---@param OutOptions TArray<FRSTSettingsStringOption>
 function URSTSettingsLocal:GetOverallGraphicsQualityOptions(OutOptions) end
+
 ---@return boolean
 function URSTSettingsLocal:GetOptimizedHitDetectionPartial() end
+
 ---@return boolean
 function URSTSettingsLocal:GetOptimizedHitDetectionFull() end
+
 ---@return boolean
 function URSTSettingsLocal:GetOctreeTriggerVolumes() end
+
 ---@return boolean
 function URSTSettingsLocal:GetNavWalking() end
+
 ---@return boolean
 function URSTSettingsLocal:GetNaniteEnabled() end
+
 ---@return float
 function URSTSettingsLocal:GetMusicVolume() end
+
 ---@return boolean
 function URSTSettingsLocal:GetLumenHardwareRayTracing() end
+
 ---@return float
 function URSTSettingsLocal:GetLookSensivity() end
+
 ---@return boolean
 function URSTSettingsLocal:GetLinkToExternalAccount() end
+
 ---@return FString
 function URSTSettingsLocal:GetLastSeenPatchNotesVersion() end
+
 ---@return boolean
 function URSTSettingsLocal:GetIsSplitLookSensitivity() end
+
 ---@return boolean
 function URSTSettingsLocal:GetIsLookInvert() end
+
 ---@return boolean
 function URSTSettingsLocal:GetIsADSSplitLookSensitivity() end
+
 ---@param ConfigName FName
 ---@return UPlayerMappableInputConfig
 function URSTSettingsLocal:GetInputConfigByName(ConfigName) end
+
 ---@param OutOptions TArray<FRSTSettingsStringOption>
 function URSTSettingsLocal:GetGraphicsQualityOptions(OutOptions) end
+
 ---@return int32
 function URSTSettingsLocal:GetGraphicsQuality() end
+
 ---@param OutOptions TArray<FString>
 function URSTSettingsLocal:GetGlobalIlluminationMethodOptions(OutOptions) end
+
 ---@return FString
 function URSTSettingsLocal:GetGlobalIlluminationMethod() end
+
 ---@return float
 function URSTSettingsLocal:GetGamepadCursorSpeedNormalized() end
+
 ---@return float
 function URSTSettingsLocal:GetGamepadCursorSpeed() end
+
 ---@return float
 function URSTSettingsLocal:GetGamepadCursorDeadzone() end
+
 ---@return boolean
 function URSTSettingsLocal:GetGamepadAimAssistEnabled() end
+
 ---@param OutOptions TArray<FRSTSettingsStringOption>
 function URSTSettingsLocal:GetFrameRateLimitOptions(OutOptions) end
+
 ---@return float
 function URSTSettingsLocal:GetFrameRateLimit_WhenBackgrounded() end
+
 ---@return float
 function URSTSettingsLocal:GetFrameRateLimit_OnBattery() end
+
 ---@return float
 function URSTSettingsLocal:GetFrameRateLimit_InMenu() end
+
 ---@return float
 function URSTSettingsLocal:GetFrameRateLimit_Always() end
+
 ---@return float
 function URSTSettingsLocal:GetFoliageDensity() end
+
 ---@return float
 function URSTSettingsLocal:GetFoliageCullDistance() end
+
 ---@return float
 function URSTSettingsLocal:GetEnemyDialogueVolume() end
+
 ---@return boolean
 function URSTSettingsLocal:GetEnableGlobalInvalidation() end
+
 ---@return boolean
 function URSTSettingsLocal:GetDrawMapWidgets() end
+
 ---@return UDLSSMode
 function URSTSettingsLocal:GetDLSSMode() end
+
 ---@return float
 function URSTSettingsLocal:GetDisplayGamma() end
+
 ---@return float
 function URSTSettingsLocal:GetDialogueVolume() end
+
 ---@return FString
 function URSTSettingsLocal:GetDesiredDeviceProfileQualitySuffix() end
+
 ---@return FName
 function URSTSettingsLocal:GetControllerPlatform() end
+
 ---@return FString
 function URSTSettingsLocal:GetAudioOutputDeviceId() end
+
 ---@return boolean
 function URSTSettingsLocal:GetAreSubtitlesEnabled() end
+
 ---@return TArray<FString>
 function URSTSettingsLocal:GetAntiAliasingMethods() end
+
 ---@return FString
 function URSTSettingsLocal:GetAntiAliasingMethod() end
+
 ---@return float
 function URSTSettingsLocal:GetADSSplitLookSensivityY() end
+
 ---@return float
 function URSTSettingsLocal:GetADSSplitLookSensivityX() end
+
 ---@return float
 function URSTSettingsLocal:GetADSLookSensivity() end
+
 ---@return boolean
 function URSTSettingsLocal:CanRunAutoBenchmark() end
+
 ---@return boolean
 function URSTSettingsLocal:CanModifyHeadphoneModeEnabled() end
-
 
 ---@class URSTSettingsShared : ULocalPlayerSaveGame
 ---@field PlayerProfileIndex int32
@@ -13186,149 +15439,219 @@ URSTSettingsShared = {}
 
 ---@param NewValue boolean
 function URSTSettingsShared:SetTriggerPullUsesHapticThreshold(NewValue) end
+
 ---@param NewValue uint8
 function URSTSettingsShared:SetTriggerHapticStrength(NewValue) end
+
 ---@param NewValue uint8
 function URSTSettingsShared:SetTriggerHapticStartPosition(NewValue) end
+
 ---@param NewValue boolean
 function URSTSettingsShared:SetTriggerHapticsEnabled(NewValue) end
+
 ---@param bEnabled boolean
 function URSTSettingsShared:SetTextChatEnabled(bEnabled) end
+
 ---@param NewValue double
 function URSTSettingsShared:SetTargetingMultiplier(NewValue) end
+
 ---@param Value ESubtitleDisplayTextSize
 function URSTSettingsShared:SetSubtitlesTextSize(Value) end
+
 ---@param Value ESubtitleDisplayTextColor
 function URSTSettingsShared:SetSubtitlesTextColor(Value) end
+
 ---@param Value ESubtitleDisplayTextBorder
 function URSTSettingsShared:SetSubtitlesTextBorder(Value) end
+
 ---@param Value boolean
 function URSTSettingsShared:SetSubtitlesEnabled(Value) end
+
 ---@param Value ESubtitleDisplayBackgroundOpacity
 function URSTSettingsShared:SetSubtitlesBackgroundOpacity(Value) end
+
 ---@param bEnabled boolean
 function URSTSettingsShared:SetShowFlyoffs(bEnabled) end
+
 ---@param InSessionVisibility ECommonSessionVisibility
 function URSTSettingsShared:SetSessionVisiblity(InSessionVisibility) end
+
 ---@param InPreferredRegion int32
 function URSTSettingsShared:SetPreferredRegion(InPreferredRegion) end
+
 ---@param NewValue double
 function URSTSettingsShared:SetMouseSensitivityY(NewValue) end
+
 ---@param NewValue double
 function URSTSettingsShared:SetMouseSensitivityX(NewValue) end
+
 ---@param NewValue ERSTGamepadSensitivity
 function URSTSettingsShared:SetLookSensitivityPreset(NewValue) end
+
 ---@param IsSprintToggle boolean
 function URSTSettingsShared:SetIsSprintToggle(IsSprintToggle) end
+
 ---@param bEnabled boolean
 function URSTSettingsShared:SetIsCameraShakeEnabled(bEnabled) end
+
 ---@param IsADSToggle boolean
 function URSTSettingsShared:SetIsADSToggle(IsADSToggle) end
+
 ---@param NewValue boolean
 function URSTSettingsShared:SetInvertVerticalAxis(NewValue) end
+
 ---@param NewValue boolean
 function URSTSettingsShared:SetInvertHorizontalAxis(NewValue) end
+
 ---@param bHasSeen boolean
 function URSTSettingsShared:SetHasSeenRegionPopup(bHasSeen) end
+
 ---@param bHasSeen boolean
 function URSTSettingsShared:SetHasSeenAnalyticsPopup(bHasSeen) end
+
 ---@param NewValue ERSTGamepadSensitivity
 function URSTSettingsShared:SetGamepadTargetingSensitivityPreset(NewValue) end
+
 ---@param NewValue float
 function URSTSettingsShared:SetGamepadMoveStickDeadZone(NewValue) end
+
 ---@param NewValue float
 function URSTSettingsShared:SetGamepadLookStickDeadZone(NewValue) end
+
 ---@param NewValue boolean
 function URSTSettingsShared:SetForceFeedbackEnabled(NewValue) end
+
 ---@param InFieldOfViewModifier float
 function URSTSettingsShared:SetFieldOfViewModifier(InFieldOfViewModifier) end
+
 ---@param bInCrossplayEnabled boolean
 function URSTSettingsShared:SetCrossplayEnabled(bInCrossplayEnabled) end
+
 ---@param InColorBlindStrength int32
 function URSTSettingsShared:SetColorBlindStrength(InColorBlindStrength) end
+
 ---@param InMode ERSTColorBlindMode
 function URSTSettingsShared:SetColorBlindMode(InMode) end
+
 ---@param bCanCollect boolean
 function URSTSettingsShared:SetCanCollectAnalytics(bCanCollect) end
+
 ---@param AllowGore boolean
 function URSTSettingsShared:SetAllowGore(AllowGore) end
+
 ---@param NewValue ERSTAllowBackgroundAudioSetting
 function URSTSettingsShared:SetAllowAudioInBackgroundSetting(NewValue) end
+
 ---@param InADSFieldOfViewModifier float
 function URSTSettingsShared:SetADSFieldOfViewModifier(InADSFieldOfViewModifier) end
+
 ---@return boolean
 function URSTSettingsShared:HasSeenRegionPopup() end
+
 ---@return boolean
 function URSTSettingsShared:HasSeenAnalyticsPopup() end
+
 ---@return boolean
 function URSTSettingsShared:GetTriggerPullUsesHapticThreshold() end
+
 ---@return uint8
 function URSTSettingsShared:GetTriggerHapticStrength() end
+
 ---@return uint8
 function URSTSettingsShared:GetTriggerHapticStartPosition() end
+
 ---@return boolean
 function URSTSettingsShared:GetTriggerHapticsEnabled() end
+
 ---@return boolean
 function URSTSettingsShared:GetTextChatEnabled() end
+
 ---@return double
 function URSTSettingsShared:GetTargetingMultiplier() end
+
 ---@return ESubtitleDisplayTextSize
 function URSTSettingsShared:GetSubtitlesTextSize() end
+
 ---@return ESubtitleDisplayTextColor
 function URSTSettingsShared:GetSubtitlesTextColor() end
+
 ---@return ESubtitleDisplayTextBorder
 function URSTSettingsShared:GetSubtitlesTextBorder() end
+
 ---@return boolean
 function URSTSettingsShared:GetSubtitlesEnabled() end
+
 ---@return ESubtitleDisplayBackgroundOpacity
 function URSTSettingsShared:GetSubtitlesBackgroundOpacity() end
+
 ---@return boolean
 function URSTSettingsShared:GetShowFlyoffs() end
+
 ---@return ECommonSessionVisibility
 function URSTSettingsShared:GetSessionVisibility() end
+
 ---@return int32
 function URSTSettingsShared:GetPreferredRegion() end
+
 ---@return double
 function URSTSettingsShared:GetMouseSensitivityY() end
+
 ---@return double
 function URSTSettingsShared:GetMouseSensitivityX() end
+
 ---@return boolean
 function URSTSettingsShared:GetIsSprintToggle() end
+
 ---@return boolean
 function URSTSettingsShared:GetIsCameraShakeEnabled() end
+
 ---@return boolean
 function URSTSettingsShared:GetIsADSToggle() end
+
 ---@return boolean
 function URSTSettingsShared:GetInvertVerticalAxis() end
+
 ---@return boolean
 function URSTSettingsShared:GetInvertHorizontalAxis() end
+
 ---@return ERSTGamepadSensitivity
 function URSTSettingsShared:GetGamepadTargetingSensitivityPreset() end
+
 ---@return float
 function URSTSettingsShared:GetGamepadMoveStickDeadZone() end
+
 ---@return float
 function URSTSettingsShared:GetGamepadLookStickDeadZone() end
+
 ---@return ERSTGamepadSensitivity
 function URSTSettingsShared:GetGamepadLookSensitivityPreset() end
+
 ---@return boolean
 function URSTSettingsShared:GetForceFeedbackEnabled() end
+
 ---@return float
 function URSTSettingsShared:GetFieldOfViewModifier() end
+
 ---@return boolean
 function URSTSettingsShared:GetCrossplayEnabled() end
+
 ---@return int32
 function URSTSettingsShared:GetColorBlindStrength() end
+
 ---@return ERSTColorBlindMode
 function URSTSettingsShared:GetColorBlindMode() end
+
 ---@return boolean
 function URSTSettingsShared:GetAllowGore() end
+
 ---@return ERSTAllowBackgroundAudioSetting
 function URSTSettingsShared:GetAllowAudioInBackgroundSetting() end
+
 ---@return float
 function URSTSettingsShared:GetADSFieldOfViewModifier() end
+
 ---@return boolean
 function URSTSettingsShared:CanCollectAnalytics() end
-
 
 ---@class URSTSettingsSharedFunctionLibrary : UBlueprintFunctionLibrary
 URSTSettingsSharedFunctionLibrary = {}
@@ -13336,7 +15659,6 @@ URSTSettingsSharedFunctionLibrary = {}
 ---@param PlayerController APlayerController
 ---@return URSTSettingsShared
 function URSTSettingsSharedFunctionLibrary:GetSharedPlayerSettings(PlayerController) end
-
 
 ---@class URSTSharedIconBlueprintLibrary : UBlueprintFunctionLibrary
 URSTSharedIconBlueprintLibrary = {}
@@ -13346,12 +15668,13 @@ URSTSharedIconBlueprintLibrary = {}
 ---@param Player APlayerState
 ---@param OutTexture UTexture2D
 function URSTSharedIconBlueprintLibrary:GetPlayerPlatformIcon(WorldContextObject, LatentInfo, Player, OutTexture) end
+
 ---@param WorldContextObject UObject
 ---@param LatentInfo FLatentActionInfo
 ---@param CrossplayPlatform FString
 ---@param OutTexture UTexture2D
-function URSTSharedIconBlueprintLibrary:GetCrossplayPlatformIcon(WorldContextObject, LatentInfo, CrossplayPlatform, OutTexture) end
-
+function URSTSharedIconBlueprintLibrary:GetCrossplayPlatformIcon(WorldContextObject, LatentInfo, CrossplayPlatform,
+                                                                 OutTexture) end
 
 ---@class URSTSharedIconSettings : UDeveloperSettingsBackedByCVars
 ---@field GenericDesktopIcon TSoftObjectPtr<UTexture2D>
@@ -13365,24 +15688,43 @@ URSTSharedIconSettings = {}
 URSTShieldExecution = {}
 
 
+---@class URSTSkinBlueprintLibrary : UBlueprintFunctionLibrary
+URSTSkinBlueprintLibrary = {}
+
+---@param WorldContextObject UObject
+---@param SkinDefinitions TArray<URSTSkinDefinition>
+function URSTSkinBlueprintLibrary:SortSkinDefinitions(WorldContextObject, SkinDefinitions) end
+
+---@param Slots FRSTSkinSlots
+---@param Slot FGameplayTag
+---@param Skin FGameplayTag
+---@return FRSTSkinSlots
+function URSTSkinBlueprintLibrary:ModifySkinSlots(Slots, Slot, Skin) end
+
+---@param SkinSlots FRSTSkinSlots
+---@return FGameplayTagContainer
+function URSTSkinBlueprintLibrary:GetSkinTags(SkinSlots) end
+
 ---@class URSTSkinComponent : UActorComponent
 ---@field OnSkinUpdated FRSTSkinComponentOnSkinUpdated
----@field CurrentSkinDefinition URSTSkinDefinition
+---@field CurrentSkinDefinitions TArray<URSTSkinDefinition>
 URSTSkinComponent = {}
 
----@param SkinDefinition URSTSkinDefinition
-function URSTSkinComponent:SetSkin(SkinDefinition) end
----@param OldSkin URSTSkinDefinition
----@param NewSkin URSTSkinDefinition
-function URSTSkinComponent:RSTSkinUpdated__DelegateSignature(OldSkin, NewSkin) end
----@return URSTSkinDefinition
-function URSTSkinComponent:GetCurrentSkin() end
+---@param InSkinDefinitions TArray<URSTSkinDefinition>
+function URSTSkinComponent:SetSkins(InSkinDefinitions) end
+
+---@param OldSkins TArray<URSTSkinDefinition>
+---@param NewSkins TArray<URSTSkinDefinition>
+function URSTSkinComponent:RSTSkinUpdated__DelegateSignature(OldSkins, NewSkins) end
+
+function URSTSkinComponent:OnSkinSlotDataLoaded() end
+
 ---@param Actor AActor
 ---@return URSTSkinComponent
 function URSTSkinComponent:FindSkinComponent(Actor) end
 
-
 ---@class URSTSkinDefinition : UPrimaryDataAsset
+---@field SkinSlot FGameplayTag
 ---@field Identifier FGameplayTag
 ---@field PawnClass TSoftClassPtr<APawn>
 ---@field LinkedHero FGameplayTag
@@ -13396,23 +15738,31 @@ URSTSkinDefinition = {}
 ---@param Tag FGameplayTag
 ---@return boolean
 function URSTSkinDefinition:ShouldHideWhenLocked(Tag) end
+
 ---@param Tag FGameplayTag
 ---@return boolean
 function URSTSkinDefinition:IsSkinEnabled(Tag) end
+
 ---@param Tag FGameplayTag
 ---@return boolean
 function URSTSkinDefinition:IsEntitlementRequired(Tag) end
+
 ---@param Tag FGameplayTag
 ---@return FGameplayTag
 function URSTSkinDefinition:GetUnlockMilestone(Tag) end
+
+---@param Tag FGameplayTag
+---@return FGameplayTag
+function URSTSkinDefinition:GetSkinSlot(Tag) end
+
 ---@param Tag FGameplayTag
 ---@return FGameplayTag
 function URSTSkinDefinition:GetLinkedHero(Tag) end
+
 ---@param FragmentClass TSubclassOf<URSTSkinFragment>
 ---@param bOutSuccess boolean
 ---@return URSTSkinFragment
 function URSTSkinDefinition:GetFragmentByClass(FragmentClass, bOutSuccess) end
-
 
 ---@class URSTSkinFragment : UObject
 URSTSkinFragment = {}
@@ -13427,17 +15777,16 @@ URSTSkinFragment_ActorBinding = {}
 ---@return TSubclassOf<AActor>
 function URSTSkinFragment_ActorBinding:GetActorClass(Identifier, bOutSuccess) end
 
-
 ---@class URSTSkinFragment_ApplyTags : URSTSkinFragment
 ---@field Tags FGameplayTagContainer
 URSTSkinFragment_ApplyTags = {}
 
 ---@param OutContext FRSTAppliedSkinDataFragments
 function URSTSkinFragment_ApplyTags:RemoveTags(OutContext) end
+
 ---@param OutContext FRSTAppliedSkinDataFragments
 ---@param SkinTarget AActor
 function URSTSkinFragment_ApplyTags:ApplyTags(OutContext, SkinTarget) end
-
 
 ---@class URSTSkinFragment_AttachmentMaterialOverride : URSTSkinFragment
 ---@field Overrides TArray<FRSTAttachmentSkinMaterialOverride>
@@ -13445,9 +15794,9 @@ URSTSkinFragment_AttachmentMaterialOverride = {}
 
 ---@param AttachmentComp URSTAttachmentManagerComponent
 function URSTSkinFragment_AttachmentMaterialOverride:RemoveMaterialOverrides(AttachmentComp) end
+
 ---@param AttachmentComp URSTAttachmentManagerComponent
 function URSTSkinFragment_AttachmentMaterialOverride:ApplyMaterialOverrides(AttachmentComp) end
-
 
 ---@class URSTSkinFragment_AttachmentMeshReplacement : URSTSkinFragment
 ---@field Overrides TArray<FRSTAttachmentSkinMeshReplacement>
@@ -13455,20 +15804,42 @@ URSTSkinFragment_AttachmentMeshReplacement = {}
 
 ---@param AttachmentComp URSTAttachmentManagerComponent
 function URSTSkinFragment_AttachmentMeshReplacement:RemoveMeshOverrides(AttachmentComp) end
+
 ---@param AttachmentComp URSTAttachmentManagerComponent
 function URSTSkinFragment_AttachmentMeshReplacement:ApplyMeshOverrides(AttachmentComp) end
 
+---@class URSTSkinFragment_DialogueRuleset : URSTSkinFragment
+---@field Ruleset TSoftObjectPtr<URDialogueRuleset>
+URSTSkinFragment_DialogueRuleset = {}
 
----@class URSTSkinFragment_MaterialOverride : URSTSkinFragment
+---@param OutContext FRSTAppliedSkinDataFragments
+---@param SkinTarget AActor
+function URSTSkinFragment_DialogueRuleset:RemoveDialogueRuleset(OutContext, SkinTarget) end
+
+---@param OutContext FRSTAppliedSkinDataFragments
+---@param SkinTarget AActor
+function URSTSkinFragment_DialogueRuleset:ApplyDialogueRuleset(OutContext, SkinTarget) end
+
+---@class URSTSkinFragment_HideHair : URSTSkinFragment_MaterialOverride_Base
+---@field HairMaterialOverride TSoftObjectPtr<UMaterialInterface>
+URSTSkinFragment_HideHair = {}
+
+---@param Mesh UMeshComponent
+function URSTSkinFragment_HideHair:ApplyMaterialOverrides(Mesh) end
+
+---@class URSTSkinFragment_MaterialOverride : URSTSkinFragment_MaterialOverride_Base
 ---@field MaterialOverrides TArray<TSoftObjectPtr<UMaterialInterface>>
 URSTSkinFragment_MaterialOverride = {}
 
 ---@param Mesh UMeshComponent
----@param DefaultMesh UMeshComponent
-function URSTSkinFragment_MaterialOverride:RemoveMaterialOverrides(Mesh, DefaultMesh) end
----@param Mesh UMeshComponent
 function URSTSkinFragment_MaterialOverride:ApplyMaterialOverrides(Mesh) end
 
+---@class URSTSkinFragment_MaterialOverride_Base : URSTSkinFragment
+URSTSkinFragment_MaterialOverride_Base = {}
+
+---@param Mesh UMeshComponent
+---@param DefaultMesh UMeshComponent
+function URSTSkinFragment_MaterialOverride_Base:RemoveMaterialOverrides(Mesh, DefaultMesh) end
 
 ---@class URSTSkinFragment_MeshReplacement : URSTSkinFragment
 URSTSkinFragment_MeshReplacement = {}
@@ -13476,9 +15847,9 @@ URSTSkinFragment_MeshReplacement = {}
 ---@param MeshComponent UMeshComponent
 ---@param DefaultMeshComponent UMeshComponent
 function URSTSkinFragment_MeshReplacement:RemoveMeshOverride(MeshComponent, DefaultMeshComponent) end
+
 ---@param MeshComponent UMeshComponent
 function URSTSkinFragment_MeshReplacement:ApplyMeshOverride(MeshComponent) end
-
 
 ---@class URSTSkinFragment_MeshReplacement_Skeletal : URSTSkinFragment_MeshReplacement
 ---@field MeshReplacement TSoftObjectPtr<USkeletalMesh>
@@ -13498,10 +15869,22 @@ URSTSkinFragment_NiagaraSystem = {}
 
 ---@param OutContext FRSTAppliedSkinDataFragments
 function URSTSkinFragment_NiagaraSystem:RemoveNiagaraSystem(OutContext) end
+
 ---@param OutContext FRSTAppliedSkinDataFragments
 ---@param AttachRoot USceneComponent
 function URSTSkinFragment_NiagaraSystem:ApplyNiagaraSystem(OutContext, AttachRoot) end
 
+---@class URSTSkinFragment_ObjectData : URSTSkinFragment
+---@field ObjectData TMap<FGameplayTag, TSoftObjectPtr<UObject>>
+URSTSkinFragment_ObjectData = {}
+
+---@param OutContext FRSTAppliedSkinDataFragments
+---@param Owner AActor
+function URSTSkinFragment_ObjectData:RemoveFragment(OutContext, Owner) end
+
+---@param OutContext FRSTAppliedSkinDataFragments
+---@param Owner AActor
+function URSTSkinFragment_ObjectData:ApplyFragment(OutContext, Owner) end
 
 ---@class URSTSkinFragment_SpawnAttachments : URSTSkinFragment
 ---@field Attachments TArray<URSTAttachmentDefinition>
@@ -13509,9 +15892,9 @@ URSTSkinFragment_SpawnAttachments = {}
 
 ---@param AttachmentComp URSTAttachmentManagerComponent
 function URSTSkinFragment_SpawnAttachments:RemoveAttachments(AttachmentComp) end
+
 ---@param AttachmentComp URSTAttachmentManagerComponent
 function URSTSkinFragment_SpawnAttachments:ApplyAttachments(AttachmentComp) end
-
 
 ---@class URSTSkinFragment_SubobjectFragments : URSTSkinFragment
 ---@field SubobjectFragments TMap<FGameplayTag, FRSTSkinSubobjectFragments>
@@ -13519,14 +15902,22 @@ URSTSkinFragment_SubobjectFragments = {}
 
 
 
+---@class URSTSkinSlotData : UPrimaryDataAsset
+---@field SlotIdentifier FGameplayTag
+---@field SlotName FText
+---@field DisplayIndex int32
+---@field ApplicationIndex int32
+URSTSkinSlotData = {}
+
+
+
 ---@class URSTSkinSubobjectComponent : UActorComponent
 ---@field SubobjectTag FGameplayTag
 URSTSkinSubobjectComponent = {}
 
----@param OldSkin URSTSkinDefinition
----@param NewSkin URSTSkinDefinition
-function URSTSkinSubobjectComponent:OnParentSkinChanged(OldSkin, NewSkin) end
-
+---@param OldSkins TArray<URSTSkinDefinition>
+---@param NewSkins TArray<URSTSkinDefinition>
+function URSTSkinSubobjectComponent:OnParentSkinsChanged(OldSkins, NewSkins) end
 
 ---@class URSTSkinUserFacingData : UPrimaryDataAsset
 ---@field Identifier FGameplayTag
@@ -13541,22 +15932,23 @@ URSTSkinUserFacingData = {}
 ---@param OutUserFacingArray TArray<URSTSkinUserFacingData>
 function URSTSkinUserFacingData:SortSkinUserFacingArray(UserFacingArray, bAppendNullEntry, OutUserFacingArray) end
 
-
 ---@class URSTSkinVisualsComponent : UActorComponent
 ---@field AppliedSkinData FRSTAppliedSkinDataFragments
 URSTSkinVisualsComponent = {}
 
 ---@param Fragments TArray<URSTSkinFragment>
 function URSTSkinVisualsComponent:RemoveSkinFragments(Fragments) end
----@param OldSkin URSTSkinDefinition
----@param NewSkin URSTSkinDefinition
-function URSTSkinVisualsComponent:OnSkinChanged(OldSkin, NewSkin) end
+
+---@param OldSkins TArray<URSTSkinDefinition>
+---@param NewSkins TArray<URSTSkinDefinition>
+function URSTSkinVisualsComponent:OnSkinsChanged(OldSkins, NewSkins) end
+
 ---@param Actor AActor
 ---@return URSTSkinVisualsComponent
 function URSTSkinVisualsComponent:FindSkinVisualsComponent(Actor) end
+
 ---@param Fragments TArray<URSTSkinFragment>
 function URSTSkinVisualsComponent:ApplySkinFragments(Fragments) end
-
 
 ---@class URSTSpellbookOperation : UObject
 ---@field InventoryItem ARSTInventoryItemInstance
@@ -13570,10 +15962,10 @@ URSTSplineComponent = {}
 ---@param Index int32
 ---@return FSplinePoint
 function URSTSplineComponent:GetWorldSpaceSplinePointAtIndex(Index) end
+
 ---@param SplinePoint FSplinePoint
 ---@param bUpdateSpline boolean
 function URSTSplineComponent:AddWorldSpaceSplinePoint(SplinePoint, bUpdateSpline) end
-
 
 ---@class URSTStatBlueprintLibrary : UBlueprintFunctionLibrary
 URSTStatBlueprintLibrary = {}
@@ -13585,6 +15977,7 @@ URSTStatBlueprintLibrary = {}
 ---@param OutVal int32
 ---@return boolean
 function URSTStatBlueprintLibrary:GetStatValue(Profile, StatTag, IncludeSubtags, IgnoreSubtags, OutVal) end
+
 ---@param Profile URSTPlayerProfile
 ---@param StatTag FGameplayTag
 ---@param IncludeSubtags FGameplayTagContainer
@@ -13593,7 +15986,6 @@ function URSTStatBlueprintLibrary:GetStatValue(Profile, StatTag, IncludeSubtags,
 ---@param OutMaxSubtags FGameplayTagContainer
 ---@return boolean
 function URSTStatBlueprintLibrary:GetMaxStatValue(Profile, StatTag, IncludeSubtags, IgnoreSubtags, OutVal, OutMaxSubtags) end
-
 
 ---@class URSTStatIncrementGameplayEffectComponent : UGameplayEffectComponent
 ---@field StatTag FGameplayTag
@@ -13614,72 +16006,85 @@ URSTStatSubsystem = {}
 ---@param AdditionalIdentifiers TArray<FGameplayTag>
 ---@param StatValue int32
 function URSTStatSubsystem:SetStatIntAll(GameplayTag, AdditionalIdentifiers, StatValue) end
+
 ---@param GameplayTag FGameplayTag
 ---@param PlayerIndex int32
 ---@param AdditionalIdentifiers TArray<FGameplayTag>
 ---@param StatValue int32
 function URSTStatSubsystem:SetStatInt(GameplayTag, PlayerIndex, AdditionalIdentifiers, StatValue) end
+
 ---@param GameplayTag FGameplayTag
 ---@param AdditionalIdentifiers TArray<FGameplayTag>
 ---@param StatValue float
 function URSTStatSubsystem:SetStatFloatAll(GameplayTag, AdditionalIdentifiers, StatValue) end
+
 ---@param GameplayTag FGameplayTag
 ---@param PlayerIndex int32
 ---@param AdditionalIdentifiers TArray<FGameplayTag>
 ---@param StatValue float
 function URSTStatSubsystem:SetStatFloat(GameplayTag, PlayerIndex, AdditionalIdentifiers, StatValue) end
+
 ---@param GameplayTag FGameplayTag
 ---@param AdditionalIdentifiers TArray<FGameplayTag>
 ---@param StatValue int32
 function URSTStatSubsystem:MaxStatIntAll(GameplayTag, AdditionalIdentifiers, StatValue) end
+
 ---@param GameplayTag FGameplayTag
 ---@param PlayerIndex int32
 ---@param AdditionalIdentifiers TArray<FGameplayTag>
 ---@param StatValue int32
 function URSTStatSubsystem:MaxStatInt(GameplayTag, PlayerIndex, AdditionalIdentifiers, StatValue) end
+
 ---@param GameplayTag FGameplayTag
 ---@param AdditionalIdentifiers TArray<FGameplayTag>
 ---@param StatValue float
 function URSTStatSubsystem:MaxStatFloatAll(GameplayTag, AdditionalIdentifiers, StatValue) end
+
 ---@param GameplayTag FGameplayTag
 ---@param PlayerIndex int32
 ---@param AdditionalIdentifiers TArray<FGameplayTag>
 ---@param StatValue float
 function URSTStatSubsystem:MaxStatFloat(GameplayTag, PlayerIndex, AdditionalIdentifiers, StatValue) end
+
 ---@param GameplayTag FGameplayTag
 ---@param AdditionalIdentifiers TArray<FGameplayTag>
 ---@param StatValue int32
 function URSTStatSubsystem:IncrementStatIntAll(GameplayTag, AdditionalIdentifiers, StatValue) end
+
 ---@param GameplayTag FGameplayTag
 ---@param PlayerIndex int32
 ---@param AdditionalIdentifiers TArray<FGameplayTag>
 ---@param StatValue int32
 function URSTStatSubsystem:IncrementStatInt(GameplayTag, PlayerIndex, AdditionalIdentifiers, StatValue) end
+
 ---@param GameplayTag FGameplayTag
 ---@param AdditionalIdentifiers TArray<FGameplayTag>
 ---@param StatValue float
 function URSTStatSubsystem:IncrementStatFloatAll(GameplayTag, AdditionalIdentifiers, StatValue) end
+
 ---@param GameplayTag FGameplayTag
 ---@param PlayerIndex int32
 ---@param AdditionalIdentifiers TArray<FGameplayTag>
 ---@param StatValue float
 function URSTStatSubsystem:IncrementStatFloat(GameplayTag, PlayerIndex, AdditionalIdentifiers, StatValue) end
+
 ---@param GameplayTag FGameplayTag
 ---@param PlayerIndex int32
 ---@param AdditionalIdentifier FGameplayTag
 ---@return int32
 function URSTStatSubsystem:GetStatInt(GameplayTag, PlayerIndex, AdditionalIdentifier) end
+
 ---@param GameplayTag FGameplayTag
 ---@param PlayerIndex int32
 ---@param AdditionalIdentifier FGameplayTag
 ---@return float
 function URSTStatSubsystem:GetStatFloat(GameplayTag, PlayerIndex, AdditionalIdentifier) end
+
 ---@param GameplayTag FGameplayTag
 ---@param PlayerIndex int32
 ---@param RootFilters FGameplayTagContainer
 ---@return int32
 function URSTStatSubsystem:GetNumSubstats(GameplayTag, PlayerIndex, RootFilters) end
-
 
 ---@class URSTStatusEffectComponent : UActorComponent
 ---@field StatusToGameplayCuesList TArray<FRSTStatusTagToGameplayCues>
@@ -13704,7 +16109,6 @@ URSTStatusEffectUserFacingData = {}
 ---@return boolean
 function URSTStatusEffectUserFacingData:ShouldDisplayLocalOnly(Tag) end
 
-
 ---@class URSTStopMovementGameplayEffectComponent : UGameplayEffectComponent
 URSTStopMovementGameplayEffectComponent = {}
 
@@ -13719,7 +16123,6 @@ URSTSubtitleSubsystem = {}
 ---@param Speaker FString
 ---@param SpeakerName FText
 function URSTSubtitleSubsystem:AddSubtitleSpeaker(Speaker, SpeakerName) end
-
 
 ---@class URSTSupplementalGameData : UPrimaryDataAsset
 ---@field StatusToGameplayCuesList TArray<FRSTStatusTagToGameplayCues>
@@ -13736,14 +16139,16 @@ URSTTabMenuWidget = {}
 ---@param Tab ERSTTabMenuTab
 ---@param bDisableAnimation boolean
 function URSTTabMenuWidget:SetActiveTab(Tab, bDisableAnimation) end
+
 ---@return ERSTTabMenuTab
 function URSTTabMenuWidget:GetCurrentTabAsEnum() end
+
 ---@param Tab ERSTTabMenuTab
 ---@param bDisableAnimation boolean
 function URSTTabMenuWidget:BP_SetActiveTab(Tab, bDisableAnimation) end
+
 ---@param Tab ERSTTabMenuTab
 function URSTTabMenuWidget:BP_OnTabInputPressed(Tab) end
-
 
 ---@class URSTTaggedDisplay : UUserWidget
 ---@field bUseConditionQuery boolean
@@ -13759,11 +16164,12 @@ function URSTTabMenuWidget:BP_OnTabInputPressed(Tab) end
 URSTTaggedDisplay = {}
 
 function URSTTaggedDisplay:RSTTaggedDisplayConditionCallback__DelegateSignature() end
+
 ---@param Tag FGameplayTag
 ---@param Count int32
 function URSTTaggedDisplay:OnTagsUpdated(Tag, Count) end
-function URSTTaggedDisplay:OnPlayerControllerPlayerStateChanged() end
 
+function URSTTaggedDisplay:OnPlayerControllerPlayerStateChanged() end
 
 ---@class URSTTargetingData : UPrimaryDataAsset
 ---@field TargetingRules TArray<FRSTTargetingRule>
@@ -13779,6 +16185,14 @@ URSTTargetingFilterTask_Tags = {}
 
 ---@class URSTTargetingSelectionTask_Trace : UTargetingSelectionTask_Trace
 URSTTargetingSelectionTask_Trace = {}
+
+
+---@class URSTTeamAgentGameplayEffectComponent : UGameplayEffectComponent
+---@field ApplicationTeamRequirements FRSTTeamAgentRequirements
+---@field OngoingTeamRequirements FRSTTeamAgentRequirements
+---@field RemovalTeamRequirements FRSTTeamAgentRequirements
+URSTTeamAgentGameplayEffectComponent = {}
+
 
 
 ---@class URSTTeamCompositionGEComponent : UGameplayEffectComponent
@@ -13797,7 +16211,6 @@ URSTTeamCompositionValidityCheck = {}
 
 function URSTTeamCompositionValidityCheck:OnTeamCompositionChanged() end
 
-
 ---@class URSTTeleportingRiftComponent : URSTGameStateComponent
 ---@field OnSelectedRiftChanged FRSTTeleportingRiftComponentOnSelectedRiftChanged
 ---@field SelectedRift TWeakObjectPtr<AActor>
@@ -13805,10 +16218,11 @@ URSTTeleportingRiftComponent = {}
 
 ---@param InSelectedRift AActor
 function URSTTeleportingRiftComponent:SetSelectedRift(InSelectedRift) end
+
 ---@param SelectedRift AActor
 function URSTTeleportingRiftComponent:RSTTeleportingRiftDelegate__DelegateSignature(SelectedRift) end
-function URSTTeleportingRiftComponent:OnRep_SelectedRift() end
 
+function URSTTeleportingRiftComponent:OnRep_SelectedRift() end
 
 ---@class URSTTickConditionWidgetExtension : UUserWidgetExtension
 ---@field OnTick FRSTTickConditionWidgetExtensionOnTick
@@ -13817,12 +16231,13 @@ URSTTickConditionWidgetExtension = {}
 
 ---@param bInShouldTick boolean
 function URSTTickConditionWidgetExtension:SetShouldTick(bInShouldTick) end
+
 ---@param MyGeometry FGeometry
 ---@param InDeltaTime float
 function URSTTickConditionWidgetExtension:RSTConditionalTickWidgetTick__DelegateSignature(MyGeometry, InDeltaTime) end
+
 ---@param bNewTickStatus boolean
 function URSTTickConditionWidgetExtension:RSTConditionalTickWidgetStatusChanged__DelegateSignature(bNewTickStatus) end
-
 
 ---@class URSTTransitionAction : UObject
 ---@field bServerSync boolean
@@ -13832,17 +16247,25 @@ URSTTransitionAction = {}
 
 ---@param bInShouldTick boolean
 function URSTTransitionAction:SetShouldTick(bInShouldTick) end
+
 function URSTTransitionAction:ResourcesPrepared() end
+
 ---@param DeltaTime float
 function URSTTransitionAction:K2_Tick(DeltaTime) end
-function URSTTransitionAction:K2_PrepareResources() end
-function URSTTransitionAction:K2_FastForwardAction() end
-function URSTTransitionAction:K2_CleanUpAction() end
-function URSTTransitionAction:K2_CancelAction() end
-function URSTTransitionAction:K2_BeginAction() end
-function URSTTransitionAction:CleanUpFinished() end
-function URSTTransitionAction:ActionFinished() end
 
+function URSTTransitionAction:K2_PrepareResources() end
+
+function URSTTransitionAction:K2_FastForwardAction() end
+
+function URSTTransitionAction:K2_CleanUpAction() end
+
+function URSTTransitionAction:K2_CancelAction() end
+
+function URSTTransitionAction:K2_BeginAction() end
+
+function URSTTransitionAction:CleanUpFinished() end
+
+function URSTTransitionAction:ActionFinished() end
 
 ---@class URSTTransitionManagerComponent : UActorComponent
 ---@field OnAnyTransitionStarted FRSTTransitionManagerComponentOnAnyTransitionStarted
@@ -13857,24 +16280,31 @@ URSTTransitionManagerComponent = {}
 ---@param TransitionTag FGameplayTag
 ---@param FinishedDelegate FStartTransitionFinishedDelegate
 function URSTTransitionManagerComponent:StartTransition(TransitionTag, FinishedDelegate) end
+
 ---@param Tag FGameplayTag
 function URSTTransitionManagerComponent:OnTransitionLoaded(Tag) end
+
 ---@param Action URSTTransitionAction
 function URSTTransitionManagerComponent:OnResourcesPrepared(Action) end
+
 function URSTTransitionManagerComponent:OnRep_ServerState() end
+
 ---@param Action URSTTransitionAction
 function URSTTransitionManagerComponent:OnCleanedUp(Action) end
+
 ---@param Action URSTTransitionAction
 function URSTTransitionManagerComponent:OnActionFinished(Action) end
+
 ---@param Identifier FGameplayTag
 ---@return boolean
 function URSTTransitionManagerComponent:HasTransition(Identifier) end
+
 ---@return boolean
 function URSTTransitionManagerComponent:HasCurrentTransition() end
+
 ---@param Tags FGameplayTagContainer
 ---@return boolean
 function URSTTransitionManagerComponent:HasAdditionalTags(Tags) end
-
 
 ---@class URSTTransitionSequenceData : UPrimaryDataAsset
 ---@field Steps TArray<FRSTTransitionStep>
@@ -13893,7 +16323,7 @@ URSTTrapChargeGameplayEffectComponent = {}
 
 
 ---@class URSTTrapDefinition : UPrimaryDataAsset
----@field AbilitySets TArray<URSTAbilitySet>
+---@field AbilitySets TArray<TSoftObjectPtr<URSTAbilitySet>>
 ---@field Identifier FGameplayTag
 ---@field FamilyTags FGameplayTagContainer
 ---@field ActivationCue FGameplayTag
@@ -13921,7 +16351,6 @@ URSTTrapDefinition = {}
 ---@return TArray<FGameplayTag>
 function URSTTrapDefinition:GetStatTags() end
 
-
 ---@class URSTTrapGridBoxComponent : UBoxComponent
 ---@field TrapGridRevealPlane UStaticMeshComponent
 ---@field TrapPlacementTypes uint8
@@ -13931,13 +16360,22 @@ URSTTrapGridBoxComponent = {}
 
 
 ---@class URSTTrapGridDecoratorSubsystem : UWorldSubsystem
+---@field CorruptionVolumes TArray<ARSTCorruptedTrapGridsVolume>
+---@field BlessingVolumes TArray<ARSTBlessingTrapGridsVolume>
 ---@field bHasCorruptedTrapGrid boolean
 ---@field bHasBlessingTrapGrid boolean
+---@field bHasActivatedTrapGrids boolean
 URSTTrapGridDecoratorSubsystem = {}
 
 function URSTTrapGridDecoratorSubsystem:OnLevelLoaded_Blessing() end
+
 ---@param LevelName FString
 function URSTTrapGridDecoratorSubsystem:BP_BlessingLoadStreamingLevel(LevelName) end
+
+---@class URSTTrapGridDecoratorSubsystemSettings : UDeveloperSettingsBackedByCVars
+---@field TrapGridDecoratorSubsystemClass TSubclassOf<URSTTrapGridDecoratorSubsystem>
+URSTTrapGridDecoratorSubsystemSettings = {}
+
 
 
 ---@class URSTTrapLimitComponent : UPlayerStateComponent
@@ -13950,32 +16388,41 @@ URSTTrapLimitComponent = {}
 
 ---@param PlayerState ARSTPlayerState
 function URSTTrapLimitComponent:RSTTrapPlacementLimitsChanged__DelegateSignature(PlayerState) end
+
 ---@param Channel FGameplayTag
 ---@param Payload FRSTGameplayMessageData_TrapPlacedOrDestroyed
 function URSTTrapLimitComponent:OnTrapPlacedOrDestroyed(Channel, Payload) end
+
 ---@param Trap ARSTTrap
 function URSTTrapLimitComponent:OnTrapDestroyed(Trap) end
+
 function URSTTrapLimitComponent:OnRep_GroupPenalties() end
+
 function URSTTrapLimitComponent:OnRep_GroupBonus() end
+
 ---@param GameState ARSTGameStateBase
 function URSTTrapLimitComponent:OnCurrentWaveChanged(GameState) end
+
 ---@param PlacementLimitGroup FGameplayTag
 ---@param OutPlacementLimit int32
 ---@return boolean
 function URSTTrapLimitComponent:GetPlacementLimit(PlacementLimitGroup, OutPlacementLimit) end
+
 ---@param PlacementLimitGroup FGameplayTag
 ---@return int32
 function URSTTrapLimitComponent:GetPlacementCount(PlacementLimitGroup) end
+
 ---@param PlayerState APlayerState
 ---@return URSTTrapLimitComponent
 function URSTTrapLimitComponent:FindTrapLimitComponent(PlayerState) end
+
 ---@param PlacementLimitGroup FGameplayTag
 ---@param Penalty int32
 function URSTTrapLimitComponent:AddPlacementGroupPenalty(PlacementLimitGroup, Penalty) end
+
 ---@param PlacementLimitGroup FGameplayTag
 ---@param Bonus int32
 function URSTTrapLimitComponent:AddPlacementGroupBonus(PlacementLimitGroup, Bonus) end
-
 
 ---@class URSTTrapPlacementBlueprintLibrary : UBlueprintFunctionLibrary
 URSTTrapPlacementBlueprintLibrary = {}
@@ -13983,7 +16430,6 @@ URSTTrapPlacementBlueprintLibrary = {}
 ---@param Pawn APawn
 ---@return URSTTrapPlacementComponent
 function URSTTrapPlacementBlueprintLibrary:GetTrapPlacementComponent(Pawn) end
-
 
 ---@class URSTTrapPlacementComponent : UPawnComponent
 ---@field PropertyMappings FRSTInheritableGameplayTagPropertyMap
@@ -14005,16 +16451,21 @@ URSTTrapPlacementComponent = {}
 
 ---@param Trap ARSTTrap
 function URSTTrapPlacementComponent:TrapPlacedDelegate__DelegateSignature(Trap) end
+
 ---@param Trap ARSTTrap
 ---@param Transform FTransform
 ---@param FailureReason ERSTTrapPlacementFailureReason
 ---@param bIsValid boolean
 ---@param bHasEnoughCoin boolean
 ---@param bHasReachedPlacementLimit boolean
-function URSTTrapPlacementComponent:Server_UpdatePendingTrap(Trap, Transform, FailureReason, bIsValid, bHasEnoughCoin, bHasReachedPlacementLimit) end
+function URSTTrapPlacementComponent:Server_UpdatePendingTrap(Trap, Transform, FailureReason, bIsValid, bHasEnoughCoin,
+                                                             bHasReachedPlacementLimit) end
+
 function URSTTrapPlacementComponent:Server_SetNextTrapFree() end
+
 ---@param Trap ARSTTrap
 function URSTTrapPlacementComponent:Server_EndedTrapPlacement(Trap) end
+
 ---@param Trap ARSTTrap
 ---@param InInventoryItem ARSTInventoryItemInstance_Trap
 ---@param Transform FTransform
@@ -14022,38 +16473,50 @@ function URSTTrapPlacementComponent:Server_EndedTrapPlacement(Trap) end
 ---@param MainTrapGrid ARSTTrapGrid
 ---@param SeamedTrapGrids TArray<ARSTTrapGrid>
 ---@param PredictionKey FPredictionKey
-function URSTTrapPlacementComponent:Server_ConfirmTrapPlacement(Trap, InInventoryItem, Transform, BoxComponent, MainTrapGrid, SeamedTrapGrids, PredictionKey) end
+function URSTTrapPlacementComponent:Server_ConfirmTrapPlacement(Trap, InInventoryItem, Transform, BoxComponent,
+                                                                MainTrapGrid, SeamedTrapGrids, PredictionKey) end
+
 ---@param bReverse boolean
 function URSTTrapPlacementComponent:RotateTrap(bReverse) end
+
 ---@param Trap ARSTTrap
 ---@param FailureReason ERSTTrapPlacementFailureReason
 function URSTTrapPlacementComponent:PlacementFailureDelegate__DelegateSignature(Trap, FailureReason) end
+
 ---@param NetworkedActor ARNetworkProxyActor
 ---@param ReplacedTrap ARSTTrap
 function URSTTrapPlacementComponent:OnReplacementActorSpawned(NetworkedActor, ReplacedTrap) end
+
 ---@param GameState ARSTGameStateBase
 function URSTTrapPlacementComponent:OnCurrentWaveChanged(GameState) end
+
 ---@param PlacementLimitGroup FGameplayTag
 ---@return boolean
 function URSTTrapPlacementComponent:HasReachedPlacementLimit(PlacementLimitGroup) end
+
 ---@param InInventoryItem ARSTInventoryItemInstance
 ---@return boolean
 function URSTTrapPlacementComponent:HasEnoughCoinForTrap(InInventoryItem) end
+
 ---@return boolean
 function URSTTrapPlacementComponent:HasEnoughCoin() end
+
 ---@return boolean
 function URSTTrapPlacementComponent:HasAnyUnusedFreeTrapDiscount() end
+
 ---@return float
 function URSTTrapPlacementComponent:GetTrapRotation() end
+
 ---@param InInventoryItem ARSTInventoryItemInstance_Trap
 ---@return int32
 function URSTTrapPlacementComponent:GetPlacementCost(InInventoryItem) end
+
 ---@param Pawn APawn
 ---@return URSTTrapPlacementComponent
 function URSTTrapPlacementComponent:FindTrapPlacementComponent(Pawn) end
+
 ---@return boolean
 function URSTTrapPlacementComponent:CanSellTrap() end
-
 
 ---@class URSTTriggerInstigatorComponent : UActorComponent
 URSTTriggerInstigatorComponent = {}
@@ -14086,49 +16549,62 @@ URSTUIExtensions = {}
 ---@param RSTActivatableWidget URSTActivatableWidget
 ---@param bBypassAnimations boolean
 function URSTUIExtensions:RSTPopContentFromLayer(RSTActivatableWidget, bBypassAnimations) end
+
 ---@param WorldContextObject UObject
 ---@param layerToRemove FGameplayTag
 function URSTUIExtensions:RemoveAllWidgetsFromLayer(WorldContextObject, layerToRemove) end
+
 ---@param WorldContextObject UObject
 ---@param LayerTags FGameplayTagContainer
 ---@return int32
 function URSTUIExtensions:GetWidgetCountFromLayers(WorldContextObject, LayerTags) end
+
 ---@param WorldContextObject UObject
 ---@param LayerTag FGameplayTag
 ---@return int32
 function URSTUIExtensions:GetWidgetCountFromLayer(WorldContextObject, LayerTag) end
+
 ---@param CommonInputSubsystem UCommonInputSubsystem
 ---@param KeyToUse FKey
 ---@param InputType ECommonInputType
 ---@param GamepadName FName
 ---@return FSlateBrush
 function URSTUIExtensions:GetTextureForActionForInputType(CommonInputSubsystem, KeyToUse, InputType, GamepadName) end
+
 ---@param PlayerController APlayerController
 ---@return URSTPrimaryGameLayout
 function URSTUIExtensions:GetPrimaryGameLayoutForController(PlayerController) end
+
 ---@param WorldContextObject UObject
 ---@return URSTPrimaryGameLayout
 function URSTUIExtensions:GetPrimaryGameLayout(WorldContextObject) end
+
 ---@param GivenMapping FEnhancedActionKeyMapping
 ---@return UPlayerMappableKeySettings
 function URSTUIExtensions:GetPlayerMappableKeySettingsRespectOverride(GivenMapping) end
+
 ---@param Widget UCommonActivatableWidget
 ---@return FGameplayTag
 function URSTUIExtensions:GetLayerFromWidget(Widget) end
+
 ---@param WorldContextObject UObject
 ---@param PlayerController ARSTPlayerController
 ---@return boolean
 function URSTUIExtensions:GetIsHostPlayerController(WorldContextObject, PlayerController) end
+
 ---@param WorldContextObject UObject
 ---@return URSTGameStatePRSComponent
 function URSTUIExtensions:GetGameStatePRSComponent(WorldContextObject) end
+
 ---@param WorldContextObject UObject
 ---@param LayerTag FGameplayTag
 ---@return TArray<UCommonActivatableWidget>
 function URSTUIExtensions:GetAllWidgetsFromLayer(WorldContextObject, LayerTag) end
+
 ---@param WorldContextObject UObject
 ---@return TArray<UCommonActivatableWidget>
 function URSTUIExtensions:GetAllWidgets(WorldContextObject) end
+
 ---@param LocalPlayer ULocalPlayer
 ---@param textTitle FText
 ---@param textDescription FText
@@ -14137,7 +16613,9 @@ function URSTUIExtensions:GetAllWidgets(WorldContextObject) end
 ---@param bShouldDisplayCloseButton boolean
 ---@param delegateOnModalComplete FCreateModal_VideoDelegateOnModalComplete
 ---@return URSTModal_Video
-function URSTUIExtensions:CreateModal_Video(LocalPlayer, textTitle, textDescription, VideoDefinition, BinkMediaPlayer, bShouldDisplayCloseButton, delegateOnModalComplete) end
+function URSTUIExtensions:CreateModal_Video(LocalPlayer, textTitle, textDescription, VideoDefinition, BinkMediaPlayer,
+                                            bShouldDisplayCloseButton, delegateOnModalComplete) end
+
 ---@param LocalPlayer ULocalPlayer
 ---@param textTitle FText
 ---@param textDescription FText
@@ -14146,7 +16624,9 @@ function URSTUIExtensions:CreateModal_Video(LocalPlayer, textTitle, textDescript
 ---@param delegateOne FCreateModal_TwoChoicesDelegateOne
 ---@param delegateTwo FCreateModal_TwoChoicesDelegateTwo
 ---@return URSTModal_TwoChoices
-function URSTUIExtensions:CreateModal_TwoChoices(LocalPlayer, textTitle, textDescription, actionOneText, actionTwoText, delegateOne, delegateTwo) end
+function URSTUIExtensions:CreateModal_TwoChoices(LocalPlayer, textTitle, textDescription, actionOneText, actionTwoText,
+                                                 delegateOne, delegateTwo) end
+
 ---@param LocalPlayer ULocalPlayer
 ---@param textTitle FText
 ---@param textDescription FText
@@ -14158,7 +16638,10 @@ function URSTUIExtensions:CreateModal_TwoChoices(LocalPlayer, textTitle, textDes
 ---@param delegateOne FCreateModal_TextPromptDelegateOne
 ---@param delegateTwo FCreateModal_TextPromptDelegateTwo
 ---@return URSTModal_TextPrompt
-function URSTUIExtensions:CreateModal_TextPrompt(LocalPlayer, textTitle, textDescription, HintText, actionOneText, actionTwoText, CharacterLimit, bIsPasswordField, delegateOne, delegateTwo) end
+function URSTUIExtensions:CreateModal_TextPrompt(LocalPlayer, textTitle, textDescription, HintText, actionOneText,
+                                                 actionTwoText, CharacterLimit, bIsPasswordField, delegateOne,
+                                                 delegateTwo) end
+
 ---@param LocalPlayer ULocalPlayer
 ---@param textTitle FText
 ---@param textDescription FText
@@ -14166,13 +16649,6 @@ function URSTUIExtensions:CreateModal_TextPrompt(LocalPlayer, textTitle, textDes
 ---@param delegateOne FCreateModal_OneChoiceDelegateOne
 ---@return URSTModal_OneChoice
 function URSTUIExtensions:CreateModal_OneChoice(LocalPlayer, textTitle, textDescription, actionOneText, delegateOne) end
----@param LocalPlayer ULocalPlayer
----@param textTitle FText
----@param textDescription FText
----@param delegateOnRemap FCreateModal_KeyRemapDelegateOnRemap
----@return URSTModal_KeyMapping
-function URSTUIExtensions:CreateModal_KeyRemap(LocalPlayer, textTitle, textDescription, delegateOnRemap) end
-
 
 ---@class URSTUIManagerSubsystem : UGameUIManagerSubsystem
 ---@field CurrentSpellbookOperation URSTSpellbookOperation
@@ -14189,9 +16665,9 @@ URSTUltimateChargeAttributeSet = {}
 
 ---@param OldValue FGameplayAttributeData
 function URSTUltimateChargeAttributeSet:OnRep_UltimateCharge(OldValue) end
+
 ---@param OldValue FGameplayAttributeData
 function URSTUltimateChargeAttributeSet:OnRep_MaxUltimateCharge(OldValue) end
-
 
 ---@class URSTUpgradeDefinition : UPrimaryDataAsset
 ---@field UpgradeTag FGameplayTag
@@ -14205,7 +16681,6 @@ URSTUpgradeDefinition = {}
 ---@param SelectedHeroTag FGameplayTag
 ---@return boolean
 function URSTUpgradeDefinition:IsValidFor(SelectedHeroTag) end
-
 
 ---@class URSTUpgradeSubsystem : UGameInstanceSubsystem
 ---@field UpgradeTreeRoots TArray<URSTUpgradeDefinition>
@@ -14228,33 +16703,47 @@ URSTUpgradeSubsystem = {}
 ---@param PlayerId FUniqueNetIdRepl
 ---@param Upgrade URSTUpgradeDefinition
 function URSTUpgradeSubsystem:RSTUpgradeChange__DelegateSignature(PlayerId, Upgrade) end
+
 ---@param SelectedUpgrade URSTUpgradeDefinition
 ---@return boolean
 function URSTUpgradeSubsystem:IsUnlocked(SelectedUpgrade) end
+
 ---@param PlayerState ARSTPlayerState
 function URSTUpgradeSubsystem:InitializeUpgrades(PlayerState) end
+
 ---@param UpgradeQuery FGameplayTagQuery
 ---@return boolean
 function URSTUpgradeSubsystem:HasUpgradesForQuery(UpgradeQuery) end
+
 ---@param SelectedUpgrade URSTUpgradeDefinition
 ---@return TArray<URSTUpgradeDefinition>
 function URSTUpgradeSubsystem:GetUpgradePathTo(SelectedUpgrade) end
+
 ---@param PlayerState APlayerState
 ---@return int32
 function URSTUpgradeSubsystem:GetUpgradeCountForPlayer(PlayerState) end
+
 ---@param SelectedUpgrade URSTUpgradeUserFacingData
 ---@param CurrentLevel int32
 ---@param MaxLevel int32
 function URSTUpgradeSubsystem:GetUnlockTier(SelectedUpgrade, CurrentLevel, MaxLevel) end
+
 ---@param ChosenUpgrade URSTUpgradeDefinition
 ---@return int32
 function URSTUpgradeSubsystem:GetSkullCost(ChosenUpgrade) end
+
 ---@param SelectingPlayerController ARSTPlayerController
 ---@param ChosenUpgrade URSTUpgradeDefinition
 function URSTUpgradeSubsystem:ChooseUpgrade(SelectingPlayerController, ChosenUpgrade) end
+
 ---@param SelectedUpgrade URSTUpgradeDefinition
 ---@return boolean
 function URSTUpgradeSubsystem:CanBeUnlocked(SelectedUpgrade) end
+
+---@class URSTUpgradeSubsystemSettings : UDeveloperSettingsBackedByCVars
+---@field UpgradeSubsystemClass TSubclassOf<URSTUpgradeSubsystem>
+URSTUpgradeSubsystemSettings = {}
+
 
 
 ---@class URSTUpgradeUserFacingData : UPrimaryDataAsset
@@ -14287,17 +16776,21 @@ URSTUserFacingExperienceDef = {}
 URSTUserWidget = {}
 
 function URSTUserWidget:RSTWidgetInputActionDelegate__DelegateSignature() end
+
 function URSTUserWidget:RemoveFromParentPostAnimation() end
+
 ---@param Action UInputAction
 ---@param Delegate FRegisterInputActionDelegate
 ---@param ReleasedDelegate FRegisterInputActionReleasedDelegate
 function URSTUserWidget:RegisterInputAction(Action, Delegate, ReleasedDelegate) end
+
 function URSTUserWidget:BP_SynchronizeProperties() end
+
 ---@return UWidgetAnimation
 function URSTUserWidget:BP_GetOnShowAnimation() end
+
 ---@return UWidgetAnimation
 function URSTUserWidget:BP_GetOnHideAnimation() end
-
 
 ---@class URSTVerbMessageHelpers : UBlueprintFunctionLibrary
 URSTVerbMessageHelpers = {}
@@ -14305,20 +16798,23 @@ URSTVerbMessageHelpers = {}
 ---@param Message FRSTVerbMessage
 ---@return FGameplayCueParameters
 function URSTVerbMessageHelpers:VerbMessageToCueParameters(Message) end
+
 ---@param Object UObject
 ---@return APlayerState
 function URSTVerbMessageHelpers:GetPlayerStateFromObject(Object) end
+
 ---@param Object UObject
 ---@return APlayerController
 function URSTVerbMessageHelpers:GetPlayerControllerFromObject(Object) end
+
 ---@param Message FRSTDamageMessage
 ---@param bOutSuccess boolean
 ---@return UGameplayAbility
 function URSTVerbMessageHelpers:GetAbilityFromDamageMessage(Message, bOutSuccess) end
+
 ---@param Params FGameplayCueParameters
 ---@return FRSTVerbMessage
 function URSTVerbMessageHelpers:CueParametersToVerbMessage(Params) end
-
 
 ---@class URSTVideoDefinition : UPrimaryDataAsset
 ---@field VideoIdentifier FGameplayTag
@@ -14338,47 +16834,62 @@ URSTVoiceChatFunctionLibrary = {}
 ---@param LocalPlayer ULocalPlayer
 ---@param MutedPlayer APlayerState
 function URSTVoiceChatFunctionLibrary:ToggleMutePlayer(LocalPlayer, MutedPlayer) end
+
 ---@param LocalPlayer ULocalPlayer
 ---@param MutedPlayer APlayerState
 function URSTVoiceChatFunctionLibrary:ToggleBlockPlayer(LocalPlayer, MutedPlayer) end
+
 ---@param LocalPlayer ULocalPlayer
 ---@param MutedPlayer APlayerState
 ---@param bMutePlayer boolean
 function URSTVoiceChatFunctionLibrary:SetMutePlayer(LocalPlayer, MutedPlayer, bMutePlayer) end
+
 ---@param LocalPlayer ULocalPlayer
 ---@param MutedPlayer APlayerState
 ---@param bMutePlayer boolean
 function URSTVoiceChatFunctionLibrary:SetBlockPlayer(LocalPlayer, MutedPlayer, bMutePlayer) end
+
 ---@param LocalPlayer ULocalPlayer
 ---@return boolean
 function URSTVoiceChatFunctionLibrary:IsVoiceChatEnabled(LocalPlayer) end
+
 ---@param LocalPlayer ULocalPlayer
 ---@param PlayerToCheck APlayerState
 ---@return boolean
 function URSTVoiceChatFunctionLibrary:IsPlayerTalking(LocalPlayer, PlayerToCheck) end
+
 ---@param LocalPlayer ULocalPlayer
 ---@param MutedPlayer APlayerState
 ---@return boolean
 function URSTVoiceChatFunctionLibrary:IsPlayerMuted(LocalPlayer, MutedPlayer) end
+
 ---@param LocalPlayer ULocalPlayer
 ---@param PlayerToCheck APlayerState
 ---@return boolean
 function URSTVoiceChatFunctionLibrary:IsPlayerConnected(LocalPlayer, PlayerToCheck) end
+
 ---@param LocalPlayer ULocalPlayer
 ---@param MutedPlayer APlayerState
 ---@return boolean
 function URSTVoiceChatFunctionLibrary:IsPlayerBlocked(LocalPlayer, MutedPlayer) end
+
 ---@param LocalPlayer ULocalPlayer
 ---@param OutDeviceInfos TArray<FRSTVoiceChatDeviceInfo>
 function URSTVoiceChatFunctionLibrary:GetAvailableVoiceOutputDevices(LocalPlayer, OutDeviceInfos) end
+
 ---@param LocalPlayer ULocalPlayer
 ---@param OutDeviceInfos TArray<FRSTVoiceChatDeviceInfo>
 function URSTVoiceChatFunctionLibrary:GetAvailableVoiceInputDevices(LocalPlayer, OutDeviceInfos) end
+
 ---@param LocalPlayer ULocalPlayer
 ---@param PlayerToCheck APlayerState
 ---@return boolean
-function URSTVoiceChatFunctionLibrary:CanCommunicateWithPlayer(LocalPlayer, PlayerToCheck) end
+function URSTVoiceChatFunctionLibrary:CanCommunicateVoiceWithPlayer(LocalPlayer, PlayerToCheck) end
 
+---@param LocalPlayer ULocalPlayer
+---@param PlayerToCheck APlayerState
+---@return boolean
+function URSTVoiceChatFunctionLibrary:CanCommunicateTextWithPlayer(LocalPlayer, PlayerToCheck) end
 
 ---@class URSTWeaponCueNotify_Burst : UGameplayCueNotify_Burst
 ---@field BurstWeaponEvents TArray<FRSTAttachmentCueData>
@@ -14391,37 +16902,45 @@ URSTWidgetBlueprintLibrary = {}
 
 ---@return FString
 function URSTWidgetBlueprintLibrary:PasteFromClipboard() end
+
 ---@param LocalPlayer ULocalPlayer
 ---@param LayerName FGameplayTag
 ---@param WidgetClass TSubclassOf<UCommonActivatableWidget>
 ---@return UCommonActivatableWidget
 function URSTWidgetBlueprintLibrary:GetLayerWidgetByClass(LocalPlayer, LayerName, WidgetClass) end
+
 ---@param LocalPlayer ULocalPlayer
 ---@return URSTSpellbookOperation
 function URSTWidgetBlueprintLibrary:GetCurrentSpellbookOperation(LocalPlayer) end
+
 ---@return TArray<FString>
 function URSTWidgetBlueprintLibrary:GetCultureDisplayNames() end
+
 ---@param Name FString
 ---@return FString
 function URSTWidgetBlueprintLibrary:GetCultureCodeFromName(Name) end
+
 ---@param PlayerState APlayerState
 ---@param AvatarSize int32
 ---@return UTexture2D
 function URSTWidgetBlueprintLibrary:GetAvatar(PlayerState, AvatarSize) end
+
 ---@param LocalPlayer ULocalPlayer
 ---@param SpellbookOperation URSTSpellbookOperation
 ---@return boolean
 function URSTWidgetBlueprintLibrary:EndSpellbookOperation(LocalPlayer, SpellbookOperation) end
+
 ---@param LocalPlayer ULocalPlayer
 ---@return boolean
 function URSTWidgetBlueprintLibrary:EndCurrentSpellbookOperation(LocalPlayer) end
+
 ---@param ToClipboard FString
 function URSTWidgetBlueprintLibrary:CopyToClipboard(ToClipboard) end
+
 ---@param LocalPlayer ULocalPlayer
 ---@param InventoryItem ARSTInventoryItemInstance
 ---@return URSTSpellbookOperation
 function URSTWidgetBlueprintLibrary:BeginSpellbookOperation(LocalPlayer, InventoryItem) end
-
 
 ---@class URSTWidgetFactory : UObject
 URSTWidgetFactory = {}
@@ -14429,7 +16948,6 @@ URSTWidgetFactory = {}
 ---@param Data UObject
 ---@return TSubclassOf<UUserWidget>
 function URSTWidgetFactory:FindWidgetClassForData(Data) end
-
 
 ---@class URSTWidgetFactory_Class : URSTWidgetFactory
 ---@field EntryWidgetForClass TMap<TSoftClassPtr<UObject>, TSubclassOf<UUserWidget>>
@@ -14445,11 +16963,16 @@ URSTWidgetFactory_Class = {}
 ---@field JoiningRequestedMessageText FText
 ---@field ClientJoinedMessageText FText
 ---@field ClientJoiningPrivateMessageText FText
+---@field DefaultChatText FText
+---@field RecieverPrivateChatText FText
+---@field SenderPrivateChatText FText
 ---@field StringToToolTipDataMap TMap<FString, FRSTChatToolTipData>
 ---@field KeywordToolTipDataMap TMap<FString, FRSTKeywordToolTipData>
 ---@field KeywordWidget TSoftClassPtr<URSTKeywordTooltipWidget>
+---@field NewPlayerMessageSound USoundBase
 ---@field CreatedWidgets TMap<FString, FRSTCreatedTooltipWidget>
 ---@field CreatedKeywordWidgets TMap<FString, URSTKeywordTooltipWidget>
+---@field NewPlayerMessageAudioComponent UAudioComponent
 ---@field SpammingChatMessage FText
 ---@field MessageRechargeRate float
 ---@field MaxChatMessageCharges int32
@@ -14457,17 +16980,20 @@ URSTWorldChatSubsystem = {}
 
 ---@param ChatMessage FRSTChatMessage
 function URSTWorldChatSubsystem:RSTNewChatMessageDelegate__DelegateSignature(ChatMessage) end
+
 ---@return boolean
 function URSTWorldChatSubsystem:IsPlayerChatEnabled() end
+
 ---@param TextToCheck FText
 ---@return boolean
 function URSTWorldChatSubsystem:HasKeyTooltip(TextToCheck) end
+
 ---@param TrackedObjectIndex int32
 ---@return UObject
 function URSTWorldChatSubsystem:GetTrackedObjectFromIndex(TrackedObjectIndex) end
+
 ---@param RSTPlayerState ARSTPlayerState
----@param Message FString
+---@param RawMessage FString
 ---@param bSanitize boolean
-function URSTWorldChatSubsystem:AddPlayerChatMessage(RSTPlayerState, Message, bSanitize) end
-
-
+---@param bIsPrivate boolean
+function URSTWorldChatSubsystem:AddPlayerChatMessage(RSTPlayerState, RawMessage, bSanitize, bIsPrivate) end

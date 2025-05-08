@@ -13,13 +13,16 @@
 ABP_Ultimate_Charging_Station_C = {}
 
 function ABP_Ultimate_Charging_Station_C:Timeline_0__FinishedFunc() end
+
 function ABP_Ultimate_Charging_Station_C:Timeline_0__UpdateFunc() end
+
 ---@param ActorInfo FGameplayAbilityActorInfo
 function ABP_Ultimate_Charging_Station_C:BP_OnInteract(ActorInfo) end
+
 ---@param Character ARSTCharacter
 function ABP_Ultimate_Charging_Station_C:ServerInteract(Character) end
+
 function ABP_Ultimate_Charging_Station_C:ReceiveBeginPlay() end
+
 ---@param EntryPoint int32
 function ABP_Ultimate_Charging_Station_C:ExecuteUbergraph_BP_Ultimate_Charging_Station(EntryPoint) end
-
-

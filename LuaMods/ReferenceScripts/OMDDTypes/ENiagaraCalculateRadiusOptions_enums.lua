@@ -5,4 +5,3 @@ ENiagaraCalculateRadiusOptions = {
     NewEnumerator2 = 2,
     ENiagaraCalculateRadiusOptions_MAX = 3,
 }
-

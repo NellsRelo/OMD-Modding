@@ -8,6 +8,3 @@
 ---@field SubCategoryHeading_15_F6EBA06941D30788CC14989999E6C63B boolean
 ---@field SuggestedEntries_19_9776F58E45A513F145D90BBE28516AA1 TArray<FName>
 FUDS_Readme_Entry = {}
-
-
-

@@ -6,6 +6,3 @@
 ---@field StatusEffectDamage double
 ---@field ['Critical Hit Chance'] double
 ABP_Beehive_ItemInstance_C = {}
-
-
-

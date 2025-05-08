@@ -41,6 +41,3 @@
 ---@field MeshDeformCenterLevel_135_D94322934BFA5C635C0D2BA54E37A086 double
 ---@field MeshDeformTextureOffset_132_F11E46C5458E2C4E5B3ABB8E3C2E6B45 FVector
 FUDS_Space_Planet = {}
-
-
-

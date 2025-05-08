@@ -79,6 +79,3 @@
 ---@field Box UBoxComponent
 ---@field RSTTrapGridBox URSTTrapGridBoxComponent
 ABP_CastlePlaza_Tower_B_Vista_C = {}
-
-
-

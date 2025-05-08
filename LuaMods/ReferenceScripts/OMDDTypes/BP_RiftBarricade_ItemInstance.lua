@@ -4,6 +4,3 @@
 ---@field BuffAmount double
 ---@field MaxHealth double
 ABP_RiftBarricade_ItemInstance_C = {}
-
-
-

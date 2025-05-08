@@ -50,6 +50,3 @@
 ---@field Geo USceneComponent
 ---@field TrapGrid USceneComponent
 ABP_Crane_2x2_Pallet_C = {}
-
-
-

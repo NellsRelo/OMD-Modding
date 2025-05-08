@@ -89,6 +89,3 @@
 ---@field Drawbridge_SM4_StaticMeshComponent0 UStaticMeshComponent
 ---@field SharedRoot USceneComponent
 ABP_Patio_Bridge_C = {}
-
-
-

@@ -12,6 +12,3 @@
 ---@field TrapGrid USceneComponent
 ---@field Geo USceneComponent
 ABP_Railing_4x1_Wood_C = {}
-
-
-

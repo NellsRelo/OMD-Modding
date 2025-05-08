@@ -18,6 +18,3 @@
 ---@field Hub_Blacksmith_ForgeBase_A_SM UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Hub_Blacksmith_Forge_C = {}
-
-
-

@@ -136,6 +136,3 @@
 ---@field TrapGrid USceneComponent
 ---@field Geo USceneComponent
 ABP_BackAlley_Market_CutDown_C = {}
-
-
-

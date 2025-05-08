@@ -9,6 +9,5 @@ UGA_Blunderbuss_Pet_TargetAcquisition_Ultimate_C = {}
 ---@param CurrentValue float
 ---@param OutEvalValue float
 ---@return boolean
-function UGA_Blunderbuss_Pet_TargetAcquisition_Ultimate_C:BP_IsBetterTarget(Actor, CurrentTarget, CurrentValue, OutEvalValue) end
-
-
+function UGA_Blunderbuss_Pet_TargetAcquisition_Ultimate_C:BP_IsBetterTarget(Actor, CurrentTarget, CurrentValue,
+                                                                            OutEvalValue) end

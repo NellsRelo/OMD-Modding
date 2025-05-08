@@ -1,8 +1,7 @@
 ---@meta
 
 ---@class ABP_Torch_FreeStand_C : AActor
----@field Lighting_Torch_FreeStand_Union UStaticMeshComponent
----@field WallTorch_Log UStaticMeshComponent
+---@field Lighting_Torch_Wood_FreeStand UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ---@field StaticLightColorDefault FLinearColor
 ---@field MoveableLightColorDefault FLinearColor
@@ -14,6 +13,3 @@
 ---@field WallBaseVisible boolean
 ---@field WallBaseNotVisible boolean
 ABP_Torch_FreeStand_C = {}
-
-
-

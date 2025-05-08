@@ -13,8 +13,6 @@
 ---@field ['Exclude Actors from Occlusion'] TArray<AActor>
 AWeather_Mask_Projection_Box_C = {}
 
-AWeather_Mask_Projection_Box_C['📘 Weather Mask Tools'] = function() end
-AWeather_Mask_Projection_Box_C['Force Update'] = function() end
+AWeather_Mask_Projection_Box_C['📘 Weather Mask Tools'] = function(self,) end
+AWeather_Mask_Projection_Box_C['Force Update'] = function(self,) end
 function AWeather_Mask_Projection_Box_C:UserConstructionScript() end
-
-

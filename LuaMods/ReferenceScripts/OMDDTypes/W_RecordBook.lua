@@ -15,18 +15,23 @@ UW_RecordBook_C = {}
 ---@param bStackActive boolean
 ---@return UWidgetAnimation
 function UW_RecordBook_C:BP_GetOnHideAnimation(bStackActive) end
+
 ---@param bStackActive boolean
 ---@return UWidgetAnimation
 function UW_RecordBook_C:BP_GetOnShowAnimation(bStackActive) end
+
 ---@return UWidget
 function UW_RecordBook_C:BP_GetDesiredFocusTarget() end
+
 ---@param NPC ABP_NPCInteractable_C
 function UW_RecordBook_C:OnWidgetOpened(NPC) end
-UW_RecordBook_C['BndEvt__W_RecordBook_W_ExitMenuButton_K2Node_ComponentBoundEvent_0_On Button Clicked__DelegateSignature'] = function() end
+
+UW_RecordBook_C['BndEvt__W_RecordBook_W_ExitMenuButton_K2Node_ComponentBoundEvent_0_On Button Clicked__DelegateSignature'] = function(
+    self,) end
 function UW_RecordBook_C:Construct() end
+
 ---@param Index int32
-UW_RecordBook_C['BndEvt__W_RecordBook_W_TopBar_Generic_K2Node_ComponentBoundEvent_1_On Tab Selected__DelegateSignature'] = function(Index) end
+UW_RecordBook_C['BndEvt__W_RecordBook_W_TopBar_Generic_K2Node_ComponentBoundEvent_1_On Tab Selected__DelegateSignature'] = function(
+    self, Index) end
 ---@param EntryPoint int32
 function UW_RecordBook_C:ExecuteUbergraph_W_RecordBook(EntryPoint) end
-
-

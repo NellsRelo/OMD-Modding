@@ -21,6 +21,3 @@
 ---@field Geometry USceneComponent
 ---@field TrapGrid USceneComponent
 ABP_Garden_Wall_2x4_B_Merged_C = {}
-
-
-

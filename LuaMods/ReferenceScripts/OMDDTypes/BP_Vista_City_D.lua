@@ -118,6 +118,3 @@
 ---@field Wall_2_2_FB9 UStaticMeshComponent
 ---@field Geo USceneComponent
 ABP_Vista_City_D_C = {}
-
-
-

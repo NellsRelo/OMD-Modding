@@ -12,6 +12,4 @@
 ---@field ['Color Property Values'] TArray<FLinearColor>
 UUDS_Modifier_C = {}
 
-UUDS_Modifier_C['Parse Maps into Arrays'] = function() end
-
-
+UUDS_Modifier_C['Parse Maps into Arrays'] = function(self,) end

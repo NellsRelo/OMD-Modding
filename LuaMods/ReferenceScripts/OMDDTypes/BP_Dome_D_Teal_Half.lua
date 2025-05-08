@@ -21,6 +21,3 @@
 ---@field Proto_Dome_D_Tile UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Dome_D_Teal_Half_C = {}
-
-
-

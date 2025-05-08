@@ -170,6 +170,3 @@
 ---@field Collision USceneComponent
 ---@field Geometry USceneComponent
 ABP_BackAlley_Waterworks_Vista_Wall__C = {}
-
-
-

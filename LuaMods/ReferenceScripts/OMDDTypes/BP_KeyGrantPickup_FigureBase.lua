@@ -6,6 +6,3 @@
 ---@field SpotLight USpotLightComponent
 ---@field WeaponMesh USkeletalMeshComponent
 ABP_KeyGrantPickup_FigureBase_C = {}
-
-
-

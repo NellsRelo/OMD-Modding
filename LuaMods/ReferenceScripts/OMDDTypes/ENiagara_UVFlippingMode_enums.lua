@@ -7,4 +7,3 @@ ENiagara_UVFlippingMode = {
     NewEnumerator4 = 4,
     ENiagara_MAX = 5,
 }
-

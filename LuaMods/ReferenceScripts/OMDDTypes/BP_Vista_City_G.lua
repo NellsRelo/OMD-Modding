@@ -75,6 +75,3 @@
 ---@field ['Wall_2x2_Wainscot_WhiteBrick-Wood_SM'] UStaticMeshComponent
 ---@field Geo USceneComponent
 ABP_Vista_City_G_C = {}
-
-
-

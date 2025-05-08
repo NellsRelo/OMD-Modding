@@ -9,6 +9,3 @@
 ---@field Wall_2_2_FB UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 AStairPlatform_Small_C = {}
-
-
-

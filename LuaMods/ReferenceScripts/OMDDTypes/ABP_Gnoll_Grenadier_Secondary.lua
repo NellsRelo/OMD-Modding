@@ -43,8 +43,8 @@ UABP_Gnoll_Grenadier_Secondary_C = {}
 ---@param InPose FPoseLink
 ---@param AnimGraph FPoseLink
 function UABP_Gnoll_Grenadier_Secondary_C:AnimGraph(InPose, AnimGraph) end
+
 function UABP_Gnoll_Grenadier_Secondary_C:BlueprintBeginPlay() end
+
 ---@param EntryPoint int32
 function UABP_Gnoll_Grenadier_Secondary_C:ExecuteUbergraph_ABP_Gnoll_Grenadier_Secondary(EntryPoint) end
-
-

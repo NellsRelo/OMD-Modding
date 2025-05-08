@@ -4,6 +4,3 @@
 ---@field WallTile_2x4_Sewer_SM UStaticMeshComponent
 ---@field trap_wall URSTTrapGridBoxComponent
 ABP_WallTile_2x4_Sewer_C = {}
-
-
-

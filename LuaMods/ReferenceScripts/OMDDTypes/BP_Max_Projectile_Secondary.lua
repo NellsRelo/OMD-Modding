@@ -7,8 +7,6 @@
 ABP_Max_Projectile_Secondary_C = {}
 
 ---@param Target_Data FGameplayAbilityTargetDataHandle
-ABP_Max_Projectile_Secondary_C['Process AOE Targets'] = function(Target_Data) end
+ABP_Max_Projectile_Secondary_C['Process AOE Targets'] = function(self, Target_Data) end
 ---@param EntryPoint int32
 function ABP_Max_Projectile_Secondary_C:ExecuteUbergraph_BP_Max_Projectile_Secondary(EntryPoint) end
-
-

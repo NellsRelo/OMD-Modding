@@ -37,9 +37,9 @@ UAnimationCompressionLibraryDatabase = {}
 ---@param DatabaseAsset UAnimationCompressionLibraryDatabase
 ---@param Result ACLVisualFidelityChangeResult
 ---@param VisualFidelity ACLVisualFidelity
-function UAnimationCompressionLibraryDatabase:SetVisualFidelity(WorldContextObject, LatentInfo, DatabaseAsset, Result, VisualFidelity) end
+function UAnimationCompressionLibraryDatabase:SetVisualFidelity(WorldContextObject, LatentInfo, DatabaseAsset, Result,
+                                                                VisualFidelity) end
+
 ---@param DatabaseAsset UAnimationCompressionLibraryDatabase
 ---@return ACLVisualFidelity
 function UAnimationCompressionLibraryDatabase:GetVisualFidelity(DatabaseAsset) end
-
-

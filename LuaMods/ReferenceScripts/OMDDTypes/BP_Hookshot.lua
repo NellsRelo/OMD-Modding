@@ -20,31 +20,45 @@
 ABP_Hookshot_C = {}
 
 function ABP_Hookshot_C:OnRep_bCooldownActive() end
+
 ---@param OtherActor AActor
 ---@return boolean
 function ABP_Hookshot_C:IsValidTarget(OtherActor) end
+
 ---@param Pitch double
 ---@param Yaw double
 function ABP_Hookshot_C:GetTargetRotation(Pitch, Yaw) end
+
 ---@return boolean
 function ABP_Hookshot_C:HasValidTarget() end
+
 ---@param OutLocation FVector
 ---@param OutRotation FRotator
 function ABP_Hookshot_C:BP_GetActorEyesViewPoint(OutLocation, OutRotation) end
+
 function ABP_Hookshot_C:UpdateTarget() end
+
 function ABP_Hookshot_C:UserConstructionScript() end
+
 function ABP_Hookshot_C:EnablePerception() end
+
 function ABP_Hookshot_C:ReceiveBeginPlay() end
+
 function ABP_Hookshot_C:BP_IsBeingPlacedChanged() end
+
 ---@param DeltaSeconds float
 function ABP_Hookshot_C:ReceiveTick(DeltaSeconds) end
+
 ---@param DeltaSeconds double
 function ABP_Hookshot_C:UpdateRotation(DeltaSeconds) end
+
 function ABP_Hookshot_C:BP_CooldownEnded() end
+
 function ABP_Hookshot_C:BP_CooldownBegan() end
+
 function ABP_Hookshot_C:UpdateFuseFX() end
+
 function ABP_Hookshot_C:BP_IsSoldChanged() end
+
 ---@param EntryPoint int32
 function ABP_Hookshot_C:ExecuteUbergraph_BP_Hookshot(EntryPoint) end
-
-

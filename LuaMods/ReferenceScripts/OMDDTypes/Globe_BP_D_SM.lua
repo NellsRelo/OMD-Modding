@@ -5,6 +5,3 @@
 ---@field Globe_SingleBall_SM UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 AGlobe_BP_D_SM_C = {}
-
-
-

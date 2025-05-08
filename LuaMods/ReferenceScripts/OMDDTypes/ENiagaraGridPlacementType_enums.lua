@@ -4,4 +4,3 @@ ENiagaraGridPlacementType = {
     NewEnumerator1 = 1,
     ENiagaraGridPlacementType_MAX = 2,
 }
-

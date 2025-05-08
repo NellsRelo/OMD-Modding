@@ -13,6 +13,3 @@
 ---@field Column_Square_1_2_StoneWall_SM UStaticMeshComponent
 ---@field Planter_Coastal_1x1x1_SM1 UStaticMeshComponent
 ABP_FishMarket_Gate_Small_C_C = {}
-
-
-

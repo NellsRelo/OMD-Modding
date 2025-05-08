@@ -5,4 +5,3 @@ ENiagaraWindTurbulenceContributionMode = {
     NewEnumerator3 = 2,
     ENiagaraWindTurbulenceContributionMode_MAX = 3,
 }
-

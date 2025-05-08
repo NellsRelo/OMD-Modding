@@ -8,4 +8,3 @@ ENiagara_MeshOrientationOptions = {
     NewEnumerator6 = 5,
     ENiagara_MAX = 6,
 }
-

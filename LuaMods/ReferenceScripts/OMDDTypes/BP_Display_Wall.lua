@@ -30,6 +30,3 @@
 ---@field Wood_Log_1200W_A_Light2 UStaticMeshComponent
 ---@field Wood_Log_1200W_A_Light1 UStaticMeshComponent
 ABP_Display_Wall_C = {}
-
-
-

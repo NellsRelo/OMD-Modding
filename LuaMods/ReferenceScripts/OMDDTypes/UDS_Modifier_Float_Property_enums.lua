@@ -61,4 +61,3 @@ UDS_Modifier_Float_Property = {
     NewEnumerator64 = 58,
     UDS_Modifier_Float_MAX = 59,
 }
-

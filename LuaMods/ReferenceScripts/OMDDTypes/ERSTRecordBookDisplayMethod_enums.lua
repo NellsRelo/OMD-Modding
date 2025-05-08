@@ -7,4 +7,3 @@ ERSTRecordBookDisplayMethod = {
     NewEnumerator3 = 4,
     ERSTRecordBookDisplayMethod_MAX = 5,
 }
-

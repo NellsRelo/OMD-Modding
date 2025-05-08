@@ -5,6 +5,3 @@
 ---@field Trap_Wall1 URSTTrapGridBoxComponent
 ---@field trap_wall URSTTrapGridBoxComponent
 ABP_Wall_Resort_Adobe_2x2_A_C = {}
-
-
-

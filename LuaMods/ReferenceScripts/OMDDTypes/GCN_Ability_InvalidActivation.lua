@@ -7,5 +7,3 @@ UGCN_Ability_InvalidActivation_C = {}
 ---@param Parameters FGameplayCueParameters
 ---@param SpawnResults FGameplayCueNotify_SpawnResult
 function UGCN_Ability_InvalidActivation_C:OnBurst(Target, Parameters, SpawnResults) end
-
-

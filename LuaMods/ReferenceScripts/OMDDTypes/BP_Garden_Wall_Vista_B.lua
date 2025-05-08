@@ -6,6 +6,3 @@
 ---@field ColumnTrim_CastStone_600W UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Garden_Wall_Vista_B_C = {}
-
-
-

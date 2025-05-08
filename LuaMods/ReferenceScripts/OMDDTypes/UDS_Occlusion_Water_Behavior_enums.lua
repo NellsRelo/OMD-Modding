@@ -5,4 +5,3 @@ UDS_Occlusion_Water_Behavior = {
     NewEnumerator2 = 2,
     UDS_Occlusion_Water_MAX = 3,
 }
-

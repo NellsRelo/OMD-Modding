@@ -5,4 +5,3 @@ SceneDepthCollisionQueryMethod = {
     NewEnumerator2 = 2,
     SceneDepthCollisionQueryMethod_MAX = 3,
 }
-

@@ -17,4 +17,3 @@ UDS_Weather_Display_Names = {
     NewEnumerator14 = 14,
     UDS_Weather_Display_MAX = 15,
 }
-

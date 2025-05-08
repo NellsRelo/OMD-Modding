@@ -113,6 +113,3 @@
 ---@field Collision USceneComponent
 ---@field RSTTrapGridBox URSTTrapGridBoxComponent
 ABP_DryDocks_HeadQuarters_C = {}
-
-
-

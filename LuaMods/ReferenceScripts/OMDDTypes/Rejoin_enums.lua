@@ -19,4 +19,3 @@ ERejoinStatus = {
     NoMatchToRejoin_MatchEnded = 4,
     ERejoinStatus_MAX = 5,
 }
-

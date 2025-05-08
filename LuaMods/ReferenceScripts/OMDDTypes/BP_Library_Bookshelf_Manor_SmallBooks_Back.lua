@@ -59,6 +59,3 @@
 ---@field StaticMesh14 UStaticMeshComponent
 ---@field Books_1 USceneComponent
 ABP_Library_Bookshelf_Manor_SmallBooks_Back_C = {}
-
-
-

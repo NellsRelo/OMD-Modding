@@ -5,4 +5,3 @@ ENiagara_LocEventType = {
     NewEnumerator2 = 2,
     ENiagara_MAX = 3,
 }
-

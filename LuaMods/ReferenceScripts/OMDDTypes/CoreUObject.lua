@@ -1171,5 +1171,3 @@ UUInt64Property = {}
 
 ---@class UWeakObjectProperty : UObjectPropertyBase
 UWeakObjectProperty = {}
-
-

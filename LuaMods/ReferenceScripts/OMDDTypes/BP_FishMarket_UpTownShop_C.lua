@@ -25,6 +25,3 @@
 ---@field Collision USceneComponent
 ---@field Geo USceneComponent
 ABP_FishMarket_UpTownShop_C_C = {}
-
-
-

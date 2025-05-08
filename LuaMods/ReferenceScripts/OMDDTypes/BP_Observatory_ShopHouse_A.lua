@@ -152,6 +152,3 @@
 ---@field TrapGrid USceneComponent
 ---@field Geo USceneComponent
 ABP_Observatory_ShopHouse_A_C = {}
-
-
-

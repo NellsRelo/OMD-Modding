@@ -78,6 +78,3 @@
 ---@field TrapGrid USceneComponent
 ---@field Collision USceneComponent
 ABP_Observatory_WallHouse_C_Bakery_C = {}
-
-
-

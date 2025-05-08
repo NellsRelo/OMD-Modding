@@ -93,7 +93,6 @@ UGameFeatureData = {}
 ---@param PluginName FString
 function UGameFeatureData:GetPluginName(GFD, PluginName) end
 
-
 ---@class UGameFeaturePluginStateMachine : UObject
 ---@field StateProperties FGameFeaturePluginStateMachineProperties
 UGameFeaturePluginStateMachine = {}
@@ -123,6 +122,3 @@ UGameFeaturesSubsystem = {}
 ---@field DisabledPlugins TArray<FString>
 ---@field AdditionalPluginMetadataKeys TArray<FString>
 UGameFeaturesSubsystemSettings = {}
-
-
-

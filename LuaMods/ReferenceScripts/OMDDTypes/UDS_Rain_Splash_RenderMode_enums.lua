@@ -4,4 +4,3 @@ UDS_Rain_Splash_RenderMode = {
     NewEnumerator1 = 1,
     UDS_Rain_Splash_MAX = 2,
 }
-

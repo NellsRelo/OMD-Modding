@@ -4,6 +4,3 @@
 ---@field Cooldown double
 ---@field SightRadius double
 ABP_Hookshot_ItemInstance_C = {}
-
-
-

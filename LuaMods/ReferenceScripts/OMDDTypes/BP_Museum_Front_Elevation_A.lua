@@ -453,6 +453,3 @@
 ---@field Wall_4x4x05_Stonewall_SM10 UStaticMeshComponent
 ---@field Stair_05x2_StoneWallBlock_SM2 UStaticMeshComponent
 ABP_Museum_Front_Elevation_A_C = {}
-
-
-

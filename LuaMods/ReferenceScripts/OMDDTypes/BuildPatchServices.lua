@@ -60,6 +60,3 @@ FSHAHashData = {}
 ---@field ChunkList TArray<FChunkInfoData>
 ---@field CustomFields TArray<FCustomFieldData>
 UBuildPatchManifest = {}
-
-
-

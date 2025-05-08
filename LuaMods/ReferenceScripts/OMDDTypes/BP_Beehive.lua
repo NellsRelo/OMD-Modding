@@ -7,10 +7,11 @@
 ABP_Beehive_C = {}
 
 function ABP_Beehive_C:BP_AvailableChargesChanged() end
-ABP_Beehive_C['Update FX'] = function() end
+
+ABP_Beehive_C['Update FX'] = function(self,) end
 function ABP_Beehive_C:BP_IsBeingPlacedChanged() end
+
 function ABP_Beehive_C:BP_IsSoldChanged() end
+
 ---@param EntryPoint int32
 function ABP_Beehive_C:ExecuteUbergraph_BP_Beehive(EntryPoint) end
-
-

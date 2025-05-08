@@ -133,6 +133,3 @@
 ---@field TrapGrid USceneComponent
 ---@field SharedRoot USceneComponent
 ABP_FishVendorStall_VikeTower_B_C = {}
-
-
-

@@ -168,6 +168,3 @@
 ---@field Collision USceneComponent
 ---@field Geo USceneComponent
 ABP_BackAlley_TimberStructure_massiveA_5x6_C = {}
-
-
-

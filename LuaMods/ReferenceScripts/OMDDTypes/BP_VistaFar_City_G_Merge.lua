@@ -6,6 +6,3 @@
 ---@field TrapGrid USceneComponent
 ---@field Geo USceneComponent
 ABP_VistaFar_City_G_Merge_C = {}
-
-
-

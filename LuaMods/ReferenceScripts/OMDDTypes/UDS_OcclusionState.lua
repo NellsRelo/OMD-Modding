@@ -33,20 +33,18 @@
 ---@field ['Time of Last Editor Cache'] double
 UUDS_OcclusionState_C = {}
 
-UUDS_OcclusionState_C['Save Unchanging Values'] = function() end
+UUDS_OcclusionState_C['Save Unchanging Values'] = function(self,) end
 ---@param Facing_Direction FVector
 ---@param Vertical_Step int32
 ---@return FVector
-UUDS_OcclusionState_C['Current Trace Direction'] = function(Facing_Direction, Vertical_Step) end
+UUDS_OcclusionState_C['Current Trace Direction'] = function(self, Facing_Direction, Vertical_Step) end
 ---@param Direction FVector
 ---@param Mask FLinearColor
-UUDS_OcclusionState_C['Directional Vector Mask'] = function(Direction, Mask) end
+UUDS_OcclusionState_C['Directional Vector Mask'] = function(self, Direction, Mask) end
 ---@param Direction FVector
 ---@param Compare FVector
 ---@return double
-UUDS_OcclusionState_C['Directional Mask Value'] = function(Direction, Compare) end
+UUDS_OcclusionState_C['Directional Mask Value'] = function(self, Direction, Compare) end
 ---@param Step int32
 ---@return FVector
-UUDS_OcclusionState_C['Current Facing Direction'] = function(Step) end
-
-
+UUDS_OcclusionState_C['Current Facing Direction'] = function(self, Step) end

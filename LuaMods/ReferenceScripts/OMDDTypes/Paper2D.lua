@@ -170,24 +170,29 @@ UPaperFlipbook = {}
 ---@param Index int32
 ---@return boolean
 function UPaperFlipbook:IsValidKeyFrameIndex(Index) end
+
 ---@return float
 function UPaperFlipbook:GetTotalDuration() end
+
 ---@param Time float
 ---@param bClampToEnds boolean
 ---@return UPaperSprite
 function UPaperFlipbook:GetSpriteAtTime(Time, bClampToEnds) end
+
 ---@param FrameIndex int32
 ---@return UPaperSprite
 function UPaperFlipbook:GetSpriteAtFrame(FrameIndex) end
+
 ---@return int32
 function UPaperFlipbook:GetNumKeyFrames() end
+
 ---@return int32
 function UPaperFlipbook:GetNumFrames() end
+
 ---@param Time float
 ---@param bClampToEnds boolean
 ---@return int32
 function UPaperFlipbook:GetKeyFrameIndexAtTime(Time, bClampToEnds) end
-
 
 ---@class UPaperFlipbookComponent : UMeshComponent
 ---@field SourceFlipbook UPaperFlipbook
@@ -204,52 +209,74 @@ function UPaperFlipbook:GetKeyFrameIndexAtTime(Time, bClampToEnds) end
 UPaperFlipbookComponent = {}
 
 function UPaperFlipbookComponent:Stop() end
+
 ---@param NewColor FLinearColor
 function UPaperFlipbookComponent:SetSpriteColor(NewColor) end
+
 ---@param NewRate float
 function UPaperFlipbookComponent:SetPlayRate(NewRate) end
+
 ---@param NewFramePosition int32
 ---@param bFireEvents boolean
 function UPaperFlipbookComponent:SetPlaybackPositionInFrames(NewFramePosition, bFireEvents) end
+
 ---@param NewPosition float
 ---@param bFireEvents boolean
 function UPaperFlipbookComponent:SetPlaybackPosition(NewPosition, bFireEvents) end
+
 ---@param NewTime float
 function UPaperFlipbookComponent:SetNewTime(NewTime) end
+
 ---@param bNewLooping boolean
 function UPaperFlipbookComponent:SetLooping(bNewLooping) end
+
 ---@param NewFlipbook UPaperFlipbook
 ---@return boolean
 function UPaperFlipbookComponent:SetFlipbook(NewFlipbook) end
+
 function UPaperFlipbookComponent:ReverseFromEnd() end
+
 function UPaperFlipbookComponent:Reverse() end
+
 function UPaperFlipbookComponent:PlayFromStart() end
+
 function UPaperFlipbookComponent:Play() end
+
 ---@param OldFlipbook UPaperFlipbook
 function UPaperFlipbookComponent:OnRep_SourceFlipbook(OldFlipbook) end
+
 ---@return boolean
 function UPaperFlipbookComponent:IsReversing() end
+
 ---@return boolean
 function UPaperFlipbookComponent:IsPlaying() end
+
 ---@return boolean
 function UPaperFlipbookComponent:IsLooping() end
+
 ---@return FLinearColor
 function UPaperFlipbookComponent:GetSpriteColor() end
+
 ---@return float
 function UPaperFlipbookComponent:GetPlayRate() end
+
 ---@return int32
 function UPaperFlipbookComponent:GetPlaybackPositionInFrames() end
+
 ---@return float
 function UPaperFlipbookComponent:GetPlaybackPosition() end
+
 ---@return int32
 function UPaperFlipbookComponent:GetFlipbookLengthInFrames() end
+
 ---@return float
 function UPaperFlipbookComponent:GetFlipbookLength() end
+
 ---@return float
 function UPaperFlipbookComponent:GetFlipbookFramerate() end
+
 ---@return UPaperFlipbook
 function UPaperFlipbookComponent:GetFlipbook() end
-
 
 ---@class UPaperGroupedSpriteComponent : UMeshComponent
 ---@field InstanceMaterials TArray<UMaterialInterface>
@@ -262,32 +289,39 @@ UPaperGroupedSpriteComponent = {}
 ---@param bMarkRenderStateDirty boolean
 ---@param bTeleport boolean
 ---@return boolean
-function UPaperGroupedSpriteComponent:UpdateInstanceTransform(InstanceIndex, NewInstanceTransform, bWorldSpace, bMarkRenderStateDirty, bTeleport) end
+function UPaperGroupedSpriteComponent:UpdateInstanceTransform(InstanceIndex, NewInstanceTransform, bWorldSpace,
+                                                              bMarkRenderStateDirty, bTeleport) end
+
 ---@param InstanceIndex int32
 ---@param NewInstanceColor FLinearColor
 ---@param bMarkRenderStateDirty boolean
 ---@return boolean
 function UPaperGroupedSpriteComponent:UpdateInstanceColor(InstanceIndex, NewInstanceColor, bMarkRenderStateDirty) end
+
 ---@param WorldSpaceSortAxis FVector
 function UPaperGroupedSpriteComponent:SortInstancesAlongAxis(WorldSpaceSortAxis) end
+
 ---@param InstanceIndex int32
 ---@return boolean
 function UPaperGroupedSpriteComponent:RemoveInstance(InstanceIndex) end
+
 ---@param InstanceIndex int32
 ---@param OutInstanceTransform FTransform
 ---@param bWorldSpace boolean
 ---@return boolean
 function UPaperGroupedSpriteComponent:GetInstanceTransform(InstanceIndex, OutInstanceTransform, bWorldSpace) end
+
 ---@return int32
 function UPaperGroupedSpriteComponent:GetInstanceCount() end
+
 function UPaperGroupedSpriteComponent:ClearInstances() end
+
 ---@param Transform FTransform
 ---@param Sprite UPaperSprite
 ---@param bWorldSpace boolean
 ---@param Color FLinearColor
 ---@return int32
 function UPaperGroupedSpriteComponent:AddInstance(Transform, Sprite, bWorldSpace, Color) end
-
 
 ---@class UPaperRuntimeSettings : UObject
 ---@field bEnableSpriteAtlasGroups boolean
@@ -327,7 +361,6 @@ UPaperSpriteBlueprintLibrary = {}
 ---@return FSlateBrush
 function UPaperSpriteBlueprintLibrary:MakeBrushFromSprite(Sprite, Width, Height) end
 
-
 ---@class UPaperSpriteComponent : UMeshComponent
 ---@field SourceSprite UPaperSprite
 ---@field MaterialOverride UMaterialInterface
@@ -336,12 +369,13 @@ UPaperSpriteComponent = {}
 
 ---@param NewColor FLinearColor
 function UPaperSpriteComponent:SetSpriteColor(NewColor) end
+
 ---@param NewSprite UPaperSprite
 ---@return boolean
 function UPaperSpriteComponent:SetSprite(NewSprite) end
+
 ---@return UPaperSprite
 function UPaperSpriteComponent:GetSprite() end
-
 
 ---@class UPaperTerrainComponent : UPrimitiveComponent
 ---@field TerrainMaterial UPaperTerrainMaterial
@@ -359,7 +393,6 @@ UPaperTerrainComponent = {}
 
 ---@param NewColor FLinearColor
 function UPaperTerrainComponent:SetTerrainColor(NewColor) end
-
 
 ---@class UPaperTerrainMaterial : UDataAsset
 ---@field Rules TArray<FPaperTerrainMaterialRule>
@@ -430,17 +463,21 @@ UPaperTileMapComponent = {}
 
 ---@param NewColor FLinearColor
 function UPaperTileMapComponent:SetTileMapColor(NewColor) end
+
 ---@param NewTileMap UPaperTileMap
 ---@return boolean
 function UPaperTileMapComponent:SetTileMap(NewTileMap) end
+
 ---@param X int32
 ---@param Y int32
 ---@param Layer int32
 ---@param NewValue FPaperTileInfo
 function UPaperTileMapComponent:SetTile(X, Y, Layer, NewValue) end
+
 ---@param NewColor FLinearColor
 ---@param Layer int32
 function UPaperTileMapComponent:SetLayerColor(NewColor, Layer) end
+
 ---@param Layer int32
 ---@param bHasCollision boolean
 ---@param bOverrideThickness boolean
@@ -448,59 +485,74 @@ function UPaperTileMapComponent:SetLayerColor(NewColor, Layer) end
 ---@param bOverrideOffset boolean
 ---@param CustomOffset float
 ---@param bRebuildCollision boolean
-function UPaperTileMapComponent:SetLayerCollision(Layer, bHasCollision, bOverrideThickness, CustomThickness, bOverrideOffset, CustomOffset, bRebuildCollision) end
+function UPaperTileMapComponent:SetLayerCollision(Layer, bHasCollision, bOverrideThickness, CustomThickness,
+                                                  bOverrideOffset, CustomOffset, bRebuildCollision) end
+
 ---@param Thickness float
 ---@param bRebuildCollision boolean
 function UPaperTileMapComponent:SetDefaultCollisionThickness(Thickness, bRebuildCollision) end
+
 ---@param NewWidthInTiles int32
 ---@param NewHeightInTiles int32
 function UPaperTileMapComponent:ResizeMap(NewWidthInTiles, NewHeightInTiles) end
+
 function UPaperTileMapComponent:RebuildCollision() end
+
 ---@return boolean
 function UPaperTileMapComponent:OwnsTileMap() end
+
 function UPaperTileMapComponent:MakeTileMapEditable() end
+
 ---@param TileX int32
 ---@param TileY int32
 ---@param Points TArray<FVector>
 ---@param LayerIndex int32
 ---@param bWorldSpace boolean
 function UPaperTileMapComponent:GetTilePolygon(TileX, TileY, Points, LayerIndex, bWorldSpace) end
+
 ---@return FLinearColor
 function UPaperTileMapComponent:GetTileMapColor() end
+
 ---@param TileX int32
 ---@param TileY int32
 ---@param LayerIndex int32
 ---@param bWorldSpace boolean
 ---@return FVector
 function UPaperTileMapComponent:GetTileCornerPosition(TileX, TileY, LayerIndex, bWorldSpace) end
+
 ---@param TileX int32
 ---@param TileY int32
 ---@param LayerIndex int32
 ---@param bWorldSpace boolean
 ---@return FVector
 function UPaperTileMapComponent:GetTileCenterPosition(TileX, TileY, LayerIndex, bWorldSpace) end
+
 ---@param X int32
 ---@param Y int32
 ---@param Layer int32
 ---@return FPaperTileInfo
 function UPaperTileMapComponent:GetTile(X, Y, Layer) end
+
 ---@param MapWidth int32
 ---@param MapHeight int32
 ---@param NumLayers int32
 function UPaperTileMapComponent:GetMapSize(MapWidth, MapHeight, NumLayers) end
+
 ---@param Layer int32
 ---@return FLinearColor
 function UPaperTileMapComponent:GetLayerColor(Layer) end
+
 ---@param MapWidth int32
 ---@param MapHeight int32
 ---@param TileWidth int32
 ---@param TileHeight int32
 ---@param PixelsPerUnrealUnit float
 ---@param bCreateLayer boolean
-function UPaperTileMapComponent:CreateNewTileMap(MapWidth, MapHeight, TileWidth, TileHeight, PixelsPerUnrealUnit, bCreateLayer) end
+function UPaperTileMapComponent:CreateNewTileMap(MapWidth, MapHeight, TileWidth, TileHeight, PixelsPerUnrealUnit,
+                                                 bCreateLayer) end
+
 ---@return UPaperTileLayer
 function UPaperTileMapComponent:AddNewLayer() end
-
 
 ---@class UPaperTileSet : UObject
 ---@field TileSize FIntPoint
@@ -533,12 +585,15 @@ UTileMapBlueprintLibrary = {}
 ---@param bFlipD boolean
 ---@return FPaperTileInfo
 function UTileMapBlueprintLibrary:MakeTile(TileIndex, TileSet, bFlipH, bFlipV, bFlipD) end
+
 ---@param Tile FPaperTileInfo
 ---@return FName
 function UTileMapBlueprintLibrary:GetTileUserData(Tile) end
+
 ---@param Tile FPaperTileInfo
 ---@return FTransform
 function UTileMapBlueprintLibrary:GetTileTransform(Tile) end
+
 ---@param Tile FPaperTileInfo
 ---@param TileIndex int32
 ---@param TileSet UPaperTileSet
@@ -546,5 +601,3 @@ function UTileMapBlueprintLibrary:GetTileTransform(Tile) end
 ---@param bFlipV boolean
 ---@param bFlipD boolean
 function UTileMapBlueprintLibrary:BreakTile(Tile, TileIndex, TileSet, bFlipH, bFlipV, bFlipD) end
-
-

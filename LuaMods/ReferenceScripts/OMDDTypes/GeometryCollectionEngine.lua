@@ -11,7 +11,6 @@ AGeometryCollectionActor = {}
 ---@return boolean
 function AGeometryCollectionActor:RaycastSingle(Start, End, OutHit) end
 
-
 ---@class AGeometryCollectionDebugDrawActor : AActor
 ---@field WarningMessage FGeometryCollectionDebugDrawWarningMessage
 ---@field SelectedRigidBody FGeometryCollectionDebugDrawActorSelectedRigidBody
@@ -327,42 +326,57 @@ UChaosDestructionListener = {}
 ---@param TrailingEvents TArray<FChaosTrailingEventData>
 ---@param SortMethod EChaosTrailingSortMethod
 function UChaosDestructionListener:SortTrailingEvents(TrailingEvents, SortMethod) end
+
 ---@param RemovalEvents TArray<FChaosRemovalEventData>
 ---@param SortMethod EChaosRemovalSortMethod
 function UChaosDestructionListener:SortRemovalEvents(RemovalEvents, SortMethod) end
+
 ---@param CollisionEvents TArray<FChaosCollisionEventData>
 ---@param SortMethod EChaosCollisionSortMethod
 function UChaosDestructionListener:SortCollisionEvents(CollisionEvents, SortMethod) end
+
 ---@param BreakingEvents TArray<FChaosBreakingEventData>
 ---@param SortMethod EChaosBreakingSortMethod
 function UChaosDestructionListener:SortBreakingEvents(BreakingEvents, SortMethod) end
+
 ---@param InSettings FChaosTrailingEventRequestSettings
 function UChaosDestructionListener:SetTrailingEventRequestSettings(InSettings) end
+
 ---@param bIsEnabled boolean
 function UChaosDestructionListener:SetTrailingEventEnabled(bIsEnabled) end
+
 ---@param InSettings FChaosRemovalEventRequestSettings
 function UChaosDestructionListener:SetRemovalEventRequestSettings(InSettings) end
+
 ---@param bIsEnabled boolean
 function UChaosDestructionListener:SetRemovalEventEnabled(bIsEnabled) end
+
 ---@param InSettings FChaosCollisionEventRequestSettings
 function UChaosDestructionListener:SetCollisionEventRequestSettings(InSettings) end
+
 ---@param bIsEnabled boolean
 function UChaosDestructionListener:SetCollisionEventEnabled(bIsEnabled) end
+
 ---@param InSettings FChaosBreakingEventRequestSettings
 function UChaosDestructionListener:SetBreakingEventRequestSettings(InSettings) end
+
 ---@param bIsEnabled boolean
 function UChaosDestructionListener:SetBreakingEventEnabled(bIsEnabled) end
+
 ---@param GeometryCollectionActor AGeometryCollectionActor
 function UChaosDestructionListener:RemoveGeometryCollectionActor(GeometryCollectionActor) end
+
 ---@param ChaosSolverActor AChaosSolverActor
 function UChaosDestructionListener:RemoveChaosSolverActor(ChaosSolverActor) end
+
 ---@return boolean
 function UChaosDestructionListener:IsEventListening() end
+
 ---@param GeometryCollectionActor AGeometryCollectionActor
 function UChaosDestructionListener:AddGeometryCollectionActor(GeometryCollectionActor) end
+
 ---@param ChaosSolverActor AChaosSolverActor
 function UChaosDestructionListener:AddChaosSolverActor(ChaosSolverActor) end
-
 
 ---@class UGeometryCollection : UObject
 ---@field EnableClustering boolean
@@ -413,9 +427,9 @@ UGeometryCollection = {}
 
 ---@param bValue boolean
 function UGeometryCollection:SetEnableNanite(bValue) end
+
 ---@param bValue boolean
 function UGeometryCollection:SetConvertVertexColorsToSRGB(bValue) end
-
 
 ---@class UGeometryCollectionCache : UObject
 ---@field RecordedData FRecordedTransformTrack
@@ -500,118 +514,163 @@ UGeometryCollectionComponent = {}
 ---@param RestCollectionIn UGeometryCollection
 ---@param bApplyAssetDefaults boolean
 function UGeometryCollectionComponent:SetRestCollection(RestCollectionIn, bApplyAssetDefaults) end
+
 ---@param BoneIds TArray<int32>
 ---@param ProfileName FName
 function UGeometryCollectionComponent:SetPerParticleCollisionProfileName(BoneIds, ProfileName) end
+
 ---@param ProfileNames TArray<FName>
 function UGeometryCollectionComponent:SetPerLevelCollisionProfileNames(ProfileNames) end
+
 ---@param bNewNotifyRemovals boolean
 function UGeometryCollectionComponent:SetNotifyRemovals(bNewNotifyRemovals) end
+
 ---@param bNewNotifyGlobalRemovals boolean
 function UGeometryCollectionComponent:SetNotifyGlobalRemovals(bNewNotifyGlobalRemovals) end
+
 ---@param bNewNotifyGlobalCrumblings boolean
 ---@param bGlobalNewCrumblingEventIncludesChildren boolean
-function UGeometryCollectionComponent:SetNotifyGlobalCrumblings(bNewNotifyGlobalCrumblings, bGlobalNewCrumblingEventIncludesChildren) end
+function UGeometryCollectionComponent:SetNotifyGlobalCrumblings(bNewNotifyGlobalCrumblings,
+                                                                bGlobalNewCrumblingEventIncludesChildren) end
+
 ---@param bNewNotifyGlobalCollisions boolean
 function UGeometryCollectionComponent:SetNotifyGlobalCollision(bNewNotifyGlobalCollisions) end
+
 ---@param bNewNotifyGlobalBreaks boolean
 function UGeometryCollectionComponent:SetNotifyGlobalBreaks(bNewNotifyGlobalBreaks) end
+
 ---@param bNewNotifyCrumblings boolean
 ---@param bNewCrumblingEventIncludesChildren boolean
 function UGeometryCollectionComponent:SetNotifyCrumblings(bNewNotifyCrumblings, bNewCrumblingEventIncludesChildren) end
+
 ---@param bNewNotifyBreaks boolean
 function UGeometryCollectionComponent:SetNotifyBreaks(bNewNotifyBreaks) end
+
 ---@param Transforms TArray<FTransform>
 ---@param bOnlyLeaves boolean
 function UGeometryCollectionComponent:SetLocalRestTransforms(Transforms, bOnlyLeaves) end
+
 ---@param bValue boolean
 function UGeometryCollectionComponent:SetEnableDamageFromCollision(bValue) end
+
 ---@param InDamageThreshold TArray<float>
 function UGeometryCollectionComponent:SetDamageThreshold(InDamageThreshold) end
+
 ---@param Box FBox
 ---@param Transform FTransform
 ---@param bAnchored boolean
 ---@param MaxLevel int32
 function UGeometryCollectionComponent:SetAnchoredByTransformedBox(Box, Transform, bAnchored, MaxLevel) end
+
 ---@param Index int32
 ---@param bAnchored boolean
 function UGeometryCollectionComponent:SetAnchoredByIndex(Index, bAnchored) end
+
 ---@param WorldSpaceBox FBox
 ---@param bAnchored boolean
 ---@param MaxLevel int32
 function UGeometryCollectionComponent:SetAnchoredByBox(WorldSpaceBox, bAnchored, MaxLevel) end
+
 ---@param CollisionProfile FName
 function UGeometryCollectionComponent:SetAbandonedParticleCollisionProfileName(CollisionProfile) end
+
 function UGeometryCollectionComponent:RemoveAllAnchors() end
+
 ---@param CollisionInfo FChaosPhysicsCollisionInfo
 function UGeometryCollectionComponent:ReceivePhysicsCollision(CollisionInfo) end
+
 function UGeometryCollectionComponent:OnRep_RepData() end
+
 ---@param FracturedComponent UGeometryCollectionComponent
 function UGeometryCollectionComponent:NotifyGeometryCollectionPhysicsStateChange__DelegateSignature(FracturedComponent) end
+
 ---@param FracturedComponent UGeometryCollectionComponent
-function UGeometryCollectionComponent:NotifyGeometryCollectionPhysicsLoadingStateChange__DelegateSignature(FracturedComponent) end
+function UGeometryCollectionComponent:NotifyGeometryCollectionPhysicsLoadingStateChange__DelegateSignature(
+    FracturedComponent) end
+
 ---@return boolean
 function UGeometryCollectionComponent:IsRootBroken() end
+
 ---@return FTransform
 function UGeometryCollectionComponent:GetRootInitialTransform() end
+
 ---@return int32
 function UGeometryCollectionComponent:GetRootIndex() end
+
 ---@return FTransform
 function UGeometryCollectionComponent:GetRootCurrentTransform() end
+
 ---@param ItemIndex int32
 ---@param OutMass float
 ---@param OutExtents FBox
 function UGeometryCollectionComponent:GetMassAndExtents(ItemIndex, OutMass, OutExtents) end
+
 ---@return FBox
 function UGeometryCollectionComponent:GetLocalBounds() end
+
 ---@return TArray<FTransform>
 function UGeometryCollectionComponent:GetInitialLocalRestTransforms() end
+
 ---@param ItemIndex int32
 ---@return int32
 function UGeometryCollectionComponent:GetInitialLevel(ItemIndex) end
+
 ---@return FString
 function UGeometryCollectionComponent:GetDebugInfo() end
+
 ---@return TArray<float>
 function UGeometryCollectionComponent:GetDamageThreshold() end
+
 ---@param ItemIndex int32
 function UGeometryCollectionComponent:CrumbleCluster(ItemIndex) end
+
 function UGeometryCollectionComponent:CrumbleActiveClusters() end
+
 ---@param Enabled boolean
 ---@param Target EGeometryCollectionPhysicsTypeEnum
 ---@param MetaData UFieldSystemMetaData
 ---@param Field UFieldNodeBase
 function UGeometryCollectionComponent:ApplyPhysicsField(Enabled, Target, MetaData, Field) end
+
 ---@param ItemIndex int32
 ---@param LinearVelocity FVector
 function UGeometryCollectionComponent:ApplyLinearVelocity(ItemIndex, LinearVelocity) end
+
 ---@param Radius float
 ---@param Position FVector
 function UGeometryCollectionComponent:ApplyKinematicField(Radius, Position) end
+
 ---@param ItemIndex int32
 ---@param Location FVector
 ---@param Radius float
 ---@param PropagationDepth int32
 ---@param PropagationFactor float
 ---@param Strain float
-function UGeometryCollectionComponent:ApplyInternalStrain(ItemIndex, Location, Radius, PropagationDepth, PropagationFactor, Strain) end
+function UGeometryCollectionComponent:ApplyInternalStrain(ItemIndex, Location, Radius, PropagationDepth,
+                                                          PropagationFactor, Strain) end
+
 ---@param ItemIndex int32
 ---@param Location FVector
 ---@param Radius float
 ---@param PropagationDepth int32
 ---@param PropagationFactor float
 ---@param Strain float
-function UGeometryCollectionComponent:ApplyExternalStrain(ItemIndex, Location, Radius, PropagationDepth, PropagationFactor, Strain) end
+function UGeometryCollectionComponent:ApplyExternalStrain(ItemIndex, Location, Radius, PropagationDepth,
+                                                          PropagationFactor, Strain) end
+
 ---@param ItemIndex int32
 ---@param LinearVelocity FVector
 function UGeometryCollectionComponent:ApplyBreakingLinearVelocity(ItemIndex, LinearVelocity) end
+
 ---@param ItemIndex int32
 ---@param AngularVelocity FVector
 function UGeometryCollectionComponent:ApplyBreakingAngularVelocity(ItemIndex, AngularVelocity) end
+
 function UGeometryCollectionComponent:ApplyAssetDefaults() end
+
 ---@param ItemIndex int32
 ---@param AngularVelocity FVector
 function UGeometryCollectionComponent:ApplyAngularVelocity(ItemIndex, AngularVelocity) end
-
 
 ---@class UGeometryCollectionDebugDrawComponent : UActorComponent
 ---@field GeometryCollectionDebugDrawActor AGeometryCollectionDebugDrawActor
@@ -642,6 +701,3 @@ UGeometryCollectionISMPoolRenderer = {}
 ---@class UGeometryCollectionISMPoolSubSystem : UWorldSubsystem
 ---@field ISMPoolActor AGeometryCollectionISMPoolActor
 UGeometryCollectionISMPoolSubSystem = {}
-
-
-

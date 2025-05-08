@@ -13,8 +13,8 @@ ABP_Beehive_Projectile_C = {}
 ---@param HitNormal FVector
 ---@param NormalImpulse FVector
 ---@param Hit FHitResult
-function ABP_Beehive_Projectile_C:ReceiveHit(MyComp, Other, OtherComp, bSelfMoved, HitLocation, HitNormal, NormalImpulse, Hit) end
+function ABP_Beehive_Projectile_C:ReceiveHit(MyComp, Other, OtherComp, bSelfMoved, HitLocation, HitNormal, NormalImpulse,
+                                             Hit) end
+
 ---@param EntryPoint int32
 function ABP_Beehive_Projectile_C:ExecuteUbergraph_BP_Beehive_Projectile(EntryPoint) end
-
-

@@ -13,7 +13,7 @@ ECameraAnimationEasingType = {
 
 ---@enum ECameraAnimationPlaySpace
 ECameraAnimationPlaySpace = {
-    CameraLocal = 0,
+    Camera = 0,
     World = 1,
     UserDefined = 2,
     ECameraAnimationPlaySpace_MAX = 3,
@@ -39,4 +39,3 @@ EOscillatorWaveform = {
     PerlinNoise = 1,
     EOscillatorWaveform_MAX = 2,
 }
-

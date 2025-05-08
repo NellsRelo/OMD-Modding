@@ -177,6 +177,3 @@
 ---@field Cren_Top_Square36_StaticMeshComponent0 UStaticMeshComponent
 ---@field SharedRoot USceneComponent
 ABP_Patio_6x6x13_Castle_C = {}
-
-
-

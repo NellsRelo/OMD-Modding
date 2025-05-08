@@ -10,12 +10,16 @@ ABP_SawBladeLauncher_C = {}
 
 ---@return boolean
 function ABP_SawBladeLauncher_C:IsReadyForActivation() end
+
 function ABP_SawBladeLauncher_C:BP_IsBeingPlacedChanged() end
+
 function ABP_SawBladeLauncher_C:UpdateFX() end
+
 function ABP_SawBladeLauncher_C:BP_IsPlacementValidChanged() end
+
 function ABP_SawBladeLauncher_C:BP_IsSoldChanged() end
+
 function ABP_SawBladeLauncher_C:ReceiveBeginPlay() end
+
 ---@param EntryPoint int32
 function ABP_SawBladeLauncher_C:ExecuteUbergraph_BP_SawBladeLauncher(EntryPoint) end
-
-

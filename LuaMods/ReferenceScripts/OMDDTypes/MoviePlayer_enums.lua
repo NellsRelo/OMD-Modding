@@ -5,4 +5,3 @@ EMoviePlaybackType = {
     MT_LoadingLoop = 2,
     MT_MAX = 3,
 }
-

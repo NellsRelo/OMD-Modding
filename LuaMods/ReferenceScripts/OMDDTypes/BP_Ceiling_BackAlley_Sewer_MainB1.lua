@@ -30,6 +30,3 @@
 ---@field Ceiling_4x4_Sewer_A_SM26 UStaticMeshComponent
 ---@field Geo USceneComponent
 ABP_Ceiling_BackAlley_Sewer_MainB1_C = {}
-
-
-

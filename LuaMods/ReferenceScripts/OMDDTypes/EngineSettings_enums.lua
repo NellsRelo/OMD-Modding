@@ -28,4 +28,3 @@ ETwoPlayerSplitScreenType = {
     Vertical = 1,
     ETwoPlayerSplitScreenType_MAX = 2,
 }
-

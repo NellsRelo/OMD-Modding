@@ -6,4 +6,3 @@ ENiagara_Float4Channel = {
     NewEnumerator3 = 3,
     ENiagara_MAX = 4,
 }
-

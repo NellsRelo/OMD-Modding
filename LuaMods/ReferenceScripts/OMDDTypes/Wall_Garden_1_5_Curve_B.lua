@@ -7,6 +7,3 @@
 ---@field CSC_150_GardenWall1 UStaticMeshComponent
 ---@field CSC_150_GardenWall UStaticMeshComponent
 AWall_Garden_1_5_Curve_B_C = {}
-
-
-

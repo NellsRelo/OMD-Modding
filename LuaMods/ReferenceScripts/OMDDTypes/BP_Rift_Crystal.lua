@@ -27,10 +27,10 @@ ABP_Rift_Crystal_C = {}
 
 ---@param ActorInfo FGameplayAbilityActorInfo
 function ABP_Rift_Crystal_C:BP_OnInteract(ActorInfo) end
+
 ---@param InteractQuery FRSTInteractionQuery
 ---@return TArray<FRSTInteractionOption>
 function ABP_Rift_Crystal_C:BP_GatherInteractionOptions(InteractQuery) end
+
 ---@return FTransform
 function ABP_Rift_Crystal_C:BP_GetRiftTeleportTransform() end
-
-

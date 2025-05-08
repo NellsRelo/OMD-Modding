@@ -133,6 +133,3 @@
 ---@field TowerTop_Pointed_F2_SM UStaticMeshComponent
 ---@field Proto_Dome_RiftRoom_C UStaticMeshComponent
 ABP_Museum_Dome_Connection_EastWing_C = {}
-
-
-

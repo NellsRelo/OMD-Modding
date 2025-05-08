@@ -14,24 +14,30 @@ UGA_ApplyBuffs_Orc_Drummer_C = {}
 ---@param GameplayEffectClass TSubclassOf<UGameplayEffect>
 ---@param Duration float
 ---@return FGameplayEffectSpecHandle
-UGA_ApplyBuffs_Orc_Drummer_C['Make Buff Spec'] = function(GameplayEffectClass, Duration) end
+UGA_ApplyBuffs_Orc_Drummer_C['Make Buff Spec'] = function(self, GameplayEffectClass, Duration) end
 ---@param Targets TArray<UObject>
 ---@param Duration double
-UGA_ApplyBuffs_Orc_Drummer_C['Apply Buffs'] = function(Targets, Duration) end
+UGA_ApplyBuffs_Orc_Drummer_C['Apply Buffs'] = function(self, Targets, Duration) end
 function UGA_ApplyBuffs_Orc_Drummer_C:OnCancelled_B2778DC14FB0533F8205EDA9956C1792() end
+
 function UGA_ApplyBuffs_Orc_Drummer_C:OnInterrupted_B2778DC14FB0533F8205EDA9956C1792() end
+
 function UGA_ApplyBuffs_Orc_Drummer_C:OnBlendOut_B2778DC14FB0533F8205EDA9956C1792() end
+
 function UGA_ApplyBuffs_Orc_Drummer_C:OnCompleted_B2778DC14FB0533F8205EDA9956C1792() end
+
 function UGA_ApplyBuffs_Orc_Drummer_C:OnIterationFinished_CA816974412D254A0E338A9EFDCAFE32() end
+
 ---@param Elements TArray<UObject>
 function UGA_ApplyBuffs_Orc_Drummer_C:OnProcessElements_CA816974412D254A0E338A9EFDCAFE32(Elements) end
+
 function UGA_ApplyBuffs_Orc_Drummer_C:K2_ActivateAbility() end
+
 ---@param bWasCancelled boolean
 function UGA_ApplyBuffs_Orc_Drummer_C:K2_OnEndAbility(bWasCancelled) end
-UGA_ApplyBuffs_Orc_Drummer_C['Try End Ability'] = function() end
-UGA_ApplyBuffs_Orc_Drummer_C['Reset End Conditions'] = function() end
-UGA_ApplyBuffs_Orc_Drummer_C['Clear Target Processing Task'] = function() end
+
+UGA_ApplyBuffs_Orc_Drummer_C['Try End Ability'] = function(self,) end
+UGA_ApplyBuffs_Orc_Drummer_C['Reset End Conditions'] = function(self,) end
+UGA_ApplyBuffs_Orc_Drummer_C['Clear Target Processing Task'] = function(self,) end
 ---@param EntryPoint int32
 function UGA_ApplyBuffs_Orc_Drummer_C:ExecuteUbergraph_GA_ApplyBuffs_Orc_Drummer(EntryPoint) end
-
-

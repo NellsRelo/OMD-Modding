@@ -18,15 +18,18 @@ ABP_Rift_C = {}
 
 ---@return FTransform
 function ABP_Rift_C:BP_GetRiftTeleportTransform() end
+
 ---@return FVector
 function ABP_Rift_C:GetRiftFXLocation() end
+
 ---@param ActorInfo FGameplayAbilityActorInfo
 function ABP_Rift_C:BP_OnInteract(ActorInfo) end
+
 ---@param InteractQuery FRSTInteractionQuery
 ---@return TArray<FRSTInteractionOption>
 function ABP_Rift_C:BP_GatherInteractionOptions(InteractQuery) end
+
 function ABP_Rift_C:ReceiveBeginPlay() end
+
 ---@param EntryPoint int32
 function ABP_Rift_C:ExecuteUbergraph_BP_Rift(EntryPoint) end
-
-

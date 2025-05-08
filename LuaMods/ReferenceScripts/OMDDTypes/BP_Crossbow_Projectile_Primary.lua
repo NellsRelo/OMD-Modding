@@ -4,6 +4,3 @@
 ---@field NS_Crossbow_Arrow UNiagaraComponent
 ---@field CrossbowPrimaryProj UAudioComponent
 ABP_Crossbow_Projectile_Primary_C = {}
-
-
-

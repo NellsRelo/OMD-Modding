@@ -4,4 +4,3 @@ ENiagara_TransformType = {
     NewEnumerator1 = 1,
     ENiagara_MAX = 2,
 }
-

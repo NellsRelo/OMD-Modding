@@ -21,6 +21,3 @@
 ---@field Geometry USceneComponent
 ---@field TrapGrid USceneComponent
 AHub_Library_WallWindowSeg_B_C = {}
-
-
-

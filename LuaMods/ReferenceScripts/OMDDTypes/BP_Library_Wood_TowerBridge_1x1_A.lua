@@ -9,6 +9,3 @@
 ---@field WoodPlank_2x1_Floor_A UStaticMeshComponent
 ---@field Trap_Ceiling URSTTrapGridBoxComponent
 ABP_Library_Wood_TowerBridge_1x1_A_C = {}
-
-
-

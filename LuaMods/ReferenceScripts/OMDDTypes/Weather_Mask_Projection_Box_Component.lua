@@ -22,17 +22,18 @@ UWeather_Mask_Projection_Box_Component_C = {}
 ---@param Location FVector
 ---@param Mask FVector2D
 ---@param Cancel_All_Masks boolean
-UWeather_Mask_Projection_Box_Component_C['Calculate Masking At Location'] = function(Location, Mask, Cancel_All_Masks) end
+UWeather_Mask_Projection_Box_Component_C['Calculate Masking At Location'] = function(self, Location, Mask,
+                                                                                     Cancel_All_Masks) end
 function UWeather_Mask_Projection_Box_Component_C:Unready() end
+
 ---@param Out FVector2D
-UWeather_Mask_Projection_Box_Component_C['Get Brush Scale'] = function(Out) end
-UWeather_Mask_Projection_Box_Component_C['Recycle Render Target'] = function() end
-UWeather_Mask_Projection_Box_Component_C['Update Capture'] = function() end
+UWeather_Mask_Projection_Box_Component_C['Get Brush Scale'] = function(self, Out) end
+UWeather_Mask_Projection_Box_Component_C['Recycle Render Target'] = function(self,) end
+UWeather_Mask_Projection_Box_Component_C['Update Capture'] = function(self,) end
 ---@param Runtime boolean
 ---@param UDW AUltra_Dynamic_Weather_C
-UWeather_Mask_Projection_Box_Component_C['Prepare for Drawing'] = function(Runtime, UDW) end
+UWeather_Mask_Projection_Box_Component_C['Prepare for Drawing'] = function(self, Runtime, UDW) end
 function UWeather_Mask_Projection_Box_Component_C:ReceiveBeginPlay() end
+
 ---@param EntryPoint int32
 function UWeather_Mask_Projection_Box_Component_C:ExecuteUbergraph_Weather_Mask_Projection_Box_Component(EntryPoint) end
-
-

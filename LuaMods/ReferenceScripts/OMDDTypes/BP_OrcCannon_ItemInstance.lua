@@ -6,6 +6,3 @@
 ---@field Damage double
 ---@field ['Critical Hit Chance'] double
 ABP_OrcCannon_ItemInstance_C = {}
-
-
-

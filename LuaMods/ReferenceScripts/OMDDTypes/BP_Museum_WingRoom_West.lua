@@ -1,15 +1,18 @@
 ---@meta
 
 ---@class ABP_Museum_WingRoom_West_C : ABP_OMDTrapGrid_C
+---@field Column_Sec_CastStone_Tall_FB_Merged50 UStaticMeshComponent
+---@field Column_Sec_CastStone_Tall_FB_Merged44 UStaticMeshComponent
+---@field Column_Sec_CastStone_Tall_FB_Merged54 UStaticMeshComponent
+---@field Column_Sec_CastStone_Tall_FB_Merged49 UStaticMeshComponent
+---@field Column_Sec_CastStone_Tall_FB_Merged47 UStaticMeshComponent
+---@field Column_Sec_CastStone_Tall_FB_Merged48 UStaticMeshComponent
+---@field Column_Sec_CastStone_Tall_FB_Merged43 UStaticMeshComponent
+---@field Column_Sec_CastStone_Tall_FB_Merged42 UStaticMeshComponent
 ---@field Box UBoxComponent
 ---@field Ceiling_ArchTileBig_EndAB_2x4_StoneWall_SM54 UStaticMeshComponent
 ---@field Crenel_BaseD_CastStone_Sub6 UStaticMeshComponent
 ---@field Crenel_BaseD_CastStone_Sub5 UStaticMeshComponent
----@field Crenel_BaseD_CastStone_Sub4 UStaticMeshComponent
----@field Crenel_BaseD_CastStone_Sub3 UStaticMeshComponent
----@field Crenel_BaseD_CastStone_Sub2 UStaticMeshComponent
----@field Crenel_BaseD_CastStone_Sub1 UStaticMeshComponent
----@field Crenel_BaseD_CastStone_Sub UStaticMeshComponent
 ---@field ColumnTrim_CastStone_1200W1 UStaticMeshComponent
 ---@field ColumnTrim_CastStone_1200W UStaticMeshComponent
 ---@field CSC_1200_GardenWall UStaticMeshComponent
@@ -75,7 +78,6 @@
 ---@field Floor_4x4_StoneBlock_SM37 UStaticMeshComponent
 ---@field Gate_Gardens_RodIron_C1 UStaticMeshComponent
 ---@field Gate_Gardens_RodIron_B UStaticMeshComponent
----@field Column_Sec_CastStone_Tall_FB_Merged63 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM36 UStaticMeshComponent
 ---@field RSTTrapGridBox14 URSTTrapGridBoxComponent
 ---@field Garden_Railing_EndCap_SM_Merged4 UStaticMeshComponent
@@ -216,17 +218,14 @@
 ---@field Floor_4x4_StoneBlock_SM19 UStaticMeshComponent
 ---@field Column_Sec_CastStone_Tall_FB_Merged62 UStaticMeshComponent
 ---@field Column_Sec_CastStone_Tall_FB_Merged61 UStaticMeshComponent
----@field Column_Sec_CastStone_Tall_FB_Merged60 UStaticMeshComponent
 ---@field Column_Sec_CastStone_Tall_FB_Merged59 UStaticMeshComponent
 ---@field Column_Sec_CastStone_Tall_FB_Merged58 UStaticMeshComponent
 ---@field Ceiling_ArchTileBig_EndAB_2x4_StoneWall_SM15 UStaticMeshComponent
 ---@field Ceiling_ArchTileBig_EndAB_2x4_StoneWall_SM14 UStaticMeshComponent
 ---@field Ceiling_ArchTileBig_EndAB_2x4_StoneWall_SM13 UStaticMeshComponent
 ---@field Column_Sec_CastStone_Tall_FB_Merged57 UStaticMeshComponent
----@field Column_Sec_CastStone_Tall_FB_Merged56 UStaticMeshComponent
 ---@field Column_Sec_CastStone_Tall_FB_Merged55 UStaticMeshComponent
 ---@field Ceiling_ArchTileBig_EndAB_2x4_StoneWall_SM12 UStaticMeshComponent
----@field Column_Sec_CastStone_Tall_FB_Merged54 UStaticMeshComponent
 ---@field Ceiling_ArchTileBig_EndAB_2x4_StoneWall_SM11 UStaticMeshComponent
 ---@field Wall_2x2x05_StoneWall_SM_Double_WIndow_Union61 UStaticMeshComponent
 ---@field Column_Sec_CastStone_Tall_FB_Merged53 UStaticMeshComponent
@@ -238,8 +237,6 @@
 ---@field Ceiling_ArchTileBig_EndAB_2x4_StoneWall_SM5 UStaticMeshComponent
 ---@field Wall_2x2x05_StoneWall_SM_Double_WIndow_Union57 UStaticMeshComponent
 ---@field Column_Sec_CastStone_Tall_FB_Merged52 UStaticMeshComponent
----@field Column_Sec_CastStone_Tall_FB_Merged51 UStaticMeshComponent
----@field Column_Sec_CastStone_Tall_FB_Merged50 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM18 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM17 UStaticMeshComponent
 ---@field Ceiling_ArchTileBig_EndAB_2x4_StoneWall_SM4 UStaticMeshComponent
@@ -276,14 +273,6 @@
 ---@field Wall_2x1_StairSide_StoneWall_SM2 UStaticMeshComponent
 ---@field Wall_2x1_StairSide_StoneWall_SM1 UStaticMeshComponent
 ---@field Wall_2x1_StairSide_StoneWall_SM UStaticMeshComponent
----@field Column_Sec_CastStone_Tall_FB_Merged49 UStaticMeshComponent
----@field Column_Sec_CastStone_Tall_FB_Merged48 UStaticMeshComponent
----@field Column_Sec_CastStone_Tall_FB_Merged47 UStaticMeshComponent
----@field Column_Sec_CastStone_Tall_FB_Merged46 UStaticMeshComponent
----@field Column_Sec_CastStone_Tall_FB_Merged45 UStaticMeshComponent
----@field Column_Sec_CastStone_Tall_FB_Merged44 UStaticMeshComponent
----@field Column_Sec_CastStone_Tall_FB_Merged43 UStaticMeshComponent
----@field Column_Sec_CastStone_Tall_FB_Merged42 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM12 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM11 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM10 UStaticMeshComponent
@@ -293,16 +282,9 @@
 ---@field Stair_5x2_StoneWallBlock_SM2 UStaticMeshComponent
 ---@field Stair_5x2_StoneWallBlock_SM1 UStaticMeshComponent
 ---@field Stair_5x2_StoneWallBlock_SM UStaticMeshComponent
----@field Column_Sec_CastStone_Tall_FB_Merged41 UStaticMeshComponent
----@field Column_Sec_CastStone_Tall_FB_Merged40 UStaticMeshComponent
----@field Column_Sec_CastStone_Tall_FB_Merged39 UStaticMeshComponent
----@field Column_Sec_CastStone_Tall_FB_Merged38 UStaticMeshComponent
----@field Column_Sec_CastStone_Tall_FB_Merged16 UStaticMeshComponent
 ---@field Column_Sec_CastStone_Tall_FB_Merged20 UStaticMeshComponent
 ---@field Column_Sec_CastStone_Tall_FB_Merged37 UStaticMeshComponent
----@field Column_Sec_CastStone_Tall_FB_Merged36 UStaticMeshComponent
 ---@field Column_Sec_CastStone_Tall_FB_Merged35 UStaticMeshComponent
----@field Column_Sec_CastStone_Tall_FB_Merged32 UStaticMeshComponent
 ---@field Wall_2x2x05_StoneWall_SM_Double_WIndow_Union59 UStaticMeshComponent
 ---@field Wall_2x2x05_StoneWall_SM_Double_WIndow_Union58 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM7 UStaticMeshComponent
@@ -421,9 +403,7 @@
 ---@field Dome_Ribbing_Half_Clean_SM6 UStaticMeshComponent
 ---@field Column_Sec_CastStone_Tall_FB_Merged31 UStaticMeshComponent
 ---@field Column_Sec_CastStone_Tall_FB_Merged28 UStaticMeshComponent
----@field Column_Sec_CastStone_Tall_FB_Merged27 UStaticMeshComponent
 ---@field Column_Sec_CastStone_Tall_FB_Merged26 UStaticMeshComponent
----@field Column_Sec_CastStone_Tall_FB_Merged25 UStaticMeshComponent
 ---@field Wall_2x2x05_StoneWall_SM_Double_WIndow_Union3 UStaticMeshComponent
 ---@field Dome_Ribbing_Half_Clean_SM11 UStaticMeshComponent
 ---@field Dome_Ribbing_Half_Clean_SM2 UStaticMeshComponent
@@ -442,7 +422,6 @@
 ---@field Dome_3x3_Half_StoneWall_SM6 UStaticMeshComponent
 ---@field Dome_3x3_Half_StoneWall_SM5 UStaticMeshComponent
 ---@field Dome_3x3_Half_StoneWall_SM UStaticMeshComponent
----@field Column_Sec_CastStone_Tall_FB_Merged29 UStaticMeshComponent
 ---@field Dome_3x3_Half_StoneWall_SM9 UStaticMeshComponent
 ---@field Wall_2x05_Crenel_NONE_StoneWall_SM_A_Merge5 UStaticMeshComponent
 ---@field Wall_2x05_Crenel_NONE_StoneWall_SM_A_Merge3 UStaticMeshComponent
@@ -458,15 +437,10 @@
 ---@field Column_Sec_CastStone_Tall_FB_Merged8 UStaticMeshComponent
 ---@field Dome_3x3_Half_StoneWall_SM13 UStaticMeshComponent
 ---@field Wall_2x2x05_StoneWall_SM_Double_WIndow_Union4 UStaticMeshComponent
----@field Column_Sec_CastStone_Tall_FB_Merged23 UStaticMeshComponent
 ---@field Wall_2x2x05_StoneWall_SM_Double_WIndow_Union13 UStaticMeshComponent
 ---@field Wall_2x2x05_StoneWall_SM_Double_WIndow_Union15 UStaticMeshComponent
 ---@field Wall_2x2x05_StoneWall_SM_Double_WIndow_Union5 UStaticMeshComponent
 ---@field Column_Sec_CastStone_Tall_FB_Merged13 UStaticMeshComponent
----@field Column_Sec_CastStone_Tall_FB_Merged14 UStaticMeshComponent
----@field Column_Sec_CastStone_Tall_FB_Merged15 UStaticMeshComponent
----@field Column_Sec_CastStone_Tall_FB_Merged18 UStaticMeshComponent
----@field Column_Sec_CastStone_Tall_FB_Merged17 UStaticMeshComponent
 ---@field Column_Sec_CastStone_Tall_FB_Merged19 UStaticMeshComponent
 ---@field Column_Sec_CastStone_Tall_FB_Merged21 UStaticMeshComponent
 ---@field Wall_2x2x05_StoneWall_SM_Double_WIndow_Union6 UStaticMeshComponent
@@ -492,6 +466,3 @@
 ---@field Proto_Dome_Large_Glass UStaticMeshComponent
 ---@field Props USceneComponent
 ABP_Museum_WingRoom_West_C = {}
-
-
-

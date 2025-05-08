@@ -50,6 +50,3 @@
 ---@field Wall_StoneWall_Castle_4x2_SM UStaticMeshComponent
 ---@field Geometry USceneComponent
 ABP_CastlePlaza_Waterworks_Vista_Wall_C_C = {}
-
-
-

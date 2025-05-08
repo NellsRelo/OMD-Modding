@@ -229,6 +229,3 @@
 ---@field Wall_2x2x05_StoneWall_SM12 UStaticMeshComponent
 ---@field Props USceneComponent
 ABP_Garden_WestWing_A_C = {}
-
-
-

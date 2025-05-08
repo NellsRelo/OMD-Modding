@@ -10,6 +10,3 @@
 ---@field Geometry USceneComponent
 ---@field TrapGrid USceneComponent
 ABP_Column_Square_2_4_Squarewall_C = {}
-
-
-

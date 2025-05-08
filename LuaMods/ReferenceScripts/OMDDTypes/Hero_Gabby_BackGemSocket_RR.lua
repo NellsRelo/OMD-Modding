@@ -19,6 +19,3 @@ URigVMMemory_Literal = {}
 ---@field RigVMModel___ParentConstraint_ChildCache TArray<FCachedRigElement>
 ---@field RigVMModel___ParentConstraint_ParentCaches TArray<TArray<FCachedRigElement>>
 URigVMMemory_Work = {}
-
-
-

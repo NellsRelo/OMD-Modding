@@ -8,6 +8,3 @@
 ---@field StatusEffectDuration double
 ---@field ['Critical Hit Chance'] double
 ABP_Brimstone_ItemInstance_C = {}
-
-
-

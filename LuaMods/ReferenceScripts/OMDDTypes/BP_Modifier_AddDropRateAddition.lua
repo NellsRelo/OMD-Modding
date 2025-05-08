@@ -8,9 +8,8 @@ UBP_Modifier_AddDropRateAddition_C = {}
 ---@param InContextObject UObject
 ---@return boolean
 function UBP_Modifier_AddDropRateAddition_C:BP_RemoveModifier(Target, InContextObject) end
+
 ---@param Target UObject
 ---@param OutContextObject UObject
 ---@return boolean
 function UBP_Modifier_AddDropRateAddition_C:BP_ApplyModifier(Target, OutContextObject) end
-
-

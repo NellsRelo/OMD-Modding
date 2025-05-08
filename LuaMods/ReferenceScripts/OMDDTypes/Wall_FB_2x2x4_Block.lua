@@ -10,6 +10,3 @@
 ---@field Geometry USceneComponent
 ---@field TrapGrid USceneComponent
 AWall_FB_2x2x4_Block_C = {}
-
-
-

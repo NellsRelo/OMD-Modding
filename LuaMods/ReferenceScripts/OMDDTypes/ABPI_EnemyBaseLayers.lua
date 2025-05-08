@@ -5,6 +5,4 @@ IABPI_EnemyBaseLayers_C = {}
 
 ---@param InPose FPoseLink
 ---@param Full_Body_Override FPoseLink
-IABPI_EnemyBaseLayers_C['Full Body Override'] = function(InPose, Full_Body_Override) end
-
-
+IABPI_EnemyBaseLayers_C['Full Body Override'] = function(self, InPose, Full_Body_Override) end

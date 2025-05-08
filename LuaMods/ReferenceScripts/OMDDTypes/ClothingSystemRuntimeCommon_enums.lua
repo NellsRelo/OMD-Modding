@@ -24,4 +24,3 @@ EWeightMapTargetCommon = {
     AnimDriveDamping_DEPRECATED = 5,
     EWeightMapTargetCommon_MAX = 6,
 }
-

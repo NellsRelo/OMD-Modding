@@ -11,7 +11,6 @@ UBTService_CheckEnemiesRemaining_C = {}
 ---@param ControlledPawn APawn
 ---@param DeltaSeconds float
 function UBTService_CheckEnemiesRemaining_C:ReceiveTickAI(OwnerController, ControlledPawn, DeltaSeconds) end
+
 ---@param EntryPoint int32
 function UBTService_CheckEnemiesRemaining_C:ExecuteUbergraph_BTService_CheckEnemiesRemaining(EntryPoint) end
-
-

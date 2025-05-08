@@ -5,6 +5,4 @@
 ---@field Text_SkullCost UCommonTextBlock
 UW_PurchaseMenu_Grid_Potion_C = {}
 
-UW_PurchaseMenu_Grid_Potion_C['Init Display'] = function() end
-
-
+UW_PurchaseMenu_Grid_Potion_C['Init Display'] = function(self,) end

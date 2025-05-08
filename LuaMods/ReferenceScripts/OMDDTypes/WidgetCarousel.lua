@@ -14,6 +14,3 @@ FWidgetCarouselNavigationBarStyle = {}
 ---@field NavigationButtonLeftImage FSlateBrush
 ---@field NavigationButtonRightImage FSlateBrush
 FWidgetCarouselNavigationButtonStyle = {}
-
-
-

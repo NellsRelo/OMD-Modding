@@ -52,4 +52,3 @@ EGooglePADStorageMethod = {
     AssetPack_STORAGE_NOT_INSTALLED = 3,
     AssetPack_STORAGE_MAX = 4,
 }
-

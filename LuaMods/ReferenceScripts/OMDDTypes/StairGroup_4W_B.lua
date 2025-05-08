@@ -26,6 +26,3 @@
 ---@field Geo USceneComponent
 ---@field TrapGrid USceneComponent
 AStairGroup_4W_B_C = {}
-
-
-

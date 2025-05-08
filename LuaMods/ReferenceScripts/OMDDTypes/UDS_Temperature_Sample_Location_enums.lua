@@ -5,4 +5,3 @@ UDS_Temperature_Sample_Location = {
     NewEnumerator3 = 2,
     UDS_Temperature_Sample_MAX = 3,
 }
-

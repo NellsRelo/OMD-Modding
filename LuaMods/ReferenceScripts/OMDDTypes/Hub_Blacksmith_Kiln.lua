@@ -15,6 +15,3 @@
 ---@field Kiln_Brick_SM UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 AHub_Blacksmith_Kiln_C = {}
-
-
-

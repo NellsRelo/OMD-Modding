@@ -8,6 +8,3 @@
 ---@field DryDocks_Gate_Complete_SM UStaticMeshComponent
 ---@field Trap_Wall1 URSTTrapGridBoxComponent
 ABP_DryDocks_Gate_Complete_C = {}
-
-
-

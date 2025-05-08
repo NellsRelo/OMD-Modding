@@ -12,9 +12,9 @@ ABP_Blunderbuss_Projectile_Ultimate_C = {}
 
 ---@param DeltaSeconds float
 function ABP_Blunderbuss_Projectile_Ultimate_C:ReceiveTick(DeltaSeconds) end
+
 ---@param TargetData FGameplayAbilityTargetDataHandle
 function ABP_Blunderbuss_Projectile_Ultimate_C:BP_TargetDataSet(TargetData) end
+
 ---@param EntryPoint int32
 function ABP_Blunderbuss_Projectile_Ultimate_C:ExecuteUbergraph_BP_Blunderbuss_Projectile_Ultimate(EntryPoint) end
-
-

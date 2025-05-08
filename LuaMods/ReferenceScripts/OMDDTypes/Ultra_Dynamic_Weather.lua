@@ -287,7 +287,7 @@
 ---@field ['Triggered Starting Dispatchers'] boolean
 ---@field ['Old Weather State'] UUDS_Weather_Settings_C
 ---@field ['Global Weather State'] UUDS_Weather_Settings_C
----@field ['Local Weather State'] UUDS_Weather_Settings_C
+---@field ['Weather State'] UUDS_Weather_Settings_C
 ---@field ['Update Buffer'] UUDS_Weather_Settings_C
 ---@field ['Dust Particles Time Dilation'] float
 ---@field ['Season Mode'] UDS_SeasonMode::Type
@@ -398,7 +398,7 @@
 ---@field ['Scale Distant Particle Alpha'] double
 ---@field ['Distant Particle Range'] double
 ---@field ['Global Weather Updated'] boolean
----@field ['Local Weather Updated'] boolean
+---@field ['Weather Updated'] boolean
 ---@field ['Old State Source Map'] TMap<UUDS_Weather_Settings_C, double>
 ---@field ['Call "Custom Weather Behavior" Functions'] boolean
 ---@field ['Last Update Sources'] TArray<UUDS_Weather_Settings_C>
@@ -470,7 +470,7 @@
 ---@field ['Dynamic Puddles Active'] boolean
 ---@field ['Dynamic Snow/Dust'] int32
 ---@field ['Transition Weather State B'] UUDS_Weather_Settings_C
----@field ['Local Weather Location'] FVector
+---@field ['Weather Location'] FVector
 ---@field ['Last Applied WOVs'] TArray<AWeather_Override_Volume_C>
 ---@field ['Weather Mask Target Active'] boolean
 ---@field Mobile boolean
@@ -541,14 +541,14 @@
 AUltra_Dynamic_Weather_C = {}
 
 ---@param Success boolean
-AUltra_Dynamic_Weather_C['UDS Reconstruct'] = function(Success) end
+AUltra_Dynamic_Weather_C['UDS Reconstruct'] = function(self, Success) end
 ---@param Storm AActor
 ---@param Success boolean
-AUltra_Dynamic_Weather_C['Report Removed Radial Storm'] = function(Storm, Success) end
+AUltra_Dynamic_Weather_C['Report Removed Radial Storm'] = function(self, Storm, Success) end
 ---@param Cloud_Coverage boolean
 ---@param Fog boolean
 ---@param Dust boolean
-AUltra_Dynamic_Weather_C['Get UDS Weather Override Bool'] = function(Cloud_Coverage, Fog, Dust) end
+AUltra_Dynamic_Weather_C['Get UDS Weather Override Bool'] = function(self, Cloud_Coverage, Fog, Dust) end
 ---@param Override_Clouds boolean
 ---@param Cloud_Coverage double
 ---@param Override_Fog boolean
@@ -556,22 +556,26 @@ AUltra_Dynamic_Weather_C['Get UDS Weather Override Bool'] = function(Cloud_Cover
 ---@param Override_Dust boolean
 ---@param Dust double
 ---@param Success boolean
-AUltra_Dynamic_Weather_C['UDS Weather Variable Overrides'] = function(Override_Clouds, Cloud_Coverage, Override_Fog, Fog, Override_Dust, Dust, Success) end
+AUltra_Dynamic_Weather_C['UDS Weather Variable Overrides'] = function(self, Override_Clouds, Cloud_Coverage, Override_Fog,
+                                                                      Fog, Override_Dust, Dust, Success) end
 ---@param State FUDS_and_UDW_State
 ---@param Completed boolean
-AUltra_Dynamic_Weather_C['UDW State Apply'] = function(State, Completed) end
+AUltra_Dynamic_Weather_C['UDW State Apply'] = function(self, State, Completed) end
 ---@param Cloud_Coverage double
 ---@param Fog double
 ---@param Dust_Amount double
 ---@param Cloud_Direction double
 ---@param Wind_Speed_Multiplier double
 ---@param Fog_Vertical_Velocity double
-AUltra_Dynamic_Weather_C['Get UDS Values Controlled by UDW'] = function(Cloud_Coverage, Fog, Dust_Amount, Cloud_Direction, Wind_Speed_Multiplier, Fog_Vertical_Velocity) end
+AUltra_Dynamic_Weather_C['Get UDS Values Controlled by UDW'] = function(self, Cloud_Coverage, Fog, Dust_Amount,
+                                                                        Cloud_Direction, Wind_Speed_Multiplier,
+                                                                        Fog_Vertical_Velocity) end
 ---@param Editor_Camera_Location FVector
 ---@param Editor_Camera_Rotation FRotator
 ---@param Delta_Time double
 ---@param Completed boolean
-AUltra_Dynamic_Weather_C['Editor Tick'] = function(Editor_Camera_Location, Editor_Camera_Rotation, Delta_Time, Completed) end
+AUltra_Dynamic_Weather_C['Editor Tick'] = function(self, Editor_Camera_Location, Editor_Camera_Rotation, Delta_Time,
+                                                   Completed) end
 ---@param Cloud_Coverage double
 ---@param Wind_Intensity double
 ---@param Rain double
@@ -579,176 +583,177 @@ AUltra_Dynamic_Weather_C['Editor Tick'] = function(Editor_Camera_Location, Edito
 ---@param Dust double
 ---@param Fog double
 ---@param Thunder_Lightning double
-AUltra_Dynamic_Weather_C['Get Local Weather State Values'] = function(Cloud_Coverage, Wind_Intensity, Rain, Snow, Dust, Fog, Thunder_Lightning) end
+AUltra_Dynamic_Weather_C['Get Weather State Values'] = function(self, Cloud_Coverage, Wind_Intensity, Rain, Snow, Dust,
+                                                                Fog, Thunder_Lightning) end
 ---@param Location FVector
-AUltra_Dynamic_Weather_C['Get Control Point Location'] = function(Location) end
+AUltra_Dynamic_Weather_C['Get Control Point Location'] = function(self, Location) end
 ---@param UDW_State FUDS_and_UDW_State
-AUltra_Dynamic_Weather_C['Get UDW State for Saving'] = function(UDW_State) end
+AUltra_Dynamic_Weather_C['Get UDW State for Saving'] = function(self, UDW_State) end
 ---@param Out TSoftObjectPtr<UNiagaraSystem>
-AUltra_Dynamic_Weather_C['Wind Debris Niagara System Asset'] = function(Out) end
+AUltra_Dynamic_Weather_C['Wind Debris Niagara System Asset'] = function(self, Out) end
 ---@param Out TSoftObjectPtr<UNiagaraSystem>
-AUltra_Dynamic_Weather_C['Dust Niagara System Asset'] = function(Out) end
+AUltra_Dynamic_Weather_C['Dust Niagara System Asset'] = function(self, Out) end
 ---@param Out TSoftObjectPtr<UNiagaraSystem>
-AUltra_Dynamic_Weather_C['Snow Niagara System Asset'] = function(Out) end
+AUltra_Dynamic_Weather_C['Snow Niagara System Asset'] = function(self, Out) end
 ---@param Out TSoftObjectPtr<UNiagaraSystem>
-AUltra_Dynamic_Weather_C['Rain Niagara System Asset'] = function(Out) end
-AUltra_Dynamic_Weather_C['Make Lightning Flash Systems'] = function() end
+AUltra_Dynamic_Weather_C['Rain Niagara System Asset'] = function(self, Out) end
+AUltra_Dynamic_Weather_C['Make Lightning Flash Systems'] = function(self,) end
 ---@param PSystem UNiagaraComponent
-AUltra_Dynamic_Weather_C['Obscured Lightning System Finished'] = function(PSystem) end
+AUltra_Dynamic_Weather_C['Obscured Lightning System Finished'] = function(self, PSystem) end
 ---@return double
-AUltra_Dynamic_Weather_C['Obscured Lightning Current Spawn Rate'] = function() end
-AUltra_Dynamic_Weather_C['Make Obscured Lightning Component'] = function() end
+AUltra_Dynamic_Weather_C['Obscured Lightning Current Spawn Rate'] = function(self,) end
+AUltra_Dynamic_Weather_C['Make Obscured Lightning Component'] = function(self,) end
 ---@param PSystem UNiagaraComponent
-AUltra_Dynamic_Weather_C['Wind Debris System Finished'] = function(PSystem) end
+AUltra_Dynamic_Weather_C['Wind Debris System Finished'] = function(self, PSystem) end
 ---@param PSystem UNiagaraComponent
-AUltra_Dynamic_Weather_C['Snow System Finished'] = function(PSystem) end
-AUltra_Dynamic_Weather_C['Make Snow Component'] = function() end
+AUltra_Dynamic_Weather_C['Snow System Finished'] = function(self, PSystem) end
+AUltra_Dynamic_Weather_C['Make Snow Component'] = function(self,) end
 ---@param PSystem UNiagaraComponent
-AUltra_Dynamic_Weather_C['Rain System Finished'] = function(PSystem) end
-AUltra_Dynamic_Weather_C['Screen Frost Startup'] = function() end
-AUltra_Dynamic_Weather_C['Update Target Screen Frost'] = function() end
+AUltra_Dynamic_Weather_C['Rain System Finished'] = function(self, PSystem) end
+AUltra_Dynamic_Weather_C['Screen Frost Startup'] = function(self,) end
+AUltra_Dynamic_Weather_C['Update Target Screen Frost'] = function(self,) end
 ---@return double
-AUltra_Dynamic_Weather_C['Target Screen Frost Strength'] = function() end
-AUltra_Dynamic_Weather_C['Update Screen Frost'] = function() end
-AUltra_Dynamic_Weather_C['Randomize Screen Frost Offset'] = function() end
-AUltra_Dynamic_Weather_C['📘 Screen Frost'] = function() end
-AUltra_Dynamic_Weather_C['Filter Radial Storm Array'] = function() end
-AUltra_Dynamic_Weather_C['Static Mode Tick'] = function() end
-AUltra_Dynamic_Weather_C['Static Properties - Screen Frost'] = function() end
-AUltra_Dynamic_Weather_C['Startup Static Mode'] = function() end
-AUltra_Dynamic_Weather_C['Increment Wind Direction Transition'] = function() end
+AUltra_Dynamic_Weather_C['Target Screen Frost Strength'] = function(self,) end
+AUltra_Dynamic_Weather_C['Update Screen Frost'] = function(self,) end
+AUltra_Dynamic_Weather_C['Randomize Screen Frost Offset'] = function(self,) end
+AUltra_Dynamic_Weather_C['📘 Screen Frost'] = function(self,) end
+AUltra_Dynamic_Weather_C['Filter Radial Storm Array'] = function(self,) end
+AUltra_Dynamic_Weather_C['Static Mode Tick'] = function(self,) end
+AUltra_Dynamic_Weather_C['Static Properties - Screen Frost'] = function(self,) end
+AUltra_Dynamic_Weather_C['Startup Static Mode'] = function(self,) end
+AUltra_Dynamic_Weather_C['Increment Wind Direction Transition'] = function(self,) end
 ---@param New_Wind_Direction double
 ---@param Change_Duration double
-AUltra_Dynamic_Weather_C['Change Wind Direction'] = function(New_Wind_Direction, Change_Duration) end
-AUltra_Dynamic_Weather_C['Game User Settings Update'] = function() end
-AUltra_Dynamic_Weather_C['Bind to Game User Settings'] = function() end
-AUltra_Dynamic_Weather_C['Copy Manual State Object to Variables'] = function() end
-AUltra_Dynamic_Weather_C['Static Properties - Post Processing'] = function() end
+AUltra_Dynamic_Weather_C['Change Wind Direction'] = function(self, New_Wind_Direction, Change_Duration) end
+AUltra_Dynamic_Weather_C['Game User Settings Update'] = function(self,) end
+AUltra_Dynamic_Weather_C['Bind to Game User Settings'] = function(self,) end
+AUltra_Dynamic_Weather_C['Copy Manual State Object to Variables'] = function(self,) end
+AUltra_Dynamic_Weather_C['Static Properties - Post Processing'] = function(self,) end
 ---@param Target UUDS_Weather_Settings_C
 ---@param Index int32
-AUltra_Dynamic_Weather_C['Manual Override to State Value'] = function(Target, Index) end
+AUltra_Dynamic_Weather_C['Manual Override to State Value'] = function(self, Target, Index) end
 ---@param Index int32
 ---@param Enabled boolean
-AUltra_Dynamic_Weather_C['Toggle Post Process Material'] = function(Index, Enabled) end
-AUltra_Dynamic_Weather_C['Add Constructed Components'] = function() end
-AUltra_Dynamic_Weather_C['Apply Sound Update Periods'] = function() end
+AUltra_Dynamic_Weather_C['Toggle Post Process Material'] = function(self, Index, Enabled) end
+AUltra_Dynamic_Weather_C['Add Constructed Components'] = function(self,) end
+AUltra_Dynamic_Weather_C['Apply Sound Update Periods'] = function(self,) end
 ---@param State UUDS_Weather_Settings_C
 ---@param Alpha double
 ---@param Color FLinearColor
-AUltra_Dynamic_Weather_C['Material Effect Draw Color from State'] = function(State, Alpha, Color) end
-AUltra_Dynamic_Weather_C['Version Specific Correction'] = function() end
-AUltra_Dynamic_Weather_C['Apply Radial Storm Actors to Local Weather'] = function() end
-AUltra_Dynamic_Weather_C['Get Starting Radial Storms'] = function() end
+AUltra_Dynamic_Weather_C['Material Effect Draw Color from State'] = function(self, State, Alpha, Color) end
+AUltra_Dynamic_Weather_C['Version Specific Correction'] = function(self,) end
+AUltra_Dynamic_Weather_C['Apply Radial Storm Actors to Weather'] = function(self,) end
+AUltra_Dynamic_Weather_C['Get Starting Radial Storms'] = function(self,) end
 ---@return double
-AUltra_Dynamic_Weather_C['Lightning Intensity Day/Night Scale'] = function() end
-AUltra_Dynamic_Weather_C['Set Startup Variables'] = function() end
+AUltra_Dynamic_Weather_C['Lightning Intensity Day/Night Scale'] = function(self,) end
+AUltra_Dynamic_Weather_C['Set Startup Variables'] = function(self,) end
 ---@param Sources TMap<UUDS_Weather_Settings_C, double>
-AUltra_Dynamic_Weather_C['Get Weather Presets Used By Local Weather'] = function(Sources) end
+AUltra_Dynamic_Weather_C['Get Weather Presets Used By Weather'] = function(self, Sources) end
 ---@param WOV AWeather_Override_Volume_C
 ---@param Alpha double
-AUltra_Dynamic_Weather_C['Apply Weather Override Volume State'] = function(WOV, Alpha) end
+AUltra_Dynamic_Weather_C['Apply Weather Override Volume State'] = function(self, WOV, Alpha) end
 ---@param A UUDS_Weather_Settings_C
 ---@param B UUDS_Weather_Settings_C
 ---@param Alpha double
 ---@param Target_Object UUDS_Weather_Settings_C
-AUltra_Dynamic_Weather_C['Lerp State Source Maps'] = function(A, B, Alpha, Target_Object) end
-AUltra_Dynamic_Weather_C['Set DLWE Snow/Dust Parameters'] = function() end
+AUltra_Dynamic_Weather_C['Lerp State Source Maps'] = function(self, A, B, Alpha, Target_Object) end
+AUltra_Dynamic_Weather_C['Set DLWE Snow/Dust Parameters'] = function(self,) end
 ---@return boolean
-AUltra_Dynamic_Weather_C['Any Manual Overrides Applied'] = function() end
+AUltra_Dynamic_Weather_C['Any Manual Overrides Applied'] = function(self,) end
 ---@param State UUDS_Weather_Settings_C
 ---@param Struct FUDW_WeatherState_Structure
-AUltra_Dynamic_Weather_C['Copy Weather State Structure to Object'] = function(State, Struct) end
+AUltra_Dynamic_Weather_C['Copy Weather State Structure to Object'] = function(self, State, Struct) end
 ---@param State UUDS_Weather_Settings_C
 ---@param Structure FUDW_WeatherState_Structure
-AUltra_Dynamic_Weather_C['Weather State Object to Structure'] = function(State, Structure) end
-AUltra_Dynamic_Weather_C['Apply Manual State Override Values'] = function() end
+AUltra_Dynamic_Weather_C['Weather State Object to Structure'] = function(self, State, Structure) end
+AUltra_Dynamic_Weather_C['Apply Manual State Override Values'] = function(self,) end
 ---@param Upcoming_Weather_Objects TArray<UUDS_Weather_Settings_C>
-AUltra_Dynamic_Weather_C['Get Random Weather Forecast'] = function(Upcoming_Weather_Objects) end
+AUltra_Dynamic_Weather_C['Get Random Weather Forecast'] = function(self, Upcoming_Weather_Objects) end
 ---@param Season double
 ---@param Season_Enum UDS_Season::Type
-AUltra_Dynamic_Weather_C['Get Season'] = function(Season, Season_Enum) end
-AUltra_Dynamic_Weather_C['Daily Season Update'] = function() end
+AUltra_Dynamic_Weather_C['Get Season'] = function(self, Season, Season_Enum) end
+AUltra_Dynamic_Weather_C['Daily Season Update'] = function(self,) end
 ---@param Hour int32
-AUltra_Dynamic_Weather_C['Hourly Season Update'] = function(Hour) end
-AUltra_Dynamic_Weather_C['Bind to UDS Dispatchers'] = function() end
+AUltra_Dynamic_Weather_C['Hourly Season Update'] = function(self, Hour) end
+AUltra_Dynamic_Weather_C['Bind to UDS Dispatchers'] = function(self,) end
 ---@param Season double
-AUltra_Dynamic_Weather_C['Set Season'] = function(Season) end
-AUltra_Dynamic_Weather_C['Level Editor Lightning Flash Spawning'] = function() end
-AUltra_Dynamic_Weather_C['Clear All Render Targets'] = function() end
+AUltra_Dynamic_Weather_C['Set Season'] = function(self, Season) end
+AUltra_Dynamic_Weather_C['Level Editor Lightning Flash Spawning'] = function(self,) end
+AUltra_Dynamic_Weather_C['Clear All Render Targets'] = function(self,) end
 ---@return boolean
-AUltra_Dynamic_Weather_C['Allow Render Target Drawing'] = function() end
-AUltra_Dynamic_Weather_C['Start Up Render Targets'] = function() end
-AUltra_Dynamic_Weather_C['Check for Render Target Recentering'] = function() end
-AUltra_Dynamic_Weather_C['📘 Event Dispatchers'] = function() end
+AUltra_Dynamic_Weather_C['Allow Render Target Drawing'] = function(self,) end
+AUltra_Dynamic_Weather_C['Start Up Render Targets'] = function(self,) end
+AUltra_Dynamic_Weather_C['Check for Render Target Recentering'] = function(self,) end
+AUltra_Dynamic_Weather_C['📘 Event Dispatchers'] = function(self,) end
 ---@param State UUDS_Weather_Settings_C
-AUltra_Dynamic_Weather_C['Construct Weather State Object if Invalid'] = function(State) end
-AUltra_Dynamic_Weather_C['Static Properties - Post Process Wind Fog'] = function() end
-AUltra_Dynamic_Weather_C['Static Properties - Screen Droplets'] = function() end
-AUltra_Dynamic_Weather_C['Static Properties - Heat Distortion'] = function() end
-AUltra_Dynamic_Weather_C['Static Properties - Rainbow'] = function() end
-AUltra_Dynamic_Weather_C['Static Properties - Sound Effects'] = function() end
-AUltra_Dynamic_Weather_C['Static Properties - DLWE'] = function() end
-AUltra_Dynamic_Weather_C['Static Properties - Occlusion'] = function() end
-AUltra_Dynamic_Weather_C['Static Properties - Lightning'] = function() end
-AUltra_Dynamic_Weather_C['Static Properties - Dust'] = function() end
-AUltra_Dynamic_Weather_C['Static Properties - Wind Debris'] = function() end
-AUltra_Dynamic_Weather_C['Static Properties - Snow'] = function() end
-AUltra_Dynamic_Weather_C['Static Properties - Rain'] = function() end
-AUltra_Dynamic_Weather_C['Static Properties - Shared Particles'] = function() end
-AUltra_Dynamic_Weather_C['Static Properties - Material Effects'] = function() end
+AUltra_Dynamic_Weather_C['Construct Weather State Object if Invalid'] = function(self, State) end
+AUltra_Dynamic_Weather_C['Static Properties - Post Process Wind Fog'] = function(self,) end
+AUltra_Dynamic_Weather_C['Static Properties - Screen Droplets'] = function(self,) end
+AUltra_Dynamic_Weather_C['Static Properties - Heat Distortion'] = function(self,) end
+AUltra_Dynamic_Weather_C['Static Properties - Rainbow'] = function(self,) end
+AUltra_Dynamic_Weather_C['Static Properties - Sound Effects'] = function(self,) end
+AUltra_Dynamic_Weather_C['Static Properties - DLWE'] = function(self,) end
+AUltra_Dynamic_Weather_C['Static Properties - Occlusion'] = function(self,) end
+AUltra_Dynamic_Weather_C['Static Properties - Lightning'] = function(self,) end
+AUltra_Dynamic_Weather_C['Static Properties - Dust'] = function(self,) end
+AUltra_Dynamic_Weather_C['Static Properties - Wind Debris'] = function(self,) end
+AUltra_Dynamic_Weather_C['Static Properties - Snow'] = function(self,) end
+AUltra_Dynamic_Weather_C['Static Properties - Rain'] = function(self,) end
+AUltra_Dynamic_Weather_C['Static Properties - Shared Particles'] = function(self,) end
+AUltra_Dynamic_Weather_C['Static Properties - Material Effects'] = function(self,) end
 ---@param State UUDS_OcclusionState_C
-AUltra_Dynamic_Weather_C['Active Occlusion State'] = function(State) end
+AUltra_Dynamic_Weather_C['Active Occlusion State'] = function(self, State) end
 ---@return boolean
-AUltra_Dynamic_Weather_C['Runtime Or Initializing'] = function() end
+AUltra_Dynamic_Weather_C['Runtime Or Initializing'] = function(self,) end
 ---@param On boolean
-AUltra_Dynamic_Weather_C['Set All Update Checks'] = function(On) end
-AUltra_Dynamic_Weather_C['Call Editor Dispatchers'] = function() end
-AUltra_Dynamic_Weather_C['📘 Volumetric Fog Particles'] = function() end
-AUltra_Dynamic_Weather_C['📘 Post Process Wind Fog'] = function() end
-AUltra_Dynamic_Weather_C['📘 Wind Directional Source'] = function() end
-AUltra_Dynamic_Weather_C['📘 Wind Debris'] = function() end
-AUltra_Dynamic_Weather_C['📘 Wind Direction'] = function() end
-AUltra_Dynamic_Weather_C['📘 Weather Mask Tools'] = function() end
+AUltra_Dynamic_Weather_C['Set All Update Checks'] = function(self, On) end
+AUltra_Dynamic_Weather_C['Call Editor Dispatchers'] = function(self,) end
+AUltra_Dynamic_Weather_C['📘 Volumetric Fog Particles'] = function(self,) end
+AUltra_Dynamic_Weather_C['📘 Post Process Wind Fog'] = function(self,) end
+AUltra_Dynamic_Weather_C['📘 Wind Directional Source'] = function(self,) end
+AUltra_Dynamic_Weather_C['📘 Wind Debris'] = function(self,) end
+AUltra_Dynamic_Weather_C['📘 Wind Direction'] = function(self,) end
+AUltra_Dynamic_Weather_C['📘 Weather Mask Tools'] = function(self,) end
 ---@param Out USceneCaptureComponent2D
-AUltra_Dynamic_Weather_C['Get Projection Box Scene Capture 2D'] = function(Out) end
-AUltra_Dynamic_Weather_C['📘 Weather Override Volumes'] = function() end
-AUltra_Dynamic_Weather_C['📘 Weather Above Volumetric Clouds'] = function() end
-AUltra_Dynamic_Weather_C['📘 Temperature'] = function() end
-AUltra_Dynamic_Weather_C['📘 Water Level'] = function() end
-AUltra_Dynamic_Weather_C['📘 Rainbow'] = function() end
-AUltra_Dynamic_Weather_C['📘 Heat Distortion'] = function() end
-AUltra_Dynamic_Weather_C['📘 Screen Droplets'] = function() end
-AUltra_Dynamic_Weather_C['📘 Sound Occlusion'] = function() end
-AUltra_Dynamic_Weather_C['📘 Sound Effects'] = function() end
-AUltra_Dynamic_Weather_C['📘 Dynamic Landscape Weather Effects'] = function() end
-AUltra_Dynamic_Weather_C['📘 Material Effects'] = function() end
-AUltra_Dynamic_Weather_C['📘 Lightning'] = function() end
-AUltra_Dynamic_Weather_C['📘 Random Weather Variation'] = function() end
-AUltra_Dynamic_Weather_C['📘 Season'] = function() end
-AUltra_Dynamic_Weather_C['📘 Weather Particles'] = function() end
-AUltra_Dynamic_Weather_C['📘 Dust Particles'] = function() end
-AUltra_Dynamic_Weather_C['📘 Snow Particles'] = function() end
-AUltra_Dynamic_Weather_C['📘 Rain Particles'] = function() end
-AUltra_Dynamic_Weather_C['📘 Manual Weather State'] = function() end
-AUltra_Dynamic_Weather_C['📘 Weather Documentation'] = function() end
+AUltra_Dynamic_Weather_C['Get Projection Box Scene Capture 2D'] = function(self, Out) end
+AUltra_Dynamic_Weather_C['📘 Weather Override Volumes'] = function(self,) end
+AUltra_Dynamic_Weather_C['📘 Weather Above Volumetric Clouds'] = function(self,) end
+AUltra_Dynamic_Weather_C['📘 Temperature'] = function(self,) end
+AUltra_Dynamic_Weather_C['📘 Water Level'] = function(self,) end
+AUltra_Dynamic_Weather_C['📘 Rainbow'] = function(self,) end
+AUltra_Dynamic_Weather_C['📘 Heat Distortion'] = function(self,) end
+AUltra_Dynamic_Weather_C['📘 Screen Droplets'] = function(self,) end
+AUltra_Dynamic_Weather_C['📘 Sound Occlusion'] = function(self,) end
+AUltra_Dynamic_Weather_C['📘 Sound Effects'] = function(self,) end
+AUltra_Dynamic_Weather_C['📘 Dynamic Landscape Weather Effects'] = function(self,) end
+AUltra_Dynamic_Weather_C['📘 Material Effects'] = function(self,) end
+AUltra_Dynamic_Weather_C['📘 Lightning'] = function(self,) end
+AUltra_Dynamic_Weather_C['📘 Random Weather Variation'] = function(self,) end
+AUltra_Dynamic_Weather_C['📘 Season'] = function(self,) end
+AUltra_Dynamic_Weather_C['📘 Weather Particles'] = function(self,) end
+AUltra_Dynamic_Weather_C['📘 Dust Particles'] = function(self,) end
+AUltra_Dynamic_Weather_C['📘 Snow Particles'] = function(self,) end
+AUltra_Dynamic_Weather_C['📘 Rain Particles'] = function(self,) end
+AUltra_Dynamic_Weather_C['📘 Manual Weather State'] = function(self,) end
+AUltra_Dynamic_Weather_C['📘 Weather Documentation'] = function(self,) end
 ---@param Entries TArray<FName>
-AUltra_Dynamic_Weather_C['Open Editor Readme Entry Set'] = function(Entries) end
+AUltra_Dynamic_Weather_C['Open Editor Readme Entry Set'] = function(self, Entries) end
 ---@param Entry_Row FString
-AUltra_Dynamic_Weather_C['Open Editor Readme Entry'] = function(Entry_Row) end
-AUltra_Dynamic_Weather_C['Get Target Heat Distortion'] = function() end
-AUltra_Dynamic_Weather_C['Update Heat Distortion'] = function() end
-AUltra_Dynamic_Weather_C['Call Custom Weather Behavior'] = function() end
-AUltra_Dynamic_Weather_C['Make Random Stream'] = function() end
-AUltra_Dynamic_Weather_C['Clear All Material Parameters to Zero Coverage'] = function() end
-AUltra_Dynamic_Weather_C['Instant Sound Update'] = function() end
+AUltra_Dynamic_Weather_C['Open Editor Readme Entry'] = function(self, Entry_Row) end
+AUltra_Dynamic_Weather_C['Get Target Heat Distortion'] = function(self,) end
+AUltra_Dynamic_Weather_C['Update Heat Distortion'] = function(self,) end
+AUltra_Dynamic_Weather_C['Call Custom Weather Behavior'] = function(self,) end
+AUltra_Dynamic_Weather_C['Make Random Stream'] = function(self,) end
+AUltra_Dynamic_Weather_C['Clear All Material Parameters to Zero Coverage'] = function(self,) end
+AUltra_Dynamic_Weather_C['Instant Sound Update'] = function(self,) end
 ---@param Out double
-AUltra_Dynamic_Weather_C['Get Sound Upward Occlusion'] = function(Out) end
+AUltra_Dynamic_Weather_C['Get Sound Upward Occlusion'] = function(self, Out) end
 ---@param Out TArray<double>
-AUltra_Dynamic_Weather_C['Get Sound Directional Occlusion'] = function(Out) end
+AUltra_Dynamic_Weather_C['Get Sound Directional Occlusion'] = function(self, Out) end
 ---@param Out double
-AUltra_Dynamic_Weather_C['Get Sound Global Occlusion'] = function(Out) end
-AUltra_Dynamic_Weather_C['Update Underwater State'] = function() end
-AUltra_Dynamic_Weather_C['Screen Droplets Periodic Updates'] = function() end
+AUltra_Dynamic_Weather_C['Get Sound Global Occlusion'] = function(self, Out) end
+AUltra_Dynamic_Weather_C['Update Underwater State'] = function(self,) end
+AUltra_Dynamic_Weather_C['Screen Droplets Periodic Updates'] = function(self,) end
 ---@param State UUDS_Weather_Settings_C
 ---@param Cloud_Coverage double
 ---@param Rain double
@@ -760,149 +765,158 @@ AUltra_Dynamic_Weather_C['Screen Droplets Periodic Updates'] = function() end
 ---@param Material_Wetness double
 ---@param Material_Snow double
 ---@param Material_Dust double
-AUltra_Dynamic_Weather_C['Populate Weather State'] = function(State, Cloud_Coverage, Rain, Snow, Thunder_Lightning, Wind_Intensity, Fog, Dust, Material_Wetness, Material_Snow, Material_Dust) end
+AUltra_Dynamic_Weather_C['Populate Weather State'] = function(self, State, Cloud_Coverage, Rain, Snow, Thunder_Lightning,
+                                                              Wind_Intensity, Fog, Dust, Material_Wetness, Material_Snow,
+                                                              Material_Dust) end
 ---@return double
-AUltra_Dynamic_Weather_C['Rainbow Strength'] = function() end
+AUltra_Dynamic_Weather_C['Rainbow Strength'] = function(self,) end
 ---@param Out double
-AUltra_Dynamic_Weather_C['Fog Vertical Velocity'] = function(Out) end
-AUltra_Dynamic_Weather_C['Update Wind Directional Source Actor'] = function() end
-AUltra_Dynamic_Weather_C['Update Obscured Lightning Parameters'] = function() end
+AUltra_Dynamic_Weather_C['Fog Vertical Velocity'] = function(self, Out) end
+AUltra_Dynamic_Weather_C['Update Wind Directional Source Actor'] = function(self,) end
+AUltra_Dynamic_Weather_C['Update Obscured Lightning Parameters'] = function(self,) end
 ---@param Low_Wind double
 ---@param High_Wind double
 ---@return double
-AUltra_Dynamic_Weather_C['Snow / Dust Velocity Randomization'] = function(Low_Wind, High_Wind) end
+AUltra_Dynamic_Weather_C['Snow / Dust Velocity Randomization'] = function(self, Low_Wind, High_Wind) end
 ---@return double
-AUltra_Dynamic_Weather_C['Dust Sprite Alpha'] = function() end
+AUltra_Dynamic_Weather_C['Dust Sprite Alpha'] = function(self,) end
 ---@return double
-AUltra_Dynamic_Weather_C['Dust Spawn Rate'] = function() end
+AUltra_Dynamic_Weather_C['Dust Spawn Rate'] = function(self,) end
 ---@return double
-AUltra_Dynamic_Weather_C['Snow Spawn Rate'] = function() end
+AUltra_Dynamic_Weather_C['Snow Spawn Rate'] = function(self,) end
 ---@return double
-AUltra_Dynamic_Weather_C['Rain Spawn Rate'] = function() end
-AUltra_Dynamic_Weather_C['Make Rain Component'] = function() end
+AUltra_Dynamic_Weather_C['Rain Spawn Rate'] = function(self,) end
+AUltra_Dynamic_Weather_C['Make Rain Component'] = function(self,) end
 ---@return double
-AUltra_Dynamic_Weather_C['Wind Debris Spawn Rate'] = function() end
+AUltra_Dynamic_Weather_C['Wind Debris Spawn Rate'] = function(self,) end
 ---@return FVector
-AUltra_Dynamic_Weather_C['Wind Force Vector'] = function() end
+AUltra_Dynamic_Weather_C['Wind Force Vector'] = function(self,) end
 ---@param State UUDS_Weather_Settings_C
-AUltra_Dynamic_Weather_C['Apply Weather Changes Above Cloud Layer'] = function(State) end
-AUltra_Dynamic_Weather_C['Sparse Movement Updates'] = function() end
+AUltra_Dynamic_Weather_C['Apply Weather Changes Above Cloud Layer'] = function(self, State) end
+AUltra_Dynamic_Weather_C['Sparse Movement Updates'] = function(self,) end
 ---@return double
-AUltra_Dynamic_Weather_C['Sky Cloud Speed'] = function() end
-AUltra_Dynamic_Weather_C['Fill Starting Update Buffer'] = function() end
+AUltra_Dynamic_Weather_C['Sky Cloud Speed'] = function(self,) end
+AUltra_Dynamic_Weather_C['Fill Starting Update Buffer'] = function(self,) end
 ---@param New_Value double
 ---@param Buffer_Value double
 ---@param Threshold double
 ---@param Range_Max double
 ---@param Update_Needed_Bool boolean
 ---@param State_Variable UDS_Weather_State_Variable::Type
-AUltra_Dynamic_Weather_C['Check for Weather Value Update Threshold'] = function(New_Value, Buffer_Value, Threshold, Range_Max, Update_Needed_Bool, State_Variable) end
-AUltra_Dynamic_Weather_C['Monitor Local Weather Changes'] = function() end
-AUltra_Dynamic_Weather_C['Warm Up Niagara Systems'] = function() end
-AUltra_Dynamic_Weather_C['Increment Transition Between States'] = function() end
-AUltra_Dynamic_Weather_C['Start Active Timers'] = function() end
-AUltra_Dynamic_Weather_C['Initialize Random Weather Variation'] = function() end
-AUltra_Dynamic_Weather_C['Set Random Time Offset'] = function() end
-AUltra_Dynamic_Weather_C['Set UDS Reference'] = function() end
-AUltra_Dynamic_Weather_C['Set Weather Values Prepped for UDS'] = function() end
+AUltra_Dynamic_Weather_C['Check for Weather Value Update Threshold'] = function(self, New_Value, Buffer_Value, Threshold,
+                                                                                Range_Max, Update_Needed_Bool,
+                                                                                State_Variable) end
+AUltra_Dynamic_Weather_C['Monitor Weather Changes'] = function(self,) end
+AUltra_Dynamic_Weather_C['Warm Up Niagara Systems'] = function(self,) end
+AUltra_Dynamic_Weather_C['Increment Transition Between States'] = function(self,) end
+AUltra_Dynamic_Weather_C['Start Active Timers'] = function(self,) end
+AUltra_Dynamic_Weather_C['Initialize Random Weather Variation'] = function(self,) end
+AUltra_Dynamic_Weather_C['Set Random Time Offset'] = function(self,) end
+AUltra_Dynamic_Weather_C['Set UDS Reference'] = function(self,) end
+AUltra_Dynamic_Weather_C['Set Weather Values Prepped for UDS'] = function(self,) end
 ---@param Climate UUDS_Climate_Preset_C
-AUltra_Dynamic_Weather_C['Apply Climate Preset Object'] = function(Climate) end
+AUltra_Dynamic_Weather_C['Apply Climate Preset Object'] = function(self, Climate) end
 ---@param Temp double
 ---@param Occlusion double
 ---@param Out double
-AUltra_Dynamic_Weather_C['Apply Interior Temperature with Occlusion'] = function(Temp, Occlusion, Out) end
-AUltra_Dynamic_Weather_C['Check to Change Temperature Scale'] = function() end
+AUltra_Dynamic_Weather_C['Apply Interior Temperature with Occlusion'] = function(self, Temp, Occlusion, Out) end
+AUltra_Dynamic_Weather_C['Check to Change Temperature Scale'] = function(self,) end
 ---@param Input double
 ---@param In_Scale UDS_TemperatureType::Type
 ---@param Out_Scale UDS_TemperatureType::Type
 ---@param Relative_Degrees boolean
 ---@param Snap boolean
 ---@param Output double
-AUltra_Dynamic_Weather_C['Convert Temperature Scale'] = function(Input, In_Scale, Out_Scale, Relative_Degrees, Snap, Output) end
+AUltra_Dynamic_Weather_C['Convert Temperature Scale'] = function(self, Input, In_Scale, Out_Scale, Relative_Degrees, Snap,
+                                                                 Output) end
 ---@param Temp double
 ---@param Occlusion double
 ---@param Location FVector
 ---@param Temp_Out double
-AUltra_Dynamic_Weather_C['Apply Local Temperature Effects'] = function(Temp, Occlusion, Location, Temp_Out) end
+AUltra_Dynamic_Weather_C['Apply Temperature Effects'] = function(self, Temp, Occlusion, Location, Temp_Out) end
 ---@param Bounds_Origin FVector
 ---@param Bounds_Extent FVector
 ---@param Actors_To_Ignore TArray<AActor>
 ---@param Test_Weather boolean
 ---@param Exposure_Value double
-AUltra_Dynamic_Weather_C['Trace Bounds for Exposure Values'] = function(Bounds_Origin, Bounds_Extent, Actors_To_Ignore, Test_Weather, Exposure_Value) end
+AUltra_Dynamic_Weather_C['Trace Bounds for Exposure Values'] = function(self, Bounds_Origin, Bounds_Extent,
+                                                                        Actors_To_Ignore, Test_Weather, Exposure_Value) end
 ---@param Component UPrimitiveComponent
 ---@param Wind_Exposure double
-AUltra_Dynamic_Weather_C['Test Component for Wind Exposure'] = function(Component, Wind_Exposure) end
+AUltra_Dynamic_Weather_C['Test Component for Wind Exposure'] = function(self, Component, Wind_Exposure) end
 ---@param Wind_Vector FVector
-AUltra_Dynamic_Weather_C['Get Normalized Wind Direction'] = function(Wind_Vector) end
-AUltra_Dynamic_Weather_C['Update Lightning Flash Light'] = function() end
+AUltra_Dynamic_Weather_C['Get Normalized Wind Direction'] = function(self, Wind_Vector) end
+AUltra_Dynamic_Weather_C['Update Lightning Flash Light'] = function(self,) end
 ---@param Angle_A double
 ---@param Angle_B double
 ---@param Alpha double
 ---@param Out double
-AUltra_Dynamic_Weather_C['Lerp Yaw Angles'] = function(Angle_A, Angle_B, Alpha, Out) end
+AUltra_Dynamic_Weather_C['Lerp Yaw Angles'] = function(self, Angle_A, Angle_B, Alpha, Out) end
 ---@return double
-AUltra_Dynamic_Weather_C['Combined Wind Direction'] = function() end
+AUltra_Dynamic_Weather_C['Combined Wind Direction'] = function(self,) end
 ---@param Out FVector
-AUltra_Dynamic_Weather_C['Lightning Bolt Target Offset'] = function(Out) end
+AUltra_Dynamic_Weather_C['Lightning Bolt Target Offset'] = function(self, Out) end
 ---@param Component UWeatherMask_C
-AUltra_Dynamic_Weather_C['Report Removal Of Mask Component'] = function(Component) end
-AUltra_Dynamic_Weather_C['Query Project Settings'] = function() end
+AUltra_Dynamic_Weather_C['Report Removal Of Mask Component'] = function(self, Component) end
+AUltra_Dynamic_Weather_C['Query Project Settings'] = function(self,) end
 ---@param Weather UUDS_Weather_Settings_C
 ---@param Snow_Coverage double
 ---@param Wetness double
 ---@param Dust double
-AUltra_Dynamic_Weather_C['Apply Max to Material Effects'] = function(Weather, Snow_Coverage, Wetness, Dust) end
-AUltra_Dynamic_Weather_C['Update Outdoor Sound Mix'] = function() end
-AUltra_Dynamic_Weather_C['Make Outdoor Sound Mix'] = function() end
-AUltra_Dynamic_Weather_C['Update WOV Render Target'] = function() end
-AUltra_Dynamic_Weather_C['Level Editor WOV Update'] = function() end
-AUltra_Dynamic_Weather_C['Set WOV Render Target Mapping'] = function() end
+AUltra_Dynamic_Weather_C['Apply Max to Material Effects'] = function(self, Weather, Snow_Coverage, Wetness, Dust) end
+AUltra_Dynamic_Weather_C['Update Outdoor Sound Mix'] = function(self,) end
+AUltra_Dynamic_Weather_C['Make Outdoor Sound Mix'] = function(self,) end
+AUltra_Dynamic_Weather_C['Update WOV Render Target'] = function(self,) end
+AUltra_Dynamic_Weather_C['Level Editor WOV Update'] = function(self,) end
+AUltra_Dynamic_Weather_C['Set WOV Render Target Mapping'] = function(self,) end
 ---@param Out double
-AUltra_Dynamic_Weather_C['PPWF Intensity'] = function(Out) end
+AUltra_Dynamic_Weather_C['PPWF Intensity'] = function(self, Out) end
 ---@param Found_Valid_Location boolean
 ---@param Loc FVector
-AUltra_Dynamic_Weather_C['Lightning Flash Location'] = function(Found_Valid_Location, Loc) end
+AUltra_Dynamic_Weather_C['Lightning Flash Location'] = function(self, Found_Valid_Location, Loc) end
 ---@param Height double
-AUltra_Dynamic_Weather_C['Lightning World Height'] = function(Height) end
+AUltra_Dynamic_Weather_C['Lightning World Height'] = function(self, Height) end
 ---@param Threshold double
 ---@param Distance double
 ---@param Buffer FVector
 ---@param Current FVector
 ---@param Continue boolean
-AUltra_Dynamic_Weather_C['Invalidate VHFM Level'] = function(Threshold, Distance, Buffer, Current, Continue) end
-AUltra_Dynamic_Weather_C['Invalidate VHFM With Material States'] = function() end
-AUltra_Dynamic_Weather_C['Update Rainbow'] = function() end
-AUltra_Dynamic_Weather_C['Initialize Occlusion'] = function() end
+AUltra_Dynamic_Weather_C['Invalidate VHFM Level'] = function(self, Threshold, Distance, Buffer, Current, Continue) end
+AUltra_Dynamic_Weather_C['Invalidate VHFM With Material States'] = function(self,) end
+AUltra_Dynamic_Weather_C['Update Rainbow'] = function(self,) end
+AUltra_Dynamic_Weather_C['Initialize Occlusion'] = function(self,) end
 ---@param Non_Directional_Occlusion double
 ---@param X__Occlusion double
 ---@param Y__Occlusion double
 ---@param X__Occlusion double
 ---@param Y__Occlusion double
 ---@param Upward_Occlusion double
-AUltra_Dynamic_Weather_C['Get Current Sound Occlusion Values'] = function(Non_Directional_Occlusion, X__Occlusion, Y__Occlusion, X__Occlusion, Y__Occlusion, Upward_Occlusion) end
+AUltra_Dynamic_Weather_C['Get Current Sound Occlusion Values'] = function(self, Non_Directional_Occlusion, X__Occlusion,
+                                                                          Y__Occlusion, X__Occlusion, Y__Occlusion,
+                                                                          Upward_Occlusion) end
 ---@param As_String FString
 ---@param As_Enumerator UDS_Weather_Display_Names::Type
-AUltra_Dynamic_Weather_C['Get Display Name for Current Weather'] = function(As_String, As_Enumerator) end
-AUltra_Dynamic_Weather_C['Make Manual State'] = function() end
-AUltra_Dynamic_Weather_C['Update Season'] = function() end
+AUltra_Dynamic_Weather_C['Get Display Name for Current Weather'] = function(self, As_String, As_Enumerator) end
+AUltra_Dynamic_Weather_C['Make Manual State'] = function(self,) end
+AUltra_Dynamic_Weather_C['Update Season'] = function(self,) end
 ---@param Target UFXSystemComponent
 ---@param Max_Particle_Percentage double
 ---@param Weather_Intensity double
 ---@param Particle_Intensity double
-AUltra_Dynamic_Weather_C['Update Fog Particle Parameters'] = function(Target, Max_Particle_Percentage, Weather_Intensity, Particle_Intensity) end
-AUltra_Dynamic_Weather_C['Update Active Dust Parameters'] = function() end
-AUltra_Dynamic_Weather_C['Update Active Wind Debris Parameters'] = function() end
-AUltra_Dynamic_Weather_C['Update Active Snow Parameters'] = function() end
-AUltra_Dynamic_Weather_C['Update Active Rain Parameters'] = function() end
-AUltra_Dynamic_Weather_C['Update Old State With Replicated Variables'] = function() end
-AUltra_Dynamic_Weather_C['Set Replicated Old Weather State'] = function() end
+AUltra_Dynamic_Weather_C['Update Fog Particle Parameters'] = function(self, Target, Max_Particle_Percentage,
+                                                                      Weather_Intensity, Particle_Intensity) end
+AUltra_Dynamic_Weather_C['Update Active Dust Parameters'] = function(self,) end
+AUltra_Dynamic_Weather_C['Update Active Wind Debris Parameters'] = function(self,) end
+AUltra_Dynamic_Weather_C['Update Active Snow Parameters'] = function(self,) end
+AUltra_Dynamic_Weather_C['Update Active Rain Parameters'] = function(self,) end
+AUltra_Dynamic_Weather_C['Update Old State With Replicated Variables'] = function(self,) end
+AUltra_Dynamic_Weather_C['Set Replicated Old Weather State'] = function(self,) end
 ---@param Source UUDS_Weather_Settings_C
 ---@param Target UUDS_Weather_Settings_C
 ---@param Set_Material_Effects boolean
 ---@param Copy_Sources boolean
-AUltra_Dynamic_Weather_C['Copy Weather State'] = function(Source, Target, Set_Material_Effects, Copy_Sources) end
-AUltra_Dynamic_Weather_C['Construct All Weather State Objects'] = function() end
+AUltra_Dynamic_Weather_C['Copy Weather State'] = function(self, Source, Target, Set_Material_Effects, Copy_Sources) end
+AUltra_Dynamic_Weather_C['Construct All Weather State Objects'] = function(self,) end
 ---@param A UUDS_Weather_Settings_C
 ---@param B UUDS_Weather_Settings_C
 ---@param Alpha double
@@ -910,48 +924,49 @@ AUltra_Dynamic_Weather_C['Construct All Weather State Objects'] = function() end
 ---@param Set_Material_Effects boolean
 ---@param Use_Bias_for_Material_Effects boolean
 ---@param Lerp_Sources boolean
-AUltra_Dynamic_Weather_C['Lerp Between Weather States'] = function(A, B, Alpha, Target_State, Set_Material_Effects, Use_Bias_for_Material_Effects, Lerp_Sources) end
+AUltra_Dynamic_Weather_C['Lerp Between Weather States'] = function(self, A, B, Alpha, Target_State, Set_Material_Effects,
+                                                                   Use_Bias_for_Material_Effects, Lerp_Sources) end
 ---@param Yes boolean
-AUltra_Dynamic_Weather_C['Currently Dusty'] = function(Yes) end
+AUltra_Dynamic_Weather_C['Currently Dusty'] = function(self, Yes) end
 ---@param Delay double
-AUltra_Dynamic_Weather_C['Close Thunder Sound Delay'] = function(Delay) end
-AUltra_Dynamic_Weather_C['Apply Sound Effects Volume Levels'] = function() end
-AUltra_Dynamic_Weather_C['Update Sound Occlusion Parameters'] = function() end
-AUltra_Dynamic_Weather_C['Update Weather Mask Target'] = function() end
-AUltra_Dynamic_Weather_C['Construct Weather Mask Target State'] = function() end
+AUltra_Dynamic_Weather_C['Close Thunder Sound Delay'] = function(self, Delay) end
+AUltra_Dynamic_Weather_C['Apply Sound Effects Volume Levels'] = function(self,) end
+AUltra_Dynamic_Weather_C['Update Sound Occlusion Parameters'] = function(self,) end
+AUltra_Dynamic_Weather_C['Update Weather Mask Target'] = function(self,) end
+AUltra_Dynamic_Weather_C['Construct Weather Mask Target State'] = function(self,) end
 ---@param Yes boolean
-AUltra_Dynamic_Weather_C['Currently Cloudy'] = function(Yes) end
+AUltra_Dynamic_Weather_C['Currently Cloudy'] = function(self, Yes) end
 ---@param Yes boolean
-AUltra_Dynamic_Weather_C['Currently Snowing'] = function(Yes) end
+AUltra_Dynamic_Weather_C['Currently Snowing'] = function(self, Yes) end
 ---@param Yes boolean
-AUltra_Dynamic_Weather_C['Currently Raining'] = function(Yes) end
+AUltra_Dynamic_Weather_C['Currently Raining'] = function(self, Yes) end
 ---@param Rot FRotator
-AUltra_Dynamic_Weather_C['Wind Rotation'] = function(Rot) end
-AUltra_Dynamic_Weather_C['Update DLWE Interaction Mode'] = function() end
+AUltra_Dynamic_Weather_C['Wind Rotation'] = function(self, Rot) end
+AUltra_Dynamic_Weather_C['Update DLWE Interaction Mode'] = function(self,) end
 ---@param Range double
-AUltra_Dynamic_Weather_C['Lightning Distance Range'] = function(Range) end
+AUltra_Dynamic_Weather_C['Lightning Distance Range'] = function(self, Range) end
 ---@param Velocity FVector
-AUltra_Dynamic_Weather_C['Current Dust Velocity'] = function(Velocity) end
+AUltra_Dynamic_Weather_C['Current Dust Velocity'] = function(self, Velocity) end
 ---@param PSystem UNiagaraComponent
-AUltra_Dynamic_Weather_C['Dust System Finished'] = function(PSystem) end
-AUltra_Dynamic_Weather_C['Make Dust Component'] = function() end
+AUltra_Dynamic_Weather_C['Dust System Finished'] = function(self, PSystem) end
+AUltra_Dynamic_Weather_C['Make Dust Component'] = function(self,) end
 ---@param Velocity FVector
-AUltra_Dynamic_Weather_C['Current Wind Debris Velocity'] = function(Velocity) end
-AUltra_Dynamic_Weather_C['Make Wind Debris Component'] = function() end
+AUltra_Dynamic_Weather_C['Current Wind Debris Velocity'] = function(self, Velocity) end
+AUltra_Dynamic_Weather_C['Make Wind Debris Component'] = function(self,) end
 ---@param Velocity FVector
-AUltra_Dynamic_Weather_C['Current Snow Velocity'] = function(Velocity) end
+AUltra_Dynamic_Weather_C['Current Snow Velocity'] = function(self, Velocity) end
 ---@param Velocity FVector
-AUltra_Dynamic_Weather_C['Current Rain Velocity'] = function(Velocity) end
+AUltra_Dynamic_Weather_C['Current Rain Velocity'] = function(self, Velocity) end
 ---@param System UNiagaraComponent
-AUltra_Dynamic_Weather_C['Set Shared Weather Particle Parameters'] = function(System) end
-AUltra_Dynamic_Weather_C['Construct WOV Render Target State'] = function() end
-AUltra_Dynamic_Weather_C['Filter Weather Override Volumes Array'] = function() end
+AUltra_Dynamic_Weather_C['Set Shared Weather Particle Parameters'] = function(self, System) end
+AUltra_Dynamic_Weather_C['Construct WOV Render Target State'] = function(self,) end
+AUltra_Dynamic_Weather_C['Filter Weather Override Volumes Array'] = function(self,) end
 ---@param Weather_Override_Volume AWeather_Override_Volume_C
-AUltra_Dynamic_Weather_C['Add Weather Override Volume to Array'] = function(Weather_Override_Volume) end
-AUltra_Dynamic_Weather_C['Sort Weather Override Volumes'] = function() end
-AUltra_Dynamic_Weather_C['Get Starting Weather Override Volumes'] = function() end
-AUltra_Dynamic_Weather_C['Update Screen Droplets'] = function() end
-AUltra_Dynamic_Weather_C['Check for Events to Dispatch'] = function() end
+AUltra_Dynamic_Weather_C['Add Weather Override Volume to Array'] = function(self, Weather_Override_Volume) end
+AUltra_Dynamic_Weather_C['Sort Weather Override Volumes'] = function(self,) end
+AUltra_Dynamic_Weather_C['Get Starting Weather Override Volumes'] = function(self,) end
+AUltra_Dynamic_Weather_C['Update Screen Droplets'] = function(self,) end
+AUltra_Dynamic_Weather_C['Check for Events to Dispatch'] = function(self,) end
 ---@param Actor AActor
 ---@param Test_Colliding_Components_Only boolean
 ---@param Custom_Component_for_Bounds USceneComponent
@@ -959,115 +974,127 @@ AUltra_Dynamic_Weather_C['Check for Events to Dispatch'] = function() end
 ---@param Snow_Exposure double
 ---@param Wind_Exposure double
 ---@param Dust_Exposure double
-AUltra_Dynamic_Weather_C['Test Actor for Weather Exposure'] = function(Actor, Test_Colliding_Components_Only, Custom_Component_for_Bounds, Rain_Exposure, Snow_Exposure, Wind_Exposure, Dust_Exposure) end
-AUltra_Dynamic_Weather_C['Update Post Process Wind Fog'] = function() end
+AUltra_Dynamic_Weather_C['Test Actor for Weather Exposure'] = function(self, Actor, Test_Colliding_Components_Only,
+                                                                       Custom_Component_for_Bounds, Rain_Exposure,
+                                                                       Snow_Exposure, Wind_Exposure, Dust_Exposure) end
+AUltra_Dynamic_Weather_C['Update Post Process Wind Fog'] = function(self,) end
 ---@param Period double
-AUltra_Dynamic_Weather_C['Lightning Flash Period'] = function(Period) end
-AUltra_Dynamic_Weather_C['Start Lightning Flash'] = function() end
-AUltra_Dynamic_Weather_C['Update Material Effect Parameters'] = function() end
-AUltra_Dynamic_Weather_C['Second Frame Startup Functions'] = function() end
+AUltra_Dynamic_Weather_C['Lightning Flash Period'] = function(self, Period) end
+AUltra_Dynamic_Weather_C['Start Lightning Flash'] = function(self,) end
+AUltra_Dynamic_Weather_C['Update Material Effect Parameters'] = function(self,) end
+AUltra_Dynamic_Weather_C['Second Frame Startup Functions'] = function(self,) end
 ---@param Test_Location FVector
-AUltra_Dynamic_Weather_C['Create Current Local Weather State'] = function(Test_Location) end
-AUltra_Dynamic_Weather_C['Set Current Global Weather State'] = function() end
-AUltra_Dynamic_Weather_C['Update Current Global And Local Weather State'] = function() end
+AUltra_Dynamic_Weather_C['Create Current Weather State'] = function(self, Test_Location) end
+AUltra_Dynamic_Weather_C['Set Current Global Weather State'] = function(self,) end
+AUltra_Dynamic_Weather_C['Update Current Global And Weather State'] = function(self,) end
 ---@param Out UUDS_Weather_Settings_C
 ---@param Changing boolean
 ---@param Manual_State boolean
-AUltra_Dynamic_Weather_C['Get New Target Global Weather State'] = function(Out, Changing, Manual_State) end
+AUltra_Dynamic_Weather_C['Get New Target Global Weather State'] = function(self, Out, Changing, Manual_State) end
 ---@param Location FVector
 ---@param Ground_Normal FVector
 ---@param Physical_Material UPhysicalMaterial
 ---@param Puddle_Depth double
 ---@param Snow_Depth double
 ---@param Dust_Depth double
-AUltra_Dynamic_Weather_C['Check Point for Puddles Snow Or Dust'] = function(Location, Ground_Normal, Physical_Material, Puddle_Depth, Snow_Depth, Dust_Depth) end
-AUltra_Dynamic_Weather_C['Create Cloud Reference Array'] = function() end
-AUltra_Dynamic_Weather_C['Fade DLWE Target Over Time'] = function() end
-AUltra_Dynamic_Weather_C['Update DLWE Snow Compressions'] = function() end
-AUltra_Dynamic_Weather_C['DLWE Active Update'] = function() end
+AUltra_Dynamic_Weather_C['Check Point for Puddles Snow Or Dust'] = function(self, Location, Ground_Normal,
+                                                                            Physical_Material, Puddle_Depth, Snow_Depth,
+                                                                            Dust_Depth) end
+AUltra_Dynamic_Weather_C['Create Cloud Reference Array'] = function(self,) end
+AUltra_Dynamic_Weather_C['Fade DLWE Target Over Time'] = function(self,) end
+AUltra_Dynamic_Weather_C['Update DLWE Snow Compressions'] = function(self,) end
+AUltra_Dynamic_Weather_C['DLWE Active Update'] = function(self,) end
 ---@param Location FVector
 ---@param Size double
-AUltra_Dynamic_Weather_C['Compress DLWE Snow/Dust'] = function(Location, Size) end
-AUltra_Dynamic_Weather_C['Recenter DLWE Render Target'] = function() end
-AUltra_Dynamic_Weather_C['Start Up DLWE Interaction System'] = function() end
+AUltra_Dynamic_Weather_C['Compress DLWE Snow/Dust'] = function(self, Location, Size) end
+AUltra_Dynamic_Weather_C['Recenter DLWE Render Target'] = function(self,) end
+AUltra_Dynamic_Weather_C['Start Up DLWE Interaction System'] = function(self,) end
 ---@param Sample_Location UDS_Temperature_Sample_Location::Type
 ---@param Custom_Sample_Location FVector
 ---@param Scale UDS_TemperatureType::Type
 ---@param Output double
-AUltra_Dynamic_Weather_C['Get Current Temperature'] = function(Sample_Location, Custom_Sample_Location, Scale, Output) end
+AUltra_Dynamic_Weather_C['Get Current Temperature'] = function(self, Sample_Location, Custom_Sample_Location, Scale,
+                                                               Output) end
 ---@param Probability_Map TMap<UUDS_Weather_Settings_C, double>
 ---@param Current_Random_Type UUDS_Weather_Settings_C
 ---@param Filtered_Probability_Map TMap<UUDS_Weather_Settings_C, double>
-AUltra_Dynamic_Weather_C['Filter Probability Map'] = function(Probability_Map, Current_Random_Type, Filtered_Probability_Map) end
-AUltra_Dynamic_Weather_C['Weather Startup Functions'] = function() end
-AUltra_Dynamic_Weather_C['Construction Script Function'] = function() end
+AUltra_Dynamic_Weather_C['Filter Probability Map'] = function(self, Probability_Map, Current_Random_Type,
+                                                              Filtered_Probability_Map) end
+AUltra_Dynamic_Weather_C['Weather Startup Functions'] = function(self,) end
+AUltra_Dynamic_Weather_C['Construction Script Function'] = function(self,) end
 ---@param In TArray<TSoftObjectPtr<UObject>>
-AUltra_Dynamic_Weather_C['Load Soft Object Array'] = function(In) end
-AUltra_Dynamic_Weather_C['Load Required Assets'] = function() end
-AUltra_Dynamic_Weather_C['Check UDS Version'] = function() end
-AUltra_Dynamic_Weather_C['Update Sounds With Weather State'] = function() end
-AUltra_Dynamic_Weather_C['Increment Global Material Effects'] = function() end
-AUltra_Dynamic_Weather_C['Update Static Variables'] = function() end
-AUltra_Dynamic_Weather_C['Update Active Variables'] = function() end
-AUltra_Dynamic_Weather_C['Set Current Control Point Location'] = function() end
-AUltra_Dynamic_Weather_C['Get Current Player Camera/ Pawn Locations'] = function() end
-AUltra_Dynamic_Weather_C['Tick Function'] = function() end
+AUltra_Dynamic_Weather_C['Load Soft Object Array'] = function(self, In) end
+AUltra_Dynamic_Weather_C['Load Required Assets'] = function(self,) end
+AUltra_Dynamic_Weather_C['Check UDS Version'] = function(self,) end
+AUltra_Dynamic_Weather_C['Update Sounds With Weather State'] = function(self,) end
+AUltra_Dynamic_Weather_C['Increment Global Material Effects'] = function(self,) end
+AUltra_Dynamic_Weather_C['Update Static Variables'] = function(self,) end
+AUltra_Dynamic_Weather_C['Update Active Variables'] = function(self,) end
+AUltra_Dynamic_Weather_C['Set Current Control Point Location'] = function(self,) end
+AUltra_Dynamic_Weather_C['Get Current Player Camera/ Pawn Locations'] = function(self,) end
+AUltra_Dynamic_Weather_C['Tick Function'] = function(self,) end
 function AUltra_Dynamic_Weather_C:UserConstructionScript() end
+
 ---@param EndPlayReason EEndPlayReason::Type
 function AUltra_Dynamic_Weather_C:ReceiveEndPlay(EndPlayReason) end
+
 ---@param New_Weather_Type UUDS_Weather_Settings_C
 ---@param Time_to_Transition_to_New_Weather__Seconds_ double
-AUltra_Dynamic_Weather_C['Change Weather'] = function(New_Weather_Type, Time_to_Transition_to_New_Weather__Seconds_) end
+AUltra_Dynamic_Weather_C['Change Weather'] = function(self, New_Weather_Type, Time_to_Transition_to_New_Weather__Seconds_) end
 ---@param Duration double
-AUltra_Dynamic_Weather_C['Clients Transition Start'] = function(Duration) end
+AUltra_Dynamic_Weather_C['Clients Transition Start'] = function(self, Duration) end
 ---@param Time_to_Transition_to_Random_Weather__Seconds_ double
 ---@param Random_Weather_Mode UDS_RandomWeatherTiming::Type
-AUltra_Dynamic_Weather_C['Change to Random Weather Variation'] = function(Time_to_Transition_to_Random_Weather__Seconds_, Random_Weather_Mode) end
-AUltra_Dynamic_Weather_C['Restart Random Weather Variation'] = function() end
-AUltra_Dynamic_Weather_C['Latent Weather Mask Update'] = function() end
+AUltra_Dynamic_Weather_C['Change to Random Weather Variation'] = function(self,
+                                                                          Time_to_Transition_to_Random_Weather__Seconds_,
+                                                                          Random_Weather_Mode) end
+AUltra_Dynamic_Weather_C['Restart Random Weather Variation'] = function(self,) end
+AUltra_Dynamic_Weather_C['Latent Weather Mask Update'] = function(self,) end
 ---@param Angle double
 ---@param Use_Custom_Lightning_Location boolean
 ---@param Custom_Lightning_Location FVector
 ---@param Custom_Target_Location FVector
 ---@param Lightning_Bolt_Seed int32
-AUltra_Dynamic_Weather_C['Flash Lightning'] = function(Angle, Use_Custom_Lightning_Location, Custom_Lightning_Location, Custom_Target_Location, Lightning_Bolt_Seed) end
+AUltra_Dynamic_Weather_C['Flash Lightning'] = function(self, Angle, Use_Custom_Lightning_Location,
+                                                       Custom_Lightning_Location, Custom_Target_Location,
+                                                       Lightning_Bolt_Seed) end
 ---@param Angle double
 ---@param Thunder_Lightning_Threshold double
-AUltra_Dynamic_Weather_C['Global Lightning Internal'] = function(Angle, Thunder_Lightning_Threshold) end
-AUltra_Dynamic_Weather_C['Editor Lightning Internal'] = function() end
+AUltra_Dynamic_Weather_C['Global Lightning Internal'] = function(self, Angle, Thunder_Lightning_Threshold) end
+AUltra_Dynamic_Weather_C['Editor Lightning Internal'] = function(self,) end
 ---@param UDS AUltra_Dynamic_Sky_C
-AUltra_Dynamic_Weather_C['Initialize Weather'] = function(UDS) end
+AUltra_Dynamic_Weather_C['Initialize Weather'] = function(self, UDS) end
 function AUltra_Dynamic_Weather_C:ReceiveBeginPlay() end
-AUltra_Dynamic_Weather_C['Force Tick'] = function() end
+
+AUltra_Dynamic_Weather_C['Force Tick'] = function(self,) end
 ---@param Delta_Time double
-AUltra_Dynamic_Weather_C['UDW Runtime Tick'] = function(Delta_Time) end
+AUltra_Dynamic_Weather_C['UDW Runtime Tick'] = function(self, Delta_Time) end
 ---@param EntryPoint int32
 function AUltra_Dynamic_Weather_C:ExecuteUbergraph_Ultra_Dynamic_Weather(EntryPoint) end
-AUltra_Dynamic_Weather_C['Lightning Flash Started__DelegateSignature'] = function() end
-AUltra_Dynamic_Weather_C['Random Weather Season Refresh__DelegateSignature'] = function() end
-AUltra_Dynamic_Weather_C['Temperature Range Update__DelegateSignature'] = function() end
-AUltra_Dynamic_Weather_C['State Change - Material Dust__DelegateSignature'] = function() end
-AUltra_Dynamic_Weather_C['State Change - Material Snow__DelegateSignature'] = function() end
-AUltra_Dynamic_Weather_C['State Change - Material Wetness__DelegateSignature'] = function() end
-AUltra_Dynamic_Weather_C['State Change - Cloud Coverage__DelegateSignature'] = function() end
-AUltra_Dynamic_Weather_C['State Change - Wind Direction__DelegateSignature'] = function() end
-AUltra_Dynamic_Weather_C['State Change - Thunder/Lightning__DelegateSignature'] = function() end
-AUltra_Dynamic_Weather_C['State Change - Fog__DelegateSignature'] = function() end
-AUltra_Dynamic_Weather_C['State Change - Dust__DelegateSignature'] = function() end
-AUltra_Dynamic_Weather_C['State Change - Wind Intensity__DelegateSignature'] = function() end
-AUltra_Dynamic_Weather_C['State Change - Snow__DelegateSignature'] = function() end
-AUltra_Dynamic_Weather_C['State Change - Rain__DelegateSignature'] = function() end
+
+AUltra_Dynamic_Weather_C['Lightning Flash Started__DelegateSignature'] = function(self,) end
+AUltra_Dynamic_Weather_C['Random Weather Season Refresh__DelegateSignature'] = function(self,) end
+AUltra_Dynamic_Weather_C['Temperature Range Update__DelegateSignature'] = function(self,) end
+AUltra_Dynamic_Weather_C['State Change - Material Dust__DelegateSignature'] = function(self,) end
+AUltra_Dynamic_Weather_C['State Change - Material Snow__DelegateSignature'] = function(self,) end
+AUltra_Dynamic_Weather_C['State Change - Material Wetness__DelegateSignature'] = function(self,) end
+AUltra_Dynamic_Weather_C['State Change - Cloud Coverage__DelegateSignature'] = function(self,) end
+AUltra_Dynamic_Weather_C['State Change - Wind Direction__DelegateSignature'] = function(self,) end
+AUltra_Dynamic_Weather_C['State Change - Thunder/Lightning__DelegateSignature'] = function(self,) end
+AUltra_Dynamic_Weather_C['State Change - Fog__DelegateSignature'] = function(self,) end
+AUltra_Dynamic_Weather_C['State Change - Dust__DelegateSignature'] = function(self,) end
+AUltra_Dynamic_Weather_C['State Change - Wind Intensity__DelegateSignature'] = function(self,) end
+AUltra_Dynamic_Weather_C['State Change - Snow__DelegateSignature'] = function(self,) end
+AUltra_Dynamic_Weather_C['State Change - Rain__DelegateSignature'] = function(self,) end
 ---@param Season UDS_Season::Type
-AUltra_Dynamic_Weather_C['Season Changed__DelegateSignature'] = function(Season) end
+AUltra_Dynamic_Weather_C['Season Changed__DelegateSignature'] = function(self, Season) end
 ---@param Weather_Name UDS_Weather_Display_Names::Type
-AUltra_Dynamic_Weather_C['Weather Display Name Changed__DelegateSignature'] = function(Weather_Name) end
-AUltra_Dynamic_Weather_C['Dust/Sand Clearing__DelegateSignature'] = function() end
-AUltra_Dynamic_Weather_C['Dust/Sand Forming__DelegateSignature'] = function() end
-AUltra_Dynamic_Weather_C['Clouds Clearing__DelegateSignature'] = function() end
-AUltra_Dynamic_Weather_C['Getting Cloudy__DelegateSignature'] = function() end
-AUltra_Dynamic_Weather_C['Finished Snowing__DelegateSignature'] = function() end
-AUltra_Dynamic_Weather_C['Finished Raining__DelegateSignature'] = function() end
-AUltra_Dynamic_Weather_C['Started Snowing__DelegateSignature'] = function() end
-AUltra_Dynamic_Weather_C['Started Raining__DelegateSignature'] = function() end
-
-
+AUltra_Dynamic_Weather_C['Weather Display Name Changed__DelegateSignature'] = function(self, Weather_Name) end
+AUltra_Dynamic_Weather_C['Dust/Sand Clearing__DelegateSignature'] = function(self,) end
+AUltra_Dynamic_Weather_C['Dust/Sand Forming__DelegateSignature'] = function(self,) end
+AUltra_Dynamic_Weather_C['Clouds Clearing__DelegateSignature'] = function(self,) end
+AUltra_Dynamic_Weather_C['Getting Cloudy__DelegateSignature'] = function(self,) end
+AUltra_Dynamic_Weather_C['Finished Snowing__DelegateSignature'] = function(self,) end
+AUltra_Dynamic_Weather_C['Finished Raining__DelegateSignature'] = function(self,) end
+AUltra_Dynamic_Weather_C['Started Snowing__DelegateSignature'] = function(self,) end
+AUltra_Dynamic_Weather_C['Started Raining__DelegateSignature'] = function(self,) end

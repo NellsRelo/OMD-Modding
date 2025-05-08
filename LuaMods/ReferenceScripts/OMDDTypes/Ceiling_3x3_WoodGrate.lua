@@ -15,6 +15,3 @@
 ---@field Metal_Base_Plate UStaticMeshComponent
 ---@field Ceiling00 URSTTrapGridBoxComponent
 ACeiling_3x3_WoodGrate_C = {}
-
-
-

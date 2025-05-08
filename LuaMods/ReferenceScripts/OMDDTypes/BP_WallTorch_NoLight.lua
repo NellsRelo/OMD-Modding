@@ -1,12 +1,9 @@
 ---@meta
 
 ---@class ABP_WallTorch_NoLight_C : AActor
+---@field Lighting_Torch_Wall_Wood UStaticMeshComponent
 ---@field Decal UDecalComponent
 ---@field Box UBoxComponent
----@field WallTorch_Log UStaticMeshComponent
----@field Lighting_Torch_Cage UStaticMeshComponent
----@field Lighting_Torch_WoodHandle UStaticMeshComponent
----@field Lighting_WallCrystal_Holder_SM UStaticMeshComponent
 ---@field Metal_PostBase_B UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ---@field StaticLightColorDefault FLinearColor
@@ -21,5 +18,3 @@
 ABP_WallTorch_NoLight_C = {}
 
 function ABP_WallTorch_NoLight_C:UserConstructionScript() end
-
-

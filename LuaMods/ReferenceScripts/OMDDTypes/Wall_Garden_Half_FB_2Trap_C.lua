@@ -30,6 +30,3 @@
 ---@field Geometry USceneComponent
 ---@field TrapGrid USceneComponent
 AWall_Garden_Half_FB_2Trap_C_C = {}
-
-
-

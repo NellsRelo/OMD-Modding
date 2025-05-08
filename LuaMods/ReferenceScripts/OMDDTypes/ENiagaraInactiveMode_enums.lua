@@ -5,4 +5,3 @@ ENiagaraInactiveMode = {
     NewEnumerator2 = 2,
     ENiagaraInactiveMode_MAX = 3,
 }
-

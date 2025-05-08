@@ -1,0 +1,6 @@
+---@meta
+
+---@class ABP_WallTile_4x6_Sewer_C : ABP_OMDTrapGrid_C
+---@field WallTile_4x4_Sewer_SM UStaticMeshComponent
+---@field trap_wall URSTTrapGridBoxComponent
+ABP_WallTile_4x6_Sewer_C = {}

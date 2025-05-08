@@ -13,8 +13,8 @@ UW_CreditSection_C = {}
 ---@param Condition boolean
 ---@param Justification ETextJustify::Type
 function UW_CreditSection_C:DisplayContributors(InTextArray, Condition, Justification) end
+
 function UW_CreditSection_C:Construct() end
+
 ---@param EntryPoint int32
 function UW_CreditSection_C:ExecuteUbergraph_W_CreditSection(EntryPoint) end
-
-

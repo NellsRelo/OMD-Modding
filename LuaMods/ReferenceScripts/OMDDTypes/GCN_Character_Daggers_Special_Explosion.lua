@@ -10,5 +10,3 @@ UGCN_Character_Daggers_Special_Explosion_C = {}
 ---@param Parameters FGameplayCueParameters
 ---@param SpawnResults FGameplayCueNotify_SpawnResult
 function UGCN_Character_Daggers_Special_Explosion_C:OnBurst(Target, Parameters, SpawnResults) end
-
-

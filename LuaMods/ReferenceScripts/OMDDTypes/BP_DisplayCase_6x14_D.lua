@@ -37,6 +37,3 @@
 ---@field TrapGrid USceneComponent
 ---@field BP USceneComponent
 ABP_DisplayCase_6x14_D_C = {}
-
-
-

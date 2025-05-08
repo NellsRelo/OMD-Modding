@@ -262,6 +262,3 @@
 ---@field Proto_Dome_E_Tile_Side UStaticMeshComponent
 ---@field Column_Square_1_6_StoneWall_SM2 UStaticMeshComponent
 ABP_Museum_Dome_MainRoom_Southwing_C = {}
-
-
-

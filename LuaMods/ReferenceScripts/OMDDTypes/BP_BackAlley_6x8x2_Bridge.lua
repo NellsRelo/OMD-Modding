@@ -80,6 +80,3 @@
 ---@field TrapGrid USceneComponent
 ---@field Collision USceneComponent
 ABP_BackAlley_6x8x2_Bridge_C = {}
-
-
-

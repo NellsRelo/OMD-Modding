@@ -17,6 +17,3 @@
 ---@field Floor_Stone_Herringbone_2x4_SM_MERGED UStaticMeshComponent
 ---@field Geometry USceneComponent
 ABP_CastlePlaza_Archer_Guardian_Ledge_C = {}
-
-
-

@@ -8,8 +8,8 @@
 UGA_Sniper_Special_C = {}
 
 function UGA_Sniper_Special_C:BP_FireMontageStarted() end
+
 function UGA_Sniper_Special_C:BP_FireProjectile() end
+
 ---@param EntryPoint int32
 function UGA_Sniper_Special_C:ExecuteUbergraph_GA_Sniper_Special(EntryPoint) end
-
-

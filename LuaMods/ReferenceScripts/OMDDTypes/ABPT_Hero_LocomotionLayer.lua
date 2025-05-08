@@ -101,29 +101,40 @@ UABPT_Hero_LocomotionLayer_C = {}
 ---@param InPose FPoseLink
 ---@param UpperBodyOverride FPoseLink
 function UABPT_Hero_LocomotionLayer_C:UpperBodyOverride(InPose, UpperBodyOverride) end
+
 ---@param InPose_0 FPoseLink
 ---@param FullBodyOverride FPoseLink
 function UABPT_Hero_LocomotionLayer_C:FullBodyOverride(InPose_0, FullBodyOverride) end
+
 ---@param AnimGraph FPoseLink
 function UABPT_Hero_LocomotionLayer_C:AnimGraph(AnimGraph) end
+
 ---@param Context FAnimUpdateContext
 ---@param Node FAnimNodeReference
 function UABPT_Hero_LocomotionLayer_C:OnLocomotionBecameRelevant(Context, Node) end
-UABPT_Hero_LocomotionLayer_C['Sync Values'] = function() end
+
+UABPT_Hero_LocomotionLayer_C['Sync Values'] = function(self,) end
 ---@param Context FAnimUpdateContext
 ---@param Node FAnimNodeReference
 function UABPT_Hero_LocomotionLayer_C:OnLocomotionInitialUpdate(Context, Node) end
+
 ---@return UABP_RSTPlayerCharacter_Template_C
 function UABPT_Hero_LocomotionLayer_C:GetMainAnimBPThreadSafe() end
+
 ---@param DeltaTime float
 function UABPT_Hero_LocomotionLayer_C:BlueprintThreadSafeUpdateAnimation(DeltaTime) end
+
 function UABPT_Hero_LocomotionLayer_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Hero_LocomotionLayer_AnimGraphNode_BlendSpacePlayer_433B2B5043DBC0DAA0825F8FD714A546() end
+
 function UABPT_Hero_LocomotionLayer_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Hero_LocomotionLayer_AnimGraphNode_TransitionResult_56C1A19F40B65A9392D933966F3B508B() end
+
 function UABPT_Hero_LocomotionLayer_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Hero_LocomotionLayer_AnimGraphNode_TransitionResult_D67752364F02F2644DE25A882DED7F99() end
+
 function UABPT_Hero_LocomotionLayer_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Hero_LocomotionLayer_AnimGraphNode_TransitionResult_8BBDA9C44E94A22F76EA4A8FC3F56DB8() end
+
 function UABPT_Hero_LocomotionLayer_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Hero_LocomotionLayer_AnimGraphNode_TransitionResult_CE3E7CF44DD0FE4ECC5238B3A90E2D71() end
+
 function UABPT_Hero_LocomotionLayer_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_Hero_LocomotionLayer_AnimGraphNode_TransitionResult_DF0BC32C4C074DAAAF4784849C466B0C() end
+
 ---@param EntryPoint int32
 function UABPT_Hero_LocomotionLayer_C:ExecuteUbergraph_ABPT_Hero_LocomotionLayer(EntryPoint) end
-
-

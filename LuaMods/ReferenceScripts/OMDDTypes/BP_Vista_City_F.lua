@@ -95,6 +95,3 @@
 ---@field FishVendorStall_Awning1 UStaticMeshComponent
 ---@field Geo USceneComponent
 ABP_Vista_City_F_C = {}
-
-
-

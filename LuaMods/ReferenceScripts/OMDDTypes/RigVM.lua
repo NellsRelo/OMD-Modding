@@ -2029,7 +2029,7 @@ FRigVMFunction_MathQuaternionMake = {}
 
 
 ---@class FRigVMFunction_MathQuaternionMakeAbsolute : FRigVMFunction_MathQuaternionBase
----@field Local FQuat
+---@field FQuat
 ---@field Parent FQuat
 ---@field Global FQuat
 FRigVMFunction_MathQuaternionMakeAbsolute = {}
@@ -2039,7 +2039,7 @@ FRigVMFunction_MathQuaternionMakeAbsolute = {}
 ---@class FRigVMFunction_MathQuaternionMakeRelative : FRigVMFunction_MathQuaternionBase
 ---@field Global FQuat
 ---@field Parent FQuat
----@field Local FQuat
+---@field FQuat
 FRigVMFunction_MathQuaternionMakeRelative = {}
 
 
@@ -2362,7 +2362,7 @@ FRigVMFunction_MathTransformMake = {}
 
 
 ---@class FRigVMFunction_MathTransformMakeAbsolute : FRigVMFunction_MathTransformBase
----@field Local FTransform
+---@field FTransform
 ---@field Parent FTransform
 ---@field Global FTransform
 FRigVMFunction_MathTransformMakeAbsolute = {}
@@ -2372,7 +2372,7 @@ FRigVMFunction_MathTransformMakeAbsolute = {}
 ---@class FRigVMFunction_MathTransformMakeRelative : FRigVMFunction_MathTransformBase
 ---@field Global FTransform
 ---@field Parent FTransform
----@field Local FTransform
+---@field FTransform
 FRigVMFunction_MathTransformMakeRelative = {}
 
 
@@ -2634,7 +2634,7 @@ FRigVMFunction_MathVectorMake = {}
 
 
 ---@class FRigVMFunction_MathVectorMakeAbsolute : FRigVMFunction_MathVectorBase
----@field Local FVector
+---@field FVector
 ---@field Parent FVector
 ---@field Global FVector
 FRigVMFunction_MathVectorMakeAbsolute = {}
@@ -2650,7 +2650,7 @@ FRigVMFunction_MathVectorMakeBezierFourPoint = {}
 ---@class FRigVMFunction_MathVectorMakeRelative : FRigVMFunction_MathVectorBase
 ---@field Global FVector
 ---@field Parent FVector
----@field Local FVector
+---@field FVector
 FRigVMFunction_MathVectorMakeRelative = {}
 
 
@@ -3476,9 +3476,9 @@ UDataAssetLink = {}
 
 ---@param InDataAsset UDataAsset
 function UDataAssetLink:SetDataAsset(InDataAsset) end
+
 ---@return UDataAsset
 function UDataAssetLink:GetDataAsset() end
-
 
 ---@class UDefault__RigVMBlueprintGeneratedClass
 UDefault__RigVMBlueprintGeneratedClass = {}
@@ -3510,96 +3510,118 @@ URigVM = {}
 ---@param InValue FVector2D
 ---@param InArrayIndex int32
 function URigVM:SetParameterValueVector2D(InParameterName, InValue, InArrayIndex) end
+
 ---@param InParameterName FName
 ---@param InValue FVector
 ---@param InArrayIndex int32
 function URigVM:SetParameterValueVector(InParameterName, InValue, InArrayIndex) end
+
 ---@param InParameterName FName
 ---@param InValue FTransform
 ---@param InArrayIndex int32
 function URigVM:SetParameterValueTransform(InParameterName, InValue, InArrayIndex) end
+
 ---@param InParameterName FName
 ---@param InValue FString
 ---@param InArrayIndex int32
 function URigVM:SetParameterValueString(InParameterName, InValue, InArrayIndex) end
+
 ---@param InParameterName FName
 ---@param InValue FQuat
 ---@param InArrayIndex int32
 function URigVM:SetParameterValueQuat(InParameterName, InValue, InArrayIndex) end
+
 ---@param InParameterName FName
 ---@param InValue FName
 ---@param InArrayIndex int32
 function URigVM:SetParameterValueName(InParameterName, InValue, InArrayIndex) end
+
 ---@param InParameterName FName
 ---@param InValue int32
 ---@param InArrayIndex int32
 function URigVM:SetParameterValueInt(InParameterName, InValue, InArrayIndex) end
+
 ---@param InParameterName FName
 ---@param InValue float
 ---@param InArrayIndex int32
 function URigVM:SetParameterValueFloat(InParameterName, InValue, InArrayIndex) end
+
 ---@param InParameterName FName
 ---@param InValue double
 ---@param InArrayIndex int32
 function URigVM:SetParameterValueDouble(InParameterName, InValue, InArrayIndex) end
+
 ---@param InParameterName FName
 ---@param InValue boolean
 ---@param InArrayIndex int32
 function URigVM:SetParameterValueBool(InParameterName, InValue, InArrayIndex) end
+
 ---@return FRigVMStatistics
 function URigVM:GetStatistics() end
+
 ---@param InFunctionIndex int32
 ---@return FString
 function URigVM:GetRigVMFunctionName(InFunctionIndex) end
+
 ---@param InParameterName FName
 ---@param InArrayIndex int32
 ---@return FVector2D
 function URigVM:GetParameterValueVector2D(InParameterName, InArrayIndex) end
+
 ---@param InParameterName FName
 ---@param InArrayIndex int32
 ---@return FVector
 function URigVM:GetParameterValueVector(InParameterName, InArrayIndex) end
+
 ---@param InParameterName FName
 ---@param InArrayIndex int32
 ---@return FTransform
 function URigVM:GetParameterValueTransform(InParameterName, InArrayIndex) end
+
 ---@param InParameterName FName
 ---@param InArrayIndex int32
 ---@return FString
 function URigVM:GetParameterValueString(InParameterName, InArrayIndex) end
+
 ---@param InParameterName FName
 ---@param InArrayIndex int32
 ---@return FQuat
 function URigVM:GetParameterValueQuat(InParameterName, InArrayIndex) end
+
 ---@param InParameterName FName
 ---@param InArrayIndex int32
 ---@return FName
 function URigVM:GetParameterValueName(InParameterName, InArrayIndex) end
+
 ---@param InParameterName FName
 ---@param InArrayIndex int32
 ---@return int32
 function URigVM:GetParameterValueInt(InParameterName, InArrayIndex) end
+
 ---@param InParameterName FName
 ---@param InArrayIndex int32
 ---@return float
 function URigVM:GetParameterValueFloat(InParameterName, InArrayIndex) end
+
 ---@param InParameterName FName
 ---@param InArrayIndex int32
 ---@return double
 function URigVM:GetParameterValueDouble(InParameterName, InArrayIndex) end
+
 ---@param InParameterName FName
 ---@param InArrayIndex int32
 ---@return boolean
 function URigVM:GetParameterValueBool(InParameterName, InArrayIndex) end
+
 ---@param Context FRigVMExtendedExecuteContext
 ---@param InEntryName FName
 ---@return boolean
 function URigVM:Execute(Context, InEntryName) end
+
 ---@param InRigVMStruct UScriptStruct
 ---@param InMethodName FName
 ---@return int32
 function URigVM:AddRigVMFunction(InRigVMStruct, InMethodName) end
-
 
 ---@class URigVMBlueprintGeneratedClass : UBlueprintGeneratedClass
 ---@field GraphFunctionStore FRigVMGraphFunctionStore
@@ -3623,60 +3645,80 @@ URigVMHost = {}
 ---@param InEventName FName
 ---@return boolean
 function URigVMHost:SupportsEvent(InEventName) end
+
 ---@param InVariableName FName
 ---@param InValue FString
 ---@return boolean
 function URigVMHost:SetVariableFromString(InVariableName, InValue) end
+
 ---@param InFramesPerSecond float
 function URigVMHost:SetFramesPerSecond(InFramesPerSecond) end
+
 ---@param InDeltaTime float
 function URigVMHost:SetDeltaTime(InDeltaTime) end
+
 ---@param InAbsoluteTime float
 ---@param InSetDeltaTimeZero boolean
 function URigVMHost:SetAbsoluteTime(InAbsoluteTime, InSetDeltaTimeZero) end
+
 ---@param InAbsoluteTime float
 ---@param InDeltaTime float
 function URigVMHost:SetAbsoluteAndDeltaTime(InAbsoluteTime, InDeltaTime) end
+
 ---@param InEventName FName
 ---@param InEventIndex int32
 function URigVMHost:RequestRunOnceEvent(InEventName, InEventIndex) end
+
 function URigVMHost:RequestInit() end
+
 ---@param InEventName FName
 ---@return boolean
 function URigVMHost:RemoveRunOnceEvent(InEventName) end
+
 ---@return URigVM
 function URigVMHost:GetVM() end
+
 ---@param InVariableName FName
 ---@return FName
 function URigVMHost:GetVariableType(InVariableName) end
+
 ---@param InVariableName FName
 ---@return FString
 function URigVMHost:GetVariableAsString(InVariableName) end
+
 ---@return TArray<FName>
 function URigVMHost:GetSupportedEvents() end
+
 ---@return TArray<FName>
 function URigVMHost:GetScriptAccessibleVariables() end
+
 ---@return FRigVMExtendedExecuteContext
 function URigVMHost:GetExtendedExecuteContext() end
+
 ---@return float
 function URigVMHost:GetDeltaTime() end
+
 ---@return float
 function URigVMHost:GetCurrentFramesPerSecond() end
+
 ---@return float
 function URigVMHost:GetAbsoluteTime() end
+
 ---@param Outer UObject
 ---@param OptionalClass TSubclassOf<URigVMHost>
 ---@return TArray<URigVMHost>
 function URigVMHost:FindRigVMHosts(Outer, OptionalClass) end
+
 ---@param InEventName FName
 ---@return boolean
 function URigVMHost:ExecuteEvent(InEventName) end
+
 ---@param InEventName FName
 ---@return boolean
 function URigVMHost:Execute(InEventName) end
+
 ---@return boolean
 function URigVMHost:CanExecute() end
-
 
 ---@class URigVMMemoryStorage : UObject
 URigVMMemoryStorage = {}
@@ -3697,13 +3739,15 @@ URigVMUserWorkflowOptions = {}
 
 ---@return boolean
 function URigVMUserWorkflowOptions:RequiresDialog() end
+
 ---@param InMessage FString
 function URigVMUserWorkflowOptions:ReportWarning(InMessage) end
+
 ---@param InMessage FString
 function URigVMUserWorkflowOptions:ReportInfo(InMessage) end
+
 ---@param InMessage FString
 function URigVMUserWorkflowOptions:ReportError(InMessage) end
+
 ---@return boolean
 function URigVMUserWorkflowOptions:IsValid() end
-
-

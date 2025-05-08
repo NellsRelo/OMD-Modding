@@ -19,6 +19,3 @@
 ---@field Wood_Plank_600W_A_Light_BendA UStaticMeshComponent
 ---@field Geometry USceneComponent
 ABP_Wood_Balcony_300W_A_C = {}
-
-
-

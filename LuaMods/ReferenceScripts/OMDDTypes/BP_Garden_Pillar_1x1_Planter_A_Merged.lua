@@ -8,6 +8,3 @@
 ---@field Collision USceneComponent
 ---@field Geometry USceneComponent
 ABP_Garden_Pillar_1x1_Planter_A_Merged_C = {}
-
-
-

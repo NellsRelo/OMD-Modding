@@ -21,6 +21,3 @@
 ---@field Wall_DoorwayWide_Cobblestone_Manor_4x2_A_SM UStaticMeshComponent
 ---@field trap_wall URSTTrapGridBoxComponent
 ABP_Wall_Pantry_Manor_4x2_A_C = {}
-
-
-

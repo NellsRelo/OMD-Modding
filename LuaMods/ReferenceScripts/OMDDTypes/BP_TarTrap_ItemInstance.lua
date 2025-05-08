@@ -4,6 +4,3 @@
 ---@field MoveSpeedModifier double
 ---@field StatusEffectDuration double
 ABP_TarTrap_ItemInstance_C = {}
-
-
-

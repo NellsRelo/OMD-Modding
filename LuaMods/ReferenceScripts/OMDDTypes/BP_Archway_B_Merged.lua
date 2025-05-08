@@ -22,6 +22,3 @@
 ---@field Geometry USceneComponent
 ---@field TrapGrid USceneComponent
 ABP_Archway_B_Merged_C = {}
-
-
-

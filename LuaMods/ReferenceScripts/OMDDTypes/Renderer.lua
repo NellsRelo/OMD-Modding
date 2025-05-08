@@ -18,6 +18,3 @@ ASparseVolumeTextureViewer = {}
 ---@field MipLevel int32
 ---@field Extinction float
 USparseVolumeTextureViewerComponent = {}
-
-
-

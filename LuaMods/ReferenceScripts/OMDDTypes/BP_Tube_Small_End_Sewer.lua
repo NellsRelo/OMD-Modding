@@ -4,6 +4,3 @@
 ---@field Metal_Grating_B UStaticMeshComponent
 ---@field TunnelLarge_EndRing_Sewer_SM UStaticMeshComponent
 ABP_Tube_Small_End_Sewer_C = {}
-
-
-

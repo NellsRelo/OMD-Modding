@@ -9,6 +9,3 @@
 ---@field Lighting_Brazier_Large_Bowl_SM UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Brazier_NoStand_C = {}
-
-
-

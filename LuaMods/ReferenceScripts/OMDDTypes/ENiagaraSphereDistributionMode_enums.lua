@@ -5,4 +5,3 @@ ENiagaraSphereDistributionMode = {
     NewEnumerator3 = 2,
     ENiagaraSphereDistributionMode_MAX = 3,
 }
-

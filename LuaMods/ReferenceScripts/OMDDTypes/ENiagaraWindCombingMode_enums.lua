@@ -4,4 +4,3 @@ ENiagaraWindCombingMode = {
     NewEnumerator1 = 1,
     ENiagaraWindCombingMode_MAX = 2,
 }
-

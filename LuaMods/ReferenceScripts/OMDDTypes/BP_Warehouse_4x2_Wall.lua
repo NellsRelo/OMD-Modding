@@ -5,6 +5,3 @@
 ---@field Trap_Wall1 URSTTrapGridBoxComponent
 ---@field trap_wall URSTTrapGridBoxComponent
 ABP_Warehouse_4x2_Wall_C = {}
-
-
-

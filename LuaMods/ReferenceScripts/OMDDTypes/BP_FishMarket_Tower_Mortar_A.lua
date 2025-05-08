@@ -27,6 +27,3 @@
 ---@field TrapGrid USceneComponent
 ---@field Geo USceneComponent
 ABP_FishMarket_Tower_Mortar_A_C = {}
-
-
-

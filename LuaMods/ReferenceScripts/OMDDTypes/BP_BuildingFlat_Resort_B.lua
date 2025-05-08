@@ -61,6 +61,3 @@
 ---@field WallChunk_DoorB_Resort_Adobe_8x2_B_SM UStaticMeshComponent
 ---@field trap_wall URSTTrapGridBoxComponent
 ABP_BuildingFlat_Resort_B_C = {}
-
-
-

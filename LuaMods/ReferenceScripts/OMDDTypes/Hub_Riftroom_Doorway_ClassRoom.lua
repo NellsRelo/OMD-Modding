@@ -34,6 +34,3 @@
 ---@field Geometry USceneComponent
 ---@field TrapGrid USceneComponent
 AHub_Riftroom_Doorway_ClassRoom_C = {}
-
-
-

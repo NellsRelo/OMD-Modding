@@ -16,7 +16,9 @@ ABP_Projectile_Orc_Archer_TNT_C = {}
 ---@param Target AActor
 ---@return boolean
 function ABP_Projectile_Orc_Archer_TNT_C:BP_Projectile_Orc_Archer_TNT_CanDamage(Source, Target) end
+
 function ABP_Projectile_Orc_Archer_TNT_C:DoAOEDamage() end
+
 ---@param MyComp UPrimitiveComponent
 ---@param Other AActor
 ---@param OtherComp UPrimitiveComponent
@@ -25,9 +27,10 @@ function ABP_Projectile_Orc_Archer_TNT_C:DoAOEDamage() end
 ---@param HitNormal FVector
 ---@param NormalImpulse FVector
 ---@param Hit FHitResult
-function ABP_Projectile_Orc_Archer_TNT_C:ReceiveHit(MyComp, Other, OtherComp, bSelfMoved, HitLocation, HitNormal, NormalImpulse, Hit) end
+function ABP_Projectile_Orc_Archer_TNT_C:ReceiveHit(MyComp, Other, OtherComp, bSelfMoved, HitLocation, HitNormal,
+                                                    NormalImpulse, Hit) end
+
 function ABP_Projectile_Orc_Archer_TNT_C:DoExplode() end
+
 ---@param EntryPoint int32
 function ABP_Projectile_Orc_Archer_TNT_C:ExecuteUbergraph_BP_Projectile_Orc_Archer_TNT(EntryPoint) end
-
-

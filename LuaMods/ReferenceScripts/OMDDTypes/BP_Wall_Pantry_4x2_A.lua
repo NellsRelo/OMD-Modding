@@ -21,6 +21,3 @@
 ---@field Wall_DoorwayWide_Stone_Castle_Courtyard_4x2_A_SM UStaticMeshComponent
 ---@field trap_wall URSTTrapGridBoxComponent
 ABP_Wall_Pantry_4x2_A_C = {}
-
-
-

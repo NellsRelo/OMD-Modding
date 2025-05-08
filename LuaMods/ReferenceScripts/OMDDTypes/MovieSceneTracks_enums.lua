@@ -31,4 +31,3 @@ MovieScene3DPathSection_Axis = {
     NEG_Z = 5,
     MovieScene3DPathSection_MAX = 6,
 }
-
