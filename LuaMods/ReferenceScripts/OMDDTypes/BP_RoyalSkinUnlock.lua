@@ -6,8 +6,6 @@ ABP_RoyalSkinUnlock_C = {}
 
 ---@param Controller APlayerController
 ---@param bAllowed boolean
-ABP_RoyalSkinUnlock_C['Is Key Grant Allowed'] = function(Controller, bAllowed) end
+ABP_RoyalSkinUnlock_C['Is Key Grant Allowed'] = function(self, Controller, bAllowed) end
 ---@param Player APlayerController
-ABP_RoyalSkinUnlock_C['Perform Key Grant'] = function(Player) end
-
-
+ABP_RoyalSkinUnlock_C['Perform Key Grant'] = function(self, Player) end

@@ -13,6 +13,3 @@
 ---@field Geometry USceneComponent
 ---@field TrapGrid USceneComponent
 AHub_Library_Buttress_C = {}
-
-
-

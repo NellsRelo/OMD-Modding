@@ -44,6 +44,3 @@
 ---@field Column_Sec_1_1_FB385_RootComponent USceneComponent
 ---@field SharedRoot USceneComponent
 ABP_Patio_Column_1x1x10_Cap_C = {}
-
-
-

@@ -6,6 +6,3 @@
 ---@field Geo USceneComponent
 ---@field SharedRoot USceneComponent
 ABP_ShipStorage_SmallBoat_C_C = {}
-
-
-

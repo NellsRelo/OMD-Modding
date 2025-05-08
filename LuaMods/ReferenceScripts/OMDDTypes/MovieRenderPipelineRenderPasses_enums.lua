@@ -7,4 +7,3 @@ EEXRCompressionFormat = {
     DWAB = 4,
     EEXRCompressionFormat_MAX = 5,
 }
-

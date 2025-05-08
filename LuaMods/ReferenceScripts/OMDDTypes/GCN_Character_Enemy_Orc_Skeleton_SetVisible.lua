@@ -7,5 +7,3 @@ UGCN_Character_Enemy_Orc_Skeleton_SetVisible_C = {}
 ---@param Parameters FGameplayCueParameters
 ---@param SpawnResults FGameplayCueNotify_SpawnResult
 function UGCN_Character_Enemy_Orc_Skeleton_SetVisible_C:OnBurst(Target, Parameters, SpawnResults) end
-
-

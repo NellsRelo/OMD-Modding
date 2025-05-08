@@ -9,6 +9,3 @@
 ---@field RSTAimAssistTargetPelvis URSTAimAssistTargetComponent
 ---@field CombatCapsule URSTCombatCapsuleComponent
 ABP_Elemental_Waterling_C = {}
-
-
-

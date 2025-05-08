@@ -12,6 +12,3 @@
 ---@field LinearColorParticleColor_40_C9EA94794B2C8C8FCF8ABF80675AF2A6 FLinearColor
 ---@field BooleanLocalSpace_46_A5DC22A74C34467D28031D80D664D64E boolean
 FCollisionEvent = {}
-
-
-

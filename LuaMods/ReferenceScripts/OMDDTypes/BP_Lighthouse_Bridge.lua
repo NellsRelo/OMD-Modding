@@ -1,0 +1,31 @@
+---@meta
+
+---@class ABP_Lighthouse_Bridge_C : ABP_OMDTrapGrid_C
+---@field Metal_Kit_600_016 UStaticMeshComponent
+---@field Metal_Kit_600_015 UStaticMeshComponent
+---@field Metal_Kit_600_014 UStaticMeshComponent
+---@field Metal_Kit_600_013 UStaticMeshComponent
+---@field Metal_Kit_600_012 UStaticMeshComponent
+---@field Metal_Kit_600_011 UStaticMeshComponent
+---@field Metal_Kit_600_010 UStaticMeshComponent
+---@field Metal_Kit_600_09 UStaticMeshComponent
+---@field Metal_Kit_600_08 UStaticMeshComponent
+---@field Metal_Kit_600_07 UStaticMeshComponent
+---@field Metal_Kit_600_06 UStaticMeshComponent
+---@field Metal_Kit_600_05 UStaticMeshComponent
+---@field Metal_Kit_600_04 UStaticMeshComponent
+---@field Metal_Kit_600_03 UStaticMeshComponent
+---@field Metal_Kit_600_02 UStaticMeshComponent
+---@field Metal_Kit_600_01 UStaticMeshComponent
+---@field Resort_Lighthouse_Bridge_Metal_Sida_SM1 UStaticMeshComponent
+---@field Resort_Lighthouse_Bridge_Metal_Sida_SM UStaticMeshComponent
+---@field Resort_Fence_4x1_01 UStaticMeshComponent
+---@field Resort_Fence_4x1_02 UStaticMeshComponent
+---@field WoodPlank_4x4_Floor_A1 UStaticMeshComponent
+---@field Wood_Stairs_1200W_A UStaticMeshComponent
+---@field Wood_Stairs_1200W_A1 UStaticMeshComponent
+---@field WoodPlank_4x4_Floor_A UStaticMeshComponent
+---@field Geo USceneComponent
+---@field trap_floor URSTTrapGridBoxComponent
+---@field TrapGrid USceneComponent
+ABP_Lighthouse_Bridge_C = {}

@@ -6,5 +6,3 @@ ABP_DaggersAttachment_Holster_C = {}
 
 ---@return TArray<UMeshComponent>
 function ABP_DaggersAttachment_Holster_C:BP_GetMeshComponents() end
-
-

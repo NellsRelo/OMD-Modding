@@ -34,6 +34,3 @@
 ---@field Hub_Riftroom_Column1 UChildActorComponent
 ---@field DefaultSceneRoot USceneComponent
 AHub_TrainingGrounds_JumpPuzzle_C = {}
-
-
-

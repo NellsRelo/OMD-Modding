@@ -8,6 +8,3 @@
 ---@field Hub_PillarAddon_03 UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 AHub_WeaverRoom_Pillars_C = {}
-
-
-

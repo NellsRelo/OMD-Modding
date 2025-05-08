@@ -18,6 +18,3 @@
 ---@field Trap_Wall4 URSTTrapGridBoxComponent
 ---@field Colosseum_WallBottom_Window_Limestone_4x4_A_SM UStaticMeshComponent
 ABP_Colosseum_WallBottom_Window_Limestone_4x4_A_C = {}
-
-
-

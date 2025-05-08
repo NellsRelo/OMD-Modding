@@ -14,6 +14,3 @@
 ---@field ['Number of Days in Year'] int32
 ---@field ['Calendar Data Saved'] boolean
 UUDS_Calendar_C = {}
-
-
-

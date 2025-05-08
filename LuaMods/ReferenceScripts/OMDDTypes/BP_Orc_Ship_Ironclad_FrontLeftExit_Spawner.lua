@@ -37,6 +37,3 @@
 ---@field FX USceneComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Orc_Ship_Ironclad_FrontLeftExit_Spawner_C = {}
-
-
-

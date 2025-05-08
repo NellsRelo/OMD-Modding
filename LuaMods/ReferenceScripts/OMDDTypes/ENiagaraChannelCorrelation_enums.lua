@@ -5,4 +5,3 @@ ENiagaraChannelCorrelation = {
     NewEnumerator2 = 2,
     ENiagaraChannelCorrelation_MAX = 3,
 }
-

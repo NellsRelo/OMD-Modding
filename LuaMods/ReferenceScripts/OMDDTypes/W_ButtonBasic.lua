@@ -12,15 +12,20 @@
 UW_ButtonBasic_C = {}
 
 function UW_ButtonBasic_C:UpdateHoverDecorator() end
+
 function UW_ButtonBasic_C:InitHoverDecorator() end
+
 ---@param IsDesignTime boolean
 function UW_ButtonBasic_C:PreConstruct(IsDesignTime) end
+
 ---@param InText FText
 function UW_ButtonBasic_C:UpdateButtonText(InText) end
+
 function UW_ButtonBasic_C:OnInitialized() end
+
 function UW_ButtonBasic_C:OnCurrentTextStyleChanged() end
+
 function UW_ButtonBasic_C:UpdateButtonStyle() end
+
 ---@param EntryPoint int32
 function UW_ButtonBasic_C:ExecuteUbergraph_W_ButtonBasic(EntryPoint) end
-
-

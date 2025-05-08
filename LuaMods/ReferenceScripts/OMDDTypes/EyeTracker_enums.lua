@@ -5,4 +5,3 @@ EEyeTrackerStatus = {
     Tracking = 2,
     EEyeTrackerStatus_MAX = 3,
 }
-

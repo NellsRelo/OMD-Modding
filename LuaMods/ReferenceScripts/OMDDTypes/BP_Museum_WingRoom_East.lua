@@ -263,6 +263,3 @@
 ---@field Props USceneComponent
 ---@field Proto_Dome_Large UStaticMeshComponent
 ABP_Museum_WingRoom_East_C = {}
-
-
-

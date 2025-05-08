@@ -29,55 +29,68 @@
 UGA_Wand_Ultimate_C = {}
 
 ---@param Class TSubclassOf<ARSTWandClone>
-UGA_Wand_Ultimate_C['Get Clone Class'] = function(Class) end
+UGA_Wand_Ultimate_C['Get Clone Class'] = function(self, Class) end
 function UGA_Wand_Ultimate_C:OnFinish_BCEACC4C42336C6AF77EB6895BEB2F96() end
+
 function UGA_Wand_Ultimate_C:OnFinish_B574A93B42BD506E8FFAC0A265E4D124() end
+
 ---@param SpawnedActor AActor
 function UGA_Wand_Ultimate_C:OnSpawnFinished_725096F44F2A34B87F2FBE88E7B56EB3(SpawnedActor) end
+
 function UGA_Wand_Ultimate_C:OnSpawnFailed_725096F44F2A34B87F2FBE88E7B56EB3() end
+
 ---@param SpawnedActor AActor
 function UGA_Wand_Ultimate_C:OnInitActor_725096F44F2A34B87F2FBE88E7B56EB3(SpawnedActor) end
+
 function UGA_Wand_Ultimate_C:OnCancelled_5A5D9CC947946F357E687DB2B3D6A274() end
+
 function UGA_Wand_Ultimate_C:OnInterrupted_5A5D9CC947946F357E687DB2B3D6A274() end
+
 function UGA_Wand_Ultimate_C:OnBlendOut_5A5D9CC947946F357E687DB2B3D6A274() end
+
 function UGA_Wand_Ultimate_C:OnCompleted_5A5D9CC947946F357E687DB2B3D6A274() end
+
 function UGA_Wand_Ultimate_C:OnFinish_CB3FA10C45F62B0E7330E89BE993962C() end
+
 function UGA_Wand_Ultimate_C:OnSync_A53B9E734827C8AEADD960AA1703F807() end
+
 function UGA_Wand_Ultimate_C:K2_ActivateAbility() end
+
 ---@param Offset FVector
-UGA_Wand_Ultimate_C['Spawn Clone'] = function(Offset) end
+UGA_Wand_Ultimate_C['Spawn Clone'] = function(self, Offset) end
 ---@param bWasCancelled boolean
 function UGA_Wand_Ultimate_C:K2_OnEndAbility(bWasCancelled) end
+
 ---@param Clone ARSTWandClone
-UGA_Wand_Ultimate_C['Check Clone'] = function(Clone) end
-UGA_Wand_Ultimate_C['Check Clones'] = function() end
+UGA_Wand_Ultimate_C['Check Clone'] = function(self, Clone) end
+UGA_Wand_Ultimate_C['Check Clones'] = function(self,) end
 ---@param Clone ARSTWandClone
 ---@param bValid boolean
-UGA_Wand_Ultimate_C['Update Clone Status'] = function(Clone, bValid) end
-UGA_Wand_Ultimate_C['Recheck Clones'] = function() end
-UGA_Wand_Ultimate_C['Start Clone Recheck Task'] = function() end
+UGA_Wand_Ultimate_C['Update Clone Status'] = function(self, Clone, bValid) end
+UGA_Wand_Ultimate_C['Recheck Clones'] = function(self,) end
+UGA_Wand_Ultimate_C['Start Clone Recheck Task'] = function(self,) end
 ---@param NotifyTag FGameplayTag
 ---@param NotifyEvent FAnimNotifyEvent
 function UGA_Wand_Ultimate_C:K2_OnAnimNotify(NotifyTag, NotifyEvent) end
-UGA_Wand_Ultimate_C['Spawn Clones'] = function() end
-UGA_Wand_Ultimate_C['On Montage Finished'] = function() end
-UGA_Wand_Ultimate_C['Start Lifetime Timer'] = function() end
+
+UGA_Wand_Ultimate_C['Spawn Clones'] = function(self,) end
+UGA_Wand_Ultimate_C['On Montage Finished'] = function(self,) end
+UGA_Wand_Ultimate_C['Start Lifetime Timer'] = function(self,) end
 ---@param Target ARSTWandClone
-UGA_Wand_Ultimate_C['Remove Clone'] = function(Target) end
+UGA_Wand_Ultimate_C['Remove Clone'] = function(self, Target) end
 ---@param OriginalActor ARNetworkProxyActor
 ---@param NetworkedActor ARNetworkProxyActor
-UGA_Wand_Ultimate_C['On Replacement Clone Spawned'] = function(OriginalActor, NetworkedActor) end
-UGA_Wand_Ultimate_C['Apply Tags'] = function() end
-UGA_Wand_Ultimate_C['Remove Tags'] = function() end
-UGA_Wand_Ultimate_C['Apply Damage Buff'] = function() end
-UGA_Wand_Ultimate_C['Remove Damage Buff'] = function() end
-UGA_Wand_Ultimate_C['Apply Player Buffs'] = function() end
-UGA_Wand_Ultimate_C['Remove Player Buffs'] = function() end
-UGA_Wand_Ultimate_C['Execute Application Effects'] = function() end
+UGA_Wand_Ultimate_C['On Replacement Clone Spawned'] = function(self, OriginalActor, NetworkedActor) end
+UGA_Wand_Ultimate_C['Apply Tags'] = function(self,) end
+UGA_Wand_Ultimate_C['Remove Tags'] = function(self,) end
+UGA_Wand_Ultimate_C['Apply Damage Buff'] = function(self,) end
+UGA_Wand_Ultimate_C['Remove Damage Buff'] = function(self,) end
+UGA_Wand_Ultimate_C['Apply Player Buffs'] = function(self,) end
+UGA_Wand_Ultimate_C['Remove Player Buffs'] = function(self,) end
+UGA_Wand_Ultimate_C['Execute Application Effects'] = function(self,) end
 function UGA_Wand_Ultimate_C:RequestDialogue() end
+
 ---@param Clone ARSTWandClone
-UGA_Wand_Ultimate_C['Register Clone - Server'] = function(Clone) end
+UGA_Wand_Ultimate_C['Register Clone - Server'] = function(self, Clone) end
 ---@param EntryPoint int32
 function UGA_Wand_Ultimate_C:ExecuteUbergraph_GA_Wand_Ultimate(EntryPoint) end
-
-

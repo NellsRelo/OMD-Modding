@@ -10,6 +10,3 @@
 ---@field Wall002 URSTTrapGridBoxComponent
 ---@field Wall001 URSTTrapGridBoxComponent
 ABP_ColumnB_05x3_StoneBase_C = {}
-
-
-

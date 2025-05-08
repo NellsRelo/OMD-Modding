@@ -139,5 +139,3 @@ UTextBlockWidgetStyle = {}
 
 ---@class UToolMenuBase : UObject
 UToolMenuBase = {}
-
-

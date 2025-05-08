@@ -4,4 +4,3 @@ ENiagara_AttributeSamplingApplyOutput = {
     NewEnumerator1 = 1,
     ENiagara_MAX = 2,
 }
-

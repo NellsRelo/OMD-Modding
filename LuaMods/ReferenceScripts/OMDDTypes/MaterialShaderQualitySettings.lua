@@ -22,6 +22,3 @@ UMaterialShaderQualitySettings = {}
 ---@class UShaderPlatformQualitySettings : UObject
 ---@field QualityOverrides FMaterialQualityOverrides
 UShaderPlatformQualitySettings = {}
-
-
-

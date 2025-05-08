@@ -10,6 +10,3 @@
 ---@field Geo USceneComponent
 ---@field TrapGrid USceneComponent
 ABP_Planter_Coastal_2x10x1_Grid_C = {}
-
-
-

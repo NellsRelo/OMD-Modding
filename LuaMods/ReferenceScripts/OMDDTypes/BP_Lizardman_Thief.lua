@@ -9,7 +9,6 @@
 ABP_Lizardman_Thief_C = {}
 
 function ABP_Lizardman_Thief_C:ReceiveBeginPlay() end
+
 ---@param EntryPoint int32
 function ABP_Lizardman_Thief_C:ExecuteUbergraph_BP_Lizardman_Thief(EntryPoint) end
-
-

@@ -7,4 +7,3 @@ HeroSelectionMode = {
     NewEnumerator3 = 4,
     HeroSelectionMode_MAX = 5,
 }
-

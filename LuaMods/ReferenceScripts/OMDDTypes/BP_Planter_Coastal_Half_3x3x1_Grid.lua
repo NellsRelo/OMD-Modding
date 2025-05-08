@@ -37,6 +37,3 @@
 ---@field Geometry USceneComponent
 ---@field TrapGrid USceneComponent
 ABP_Planter_Coastal_Half_3x3x1_Grid_C = {}
-
-
-

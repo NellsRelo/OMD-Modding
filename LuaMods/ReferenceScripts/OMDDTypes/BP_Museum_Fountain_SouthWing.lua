@@ -114,6 +114,3 @@
 ---@field Floor_4x4_StoneBlock_SM19 UStaticMeshComponent
 ---@field Floor_4x4_StoneBlock_SM17 UStaticMeshComponent
 ABP_Museum_Fountain_SouthWing_C = {}
-
-
-

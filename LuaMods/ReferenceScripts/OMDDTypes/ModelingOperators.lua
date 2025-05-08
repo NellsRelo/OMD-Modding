@@ -40,6 +40,3 @@ UUVLayoutOperatorFactory = {}
 ---@field bEnableUDIMLayout boolean
 ---@field bUDIMCVAREnabled boolean
 UUVLayoutProperties = {}
-
-
-

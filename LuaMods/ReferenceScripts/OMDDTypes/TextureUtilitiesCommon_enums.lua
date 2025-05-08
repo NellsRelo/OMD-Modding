@@ -15,4 +15,3 @@ ETextureImportPNGInfill = {
     Always = 3,
     ETextureImportPNGInfill_MAX = 4,
 }
-

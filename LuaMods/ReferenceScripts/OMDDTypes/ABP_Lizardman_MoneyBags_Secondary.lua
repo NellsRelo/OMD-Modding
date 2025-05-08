@@ -44,8 +44,8 @@ UABP_Lizardman_MoneyBags_Secondary_C = {}
 ---@param InPose FPoseLink
 ---@param AnimGraph FPoseLink
 function UABP_Lizardman_MoneyBags_Secondary_C:AnimGraph(InPose, AnimGraph) end
+
 function UABP_Lizardman_MoneyBags_Secondary_C:BlueprintBeginPlay() end
+
 ---@param EntryPoint int32
 function UABP_Lizardman_MoneyBags_Secondary_C:ExecuteUbergraph_ABP_Lizardman_MoneyBags_Secondary(EntryPoint) end
-
-

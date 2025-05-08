@@ -13,6 +13,3 @@
 ---@field Wall_Sec_2_4_RB UStaticMeshComponent
 ---@field Ceiling00 URSTTrapGridBoxComponent
 ABalcony_2x2_StoneBlock_C = {}
-
-
-

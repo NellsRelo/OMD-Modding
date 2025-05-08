@@ -8,7 +8,6 @@
 UW_CreditContributor_C = {}
 
 function UW_CreditContributor_C:Construct() end
+
 ---@param EntryPoint int32
 function UW_CreditContributor_C:ExecuteUbergraph_W_CreditContributor(EntryPoint) end
-
-

@@ -67,6 +67,3 @@
 ---@field GiantRiftTree_Crystal_SM UStaticMeshComponent
 ---@field Geometry USceneComponent
 ABP_GiantRiftTree_C = {}
-
-
-

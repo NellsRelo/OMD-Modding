@@ -13,4 +13,3 @@ EPBIKRootBehavior = {
     Free = 2,
     EPBIKRootBehavior_MAX = 3,
 }
-

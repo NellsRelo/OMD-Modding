@@ -8,7 +8,6 @@
 UW_PurchaseMenu_Thread_Base_C = {}
 
 function UW_PurchaseMenu_Thread_Base_C:BP_SynchronizeProperties() end
+
 ---@param EntryPoint int32
 function UW_PurchaseMenu_Thread_Base_C:ExecuteUbergraph_W_PurchaseMenu_Thread_Base(EntryPoint) end
-
-

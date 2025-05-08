@@ -31,20 +31,28 @@ UW_AI_HUD_Debug_C = {}
 ---@param IsAlive boolean
 ---@param Pawn APawn
 function UW_AI_HUD_Debug_C:IsAlive(IsAlive, Pawn) end
+
 ---@param Pawn APawn
 ---@param IsHost boolean
 function UW_AI_HUD_Debug_C:IsHost(Pawn, IsHost) end
+
 function UW_AI_HUD_Debug_C:Construct() end
+
 ---@param MyGeometry FGeometry
 ---@param InDeltaTime float
 function UW_AI_HUD_Debug_C:Tick(MyGeometry, InDeltaTime) end
+
 function UW_AI_HUD_Debug_C:UpdateNumPawnsAlive() end
+
 function UW_AI_HUD_Debug_C:UpdateMaxNumPawnsAlive() end
+
 function UW_AI_HUD_Debug_C:UpdateCappedStatus() end
+
 function UW_AI_HUD_Debug_C:OnInitialized() end
+
 function UW_AI_HUD_Debug_C:UpdateCurrentWaveMax() end
+
 function UW_AI_HUD_Debug_C:ShowHide() end
+
 ---@param EntryPoint int32
 function UW_AI_HUD_Debug_C:ExecuteUbergraph_W_AI_HUD_Debug(EntryPoint) end
-
-

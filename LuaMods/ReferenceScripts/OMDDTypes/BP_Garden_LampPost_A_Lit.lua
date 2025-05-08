@@ -8,6 +8,3 @@
 ---@field Banner_BP UChildActorComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Garden_LampPost_A_Lit_C = {}
-
-
-

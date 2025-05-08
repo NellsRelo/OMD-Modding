@@ -10,11 +10,14 @@ ABP_Hero_HeroSelectProxy_C = {}
 
 ---@return USkeletalMeshComponent
 function ABP_Hero_HeroSelectProxy_C:GetSkeletalMesh() end
+
 function ABP_Hero_HeroSelectProxy_C:Timeline__FinishedFunc() end
+
 function ABP_Hero_HeroSelectProxy_C:Timeline__UpdateFunc() end
+
 function ABP_Hero_HeroSelectProxy_C:ReceiveBeginPlay() end
+
 function ABP_Hero_HeroSelectProxy_C:OnSelectedInDraft() end
+
 ---@param EntryPoint int32
 function ABP_Hero_HeroSelectProxy_C:ExecuteUbergraph_BP_Hero_HeroSelectProxy(EntryPoint) end
-
-

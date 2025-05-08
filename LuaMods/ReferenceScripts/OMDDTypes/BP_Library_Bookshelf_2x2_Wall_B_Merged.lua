@@ -30,6 +30,3 @@
 ---@field Geo_Shelf USceneComponent
 ---@field Box_Collision_Middle UBoxComponent
 ABP_Library_Bookshelf_2x2_Wall_B_Merged_C = {}
-
-
-

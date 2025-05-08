@@ -27,8 +27,8 @@ AInteractiveFoliageActor = {}
 ---@param OtherBodyIndex int32
 ---@param bFromSweep boolean
 ---@param OverlapInfo FHitResult
-function AInteractiveFoliageActor:CapsuleTouched(OverlappedComp, Other, OtherComp, OtherBodyIndex, bFromSweep, OverlapInfo) end
-
+function AInteractiveFoliageActor:CapsuleTouched(OverlappedComp, Other, OtherComp, OtherBodyIndex, bFromSweep,
+                                                 OverlapInfo) end
 
 ---@class AProceduralFoliageBlockingVolume : AVolume
 ---@field ProceduralFoliageVolume AProceduralFoliageVolume
@@ -96,17 +96,18 @@ UFoliageStatistics = {}
 ---@param Radius float
 ---@return int32
 function UFoliageStatistics:FoliageOverlappingSphereCount(WorldContextObject, StaticMesh, CenterPosition, Radius) end
+
 ---@param WorldContextObject UObject
 ---@param StaticMesh UStaticMesh
 ---@param Box FBox
 ---@param OutTransforms TArray<FTransform>
 function UFoliageStatistics:FoliageOverlappingBoxTransforms(WorldContextObject, StaticMesh, Box, OutTransforms) end
+
 ---@param WorldContextObject UObject
 ---@param StaticMesh UStaticMesh
 ---@param Box FBox
 ---@return int32
 function UFoliageStatistics:FoliageOverlappingBoxCount(WorldContextObject, StaticMesh, Box) end
-
 
 ---@class UFoliageType : UObject
 ---@field UpdateGuid FGuid
@@ -259,11 +260,7 @@ UProceduralFoliageSpawner = {}
 ---@param NumSteps int32
 function UProceduralFoliageSpawner:Simulate(NumSteps) end
 
-
 ---@class UProceduralFoliageTile : UObject
 ---@field FoliageSpawner UProceduralFoliageSpawner
 ---@field InstancesArray TArray<FProceduralFoliageInstance>
 UProceduralFoliageTile = {}
-
-
-

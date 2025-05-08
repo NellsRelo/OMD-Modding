@@ -79,6 +79,3 @@
 ---@field TrapGrid USceneComponent
 ---@field Geo USceneComponent
 ABP_FishMarket_ShopHouse_B_Clothier_C = {}
-
-
-

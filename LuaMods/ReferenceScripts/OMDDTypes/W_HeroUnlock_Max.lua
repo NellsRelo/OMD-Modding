@@ -6,7 +6,6 @@
 UW_HeroUnlock_Max_C = {}
 
 function UW_HeroUnlock_Max_C:Construct() end
+
 ---@param EntryPoint int32
 function UW_HeroUnlock_Max_C:ExecuteUbergraph_W_HeroUnlock_Max(EntryPoint) end
-
-

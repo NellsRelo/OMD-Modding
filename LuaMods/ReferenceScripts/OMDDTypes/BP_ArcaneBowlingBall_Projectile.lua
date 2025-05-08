@@ -5,6 +5,3 @@
 ---@field StaticMesh UStaticMeshComponent
 ---@field Projectile_LP UAudioComponent
 ABP_ArcaneBowlingBall_Projectile_C = {}
-
-
-

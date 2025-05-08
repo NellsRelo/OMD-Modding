@@ -10,5 +10,3 @@ UGauntletTestControllerBootTest = {}
 
 ---@class UGauntletTestControllerErrorTest : UGauntletTestController
 UGauntletTestControllerErrorTest = {}
-
-

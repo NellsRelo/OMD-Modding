@@ -29,6 +29,4 @@ UUDS_Climate_Preset_C = {}
 ---@param Season int32
 ---@param Low double
 ---@param High double
-UUDS_Climate_Preset_C['Return Temperature Range in Scale'] = function(Scale, Season, Low, High) end
-
-
+UUDS_Climate_Preset_C['Return Temperature Range in Scale'] = function(self, Scale, Season, Low, High) end

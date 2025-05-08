@@ -7,7 +7,6 @@ ABP_Onslaught_Gardens_RestrictedSection_C = {}
 ---@param WaveNumber int32
 ---@param SpawnerIndex int32
 function ABP_Onslaught_Gardens_RestrictedSection_C:Onslaught_Start(WaveNumber, SpawnerIndex) end
+
 ---@param EntryPoint int32
 function ABP_Onslaught_Gardens_RestrictedSection_C:ExecuteUbergraph_BP_Onslaught_Gardens_RestrictedSection(EntryPoint) end
-
-

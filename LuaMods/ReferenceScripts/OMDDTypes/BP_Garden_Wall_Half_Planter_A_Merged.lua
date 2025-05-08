@@ -13,6 +13,3 @@
 ---@field Geometry USceneComponent
 ---@field TrapGrid USceneComponent
 ABP_Garden_Wall_Half_Planter_A_Merged_C = {}
-
-
-

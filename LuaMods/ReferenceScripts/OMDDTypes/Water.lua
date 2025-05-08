@@ -9,7 +9,6 @@ ABuoyancyManager = {}
 ---@return boolean
 function ABuoyancyManager:GetBuoyancyComponentManager(WorldContextObject, Manager) end
 
-
 ---@class AWaterBody : AActor
 ---@field SplineComp UWaterSplineComponent
 ---@field WaterSplineMetadata UWaterSplineMetadata
@@ -24,37 +23,49 @@ AWaterBody = {}
 
 ---@param InWaterWaves UWaterWavesBase
 function AWaterBody:SetWaterWaves(InWaterWaves) end
+
 ---@param InMaterial UMaterialInterface
 function AWaterBody:SetWaterMaterial(InMaterial) end
+
 ---@param bShapeOrPositionChanged boolean
 ---@param bWeightmapSettingsChanged boolean
 function AWaterBody:OnWaterBodyChanged(bShapeOrPositionChanged, bWeightmapSettingsChanged) end
+
 ---@param InKey float
 ---@return FVector
 function AWaterBody:GetWaterVelocityVectorAtSplineInputKey(InKey) end
+
 ---@param InKey float
 ---@return float
 function AWaterBody:GetWaterVelocityAtSplineInputKey(InKey) end
+
 ---@return UWaterSplineComponent
 function AWaterBody:GetWaterSpline() end
+
 ---@return UMaterialInstanceDynamic
 function AWaterBody:GetWaterMaterialInstance() end
+
 ---@return EWaterBodyType
 function AWaterBody:GetWaterBodyType() end
+
 ---@return UWaterBodyComponent
 function AWaterBody:GetWaterBodyComponent() end
+
 ---@return UMaterialInstanceDynamic
 function AWaterBody:GetRiverToOceanTransitionMaterialInstance() end
+
 ---@return UMaterialInstanceDynamic
 function AWaterBody:GetRiverToLakeTransitionMaterialInstance() end
+
 ---@return TArray<AWaterBodyIsland>
 function AWaterBody:GetIslands() end
+
 ---@return TArray<AWaterBodyExclusionVolume>
 function AWaterBody:GetExclusionVolumes() end
+
 ---@param InKey float
 ---@return float
 function AWaterBody:GetAudioIntensityAtSplineInputKey(InKey) end
-
 
 ---@class AWaterBodyCustom : AWaterBody
 AWaterBodyCustom = {}
@@ -73,7 +84,6 @@ AWaterBodyIsland = {}
 
 ---@return UWaterSplineComponent
 function AWaterBodyIsland:GetWaterSpline() end
-
 
 ---@class AWaterBodyLake : AWaterBody
 AWaterBodyLake = {}
@@ -333,22 +343,27 @@ UBuoyancyComponent = {}
 
 ---@param Pontoon FSphericalPontoon
 function UBuoyancyComponent:OnPontoonExitedWater(Pontoon) end
+
 ---@param Pontoon FSphericalPontoon
 function UBuoyancyComponent:OnPontoonEnteredWater(Pontoon) end
+
 ---@return boolean
 function UBuoyancyComponent:IsOverlappingWaterBody() end
+
 ---@return boolean
 function UBuoyancyComponent:IsInWaterBody() end
+
 ---@param OutWaterPlaneLocation FVector
 ---@param OutWaterPlaneNormal FVector
 ---@param OutWaterSurfacePosition FVector
 ---@param OutWaterDepth float
 ---@param OutWaterBodyIdx int32
 ---@param OutWaterVelocity FVector
-function UBuoyancyComponent:GetLastWaterSurfaceInfo(OutWaterPlaneLocation, OutWaterPlaneNormal, OutWaterSurfacePosition, OutWaterDepth, OutWaterBodyIdx, OutWaterVelocity) end
+function UBuoyancyComponent:GetLastWaterSurfaceInfo(OutWaterPlaneLocation, OutWaterPlaneNormal, OutWaterSurfacePosition,
+                                                    OutWaterDepth, OutWaterBodyIdx, OutWaterVelocity) end
+
 ---@return TArray<UWaterBodyComponent>
 function UBuoyancyComponent:GetCurrentWaterBodyComponents() end
-
 
 ---@class UDEPRECATED_CustomMeshGenerator : UDEPRECATED_WaterBodyGenerator
 ---@field MeshComp UStaticMeshComponent
@@ -394,7 +409,6 @@ UGerstnerWaterWaveGeneratorBase = {}
 
 ---@param OutWaves TArray<FGerstnerWave>
 function UGerstnerWaterWaveGeneratorBase:GenerateGerstnerWaves(OutWaves) end
-
 
 ---@class UGerstnerWaterWaveGeneratorSimple : UGerstnerWaterWaveGeneratorBase
 ---@field NumWaves int32
@@ -454,11 +468,11 @@ UNiagaraWaterFunctionLibrary = {}
 ---@param OverrideName FString
 ---@param WaterBodyComponent UWaterBodyComponent
 function UNiagaraWaterFunctionLibrary:SetWaterBodyComponent(NiagaraSystem, OverrideName, WaterBodyComponent) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FString
 ---@param WaterBody AWaterBody
 function UNiagaraWaterFunctionLibrary:SetWaterBody(NiagaraSystem, OverrideName, WaterBody) end
-
 
 ---@class UOceanBoxCollisionComponent : UBoxComponent
 UOceanBoxCollisionComponent = {}
@@ -507,56 +521,76 @@ UWaterBodyComponent = {}
 
 ---@param InWaterZoneOverride TSoftObjectPtr<AWaterZone>
 function UWaterBodyComponent:SetWaterZoneOverride(InWaterZoneOverride) end
+
 ---@param InWaterMaterial UMaterialInterface
 ---@param InUnderWaterPostProcessMaterial UMaterialInterface
 function UWaterBodyComponent:SetWaterAndUnderWaterPostProcessMaterial(InWaterMaterial, InUnderWaterPostProcessMaterial) end
+
 ---@param bShapeOrPositionChanged boolean
 ---@param bWeightmapSettingsChanged boolean
 function UWaterBodyComponent:OnWaterBodyChanged(bShapeOrPositionChanged, bWeightmapSettingsChanged) end
+
 ---@return UWaterWavesBase
 function UWaterBodyComponent:GetWaterWaves() end
+
 ---@param InKey float
 ---@return float
 function UWaterBodyComponent:GetWaterVelocityAtSplineInputKey(InKey) end
+
 ---@param InLocation FVector
 ---@param OutWaterSurfaceLocation FVector
 ---@param OutWaterSurfaceNormal FVector
 ---@param OutWaterVelocity FVector
 ---@param OutWaterDepth float
 ---@param bIncludeDepth boolean
-function UWaterBodyComponent:GetWaterSurfaceInfoAtLocation(InLocation, OutWaterSurfaceLocation, OutWaterSurfaceNormal, OutWaterVelocity, OutWaterDepth, bIncludeDepth) end
+function UWaterBodyComponent:GetWaterSurfaceInfoAtLocation(InLocation, OutWaterSurfaceLocation, OutWaterSurfaceNormal,
+                                                           OutWaterVelocity, OutWaterDepth, bIncludeDepth) end
+
 ---@return UMaterialInstanceDynamic
 function UWaterBodyComponent:GetWaterStaticMeshMaterialInstance() end
+
 ---@return UWaterSplineComponent
 function UWaterBodyComponent:GetWaterSpline() end
+
 ---@return UMaterialInstanceDynamic
 function UWaterBodyComponent:GetWaterMaterialInstance() end
+
 ---@return UMaterialInterface
 function UWaterBodyComponent:GetWaterMaterial() end
+
 ---@return UMaterialInstanceDynamic
 function UWaterBodyComponent:GetWaterLODMaterialInstance() end
+
 ---@return UMaterialInstanceDynamic
 function UWaterBodyComponent:GetWaterInfoMaterialInstance() end
+
 ---@return AWaterBody
 function UWaterBodyComponent:GetWaterBodyActor() end
+
 ---@return UMaterialInstanceDynamic
 function UWaterBodyComponent:GetUnderwaterPostProcessMaterialInstance() end
+
 ---@return TArray<UPrimitiveComponent>
 function UWaterBodyComponent:GetStandardRenderableComponents() end
+
 ---@return UMaterialInstanceDynamic
 function UWaterBodyComponent:GetRiverToOceanTransitionMaterialInstance() end
+
 ---@return UMaterialInstanceDynamic
 function UWaterBodyComponent:GetRiverToLakeTransitionMaterialInstance() end
+
 ---@return float
 function UWaterBodyComponent:GetMaxWaveHeight() end
+
 ---@return TArray<AWaterBodyIsland>
 function UWaterBodyComponent:GetIslands() end
+
 ---@return TArray<AWaterBodyExclusionVolume>
 function UWaterBodyComponent:GetExclusionVolumes() end
+
 ---@param bInOnlyEnabledComponents boolean
 ---@return TArray<UPrimitiveComponent>
 function UWaterBodyComponent:GetCollisionComponents(bInOnlyEnabledComponents) end
-
 
 ---@class UWaterBodyCustomComponent : UWaterBodyComponent
 ---@field MeshComp UStaticMeshComponent
@@ -623,7 +657,6 @@ UWaterMeshComponent = {}
 ---@return boolean
 function UWaterMeshComponent:IsEnabled() end
 
-
 ---@class UWaterRuntimeSettings : UDeveloperSettings
 ---@field CollisionChannelForWaterTraces ECollisionChannel
 ---@field MaterialParameterCollection TSoftObjectPtr<UMaterialParameterCollection>
@@ -646,7 +679,6 @@ UWaterSplineComponent = {}
 
 function UWaterSplineComponent:K2_SynchronizeAndBroadcastDataChange() end
 
-
 ---@class UWaterSplineMetadata : USplineMetadata
 ---@field Depth FInterpCurveFloat
 ---@field WaterVelocityScalar FInterpCurveFloat
@@ -668,34 +700,46 @@ UWaterSubsystem = {}
 
 ---@param InFloodHeight float
 function UWaterSubsystem:SetOceanFloodHeight(InFloodHeight) end
+
 ---@param Message FString
 ---@param bWarning boolean
 function UWaterSubsystem:PrintToWaterLog(Message, bWarning) end
+
 ---@return boolean
 function UWaterSubsystem:IsWaterRenderingEnabled() end
+
 ---@return boolean
 function UWaterSubsystem:IsUnderwaterPostProcessEnabled() end
+
 ---@return boolean
 function UWaterSubsystem:IsShallowWaterSimulationEnabled() end
+
 ---@return float
 function UWaterSubsystem:GetWaterTimeSeconds() end
+
 ---@return float
 function UWaterSubsystem:GetSmoothedWorldTimeSeconds() end
+
 ---@return int32
 function UWaterSubsystem:GetShallowWaterSimulationRenderTargetSize() end
+
 ---@return int32
 function UWaterSubsystem:GetShallowWaterMaxImpulseForces() end
+
 ---@return int32
 function UWaterSubsystem:GetShallowWaterMaxDynamicForces() end
+
 ---@return float
 function UWaterSubsystem:GetOceanTotalHeight() end
+
 ---@return float
 function UWaterSubsystem:GetOceanFloodHeight() end
+
 ---@return float
 function UWaterSubsystem:GetOceanBaseHeight() end
+
 ---@return float
 function UWaterSubsystem:GetCameraUnderwaterDepth() end
-
 
 ---@class UWaterWaves : UWaterWavesBase
 UWaterWaves = {}
@@ -715,5 +759,3 @@ UWaterWavesAssetReference = {}
 
 ---@class UWaterWavesBase : UObject
 UWaterWavesBase = {}
-
-

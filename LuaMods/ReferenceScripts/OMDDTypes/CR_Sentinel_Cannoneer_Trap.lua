@@ -37,6 +37,3 @@ URigVMMemory_Literal = {}
 ---@field RigVMModel___RigUnit_GetControlBool_CachedControlIndex TArray<FCachedRigElement>
 ---@field RigVMModel___RigUnit_SetTransform_CachedIndex TArray<FCachedRigElement>
 URigVMMemory_Work = {}
-
-
-

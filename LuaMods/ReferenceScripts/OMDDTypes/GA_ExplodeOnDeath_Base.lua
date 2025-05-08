@@ -9,9 +9,8 @@
 UGA_ExplodeOnDeath_Base_C = {}
 
 ---@return FGameplayEffectSpecHandle
-UGA_ExplodeOnDeath_Base_C['Make Damage Spec'] = function() end
+UGA_ExplodeOnDeath_Base_C['Make Damage Spec'] = function(self,) end
 function UGA_ExplodeOnDeath_Base_C:K2_ActivateAbility() end
+
 ---@param EntryPoint int32
 function UGA_ExplodeOnDeath_Base_C:ExecuteUbergraph_GA_ExplodeOnDeath_Base(EntryPoint) end
-
-

@@ -25,13 +25,18 @@
 ABP_Breakable_Base_C = {}
 
 function ABP_Breakable_Base_C:Timeline__FinishedFunc() end
+
 function ABP_Breakable_Base_C:Timeline__UpdateFunc() end
+
 function ABP_Breakable_Base_C:ReceiveBeginPlay() end
+
 ---@param BreakEvent FChaosBreakEvent
-function ABP_Breakable_Base_C:BndEvt__BP_Breakable_Base_GeometryCollection_K2Node_ComponentBoundEvent_0_OnChaosBreakEvent__DelegateSignature(BreakEvent) end
+function ABP_Breakable_Base_C:BndEvt__BP_Breakable_Base_GeometryCollection_K2Node_ComponentBoundEvent_0_OnChaosBreakEvent__DelegateSignature(
+    BreakEvent) end
+
 ---@param CollisionInfo FChaosPhysicsCollisionInfo
-function ABP_Breakable_Base_C:BndEvt__ChaosBreakable_GeometryCollection_K2Node_ComponentBoundEvent_0_OnChaosPhysicsCollision__DelegateSignature(CollisionInfo) end
+function ABP_Breakable_Base_C:BndEvt__ChaosBreakable_GeometryCollection_K2Node_ComponentBoundEvent_0_OnChaosPhysicsCollision__DelegateSignature(
+    CollisionInfo) end
+
 ---@param EntryPoint int32
 function ABP_Breakable_Base_C:ExecuteUbergraph_BP_Breakable_Base(EntryPoint) end
-
-

@@ -11,6 +11,3 @@
 ---@field Staircase_Base_SM UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 AStaircase_BP_C = {}
-
-
-

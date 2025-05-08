@@ -167,6 +167,3 @@
 ---@field Collision USceneComponent
 ---@field TrapGrid USceneComponent
 ABP_FishMarket_Market_Ground_PatternE_C = {}
-
-
-

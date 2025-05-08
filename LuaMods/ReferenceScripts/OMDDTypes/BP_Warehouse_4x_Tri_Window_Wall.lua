@@ -8,6 +8,3 @@
 ---@field Warehouse_4x_Tri_Window_Wall_SM UStaticMeshComponent
 ---@field trap_wall URSTTrapGridBoxComponent
 ABP_Warehouse_4x_Tri_Window_Wall_C = {}
-
-
-

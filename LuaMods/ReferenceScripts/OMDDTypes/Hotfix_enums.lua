@@ -34,4 +34,3 @@ EUpdateState = {
     UpdateComplete = 7,
     EUpdateState_MAX = 8,
 }
-

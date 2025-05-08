@@ -7,5 +7,3 @@ UGCN_Character_Hero_Shield_Recharge_C = {}
 ---@param Parameters FGameplayCueParameters
 ---@param SpawnResults FGameplayCueNotify_SpawnResult
 function UGCN_Character_Hero_Shield_Recharge_C:OnBurst(Target, Parameters, SpawnResults) end
-
-

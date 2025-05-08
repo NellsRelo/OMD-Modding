@@ -6,9 +6,6 @@
 ---@field ColumnTrim_CastStone_600W2 UStaticMeshComponent
 ---@field ColumnTrim_CastStone_600W1 UStaticMeshComponent
 ---@field ColumnTrim_CastStone_600W UStaticMeshComponent
----@field Box_WallCollision UBoxComponent
+---@field Box_WAllCollision UBoxComponent
 ---@field Wall URSTTrapGridBoxComponent
 AWall_FB_Trim_v1_1x3_C = {}
-
-
-

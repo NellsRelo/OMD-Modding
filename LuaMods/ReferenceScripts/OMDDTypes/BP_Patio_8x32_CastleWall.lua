@@ -73,6 +73,3 @@
 ---@field Wall_FB_2x5_StaticMeshComponent0 UStaticMeshComponent
 ---@field SharedRoot USceneComponent
 ABP_Patio_8x32_CastleWall_C = {}
-
-
-

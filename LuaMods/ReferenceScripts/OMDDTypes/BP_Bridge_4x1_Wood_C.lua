@@ -20,6 +20,3 @@
 ---@field TrapGrid USceneComponent
 ---@field Geo USceneComponent
 ABP_Bridge_4x1_Wood_C_C = {}
-
-
-

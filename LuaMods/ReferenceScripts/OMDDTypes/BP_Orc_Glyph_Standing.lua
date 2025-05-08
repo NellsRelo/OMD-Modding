@@ -10,6 +10,3 @@
 ---@field ORC_Glyph_Stand_Medium_SM UStaticMeshComponent
 ---@field Wall00 URSTTrapGridBoxComponent
 ABP_Orc_Glyph_Standing_C = {}
-
-
-

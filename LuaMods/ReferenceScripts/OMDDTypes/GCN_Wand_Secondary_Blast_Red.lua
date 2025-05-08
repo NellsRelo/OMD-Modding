@@ -7,5 +7,3 @@ UGCN_Wand_Secondary_Blast_Red_C = {}
 ---@param Parameters FGameplayCueParameters
 ---@param SpawnResults FGameplayCueNotify_SpawnResult
 function UGCN_Wand_Secondary_Blast_Red_C:OnBurst(Target, Parameters, SpawnResults) end
-
-

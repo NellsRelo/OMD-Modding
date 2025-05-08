@@ -17,4 +17,3 @@ EMovieSceneCaptureProtocolState = {
     Finalizing = 3,
     EMovieSceneCaptureProtocolState_MAX = 4,
 }
-

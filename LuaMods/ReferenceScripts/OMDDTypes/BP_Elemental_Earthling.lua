@@ -9,7 +9,6 @@
 ABP_Elemental_Earthling_C = {}
 
 function ABP_Elemental_Earthling_C:ReceiveBeginPlay() end
+
 ---@param EntryPoint int32
 function ABP_Elemental_Earthling_C:ExecuteUbergraph_BP_Elemental_Earthling(EntryPoint) end
-
-

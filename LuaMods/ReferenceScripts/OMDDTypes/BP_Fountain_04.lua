@@ -25,6 +25,3 @@
 ---@field Hero_Fountain_H_SM UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Fountain_04_C = {}
-
-
-

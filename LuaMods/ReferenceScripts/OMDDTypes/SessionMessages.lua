@@ -36,6 +36,3 @@ FSessionServicePing = {}
 ---@field SessionOwner FString
 ---@field Standalone boolean
 FSessionServicePong = {}
-
-
-

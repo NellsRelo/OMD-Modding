@@ -7,5 +7,3 @@ UGCN_Character_Daggers_Secondary_Impact_C = {}
 ---@param Parameters FGameplayCueParameters
 ---@param SpawnResults FGameplayCueNotify_SpawnResult
 function UGCN_Character_Daggers_Secondary_Impact_C:OnBurst(Target, Parameters, SpawnResults) end
-
-

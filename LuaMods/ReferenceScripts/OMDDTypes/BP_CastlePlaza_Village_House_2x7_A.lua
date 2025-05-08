@@ -42,6 +42,3 @@
 ---@field ['Wall_2x2_WhiteBrick_SM_Window_Union-Wood_Window_SM_Union'] UStaticMeshComponent
 ---@field Geo USceneComponent
 ABP_CastlePlaza_Village_House_2x7_A_C = {}
-
-
-

@@ -15,11 +15,13 @@ UW_MissionStats_Header_C = {}
 
 ---@param IsDesignTime boolean
 function UW_MissionStats_Header_C:PreConstruct(IsDesignTime) end
+
 function UW_MissionStats_Header_C:Construct() end
+
 ---@param EnableDevelopmentStats boolean
 function UW_MissionStats_Header_C:SetShowDevStats(EnableDevelopmentStats) end
+
 function UW_MissionStats_Header_C:UpdateShowDevStats() end
+
 ---@param EntryPoint int32
 function UW_MissionStats_Header_C:ExecuteUbergraph_W_MissionStats_Header(EntryPoint) end
-
-

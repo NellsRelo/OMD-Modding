@@ -7,7 +7,6 @@
 UW_LevelIntro_DistortionEntry_C = {}
 
 function UW_LevelIntro_DistortionEntry_C:Construct() end
+
 ---@param EntryPoint int32
 function UW_LevelIntro_DistortionEntry_C:ExecuteUbergraph_W_LevelIntro_DistortionEntry(EntryPoint) end
-
-

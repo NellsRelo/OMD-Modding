@@ -113,6 +113,3 @@
 ---@field TrapGrid USceneComponent
 ---@field Collision USceneComponent
 ABP_Vista_City_B_C = {}
-
-
-

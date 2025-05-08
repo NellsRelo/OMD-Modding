@@ -4,4 +4,3 @@ ENiagaraWindTurbulenceFrequencyMode = {
     NewEnumerator1 = 1,
     ENiagaraWindTurbulenceFrequencyMode_MAX = 2,
 }
-

@@ -4,6 +4,3 @@
 ---@field Sphere UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Gabby_Trajectory_Indicator_C = {}
-
-
-

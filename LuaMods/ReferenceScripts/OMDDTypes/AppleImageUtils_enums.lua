@@ -20,4 +20,3 @@ ETextureRotationDirection = {
     UpMirrored = 7,
     ETextureRotationDirection_MAX = 8,
 }
-

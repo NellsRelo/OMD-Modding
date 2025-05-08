@@ -23,48 +23,55 @@
 UGA_RiftLightning_C = {}
 
 ---@return FTransform
-UGA_RiftLightning_C['Get Transform'] = function() end
+UGA_RiftLightning_C['Get Transform'] = function(self,) end
 ---@param Location FVector
-UGA_RiftLightning_C['Get Line of Sight Check Location'] = function(Location) end
+UGA_RiftLightning_C['Get Line of Sight Check Location'] = function(self, Location) end
 ---@param Delay double
-UGA_RiftLightning_C['Get Random Refire Delay'] = function(Delay) end
+UGA_RiftLightning_C['Get Random Refire Delay'] = function(self, Delay) end
 ---@param Actor AActor
 ---@param bValid boolean
 function UGA_RiftLightning_C:IsValidTarget(Actor, bValid) end
+
 ---@param Actor AActor
 ---@param bHasLineOfSight boolean
-UGA_RiftLightning_C['Has Line of Sight to Actor'] = function(Actor, bHasLineOfSight) end
+UGA_RiftLightning_C['Has Line of Sight to Actor'] = function(self, Actor, bHasLineOfSight) end
 ---@param bHasValidTarget boolean
 ---@param Actor AActor
-UGA_RiftLightning_C['Get Best Target'] = function(bHasValidTarget, Actor) end
+UGA_RiftLightning_C['Get Best Target'] = function(self, bHasValidTarget, Actor) end
 function UGA_RiftLightning_C:OnFinish_05D441644F66DBA689718E99640D826A() end
+
 function UGA_RiftLightning_C:OnFinish_DFA01CF1435358F9A41DA2A846C6B319() end
+
 ---@param ChangedActors TArray<AActor>
 function UGA_RiftLightning_C:OnObjectsLeft_C47B186645178DF9B5FFD5933192675E(ChangedActors) end
+
 ---@param ChangedActors TArray<AActor>
 function UGA_RiftLightning_C:OnObjectsEntered_C47B186645178DF9B5FFD5933192675E(ChangedActors) end
+
 function UGA_RiftLightning_C:K2_ActivateAbility() end
+
 ---@param bWasCancelled boolean
 function UGA_RiftLightning_C:K2_OnEndAbility(bWasCancelled) end
-UGA_RiftLightning_C['On Cooldown Finished'] = function() end
+
+UGA_RiftLightning_C['On Cooldown Finished'] = function(self,) end
 ---@param TargetActor AActor
-UGA_RiftLightning_C['Fire At Target'] = function(TargetActor) end
-UGA_RiftLightning_C['Process Targets'] = function() end
-UGA_RiftLightning_C['Set Recheck Timer'] = function() end
+UGA_RiftLightning_C['Fire At Target'] = function(self, TargetActor) end
+UGA_RiftLightning_C['Process Targets'] = function(self,) end
+UGA_RiftLightning_C['Set Recheck Timer'] = function(self,) end
 ---@param Tag FGameplayTag
 function UGA_RiftLightning_C:K2_OnPropertyPreModify(Tag) end
+
 ---@param Tag FGameplayTag
 function UGA_RiftLightning_C:K2_OnPropertyModified(Tag) end
-UGA_RiftLightning_C['Add Rift Lightning Passive'] = function() end
+
+UGA_RiftLightning_C['Add Rift Lightning Passive'] = function(self,) end
 ---@param Targets TArray<AActor>
-UGA_RiftLightning_C['On Targets Acquired'] = function(Targets) end
+UGA_RiftLightning_C['On Targets Acquired'] = function(self, Targets) end
 ---@param Targets TArray<AActor>
-UGA_RiftLightning_C['On Targets Removed'] = function(Targets) end
+UGA_RiftLightning_C['On Targets Removed'] = function(self, Targets) end
 ---@param Target AActor
-UGA_RiftLightning_C['Apply Damage'] = function(Target) end
+UGA_RiftLightning_C['Apply Damage'] = function(self, Target) end
 ---@param Target AActor
-UGA_RiftLightning_C['Apply Additional Effects'] = function(Target) end
+UGA_RiftLightning_C['Apply Additional Effects'] = function(self, Target) end
 ---@param EntryPoint int32
 function UGA_RiftLightning_C:ExecuteUbergraph_GA_RiftLightning(EntryPoint) end
-
-

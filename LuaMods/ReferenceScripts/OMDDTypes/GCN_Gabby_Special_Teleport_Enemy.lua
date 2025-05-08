@@ -7,5 +7,3 @@ UGCN_Gabby_Special_Teleport_Enemy_C = {}
 ---@param Parameters FGameplayCueParameters
 ---@param SpawnResults FGameplayCueNotify_SpawnResult
 function UGCN_Gabby_Special_Teleport_Enemy_C:OnBurst(Target, Parameters, SpawnResults) end
-
-

@@ -4,6 +4,3 @@
 ---@field AiCharacter ARSTAICharacter
 ---@field HitResult FHitResult
 UBP_MinecartHitEventData_C = {}
-
-
-

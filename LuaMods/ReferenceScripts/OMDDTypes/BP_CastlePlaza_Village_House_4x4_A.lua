@@ -35,6 +35,3 @@
 ---@field ['Wall_4x15_Wainscot_BrickWhite-Wood_Window_SM_Union'] UStaticMeshComponent
 ---@field Geo USceneComponent
 ABP_CastlePlaza_Village_House_4x4_A_C = {}
-
-
-

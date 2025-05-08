@@ -75,6 +75,3 @@
 ---@field Geo_Shelf USceneComponent
 ---@field Box_Collision_Middle UBoxComponent
 ABP_Library_Bookshelf_Column_1x1_A_C = {}
-
-
-

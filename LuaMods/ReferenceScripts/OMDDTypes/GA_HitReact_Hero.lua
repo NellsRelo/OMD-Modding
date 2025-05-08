@@ -5,10 +5,8 @@
 UGA_HitReact_Hero_C = {}
 
 ---@param HitData URSTAppliedHitReactData
-UGA_HitReact_Hero_C['Apply Knockback Task'] = function(HitData) end
+UGA_HitReact_Hero_C['Apply Knockback Task'] = function(self, HitData) end
 ---@param InputPin URSTAppliedHitReactData
-UGA_HitReact_Hero_C['Notify Knockback'] = function(InputPin) end
+UGA_HitReact_Hero_C['Notify Knockback'] = function(self, InputPin) end
 ---@param EntryPoint int32
 function UGA_HitReact_Hero_C:ExecuteUbergraph_GA_HitReact_Hero(EntryPoint) end
-
-

@@ -6,6 +6,3 @@
 ---@field ColumnTileB_CastStone_Top UStaticMeshComponent
 ---@field ColumnTileB_CastStone_Base UStaticMeshComponent
 AColumnTileC_CastStone_Gold_SAND_C = {}
-
-
-

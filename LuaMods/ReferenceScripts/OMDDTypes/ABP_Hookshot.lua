@@ -28,6 +28,10 @@ FAnimBlueprintGeneratedConstantData = {}
 
 
 
+---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
+FAnimBlueprintGeneratedMutableData = {}
+
+
 ---@class UABP_Hookshot_C : URSTAnimInstanceTrap_Hookshot
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance
@@ -65,9 +69,10 @@ UABP_Hookshot_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_Hookshot_C:AnimGraph(AnimGraph) end
+
 function UABP_Hookshot_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Hookshot_AnimGraphNode_ControlRig_01B0C0044A0F23F914D0E9A056C3ABD6() end
+
 function UABP_Hookshot_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Hookshot_AnimGraphNode_TransitionResult_6DAFD0A342FD0AAD986864BE3272ED08() end
+
 ---@param EntryPoint int32
 function UABP_Hookshot_C:ExecuteUbergraph_ABP_Hookshot(EntryPoint) end
-
-

@@ -57,6 +57,3 @@
 ---@field Geometry USceneComponent
 ---@field TrapGrid USceneComponent
 AHub_GabyWarRoom_Table_C = {}
-
-
-

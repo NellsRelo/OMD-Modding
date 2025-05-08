@@ -19,6 +19,5 @@ ABP_Minecart_Bombs_01_C = {}
 ---@param NormalImpulse FVector
 ---@param Hit FHitResult
 ---@return boolean
-function ABP_Minecart_Bombs_01_C:BP_ShouldRespondToHit(MyComp, OtherActor, OtherComp, bSelfMoved, HitLocation, HitNormal, NormalImpulse, Hit) end
-
-
+function ABP_Minecart_Bombs_01_C:BP_ShouldRespondToHit(MyComp, OtherActor, OtherComp, bSelfMoved, HitLocation, HitNormal,
+                                                       NormalImpulse, Hit) end

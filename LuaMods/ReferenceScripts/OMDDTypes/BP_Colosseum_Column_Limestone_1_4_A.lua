@@ -7,6 +7,3 @@
 ---@field Wall002 URSTTrapGridBoxComponent
 ---@field Wall001 URSTTrapGridBoxComponent
 ABP_Colosseum_Column_Limestone_1_4_A_C = {}
-
-
-

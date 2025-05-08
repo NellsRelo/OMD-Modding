@@ -22,20 +22,20 @@ UCommonLoadingScreenSettings = {}
 ULoadingProcessTask = {}
 
 function ULoadingProcessTask:Unregister() end
+
 ---@param InReason FString
 function ULoadingProcessTask:SetShowLoadingScreenReason(InReason) end
+
 ---@param WorldContextObject UObject
 ---@param ShowLoadingScreenReason FString
 ---@return ULoadingProcessTask
 function ULoadingProcessTask:CreateLoadingScreenProcessTask(WorldContextObject, ShowLoadingScreenReason) end
-
 
 ---@class ULoadingScreenManager : UGameInstanceSubsystem
 ULoadingScreenManager = {}
 
 ---@return boolean
 function ULoadingScreenManager:GetLoadingScreenDisplayStatus() end
+
 ---@return FString
 function ULoadingScreenManager:GetDebugReasonForShowingOrHidingLoadingScreen() end
-
-

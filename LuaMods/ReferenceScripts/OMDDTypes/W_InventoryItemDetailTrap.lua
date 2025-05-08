@@ -9,7 +9,6 @@
 UW_InventoryItemDetailTrap_C = {}
 
 function UW_InventoryItemDetailTrap_C:Construct() end
+
 ---@param EntryPoint int32
 function UW_InventoryItemDetailTrap_C:ExecuteUbergraph_W_InventoryItemDetailTrap(EntryPoint) end
-
-

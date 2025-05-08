@@ -15,6 +15,3 @@
 ---@field Wood_Square_1200W_A_Light_NoTaper_BendN1 UStaticMeshComponent
 ---@field Wood_Square_1200W_A_Light_NoTaper_BendN UStaticMeshComponent
 ABP_Hub_TrainingShed_A_C = {}
-
-
-

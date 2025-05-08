@@ -93,35 +93,46 @@ UClothingSimulationInteractor = {}
 
 ---@param NumSubsteps int32
 function UClothingSimulationInteractor:SetNumSubsteps(NumSubsteps) end
+
 ---@param NumIterations int32
 function UClothingSimulationInteractor:SetNumIterations(NumIterations) end
+
 ---@param MaxNumIterations int32
 function UClothingSimulationInteractor:SetMaxNumIterations(MaxNumIterations) end
+
 ---@param InStiffness float
 function UClothingSimulationInteractor:SetAnimDriveSpringStiffness(InStiffness) end
+
 function UClothingSimulationInteractor:PhysicsAssetUpdated() end
+
 ---@return float
 function UClothingSimulationInteractor:GetSimulationTime() end
+
 ---@return int32
 function UClothingSimulationInteractor:GetNumSubsteps() end
+
 ---@return int32
 function UClothingSimulationInteractor:GetNumKinematicParticles() end
+
 ---@return int32
 function UClothingSimulationInteractor:GetNumIterations() end
+
 ---@return int32
 function UClothingSimulationInteractor:GetNumDynamicParticles() end
+
 ---@return int32
 function UClothingSimulationInteractor:GetNumCloths() end
+
 ---@param ClothingAssetName FString
 ---@return UClothingInteractor
 function UClothingSimulationInteractor:GetClothingInteractor(ClothingAssetName) end
+
 ---@param InVector FVector
 function UClothingSimulationInteractor:EnableGravityOverride(InVector) end
-function UClothingSimulationInteractor:DisableGravityOverride() end
-function UClothingSimulationInteractor:ClothConfigUpdated() end
 
+function UClothingSimulationInteractor:DisableGravityOverride() end
+
+function UClothingSimulationInteractor:ClothConfigUpdated() end
 
 ---@class UDEPRECATED_ClothSharedSimConfigBase : UObject
 UDEPRECATED_ClothSharedSimConfigBase = {}
-
-

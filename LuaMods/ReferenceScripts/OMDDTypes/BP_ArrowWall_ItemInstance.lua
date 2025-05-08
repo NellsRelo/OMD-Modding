@@ -5,6 +5,3 @@
 ---@field Damage double
 ---@field ['Critical Hit Chance'] double
 ABP_ArrowWall_ItemInstance_C = {}
-
-
-

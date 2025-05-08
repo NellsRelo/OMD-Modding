@@ -25,6 +25,3 @@
 ---@field Wood_Platform_300x600_A_Light2_StaticMeshComponent0 UStaticMeshComponent
 ---@field SharedRoot USceneComponent
 ABP_Warehouse_17_Walkway_C = {}
-
-
-

@@ -47,4 +47,3 @@ EBinkMoviePlayerBinkSoundTrack = {
     MP_Bink_Sound_71LanguageOverride = 6,
     MP_Bink_Sound_MAX = 7,
 }
-

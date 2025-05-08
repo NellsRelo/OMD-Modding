@@ -16,6 +16,3 @@
 ---@field Geo USceneComponent
 ---@field SharedRoot USceneComponent
 ABP_ShipBuild_HullOnStands_A_C = {}
-
-
-

@@ -7,6 +7,3 @@
 ---@field Box_Collision UBoxComponent
 ---@field Floor00 URSTTrapGridBoxComponent
 AFloor_WD_V2_4x3_C = {}
-
-
-

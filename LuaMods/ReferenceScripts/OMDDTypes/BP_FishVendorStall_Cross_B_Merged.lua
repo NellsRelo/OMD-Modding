@@ -27,6 +27,3 @@
 ---@field TrapGrid USceneComponent
 ---@field SharedRoot USceneComponent
 ABP_FishVendorStall_Cross_B_Merged_C = {}
-
-
-

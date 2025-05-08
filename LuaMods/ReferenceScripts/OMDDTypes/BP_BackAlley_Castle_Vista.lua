@@ -81,6 +81,3 @@
 ---@field BP_FishMarket_Castle_Main_Column_Octo_2x4_StoneWall_SM8 UStaticMeshComponent
 ---@field Fortress_Coastal_TowerTopLarge3_StaticMeshComponent0 UStaticMeshComponent
 ABP_BackAlley_Castle_Vista_C = {}
-
-
-

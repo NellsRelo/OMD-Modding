@@ -9,6 +9,3 @@
 ---@field NS_Fire_Ogre_Linger_Hammer UNiagaraComponent
 ---@field CombatCapsule URSTCombatCapsuleComponent
 ABP_Ogre_Fire_C = {}
-
-
-

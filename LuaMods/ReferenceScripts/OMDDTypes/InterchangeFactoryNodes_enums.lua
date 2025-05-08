@@ -5,4 +5,3 @@ EInterchangeSkeletalMeshContentType = {
     SkinningWeights = 2,
     MAX = 3,
 }
-

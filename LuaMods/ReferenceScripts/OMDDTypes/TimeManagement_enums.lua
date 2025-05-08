@@ -23,4 +23,3 @@ ETimedDataInputState = {
     Disconnected = 2,
     ETimedDataInputState_MAX = 3,
 }
-

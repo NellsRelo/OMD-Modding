@@ -22,18 +22,25 @@ ABP_PickupBase_C = {}
 
 ---@param PickingUpPlayer ARSTPlayerCharacter
 function ABP_PickupBase_C:OnPickupUp(PickingUpPlayer) end
+
 ---@param PlayerCharacter ARSTPlayerCharacter
 ---@param bCanPickup boolean
 function ABP_PickupBase_C:CanPickup(PlayerCharacter, bCanPickup) end
+
 function ABP_PickupBase_C:TL_Placement__FinishedFunc() end
+
 function ABP_PickupBase_C:TL_Placement__UpdateFunc() end
+
 function ABP_PickupBase_C:Timeline_Anim__FinishedFunc() end
+
 function ABP_PickupBase_C:Timeline_Anim__UpdateFunc() end
+
 ---@param PlayerCharacter ARSTPlayerCharacter
 function ABP_PickupBase_C:BP_OnPlayerOverlap(PlayerCharacter) end
+
 function ABP_PickupBase_C:ReceiveDestroyed() end
+
 function ABP_PickupBase_C:ReceiveBeginPlay() end
+
 ---@param EntryPoint int32
 function ABP_PickupBase_C:ExecuteUbergraph_BP_PickupBase(EntryPoint) end
-
-

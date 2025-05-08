@@ -5,6 +5,3 @@
 ---@field Metal_Candle_02 UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Metal_Candle_05_B_C = {}
-
-
-

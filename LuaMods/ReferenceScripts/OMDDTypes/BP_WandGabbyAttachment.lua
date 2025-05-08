@@ -8,5 +8,3 @@ ABP_WandGabbyAttachment_C = {}
 
 ---@return TArray<UFXSystemComponent>
 function ABP_WandGabbyAttachment_C:BP_GetFXComponents() end
-
-

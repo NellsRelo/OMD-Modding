@@ -13,8 +13,7 @@
 UW_Interaction_Prompt_C = {}
 
 function UW_Interaction_Prompt_C:BP_SynchronizeProperties() end
-UW_Interaction_Prompt_C['Refresh Label'] = function() end
+
+UW_Interaction_Prompt_C['Refresh Label'] = function(self,) end
 ---@param EntryPoint int32
 function UW_Interaction_Prompt_C:ExecuteUbergraph_W_Interaction_Prompt(EntryPoint) end
-
-

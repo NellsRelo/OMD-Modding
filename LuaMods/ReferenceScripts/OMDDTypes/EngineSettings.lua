@@ -57,11 +57,12 @@ UGameMapsSettings = {}
 
 ---@param bSkipFirstPlayer boolean
 function UGameMapsSettings:SetSkipAssigningGamepadToPlayer1(bSkipFirstPlayer) end
+
 ---@return boolean
 function UGameMapsSettings:GetSkipAssigningGamepadToPlayer1() end
+
 ---@return UGameMapsSettings
 function UGameMapsSettings:GetGameMapsSettings() end
-
 
 ---@class UGameNetworkManagerSettings : UObject
 ---@field MinDynamicBandwidth int32
@@ -122,6 +123,3 @@ UGeneralProjectSettings = {}
 ---@field bShowHUD boolean
 ---@field DebugDisplay TArray<FName>
 UHudSettings = {}
-
-
-

@@ -8,6 +8,3 @@
 ---@field SharedRoot USceneComponent
 ---@field DefaultSceneRoot USceneComponent
 APennant_Far_BP_C = {}
-
-
-

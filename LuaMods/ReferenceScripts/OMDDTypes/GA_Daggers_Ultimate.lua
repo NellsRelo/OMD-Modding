@@ -8,12 +8,14 @@ UGA_Daggers_Ultimate_C = {}
 
 ---@return UClass
 function UGA_Daggers_Ultimate_C:BP_GetPlaceableClass() end
+
 ---@param bWasCancelled boolean
 function UGA_Daggers_Ultimate_C:K2_OnEndAbility(bWasCancelled) end
+
 ---@param SpawnedActor AActor
 function UGA_Daggers_Ultimate_C:BP_OnPlacementFinished(SpawnedActor) end
+
 function UGA_Daggers_Ultimate_C:K2_ActivateAbility() end
+
 ---@param EntryPoint int32
 function UGA_Daggers_Ultimate_C:ExecuteUbergraph_GA_Daggers_Ultimate(EntryPoint) end
-
-

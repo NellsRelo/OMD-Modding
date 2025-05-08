@@ -10,6 +10,3 @@
 ---@field ['New Track 0'] float
 ---@field ['New Track 0_0'] float
 ABP_BanquetChair_Breakable_C = {}
-
-
-

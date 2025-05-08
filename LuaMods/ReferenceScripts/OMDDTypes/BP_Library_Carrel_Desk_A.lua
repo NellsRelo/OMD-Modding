@@ -17,6 +17,3 @@
 ---@field SM_wooden_beam_021 UStaticMeshComponent
 ---@field SM_wooden_beam_03 UStaticMeshComponent
 ABP_Library_Carrel_Desk_A_C = {}
-
-
-

@@ -1,6 +1,9 @@
 ---@meta
 
 ---@class ABP_Building_Resort_Small_A_C : ABP_OMDTrapGrid_C
+---@field Wall0010 URSTTrapGridBoxComponent
+---@field Wall009 URSTTrapGridBoxComponent
+---@field Wall008 URSTTrapGridBoxComponent
 ---@field Wall007 URSTTrapGridBoxComponent
 ---@field Wood_Support_A1 UStaticMeshComponent
 ---@field Wood_Support_A UStaticMeshComponent
@@ -21,7 +24,6 @@
 ---@field Wall006 URSTTrapGridBoxComponent
 ---@field Wall005 URSTTrapGridBoxComponent
 ---@field Wall004 URSTTrapGridBoxComponent
----@field Metal_Fence_300C_012 UStaticMeshComponent
 ---@field Archway_Wide_Resort_Stone_A_SM2 UStaticMeshComponent
 ---@field Archway_Wide_Resort_Stone_A_SM1 UStaticMeshComponent
 ---@field Archway_Wide_Resort_Stone_A_SM UStaticMeshComponent
@@ -42,7 +44,6 @@
 ---@field Floor_1x4_Plaza_PatternD_SM3 UStaticMeshComponent
 ---@field Metal_Fence_300C_011 UStaticMeshComponent
 ---@field Metal_Fence_300C_010 UStaticMeshComponent
----@field Metal_Fence_300C_09 UStaticMeshComponent
 ---@field Metal_Fence_300C_08 UStaticMeshComponent
 ---@field Floor_1x4_Plaza_PatternD_SM2 UStaticMeshComponent
 ---@field Floor_1x4_Plaza_PatternD_SM1 UStaticMeshComponent
@@ -75,6 +76,3 @@
 ---@field Wall003 URSTTrapGridBoxComponent
 ---@field Crenel_TrimA_SM UStaticMeshComponent
 ABP_Building_Resort_Small_A_C = {}
-
-
-

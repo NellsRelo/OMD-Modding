@@ -22,8 +22,11 @@
 ABP_Wraith_Summoner_C = {}
 
 function ABP_Wraith_Summoner_C:DoBeastMode() end
+
 function ABP_Wraith_Summoner_C:DoTeleport() end
+
 function ABP_Wraith_Summoner_C:ReceiveBeginPlay() end
+
 ---@param HealthComponent URSTHealthComponent
 ---@param OldValue float
 ---@param NewValue float
@@ -32,9 +35,10 @@ function ABP_Wraith_Summoner_C:ReceiveBeginPlay() end
 ---@param bHasSpec boolean
 ---@param Spec FGameplayEffectSpec
 function ABP_Wraith_Summoner_C:OnHealthChanged(HealthComponent, OldValue, NewValue, Instigator, HitResult, bHasSpec, Spec) end
+
 function ABP_Wraith_Summoner_C:CheckForLast() end
+
 function ABP_Wraith_Summoner_C:BP_OnDeathStarted() end
+
 ---@param EntryPoint int32
 function ABP_Wraith_Summoner_C:ExecuteUbergraph_BP_Wraith_Summoner(EntryPoint) end
-
-

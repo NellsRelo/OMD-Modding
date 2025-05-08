@@ -8,9 +8,10 @@
 ABP_Wand_Projectile_Special_C = {}
 
 function ABP_Wand_Projectile_Special_C:BP_DormancyChanged() end
+
 function ABP_Wand_Projectile_Special_C:ReceiveBeginPlay() end
+
 function ABP_Wand_Projectile_Special_C:ReceiveDestroyed() end
+
 ---@param EntryPoint int32
 function ABP_Wand_Projectile_Special_C:ExecuteUbergraph_BP_Wand_Projectile_Special(EntryPoint) end
-
-

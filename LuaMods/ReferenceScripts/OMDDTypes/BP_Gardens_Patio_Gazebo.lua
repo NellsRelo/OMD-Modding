@@ -146,6 +146,3 @@
 ---@field Geo USceneComponent
 ---@field TrapGrid USceneComponent
 ABP_Gardens_Patio_Gazebo_C = {}
-
-
-

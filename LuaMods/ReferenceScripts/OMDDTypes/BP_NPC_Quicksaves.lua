@@ -8,6 +8,3 @@
 ---@field StaticMesh2 UStaticMeshComponent
 ---@field Niagara UNiagaraComponent
 ABP_NPC_Quicksaves_C = {}
-
-
-

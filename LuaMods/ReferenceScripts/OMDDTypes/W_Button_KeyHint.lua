@@ -10,13 +10,16 @@ UW_Button_KeyHint_C = {}
 
 ---@param Index ECommonInputType
 function UW_Button_KeyHint_C:UpdateStyleOnInputMethod(Index) end
+
 ---@param IsDesignTime boolean
 function UW_Button_KeyHint_C:PreConstruct(IsDesignTime) end
+
 function UW_Button_KeyHint_C:Construct() end
+
 ---@param bNewInputType ECommonInputType
 function UW_Button_KeyHint_C:InputMethodChanged(bNewInputType) end
+
 function UW_Button_KeyHint_C:Destruct() end
+
 ---@param EntryPoint int32
 function UW_Button_KeyHint_C:ExecuteUbergraph_W_Button_KeyHint(EntryPoint) end
-
-

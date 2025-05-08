@@ -4,4 +4,3 @@ EConvexHullSimplifyMethod = {
     AngleTolerance = 1,
     EConvexHullSimplifyMethod_MAX = 2,
 }
-

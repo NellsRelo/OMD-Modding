@@ -74,48 +74,77 @@ UW_ThreadSelect_Main_C = {}
 ---@param amount int32
 ---@param HasCoin boolean
 function UW_ThreadSelect_Main_C:LocalPlayerHasCoin(amount, HasCoin) end
+
 ---@param NextSkipCost int32
 function UW_ThreadSelect_Main_C:GetNextSkipCost(NextSkipCost) end
+
 ---@param NextRerollCost int32
 function UW_ThreadSelect_Main_C:GetNextRerollCost(NextRerollCost) end
+
 function UW_ThreadSelect_Main_C:SetupRiftPointDisplay() end
+
 ---@param CardIndex int32
 ---@param bNotInLoadout boolean
 function UW_ThreadSelect_Main_C:UpdateCardThread(CardIndex, bNotInLoadout) end
+
 ---@return UWidget
 function UW_ThreadSelect_Main_C:BP_GetDesiredFocusTarget() end
+
 function UW_ThreadSelect_Main_C:Construct() end
+
 ---@param Button UCommonButtonBase
-function UW_ThreadSelect_Main_C:BndEvt__W_ThreadSelect_Main_TabButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_ThreadSelect_Main_C:BndEvt__W_ThreadSelect_Main_TabButton_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(
+    Button) end
+
 ---@param Button UCommonButtonBase
-function UW_ThreadSelect_Main_C:BndEvt__W_ThreadSelect_Main_TabButton_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_ThreadSelect_Main_C:BndEvt__W_ThreadSelect_Main_TabButton_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(
+    Button) end
+
 ---@param Button UCommonButtonBase
-function UW_ThreadSelect_Main_C:BndEvt__W_ThreadSelect_Main_TabButton_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_ThreadSelect_Main_C:BndEvt__W_ThreadSelect_Main_TabButton_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(
+    Button) end
+
 ---@param SelectedThreadWidget UW_ThreadDisplay_Base_C
 function UW_ThreadSelect_Main_C:OnThreadSelected(SelectedThreadWidget) end
+
 ---@param bIsVisible boolean
 function UW_ThreadSelect_Main_C:TabMenuVisibilityUpdated(bIsVisible) end
+
 ---@param Button UCommonButtonBase
-function UW_ThreadSelect_Main_C:BndEvt__W_ThreadSelect_Main_Button_Reroll_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_ThreadSelect_Main_C:BndEvt__W_ThreadSelect_Main_Button_Reroll_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(
+    Button) end
+
 ---@param Button UCommonButtonBase
-function UW_ThreadSelect_Main_C:BndEvt__W_ThreadSelect_Main_Button_Skip_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_ThreadSelect_Main_C:BndEvt__W_ThreadSelect_Main_Button_Skip_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature(
+    Button) end
+
 function UW_ThreadSelect_Main_C:OnRerollThreadSelection() end
+
 ---@param IsReroll boolean
 function UW_ThreadSelect_Main_C:LayoutThreads(IsReroll) end
+
 function UW_ThreadSelect_Main_C:RecalcualteButtonInteractibility() end
+
 function UW_ThreadSelect_Main_C:UpdateButtonCostDisplay() end
+
 function UW_ThreadSelect_Main_C:AllowThreadSelect() end
+
 ---@param Delta int32
 function UW_ThreadSelect_Main_C:CustomEvent(Delta) end
+
 function UW_ThreadSelect_Main_C:Destruct() end
+
 function UW_ThreadSelect_Main_C:OnChatToggled() end
-UW_ThreadSelect_Main_C['On Thread Select Anim Finished'] = function() end
+
+UW_ThreadSelect_Main_C['On Thread Select Anim Finished'] = function(self,) end
 function UW_ThreadSelect_Main_C:ExitShareMode() end
+
 function UW_ThreadSelect_Main_C:EnterShareMode() end
-UW_ThreadSelect_Main_C['Reset Wave State'] = function() end
+
+UW_ThreadSelect_Main_C['Reset Wave State'] = function(self,) end
 ---@param Button UCommonButtonBase
-function UW_ThreadSelect_Main_C:BndEvt__W_ThreadSelect_Main_Button_Skip_Free_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_ThreadSelect_Main_C:BndEvt__W_ThreadSelect_Main_Button_Skip_Free_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature(
+    Button) end
+
 ---@param EntryPoint int32
 function UW_ThreadSelect_Main_C:ExecuteUbergraph_W_ThreadSelect_Main(EntryPoint) end
-
-

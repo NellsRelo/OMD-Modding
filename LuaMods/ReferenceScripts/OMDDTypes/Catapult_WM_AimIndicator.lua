@@ -4,6 +4,3 @@
 ---@field Sphere UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ACatapult_WM_AimIndicator_C = {}
-
-
-

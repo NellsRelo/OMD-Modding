@@ -13,11 +13,12 @@ UGA_Death_Elemental_Redling_C = {}
 
 ---@param CurrentTrap ARSTTrap
 function UGA_Death_Elemental_Redling_C:DisableTrap(CurrentTrap) end
+
 ---@param Success boolean
 function UGA_Death_Elemental_Redling_C:DoAOETrapDisable(Success) end
+
 ---@param EventData FGameplayEventData
 function UGA_Death_Elemental_Redling_C:K2_ActivateAbilityFromEvent(EventData) end
+
 ---@param EntryPoint int32
 function UGA_Death_Elemental_Redling_C:ExecuteUbergraph_GA_Death_Elemental_Redling(EntryPoint) end
-
-

@@ -5,6 +5,3 @@
 ---@field trap_wall URSTTrapGridBoxComponent
 ---@field Colosseum_Wall_Limestone_2x4_A_SM UStaticMeshComponent
 ABP_Colosseum_Wall_Limestone_2x4_A_C = {}
-
-
-

@@ -6,4 +6,3 @@ EFieldActivationType = {
     NewEnumerator4 = 3,
     EFieldActivationType_MAX = 4,
 }
-

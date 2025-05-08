@@ -6,5 +6,3 @@ FAnimBlueprintGeneratedConstantData = {}
 
 ---@class UABP_Hero_Gabby_C : UABP_RSTPlayerCharacter_HeroBase_C
 UABP_Hero_Gabby_C = {}
-
-

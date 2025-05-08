@@ -7,6 +7,3 @@
 ---@field Duration double
 ---@field ['Critical Hit Chance'] double
 ABP_AcidGeyser_ItemInstance_C = {}
-
-
-

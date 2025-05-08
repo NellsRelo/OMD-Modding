@@ -10,8 +10,8 @@ ABP_PoisonVolume_Gas_Sapper_C = {}
 
 ---@param OtherActor AActor
 function ABP_PoisonVolume_Gas_Sapper_C:ReceiveActorBeginOverlap(OtherActor) end
+
 function ABP_PoisonVolume_Gas_Sapper_C:ReceiveBeginPlay() end
+
 ---@param EntryPoint int32
 function ABP_PoisonVolume_Gas_Sapper_C:ExecuteUbergraph_BP_PoisonVolume_Gas_Sapper(EntryPoint) end
-
-

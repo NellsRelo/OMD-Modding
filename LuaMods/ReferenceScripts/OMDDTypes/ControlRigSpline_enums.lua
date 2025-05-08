@@ -4,4 +4,3 @@ ESplineType = {
     Hermite = 1,
     Max = 2,
 }
-

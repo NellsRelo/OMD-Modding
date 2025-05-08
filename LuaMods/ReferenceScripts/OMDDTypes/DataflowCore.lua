@@ -60,6 +60,3 @@ FNodeColors = {}
 ---@field SpherePinTypeColor FLinearColor
 ---@field NodeColorsMap TMap<FName, FNodeColors>
 UDataflowSettings = {}
-
-
-

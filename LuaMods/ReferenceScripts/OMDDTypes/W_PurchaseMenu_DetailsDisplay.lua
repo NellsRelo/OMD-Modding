@@ -9,12 +9,11 @@
 ---@field ['Background Margin'] FMargin
 UW_PurchaseMenu_DetailsDisplay_C = {}
 
-UW_PurchaseMenu_DetailsDisplay_C['Init Display'] = function() end
+UW_PurchaseMenu_DetailsDisplay_C['Init Display'] = function(self,) end
 ---@param New_Object UObject
-UW_PurchaseMenu_DetailsDisplay_C['Init for Object'] = function(New_Object) end
+UW_PurchaseMenu_DetailsDisplay_C['Init for Object'] = function(self, New_Object) end
 function UW_PurchaseMenu_DetailsDisplay_C:BP_SynchronizeProperties() end
-UW_PurchaseMenu_DetailsDisplay_C['Refresh Background'] = function() end
+
+UW_PurchaseMenu_DetailsDisplay_C['Refresh Background'] = function(self,) end
 ---@param EntryPoint int32
 function UW_PurchaseMenu_DetailsDisplay_C:ExecuteUbergraph_W_PurchaseMenu_DetailsDisplay(EntryPoint) end
-
-

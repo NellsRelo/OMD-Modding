@@ -48,6 +48,3 @@
 ---@field Geo USceneComponent
 ---@field TrapGrid USceneComponent
 ABP_Crane_Fishmarket_Large_C = {}
-
-
-

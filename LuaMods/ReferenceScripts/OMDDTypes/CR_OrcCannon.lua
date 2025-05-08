@@ -18,7 +18,8 @@ UCR_OrcCannon_C = {}
 ---@field RigVMModel___RigUnit_SetRotation_1_Item__Const FRigElementKey
 ---@field RigVMModel___RigVMFunction_MathQuaternionFromAxisAndAngle_1_Axis__Const FVector
 ---@field RigVMModel___RigUnit_GetControlFloat_1_Control__Const FName
----@field RigVMModel___RigUnit_SetRotation_2_Item__Const FRigElementKey
+---@field RigVMModel___RigUnit_OffsetTransformForItem_Item__Const FRigElementKey
+---@field RigVMModel___RigUnit_OffsetTransformForItem_OffsetTransform__Const FTransform
 ---@field RigVMModel___RigVMFunction_MathQuaternionFromAxisAndAngle_1_1_1_Axis__Const FVector
 ---@field RigVMModel___Multiply_1_1_B__Const double
 URigVMMemory_Literal = {}
@@ -50,15 +51,9 @@ URigVMMemory_Literal = {}
 ---@field RigVMModel___Radians_Value double
 ---@field RigVMModel___RigVMFunction_MathQuaternionFromAxisAndAngle_1_Angle float
 ---@field RigVMModel___RigUnit_SetRotation_1_CachedIndex TArray<FCachedRigElement>
----@field RigVMModel___Multiply_1_Result FQuat
----@field RigVMModel___RigUnit_GetTransform_1_Transform FTransform
----@field RigVMModel___RigUnit_GetTransform_1_CachedIndex TArray<FCachedRigElement>
----@field RigVMModel___Multiply_1_A FQuat
 ---@field RigVMModel___RigVMFunction_MathQuaternionFromAxisAndAngle_1_1_1_Result FQuat
 ---@field RigVMModel___Multiply_1_1_Result double
 ---@field RigVMModel___RigVMFunction_MathQuaternionFromAxisAndAngle_1_1_1_Angle float
----@field RigVMModel___RigUnit_SetRotation_2_CachedIndex TArray<FCachedRigElement>
+---@field RigVMModel___RigUnit_OffsetTransformForItem_OffsetTransform__IO FTransform
+---@field RigVMModel___RigUnit_OffsetTransformForItem_CachedIndex TArray<FCachedRigElement>
 URigVMMemory_Work = {}
-
-
-

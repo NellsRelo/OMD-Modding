@@ -328,4 +328,3 @@ EWaveFunctionType = {
     Field_Wave_Decay = 3,
     Field_Wave_Max = 4,
 }
-

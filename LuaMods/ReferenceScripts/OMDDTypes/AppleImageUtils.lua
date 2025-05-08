@@ -23,14 +23,18 @@ UAppleImageUtilsBaseAsyncTaskBlueprintProxy = {}
 ---@param Scale float
 ---@param Rotate ETextureRotationDirection
 ---@return UAppleImageUtilsBaseAsyncTaskBlueprintProxy
-function UAppleImageUtilsBaseAsyncTaskBlueprintProxy:CreateProxyObjectForConvertToTIFF(SourceImage, bWantColor, bUseGpu, Scale, Rotate) end
+function UAppleImageUtilsBaseAsyncTaskBlueprintProxy:CreateProxyObjectForConvertToTIFF(SourceImage, bWantColor, bUseGpu,
+                                                                                       Scale, Rotate) end
+
 ---@param SourceImage UTexture
 ---@param bWantColor boolean
 ---@param bUseGpu boolean
 ---@param Scale float
 ---@param Rotate ETextureRotationDirection
 ---@return UAppleImageUtilsBaseAsyncTaskBlueprintProxy
-function UAppleImageUtilsBaseAsyncTaskBlueprintProxy:CreateProxyObjectForConvertToPNG(SourceImage, bWantColor, bUseGpu, Scale, Rotate) end
+function UAppleImageUtilsBaseAsyncTaskBlueprintProxy:CreateProxyObjectForConvertToPNG(SourceImage, bWantColor, bUseGpu,
+                                                                                      Scale, Rotate) end
+
 ---@param SourceImage UTexture
 ---@param Quality int32
 ---@param bWantColor boolean
@@ -38,7 +42,9 @@ function UAppleImageUtilsBaseAsyncTaskBlueprintProxy:CreateProxyObjectForConvert
 ---@param Scale float
 ---@param Rotate ETextureRotationDirection
 ---@return UAppleImageUtilsBaseAsyncTaskBlueprintProxy
-function UAppleImageUtilsBaseAsyncTaskBlueprintProxy:CreateProxyObjectForConvertToJPEG(SourceImage, Quality, bWantColor, bUseGpu, Scale, Rotate) end
+function UAppleImageUtilsBaseAsyncTaskBlueprintProxy:CreateProxyObjectForConvertToJPEG(SourceImage, Quality, bWantColor,
+                                                                                       bUseGpu, Scale, Rotate) end
+
 ---@param SourceImage UTexture
 ---@param Quality int32
 ---@param bWantColor boolean
@@ -46,6 +52,5 @@ function UAppleImageUtilsBaseAsyncTaskBlueprintProxy:CreateProxyObjectForConvert
 ---@param Scale float
 ---@param Rotate ETextureRotationDirection
 ---@return UAppleImageUtilsBaseAsyncTaskBlueprintProxy
-function UAppleImageUtilsBaseAsyncTaskBlueprintProxy:CreateProxyObjectForConvertToHEIF(SourceImage, Quality, bWantColor, bUseGpu, Scale, Rotate) end
-
-
+function UAppleImageUtilsBaseAsyncTaskBlueprintProxy:CreateProxyObjectForConvertToHEIF(SourceImage, Quality, bWantColor,
+                                                                                       bUseGpu, Scale, Rotate) end

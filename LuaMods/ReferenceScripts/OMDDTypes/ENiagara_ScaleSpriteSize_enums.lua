@@ -6,4 +6,3 @@ ENiagara_ScaleSpriteSize = {
     NewEnumerator3 = 3,
     ENiagara_MAX = 4,
 }
-

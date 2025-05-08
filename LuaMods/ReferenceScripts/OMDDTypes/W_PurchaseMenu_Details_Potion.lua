@@ -10,9 +10,7 @@
 ---@field Text_PotionName UCommonTextBlock
 UW_PurchaseMenu_Details_Potion_C = {}
 
-UW_PurchaseMenu_Details_Potion_C['Init Display'] = function() end
-UW_PurchaseMenu_Details_Potion_C['Init Icon'] = function() end
+UW_PurchaseMenu_Details_Potion_C['Init Display'] = function(self,) end
+UW_PurchaseMenu_Details_Potion_C['Init Icon'] = function(self,) end
 ---@param EntryPoint int32
 function UW_PurchaseMenu_Details_Potion_C:ExecuteUbergraph_W_PurchaseMenu_Details_Potion(EntryPoint) end
-
-

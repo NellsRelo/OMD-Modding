@@ -10,6 +10,10 @@ FAnimBlueprintGeneratedConstantData = {}
 
 
 
+---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
+FAnimBlueprintGeneratedMutableData = {}
+
+
 ---@class UABP_Blunderbuss_Attachment_C : UAnimInstance
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance
@@ -20,7 +24,6 @@ UABP_Blunderbuss_Attachment_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_Blunderbuss_Attachment_C:AnimGraph(AnimGraph) end
+
 ---@param EntryPoint int32
 function UABP_Blunderbuss_Attachment_C:ExecuteUbergraph_ABP_Blunderbuss_Attachment(EntryPoint) end
-
-

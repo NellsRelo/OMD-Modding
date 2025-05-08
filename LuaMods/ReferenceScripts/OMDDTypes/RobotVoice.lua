@@ -1,7 +1,7 @@
 ---@meta
 
----@class FRPlayerVoiceState
-FRPlayerVoiceState = {}
+---@class FRPlayerCommunicationState
+FRPlayerCommunicationState = {}
 
 
 ---@class URVoiceManager : UObject
@@ -14,6 +14,3 @@ URVoiceManager = {}
 ---@class URVoiceToolkit : UObject
 ---@field LocalPlayerOwner TWeakObjectPtr<ULocalPlayer>
 URVoiceToolkit = {}
-
-
-

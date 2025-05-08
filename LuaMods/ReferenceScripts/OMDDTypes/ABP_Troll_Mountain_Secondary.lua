@@ -45,8 +45,8 @@ UABP_Troll_Mountain_Secondary_C = {}
 ---@param InPose_0 FPoseLink
 ---@param AnimGraph FPoseLink
 function UABP_Troll_Mountain_Secondary_C:AnimGraph(InPose, BaseBones, InPose_0, AnimGraph) end
+
 function UABP_Troll_Mountain_Secondary_C:BlueprintBeginPlay() end
+
 ---@param EntryPoint int32
 function UABP_Troll_Mountain_Secondary_C:ExecuteUbergraph_ABP_Troll_Mountain_Secondary(EntryPoint) end
-
-

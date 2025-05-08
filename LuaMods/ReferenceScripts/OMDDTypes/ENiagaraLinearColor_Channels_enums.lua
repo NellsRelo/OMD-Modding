@@ -6,4 +6,3 @@ ENiagaraLinearColor_Channels = {
     NewEnumerator3 = 3,
     ENiagaraLinearColor_MAX = 4,
 }
-

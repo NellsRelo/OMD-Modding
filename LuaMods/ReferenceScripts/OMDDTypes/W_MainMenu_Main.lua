@@ -26,110 +26,173 @@
 ---@field bCanPlayOnline boolean
 UW_MainMenu_Main_C = {}
 
-function UW_MainMenu_Main_C:MoveCursorToCenter() end
+---@return FVector2D
+function UW_MainMenu_Main_C:BP_GetCursorInitialPosition() end
+
 ---@param bStackActive boolean
 ---@return UWidgetAnimation
 function UW_MainMenu_Main_C:BP_GetOnShowAnimation(bStackActive) end
+
 ---@param MissionNum int32
 ---@param Skulls int32
-UW_MainMenu_Main_C['Get Saved Run Info'] = function(MissionNum, Skulls) end
+UW_MainMenu_Main_C['Get Saved Run Info'] = function(self, MissionNum, Skulls) end
 function UW_MainMenu_Main_C:PopModal() end
+
 ---@param bStackActive boolean
 ---@return UWidgetAnimation
 function UW_MainMenu_Main_C:BP_GetOnHideAnimation(bStackActive) end
+
 ---@return boolean
 function UW_MainMenu_Main_C:BP_OnHandleBackAction() end
+
 ---@return UWidget
 function UW_MainMenu_Main_C:BP_GetDesiredFocusTarget() end
+
 ---@param UserWidget UCommonActivatableWidget
 function UW_MainMenu_Main_C:AfterPush_5F8CD37C4EEC3D14F465D0A43E471621(UserWidget) end
+
 ---@param UserWidget UCommonActivatableWidget
 function UW_MainMenu_Main_C:BeforePush_5F8CD37C4EEC3D14F465D0A43E471621(UserWidget) end
+
 ---@param UserWidget UCommonActivatableWidget
 function UW_MainMenu_Main_C:AfterPush_F629E19F42C1010640F24092D6B0B9F3(UserWidget) end
+
 ---@param UserWidget UCommonActivatableWidget
 function UW_MainMenu_Main_C:BeforePush_F629E19F42C1010640F24092D6B0B9F3(UserWidget) end
+
 ---@param UserWidget UCommonActivatableWidget
 function UW_MainMenu_Main_C:AfterPush_419C43574FF18F00D371C29D5BE6EA8C(UserWidget) end
+
 ---@param UserWidget UCommonActivatableWidget
 function UW_MainMenu_Main_C:BeforePush_419C43574FF18F00D371C29D5BE6EA8C(UserWidget) end
+
 ---@param ProxyObject UAsyncAction_ListenForGameplayMessage
 ---@param ActualChannel FGameplayTag
 function UW_MainMenu_Main_C:OnMessageReceived_D24DB9884A0D87E8035D728C52764C40(ProxyObject, ActualChannel) end
+
 ---@param UserInfo UCommonUserInfo
 ---@param bSuccess boolean
 ---@param Error FText
 ---@param RequestedPrivilege ECommonUserPrivilege
 ---@param OnlineContext ECommonUserOnlineContext
-function UW_MainMenu_Main_C:OnInitializationComplete_DD43BF1041AA313F89983690F7F5FDCE(UserInfo, bSuccess, Error, RequestedPrivilege, OnlineContext) end
+function UW_MainMenu_Main_C:OnInitializationComplete_DD43BF1041AA313F89983690F7F5FDCE(UserInfo, bSuccess, Error,
+                                                                                      RequestedPrivilege, OnlineContext) end
+
 ---@param UserInfo UCommonUserInfo
 ---@param bSuccess boolean
 ---@param Error FText
 ---@param RequestedPrivilege ECommonUserPrivilege
 ---@param OnlineContext ECommonUserOnlineContext
-function UW_MainMenu_Main_C:OnInitializationComplete_9587266E45E1DF54C21D8D8CD79038A3(UserInfo, bSuccess, Error, RequestedPrivilege, OnlineContext) end
+function UW_MainMenu_Main_C:OnInitializationComplete_9587266E45E1DF54C21D8D8CD79038A3(UserInfo, bSuccess, Error,
+                                                                                      RequestedPrivilege, OnlineContext) end
+
 ---@param UserWidget UCommonActivatableWidget
 function UW_MainMenu_Main_C:AfterPush_B8D5024A4B4545778B9F44B62443215D(UserWidget) end
+
 ---@param UserWidget UCommonActivatableWidget
 function UW_MainMenu_Main_C:BeforePush_B8D5024A4B4545778B9F44B62443215D(UserWidget) end
+
 ---@param UserFacingData URSTPawnUserFacingData
 ---@param DidFind boolean
 function UW_MainMenu_Main_C:OnStreamableFinished_A0DEA72840BE7749FD398796AEE7F3DB(UserFacingData, DidFind) end
+
 ---@param UserWidget UCommonActivatableWidget
 function UW_MainMenu_Main_C:AfterPush_DC90F05D4AA9DDFD66D37C87083F0759(UserWidget) end
+
 ---@param UserWidget UCommonActivatableWidget
 function UW_MainMenu_Main_C:BeforePush_DC90F05D4AA9DDFD66D37C87083F0759(UserWidget) end
+
 ---@param UserWidget UCommonActivatableWidget
 function UW_MainMenu_Main_C:AfterPush_34D2F88947199562EBDEE6B9E8A115C0(UserWidget) end
+
 ---@param UserWidget UCommonActivatableWidget
 function UW_MainMenu_Main_C:BeforePush_34D2F88947199562EBDEE6B9E8A115C0(UserWidget) end
+
 function UW_MainMenu_Main_C:DelgateOne() end
+
 function UW_MainMenu_Main_C:delegateTwo() end
+
 ---@param Button UCommonButtonBase
-function UW_MainMenu_Main_C:BndEvt__W_MainMenu_Main_Button_News_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_MainMenu_Main_C:BndEvt__W_MainMenu_Main_Button_News_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(
+    Button) end
+
 ---@param Button UCommonButtonBase
-function UW_MainMenu_Main_C:BndEvt__W_MainMenu_Main_Button_Profile_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_MainMenu_Main_C:BndEvt__W_MainMenu_Main_Button_Profile_K2Node_ComponentBoundEvent_4_CommonButtonBaseClicked__DelegateSignature(
+    Button) end
+
 function UW_MainMenu_Main_C:UpdatePlayerProfile() end
+
 ---@param Button UCommonButtonBase
-function UW_MainMenu_Main_C:BndEvt__W_MainMenu_Main_Button_Settings_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_MainMenu_Main_C:BndEvt__W_MainMenu_Main_Button_Settings_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(
+    Button) end
+
 function UW_MainMenu_Main_C:ConfirmProfileLoadError() end
+
 function UW_MainMenu_Main_C:Destruct() end
+
 function UW_MainMenu_Main_C:OnRejoinStatusUpdated() end
+
 ---@param Button UCommonButtonBase
-function UW_MainMenu_Main_C:BndEvt__W_MainMenu_Main_Button_Rejoin_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_MainMenu_Main_C:BndEvt__W_MainMenu_Main_Button_Rejoin_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature(
+    Button) end
+
 function UW_MainMenu_Main_C:ConfirmAbandon() end
+
 function UW_MainMenu_Main_C:CancelAbandon() end
+
 ---@param Button UCommonButtonBase
-function UW_MainMenu_Main_C:BndEvt__W_MainMenu_Main_Button_Play_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_MainMenu_Main_C:BndEvt__W_MainMenu_Main_Button_Play_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(
+    Button) end
+
 function UW_MainMenu_Main_C:StartPlay() end
+
 function UW_MainMenu_Main_C:OnModalComplete() end
+
 ---@param Enabled boolean
 function UW_MainMenu_Main_C:SetAllButtons(Enabled) end
+
 ---@param bSuccess boolean
 function UW_MainMenu_Main_C:OnPatchNotesVersionReceived(bSuccess) end
+
 function UW_MainMenu_Main_C:BP_OnActivated() end
+
 function UW_MainMenu_Main_C:BP_OnDeactivated() end
+
 function UW_MainMenu_Main_C:OnMessageQueueChanged() end
+
 ---@param bIsShowing boolean
 function UW_MainMenu_Main_C:OnLoadingScreenVisibilityChanged(bIsShowing) end
+
 ---@param Button UCommonButtonBase
-function UW_MainMenu_Main_C:BndEvt__W_MainMenu_Main_Button_Credits_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_MainMenu_Main_C:BndEvt__W_MainMenu_Main_Button_Credits_K2Node_ComponentBoundEvent_6_CommonButtonBaseClicked__DelegateSignature(
+    Button) end
+
 ---@param Result FOnlineResultInformation
 function UW_MainMenu_Main_C:OnCreateSessionComplete(Result) end
+
 function UW_MainMenu_Main_C:RejectOffline() end
+
 function UW_MainMenu_Main_C:ConfirmOffline() end
+
 ---@param OnlineMode ECommonSessionOnlineMode
 function UW_MainMenu_Main_C:BeginHostingGame(OnlineMode) end
+
 ---@param Button UCommonButtonBase
-function UW_MainMenu_Main_C:BndEvt__W_MainMenu_Main_Button_Discord_K2Node_ComponentBoundEvent_7_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_MainMenu_Main_C:BndEvt__W_MainMenu_Main_Button_Discord_K2Node_ComponentBoundEvent_7_CommonButtonBaseClicked__DelegateSignature(
+    Button) end
+
 function UW_MainMenu_Main_C:Construct() end
+
 ---@param Button UCommonButtonBase
-function UW_MainMenu_Main_C:BndEvt__W_MainMenu_Main_Button_Quit_K2Node_ComponentBoundEvent_9_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_MainMenu_Main_C:BndEvt__W_MainMenu_Main_Button_Quit_K2Node_ComponentBoundEvent_9_CommonButtonBaseClicked__DelegateSignature(
+    Button) end
+
 ---@param bIsShowing boolean
 function UW_MainMenu_Main_C:OnLoadingScreenChanged(bIsShowing) end
+
 function UW_MainMenu_Main_C:BP_OnFinishShow() end
+
 function UW_MainMenu_Main_C:ConfirmLoadBackup() end
+
 ---@param EntryPoint int32
 function UW_MainMenu_Main_C:ExecuteUbergraph_W_MainMenu_Main(EntryPoint) end
-
-

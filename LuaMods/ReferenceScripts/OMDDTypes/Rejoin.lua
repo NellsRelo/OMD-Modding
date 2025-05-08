@@ -5,6 +5,3 @@
 ---@field bRejoinAfterCheck boolean
 ---@field bAttemptingRejoin boolean
 URejoinCheck = {}
-
-
-

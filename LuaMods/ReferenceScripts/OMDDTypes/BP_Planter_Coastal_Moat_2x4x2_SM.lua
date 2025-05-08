@@ -10,6 +10,3 @@
 ---@field Geo USceneComponent
 ---@field TrapGrid USceneComponent
 ABP_Planter_Coastal_Moat_2x4x2_SM_C = {}
-
-
-

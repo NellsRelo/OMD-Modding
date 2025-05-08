@@ -12,5 +12,3 @@
 ABP_Spline_Tool_C = {}
 
 function ABP_Spline_Tool_C:UserConstructionScript() end
-
-

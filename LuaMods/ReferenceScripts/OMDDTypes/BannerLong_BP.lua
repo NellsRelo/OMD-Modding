@@ -9,6 +9,3 @@
 ---@field SharedRoot USceneComponent
 ---@field DefaultSceneRoot USceneComponent
 ABannerLong_BP_C = {}
-
-
-

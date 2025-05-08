@@ -5,6 +5,3 @@
 ---@field WoodFloor_3x1 UStaticMeshComponent
 ---@field Floor00 URSTTrapGridBoxComponent
 AFloor_WoodPlank_3x3_C = {}
-
-
-

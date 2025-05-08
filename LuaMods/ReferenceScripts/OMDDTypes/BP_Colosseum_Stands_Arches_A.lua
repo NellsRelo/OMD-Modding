@@ -27,6 +27,3 @@
 ---@field ColumnB_05x2_StoneBase_Merged UStaticMeshComponent
 ---@field Archway_2x05x25_Stonewall UStaticMeshComponent
 ABP_Colosseum_Stands_Arches_A_C = {}
-
-
-

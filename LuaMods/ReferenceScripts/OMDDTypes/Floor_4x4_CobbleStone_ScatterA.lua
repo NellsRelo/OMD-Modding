@@ -4,6 +4,3 @@
 ---@field Floor_4x4_StoneBlock_SM UStaticMeshComponent
 ---@field Floor00 URSTTrapGridBoxComponent
 AFloor_4x4_CobbleStone_ScatterA_C = {}
-
-
-

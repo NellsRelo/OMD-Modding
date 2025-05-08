@@ -144,4 +144,3 @@ ESleepFamily = {
     Custom = 2,
     ESleepFamily_MAX = 3,
 }
-

@@ -1,9 +1,8 @@
 ---@meta
 
 ---@class ABP_Torch_FreeStand_Night_C : AActor
----@field Lighting_Torch_FreeStand_Union UStaticMeshComponent
+---@field Lighting_Torch_Wood_FreeStand UStaticMeshComponent
 ---@field NS_WallTorch_Fire UNiagaraComponent
----@field WallTorch_Log UStaticMeshComponent
 ---@field AmbEmitter_Torch_LP_SC UAudioComponent
 ---@field PointLight UPointLightComponent
 ---@field DefaultSceneRoot USceneComponent
@@ -17,6 +16,3 @@
 ---@field WallBaseVisible boolean
 ---@field WallBaseNotVisible boolean
 ABP_Torch_FreeStand_Night_C = {}
-
-
-

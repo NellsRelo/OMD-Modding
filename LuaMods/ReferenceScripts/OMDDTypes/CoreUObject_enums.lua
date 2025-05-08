@@ -143,7 +143,7 @@ ELogTimes = {
     None = 0,
     UTC = 1,
     SinceGStartTime = 2,
-    Local = 3,
+    = 3,
     ELogTimes_MAX = 4,
 }
 

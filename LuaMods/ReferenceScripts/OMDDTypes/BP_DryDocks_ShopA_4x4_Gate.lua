@@ -21,6 +21,3 @@
 ---@field TrapGrid USceneComponent
 ---@field Collision USceneComponent
 ABP_DryDocks_ShopA_4x4_Gate_C = {}
-
-
-

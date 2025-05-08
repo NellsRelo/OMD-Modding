@@ -20,23 +20,26 @@
 UW_Bar_Progress_C = {}
 
 ---@param LerpValue double
-UW_Bar_Progress_C['Get Lerp Value'] = function(LerpValue) end
+UW_Bar_Progress_C['Get Lerp Value'] = function(self, LerpValue) end
 ---@param NewValue double
 ---@param IsInstant boolean
 ---@param ForceUpdate boolean
 function UW_Bar_Progress_C:SetValue(NewValue, IsInstant, ForceUpdate) end
+
 ---@param NormalizedValue double
-UW_Bar_Progress_C['Get Normalized Current Value'] = function(NormalizedValue) end
+UW_Bar_Progress_C['Get Normalized Current Value'] = function(self, NormalizedValue) end
 ---@param Value double
 ---@param NormalizedValue double
 function UW_Bar_Progress_C:GetNormalizedValue(Value, NormalizedValue) end
+
 ---@param NewMaxValue double
 function UW_Bar_Progress_C:SetMaxValue(NewMaxValue) end
+
 function UW_Bar_Progress_C:BP_SynchronizeProperties() end
+
 ---@param MyGeometry FGeometry
 ---@param InDeltaTime float
 function UW_Bar_Progress_C:Tick(MyGeometry, InDeltaTime) end
+
 ---@param EntryPoint int32
 function UW_Bar_Progress_C:ExecuteUbergraph_W_Bar_Progress(EntryPoint) end
-
-

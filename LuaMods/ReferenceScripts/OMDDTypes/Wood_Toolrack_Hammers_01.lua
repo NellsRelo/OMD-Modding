@@ -8,6 +8,3 @@
 ---@field Wood_ToolRack_01 UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 AWood_Toolrack_Hammers_01_C = {}
-
-
-

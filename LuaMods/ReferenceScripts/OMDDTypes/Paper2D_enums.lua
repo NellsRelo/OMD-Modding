@@ -62,4 +62,3 @@ ETileMapProjectionMode = {
     HexagonalStaggered = 3,
     ETileMapProjectionMode_MAX = 4,
 }
-

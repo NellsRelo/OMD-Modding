@@ -12,6 +12,3 @@
 ---@field Geometry USceneComponent
 ---@field TrapGrid USceneComponent
 ABP_CastlePlaza_Wall_1x2_A_Merged_C = {}
-
-
-

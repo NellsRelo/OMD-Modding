@@ -57,4 +57,3 @@ EInterchangeTextureWrapMode = {
     Mirror = 2,
     EInterchangeTextureWrapMode_MAX = 3,
 }
-

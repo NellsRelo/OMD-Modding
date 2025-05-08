@@ -407,6 +407,3 @@ UMaterialExpressionMaterialXTextureSampleParameterBlur = {}
 ---@class UMaterialExpressionMaterialXUnpremult : UMaterialExpression
 ---@field Input FExpressionInput
 UMaterialExpressionMaterialXUnpremult = {}
-
-
-

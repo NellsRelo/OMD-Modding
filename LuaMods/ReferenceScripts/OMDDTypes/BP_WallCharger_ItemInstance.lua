@@ -6,6 +6,3 @@
 ---@field StatusEffectDuration double
 ---@field ['Critical Hit Chance'] double
 ABP_WallCharger_ItemInstance_C = {}
-
-
-

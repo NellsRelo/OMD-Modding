@@ -57,7 +57,6 @@ UHandKeypointConversion = {}
 ---@return int32
 function UHandKeypointConversion:Conv_HandKeypointToInt32(Input) end
 
-
 ---@class UMotionControllerComponent : UPrimitiveComponent
 ---@field PlayerIndex int32
 ---@field MotionSource FName
@@ -72,37 +71,48 @@ UMotionControllerComponent = {}
 
 ---@param NewSource EControllerHand
 function UMotionControllerComponent:SetTrackingSource(NewSource) end
+
 ---@param NewSource FName
 function UMotionControllerComponent:SetTrackingMotionSource(NewSource) end
+
 ---@param bShowControllerModel boolean
 function UMotionControllerComponent:SetShowDeviceModel(bShowControllerModel) end
+
 ---@param NewDisplayModelSource FName
 function UMotionControllerComponent:SetDisplayModelSource(NewDisplayModelSource) end
+
 ---@param NewDisplayMesh UStaticMesh
 function UMotionControllerComponent:SetCustomDisplayMesh(NewDisplayMesh) end
+
 ---@param NewPlayer int32
 function UMotionControllerComponent:SetAssociatedPlayerIndex(NewPlayer) end
+
 function UMotionControllerComponent:OnMotionControllerUpdated() end
+
 ---@return boolean
 function UMotionControllerComponent:IsTracked() end
+
 ---@return EControllerHand
 function UMotionControllerComponent:GetTrackingSource() end
+
 ---@param InName FName
 ---@param bValueFound boolean
 ---@return float
 function UMotionControllerComponent:GetParameterValue(InName, bValueFound) end
+
 ---@param OutLinearVelocity FVector
 ---@return boolean
 function UMotionControllerComponent:GetLinearVelocity(OutLinearVelocity) end
+
 ---@param OutLinearAcceleration FVector
 ---@return boolean
 function UMotionControllerComponent:GetLinearAcceleration(OutLinearAcceleration) end
+
 ---@param jointIndex int32
 ---@param bValueFound boolean
 ---@return FVector
 function UMotionControllerComponent:GetHandJointPosition(jointIndex, bValueFound) end
+
 ---@param OutAngularVelocity FRotator
 ---@return boolean
 function UMotionControllerComponent:GetAngularVelocity(OutAngularVelocity) end
-
-

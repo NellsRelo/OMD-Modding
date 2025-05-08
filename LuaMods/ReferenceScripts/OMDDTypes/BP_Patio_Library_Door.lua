@@ -16,6 +16,3 @@
 ---@field ColumnA_CastStone_1Story25_StaticMeshComponent0 UStaticMeshComponent
 ---@field SharedRoot USceneComponent
 ABP_Patio_Library_Door_C = {}
-
-
-

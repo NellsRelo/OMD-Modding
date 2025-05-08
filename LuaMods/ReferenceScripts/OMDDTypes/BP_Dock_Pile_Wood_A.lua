@@ -7,6 +7,3 @@
 ---@field Capsule UCapsuleComponent
 ---@field Geo USceneComponent
 ABP_Dock_Pile_Wood_A_C = {}
-
-
-

@@ -36,4 +36,3 @@ EGameplayTagSourceType = {
     Invalid = 5,
     EGameplayTagSourceType_MAX = 6,
 }
-

@@ -12,6 +12,3 @@
 ---@field MaterialSnowCoverage_30_10F93D3F42158AD6D1D5B7A58EB30E28 double
 ---@field MaterialDustCoverage_31_4C9DA3A1430CCB4B92BCAB95AB03CAA9 double
 FUDW_WeatherState_Structure = {}
-
-
-

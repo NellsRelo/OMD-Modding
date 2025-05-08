@@ -28,52 +28,82 @@
 UW_InGameSocialMenu_Main_C = {}
 
 function UW_InGameSocialMenu_Main_C:SetVisibilityBasedOnQuickplaySetting() end
+
 ---@param bStackActive boolean
 ---@return UWidgetAnimation
 function UW_InGameSocialMenu_Main_C:BP_GetOnShowAnimation(bStackActive) end
+
 ---@param bStackActive boolean
 ---@return UWidgetAnimation
 function UW_InGameSocialMenu_Main_C:BP_GetOnHideAnimation(bStackActive) end
+
 ---@return UWidget
 function UW_InGameSocialMenu_Main_C:BP_GetDesiredFocusTarget() end
+
 ---@param UserWidget UCommonActivatableWidget
 function UW_InGameSocialMenu_Main_C:AfterPush_A1E4AD60496FEECE526DB6A837717517(UserWidget) end
+
 ---@param UserWidget UCommonActivatableWidget
 function UW_InGameSocialMenu_Main_C:BeforePush_A1E4AD60496FEECE526DB6A837717517(UserWidget) end
+
 ---@param UserInfo UCommonUserInfo
 ---@param bSuccess boolean
 ---@param Error FText
 ---@param RequestedPrivilege ECommonUserPrivilege
 ---@param OnlineContext ECommonUserOnlineContext
-function UW_InGameSocialMenu_Main_C:OnInitializationComplete_7631497949275B0D931E4AB50017296C(UserInfo, bSuccess, Error, RequestedPrivilege, OnlineContext) end
+function UW_InGameSocialMenu_Main_C:OnInitializationComplete_7631497949275B0D931E4AB50017296C(UserInfo, bSuccess, Error,
+                                                                                              RequestedPrivilege,
+                                                                                              OnlineContext) end
+
 ---@param UserWidget UCommonActivatableWidget
 function UW_InGameSocialMenu_Main_C:AfterPush_73782B98498BA80904176088259C1C82(UserWidget) end
+
 ---@param UserWidget UCommonActivatableWidget
 function UW_InGameSocialMenu_Main_C:BeforePush_73782B98498BA80904176088259C1C82(UserWidget) end
+
 function UW_InGameSocialMenu_Main_C:Construct() end
+
 ---@param Button UCommonButtonBase
-function UW_InGameSocialMenu_Main_C:BndEvt__W_InGameSocialMenu_Main_Back_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_InGameSocialMenu_Main_C:BndEvt__W_InGameSocialMenu_Main_Back_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(
+    Button) end
+
 ---@param Button UCommonButtonBase
-function UW_InGameSocialMenu_Main_C:BndEvt__W_InGameSocialMenu_Main_LobbyList_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_InGameSocialMenu_Main_C:BndEvt__W_InGameSocialMenu_Main_LobbyList_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(
+    Button) end
+
 ---@param Button UCommonButtonBase
-function UW_InGameSocialMenu_Main_C:BndEvt__W_InGameSocialMenu_Main_InviteFriends_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_InGameSocialMenu_Main_C:BndEvt__W_InGameSocialMenu_Main_InviteFriends_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(
+    Button) end
+
 ---@param Button UCommonButtonBase
-function UW_InGameSocialMenu_Main_C:BndEvt__W_InGameSocialMenu_Main_GoOnline_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_InGameSocialMenu_Main_C:BndEvt__W_InGameSocialMenu_Main_GoOnline_K2Node_ComponentBoundEvent_5_CommonButtonBaseClicked__DelegateSignature(
+    Button) end
+
 function UW_InGameSocialMenu_Main_C:ConfirmGoOnline() end
+
 function UW_InGameSocialMenu_Main_C:CancelGoOnline() end
+
 function UW_InGameSocialMenu_Main_C:DismissOnlineErrorModal() end
+
 ---@param Result FOnlineResultInformation
 function UW_InGameSocialMenu_Main_C:OnCreateSessionComplete(Result) end
+
 function UW_InGameSocialMenu_Main_C:RefreshOnlineVisibility() end
+
 function UW_InGameSocialMenu_Main_C:ShowOnlineFailureMessage() end
+
 ---@param Button UCommonButtonBase
-function UW_InGameSocialMenu_Main_C:BndEvt__W_InGameSocialMenu_Main_HostSettings_K2Node_ComponentBoundEvent_7_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_InGameSocialMenu_Main_C:BndEvt__W_InGameSocialMenu_Main_HostSettings_K2Node_ComponentBoundEvent_7_CommonButtonBaseClicked__DelegateSignature(
+    Button) end
+
 ---@param Button UCommonButtonBase
-function UW_InGameSocialMenu_Main_C:BndEvt__W_InGameSocialMenu_Main_QuickPlay_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_InGameSocialMenu_Main_C:BndEvt__W_InGameSocialMenu_Main_QuickPlay_K2Node_ComponentBoundEvent_3_CommonButtonBaseClicked__DelegateSignature(
+    Button) end
+
 ---@param bUseCurrentWorld boolean
 function UW_InGameSocialMenu_Main_C:PrepareToHostSession(bUseCurrentWorld) end
+
 function UW_InGameSocialMenu_Main_C:OnSessionDestroyed() end
+
 ---@param EntryPoint int32
 function UW_InGameSocialMenu_Main_C:ExecuteUbergraph_W_InGameSocialMenu_Main(EntryPoint) end
-
-

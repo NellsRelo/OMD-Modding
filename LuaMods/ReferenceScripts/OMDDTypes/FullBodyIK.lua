@@ -86,6 +86,3 @@ FRigUnit_FullbodyIK_WorkData = {}
 ---@field MaxIterations int32
 ---@field bUseJacobianTranspose boolean
 FSolverInput = {}
-
-
-

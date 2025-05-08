@@ -33,6 +33,3 @@
 ---@field ColumnTrim_CastStone_1800W1 UStaticMeshComponent
 ---@field ColumnTrim_CastStone_1800W UStaticMeshComponent
 ABP_Colosseum_Stands_A_C = {}
-
-
-

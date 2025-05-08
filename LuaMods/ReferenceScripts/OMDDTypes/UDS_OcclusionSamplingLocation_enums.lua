@@ -5,4 +5,3 @@ UDS_OcclusionSamplingLocation = {
     NewEnumerator2 = 2,
     UDS_MAX = 3,
 }
-

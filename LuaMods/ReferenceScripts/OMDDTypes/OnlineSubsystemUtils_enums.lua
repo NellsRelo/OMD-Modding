@@ -92,4 +92,3 @@ ESpectatorReservationResult = {
     ReservationDenied_ContainsExistingPlayers = 15,
     ESpectatorReservationResult_MAX = 16,
 }
-

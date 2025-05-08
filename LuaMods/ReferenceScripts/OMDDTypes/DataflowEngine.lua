@@ -23,10 +23,6 @@ UDataflowBlueprintLibrary = {}
 ---@param ResultAsset UObject
 function UDataflowBlueprintLibrary:EvaluateTerminalNodeByName(Dataflow, TerminalNodeName, ResultAsset) end
 
-
 ---@class UDataflowEdNode : UEdGraphNode
 ---@field bRenderInAssetEditor boolean
 UDataflowEdNode = {}
-
-
-

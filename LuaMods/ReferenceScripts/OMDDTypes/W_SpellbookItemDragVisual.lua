@@ -7,7 +7,6 @@
 UW_SpellbookItemDragVisual_C = {}
 
 function UW_SpellbookItemDragVisual_C:Construct() end
+
 ---@param EntryPoint int32
 function UW_SpellbookItemDragVisual_C:ExecuteUbergraph_W_SpellbookItemDragVisual(EntryPoint) end
-
-

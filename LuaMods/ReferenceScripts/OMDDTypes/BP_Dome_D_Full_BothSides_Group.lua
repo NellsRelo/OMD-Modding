@@ -41,6 +41,3 @@
 ---@field Proto_Dome_D_FrontFace1 UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Dome_D_Full_BothSides_Group_C = {}
-
-
-

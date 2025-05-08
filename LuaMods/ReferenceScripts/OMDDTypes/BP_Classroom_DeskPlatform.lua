@@ -22,6 +22,3 @@
 ---@field Hub_Classroom_WoodStadiumPlatform_SM UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Classroom_DeskPlatform_C = {}
-
-
-

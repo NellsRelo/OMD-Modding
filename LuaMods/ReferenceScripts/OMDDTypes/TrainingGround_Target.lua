@@ -7,6 +7,3 @@
 ---@field DryDocks_Gate_Left_SM UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ATrainingGround_Target_C = {}
-
-
-

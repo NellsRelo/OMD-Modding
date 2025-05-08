@@ -22,6 +22,3 @@
 ---@field Wall_4x4_Stonewall_SM2 UStaticMeshComponent
 ---@field Props USceneComponent
 ABP_Garden_Wing_Tunnel_A_C = {}
-
-
-

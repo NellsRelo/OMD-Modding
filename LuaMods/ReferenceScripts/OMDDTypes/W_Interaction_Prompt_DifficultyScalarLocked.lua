@@ -5,6 +5,5 @@
 UW_Interaction_Prompt_DifficultyScalarLocked_C = {}
 
 ---@param EntryPoint int32
-function UW_Interaction_Prompt_DifficultyScalarLocked_C:ExecuteUbergraph_W_Interaction_Prompt_DifficultyScalarLocked(EntryPoint) end
-
-
+function UW_Interaction_Prompt_DifficultyScalarLocked_C:ExecuteUbergraph_W_Interaction_Prompt_DifficultyScalarLocked(
+    EntryPoint) end

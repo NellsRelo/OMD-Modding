@@ -9,6 +9,3 @@
 ---@field TrapGrid USceneComponent
 ---@field SharedRoot USceneComponent
 ABP_Vendor_Stall_Awning_Single_C = {}
-
-
-

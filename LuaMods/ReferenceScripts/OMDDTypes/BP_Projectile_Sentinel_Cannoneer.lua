@@ -13,6 +13,7 @@
 ABP_Projectile_Sentinel_Cannoneer_C = {}
 
 function ABP_Projectile_Sentinel_Cannoneer_C:DoAOEDamage() end
+
 ---@param MyComp UPrimitiveComponent
 ---@param Other AActor
 ---@param OtherComp UPrimitiveComponent
@@ -21,9 +22,10 @@ function ABP_Projectile_Sentinel_Cannoneer_C:DoAOEDamage() end
 ---@param HitNormal FVector
 ---@param NormalImpulse FVector
 ---@param Hit FHitResult
-function ABP_Projectile_Sentinel_Cannoneer_C:ReceiveHit(MyComp, Other, OtherComp, bSelfMoved, HitLocation, HitNormal, NormalImpulse, Hit) end
+function ABP_Projectile_Sentinel_Cannoneer_C:ReceiveHit(MyComp, Other, OtherComp, bSelfMoved, HitLocation, HitNormal,
+                                                        NormalImpulse, Hit) end
+
 function ABP_Projectile_Sentinel_Cannoneer_C:DoExplode() end
+
 ---@param EntryPoint int32
 function ABP_Projectile_Sentinel_Cannoneer_C:ExecuteUbergraph_BP_Projectile_Sentinel_Cannoneer(EntryPoint) end
-
-

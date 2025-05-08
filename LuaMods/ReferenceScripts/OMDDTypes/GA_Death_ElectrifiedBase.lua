@@ -21,8 +21,8 @@ UGA_Death_ElectrifiedBase_C = {}
 ---@param SourceActor AActor
 ---@param Targets AActor
 function UGA_Death_ElectrifiedBase_C:GetChainTarget(SourceActor, Targets) end
+
 function UGA_Death_ElectrifiedBase_C:K2_ActivateAbility() end
+
 ---@param EntryPoint int32
 function UGA_Death_ElectrifiedBase_C:ExecuteUbergraph_GA_Death_ElectrifiedBase(EntryPoint) end
-
-

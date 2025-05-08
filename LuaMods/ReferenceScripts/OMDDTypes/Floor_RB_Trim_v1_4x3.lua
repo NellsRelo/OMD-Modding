@@ -13,6 +13,3 @@
 ---@field Box_Collision UBoxComponent
 ---@field Floor00 URSTTrapGridBoxComponent
 AFloor_RB_Trim_v1_4x3_C = {}
-
-
-

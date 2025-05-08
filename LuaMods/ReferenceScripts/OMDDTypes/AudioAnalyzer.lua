@@ -7,10 +7,10 @@ UAudioAnalyzer = {}
 
 ---@param WorldContextObject UObject
 function UAudioAnalyzer:StopAnalyzing(WorldContextObject) end
+
 ---@param WorldContextObject UObject
 ---@param AudioBusToAnalyze UAudioBus
 function UAudioAnalyzer:StartAnalyzing(WorldContextObject, AudioBusToAnalyze) end
-
 
 ---@class UAudioAnalyzerAssetBase : UObject
 UAudioAnalyzerAssetBase = {}
@@ -34,6 +34,3 @@ UAudioAnalyzerSettings = {}
 ---@class UAudioAnalyzerSubsystem : UEngineSubsystem
 ---@field AudioAnalyzers TArray<UAudioAnalyzer>
 UAudioAnalyzerSubsystem = {}
-
-
-

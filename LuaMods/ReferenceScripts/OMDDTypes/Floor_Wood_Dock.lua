@@ -5,6 +5,3 @@
 ---@field SM_MERGED_Dock UStaticMeshComponent
 ---@field Floor00 URSTTrapGridBoxComponent
 AFloor_Wood_Dock_C = {}
-
-
-

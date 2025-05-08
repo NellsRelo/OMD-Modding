@@ -4,4 +4,3 @@ ENiagaraWindGroundMaskMode = {
     NewEnumerator1 = 1,
     ENiagaraWindGroundMaskMode_MAX = 2,
 }
-

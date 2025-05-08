@@ -61,7 +61,7 @@ URigVMMemory_Literal = {}
 ---@field RunChainSpring___RunChainSpring_DISPATCH_RigVMDispatch_ArrayIterator_BlockToRun FName
 ---@field RigVMModel___Make_Absolute_Global FTransform
 ---@field RigVMModel___Clamp_1_Result FVector
----@field RigVMModel___Make_Relative_Local FTransform
+---@field RigVMModel___Make_Relative_FTransform
 ---@field RigVMModel___From_World_1_Global FVector
 ---@field RigVMModel___KalmanFilter_1_Result FVector
 ---@field RigVMModel___To_World_1_World FVector
@@ -78,6 +78,3 @@ URigVMMemory_Literal = {}
 ---@field RigVMModel___ChainHarmonicsPerItem_1_Reach__IO FRigUnit_ChainHarmonics_Reach
 ---@field RigVMModel___ChainHarmonicsPerItem_1_WorkData TArray<FRigUnit_ChainHarmonics_WorkData>
 URigVMMemory_Work = {}
-
-
-

@@ -5,6 +5,3 @@
 ---@field ArchWall_4x3_Sewer_SM UStaticMeshComponent
 ---@field trap_wall URSTTrapGridBoxComponent
 ABP_ArchWall_4x3_Sewer_C = {}
-
-
-

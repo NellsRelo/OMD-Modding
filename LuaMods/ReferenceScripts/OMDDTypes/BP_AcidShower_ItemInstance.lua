@@ -6,6 +6,3 @@
 ---@field Duration double
 ---@field ['Critical Hit Chance'] double
 ABP_AcidShower_ItemInstance_C = {}
-
-
-

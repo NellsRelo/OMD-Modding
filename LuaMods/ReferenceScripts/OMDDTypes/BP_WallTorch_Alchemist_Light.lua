@@ -1,14 +1,11 @@
 ---@meta
 
 ---@class ABP_WallTorch_Alchemist_Light_C : AActor
----@field WallTorch_Log UStaticMeshComponent
 ---@field NS_WallTorch_Fire_Blue UNiagaraComponent
----@field Decal UDecalComponent
----@field Lighting_Torch_Cage UStaticMeshComponent
----@field Box UBoxComponent
----@field Lighting_Torch_WoodHandle UStaticMeshComponent
 ---@field AmbEmitter_Torch_LP_SC UAudioComponent
----@field Lighting_WallCrystal_Holder_SM UStaticMeshComponent
+---@field Lighting_Torch_Wall_Wood UStaticMeshComponent
+---@field Decal UDecalComponent
+---@field Box UBoxComponent
 ---@field DefaultSceneRoot USceneComponent
 ---@field StaticLightColorDefault FLinearColor
 ---@field MoveableLightColorDefault FLinearColor
@@ -25,6 +22,3 @@
 ---@field MinFlickerIntensity float
 ---@field ['New Light Color'] FLinearColor
 ABP_WallTorch_Alchemist_Light_C = {}
-
-
-

@@ -15,8 +15,8 @@ UW_ScoreSummaryEntry_C = {}
 
 ---@return UWidget
 function UW_ScoreSummaryEntry_C:BP_GetDesiredFocusTarget() end
+
 function UW_ScoreSummaryEntry_C:Construct() end
+
 ---@param EntryPoint int32
 function UW_ScoreSummaryEntry_C:ExecuteUbergraph_W_ScoreSummaryEntry(EntryPoint) end
-
-

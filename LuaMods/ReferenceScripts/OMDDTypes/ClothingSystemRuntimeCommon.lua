@@ -119,5 +119,3 @@ UClothingAssetCommon = {}
 
 ---@class UClothingAssetCustomData : UObject
 UClothingAssetCustomData = {}
-
-

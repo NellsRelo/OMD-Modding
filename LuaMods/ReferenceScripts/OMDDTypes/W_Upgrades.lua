@@ -136,92 +136,130 @@ UW_Upgrades_C = {}
 ---@param bStackActive boolean
 ---@return UWidgetAnimation
 function UW_Upgrades_C:BP_GetOnHideAnimation(bStackActive) end
+
 ---@param bStackActive boolean
 ---@return UWidgetAnimation
 function UW_Upgrades_C:BP_GetOnShowAnimation(bStackActive) end
+
 ---@param Heroes TArray<FGameplayTag>
-UW_Upgrades_C['Get Valid Heroes'] = function(Heroes) end
+UW_Upgrades_C['Get Valid Heroes'] = function(self, Heroes) end
 ---@return boolean
 function UW_Upgrades_C:BP_ShouldStartNPE() end
+
 ---@return int32
 function UW_Upgrades_C:BP_GetNPEStepsNum() end
+
 ---@param HeroTag FGameplayTag
 ---@param TabId int32
 ---@param DidFind boolean
 function UW_Upgrades_C:GetTabIDForHeroTag(HeroTag, TabId, DidFind) end
+
 ---@return int32
 function UW_Upgrades_C:GetTabIDMax() end
+
 function UW_Upgrades_C:AddValidSortedHeroesToPanel() end
+
 ---@param Panel UPanelWidget
 function UW_Upgrades_C:AddTagExtensionPoint(Panel) end
+
 ---@param DataItem UObject
 ---@return TSubclassOf<UUserWidget>
 function UW_Upgrades_C:OnGetWidgetClassForData(DataItem) end
+
 ---@param Widget UUserWidget
 ---@param DataItem UObject
 function UW_Upgrades_C:OnConfigureWidgetForData(Widget, DataItem) end
+
 function UW_Upgrades_C:RefreshUpgrades() end
+
 ---@param Array TArray<URSTUpgradeDefinition>
 function UW_Upgrades_C:AddNodes(Array) end
+
 ---@return UWidget
 function UW_Upgrades_C:BP_GetDesiredFocusTarget() end
+
 ---@param UpgradeDefinition URSTUpgradeDefinition
 ---@param UserFacingData URSTUpgradeUserFacingData
 function UW_Upgrades_C:OnStreamableFinished_FB3C3BB140FC055B6B36FAAEABCD4D00(UpgradeDefinition, UserFacingData) end
+
 ---@param ProxyObject UAsyncAction_ListenForGameplayMessage
 ---@param ActualChannel FGameplayTag
 function UW_Upgrades_C:OnMessageReceived_8DE2DC2847FF1023AA7197BC49ED100C(ProxyObject, ActualChannel) end
+
 ---@param UserFacingData URSTPawnUserFacingData
 ---@param DidFind boolean
 function UW_Upgrades_C:OnStreamableFinished_A064880644E4BEC559953D9AE1F6F1B4(UserFacingData, DidFind) end
+
 ---@param UserFacingData URSTPawnUserFacingData
 ---@param DidFind boolean
 function UW_Upgrades_C:OnStreamableFinished_40EBDA5F4F8D9EBA53231E8B43CC56BE(UserFacingData, DidFind) end
+
 ---@param UserFacingData URSTPawnUserFacingData
 ---@param DidFind boolean
 function UW_Upgrades_C:OnStreamableFinished_ABD181EF41AB3D368DC0719E68D6D366(UserFacingData, DidFind) end
+
 function UW_Upgrades_C:Construct() end
+
 ---@param SelectedHero FGameplayTag
 function UW_Upgrades_C:OnHeroSelectionChanged(SelectedHero) end
+
 ---@param Upgrade URSTUpgradeDefinition
 function UW_Upgrades_C:AddUpgradeNode(Upgrade) end
+
 function UW_Upgrades_C:BP_OnDeactivated() end
+
 function UW_Upgrades_C:ClearExtentionPoints() end
+
 ---@param NumUpgrades int32
 function UW_Upgrades_C:OnUpgradeCountChanged(NumUpgrades) end
+
 ---@param Upgrade URSTUpgradeDefinition
 function UW_Upgrades_C:OnButtonHovered(Upgrade) end
+
 ---@param MyGeometry FGeometry
 ---@param InDeltaTime float
 function UW_Upgrades_C:Tick(MyGeometry, InDeltaTime) end
+
 ---@param NewTabID int32
 function UW_Upgrades_C:BP_OnTabIDSet(NewTabID) end
-UW_Upgrades_C['BndEvt__W_Upgrades_W_ExitMenuButton_K2Node_ComponentBoundEvent_3_On Button Clicked__DelegateSignature'] = function() end
+
+UW_Upgrades_C['BndEvt__W_Upgrades_W_ExitMenuButton_K2Node_ComponentBoundEvent_3_On Button Clicked__DelegateSignature'] = function(
+    self,) end
 function UW_Upgrades_C:BP_StartNPE() end
+
 function UW_Upgrades_C:BP_EndNPE() end
+
 ---@param Step int32
 function UW_Upgrades_C:BP_OnNPEStepEntered(Step) end
+
 ---@param Step int32
 function UW_Upgrades_C:BP_OnNPEStepExited(Step) end
+
 ---@param Button UCommonButtonBase
-function UW_Upgrades_C:BndEvt__W_Upgrades_W_ButtonBasic_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(Button) end
-UW_Upgrades_C['Refresh Scroll Slider'] = function() end
-UW_Upgrades_C['Init Scroll Slider'] = function() end
-UW_Upgrades_C['Update Scroll Slider Visibility'] = function() end
+function UW_Upgrades_C:BndEvt__W_Upgrades_W_ButtonBasic_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(
+    Button) end
+
+UW_Upgrades_C['Refresh Scroll Slider'] = function(self,) end
+UW_Upgrades_C['Init Scroll Slider'] = function(self,) end
+UW_Upgrades_C['Update Scroll Slider Visibility'] = function(self,) end
 ---@param CurrentOffset float
-function UW_Upgrades_C:BndEvt__W_Upgrades_HeroScrollBox_K2Node_ComponentBoundEvent_2_OnUserScrolledEvent__DelegateSignature(CurrentOffset) end
+function UW_Upgrades_C:BndEvt__W_Upgrades_HeroScrollBox_K2Node_ComponentBoundEvent_2_OnUserScrolledEvent__DelegateSignature(
+    CurrentOffset) end
+
 ---@param Value float
-function UW_Upgrades_C:BndEvt__W_Upgrades_HeroScrollBoxSlider_K2Node_ComponentBoundEvent_4_OnFloatValueChangedEvent__DelegateSignature(Value) end
+function UW_Upgrades_C:BndEvt__W_Upgrades_HeroScrollBoxSlider_K2Node_ComponentBoundEvent_4_OnFloatValueChangedEvent__DelegateSignature(
+    Value) end
+
 ---@param Hero UW_UpgradeHeroIcon_C
-UW_Upgrades_C['On Hero Button Clicked'] = function(Hero) end
-UW_Upgrades_C['Refresh Hero Icon'] = function() end
-UW_Upgrades_C['Refresh Hero Extension Points'] = function() end
+UW_Upgrades_C['On Hero Button Clicked'] = function(self, Hero) end
+UW_Upgrades_C['Refresh Hero Icon'] = function(self,) end
+UW_Upgrades_C['Refresh Hero Extension Points'] = function(self,) end
 function UW_Upgrades_C:OnInitialized() end
+
 ---@param InputPin UUIExtensionPointWidget
 ---@param InExtensionPointTag FGameplayTag
-UW_Upgrades_C['Modify Extension Point Tag'] = function(InputPin, InExtensionPointTag) end
+UW_Upgrades_C['Modify Extension Point Tag'] = function(self, InputPin, InExtensionPointTag) end
 ---@param EntryPoint int32
 function UW_Upgrades_C:ExecuteUbergraph_W_Upgrades(EntryPoint) end
+
 function UW_Upgrades_C:UpgradesDirty__DelegateSignature() end
-
-

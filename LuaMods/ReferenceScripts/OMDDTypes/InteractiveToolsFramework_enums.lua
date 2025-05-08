@@ -130,7 +130,7 @@ EToolChangeTrackingMode = {
 ---@enum EToolContextCoordinateSystem
 EToolContextCoordinateSystem = {
     World = 0,
-    Local = 1,
+    = 1,
     EToolContextCoordinateSystem_MAX = 2,
 }
 

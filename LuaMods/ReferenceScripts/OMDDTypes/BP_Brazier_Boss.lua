@@ -21,12 +21,15 @@
 ABP_Brazier_Boss_C = {}
 
 function ABP_Brazier_Boss_C:OnRep_TorchLit() end
+
 function ABP_Brazier_Boss_C:UserConstructionScript() end
+
 function ABP_Brazier_Boss_C:ReceiveBeginPlay() end
+
 ---@param TorchLit boolean
 function ABP_Brazier_Boss_C:SetTorchLit(TorchLit) end
+
 function ABP_Brazier_Boss_C:RefreshTorchState() end
+
 ---@param EntryPoint int32
 function ABP_Brazier_Boss_C:ExecuteUbergraph_BP_Brazier_Boss(EntryPoint) end
-
-

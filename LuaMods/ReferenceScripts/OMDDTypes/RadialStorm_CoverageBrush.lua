@@ -7,6 +7,3 @@
 ---@field CoverageLevel_9_7A0C1109448D07FB2CC81CAF6C64F0BB double
 ---@field Alpha_11_0BE1BD674F2496F3B3021E8751BA3E42 double
 FRadialStorm_CoverageBrush = {}
-
-
-

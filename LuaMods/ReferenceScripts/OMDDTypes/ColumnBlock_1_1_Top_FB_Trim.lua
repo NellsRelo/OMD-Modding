@@ -11,6 +11,3 @@
 ---@field Wall002 URSTTrapGridBoxComponent
 ---@field Wall001 URSTTrapGridBoxComponent
 AColumnBlock_1_1_Top_FB_Trim_C = {}
-
-
-

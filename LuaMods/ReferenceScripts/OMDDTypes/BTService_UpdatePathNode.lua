@@ -8,7 +8,6 @@ UBTService_UpdatePathNode_C = {}
 ---@param ControlledPawn APawn
 ---@param DeltaSeconds float
 function UBTService_UpdatePathNode_C:ReceiveTickAI(OwnerController, ControlledPawn, DeltaSeconds) end
+
 ---@param EntryPoint int32
 function UBTService_UpdatePathNode_C:ExecuteUbergraph_BTService_UpdatePathNode(EntryPoint) end
-
-

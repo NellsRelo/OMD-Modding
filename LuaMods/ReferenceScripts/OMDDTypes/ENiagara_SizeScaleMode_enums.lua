@@ -7,4 +7,3 @@ ENiagara_SizeScaleMode = {
     NewEnumerator2 = 4,
     ENiagara_MAX = 5,
 }
-

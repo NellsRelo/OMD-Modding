@@ -78,6 +78,3 @@
 ---@field Wood_Plank_600W_A_Light_BendA UStaticMeshComponent
 ---@field Geometry USceneComponent
 ABP_3x4_Terrace_C = {}
-
-
-

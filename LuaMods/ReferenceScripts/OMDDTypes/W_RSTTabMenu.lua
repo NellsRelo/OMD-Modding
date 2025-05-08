@@ -20,29 +20,39 @@ UW_RSTTabMenu_C = {}
 ---@param bStackActive boolean
 ---@return UWidgetAnimation
 function UW_RSTTabMenu_C:BP_GetOnHideAnimation(bStackActive) end
+
 ---@param bStackActive boolean
 ---@return UWidgetAnimation
 function UW_RSTTabMenu_C:BP_GetOnShowAnimation(bStackActive) end
+
 ---@return boolean
 function UW_RSTTabMenu_C:BP_OnHandleBackAction() end
+
 ---@param Tab ERSTTabMenuTab
 function UW_RSTTabMenu_C:ProcessTabInput(Tab) end
+
 ---@param Index ERSTTabMenuTab
 ---@return UWidget
 function UW_RSTTabMenu_C:GetWidgetForTab(Index) end
+
 ---@return UWidget
 function UW_RSTTabMenu_C:BP_GetDesiredFocusTarget() end
+
 ---@param Tab ERSTTabMenuTab
 ---@param bDisableAnimation boolean
 function UW_RSTTabMenu_C:BP_SetActiveTab(Tab, bDisableAnimation) end
+
 function UW_RSTTabMenu_C:Construct() end
+
 ---@param Tab ERSTTabMenuTab
 function UW_RSTTabMenu_C:BP_OnTabInputPressed(Tab) end
+
 function UW_RSTTabMenu_C:BP_OnDeactivated() end
-UW_RSTTabMenu_C['BndEvt__W_RSTTabMenu_W_ExitMenuButton_173_K2Node_ComponentBoundEvent_8_On Button Clicked__DelegateSignature'] = function() end
+
+UW_RSTTabMenu_C['BndEvt__W_RSTTabMenu_W_ExitMenuButton_173_K2Node_ComponentBoundEvent_8_On Button Clicked__DelegateSignature'] = function(
+    self,) end
 ---@param Tab ERSTTabMenuTab
-UW_RSTTabMenu_C['BndEvt__W_RSTTabMenu_W_TabMenu_TopBar_K2Node_ComponentBoundEvent_7_On Tab Selected__DelegateSignature'] = function(Tab) end
+UW_RSTTabMenu_C['BndEvt__W_RSTTabMenu_W_TabMenu_TopBar_K2Node_ComponentBoundEvent_7_On Tab Selected__DelegateSignature'] = function(
+    self, Tab) end
 ---@param EntryPoint int32
 function UW_RSTTabMenu_C:ExecuteUbergraph_W_RSTTabMenu(EntryPoint) end
-
-

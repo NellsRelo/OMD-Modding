@@ -23,4 +23,3 @@ EMaterialXTextureSampleBlurFilter = {
     Gaussian = 1,
     EMaterialXTextureSampleBlurFilter_MAX = 2,
 }
-

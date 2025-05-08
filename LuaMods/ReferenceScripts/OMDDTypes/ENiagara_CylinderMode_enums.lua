@@ -4,4 +4,3 @@ ENiagara_CylinderMode = {
     NewEnumerator2 = 1,
     ENiagara_MAX = 2,
 }
-

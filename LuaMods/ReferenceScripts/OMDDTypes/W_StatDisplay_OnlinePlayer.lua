@@ -41,18 +41,19 @@
 UW_StatDisplay_OnlinePlayer_C = {}
 
 function UW_StatDisplay_OnlinePlayer_C:UpdateMuteVisibility() end
-UW_StatDisplay_OnlinePlayer_C['On Voice Chat Enabled Updated'] = function() end
+
+UW_StatDisplay_OnlinePlayer_C['On Voice Chat Enabled Updated'] = function(self,) end
 ---@param Player ARSTPlayerState
 ---@param bIsTalking boolean
-UW_StatDisplay_OnlinePlayer_C['On Player Talking Updated'] = function(Player, bIsTalking) end
-UW_StatDisplay_OnlinePlayer_C['Refresh Voice Chat Display'] = function() end
+UW_StatDisplay_OnlinePlayer_C['On Player Talking Updated'] = function(self, Player, bIsTalking) end
+UW_StatDisplay_OnlinePlayer_C['Refresh Voice Chat Display'] = function(self,) end
 ---@param bDowned boolean
-UW_StatDisplay_OnlinePlayer_C['Refresh Downed Display'] = function(bDowned) end
+UW_StatDisplay_OnlinePlayer_C['Refresh Downed Display'] = function(self, bDowned) end
 ---@param bShowShield boolean
 ---@return UTexture2D
-UW_StatDisplay_OnlinePlayer_C['Get Bar BG'] = function(bShowShield) end
-UW_StatDisplay_OnlinePlayer_C['Refresh Shield Text'] = function() end
-UW_StatDisplay_OnlinePlayer_C['Refresh Health Text'] = function() end
+UW_StatDisplay_OnlinePlayer_C['Get Bar BG'] = function(self, bShowShield) end
+UW_StatDisplay_OnlinePlayer_C['Refresh Shield Text'] = function(self,) end
+UW_StatDisplay_OnlinePlayer_C['Refresh Health Text'] = function(self,) end
 ---@param HealthComponent URSTHealthComponent
 ---@param OldValue float
 ---@param NewValue float
@@ -60,7 +61,9 @@ UW_StatDisplay_OnlinePlayer_C['Refresh Health Text'] = function() end
 ---@param HitResult FHitResult
 ---@param bHasSpec boolean
 ---@param Spec FGameplayEffectSpec
-function UW_StatDisplay_OnlinePlayer_C:OnPlayerCharacterShieldMaxChanged(HealthComponent, OldValue, NewValue, Instigator, HitResult, bHasSpec, Spec) end
+function UW_StatDisplay_OnlinePlayer_C:OnPlayerCharacterShieldMaxChanged(HealthComponent, OldValue, NewValue, Instigator,
+                                                                         HitResult, bHasSpec, Spec) end
+
 ---@param HealthComponent URSTHealthComponent
 ---@param OldValue float
 ---@param NewValue float
@@ -68,21 +71,30 @@ function UW_StatDisplay_OnlinePlayer_C:OnPlayerCharacterShieldMaxChanged(HealthC
 ---@param HitResult FHitResult
 ---@param bHasSpec boolean
 ---@param Spec FGameplayEffectSpec
-function UW_StatDisplay_OnlinePlayer_C:OnPlayerCharacterShieldChanged(HealthComponent, OldValue, NewValue, Instigator, HitResult, bHasSpec, Spec) end
+function UW_StatDisplay_OnlinePlayer_C:OnPlayerCharacterShieldChanged(HealthComponent, OldValue, NewValue, Instigator,
+                                                                      HitResult, bHasSpec, Spec) end
+
 ---@param PlayerState ARSTPlayerState
 function UW_StatDisplay_OnlinePlayer_C:OnPlayerIndexSet(PlayerState) end
+
 ---@return UWidgetAnimation
 function UW_StatDisplay_OnlinePlayer_C:BP_GetOnHideAnimation() end
+
 ---@return UWidgetAnimation
 function UW_StatDisplay_OnlinePlayer_C:BP_GetOnShowAnimation() end
+
 ---@param NewUserFacingData URSTPawnUserFacingData
 function UW_StatDisplay_OnlinePlayer_C:OnPawnUserFacingDataUpdated(NewUserFacingData) end
+
 ---@param PlayerState APlayerState
 function UW_StatDisplay_OnlinePlayer_C:OnClientInitialized(PlayerState) end
+
 ---@param PlayerState APlayerState
 function UW_StatDisplay_OnlinePlayer_C:OnPostInitialize(PlayerState) end
+
 ---@param newPlayerName FString
 function UW_StatDisplay_OnlinePlayer_C:OnPlayerNameChanged(newPlayerName) end
+
 ---@param HealthComponent URSTHealthComponent
 ---@param OldValue float
 ---@param NewValue float
@@ -90,7 +102,9 @@ function UW_StatDisplay_OnlinePlayer_C:OnPlayerNameChanged(newPlayerName) end
 ---@param HitResult FHitResult
 ---@param bHasSpec boolean
 ---@param Spec FGameplayEffectSpec
-function UW_StatDisplay_OnlinePlayer_C:OnPlayerCharacterHealthMaxChanged(HealthComponent, OldValue, NewValue, Instigator, HitResult, bHasSpec, Spec) end
+function UW_StatDisplay_OnlinePlayer_C:OnPlayerCharacterHealthMaxChanged(HealthComponent, OldValue, NewValue, Instigator,
+                                                                         HitResult, bHasSpec, Spec) end
+
 ---@param HealthComponent URSTHealthComponent
 ---@param OldValue float
 ---@param NewValue float
@@ -98,42 +112,57 @@ function UW_StatDisplay_OnlinePlayer_C:OnPlayerCharacterHealthMaxChanged(HealthC
 ---@param HitResult FHitResult
 ---@param bHasSpec boolean
 ---@param Spec FGameplayEffectSpec
-function UW_StatDisplay_OnlinePlayer_C:OnPlayerCharacterHealthChanged(HealthComponent, OldValue, NewValue, Instigator, HitResult, bHasSpec, Spec) end
+function UW_StatDisplay_OnlinePlayer_C:OnPlayerCharacterHealthChanged(HealthComponent, OldValue, NewValue, Instigator,
+                                                                      HitResult, bHasSpec, Spec) end
+
 ---@param PlayerState ARSTPlayerState
 function UW_StatDisplay_OnlinePlayer_C:SetPlayerState(PlayerState) end
+
 ---@param UserFacingData URSTPawnUserFacingData
 ---@param DidFind boolean
 function UW_StatDisplay_OnlinePlayer_C:OnStreamableFinished_147F8C7C4B491B43FFC9A19165D6F905(UserFacingData, DidFind) end
+
 ---@param ProxyObject UAsyncAction_ListenForGameplayMessage
 ---@param ActualChannel FGameplayTag
 function UW_StatDisplay_OnlinePlayer_C:OnMessageReceived_F6CDDCE040C02A3EB5E0438BC52869AB(ProxyObject, ActualChannel) end
+
 ---@param Loaded UObject
 function UW_StatDisplay_OnlinePlayer_C:OnLoaded_BAF2CB3B40D45C7614D7B385EF0EFA15(Loaded) end
+
 function UW_StatDisplay_OnlinePlayer_C:Construct() end
+
 ---@param PRSTag FGameplayTag
 ---@param PlayerNetID FUniqueNetIdRepl
 ---@param IsReady boolean
 function UW_StatDisplay_OnlinePlayer_C:OnPlayerReadyChanged(PRSTag, PlayerNetID, IsReady) end
+
 function UW_StatDisplay_OnlinePlayer_C:RefreshIsReady() end
+
 ---@param PRSTag FGameplayTag
 function UW_StatDisplay_OnlinePlayer_C:OnInterruptOrComplete(PRSTag) end
+
 function UW_StatDisplay_OnlinePlayer_C:Destruct() end
+
 ---@param OldShield double
 ---@param NewShield double
-UW_StatDisplay_OnlinePlayer_C['Refresh Shield Visibility'] = function(OldShield, NewShield) end
+UW_StatDisplay_OnlinePlayer_C['Refresh Shield Visibility'] = function(self, OldShield, NewShield) end
 function UW_StatDisplay_OnlinePlayer_C:OnDisconnectedChanged() end
+
 function UW_StatDisplay_OnlinePlayer_C:BP_SynchronizeProperties() end
+
 ---@param MyGeometry FGeometry
 ---@param InDeltaTime float
-UW_StatDisplay_OnlinePlayer_C['On Conditional Tick'] = function(MyGeometry, InDeltaTime) end
-UW_StatDisplay_OnlinePlayer_C['Tick Downed Display'] = function() end
+UW_StatDisplay_OnlinePlayer_C['On Conditional Tick'] = function(self, MyGeometry, InDeltaTime) end
+UW_StatDisplay_OnlinePlayer_C['Tick Downed Display'] = function(self,) end
 function UW_StatDisplay_OnlinePlayer_C:OnInitialized() end
+
 ---@param PlayerState APlayerState
 function UW_StatDisplay_OnlinePlayer_C:UpdatePlatformIcon(PlayerState) end
+
 function UW_StatDisplay_OnlinePlayer_C:OnPlayerStateChanged() end
+
 ---@param PawnIconHead TSoftObjectPtr<UTexture2D>
 function UW_StatDisplay_OnlinePlayer_C:SetPawnIcon(PawnIconHead) end
+
 ---@param EntryPoint int32
 function UW_StatDisplay_OnlinePlayer_C:ExecuteUbergraph_W_StatDisplay_OnlinePlayer(EntryPoint) end
-
-

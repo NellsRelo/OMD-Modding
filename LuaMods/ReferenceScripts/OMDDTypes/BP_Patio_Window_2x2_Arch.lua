@@ -10,6 +10,3 @@
 ---@field Wall_FB_2x2_2x_Window69_RootComponent USceneComponent
 ---@field SharedRoot USceneComponent
 ABP_Patio_Window_2x2_Arch_C = {}
-
-
-

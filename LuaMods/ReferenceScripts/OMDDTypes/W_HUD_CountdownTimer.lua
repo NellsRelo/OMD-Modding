@@ -14,27 +14,36 @@ UW_HUD_CountdownTimer_C = {}
 
 ---@return FText
 function UW_HUD_CountdownTimer_C:GetText() end
+
 function UW_HUD_CountdownTimer_C:Construct() end
+
 function UW_HUD_CountdownTimer_C:OnInitialized() end
+
 ---@param MyGeometry FGeometry
 ---@param InDeltaTime float
-UW_HUD_CountdownTimer_C['Conditional Tick'] = function(MyGeometry, InDeltaTime) end
+UW_HUD_CountdownTimer_C['Conditional Tick'] = function(self, MyGeometry, InDeltaTime) end
 ---@param bInShouldTick boolean
-UW_HUD_CountdownTimer_C['Set Tick Enabled'] = function(bInShouldTick) end
+UW_HUD_CountdownTimer_C['Set Tick Enabled'] = function(self, bInShouldTick) end
 ---@param PRSTag FGameplayTag
-UW_HUD_CountdownTimer_C['Play Timer Start Effects'] = function(PRSTag) end
+UW_HUD_CountdownTimer_C['Play Timer Start Effects'] = function(self, PRSTag) end
 ---@param bNewVisible boolean
-UW_HUD_CountdownTimer_C['Set Timer Visibility'] = function(bNewVisible) end
+UW_HUD_CountdownTimer_C['Set Timer Visibility'] = function(self, bNewVisible) end
 ---@param PRSTag FGameplayTag
-function UW_HUD_CountdownTimer_C:BndEvt__W_HUD_CountdownTimer_W_PRSSubscriber_K2Node_ComponentBoundEvent_0_OnShortTimerStartEvent__DelegateSignature(PRSTag) end
+function UW_HUD_CountdownTimer_C:BndEvt__W_HUD_CountdownTimer_W_PRSSubscriber_K2Node_ComponentBoundEvent_0_OnShortTimerStartEvent__DelegateSignature(
+    PRSTag) end
+
 ---@param PRSTag FGameplayTag
-function UW_HUD_CountdownTimer_C:BndEvt__W_HUD_CountdownTimer_W_PRSSubscriber_K2Node_ComponentBoundEvent_1_OnTimerStartEvent__DelegateSignature(PRSTag) end
+function UW_HUD_CountdownTimer_C:BndEvt__W_HUD_CountdownTimer_W_PRSSubscriber_K2Node_ComponentBoundEvent_1_OnTimerStartEvent__DelegateSignature(
+    PRSTag) end
+
 ---@param PRSTag FGameplayTag
-function UW_HUD_CountdownTimer_C:BndEvt__W_HUD_CountdownTimer_W_PRSSubscriber_K2Node_ComponentBoundEvent_2_OnInterruptOrCompleteEvent__DelegateSignature(PRSTag) end
-UW_HUD_CountdownTimer_C['Stop All Animations'] = function() end
+function UW_HUD_CountdownTimer_C:BndEvt__W_HUD_CountdownTimer_W_PRSSubscriber_K2Node_ComponentBoundEvent_2_OnInterruptOrCompleteEvent__DelegateSignature(
+    PRSTag) end
+
+UW_HUD_CountdownTimer_C['Stop All Animations'] = function(self,) end
 ---@param PRSTag FGameplayTag
-function UW_HUD_CountdownTimer_C:BndEvt__W_HUD_CountdownTimer_W_PRSSubscriber_K2Node_ComponentBoundEvent_5_OnBeginEvent__DelegateSignature(PRSTag) end
+function UW_HUD_CountdownTimer_C:BndEvt__W_HUD_CountdownTimer_W_PRSSubscriber_K2Node_ComponentBoundEvent_5_OnBeginEvent__DelegateSignature(
+    PRSTag) end
+
 ---@param EntryPoint int32
 function UW_HUD_CountdownTimer_C:ExecuteUbergraph_W_HUD_CountdownTimer(EntryPoint) end
-
-

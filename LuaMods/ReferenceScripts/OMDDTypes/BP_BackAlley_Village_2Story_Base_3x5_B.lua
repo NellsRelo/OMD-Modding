@@ -31,6 +31,3 @@
 ---@field ['Wall_4x2_Wainscot_White-Brick-Seablue_SM_Door-Window_Union_-Wood_Window_SM_Union'] UStaticMeshComponent
 ---@field Geo USceneComponent
 ABP_BackAlley_Village_2Story_Base_3x5_B_C = {}
-
-
-

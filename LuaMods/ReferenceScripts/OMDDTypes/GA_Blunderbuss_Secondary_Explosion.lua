@@ -14,17 +14,21 @@ UGA_Blunderbuss_Secondary_Explosion_C = {}
 ---@param CustomLogicTag FGameplayTag
 ---@return FGameplayEffectSpecHandle
 function UGA_Blunderbuss_Secondary_Explosion_C:BP_RunCustomEffectSpecLogic(TargetedActor, InSpecHandle, CustomLogicTag) end
+
 ---@return FTransform
 function UGA_Blunderbuss_Secondary_Explosion_C:BP_GetStartTransform() end
+
 function UGA_Blunderbuss_Secondary_Explosion_C:OnFinish_982D65C1438367D43FF0DDAA758954C3() end
+
 ---@param bWasCancelled boolean
 function UGA_Blunderbuss_Secondary_Explosion_C:K2_OnEndAbility(bWasCancelled) end
+
 ---@param EventData FGameplayEventData
 function UGA_Blunderbuss_Secondary_Explosion_C:K2_ActivateAbilityFromEvent(EventData) end
-UGA_Blunderbuss_Secondary_Explosion_C['Perform Damage'] = function() end
-UGA_Blunderbuss_Secondary_Explosion_C['Apply Damage'] = function() end
+
+UGA_Blunderbuss_Secondary_Explosion_C['Perform Damage'] = function(self,) end
+UGA_Blunderbuss_Secondary_Explosion_C['Apply Damage'] = function(self,) end
 function UGA_Blunderbuss_Secondary_Explosion_C:DestroyBreakables() end
+
 ---@param EntryPoint int32
 function UGA_Blunderbuss_Secondary_Explosion_C:ExecuteUbergraph_GA_Blunderbuss_Secondary_Explosion(EntryPoint) end
-
-

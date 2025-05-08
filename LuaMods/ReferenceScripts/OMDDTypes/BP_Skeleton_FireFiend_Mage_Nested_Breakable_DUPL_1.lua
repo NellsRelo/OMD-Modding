@@ -5,6 +5,3 @@
 ---@field BP_Skeleton_FireFiend_Mage_Breakable UChildActorComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Skeleton_FireFiend_Mage_Nested_Breakable_C = {}
-
-
-

@@ -7,6 +7,3 @@
 ---@field Hub_BlackSmith_Crenellation_SM UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ATrainingGround_ArenaWalls_C = {}
-
-
-

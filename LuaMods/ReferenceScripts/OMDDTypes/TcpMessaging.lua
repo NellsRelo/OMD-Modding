@@ -8,6 +8,3 @@
 ---@field ConnectionRetryPeriod int32
 ---@field bStopServiceWhenAppDeactivates boolean
 UTcpMessagingSettings = {}
-
-
-

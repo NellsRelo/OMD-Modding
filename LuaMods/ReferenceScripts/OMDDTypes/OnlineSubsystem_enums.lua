@@ -25,4 +25,3 @@ EMPMatchOutcome = {
     Fourth = 9,
     EMPMatchOutcome_MAX = 10,
 }
-

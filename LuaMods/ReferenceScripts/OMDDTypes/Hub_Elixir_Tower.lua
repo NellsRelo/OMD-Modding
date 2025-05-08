@@ -60,6 +60,3 @@
 ---@field Floor_4x4_Plaza_PatternD_SM UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 AHub_Elixir_Tower_C = {}
-
-
-

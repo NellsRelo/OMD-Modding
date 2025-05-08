@@ -15,19 +15,24 @@ AGCN_Character_VFXStatus_Frozen_C = {}
 ---@param Parameters FGameplayCueParameters
 ---@return boolean
 function AGCN_Character_VFXStatus_Frozen_C:OnActive(MyTarget, Parameters) end
+
 function AGCN_Character_VFXStatus_Frozen_C:Timeline__FinishedFunc() end
+
 function AGCN_Character_VFXStatus_Frozen_C:Timeline__UpdateFunc() end
+
 function AGCN_Character_VFXStatus_Frozen_C:FreezeBlend__FinishedFunc() end
+
 function AGCN_Character_VFXStatus_Frozen_C:FreezeBlend__UpdateFunc() end
+
 ---@param Target AActor
 ---@param Parameters FGameplayCueParameters
 ---@param SpawnResults FGameplayCueNotify_SpawnResult
 function AGCN_Character_VFXStatus_Frozen_C:OnRemoval(Target, Parameters, SpawnResults) end
+
 ---@param Target AActor
 ---@param Parameters FGameplayCueParameters
 ---@param SpawnResults FGameplayCueNotify_SpawnResult
 function AGCN_Character_VFXStatus_Frozen_C:OnLoopingStart(Target, Parameters, SpawnResults) end
+
 ---@param EntryPoint int32
 function AGCN_Character_VFXStatus_Frozen_C:ExecuteUbergraph_GCN_Character_VFXStatus_Frozen(EntryPoint) end
-
-

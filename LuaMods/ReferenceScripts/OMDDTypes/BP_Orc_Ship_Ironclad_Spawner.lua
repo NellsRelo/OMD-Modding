@@ -44,6 +44,3 @@
 ---@field Orc_ShipLarge_Bridge_01_SM4 UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Orc_Ship_Ironclad_Spawner_C = {}
-
-
-

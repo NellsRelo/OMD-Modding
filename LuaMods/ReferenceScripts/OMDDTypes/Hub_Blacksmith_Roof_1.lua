@@ -6,6 +6,3 @@
 ---@field Roof_main_SM UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 AHub_Blacksmith_Roof_1_C = {}
-
-
-

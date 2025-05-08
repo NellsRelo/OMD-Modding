@@ -10,6 +10,3 @@
 ---@field Cren_Shelf_1x3 UStaticMeshComponent
 ---@field Column_Sec_1_4_FB UStaticMeshComponent
 AButtress_FB_TopOnly_C = {}
-
-
-

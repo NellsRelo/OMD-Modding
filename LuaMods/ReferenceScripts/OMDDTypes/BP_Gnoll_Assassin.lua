@@ -10,7 +10,6 @@
 ABP_Gnoll_Assassin_C = {}
 
 function ABP_Gnoll_Assassin_C:ReceiveBeginPlay() end
+
 ---@param EntryPoint int32
 function ABP_Gnoll_Assassin_C:ExecuteUbergraph_BP_Gnoll_Assassin(EntryPoint) end
-
-

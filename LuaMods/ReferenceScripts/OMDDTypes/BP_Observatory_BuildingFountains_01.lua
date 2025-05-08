@@ -24,6 +24,3 @@
 ---@field Geo USceneComponent
 ---@field TrapGrid USceneComponent
 ABP_Observatory_BuildingFountains_01_C = {}
-
-
-

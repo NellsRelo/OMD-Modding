@@ -12,4 +12,3 @@ UDS_Readme_Glossary_Type = {
     NewEnumerator9 = 9,
     UDS_Readme_Glossary_MAX = 10,
 }
-

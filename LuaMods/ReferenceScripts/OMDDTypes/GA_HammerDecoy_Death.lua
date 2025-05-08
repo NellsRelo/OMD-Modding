@@ -9,7 +9,6 @@ UGA_HammerDecoy_Death_C = {}
 
 ---@param EventData FGameplayEventData
 function UGA_HammerDecoy_Death_C:K2_ActivateAbilityFromEvent(EventData) end
+
 ---@param EntryPoint int32
 function UGA_HammerDecoy_Death_C:ExecuteUbergraph_GA_HammerDecoy_Death(EntryPoint) end
-
-

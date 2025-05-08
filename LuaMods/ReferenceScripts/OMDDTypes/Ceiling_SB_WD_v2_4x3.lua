@@ -17,6 +17,3 @@
 ---@field Box_CeilingCollision UBoxComponent
 ---@field Ceiling00 URSTTrapGridBoxComponent
 ACeiling_SB_WD_v2_4x3_C = {}
-
-
-

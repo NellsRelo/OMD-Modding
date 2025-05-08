@@ -7,5 +7,3 @@ UBP_CustomValue_IntOverride_C = {}
 ---@param Val int32
 ---@return int32
 function UBP_CustomValue_IntOverride_C:K2_GetCustomValue(Val) end
-
-

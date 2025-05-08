@@ -170,6 +170,3 @@
 ---@field TrapGrid USceneComponent
 ---@field Collision USceneComponent
 ABP_FishMarket_WallHouse_A_Carpenter_C = {}
-
-
-

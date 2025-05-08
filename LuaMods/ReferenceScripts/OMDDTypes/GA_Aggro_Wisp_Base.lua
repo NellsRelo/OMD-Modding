@@ -13,7 +13,6 @@ UGA_Aggro_Wisp_Base_C = {}
 
 ---@param EventData FGameplayEventData
 function UGA_Aggro_Wisp_Base_C:K2_ActivateAbilityFromEvent(EventData) end
+
 ---@param EntryPoint int32
 function UGA_Aggro_Wisp_Base_C:ExecuteUbergraph_GA_Aggro_Wisp_Base(EntryPoint) end
-
-

@@ -1010,33 +1010,39 @@ UAnimExecutionContextLibrary = {}
 ---@param Context FAnimUpdateContext
 ---@return float
 function UAnimExecutionContextLibrary:GetDeltaTime(Context) end
+
 ---@param Context FAnimUpdateContext
 ---@return float
 function UAnimExecutionContextLibrary:GetCurrentWeight(Context) end
+
 ---@param Instance UAnimInstance
 ---@param Index int32
 ---@return FAnimNodeReference
 function UAnimExecutionContextLibrary:GetAnimNodeReference(Instance, Index) end
+
 ---@param Context FAnimExecutionContext
 ---@return UAnimInstance
 function UAnimExecutionContextLibrary:GetAnimInstance(Context) end
+
 ---@param Context FAnimExecutionContext
 ---@param Result EAnimExecutionContextConversionResult
 ---@return FAnimUpdateContext
 function UAnimExecutionContextLibrary:ConvertToUpdateContext(Context, Result) end
+
 ---@param Context FAnimExecutionContext
 ---@param Result EAnimExecutionContextConversionResult
 ---@return FAnimPoseContext
 function UAnimExecutionContextLibrary:ConvertToPoseContext(Context, Result) end
+
 ---@param Context FAnimExecutionContext
 ---@param Result EAnimExecutionContextConversionResult
 ---@return FAnimInitializationContext
 function UAnimExecutionContextLibrary:ConvertToInitializationContext(Context, Result) end
+
 ---@param Context FAnimExecutionContext
 ---@param Result EAnimExecutionContextConversionResult
 ---@return FAnimComponentSpacePoseContext
 function UAnimExecutionContextLibrary:ConvertToComponentSpacePoseContext(Context, Result) end
-
 
 ---@class UAnimNotify_PlayMontageNotify : UAnimNotify
 ---@field NotifyName FName
@@ -1065,55 +1071,64 @@ UAnimationStateMachineLibrary = {}
 ---@param BlendProfile UBlendProfile
 ---@param AlphaBlendOption EAlphaBlendOption
 ---@param CustomBlendCurve UCurveFloat
-function UAnimationStateMachineLibrary:SetState(UpdateContext, Node, TargetState, Duration, BlendType, BlendProfile, AlphaBlendOption, CustomBlendCurve) end
+function UAnimationStateMachineLibrary:SetState(UpdateContext, Node, TargetState, Duration, BlendType, BlendProfile,
+                                                AlphaBlendOption, CustomBlendCurve) end
+
 ---@param UpdateContext FAnimUpdateContext
 ---@param Node FAnimationStateResultReference
 ---@return boolean
 function UAnimationStateMachineLibrary:IsStateBlendingOut(UpdateContext, Node) end
+
 ---@param UpdateContext FAnimUpdateContext
 ---@param Node FAnimationStateResultReference
 ---@return boolean
 function UAnimationStateMachineLibrary:IsStateBlendingIn(UpdateContext, Node) end
+
 ---@param UpdateContext FAnimUpdateContext
 ---@param Node FAnimationStateMachineReference
 ---@return FName
 function UAnimationStateMachineLibrary:GetState(UpdateContext, Node) end
+
 ---@param UpdateContext FAnimUpdateContext
 ---@param Node FAnimationStateResultReference
 ---@return float
 function UAnimationStateMachineLibrary:GetRelevantAnimTimeRemainingFraction(UpdateContext, Node) end
+
 ---@param UpdateContext FAnimUpdateContext
 ---@param Node FAnimationStateResultReference
 ---@return float
 function UAnimationStateMachineLibrary:GetRelevantAnimTimeRemaining(UpdateContext, Node) end
+
 ---@param Node FAnimNodeReference
 ---@param AnimationState FAnimationStateResultReference
 ---@param Result boolean
 function UAnimationStateMachineLibrary:ConvertToAnimationStateResultPure(Node, AnimationState, Result) end
+
 ---@param Node FAnimNodeReference
 ---@param AnimationState FAnimationStateResultReference
 ---@param Result EAnimNodeReferenceConversionResult
 function UAnimationStateMachineLibrary:ConvertToAnimationStateResult(Node, AnimationState, Result) end
+
 ---@param Node FAnimNodeReference
 ---@param AnimationState FAnimationStateMachineReference
 ---@param Result boolean
 function UAnimationStateMachineLibrary:ConvertToAnimationStateMachinePure(Node, AnimationState, Result) end
+
 ---@param Node FAnimNodeReference
 ---@param AnimationState FAnimationStateMachineReference
 ---@param Result EAnimNodeReferenceConversionResult
 function UAnimationStateMachineLibrary:ConvertToAnimationStateMachine(Node, AnimationState, Result) end
-
 
 ---@class UBlendListBaseLibrary : UBlueprintFunctionLibrary
 UBlendListBaseLibrary = {}
 
 ---@param BlendListBase FBlendListBaseReference
 function UBlendListBaseLibrary:ResetNode(BlendListBase) end
+
 ---@param Node FAnimNodeReference
 ---@param Result EAnimNodeReferenceConversionResult
 ---@return FBlendListBaseReference
 function UBlendListBaseLibrary:ConvertToBlendListBase(Node, Result) end
-
 
 ---@class UBlendSpaceLibrary : UBlueprintFunctionLibrary
 UBlendSpaceLibrary = {}
@@ -1121,21 +1136,24 @@ UBlendSpaceLibrary = {}
 ---@param BlendSpace FBlendSpaceReference
 ---@param NewPosition FVector
 function UBlendSpaceLibrary:SnapToPosition(BlendSpace, NewPosition) end
+
 ---@param BlendSpace FBlendSpaceReference
 ---@return FVector
 function UBlendSpaceLibrary:GetPosition(BlendSpace) end
+
 ---@param BlendSpace FBlendSpaceReference
 ---@return FVector
 function UBlendSpaceLibrary:GetFilteredPosition(BlendSpace) end
+
 ---@param Node FAnimNodeReference
 ---@param BlendSpace FBlendSpaceReference
 ---@param Result boolean
 function UBlendSpaceLibrary:ConvertToBlendSpacePure(Node, BlendSpace, Result) end
+
 ---@param Node FAnimNodeReference
 ---@param Result EAnimNodeReferenceConversionResult
 ---@return FBlendSpaceReference
 function UBlendSpaceLibrary:ConvertToBlendSpace(Node, Result) end
-
 
 ---@class UBlendSpacePlayerLibrary : UBlueprintFunctionLibrary
 UBlendSpacePlayerLibrary = {}
@@ -1143,55 +1161,68 @@ UBlendSpacePlayerLibrary = {}
 ---@param BlendSpacePlayer FBlendSpacePlayerReference
 ---@param NewPosition FVector
 function UBlendSpacePlayerLibrary:SnapToPosition(BlendSpacePlayer, NewPosition) end
+
 ---@param BlendSpacePlayer FBlendSpacePlayerReference
 ---@return boolean
 function UBlendSpacePlayerLibrary:ShouldResetPlayTimeWhenBlendSpaceChanges(BlendSpacePlayer) end
+
 ---@param BlendSpacePlayer FBlendSpacePlayerReference
 ---@param bReset boolean
 ---@return FBlendSpacePlayerReference
 function UBlendSpacePlayerLibrary:SetResetPlayTimeWhenBlendSpaceChanges(BlendSpacePlayer, bReset) end
+
 ---@param BlendSpacePlayer FBlendSpacePlayerReference
 ---@param PlayRate float
 ---@return FBlendSpacePlayerReference
 function UBlendSpacePlayerLibrary:SetPlayRate(BlendSpacePlayer, PlayRate) end
+
 ---@param BlendSpacePlayer FBlendSpacePlayerReference
 ---@param bLoop boolean
 ---@return FBlendSpacePlayerReference
 function UBlendSpacePlayerLibrary:SetLoop(BlendSpacePlayer, bLoop) end
+
 ---@param UpdateContext FAnimUpdateContext
 ---@param BlendSpacePlayer FBlendSpacePlayerReference
 ---@param BlendSpace UBlendSpace
 ---@param BlendTime float
 ---@return FBlendSpacePlayerReference
-function UBlendSpacePlayerLibrary:SetBlendSpaceWithInertialBlending(UpdateContext, BlendSpacePlayer, BlendSpace, BlendTime) end
+function UBlendSpacePlayerLibrary:SetBlendSpaceWithInertialBlending(UpdateContext, BlendSpacePlayer, BlendSpace,
+                                                                    BlendTime) end
+
 ---@param BlendSpacePlayer FBlendSpacePlayerReference
 ---@param BlendSpace UBlendSpace
 ---@return FBlendSpacePlayerReference
 function UBlendSpacePlayerLibrary:SetBlendSpace(BlendSpacePlayer, BlendSpace) end
+
 ---@param BlendSpacePlayer FBlendSpacePlayerReference
 ---@return float
 function UBlendSpacePlayerLibrary:GetStartPosition(BlendSpacePlayer) end
+
 ---@param BlendSpacePlayer FBlendSpacePlayerReference
 ---@return FVector
 function UBlendSpacePlayerLibrary:GetPosition(BlendSpacePlayer) end
+
 ---@param BlendSpacePlayer FBlendSpacePlayerReference
 ---@return float
 function UBlendSpacePlayerLibrary:GetPlayRate(BlendSpacePlayer) end
+
 ---@param BlendSpacePlayer FBlendSpacePlayerReference
 ---@return boolean
 function UBlendSpacePlayerLibrary:GetLoop(BlendSpacePlayer) end
+
 ---@param BlendSpacePlayer FBlendSpacePlayerReference
 ---@return UBlendSpace
 function UBlendSpacePlayerLibrary:GetBlendSpace(BlendSpacePlayer) end
+
 ---@param Node FAnimNodeReference
 ---@param BlendSpacePlayer FBlendSpacePlayerReference
 ---@param Result boolean
 function UBlendSpacePlayerLibrary:ConvertToBlendSpacePlayerPure(Node, BlendSpacePlayer, Result) end
+
 ---@param Node FAnimNodeReference
 ---@param Result EAnimNodeReferenceConversionResult
 ---@return FBlendSpacePlayerReference
 function UBlendSpacePlayerLibrary:ConvertToBlendSpacePlayer(Node, Result) end
-
 
 ---@class UKismetAnimationLibrary : UBlueprintFunctionLibrary
 UKismetAnimationLibrary = {}
@@ -1206,8 +1237,11 @@ UKismetAnimationLibrary = {}
 ---@param bAllowStretching boolean
 ---@param StartStretchRatio float
 ---@param MaxStretchScale float
-function UKismetAnimationLibrary:K2_TwoBoneIK(RootPos, JointPos, EndPos, JointTarget, Effector, OutJointPos, OutEndPos, bAllowStretching, StartStretchRatio, MaxStretchScale) end
+function UKismetAnimationLibrary:K2_TwoBoneIK(RootPos, JointPos, EndPos, JointTarget, Effector, OutJointPos, OutEndPos,
+                                              bAllowStretching, StartStretchRatio, MaxStretchScale) end
+
 function UKismetAnimationLibrary:K2_StartProfilingTimer() end
+
 ---@param X float
 ---@param Y float
 ---@param Z float
@@ -1218,12 +1252,15 @@ function UKismetAnimationLibrary:K2_StartProfilingTimer() end
 ---@param RangeOutMinZ float
 ---@param RangeOutMaxZ float
 ---@return FVector
-function UKismetAnimationLibrary:K2_MakePerlinNoiseVectorAndRemap(X, Y, Z, RangeOutMinX, RangeOutMaxX, RangeOutMinY, RangeOutMaxY, RangeOutMinZ, RangeOutMaxZ) end
+function UKismetAnimationLibrary:K2_MakePerlinNoiseVectorAndRemap(X, Y, Z, RangeOutMinX, RangeOutMaxX, RangeOutMinY,
+                                                                  RangeOutMaxY, RangeOutMinZ, RangeOutMaxZ) end
+
 ---@param Value float
 ---@param RangeOutMin float
 ---@param RangeOutMax float
 ---@return float
 function UKismetAnimationLibrary:K2_MakePerlinNoiseAndRemap(Value, RangeOutMin, RangeOutMax) end
+
 ---@param CurrentTransform FTransform
 ---@param TargetPosition FVector
 ---@param LookAtVector FVector
@@ -1231,11 +1268,14 @@ function UKismetAnimationLibrary:K2_MakePerlinNoiseAndRemap(Value, RangeOutMin, 
 ---@param UpVector FVector
 ---@param ClampConeInDegree float
 ---@return FTransform
-function UKismetAnimationLibrary:K2_LookAt(CurrentTransform, TargetPosition, LookAtVector, bUseUpVector, UpVector, ClampConeInDegree) end
+function UKismetAnimationLibrary:K2_LookAt(CurrentTransform, TargetPosition, LookAtVector, bUseUpVector, UpVector,
+                                           ClampConeInDegree) end
+
 ---@param bLog boolean
 ---@param LogPrefix FString
 ---@return float
 function UKismetAnimationLibrary:K2_EndProfilingTimer(bLog, LogPrefix) end
+
 ---@param Component USkeletalMeshComponent
 ---@param SocketOrBoneNameA FName
 ---@param SocketSpaceA ERelativeTransformSpace
@@ -1247,12 +1287,16 @@ function UKismetAnimationLibrary:K2_EndProfilingTimer(bLog, LogPrefix) end
 ---@param OutRangeMin float
 ---@param OutRangeMax float
 ---@return float
-function UKismetAnimationLibrary:K2_DistanceBetweenTwoSocketsAndMapRange(Component, SocketOrBoneNameA, SocketSpaceA, SocketOrBoneNameB, SocketSpaceB, bRemapRange, InRangeMin, InRangeMax, OutRangeMin, OutRangeMax) end
+function UKismetAnimationLibrary:K2_DistanceBetweenTwoSocketsAndMapRange(Component, SocketOrBoneNameA, SocketSpaceA,
+                                                                         SocketOrBoneNameB, SocketSpaceB, bRemapRange,
+                                                                         InRangeMin, InRangeMax, OutRangeMin, OutRangeMax) end
+
 ---@param Component USkeletalMeshComponent
 ---@param SocketOrBoneNameFrom FName
 ---@param SocketOrBoneNameTo FName
 ---@return FVector
 function UKismetAnimationLibrary:K2_DirectionBetweenSockets(Component, SocketOrBoneNameFrom, SocketOrBoneNameTo) end
+
 ---@param DeltaSeconds float
 ---@param Component USkeletalMeshComponent
 ---@param SocketOrBoneName FName
@@ -1266,7 +1310,11 @@ function UKismetAnimationLibrary:K2_DirectionBetweenSockets(Component, SocketOrB
 ---@param EasingType EEasingFuncType
 ---@param CustomCurve FRuntimeFloatCurve
 ---@return float
-function UKismetAnimationLibrary:K2_CalculateVelocityFromSockets(DeltaSeconds, Component, SocketOrBoneName, ReferenceSocketOrBone, SocketSpace, OffsetInBoneSpace, History, NumberOfSamples, VelocityMin, VelocityMax, EasingType, CustomCurve) end
+function UKismetAnimationLibrary:K2_CalculateVelocityFromSockets(DeltaSeconds, Component, SocketOrBoneName,
+                                                                 ReferenceSocketOrBone, SocketSpace, OffsetInBoneSpace,
+                                                                 History, NumberOfSamples, VelocityMin, VelocityMax,
+                                                                 EasingType, CustomCurve) end
+
 ---@param DeltaSeconds float
 ---@param Position FVector
 ---@param History FPositionHistory
@@ -1274,12 +1322,13 @@ function UKismetAnimationLibrary:K2_CalculateVelocityFromSockets(DeltaSeconds, C
 ---@param VelocityMin float
 ---@param VelocityMax float
 ---@return float
-function UKismetAnimationLibrary:K2_CalculateVelocityFromPositionHistory(DeltaSeconds, Position, History, NumberOfSamples, VelocityMin, VelocityMax) end
+function UKismetAnimationLibrary:K2_CalculateVelocityFromPositionHistory(DeltaSeconds, Position, History, NumberOfSamples,
+                                                                         VelocityMin, VelocityMax) end
+
 ---@param Velocity FVector
 ---@param BaseRotation FRotator
 ---@return float
 function UKismetAnimationLibrary:CalculateDirection(Velocity, BaseRotation) end
-
 
 ---@class ULayeredBoneBlendLibrary : UBlueprintFunctionLibrary
 ULayeredBoneBlendLibrary = {}
@@ -1290,18 +1339,20 @@ ULayeredBoneBlendLibrary = {}
 ---@param BlendMaskName FName
 ---@return FLayeredBoneBlendReference
 function ULayeredBoneBlendLibrary:SetBlendMask(UpdateContext, LayeredBoneBlend, PoseIndex, BlendMaskName) end
+
 ---@param LayeredBoneBlend FLayeredBoneBlendReference
 ---@return int32
 function ULayeredBoneBlendLibrary:GetNumPoses(LayeredBoneBlend) end
+
 ---@param Node FAnimNodeReference
 ---@param Result EAnimNodeReferenceConversionResult
 ---@return FLayeredBoneBlendReference
 function ULayeredBoneBlendLibrary:ConvertToLayeredBoneBlend(Node, Result) end
+
 ---@param Node FAnimNodeReference
 ---@param LayeredBoneBlend FLayeredBoneBlendReference
 ---@param Result boolean
 function ULayeredBoneBlendLibrary:ConvertToLayeredBlendPerBonePure(Node, LayeredBoneBlend, Result) end
-
 
 ---@class ULinkedAnimGraphLibrary : UBlueprintFunctionLibrary
 ULinkedAnimGraphLibrary = {}
@@ -1309,18 +1360,20 @@ ULinkedAnimGraphLibrary = {}
 ---@param Node FLinkedAnimGraphReference
 ---@return boolean
 function ULinkedAnimGraphLibrary:HasLinkedAnimInstance(Node) end
+
 ---@param Node FLinkedAnimGraphReference
 ---@return UAnimInstance
 function ULinkedAnimGraphLibrary:GetLinkedAnimInstance(Node) end
+
 ---@param Node FAnimNodeReference
 ---@param LinkedAnimGraph FLinkedAnimGraphReference
 ---@param Result boolean
 function ULinkedAnimGraphLibrary:ConvertToLinkedAnimGraphPure(Node, LinkedAnimGraph, Result) end
+
 ---@param Node FAnimNodeReference
 ---@param Result EAnimNodeReferenceConversionResult
 ---@return FLinkedAnimGraphReference
 function ULinkedAnimGraphLibrary:ConvertToLinkedAnimGraph(Node, Result) end
-
 
 ---@class UPlayMontageCallbackProxy : UObject
 ---@field OnCompleted FPlayMontageCallbackProxyOnCompleted
@@ -1333,23 +1386,27 @@ UPlayMontageCallbackProxy = {}
 ---@param NotifyName FName
 ---@param BranchingPointNotifyPayload FBranchingPointNotifyPayload
 function UPlayMontageCallbackProxy:OnNotifyEndReceived(NotifyName, BranchingPointNotifyPayload) end
+
 ---@param NotifyName FName
 ---@param BranchingPointNotifyPayload FBranchingPointNotifyPayload
 function UPlayMontageCallbackProxy:OnNotifyBeginReceived(NotifyName, BranchingPointNotifyPayload) end
+
 ---@param Montage UAnimMontage
 ---@param bInterrupted boolean
 function UPlayMontageCallbackProxy:OnMontageEnded(Montage, bInterrupted) end
+
 ---@param Montage UAnimMontage
 ---@param bInterrupted boolean
 function UPlayMontageCallbackProxy:OnMontageBlendingOut(Montage, bInterrupted) end
+
 ---@param InSkeletalMeshComponent USkeletalMeshComponent
 ---@param MontageToPlay UAnimMontage
 ---@param PlayRate float
 ---@param StartingPosition float
 ---@param StartingSection FName
 ---@return UPlayMontageCallbackProxy
-function UPlayMontageCallbackProxy:CreateProxyObjectForPlayMontage(InSkeletalMeshComponent, MontageToPlay, PlayRate, StartingPosition, StartingSection) end
-
+function UPlayMontageCallbackProxy:CreateProxyObjectForPlayMontage(InSkeletalMeshComponent, MontageToPlay, PlayRate,
+                                                                   StartingPosition, StartingSection) end
 
 ---@class USequenceEvaluatorLibrary : UBlueprintFunctionLibrary
 USequenceEvaluatorLibrary = {}
@@ -1360,34 +1417,40 @@ USequenceEvaluatorLibrary = {}
 ---@param BlendTime float
 ---@return FSequenceEvaluatorReference
 function USequenceEvaluatorLibrary:SetSequenceWithInertialBlending(UpdateContext, SequenceEvaluator, Sequence, BlendTime) end
+
 ---@param SequenceEvaluator FSequenceEvaluatorReference
 ---@param Sequence UAnimSequenceBase
 ---@return FSequenceEvaluatorReference
 function USequenceEvaluatorLibrary:SetSequence(SequenceEvaluator, Sequence) end
+
 ---@param SequenceEvaluator FSequenceEvaluatorReference
 ---@param Time float
 ---@return FSequenceEvaluatorReference
 function USequenceEvaluatorLibrary:SetExplicitTime(SequenceEvaluator, Time) end
+
 ---@param SequenceEvaluator FSequenceEvaluatorReference
 ---@return UAnimSequenceBase
 function USequenceEvaluatorLibrary:GetSequence(SequenceEvaluator) end
+
 ---@param SequenceEvaluator FSequenceEvaluatorReference
 ---@return float
 function USequenceEvaluatorLibrary:GetAccumulatedTime(SequenceEvaluator) end
+
 ---@param Node FAnimNodeReference
 ---@param SequenceEvaluator FSequenceEvaluatorReference
 ---@param Result boolean
 function USequenceEvaluatorLibrary:ConvertToSequenceEvaluatorPure(Node, SequenceEvaluator, Result) end
+
 ---@param Node FAnimNodeReference
 ---@param Result EAnimNodeReferenceConversionResult
 ---@return FSequenceEvaluatorReference
 function USequenceEvaluatorLibrary:ConvertToSequenceEvaluator(Node, Result) end
+
 ---@param UpdateContext FAnimUpdateContext
 ---@param SequenceEvaluator FSequenceEvaluatorReference
 ---@param PlayRate float
 ---@return FSequenceEvaluatorReference
 function USequenceEvaluatorLibrary:AdvanceTime(UpdateContext, SequenceEvaluator, PlayRate) end
-
 
 ---@class USequencePlayerLibrary : UBlueprintFunctionLibrary
 USequencePlayerLibrary = {}
@@ -1396,56 +1459,68 @@ USequencePlayerLibrary = {}
 ---@param StartPosition float
 ---@return FSequencePlayerReference
 function USequencePlayerLibrary:SetStartPosition(SequencePlayer, StartPosition) end
+
 ---@param UpdateContext FAnimUpdateContext
 ---@param SequencePlayer FSequencePlayerReference
 ---@param Sequence UAnimSequenceBase
 ---@param BlendTime float
 ---@return FSequencePlayerReference
 function USequencePlayerLibrary:SetSequenceWithInertialBlending(UpdateContext, SequencePlayer, Sequence, BlendTime) end
+
 ---@param SequencePlayer FSequencePlayerReference
 ---@param Sequence UAnimSequenceBase
 ---@return FSequencePlayerReference
 function USequencePlayerLibrary:SetSequence(SequencePlayer, Sequence) end
+
 ---@param SequencePlayer FSequencePlayerReference
 ---@param PlayRate float
 ---@return FSequencePlayerReference
 function USequencePlayerLibrary:SetPlayRate(SequencePlayer, PlayRate) end
+
 ---@param SequencePlayer FSequencePlayerReference
 ---@param Time float
 ---@return FSequencePlayerReference
 function USequencePlayerLibrary:SetAccumulatedTime(SequencePlayer, Time) end
+
 ---@param SequencePlayer FSequencePlayerReference
 ---@return float
 function USequencePlayerLibrary:GetStartPosition(SequencePlayer) end
+
 ---@param SequencePlayer FSequencePlayerReference
 ---@return UAnimSequenceBase
 function USequencePlayerLibrary:GetSequencePure(SequencePlayer) end
+
 ---@param SequencePlayer FSequencePlayerReference
 ---@param SequenceBase UAnimSequenceBase
 ---@return FSequencePlayerReference
 function USequencePlayerLibrary:GetSequence(SequencePlayer, SequenceBase) end
+
 ---@param SequencePlayer FSequencePlayerReference
 ---@return float
 function USequencePlayerLibrary:GetPlayRate(SequencePlayer) end
+
 ---@param SequencePlayer FSequencePlayerReference
 ---@return boolean
 function USequencePlayerLibrary:GetLoopAnimation(SequencePlayer) end
+
 ---@param SequencePlayer FSequencePlayerReference
 ---@return float
 function USequencePlayerLibrary:GetAccumulatedTime(SequencePlayer) end
+
 ---@param Node FAnimNodeReference
 ---@param SequencePlayer FSequencePlayerReference
 ---@param Result boolean
 function USequencePlayerLibrary:ConvertToSequencePlayerPure(Node, SequencePlayer, Result) end
+
 ---@param Node FAnimNodeReference
 ---@param Result EAnimNodeReferenceConversionResult
 ---@return FSequencePlayerReference
 function USequencePlayerLibrary:ConvertToSequencePlayer(Node, Result) end
+
 ---@param SequencePlayer FSequencePlayerReference
 ---@param Duration float
 ---@return float
 function USequencePlayerLibrary:ComputePlayRateFromDuration(SequencePlayer, Duration) end
-
 
 ---@class USkeletalControlLibrary : UBlueprintFunctionLibrary
 USkeletalControlLibrary = {}
@@ -1454,16 +1529,17 @@ USkeletalControlLibrary = {}
 ---@param Alpha float
 ---@return FSkeletalControlReference
 function USkeletalControlLibrary:SetAlpha(SkeletalControl, Alpha) end
+
 ---@param SkeletalControl FSkeletalControlReference
 ---@return float
 function USkeletalControlLibrary:GetAlpha(SkeletalControl) end
+
 ---@param Node FAnimNodeReference
 ---@param SkeletalControl FSkeletalControlReference
 ---@param Result boolean
 function USkeletalControlLibrary:ConvertToSkeletalControlPure(Node, SkeletalControl, Result) end
+
 ---@param Node FAnimNodeReference
 ---@param Result EAnimNodeReferenceConversionResult
 ---@return FSkeletalControlReference
 function USkeletalControlLibrary:ConvertToSkeletalControl(Node, Result) end
-
-

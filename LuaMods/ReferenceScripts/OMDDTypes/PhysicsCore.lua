@@ -93,6 +93,3 @@ UPhysicalMaterial = {}
 ---@field DefaultShapeComplexity ECollisionTraceFlag
 ---@field SolverOptions FChaosSolverConfiguration
 UPhysicsSettingsCore = {}
-
-
-

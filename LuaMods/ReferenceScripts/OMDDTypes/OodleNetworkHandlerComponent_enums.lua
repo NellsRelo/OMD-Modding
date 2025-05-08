@@ -15,4 +15,3 @@ EOodleNetworkEnableMode = {
     WhenCompressedPacketReceived = 1,
     EOodleNetworkEnableMode_MAX = 2,
 }
-

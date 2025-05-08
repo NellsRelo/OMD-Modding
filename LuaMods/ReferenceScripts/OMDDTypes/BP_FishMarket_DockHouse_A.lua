@@ -79,6 +79,3 @@
 ---@field Collision USceneComponent
 ---@field RSTTrapGridBox URSTTrapGridBoxComponent
 ABP_FishMarket_DockHouse_A_C = {}
-
-
-

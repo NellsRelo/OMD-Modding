@@ -26,4 +26,3 @@ EChaosWeightMapTarget = {
     Pressure = 14,
     EChaosWeightMapTarget_MAX = 15,
 }
-

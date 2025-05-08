@@ -2,5 +2,3 @@
 
 ---@class UAudioLinkSettingsAbstract : UObject
 UAudioLinkSettingsAbstract = {}
-
-

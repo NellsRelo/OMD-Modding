@@ -6,6 +6,3 @@
 ---@field bIsActive_9_894ED28C4674764F0A06249C34907200 boolean
 ---@field bIsCapped_11_EED8E2594D022C4B4E3BA49B96EECAB1 boolean
 FSniperPassive_HeadshotStreakMessage = {}
-
-
-

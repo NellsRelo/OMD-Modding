@@ -87,46 +87,68 @@ AActor = {}
 ---@param Tolerance float
 ---@return boolean
 function AActor:WasRecentlyRendered(Tolerance) end
+
 function AActor:UserConstructionScript() end
+
 function AActor:TearOff() end
+
 ---@param NewTickGroup ETickingGroup
 function AActor:SetTickGroup(NewTickGroup) end
+
 ---@param bTickableWhenPaused boolean
 function AActor:SetTickableWhenPaused(bTickableWhenPaused) end
+
 ---@param bInReplicates boolean
 function AActor:SetReplicates(bInReplicates) end
+
 ---@param bInReplicateMovement boolean
 function AActor:SetReplicateMovement(bInReplicateMovement) end
+
 ---@param InRaytracingGroupId int32
 function AActor:SetRayTracingGroupId(InRaytracingGroupId) end
+
 ---@param ReplicationMode EPhysicsReplicationMode
 function AActor:SetPhysicsReplicationMode(ReplicationMode) end
+
 ---@param NewOwner AActor
 function AActor:SetOwner(NewOwner) end
+
 ---@param NewDormancy ENetDormancy
 function AActor:SetNetDormancy(NewDormancy) end
+
 ---@param InLifespan float
 function AActor:SetLifeSpan(InLifespan) end
+
 ---@param bVal boolean
 function AActor:SetAutoDestroyWhenFinished(bVal) end
+
 ---@param TickInterval float
 function AActor:SetActorTickInterval(TickInterval) end
+
 ---@param bEnabled boolean
 function AActor:SetActorTickEnabled(bEnabled) end
+
 ---@param NewScale3D FVector
 function AActor:SetActorScale3D(NewScale3D) end
+
 ---@param NewRelativeScale FVector
 function AActor:SetActorRelativeScale3D(NewRelativeScale) end
+
 ---@param bNewHidden boolean
 function AActor:SetActorHiddenInGame(bNewHidden) end
+
 ---@param bNewActorEnableCollision boolean
 function AActor:SetActorEnableCollision(bNewActorEnableCollision) end
+
 ---@param PrerequisiteComponent UActorComponent
 function AActor:RemoveTickPrerequisiteComponent(PrerequisiteComponent) end
+
 ---@param PrerequisiteActor AActor
 function AActor:RemoveTickPrerequisiteActor(PrerequisiteActor) end
+
 ---@param DeltaSeconds float
 function AActor:ReceiveTick(DeltaSeconds) end
+
 ---@param DamageReceived float
 ---@param DamageType UDamageType
 ---@param Origin FVector
@@ -134,6 +156,7 @@ function AActor:ReceiveTick(DeltaSeconds) end
 ---@param InstigatedBy AController
 ---@param DamageCauser AActor
 function AActor:ReceiveRadialDamage(DamageReceived, DamageType, Origin, HitInfo, InstigatedBy, DamageCauser) end
+
 ---@param Damage float
 ---@param DamageType UDamageType
 ---@param HitLocation FVector
@@ -144,7 +167,9 @@ function AActor:ReceiveRadialDamage(DamageReceived, DamageType, Origin, HitInfo,
 ---@param InstigatedBy AController
 ---@param DamageCauser AActor
 ---@param HitInfo FHitResult
-function AActor:ReceivePointDamage(Damage, DamageType, HitLocation, HitNormal, HitComponent, BoneName, ShotFromDirection, InstigatedBy, DamageCauser, HitInfo) end
+function AActor:ReceivePointDamage(Damage, DamageType, HitLocation, HitNormal, HitComponent, BoneName, ShotFromDirection,
+                                   InstigatedBy, DamageCauser, HitInfo) end
+
 ---@param MyComp UPrimitiveComponent
 ---@param Other AActor
 ---@param OtherComp UPrimitiveComponent
@@ -154,80 +179,109 @@ function AActor:ReceivePointDamage(Damage, DamageType, HitLocation, HitNormal, H
 ---@param NormalImpulse FVector
 ---@param Hit FHitResult
 function AActor:ReceiveHit(MyComp, Other, OtherComp, bSelfMoved, HitLocation, HitNormal, NormalImpulse, Hit) end
+
 ---@param EndPlayReason EEndPlayReason::Type
 function AActor:ReceiveEndPlay(EndPlayReason) end
+
 function AActor:ReceiveDestroyed() end
+
 function AActor:ReceiveBeginPlay() end
+
 ---@param DeltaSeconds float
 ---@param SimSeconds float
 function AActor:ReceiveAsyncPhysicsTick(DeltaSeconds, SimSeconds) end
+
 ---@param Damage float
 ---@param DamageType UDamageType
 ---@param InstigatedBy AController
 ---@param DamageCauser AActor
 function AActor:ReceiveAnyDamage(Damage, DamageType, InstigatedBy, DamageCauser) end
+
 ---@param ButtonReleased FKey
 function AActor:ReceiveActorOnReleased(ButtonReleased) end
+
 ---@param FingerIndex ETouchIndex::Type
 function AActor:ReceiveActorOnInputTouchLeave(FingerIndex) end
+
 ---@param FingerIndex ETouchIndex::Type
 function AActor:ReceiveActorOnInputTouchEnter(FingerIndex) end
+
 ---@param FingerIndex ETouchIndex::Type
 function AActor:ReceiveActorOnInputTouchEnd(FingerIndex) end
+
 ---@param FingerIndex ETouchIndex::Type
 function AActor:ReceiveActorOnInputTouchBegin(FingerIndex) end
+
 ---@param ButtonPressed FKey
 function AActor:ReceiveActorOnClicked(ButtonPressed) end
+
 ---@param OtherActor AActor
 function AActor:ReceiveActorEndOverlap(OtherActor) end
+
 function AActor:ReceiveActorEndCursorOver() end
+
 ---@param OtherActor AActor
 function AActor:ReceiveActorBeginOverlap(OtherActor) end
+
 function AActor:ReceiveActorBeginCursorOver() end
+
 ---@param Seconds float
 ---@param bEnableStreaming boolean
 ---@param CinematicTextureGroups int32
 function AActor:PrestreamTextures(Seconds, bEnableStreaming, CinematicTextureGroups) end
+
 function AActor:OnRep_ReplicateMovement() end
+
 function AActor:OnRep_ReplicatedMovement() end
+
 function AActor:OnRep_Owner() end
+
 function AActor:OnRep_Instigator() end
+
 function AActor:OnRep_AttachmentReplication() end
+
 ---@param Loudness float
 ---@param NoiseInstigator APawn
 ---@param NoiseLocation FVector
 ---@param MaxRange float
 ---@param Tag FName
 function AActor:MakeNoise(Loudness, NoiseInstigator, NoiseLocation, MaxRange, Tag) end
+
 ---@param DestLocation FVector
 ---@param DestRotation FRotator
 ---@return boolean
 function AActor:K2_TeleportTo(DestLocation, DestRotation) end
+
 ---@param NewTransform FTransform
 ---@param bSweep boolean
 ---@param SweepHitResult FHitResult
 ---@param bTeleport boolean
 ---@return boolean
 function AActor:K2_SetActorTransform(NewTransform, bSweep, SweepHitResult, bTeleport) end
+
 ---@param NewRotation FRotator
 ---@param bTeleportPhysics boolean
 ---@return boolean
 function AActor:K2_SetActorRotation(NewRotation, bTeleportPhysics) end
+
 ---@param NewRelativeTransform FTransform
 ---@param bSweep boolean
 ---@param SweepHitResult FHitResult
 ---@param bTeleport boolean
 function AActor:K2_SetActorRelativeTransform(NewRelativeTransform, bSweep, SweepHitResult, bTeleport) end
+
 ---@param NewRelativeRotation FRotator
 ---@param bSweep boolean
 ---@param SweepHitResult FHitResult
 ---@param bTeleport boolean
 function AActor:K2_SetActorRelativeRotation(NewRelativeRotation, bSweep, SweepHitResult, bTeleport) end
+
 ---@param NewRelativeLocation FVector
 ---@param bSweep boolean
 ---@param SweepHitResult FHitResult
 ---@param bTeleport boolean
 function AActor:K2_SetActorRelativeLocation(NewRelativeLocation, bSweep, SweepHitResult, bTeleport) end
+
 ---@param NewLocation FVector
 ---@param NewRotation FRotator
 ---@param bSweep boolean
@@ -235,31 +289,42 @@ function AActor:K2_SetActorRelativeLocation(NewRelativeLocation, bSweep, SweepHi
 ---@param bTeleport boolean
 ---@return boolean
 function AActor:K2_SetActorLocationAndRotation(NewLocation, NewRotation, bSweep, SweepHitResult, bTeleport) end
+
 ---@param NewLocation FVector
 ---@param bSweep boolean
 ---@param SweepHitResult FHitResult
 ---@param bTeleport boolean
 ---@return boolean
 function AActor:K2_SetActorLocation(NewLocation, bSweep, SweepHitResult, bTeleport) end
+
 function AActor:K2_OnReset() end
+
 ---@param PC APlayerController
 function AActor:K2_OnEndViewTarget(PC) end
+
 ---@param PC APlayerController
 function AActor:K2_OnBecomeViewTarget(PC) end
+
 ---@return USceneComponent
 function AActor:K2_GetRootComponent() end
+
 ---@param ComponentClass TSubclassOf<UActorComponent>
 ---@return TArray<UActorComponent>
 function AActor:K2_GetComponentsByClass(ComponentClass) end
+
 ---@return FRotator
 function AActor:K2_GetActorRotation() end
+
 ---@return FVector
 function AActor:K2_GetActorLocation() end
+
 ---@param LocationRule EDetachmentRule
 ---@param RotationRule EDetachmentRule
 ---@param ScaleRule EDetachmentRule
 function AActor:K2_DetachFromActor(LocationRule, RotationRule, ScaleRule) end
+
 function AActor:K2_DestroyActor() end
+
 ---@param Parent USceneComponent
 ---@param SocketName FName
 ---@param LocationRule EAttachmentRule
@@ -268,6 +333,7 @@ function AActor:K2_DestroyActor() end
 ---@param bWeldSimulatedBodies boolean
 ---@return boolean
 function AActor:K2_AttachToComponent(Parent, SocketName, LocationRule, RotationRule, ScaleRule, bWeldSimulatedBodies) end
+
 ---@param ParentActor AActor
 ---@param SocketName FName
 ---@param LocationRule EAttachmentRule
@@ -276,235 +342,312 @@ function AActor:K2_AttachToComponent(Parent, SocketName, LocationRule, RotationR
 ---@param bWeldSimulatedBodies boolean
 ---@return boolean
 function AActor:K2_AttachToActor(ParentActor, SocketName, LocationRule, RotationRule, ScaleRule, bWeldSimulatedBodies) end
+
 ---@param InParentActor AActor
 ---@param InSocketName FName
 ---@param AttachLocationType EAttachLocation::Type
 ---@param bWeldSimulatedBodies boolean
 function AActor:K2_AttachRootComponentToActor(InParentActor, InSocketName, AttachLocationType, bWeldSimulatedBodies) end
+
 ---@param InParent USceneComponent
 ---@param InSocketName FName
 ---@param AttachLocationType EAttachLocation::Type
 ---@param bWeldSimulatedBodies boolean
 function AActor:K2_AttachRootComponentTo(InParent, InSocketName, AttachLocationType, bWeldSimulatedBodies) end
+
 ---@param DeltaTransform FTransform
 ---@param bSweep boolean
 ---@param SweepHitResult FHitResult
 ---@param bTeleport boolean
 function AActor:K2_AddActorWorldTransformKeepScale(DeltaTransform, bSweep, SweepHitResult, bTeleport) end
+
 ---@param DeltaTransform FTransform
 ---@param bSweep boolean
 ---@param SweepHitResult FHitResult
 ---@param bTeleport boolean
 function AActor:K2_AddActorWorldTransform(DeltaTransform, bSweep, SweepHitResult, bTeleport) end
+
 ---@param DeltaRotation FRotator
 ---@param bSweep boolean
 ---@param SweepHitResult FHitResult
 ---@param bTeleport boolean
 function AActor:K2_AddActorWorldRotation(DeltaRotation, bSweep, SweepHitResult, bTeleport) end
+
 ---@param DeltaLocation FVector
 ---@param bSweep boolean
 ---@param SweepHitResult FHitResult
 ---@param bTeleport boolean
 function AActor:K2_AddActorWorldOffset(DeltaLocation, bSweep, SweepHitResult, bTeleport) end
+
 ---@param NewTransform FTransform
 ---@param bSweep boolean
 ---@param SweepHitResult FHitResult
 ---@param bTeleport boolean
 function AActor:K2_AddActorLocalTransform(NewTransform, bSweep, SweepHitResult, bTeleport) end
+
 ---@param DeltaRotation FRotator
 ---@param bSweep boolean
 ---@param SweepHitResult FHitResult
 ---@param bTeleport boolean
 function AActor:K2_AddActorLocalRotation(DeltaRotation, bSweep, SweepHitResult, bTeleport) end
+
 ---@param DeltaLocation FVector
 ---@param bSweep boolean
 ---@param SweepHitResult FHitResult
 ---@param bTeleport boolean
 function AActor:K2_AddActorLocalOffset(DeltaLocation, bSweep, SweepHitResult, bTeleport) end
+
 ---@param Other AActor
 ---@return boolean
 function AActor:IsOverlappingActor(Other) end
+
 ---@return boolean
 function AActor:IsChildActor() end
+
 ---@return boolean
 function AActor:IsActorTickEnabled() end
+
 ---@return boolean
 function AActor:IsActorBeingDestroyed() end
+
 ---@return boolean
 function AActor:HasAuthority() end
+
 ---@param OtherActor AActor
 ---@return float
 function AActor:GetVerticalDistanceTo(OtherActor) end
+
 ---@return FVector
 function AActor:GetVelocity() end
+
 ---@return FTransform
 function AActor:GetTransform() end
+
 ---@return boolean
 function AActor:GetTickableWhenPaused() end
+
 ---@param OtherActor AActor
 ---@return float
 function AActor:GetSquaredHorizontalDistanceTo(OtherActor) end
+
 ---@param OtherActor AActor
 ---@return float
 function AActor:GetSquaredDistanceTo(OtherActor) end
+
 ---@return float
 function AActor:GetResimulationThreshold() end
+
 ---@return ENetRole
 function AActor:GetRemoteRole() end
+
 ---@return int32
 function AActor:GetRayTracingGroupId() end
+
 ---@return EPhysicsReplicationMode
 function AActor:GetPhysicsReplicationMode() end
+
 ---@return UChildActorComponent
 function AActor:GetParentComponent() end
+
 ---@return AActor
 function AActor:GetParentActor() end
+
 ---@return AActor
 function AActor:GetOwner() end
+
 ---@param OverlappingComponents TArray<UPrimitiveComponent>
 function AActor:GetOverlappingComponents(OverlappingComponents) end
+
 ---@param OverlappingActors TArray<AActor>
 ---@param ClassFilter TSubclassOf<AActor>
 function AActor:GetOverlappingActors(OverlappingActors, ClassFilter) end
+
 ---@return ENetRole
 function AActor:GetLocalRole() end
+
 ---@return float
 function AActor:GetLifeSpan() end
+
 ---@return FTransform
 function AActor:GetLevelTransform() end
+
 ---@return ULevel
 function AActor:GetLevel() end
+
 ---@return AController
 function AActor:GetInstigatorController() end
+
 ---@return APawn
 function AActor:GetInstigator() end
+
 ---@param InputAxisKey FKey
 ---@return FVector
 function AActor:GetInputVectorAxisValue(InputAxisKey) end
+
 ---@param InputAxisName FName
 ---@return float
 function AActor:GetInputAxisValue(InputAxisName) end
+
 ---@param InputAxisKey FKey
 ---@return float
 function AActor:GetInputAxisKeyValue(InputAxisKey) end
+
 ---@param OtherActor AActor
 ---@return float
 function AActor:GetHorizontalDotProductTo(OtherActor) end
+
 ---@param OtherActor AActor
 ---@return float
 function AActor:GetHorizontalDistanceTo(OtherActor) end
+
 ---@return float
 function AActor:GetGameTimeSinceCreation() end
+
 ---@param OtherActor AActor
 ---@return float
 function AActor:GetDotProductTo(OtherActor) end
+
 ---@param OtherActor AActor
 ---@return float
 function AActor:GetDistanceTo(OtherActor) end
+
 ---@param ComponentClass TSubclassOf<UActorComponent>
 ---@param Tag FName
 ---@return TArray<UActorComponent>
 function AActor:GetComponentsByTag(ComponentClass, Tag) end
+
 ---@param Interface TSubclassOf<UInterface>
 ---@return TArray<UActorComponent>
 function AActor:GetComponentsByInterface(Interface) end
+
 ---@param ComponentClass TSubclassOf<UActorComponent>
 ---@return UActorComponent
 function AActor:GetComponentByClass(ComponentClass) end
+
 ---@return FName
 function AActor:GetAttachParentSocketName() end
+
 ---@return AActor
 function AActor:GetAttachParentActor() end
+
 ---@param OutActors TArray<AActor>
 ---@param bResetArray boolean
 ---@param bRecursivelyIncludeAttachedActors boolean
 function AActor:GetAttachedActors(OutActors, bResetArray, bRecursivelyIncludeAttachedActors) end
+
 ---@param ChildActors TArray<AActor>
 ---@param bIncludeDescendants boolean
 function AActor:GetAllChildActors(ChildActors, bIncludeDescendants) end
+
 ---@return FVector
 function AActor:GetActorUpVector() end
+
 ---@return float
 function AActor:GetActorTimeDilation() end
+
 ---@return float
 function AActor:GetActorTickInterval() end
+
 ---@return FVector
 function AActor:GetActorScale3D() end
+
 ---@return FVector
 function AActor:GetActorRightVector() end
+
 ---@return FVector
 function AActor:GetActorRelativeScale3D() end
+
 ---@return FVector
 function AActor:GetActorForwardVector() end
+
 ---@param OutLocation FVector
 ---@param OutRotation FRotator
 function AActor:GetActorEyesViewPoint(OutLocation, OutRotation) end
+
 ---@return boolean
 function AActor:GetActorEnableCollision() end
+
 ---@param bOnlyCollidingComponents boolean
 ---@param Origin FVector
 ---@param BoxExtent FVector
 ---@param bIncludeFromChildActors boolean
 function AActor:GetActorBounds(bOnlyCollidingComponents, Origin, BoxExtent, bIncludeFromChildActors) end
+
 function AActor:ForceNetUpdate() end
+
 function AActor:FlushNetDormancy() end
+
 ---@param Component UActorComponent
 ---@param bManualAttachment boolean
 ---@param RelativeTransform FTransform
 function AActor:FinishAddComponent(Component, bManualAttachment, RelativeTransform) end
+
 ---@param ComponentClass TSubclassOf<UActorComponent>
 ---@param Tag FName
 ---@return UActorComponent
 function AActor:FindComponentByTag(ComponentClass, Tag) end
+
 ---@param PlayerController APlayerController
 function AActor:EnableInput(PlayerController) end
+
 ---@param PlayerController APlayerController
 function AActor:DisableInput(PlayerController) end
+
 ---@param bMaintainWorldPosition boolean
 function AActor:DetachRootComponentFromParent(bMaintainWorldPosition) end
+
 ---@param InputComponentToCreate TSubclassOf<UInputComponent>
 function AActor:CreateInputComponent(InputComponentToCreate) end
+
 ---@return boolean
 function AActor:CanTriggerResimulation() end
+
 ---@param PrerequisiteComponent UActorComponent
 function AActor:AddTickPrerequisiteComponent(PrerequisiteComponent) end
+
 ---@param PrerequisiteActor AActor
 function AActor:AddTickPrerequisiteActor(PrerequisiteActor) end
+
 ---@param Class TSubclassOf<UActorComponent>
 ---@param bManualAttachment boolean
 ---@param RelativeTransform FTransform
 ---@param bDeferredFinish boolean
 ---@return UActorComponent
 function AActor:AddComponentByClass(Class, bManualAttachment, RelativeTransform, bDeferredFinish) end
+
 ---@param TemplateName FName
 ---@param bManualAttachment boolean
 ---@param RelativeTransform FTransform
 ---@param ComponentTemplateContext UObject
 ---@param bDeferredFinish boolean
 ---@return UActorComponent
-function AActor:AddComponent(TemplateName, bManualAttachment, RelativeTransform, ComponentTemplateContext, bDeferredFinish) end
+function AActor:AddComponent(TemplateName, bManualAttachment, RelativeTransform, ComponentTemplateContext,
+                             bDeferredFinish) end
+
 ---@param Tag FName
 ---@return boolean
 function AActor:ActorHasTag(Tag) end
-
 
 ---@class AAmbientSound : AActor
 ---@field AudioComponent UAudioComponent
 AAmbientSound = {}
 
 function AAmbientSound:Stop() end
+
 ---@param StartTime float
 function AAmbientSound:Play(StartTime) end
+
 ---@param FadeOutDuration float
 ---@param FadeVolumeLevel float
 function AAmbientSound:FadeOut(FadeOutDuration, FadeVolumeLevel) end
+
 ---@param FadeInDuration float
 ---@param FadeVolumeLevel float
 function AAmbientSound:FadeIn(FadeInDuration, FadeVolumeLevel) end
+
 ---@param AdjustVolumeDuration float
 ---@param AdjustVolumeLevel float
 function AAmbientSound:AdjustVolume(AdjustVolumeDuration, AdjustVolumeLevel) end
-
 
 ---@class AAtmosphericFog : AInfo
 ---@field AtmosphericFogComponent UAtmosphericFogComponent
@@ -523,18 +666,23 @@ AAudioVolume = {}
 
 ---@param NewSubmixSendSettings TArray<FAudioVolumeSubmixSendSettings>
 function AAudioVolume:SetSubmixSendSettings(NewSubmixSendSettings) end
+
 ---@param NewSubmixOverrideSettings TArray<FAudioVolumeSubmixOverrideSettings>
 function AAudioVolume:SetSubmixOverrideSettings(NewSubmixOverrideSettings) end
+
 ---@param NewReverbSettings FReverbSettings
 function AAudioVolume:SetReverbSettings(NewReverbSettings) end
+
 ---@param NewPriority float
 function AAudioVolume:SetPriority(NewPriority) end
+
 ---@param NewInteriorSettings FInteriorSettings
 function AAudioVolume:SetInteriorSettings(NewInteriorSettings) end
+
 ---@param bNewEnabled boolean
 function AAudioVolume:SetEnabled(bNewEnabled) end
-function AAudioVolume:OnRep_bEnabled() end
 
+function AAudioVolume:OnRep_bEnabled() end
 
 ---@class ABandwidthTestActor : AActor
 ---@field BandwidthGenerator FBandwidthTestGenerator
@@ -583,7 +731,6 @@ ACameraActor = {}
 
 ---@return int32
 function ACameraActor:GetAutoActivatePlayerIndex() end
-
 
 ---@class ACameraBlockingVolume : AVolume
 ACameraBlockingVolume = {}
@@ -640,15 +787,20 @@ ACharacter = {}
 
 ---@param bClientSimulation boolean
 function ACharacter:UnCrouch(bClientSimulation) end
+
 function ACharacter:StopJumping() end
+
 ---@param AnimMontage UAnimMontage
 function ACharacter:StopAnimMontage(AnimMontage) end
+
 ---@param PackedBits FCharacterServerMovePackedBits
 function ACharacter:ServerMovePacked(PackedBits) end
+
 ---@param OldTimeStamp float
 ---@param OldAccel FVector_NetQuantize10
 ---@param OldMoveFlags uint8
 function ACharacter:ServerMoveOld(OldTimeStamp, OldAccel, OldMoveFlags) end
+
 ---@param Timestamp float
 ---@param InAccel FVector_NetQuantize10
 ---@param ClientLoc FVector_NetQuantize100
@@ -656,7 +808,9 @@ function ACharacter:ServerMoveOld(OldTimeStamp, OldAccel, OldMoveFlags) end
 ---@param ClientRoll uint8
 ---@param View uint32
 ---@param ClientMovementMode uint8
-function ACharacter:ServerMoveNoBase(Timestamp, InAccel, ClientLoc, CompressedMoveFlags, ClientRoll, View, ClientMovementMode) end
+function ACharacter:ServerMoveNoBase(Timestamp, InAccel, ClientLoc, CompressedMoveFlags, ClientRoll, View,
+                                     ClientMovementMode) end
+
 ---@param TimeStamp0 float
 ---@param InAccel0 FVector_NetQuantize10
 ---@param PendingFlags uint8
@@ -668,7 +822,9 @@ function ACharacter:ServerMoveNoBase(Timestamp, InAccel, ClientLoc, CompressedMo
 ---@param ClientRoll uint8
 ---@param View uint32
 ---@param ClientMovementMode uint8
-function ACharacter:ServerMoveDualNoBase(TimeStamp0, InAccel0, PendingFlags, View0, Timestamp, InAccel, ClientLoc, NewFlags, ClientRoll, View, ClientMovementMode) end
+function ACharacter:ServerMoveDualNoBase(TimeStamp0, InAccel0, PendingFlags, View0, Timestamp, InAccel, ClientLoc,
+                                         NewFlags, ClientRoll, View, ClientMovementMode) end
+
 ---@param TimeStamp0 float
 ---@param InAccel0 FVector_NetQuantize10
 ---@param PendingFlags uint8
@@ -682,7 +838,10 @@ function ACharacter:ServerMoveDualNoBase(TimeStamp0, InAccel0, PendingFlags, Vie
 ---@param ClientMovementBase UPrimitiveComponent
 ---@param ClientBaseBoneName FName
 ---@param ClientMovementMode uint8
-function ACharacter:ServerMoveDualHybridRootMotion(TimeStamp0, InAccel0, PendingFlags, View0, Timestamp, InAccel, ClientLoc, NewFlags, ClientRoll, View, ClientMovementBase, ClientBaseBoneName, ClientMovementMode) end
+function ACharacter:ServerMoveDualHybridRootMotion(TimeStamp0, InAccel0, PendingFlags, View0, Timestamp, InAccel,
+                                                   ClientLoc, NewFlags, ClientRoll, View, ClientMovementBase,
+                                                   ClientBaseBoneName, ClientMovementMode) end
+
 ---@param TimeStamp0 float
 ---@param InAccel0 FVector_NetQuantize10
 ---@param PendingFlags uint8
@@ -696,7 +855,9 @@ function ACharacter:ServerMoveDualHybridRootMotion(TimeStamp0, InAccel0, Pending
 ---@param ClientMovementBase UPrimitiveComponent
 ---@param ClientBaseBoneName FName
 ---@param ClientMovementMode uint8
-function ACharacter:ServerMoveDual(TimeStamp0, InAccel0, PendingFlags, View0, Timestamp, InAccel, ClientLoc, NewFlags, ClientRoll, View, ClientMovementBase, ClientBaseBoneName, ClientMovementMode) end
+function ACharacter:ServerMoveDual(TimeStamp0, InAccel0, PendingFlags, View0, Timestamp, InAccel, ClientLoc, NewFlags,
+                                   ClientRoll, View, ClientMovementBase, ClientBaseBoneName, ClientMovementMode) end
+
 ---@param Timestamp float
 ---@param InAccel FVector_NetQuantize10
 ---@param ClientLoc FVector_NetQuantize100
@@ -706,66 +867,93 @@ function ACharacter:ServerMoveDual(TimeStamp0, InAccel0, PendingFlags, View0, Ti
 ---@param ClientMovementBase UPrimitiveComponent
 ---@param ClientBaseBoneName FName
 ---@param ClientMovementMode uint8
-function ACharacter:ServerMove(Timestamp, InAccel, ClientLoc, CompressedMoveFlags, ClientRoll, View, ClientMovementBase, ClientBaseBoneName, ClientMovementMode) end
+function ACharacter:ServerMove(Timestamp, InAccel, ClientLoc, CompressedMoveFlags, ClientRoll, View, ClientMovementBase,
+                               ClientBaseBoneName, ClientMovementMode) end
+
 ---@param InString FString
 function ACharacter:RootMotionDebugClientPrintOnScreen(InString) end
+
 ---@param AnimMontage UAnimMontage
 ---@param InPlayRate float
 ---@param StartSectionName FName
 ---@return float
 function ACharacter:PlayAnimMontage(AnimMontage, InPlayRate, StartSectionName) end
+
 ---@param PreviousFloorImpactNormal FVector
 ---@param PreviousFloorContactNormal FVector
 ---@param PreviousLocation FVector
 ---@param TimeDelta float
 function ACharacter:OnWalkingOffLedge(PreviousFloorImpactNormal, PreviousFloorContactNormal, PreviousLocation, TimeDelta) end
+
 function ACharacter:OnRep_RootMotion() end
+
 function ACharacter:OnRep_ReplicatedBasedMovement() end
+
 function ACharacter:OnRep_ReplayLastTransformUpdateTimeStamp() end
+
 function ACharacter:OnRep_IsCrouched() end
+
 ---@param LaunchVelocity FVector
 ---@param bXYOverride boolean
 ---@param bZOverride boolean
 function ACharacter:OnLaunched(LaunchVelocity, bXYOverride, bZOverride) end
+
 ---@param Hit FHitResult
 function ACharacter:OnLanded(Hit) end
+
 function ACharacter:OnJumped() end
+
 ---@param LaunchVelocity FVector
 ---@param bXYOverride boolean
 ---@param bZOverride boolean
 function ACharacter:LaunchCharacter(LaunchVelocity, bXYOverride, bZOverride) end
+
 ---@param DeltaTime float
 function ACharacter:K2_UpdateCustomMovement(DeltaTime) end
+
 ---@param HalfHeightAdjust float
 ---@param ScaledHalfHeightAdjust float
 function ACharacter:K2_OnStartCrouch(HalfHeightAdjust, ScaledHalfHeightAdjust) end
+
 ---@param PrevMovementMode EMovementMode
 ---@param NewMovementMode EMovementMode
 ---@param PrevCustomMode uint8
 ---@param NewCustomMode uint8
 function ACharacter:K2_OnMovementModeChanged(PrevMovementMode, NewMovementMode, PrevCustomMode, NewCustomMode) end
+
 ---@param HalfHeightAdjust float
 ---@param ScaledHalfHeightAdjust float
 function ACharacter:K2_OnEndCrouch(HalfHeightAdjust, ScaledHalfHeightAdjust) end
+
 function ACharacter:Jump() end
+
 ---@return boolean
 function ACharacter:IsPlayingRootMotion() end
+
 ---@return boolean
 function ACharacter:IsPlayingNetworkedRootMotionMontage() end
+
 ---@return boolean
 function ACharacter:IsJumpProvidingForce() end
+
 ---@return boolean
 function ACharacter:HasAnyRootMotion() end
+
 ---@return UAnimMontage
 function ACharacter:GetCurrentMontage() end
+
 ---@return FVector
 function ACharacter:GetBaseTranslationOffset() end
+
 ---@return FRotator
 function ACharacter:GetBaseRotationOffsetRotator() end
+
 ---@return float
 function ACharacter:GetAnimRootMotionTranslationScale() end
+
 ---@param bClientSimulation boolean
 function ACharacter:Crouch(bClientSimulation) end
+
 ---@param Timestamp float
 ---@param NewLoc FVector
 ---@param NewBase UPrimitiveComponent
@@ -773,12 +961,18 @@ function ACharacter:Crouch(bClientSimulation) end
 ---@param bHasBase boolean
 ---@param bBaseRelativePosition boolean
 ---@param ServerMovementMode uint8
-function ACharacter:ClientVeryShortAdjustPosition(Timestamp, NewLoc, NewBase, NewBaseBoneName, bHasBase, bBaseRelativePosition, ServerMovementMode) end
+function ACharacter:ClientVeryShortAdjustPosition(Timestamp, NewLoc, NewBase, NewBaseBoneName, bHasBase,
+                                                  bBaseRelativePosition, ServerMovementMode) end
+
 ---@param PackedBits FCharacterMoveResponsePackedBits
 function ACharacter:ClientMoveResponsePacked(PackedBits) end
+
 function ACharacter:ClientCheatWalk() end
+
 function ACharacter:ClientCheatGhost() end
+
 function ACharacter:ClientCheatFly() end
+
 ---@param Timestamp float
 ---@param ServerRootMotion FRootMotionSourceGroup
 ---@param bHasAnimRootMotion boolean
@@ -791,7 +985,11 @@ function ACharacter:ClientCheatFly() end
 ---@param bHasBase boolean
 ---@param bBaseRelativePosition boolean
 ---@param ServerMovementMode uint8
-function ACharacter:ClientAdjustRootMotionSourcePosition(Timestamp, ServerRootMotion, bHasAnimRootMotion, ServerMontageTrackPosition, ServerLoc, ServerRotation, ServerVelZ, ServerBase, ServerBoneName, bHasBase, bBaseRelativePosition, ServerMovementMode) end
+function ACharacter:ClientAdjustRootMotionSourcePosition(Timestamp, ServerRootMotion, bHasAnimRootMotion,
+                                                         ServerMontageTrackPosition, ServerLoc, ServerRotation,
+                                                         ServerVelZ, ServerBase, ServerBoneName, bHasBase,
+                                                         bBaseRelativePosition, ServerMovementMode) end
+
 ---@param Timestamp float
 ---@param ServerMontageTrackPosition float
 ---@param ServerLoc FVector
@@ -802,7 +1000,10 @@ function ACharacter:ClientAdjustRootMotionSourcePosition(Timestamp, ServerRootMo
 ---@param bHasBase boolean
 ---@param bBaseRelativePosition boolean
 ---@param ServerMovementMode uint8
-function ACharacter:ClientAdjustRootMotionPosition(Timestamp, ServerMontageTrackPosition, ServerLoc, ServerRotation, ServerVelZ, ServerBase, ServerBoneName, bHasBase, bBaseRelativePosition, ServerMovementMode) end
+function ACharacter:ClientAdjustRootMotionPosition(Timestamp, ServerMontageTrackPosition, ServerLoc, ServerRotation,
+                                                   ServerVelZ, ServerBase, ServerBoneName, bHasBase,
+                                                   bBaseRelativePosition, ServerMovementMode) end
+
 ---@param Timestamp float
 ---@param NewLoc FVector
 ---@param NewVel FVector
@@ -811,19 +1012,24 @@ function ACharacter:ClientAdjustRootMotionPosition(Timestamp, ServerMontageTrack
 ---@param bHasBase boolean
 ---@param bBaseRelativePosition boolean
 ---@param ServerMovementMode uint8
-function ACharacter:ClientAdjustPosition(Timestamp, NewLoc, NewVel, NewBase, NewBaseBoneName, bHasBase, bBaseRelativePosition, ServerMovementMode) end
+function ACharacter:ClientAdjustPosition(Timestamp, NewLoc, NewVel, NewBase, NewBaseBoneName, bHasBase,
+                                         bBaseRelativePosition, ServerMovementMode) end
+
 ---@param Timestamp float
 function ACharacter:ClientAckGoodMove(Timestamp) end
+
 ---@return boolean
 function ACharacter:CanJumpInternal() end
+
 ---@return boolean
 function ACharacter:CanJump() end
+
 ---@return boolean
 function ACharacter:CanCrouch() end
+
 ---@param MeshRelativeLocation FVector
 ---@param MeshRelativeRotation FRotator
 function ACharacter:CacheInitialMeshOffset(MeshRelativeLocation, MeshRelativeRotation) end
-
 
 ---@class AClusterUnionActor : AActor
 ---@field ClusterUnion UClusterUnionComponent
@@ -831,7 +1037,6 @@ AClusterUnionActor = {}
 
 ---@return UClusterUnionComponent
 function AClusterUnionActor:GetClusterUnionComponent() end
-
 
 ---@class AController : AActor
 ---@field PlayerState APlayerState
@@ -846,65 +1051,91 @@ function AClusterUnionActor:GetClusterUnionComponent() end
 AController = {}
 
 function AController:UnPossess() end
+
 function AController:StopMovement() end
+
 ---@param NewLocation FVector
 ---@param NewRotation FRotator
 function AController:SetInitialLocationAndRotation(NewLocation, NewRotation) end
+
 ---@param bNewMoveInput boolean
 function AController:SetIgnoreMoveInput(bNewMoveInput) end
+
 ---@param bNewLookInput boolean
 function AController:SetIgnoreLookInput(bNewLookInput) end
+
 ---@param NewRotation FRotator
 function AController:SetControlRotation(NewRotation) end
+
 function AController:ResetIgnoreMoveInput() end
+
 function AController:ResetIgnoreLookInput() end
+
 function AController:ResetIgnoreInputFlags() end
+
 ---@param UnpossessedPawn APawn
 function AController:ReceiveUnPossess(UnpossessedPawn) end
+
 ---@param PossessedPawn APawn
 function AController:ReceivePossess(PossessedPawn) end
+
 ---@param Damage float
 ---@param DamageType UDamageType
 ---@param DamagedActor AActor
 ---@param DamageCauser AActor
 function AController:ReceiveInstigatedAnyDamage(Damage, DamageType, DamagedActor, DamageCauser) end
+
 ---@param InPawn APawn
 function AController:Possess(InPawn) end
+
 function AController:OnRep_PlayerState() end
+
 function AController:OnRep_Pawn() end
+
 ---@param Other AActor
 ---@param ViewPoint FVector
 ---@param bAlternateChecks boolean
 ---@return boolean
 function AController:LineOfSightTo(Other, ViewPoint, bAlternateChecks) end
+
 ---@return APawn
 function AController:K2_GetPawn() end
+
 ---@return boolean
 function AController:IsPlayerController() end
+
 ---@return boolean
 function AController:IsMoveInputIgnored() end
+
 ---@return boolean
 function AController:IsLookInputIgnored() end
+
 ---@return boolean
 function AController:IsLocalPlayerController() end
+
 ---@return boolean
 function AController:IsLocalController() end
+
 ---@return AActor
 function AController:GetViewTarget() end
+
 ---@param Location FVector
 ---@param Rotation FRotator
 function AController:GetPlayerViewPoint(Location, Rotation) end
+
 ---@return FRotator
 function AController:GetDesiredRotation() end
+
 ---@return FRotator
 function AController:GetControlRotation() end
+
 ---@param NewRotation FRotator
 ---@param bResetCamera boolean
 function AController:ClientSetRotation(NewRotation, bResetCamera) end
+
 ---@param NewLocation FVector
 ---@param NewRotation FRotator
 function AController:ClientSetLocation(NewLocation, NewRotation) end
-
 
 ---@class ACullDistanceVolume : AVolume
 ---@field CullDistances TArray<FCullDistanceSizePair>
@@ -939,21 +1170,26 @@ ADEPRECATED_WorldPartitionVolume = {}
 ADebugCameraController = {}
 
 function ADebugCameraController:ToggleDisplay() end
+
 function ADebugCameraController:ShowDebugSelectedInfo() end
+
 ---@param NewSpeedScale float
 function ADebugCameraController:SetPawnMovementSpeedScale(NewSpeedScale) end
+
 ---@param RestoredPC APlayerController
 function ADebugCameraController:ReceiveOnDeactivate(RestoredPC) end
+
 ---@param NewSelectedActor AActor
 ---@param SelectHitLocation FVector
 ---@param SelectHitNormal FVector
 ---@param Hit FHitResult
 function ADebugCameraController:ReceiveOnActorSelected(NewSelectedActor, SelectHitLocation, SelectHitNormal, Hit) end
+
 ---@param OriginalPC APlayerController
 function ADebugCameraController:ReceiveOnActivate(OriginalPC) end
+
 ---@return AActor
 function ADebugCameraController:GetSelectedActor() end
-
 
 ---@class ADebugCameraHUD : AHUD
 ADebugCameraHUD = {}
@@ -965,11 +1201,12 @@ ADecalActor = {}
 
 ---@param NewDecalMaterial UMaterialInterface
 function ADecalActor:SetDecalMaterial(NewDecalMaterial) end
+
 ---@return UMaterialInterface
 function ADecalActor:GetDecalMaterial() end
+
 ---@return UMaterialInstanceDynamic
 function ADecalActor:CreateDynamicMaterialInstance() end
-
 
 ---@class ADefaultPawn : APawn
 ---@field BaseTurnRate float
@@ -982,15 +1219,18 @@ ADefaultPawn = {}
 
 ---@param Rate float
 function ADefaultPawn:TurnAtRate(Rate) end
+
 ---@param Val float
 function ADefaultPawn:MoveUp_World(Val) end
+
 ---@param Val float
 function ADefaultPawn:MoveRight(Val) end
+
 ---@param Val float
 function ADefaultPawn:MoveForward(Val) end
+
 ---@param Rate float
 function ADefaultPawn:LookUpAtRate(Rate) end
-
 
 ---@class ADefaultPhysicsVolume : APhysicsVolume
 ADefaultPhysicsVolume = {}
@@ -1016,31 +1256,41 @@ ADocumentationActor = {}
 AEmitter = {}
 
 function AEmitter:ToggleActive() end
+
 ---@param ParameterName FName
 ---@param Param FVector
 function AEmitter:SetVectorParameter(ParameterName, Param) end
+
 ---@param NewTemplate UParticleSystem
 function AEmitter:SetTemplate(NewTemplate) end
+
 ---@param ParameterName FName
 ---@param Param UMaterialInterface
 function AEmitter:SetMaterialParameter(ParameterName, Param) end
+
 ---@param ParameterName FName
 ---@param Param float
 function AEmitter:SetFloatParameter(ParameterName, Param) end
+
 ---@param ParameterName FName
 ---@param Param FLinearColor
 function AEmitter:SetColorParameter(ParameterName, Param) end
+
 ---@param ParameterName FName
 ---@param Param AActor
 function AEmitter:SetActorParameter(ParameterName, Param) end
+
 function AEmitter:OnRep_bCurrentlyActive() end
+
 ---@param FinishedComponent UParticleSystemComponent
 function AEmitter:OnParticleSystemFinished(FinishedComponent) end
+
 ---@return boolean
 function AEmitter:IsActive() end
-function AEmitter:Deactivate() end
-function AEmitter:Activate() end
 
+function AEmitter:Deactivate() end
+
+function AEmitter:Activate() end
 
 ---@class AEmitterCameraLensEffectBase : AEmitter
 ---@field PS_CameraEffect UParticleSystem
@@ -1062,7 +1312,6 @@ AExponentialHeightFog = {}
 
 function AExponentialHeightFog:OnRep_bEnabled() end
 
-
 ---@class AGameMode : AGameModeBase
 ---@field MatchState FName
 ---@field bDelayedStart boolean
@@ -1079,22 +1328,30 @@ function AExponentialHeightFog:OnRep_bEnabled() end
 AGameMode = {}
 
 function AGameMode:StartMatch() end
+
 ---@param Msg FString
 function AGameMode:Say(Msg) end
+
 function AGameMode:RestartGame() end
+
 ---@return boolean
 function AGameMode:ReadyToStartMatch() end
+
 ---@return boolean
 function AGameMode:ReadyToEndMatch() end
+
 ---@param NewState FName
 function AGameMode:K2_OnSetMatchState(NewState) end
+
 ---@return boolean
 function AGameMode:IsMatchInProgress() end
+
 ---@return FName
 function AGameMode:GetMatchState() end
-function AGameMode:EndMatch() end
-function AGameMode:AbortMatch() end
 
+function AGameMode:EndMatch() end
+
+function AGameMode:AbortMatch() end
 
 ---@class AGameModeBase : AInfo
 ---@field OptionsString FString
@@ -1118,84 +1375,111 @@ function AGameMode:AbortMatch() end
 AGameModeBase = {}
 
 function AGameModeBase:StartPlay() end
+
 ---@param NewPlayer AController
 ---@param StartSpot AActor
 ---@return APawn
 function AGameModeBase:SpawnDefaultPawnFor(NewPlayer, StartSpot) end
+
 ---@param NewPlayer AController
 ---@param SpawnTransform FTransform
 ---@return APawn
 function AGameModeBase:SpawnDefaultPawnAtTransform(NewPlayer, SpawnTransform) end
+
 ---@param ActorToReset AActor
 ---@return boolean
 function AGameModeBase:ShouldReset(ActorToReset) end
+
 function AGameModeBase:ReturnToMainMenuHost() end
+
 ---@param NewPlayer AController
 ---@param SpawnTransform FTransform
 function AGameModeBase:RestartPlayerAtTransform(NewPlayer, SpawnTransform) end
+
 ---@param NewPlayer AController
 ---@param StartSpot AActor
 function AGameModeBase:RestartPlayerAtPlayerStart(NewPlayer, StartSpot) end
+
 ---@param NewPlayer AController
 function AGameModeBase:RestartPlayer(NewPlayer) end
+
 function AGameModeBase:ResetLevel() end
+
 ---@param Player APlayerController
 ---@return boolean
 function AGameModeBase:PlayerCanRestart(Player) end
+
 ---@param NewPlayerController APlayerController
 ---@return boolean
 function AGameModeBase:MustSpectate(NewPlayerController) end
+
 ---@param NewPlayer APlayerController
 function AGameModeBase:K2_PostLogin(NewPlayer) end
+
 ---@param OldPC APlayerController
 ---@param NewPC APlayerController
 function AGameModeBase:K2_OnSwapPlayerControllers(OldPC, NewPC) end
+
 ---@param NewPlayer AController
 function AGameModeBase:K2_OnRestartPlayer(NewPlayer) end
+
 ---@param ExitingController AController
 function AGameModeBase:K2_OnLogout(ExitingController) end
+
 ---@param Other AController
 ---@param NewName FString
 ---@param bNameChange boolean
 function AGameModeBase:K2_OnChangeName(Other, NewName, bNameChange) end
+
 ---@param Player AController
 ---@param IncomingName FString
 ---@return AActor
 function AGameModeBase:K2_FindPlayerStart(Player, IncomingName) end
+
 ---@param StartSpot AActor
 ---@param NewPlayer AController
 function AGameModeBase:InitStartSpot(StartSpot, NewPlayer) end
+
 ---@param NewPlayer APlayerController
 function AGameModeBase:InitializeHUDForPlayer(NewPlayer) end
+
 ---@return boolean
 function AGameModeBase:HasMatchStarted() end
+
 ---@return boolean
 function AGameModeBase:HasMatchEnded() end
+
 ---@param NewPlayer APlayerController
 function AGameModeBase:HandleStartingNewPlayer(NewPlayer) end
+
 ---@return int32
 function AGameModeBase:GetNumSpectators() end
+
 ---@return int32
 function AGameModeBase:GetNumPlayers() end
+
 ---@param InController AController
 ---@return UClass
 function AGameModeBase:GetDefaultPawnClassForController(InController) end
+
 ---@param Player AController
 ---@param IncomingName FString
 ---@return AActor
 function AGameModeBase:FindPlayerStart(Player, IncomingName) end
+
 ---@param Player AController
 ---@return AActor
 function AGameModeBase:ChoosePlayerStart(Player) end
+
 ---@param Controller AController
 ---@param NewName FString
 ---@param bNameChange boolean
 function AGameModeBase:ChangeName(Controller, NewName, bNameChange) end
+
 ---@param Viewer APlayerController
 ---@param ViewTarget APlayerState
 ---@return boolean
 function AGameModeBase:CanSpectate(Viewer, ViewTarget) end
-
 
 ---@class AGameNetworkManager : AInfo
 ---@field BadPacketLossThreshold float
@@ -1264,8 +1548,8 @@ AGameSession = {}
 AGameState = {}
 
 function AGameState:OnRep_MatchState() end
-function AGameState:OnRep_ElapsedTime() end
 
+function AGameState:OnRep_ElapsedTime() end
 
 ---@class AGameStateBase : AInfo
 ---@field GameModeClass TSubclassOf<AGameModeBase>
@@ -1280,25 +1564,34 @@ function AGameState:OnRep_ElapsedTime() end
 AGameStateBase = {}
 
 function AGameStateBase:OnRep_SpectatorClass() end
+
 function AGameStateBase:OnRep_ReplicatedWorldTimeSecondsDouble() end
+
 function AGameStateBase:OnRep_ReplicatedWorldTimeSeconds() end
+
 function AGameStateBase:OnRep_ReplicatedHasBegunPlay() end
+
 function AGameStateBase:OnRep_GameModeClass() end
+
 ---@return boolean
 function AGameStateBase:HasMatchStarted() end
+
 ---@return boolean
 function AGameStateBase:HasMatchEnded() end
+
 ---@return boolean
 function AGameStateBase:HasBegunPlay() end
+
 ---@return double
 function AGameStateBase:GetServerWorldTimeSeconds() end
+
 ---@param Controller AController
 ---@return float
 function AGameStateBase:GetPlayerStartTime(Controller) end
+
 ---@param Controller AController
 ---@return float
 function AGameStateBase:GetPlayerRespawnDelay(Controller) end
-
 
 ---@class AGeneratedMeshAreaLight : ASpotLight
 AGeneratedMeshAreaLight = {}
@@ -1324,56 +1617,76 @@ AGeneratedMeshAreaLight = {}
 AHUD = {}
 
 function AHUD:ShowHUD() end
+
 ---@param Category FName
 function AHUD:ShowDebugToggleSubCategory(Category) end
+
 ---@param DesiredClass TSubclassOf<AActor>
 function AHUD:ShowDebugForReticleTargetToggle(DesiredClass) end
+
 ---@param DebugType FName
 function AHUD:ShowDebug(DebugType) end
+
 ---@param SrcActor AActor
 ---@param bLeaveDurationText boolean
 function AHUD:RemoveDebugText(SrcActor, bLeaveDurationText) end
+
 function AHUD:RemoveAllDebugStrings() end
+
 ---@param BoxName FName
 function AHUD:ReceiveHitBoxRelease(BoxName) end
+
 ---@param BoxName FName
 function AHUD:ReceiveHitBoxEndCursorOver(BoxName) end
+
 ---@param BoxName FName
 function AHUD:ReceiveHitBoxClick(BoxName) end
+
 ---@param BoxName FName
 function AHUD:ReceiveHitBoxBeginCursorOver(BoxName) end
+
 ---@param SizeX int32
 ---@param SizeY int32
 function AHUD:ReceiveDrawHUD(SizeX, SizeY) end
+
 ---@param Location FVector
 ---@param bClampToZeroPlane boolean
 ---@return FVector
 function AHUD:Project(Location, bClampToZeroPlane) end
+
 function AHUD:PreviousDebugTarget() end
+
 function AHUD:NextDebugTarget() end
+
 ---@param Text FString
 ---@param OutWidth float
 ---@param OutHeight float
 ---@param Font UFont
 ---@param Scale float
 function AHUD:GetTextSize(Text, OutWidth, OutHeight, Font, Scale) end
+
 ---@return APlayerController
 function AHUD:GetOwningPlayerController() end
+
 ---@return APawn
 function AHUD:GetOwningPawn() end
+
 ---@param ClassFilter TSubclassOf<AActor>
 ---@param FirstPoint FVector2D
 ---@param SecondPoint FVector2D
 ---@param OutActors TArray<AActor>
 ---@param bIncludeNonCollidingComponents boolean
 ---@param bActorMustBeFullyEnclosed boolean
-function AHUD:GetActorsInSelectionRectangle(ClassFilter, FirstPoint, SecondPoint, OutActors, bIncludeNonCollidingComponents, bActorMustBeFullyEnclosed) end
+function AHUD:GetActorsInSelectionRectangle(ClassFilter, FirstPoint, SecondPoint, OutActors,
+                                            bIncludeNonCollidingComponents, bActorMustBeFullyEnclosed) end
+
 ---@param Texture UTexture
 ---@param ScreenX float
 ---@param ScreenY float
 ---@param Scale float
 ---@param bScalePosition boolean
 function AHUD:DrawTextureSimple(Texture, ScreenX, ScreenY, Scale, bScalePosition) end
+
 ---@param Texture UTexture
 ---@param ScreenX float
 ---@param ScreenY float
@@ -1389,7 +1702,9 @@ function AHUD:DrawTextureSimple(Texture, ScreenX, ScreenY, Scale, bScalePosition
 ---@param bScalePosition boolean
 ---@param Rotation float
 ---@param RotPivot FVector2D
-function AHUD:DrawTexture(Texture, ScreenX, ScreenY, ScreenW, ScreenH, TextureU, TextureV, TextureUWidth, TextureVHeight, TintColor, BlendMode, Scale, bScalePosition, Rotation, RotPivot) end
+function AHUD:DrawTexture(Texture, ScreenX, ScreenY, ScreenW, ScreenH, TextureU, TextureV, TextureUWidth, TextureVHeight,
+                          TintColor, BlendMode, Scale, bScalePosition, Rotation, RotPivot) end
+
 ---@param Text FString
 ---@param TextColor FLinearColor
 ---@param ScreenX float
@@ -1398,12 +1713,14 @@ function AHUD:DrawTexture(Texture, ScreenX, ScreenY, ScreenW, ScreenH, TextureU,
 ---@param Scale float
 ---@param bScalePosition boolean
 function AHUD:DrawText(Text, TextColor, ScreenX, ScreenY, Font, Scale, bScalePosition) end
+
 ---@param RectColor FLinearColor
 ---@param ScreenX float
 ---@param ScreenY float
 ---@param ScreenW float
 ---@param ScreenH float
 function AHUD:DrawRect(RectColor, ScreenX, ScreenY, ScreenW, ScreenH) end
+
 ---@param Material UMaterialInterface
 ---@param V0_Pos FVector2D
 ---@param V1_Pos FVector2D
@@ -1415,6 +1732,7 @@ function AHUD:DrawRect(RectColor, ScreenX, ScreenY, ScreenW, ScreenH) end
 ---@param V1_Color FLinearColor
 ---@param V2_Color FLinearColor
 function AHUD:DrawMaterialTriangle(Material, V0_Pos, V1_Pos, V2_Pos, V0_UV, V1_UV, V2_UV, V0_Color, V1_Color, V2_Color) end
+
 ---@param Material UMaterialInterface
 ---@param ScreenX float
 ---@param ScreenY float
@@ -1423,6 +1741,7 @@ function AHUD:DrawMaterialTriangle(Material, V0_Pos, V1_Pos, V2_Pos, V0_UV, V1_U
 ---@param Scale float
 ---@param bScalePosition boolean
 function AHUD:DrawMaterialSimple(Material, ScreenX, ScreenY, ScreenW, ScreenH, Scale, bScalePosition) end
+
 ---@param Material UMaterialInterface
 ---@param ScreenX float
 ---@param ScreenY float
@@ -1436,7 +1755,9 @@ function AHUD:DrawMaterialSimple(Material, ScreenX, ScreenY, ScreenW, ScreenH, S
 ---@param bScalePosition boolean
 ---@param Rotation float
 ---@param RotPivot FVector2D
-function AHUD:DrawMaterial(Material, ScreenX, ScreenY, ScreenW, ScreenH, MaterialU, MaterialV, MaterialUWidth, MaterialVHeight, Scale, bScalePosition, Rotation, RotPivot) end
+function AHUD:DrawMaterial(Material, ScreenX, ScreenY, ScreenW, ScreenH, MaterialU, MaterialV, MaterialUWidth,
+                           MaterialVHeight, Scale, bScalePosition, Rotation, RotPivot) end
+
 ---@param StartScreenX float
 ---@param StartScreenY float
 ---@param EndScreenX float
@@ -1444,17 +1765,20 @@ function AHUD:DrawMaterial(Material, ScreenX, ScreenY, ScreenW, ScreenH, Materia
 ---@param LineColor FLinearColor
 ---@param LineThickness float
 function AHUD:DrawLine(StartScreenX, StartScreenY, EndScreenX, EndScreenY, LineColor, LineThickness) end
+
 ---@param ScreenX float
 ---@param ScreenY float
 ---@param WorldPosition FVector
 ---@param WorldDirection FVector
 function AHUD:Deproject(ScreenX, ScreenY, WorldPosition, WorldDirection) end
+
 ---@param Position FVector2D
 ---@param Size FVector2D
 ---@param InName FName
 ---@param bConsumesInput boolean
 ---@param Priority int32
 function AHUD:AddHitBox(Position, Size, InName, bConsumesInput, Priority) end
+
 ---@param DebugText FString
 ---@param SrcActor AActor
 ---@param Duration float
@@ -1467,8 +1791,8 @@ function AHUD:AddHitBox(Position, Size, InName, bConsumesInput, Priority) end
 ---@param InFont UFont
 ---@param FontScale float
 ---@param bDrawShadow boolean
-function AHUD:AddDebugText(DebugText, SrcActor, Duration, Offset, DesiredOffset, TextColor, bSkipOverwriteCheck, bAbsoluteLocation, bKeepAttachedToActor, InFont, FontScale, bDrawShadow) end
-
+function AHUD:AddDebugText(DebugText, SrcActor, Duration, Offset, DesiredOffset, TextColor, bSkipOverwriteCheck,
+                           bAbsoluteLocation, bKeepAttachedToActor, InFont, FontScale, bDrawShadow) end
 
 ---@class AHeterogeneousVolume : AInfo
 ---@field HeterogeneousVolumeComponent UHeterogeneousVolumeComponent
@@ -1507,7 +1831,6 @@ ALODActor = {}
 ---@param Reason EEndPlayReason::Type
 function ALODActor:OnSubActorEndPlay(Actor, Reason) end
 
-
 ---@class ALevelBounds : AActor
 ---@field BoxComponent UBoxComponent
 ---@field bAutoUpdateBounds boolean
@@ -1522,7 +1845,6 @@ ALevelBounds = {}
 ALevelInstance = {}
 
 function ALevelInstance:OnRep_LevelInstanceSpawnGuid() end
-
 
 ---@class ALevelInstanceEditorInstanceActor : AActor
 ALevelInstanceEditorInstanceActor = {}
@@ -1539,17 +1861,19 @@ ALevelScriptActor = {}
 ---@param OldOriginLocation FIntVector
 ---@param NewOriginLocation FIntVector
 function ALevelScriptActor:WorldOriginLocationChanged(OldOriginLocation, NewOriginLocation) end
+
 ---@param bCinematicMode boolean
 ---@param bHidePlayer boolean
 ---@param bAffectsHUD boolean
 ---@param bAffectsMovement boolean
 ---@param bAffectsTurning boolean
 function ALevelScriptActor:SetCinematicMode(bCinematicMode, bHidePlayer, bAffectsHUD, bAffectsMovement, bAffectsTurning) end
+
 ---@param EventName FName
 ---@return boolean
 function ALevelScriptActor:RemoteEvent(EventName) end
-function ALevelScriptActor:LevelReset() end
 
+function ALevelScriptActor:LevelReset() end
 
 ---@class ALevelStreamingVolume : AVolume
 ---@field StreamingLevelNames TArray<FName>
@@ -1566,30 +1890,41 @@ ALevelStreamingVolume = {}
 ALight = {}
 
 function ALight:ToggleEnabled() end
+
 ---@param NewLightFunctionScale FVector
 function ALight:SetLightFunctionScale(NewLightFunctionScale) end
+
 ---@param NewLightFunctionMaterial UMaterialInterface
 function ALight:SetLightFunctionMaterial(NewLightFunctionMaterial) end
+
 ---@param NewLightFunctionFadeDistance float
 function ALight:SetLightFunctionFadeDistance(NewLightFunctionFadeDistance) end
+
 ---@param NewLightColor FLinearColor
 function ALight:SetLightColor(NewLightColor) end
+
 ---@param bSetEnabled boolean
 function ALight:SetEnabled(bSetEnabled) end
+
 ---@param bNewValue boolean
 function ALight:SetCastShadows(bNewValue) end
+
 ---@param NewBrightness float
 function ALight:SetBrightness(NewBrightness) end
+
 ---@param bNewValue boolean
 function ALight:SetAffectTranslucentLighting(bNewValue) end
+
 function ALight:OnRep_bEnabled() end
+
 ---@return boolean
 function ALight:IsEnabled() end
+
 ---@return FLinearColor
 function ALight:GetLightColor() end
+
 ---@return float
 function ALight:GetBrightness() end
-
 
 ---@class ALightWeightInstanceManager : AActor
 ---@field RepresentedClass TSubclassOf<AActor>
@@ -1602,8 +1937,8 @@ ALightWeightInstanceManager = {}
 
 ---@param DestroyedActor AActor
 function ALightWeightInstanceManager:OnSpawnedActorDestroyed(DestroyedActor) end
-function ALightWeightInstanceManager:OnRep_Transforms() end
 
+function ALightWeightInstanceManager:OnRep_Transforms() end
 
 ---@class ALightWeightInstanceStaticMeshManager : ALightWeightInstanceManager
 ---@field StaticMesh TSoftObjectPtr<UStaticMesh>
@@ -1613,7 +1948,6 @@ function ALightWeightInstanceManager:OnRep_Transforms() end
 ALightWeightInstanceStaticMeshManager = {}
 
 function ALightWeightInstanceStaticMeshManager:OnRep_StaticMesh() end
-
 
 ---@class ALightmassCharacterIndirectDetailVolume : AVolume
 ALightmassCharacterIndirectDetailVolume = {}
@@ -1641,10 +1975,11 @@ ALocalHeightFog = {}
 ALocationVolume = {}
 
 function ALocationVolume:Unload() end
+
 function ALocationVolume:Load() end
+
 ---@return boolean
 function ALocationVolume:IsLoaded() end
-
 
 ---@class AMaterialInstanceActor : AActor
 ---@field TargetActors TArray<AActor>
@@ -1723,75 +2058,106 @@ APartitionActor = {}
 APawn = {}
 
 function APawn:SpawnDefaultController() end
+
 ---@param bNewValue boolean
 ---@param bForceUpdate boolean
 function APawn:SetCanAffectNavigationGeneration(bNewValue, bForceUpdate) end
+
 ---@param OldController AController
 function APawn:ReceiveUnpossessed(OldController) end
+
 function APawn:ReceiveRestarted() end
+
 ---@param NewController AController
 function APawn:ReceivePossessed(NewController) end
+
 ---@param OldController AController
 ---@param NewController AController
 function APawn:ReceiveControllerChanged(OldController, NewController) end
+
 ---@param Loudness float
 ---@param NoiseLocation FVector
 ---@param bUseNoiseMakerLocation boolean
 ---@param NoiseMaker AActor
 function APawn:PawnMakeNoise(Loudness, NoiseLocation, bUseNoiseMakerLocation, NoiseMaker) end
+
 function APawn:OnRep_PlayerState() end
+
 function APawn:OnRep_Controller() end
+
 ---@return boolean
 function APawn:IsPlayerControlled() end
+
 ---@return boolean
 function APawn:IsPawnControlled() end
+
 ---@return boolean
 function APawn:IsMoveInputIgnored() end
+
 ---@return boolean
 function APawn:IsLocallyViewed() end
+
 ---@return boolean
 function APawn:IsLocallyControlled() end
+
 ---@return boolean
 function APawn:IsControlled() end
+
 ---@return boolean
 function APawn:IsBotControlled() end
+
 ---@return FPlatformUserId
 function APawn:GetPlatformUserId() end
+
 ---@return FVector
 function APawn:GetPendingMovementInputVector() end
+
 ---@return TSubclassOf<UInputComponent>
 function APawn:GetOverrideInputComponentClass() end
+
 ---@return FVector
 function APawn:GetNavAgentLocation() end
+
 ---@return UPawnMovementComponent
 function APawn:GetMovementComponent() end
+
 ---@param Pawn APawn
 ---@return AActor
 function APawn:GetMovementBaseActor(Pawn) end
+
 ---@return APlayerController
 function APawn:GetLocalViewingPlayerController() end
+
 ---@return FVector
 function APawn:GetLastMovementInputVector() end
+
 ---@return FRotator
 function APawn:GetControlRotation() end
+
 ---@return AController
 function APawn:GetController() end
+
 ---@return FRotator
 function APawn:GetBaseAimRotation() end
+
 function APawn:DetachFromControllerPendingDestroy() end
+
 ---@return FVector
 function APawn:ConsumeMovementInputVector() end
+
 ---@param WorldDirection FVector
 ---@param ScaleValue float
 ---@param bForce boolean
 function APawn:AddMovementInput(WorldDirection, ScaleValue, bForce) end
+
 ---@param Val float
 function APawn:AddControllerYawInput(Val) end
+
 ---@param Val float
 function APawn:AddControllerRollInput(Val) end
+
 ---@param Val float
 function APawn:AddControllerPitchInput(Val) end
-
 
 ---@class APhysicsConstraintActor : ARigidBodyBase
 ---@field ConstraintComp UPhysicsConstraintComponent
@@ -1825,7 +2191,6 @@ APlanarReflection = {}
 
 ---@param bEnable boolean
 function APlanarReflection:OnInterpToggle(bEnable) end
-
 
 ---@class APlaneReflectionCapture : AReflectionCapture
 APlaneReflectionCapture = {}
@@ -1866,22 +2231,29 @@ APlaneReflectionCapture = {}
 APlayerCameraManager = {}
 
 function APlayerCameraManager:SwapPendingViewTargetWhenUsingClientSideCameraUpdates() end
+
 ---@param ShakeInstance UCameraShakeBase
 ---@param bImmediately boolean
 function APlayerCameraManager:StopCameraShake(ShakeInstance, bImmediately) end
+
 function APlayerCameraManager:StopCameraFade() end
+
 ---@param Shake TSubclassOf<UCameraShakeBase>
 ---@param SourceComponent UCameraShakeSourceComponent
 ---@param bImmediately boolean
 function APlayerCameraManager:StopAllInstancesOfCameraShakeFromSource(Shake, SourceComponent, bImmediately) end
+
 ---@param Shake TSubclassOf<UCameraShakeBase>
 ---@param bImmediately boolean
 function APlayerCameraManager:StopAllInstancesOfCameraShake(Shake, bImmediately) end
+
 ---@param SourceComponent UCameraShakeSourceComponent
 ---@param bImmediately boolean
 function APlayerCameraManager:StopAllCameraShakesFromSource(SourceComponent, bImmediately) end
+
 ---@param bImmediately boolean
 function APlayerCameraManager:StopAllCameraShakes(bImmediately) end
+
 ---@param ShakeClass TSubclassOf<UCameraShakeBase>
 ---@param SourceComponent UCameraShakeSourceComponent
 ---@param Scale float
@@ -1889,12 +2261,14 @@ function APlayerCameraManager:StopAllCameraShakes(bImmediately) end
 ---@param UserPlaySpaceRot FRotator
 ---@return UCameraShakeBase
 function APlayerCameraManager:StartCameraShakeFromSource(ShakeClass, SourceComponent, Scale, PlaySpace, UserPlaySpaceRot) end
+
 ---@param ShakeClass TSubclassOf<UCameraShakeBase>
 ---@param Scale float
 ---@param PlaySpace ECameraShakePlaySpace
 ---@param UserPlaySpaceRot FRotator
 ---@return UCameraShakeBase
 function APlayerCameraManager:StartCameraShake(ShakeClass, Scale, PlaySpace, UserPlaySpaceRot) end
+
 ---@param FromAlpha float
 ---@param ToAlpha float
 ---@param Duration float
@@ -1902,55 +2276,75 @@ function APlayerCameraManager:StartCameraShake(ShakeClass, Scale, PlaySpace, Use
 ---@param bShouldFadeAudio boolean
 ---@param bHoldWhenFinished boolean
 function APlayerCameraManager:StartCameraFade(FromAlpha, ToAlpha, Duration, Color, bShouldFadeAudio, bHoldWhenFinished) end
+
 ---@param InFadeAmount float
 ---@param Color FLinearColor
 ---@param bInFadeAudio boolean
 function APlayerCameraManager:SetManualCameraFade(InFadeAmount, Color, bInFadeAudio) end
+
 function APlayerCameraManager:SetGameCameraCutThisFrame() end
+
 ---@param Emitter TScriptInterface<ICameraLensEffectInterface>
 function APlayerCameraManager:RemoveGenericCameraLensEffect(Emitter) end
+
 ---@param ModifierToRemove UCameraModifier
 ---@return boolean
 function APlayerCameraManager:RemoveCameraModifier(ModifierToRemove) end
+
 ---@param Emitter AEmitterCameraLensEffectBase
 function APlayerCameraManager:RemoveCameraLensEffect(Emitter) end
+
 ---@param NewCameraLocation FVector
 ---@param PreviousCameraLocation FVector
 ---@param OriginalCameraLocation FVector
 ---@param ResultCameraLocation FVector
-function APlayerCameraManager:PhotographyCameraModify(NewCameraLocation, PreviousCameraLocation, OriginalCameraLocation, ResultCameraLocation) end
+function APlayerCameraManager:PhotographyCameraModify(NewCameraLocation, PreviousCameraLocation, OriginalCameraLocation,
+                                                      ResultCameraLocation) end
+
 function APlayerCameraManager:OnPhotographySessionStart() end
+
 function APlayerCameraManager:OnPhotographySessionEnd() end
+
 function APlayerCameraManager:OnPhotographyMultiPartCaptureStart() end
+
 function APlayerCameraManager:OnPhotographyMultiPartCaptureEnd() end
+
 ---@return APlayerController
 function APlayerCameraManager:GetOwningPlayerController() end
+
 ---@return float
 function APlayerCameraManager:GetFOVAngle() end
+
 ---@return FRotator
 function APlayerCameraManager:GetCameraRotation() end
+
 ---@return FVector
 function APlayerCameraManager:GetCameraLocation() end
+
 ---@param ModifierClass TSubclassOf<UCameraModifier>
 ---@return UCameraModifier
 function APlayerCameraManager:FindCameraModifierByClass(ModifierClass) end
+
 function APlayerCameraManager:ClearCameraLensEffects() end
+
 ---@param CameraTarget AActor
 ---@param NewCameraLocation FVector
 ---@param NewCameraRotation FRotator
 ---@param NewCameraFOV float
 ---@return boolean
 function APlayerCameraManager:BlueprintUpdateCamera(CameraTarget, NewCameraLocation, NewCameraRotation, NewCameraFOV) end
+
 ---@param ModifierClass TSubclassOf<UCameraModifier>
 ---@return UCameraModifier
 function APlayerCameraManager:AddNewCameraModifier(ModifierClass) end
+
 ---@param LensEffectEmitterClass TSubclassOf<AActor>
 ---@return TScriptInterface<ICameraLensEffectInterface>
 function APlayerCameraManager:AddGenericCameraLensEffect(LensEffectEmitterClass) end
+
 ---@param LensEffectEmitterClass TSubclassOf<AEmitterCameraLensEffectBase>
 ---@return AEmitterCameraLensEffectBase
 function APlayerCameraManager:AddCameraLensEffect(LensEffectEmitterClass) end
-
 
 ---@class APlayerController : AController
 ---@field Player UPlayer
@@ -2014,131 +2408,187 @@ APlayerController = {}
 ---@param Key FKey
 ---@return boolean
 function APlayerController:WasInputKeyJustReleased(Key) end
+
 ---@param Key FKey
 ---@return boolean
 function APlayerController:WasInputKeyJustPressed(Key) end
+
 ---@param bInSpeaking boolean
 function APlayerController:ToggleSpeaking(bInSpeaking) end
+
 ---@param PackageName FName
 ---@param Filename FName
 function APlayerController:TestServerLevelVisibilityChange(PackageName, Filename) end
+
 ---@param URL FString
 function APlayerController:SwitchLevel(URL) end
+
 ---@return boolean
 function APlayerController:StreamingSourceShouldBlockOnSlowStreaming() end
+
 ---@return boolean
 function APlayerController:StreamingSourceShouldActivate() end
+
 ---@param Hand EControllerHand
 function APlayerController:StopHapticEffect(Hand) end
+
 ---@param FireModeNum uint8
 function APlayerController:StartFire(FireModeNum) end
+
 ---@param bVisible boolean
 function APlayerController:SetVirtualJoystickVisibility(bVisible) end
+
 ---@param NewViewTarget AActor
 ---@param BlendTime float
 ---@param BlendFunc EViewTargetBlendFunction
 ---@param BlendExp float
 ---@param bLockOutgoing boolean
 function APlayerController:SetViewTargetWithBlend(NewViewTarget, BlendTime, BlendFunc, BlendExp, bLockOutgoing) end
+
 ---@param S FString
 function APlayerController:SetName(S) end
+
 ---@param X int32
 ---@param Y int32
 function APlayerController:SetMouseLocation(X, Y) end
+
 ---@param Cursor EMouseCursor::Type
 ---@param CursorWidget UUserWidget
 function APlayerController:SetMouseCursorWidget(Cursor, CursorWidget) end
+
 ---@param bEnabled boolean
 function APlayerController:SetMotionControlsEnabled(bEnabled) end
+
 ---@param Frequency float
 ---@param Amplitude float
 ---@param Hand EControllerHand
 function APlayerController:SetHapticsByValue(Frequency, Amplitude, Hand) end
+
 ---@param bNewDisabled boolean
 function APlayerController:SetDisableHaptics(bNewDisabled) end
+
 ---@param NewValue float
 function APlayerController:SetDeprecatedInputYawScale(NewValue) end
+
 ---@param NewValue float
 function APlayerController:SetDeprecatedInputRollScale(NewValue) end
+
 ---@param NewValue float
 function APlayerController:SetDeprecatedInputPitchScale(NewValue) end
+
 ---@param Color FColor
 function APlayerController:SetControllerLightColor(Color) end
+
 ---@param bInCinematicMode boolean
 ---@param bHidePlayer boolean
 ---@param bAffectsHUD boolean
 ---@param bAffectsMovement boolean
 ---@param bAffectsTurning boolean
 function APlayerController:SetCinematicMode(bInCinematicMode, bHidePlayer, bAffectsHUD, bAffectsMovement, bAffectsTurning) end
+
 ---@param AttachToComponent USceneComponent
 ---@param Location FVector
 ---@param Rotation FRotator
 function APlayerController:SetAudioListenerOverride(AttachToComponent, Location, Rotation) end
+
 ---@param AttachToComponent USceneComponent
 ---@param AttenuationLocationOVerride FVector
 function APlayerController:SetAudioListenerAttenuationOverride(AttachToComponent, AttenuationLocationOVerride) end
+
 ---@param TransitionParams FViewTargetTransitionParams
 function APlayerController:ServerViewSelf(TransitionParams) end
+
 function APlayerController:ServerViewPrevPlayer() end
+
 function APlayerController:ServerViewNextPlayer() end
+
 function APlayerController:ServerVerifyViewTarget() end
+
 ---@param LevelVisibilities TArray<FUpdateLevelVisibilityLevelInfo>
 function APlayerController:ServerUpdateMultipleLevelsVisibility(LevelVisibilities) end
+
 ---@param LevelVisibility FUpdateLevelVisibilityLevelInfo
 function APlayerController:ServerUpdateLevelVisibility(LevelVisibility) end
+
 ---@param CamLoc FVector_NetQuantize
 ---@param CamPitchAndYaw int32
 function APlayerController:ServerUpdateCamera(CamLoc, CamPitchAndYaw) end
+
 ---@param PlayerId FUniqueNetIdRepl
 function APlayerController:ServerUnmutePlayer(PlayerId) end
+
 ---@param PlayerId FUniqueNetIdRepl
 function APlayerController:ServerUnblockPlayer(PlayerId) end
+
 function APlayerController:ServerToggleAILogging() end
+
 function APlayerController:ServerShortTimeout() end
+
 ---@param bWaiting boolean
 function APlayerController:ServerSetSpectatorWaiting(bWaiting) end
+
 ---@param NewLoc FVector
 ---@param NewRot FRotator
 function APlayerController:ServerSetSpectatorLocation(NewLoc, NewRot) end
+
 ---@param Timestamp FAsyncPhysicsTimestamp
 function APlayerController:ServerSendLatestAsyncPhysicsTimestamp(Timestamp) end
+
 function APlayerController:ServerRestartPlayer() end
+
 ---@param RecvClientInputFrame int32
 ---@param Data TArray<uint8>
 function APlayerController:ServerRecvClientInputFrame(RecvClientInputFrame, Data) end
+
 function APlayerController:ServerPause() end
+
 ---@param WorldPackageName FName
 function APlayerController:ServerNotifyLoadedWorld(WorldPackageName) end
+
 ---@param PlayerId FUniqueNetIdRepl
 function APlayerController:ServerMutePlayer(PlayerId) end
+
 ---@param Msg FString
 function APlayerController:ServerExecRPC(Msg) end
+
 ---@param Msg FString
 function APlayerController:ServerExec(Msg) end
+
 function APlayerController:ServerCheckClientPossessionReliable() end
+
 function APlayerController:ServerCheckClientPossession() end
+
 ---@param S FString
 function APlayerController:ServerChangeName(S) end
+
 ---@param NewMode FName
 function APlayerController:ServerCamera(NewMode) end
+
 ---@param PlayerId FUniqueNetIdRepl
 function APlayerController:ServerBlockPlayer(PlayerId) end
+
 ---@param P APawn
 function APlayerController:ServerAcknowledgePossession(P) end
+
 ---@param Command FString
 function APlayerController:SendToConsole(Command) end
+
 function APlayerController:RestartLevel() end
+
 function APlayerController:ResetControllerLightColor() end
+
 ---@param WorldLocation FVector
 ---@param ScreenLocation FVector2D
 ---@param bPlayerViewportRelative boolean
 ---@return boolean
 function APlayerController:ProjectWorldLocationToScreen(WorldLocation, ScreenLocation, bPlayerViewportRelative) end
+
 ---@param HapticEffect UHapticFeedbackEffect_Base
 ---@param Hand EControllerHand
 ---@param Scale float
 ---@param bLoop boolean
 function APlayerController:PlayHapticEffect(HapticEffect, Hand, Scale, bLoop) end
+
 ---@param Intensity float
 ---@param Duration float
 ---@param bAffectsLeftLarge boolean
@@ -2147,137 +2597,183 @@ function APlayerController:PlayHapticEffect(HapticEffect, Hand, Scale, bLoop) en
 ---@param bAffectsRightSmall boolean
 ---@param Action EDynamicForceFeedbackAction::Type
 ---@param LatentInfo FLatentActionInfo
-function APlayerController:PlayDynamicForceFeedback(Intensity, Duration, bAffectsLeftLarge, bAffectsLeftSmall, bAffectsRightLarge, bAffectsRightSmall, Action, LatentInfo) end
+function APlayerController:PlayDynamicForceFeedback(Intensity, Duration, bAffectsLeftLarge, bAffectsLeftSmall,
+                                                    bAffectsRightLarge, bAffectsRightSmall, Action, LatentInfo) end
+
 function APlayerController:Pause() end
+
 ---@param bIsLogging boolean
 function APlayerController:OnServerStartedVisualLogger(bIsLogging) end
+
 function APlayerController:OnRep_AsyncPhysicsDataComponent() end
+
 ---@param URL FString
 function APlayerController:LocalTravel(URL) end
+
 ---@param ForceFeedbackEffect UForceFeedbackEffect
 ---@param Tag FName
 ---@param bLooping boolean
 ---@param bIgnoreTimeDilation boolean
 ---@param bPlayWhilePaused boolean
-function APlayerController:K2_ClientPlayForceFeedback(ForceFeedbackEffect, Tag, bLooping, bIgnoreTimeDilation, bPlayWhilePaused) end
+function APlayerController:K2_ClientPlayForceFeedback(ForceFeedbackEffect, Tag, bLooping, bIgnoreTimeDilation,
+                                                      bPlayWhilePaused) end
+
 ---@return boolean
 function APlayerController:IsStreamingSourceEnabled() end
+
 ---@param Key FKey
 ---@return boolean
 function APlayerController:IsInputKeyDown(Key) end
+
 ---@param SizeX int32
 ---@param SizeY int32
 function APlayerController:GetViewportSize(SizeX, SizeY) end
+
 ---@param OutShapes TArray<FStreamingSourceShape>
 function APlayerController:GetStreamingSourceShapes(OutShapes) end
+
 ---@return EStreamingSourcePriority
 function APlayerController:GetStreamingSourcePriority() end
+
 ---@param OutLocation FVector
 ---@param OutRotation FRotator
 function APlayerController:GetStreamingSourceLocationAndRotation(OutLocation, OutRotation) end
+
 ---@return ASpectatorPawn
 function APlayerController:GetSpectatorPawn() end
+
 ---@return FPlatformUserId
 function APlayerController:GetPlatformUserId() end
+
 ---@return TSubclassOf<UPlayerInput>
 function APlayerController:GetOverridePlayerInputClass() end
+
 ---@param LocationX float
 ---@param LocationY float
 ---@return boolean
 function APlayerController:GetMousePosition(LocationX, LocationY) end
+
 ---@param Key FKey
 ---@return FVector
 function APlayerController:GetInputVectorKeyState(Key) end
+
 ---@param FingerIndex ETouchIndex::Type
 ---@param LocationX float
 ---@param LocationY float
 ---@param bIsCurrentlyPressed boolean
 function APlayerController:GetInputTouchState(FingerIndex, LocationX, LocationY, bIsCurrentlyPressed) end
+
 ---@param DeltaX float
 ---@param DeltaY float
 function APlayerController:GetInputMouseDelta(DeltaX, DeltaY) end
+
 ---@param Tilt FVector
 ---@param RotationRate FVector
 ---@param Gravity FVector
 ---@param Acceleration FVector
 function APlayerController:GetInputMotionState(Tilt, RotationRate, Gravity, Acceleration) end
+
 ---@param Key FKey
 ---@return float
 function APlayerController:GetInputKeyTimeDown(Key) end
+
 ---@param WhichStick EControllerAnalogStick::Type
 ---@param StickX float
 ---@param StickY float
 function APlayerController:GetInputAnalogStickState(WhichStick, StickX, StickY) end
+
 ---@param Key FKey
 ---@return float
 function APlayerController:GetInputAnalogKeyState(Key) end
+
 ---@return AHUD
 function APlayerController:GetHUD() end
+
 ---@param FingerIndex ETouchIndex::Type
 ---@param ObjectTypes TArray<EObjectTypeQuery>
 ---@param bTraceComplex boolean
 ---@param HitResult FHitResult
 ---@return boolean
 function APlayerController:GetHitResultUnderFingerForObjects(FingerIndex, ObjectTypes, bTraceComplex, HitResult) end
+
 ---@param FingerIndex ETouchIndex::Type
 ---@param TraceChannel ETraceTypeQuery
 ---@param bTraceComplex boolean
 ---@param HitResult FHitResult
 ---@return boolean
 function APlayerController:GetHitResultUnderFingerByChannel(FingerIndex, TraceChannel, bTraceComplex, HitResult) end
+
 ---@param FingerIndex ETouchIndex::Type
 ---@param TraceChannel ECollisionChannel
 ---@param bTraceComplex boolean
 ---@param HitResult FHitResult
 ---@return boolean
 function APlayerController:GetHitResultUnderFinger(FingerIndex, TraceChannel, bTraceComplex, HitResult) end
+
 ---@param ObjectTypes TArray<EObjectTypeQuery>
 ---@param bTraceComplex boolean
 ---@param HitResult FHitResult
 ---@return boolean
 function APlayerController:GetHitResultUnderCursorForObjects(ObjectTypes, bTraceComplex, HitResult) end
+
 ---@param TraceChannel ETraceTypeQuery
 ---@param bTraceComplex boolean
 ---@param HitResult FHitResult
 ---@return boolean
 function APlayerController:GetHitResultUnderCursorByChannel(TraceChannel, bTraceComplex, HitResult) end
+
 ---@param TraceChannel ECollisionChannel
 ---@param bTraceComplex boolean
 ---@param HitResult FHitResult
 ---@return boolean
 function APlayerController:GetHitResultUnderCursor(TraceChannel, bTraceComplex, HitResult) end
+
 ---@return FVector
 function APlayerController:GetFocalLocation() end
+
 ---@return float
 function APlayerController:GetDeprecatedInputYawScale() end
+
 ---@return float
 function APlayerController:GetDeprecatedInputRollScale() end
+
 ---@return float
 function APlayerController:GetDeprecatedInputPitchScale() end
+
 ---@return UAsyncPhysicsData
 function APlayerController:GetAsyncPhysicsDataToWrite() end
+
 ---@return UAsyncPhysicsData
 function APlayerController:GetAsyncPhysicsDataToConsume() end
+
 ---@param NewFOV float
 function APlayerController:FOV(NewFOV) end
+
 function APlayerController:EnableCheats() end
+
 ---@param ScreenX float
 ---@param ScreenY float
 ---@param WorldLocation FVector
 ---@param WorldDirection FVector
 ---@return boolean
 function APlayerController:DeprojectScreenPositionToWorld(ScreenX, ScreenY, WorldLocation, WorldDirection) end
+
 ---@param WorldLocation FVector
 ---@param WorldDirection FVector
 ---@return boolean
 function APlayerController:DeprojectMousePositionToWorld(WorldLocation, WorldDirection) end
+
 ---@param Key FKey
 function APlayerController:ConsoleKey(Key) end
+
 ---@param KickReason FText
 function APlayerController:ClientWasKicked(KickReason) end
+
 function APlayerController:ClientVoiceHandshakeComplete() end
+
 ---@param LevelStatuses TArray<FUpdateLevelStreamingLevelStatus>
 function APlayerController:ClientUpdateMultipleLevelsStreamingStatus(LevelStatuses) end
+
 ---@param PackageName FName
 ---@param bNewShouldBeLoaded boolean
 ---@param bNewShouldBeVisible boolean
@@ -2285,170 +2781,233 @@ function APlayerController:ClientUpdateMultipleLevelsStreamingStatus(LevelStatus
 ---@param LODIndex int32
 ---@param TransactionId FNetLevelVisibilityTransactionId
 ---@param bNewShouldBlockOnUnload boolean
-function APlayerController:ClientUpdateLevelStreamingStatus(PackageName, bNewShouldBeLoaded, bNewShouldBeVisible, bNewShouldBlockOnLoad, LODIndex, TransactionId, bNewShouldBlockOnUnload) end
+function APlayerController:ClientUpdateLevelStreamingStatus(PackageName, bNewShouldBeLoaded, bNewShouldBeVisible,
+                                                            bNewShouldBlockOnLoad, LODIndex, TransactionId,
+                                                            bNewShouldBlockOnUnload) end
+
 ---@param PlayerIds TArray<FUniqueNetIdRepl>
 function APlayerController:ClientUnmutePlayers(PlayerIds) end
+
 ---@param PlayerId FUniqueNetIdRepl
 function APlayerController:ClientUnmutePlayer(PlayerId) end
+
 ---@param URL FString
 ---@param TravelType ETravelType
 ---@param bSeamless boolean
 ---@param MapPackageGuid FGuid
 function APlayerController:ClientTravelInternal(URL, TravelType, bSeamless, MapPackageGuid) end
+
 ---@param URL FString
 ---@param TravelType ETravelType
 ---@param bSeamless boolean
 ---@param MapPackageGuid FGuid
 function APlayerController:ClientTravel(URL, TravelType, bSeamless, MapPackageGuid) end
+
 ---@param SenderPlayerState APlayerState
 ---@param S FString
 ---@param Type FName
 ---@param MsgLifeTime float
 function APlayerController:ClientTeamMessage(SenderPlayerState, S, Type, MsgLifeTime) end
+
 ---@param ForceFeedbackEffect UForceFeedbackEffect
 ---@param Tag FName
 function APlayerController:ClientStopForceFeedback(ForceFeedbackEffect, Tag) end
+
 ---@param SourceComponent UCameraShakeSourceComponent
 ---@param bImmediately boolean
 function APlayerController:ClientStopCameraShakesFromSource(SourceComponent, bImmediately) end
+
 ---@param Shake TSubclassOf<UCameraShakeBase>
 ---@param bImmediately boolean
 function APlayerController:ClientStopCameraShake(Shake, bImmediately) end
+
 function APlayerController:ClientStartOnlineSession() end
+
 ---@param Shake TSubclassOf<UCameraShakeBase>
 ---@param SourceComponent UCameraShakeSourceComponent
 function APlayerController:ClientStartCameraShakeFromSource(Shake, SourceComponent) end
+
 ---@param Shake TSubclassOf<UCameraShakeBase>
 ---@param Scale float
 ---@param PlaySpace ECameraShakePlaySpace
 ---@param UserPlaySpaceRot FRotator
 function APlayerController:ClientStartCameraShake(Shake, Scale, PlaySpace, UserPlaySpaceRot) end
+
 ---@param LensEffectEmitterClass TSubclassOf<AActor>
 function APlayerController:ClientSpawnGenericCameraLensEffect(LensEffectEmitterClass) end
+
 ---@param LensEffectEmitterClass TSubclassOf<AEmitterCameraLensEffectBase>
 function APlayerController:ClientSpawnCameraLensEffect(LensEffectEmitterClass) end
+
 ---@param A AActor
 ---@param TransitionParams FViewTargetTransitionParams
 function APlayerController:ClientSetViewTarget(A, TransitionParams) end
+
 ---@param bWaiting boolean
 function APlayerController:ClientSetSpectatorWaiting(bWaiting) end
+
 ---@param NewHUDClass TSubclassOf<AHUD>
 function APlayerController:ClientSetHUD(NewHUDClass) end
+
 ---@param Material UMaterialInterface
 ---@param ForceDuration float
 ---@param CinematicTextureGroups int32
 function APlayerController:ClientSetForceMipLevelsToBeResident(Material, ForceDuration, CinematicTextureGroups) end
+
 ---@param bInCinematicMode boolean
 ---@param bAffectsMovement boolean
 ---@param bAffectsTurning boolean
 ---@param bAffectsHUD boolean
 function APlayerController:ClientSetCinematicMode(bInCinematicMode, bAffectsMovement, bAffectsTurning, bAffectsHUD) end
+
 ---@param NewCamMode FName
 function APlayerController:ClientSetCameraMode(NewCamMode) end
+
 ---@param bEnableFading boolean
 ---@param FadeColor FColor
 ---@param FadeAlpha FVector2D
 ---@param FadeTime float
 ---@param bFadeAudio boolean
 ---@param bHoldWhenFinished boolean
-function APlayerController:ClientSetCameraFade(bEnableFading, FadeColor, FadeAlpha, FadeTime, bFadeAudio, bHoldWhenFinished) end
+function APlayerController:ClientSetCameraFade(bEnableFading, FadeColor, FadeAlpha, FadeTime, bFadeAudio,
+                                               bHoldWhenFinished) end
+
 function APlayerController:ClientSetBlockOnAsyncLoading() end
+
 ---@param ReturnReason FText
 function APlayerController:ClientReturnToMainMenuWithTextReason(ReturnReason) end
+
 ---@param NewPawn APawn
 function APlayerController:ClientRetryClientRestart(NewPawn) end
+
 ---@param NewPawn APawn
 function APlayerController:ClientRestart(NewPawn) end
+
 function APlayerController:ClientReset() end
+
 ---@param Object UObject
 function APlayerController:ClientRepObjRef(Object) end
+
 ---@param NumBuffered uint8
 ---@param TargetNumBufferedCmds float
 function APlayerController:ClientRecvServerAckFrameDebug(NumBuffered, TargetNumBufferedCmds) end
+
 ---@param LastProcessedInputFrame int32
 ---@param RecvServerFrameNumber int32
 ---@param TimeDilation int8
 function APlayerController:ClientRecvServerAckFrame(LastProcessedInputFrame, RecvServerFrameNumber, TimeDilation) end
+
 ---@param Message TSubclassOf<ULocalMessage>
 ---@param SWITCH int32
 ---@param RelatedPlayerState_1 APlayerState
 ---@param RelatedPlayerState_2 APlayerState
 ---@param OptionalObject UObject
-function APlayerController:ClientReceiveLocalizedMessage(Message, SWITCH, RelatedPlayerState_1, RelatedPlayerState_2, OptionalObject) end
+function APlayerController:ClientReceiveLocalizedMessage(Message, SWITCH, RelatedPlayerState_1, RelatedPlayerState_2,
+                                                         OptionalObject) end
+
 ---@param ForcedActor AActor
 ---@param ForceDuration float
 ---@param bEnableStreaming boolean
 ---@param CinematicTextureGroups int32
 function APlayerController:ClientPrestreamTextures(ForcedActor, ForceDuration, bEnableStreaming, CinematicTextureGroups) end
+
 ---@param LevelName FName
 ---@param bFirst boolean
 ---@param bLast boolean
 function APlayerController:ClientPrepareMapChange(LevelName, bFirst, bLast) end
+
 ---@param Sound USoundBase
 ---@param Location FVector
 ---@param VolumeMultiplier float
 ---@param PitchMultiplier float
 function APlayerController:ClientPlaySoundAtLocation(Sound, Location, VolumeMultiplier, PitchMultiplier) end
+
 ---@param Sound USoundBase
 ---@param VolumeMultiplier float
 ---@param PitchMultiplier float
 function APlayerController:ClientPlaySound(Sound, VolumeMultiplier, PitchMultiplier) end
+
 ---@param ForceFeedbackEffect UForceFeedbackEffect
 ---@param Params FForceFeedbackParameters
 function APlayerController:ClientPlayForceFeedback_Internal(ForceFeedbackEffect, Params) end
+
 ---@param PlayerId FUniqueNetIdRepl
 function APlayerController:ClientMutePlayer(PlayerId) end
+
 ---@param S FString
 ---@param Type FName
 ---@param MsgLifeTime float
 function APlayerController:ClientMessage(S, Type, MsgLifeTime) end
+
 ---@param bIgnore boolean
 function APlayerController:ClientIgnoreMoveInput(bIgnore) end
+
 ---@param bIgnore boolean
 function APlayerController:ClientIgnoreLookInput(bIgnore) end
+
 ---@param NewState FName
 function APlayerController:ClientGotoState(NewState) end
+
 ---@param EndGameFocus AActor
 ---@param bIsWinner boolean
 function APlayerController:ClientGameEnded(EndGameFocus, bIsWinner) end
+
 function APlayerController:ClientForceGarbageCollection() end
+
 function APlayerController:ClientFlushLevelStreaming() end
+
 function APlayerController:ClientEndOnlineSession() end
+
 ---@param bEnable boolean
 function APlayerController:ClientEnableNetworkVoice(bEnable) end
+
 ---@param Timestamp FAsyncPhysicsTimestamp
 function APlayerController:ClientCorrectionAsyncPhysicsTimestamp(Timestamp) end
+
 function APlayerController:ClientCommitMapChange() end
+
 function APlayerController:ClientClearCameraLensEffects() end
+
 ---@param Cap int32
 function APlayerController:ClientCapBandwidth(Cap) end
+
 function APlayerController:ClientCancelPendingMapChange() end
+
 ---@param InLoc FVector
 ---@param Duration float
 ---@param bOverrideLocation boolean
 function APlayerController:ClientAddTextureStreamingLoc(InLoc, Duration, bOverrideLocation) end
+
 ---@param PackageName FName
 ---@param TransactionId FNetLevelVisibilityTransactionId
 ---@param bClientAckCanMakeVisible boolean
 function APlayerController:ClientAckUpdateLevelVisibility(PackageName, TransactionId, bClientAckCanMakeVisible) end
+
 ---@param TimeDilation float
 ---@param ServerStep int32
 function APlayerController:ClientAckTimeDilation(TimeDilation, ServerStep) end
+
 function APlayerController:ClearAudioListenerOverride() end
+
 function APlayerController:ClearAudioListenerAttenuationOverride() end
+
 ---@return boolean
 function APlayerController:CanRestartPlayer() end
+
 ---@param NewMode FName
 function APlayerController:Camera(NewMode) end
+
 ---@param Val float
 function APlayerController:AddYawInput(Val) end
+
 ---@param Val float
 function APlayerController:AddRollInput(Val) end
+
 ---@param Val float
 function APlayerController:AddPitchInput(Val) end
+
 ---@param NewTouchInterface UTouchInterface
 function APlayerController:ActivateTouchInterface(NewTouchInterface) end
-
 
 ---@class APlayerStart : ANavigationObjectBase
 ---@field PlayerStartTag FName
@@ -2481,38 +3040,55 @@ APlayerState = {}
 
 ---@param OldPlayerState APlayerState
 function APlayerState:ReceiveOverrideWith(OldPlayerState) end
+
 ---@param NewPlayerState APlayerState
 function APlayerState:ReceiveCopyProperties(NewPlayerState) end
+
 function APlayerState:OnRep_UniqueId() end
+
 function APlayerState:OnRep_Score() end
+
 function APlayerState:OnRep_PlayerName() end
+
 function APlayerState:OnRep_PlayerId() end
+
 function APlayerState:OnRep_bIsInactive() end
+
 ---@param InActor AActor
 function APlayerState:OnPawnPrivateDestroyed(InActor) end
+
 ---@return boolean
 function APlayerState:IsSpectator() end
+
 ---@return boolean
 function APlayerState:IsOnlyASpectator() end
+
 ---@return boolean
 function APlayerState:IsABot() end
+
 ---@return float
 function APlayerState:GetScore() end
+
 ---@return FString
 function APlayerState:GetPlayerName() end
+
 ---@return int32
 function APlayerState:GetPlayerId() end
+
 ---@return APlayerController
 function APlayerState:GetPlayerController() end
+
 ---@return float
 function APlayerState:GetPingInMilliseconds() end
+
 ---@return APawn
 function APlayerState:GetPawn() end
+
 ---@return uint8
 function APlayerState:GetCompressedPing() end
+
 ---@return FUniqueNetIdRepl
 function APlayerState:BP_GetUniqueId() end
-
 
 ---@class APointLight : ALight
 ---@field PointLightComponent UPointLightComponent
@@ -2520,9 +3096,9 @@ APointLight = {}
 
 ---@param NewRadius float
 function APointLight:SetRadius(NewRadius) end
+
 ---@param NewLightFalloffExponent float
 function APointLight:SetLightFalloffExponent(NewLightFalloffExponent) end
-
 
 ---@class APostProcessVolume : AVolume
 ---@field Settings FPostProcessSettings
@@ -2536,7 +3112,6 @@ APostProcessVolume = {}
 ---@param InBlendableObject TScriptInterface<IBlendableInterface>
 ---@param InWeight float
 function APostProcessVolume:AddOrUpdateBlendable(InBlendableObject, InWeight) end
-
 
 ---@class APrecomputedVisibilityOverrideVolume : AVolume
 ---@field OverrideVisibleActors TArray<AActor>
@@ -2555,10 +3130,12 @@ APrecomputedVisibilityVolume = {}
 ARadialForceActor = {}
 
 function ARadialForceActor:ToggleForce() end
-function ARadialForceActor:FireImpulse() end
-function ARadialForceActor:EnableForce() end
-function ARadialForceActor:DisableForce() end
 
+function ARadialForceActor:FireImpulse() end
+
+function ARadialForceActor:EnableForce() end
+
+function ARadialForceActor:DisableForce() end
 
 ---@class ARectLight : ALight
 ---@field RectLightComponent URectLightComponent
@@ -2596,14 +3173,12 @@ ASceneCapture2D = {}
 ---@param bEnable boolean
 function ASceneCapture2D:OnInterpToggle(bEnable) end
 
-
 ---@class ASceneCaptureCube : ASceneCapture
 ---@field CaptureComponentCube USceneCaptureComponentCube
 ASceneCaptureCube = {}
 
 ---@param bEnable boolean
 function ASceneCaptureCube:OnInterpToggle(bEnable) end
-
 
 ---@class AServerStatReplicator : AInfo
 ---@field bUpdateStatNet boolean
@@ -2673,10 +3248,12 @@ AServerStreamingLevelsVisibility = {}
 ASkeletalMeshActor = {}
 
 function ASkeletalMeshActor:OnRep_ReplicatedPhysAsset() end
-function ASkeletalMeshActor:OnRep_ReplicatedMesh() end
-function ASkeletalMeshActor:OnRep_ReplicatedMaterial1() end
-function ASkeletalMeshActor:OnRep_ReplicatedMaterial0() end
 
+function ASkeletalMeshActor:OnRep_ReplicatedMesh() end
+
+function ASkeletalMeshActor:OnRep_ReplicatedMaterial1() end
+
+function ASkeletalMeshActor:OnRep_ReplicatedMaterial0() end
 
 ---@class ASkyAtmosphere : AInfo
 ---@field SkyAtmosphereComponent USkyAtmosphereComponent
@@ -2690,7 +3267,6 @@ ASkyAtmosphere = {}
 ASkyLight = {}
 
 function ASkyLight:OnRep_bEnabled() end
-
 
 ---@class ASpatialHashRuntimeGridInfo : AInfo
 ---@field GridSettings FSpatialHashRuntimeGrid
@@ -2720,9 +3296,9 @@ ASpotLight = {}
 
 ---@param NewOuterConeAngle float
 function ASpotLight:SetOuterConeAngle(NewOuterConeAngle) end
+
 ---@param NewInnerConeAngle float
 function ASpotLight:SetInnerConeAngle(NewInnerConeAngle) end
-
 
 ---@class AStaticMeshActor : AActor
 ---@field StaticMeshComponent UStaticMeshComponent
@@ -2733,7 +3309,6 @@ AStaticMeshActor = {}
 
 ---@param InMobility EComponentMobility::Type
 function AStaticMeshActor:SetMobility(InMobility) end
-
 
 ---@class ATargetPoint : AActor
 ATargetPoint = {}
@@ -2810,13 +3385,16 @@ AWindDirectionalSource = {}
 AWorldDataLayers = {}
 
 function AWorldDataLayers:OnRep_LoadedDataLayerNames() end
+
 function AWorldDataLayers:OnRep_EffectiveLoadedDataLayerNames() end
+
 function AWorldDataLayers:OnRep_EffectiveActiveDataLayerNames() end
+
 function AWorldDataLayers:OnRep_ActiveDataLayerNames() end
+
 ---@param InDataLayer UDataLayerInstance
 ---@param InState EDataLayerRuntimeState
 function AWorldDataLayers:OnDataLayerRuntimeStateChanged(InDataLayer, InState) end
-
 
 ---@class AWorldPartitionHLOD : AActor
 ---@field LODLevel uint32
@@ -2866,7 +3444,7 @@ AWorldPartitionReplay = {}
 ---@field bMinimizeBSPSections boolean
 ---@field bForceNoPrecomputedLighting boolean
 ---@field bHighPriorityLoading boolean
----@field bHighPriorityLoadingLocal boolean
+---@field bHighPriorityLoadingboolean
 ---@field bOverrideDefaultBroadphaseSettings boolean
 ---@field bGenerateSingleClusterForLevel boolean
 ---@field bReuseAddressAndPort boolean
@@ -2912,8 +3490,8 @@ AWorldPartitionReplay = {}
 AWorldSettings = {}
 
 function AWorldSettings:OnRep_WorldGravityZ() end
-function AWorldSettings:OnRep_NaniteSettings() end
 
+function AWorldSettings:OnRep_NaniteSettings() end
 
 ---@class FA2CSPose : FA2Pose
 ---@field ComponentSpaceFlags TArray<uint8>
@@ -11316,7 +11894,6 @@ IActorSoundParameterInterface = {}
 ---@param Params TArray<FAudioParameter>
 function IActorSoundParameterInterface:GetActorSoundParams(Params) end
 
-
 ---@class IAnimClassInterface : IInterface
 IAnimClassInterface = {}
 
@@ -11332,55 +11909,67 @@ IAnimationDataController = {}
 ---@param SupportedCurveType ERawCurveTrackTypes
 ---@param bShouldTransact boolean
 function IAnimationDataController:UpdateCurveNamesFromSkeleton(Skeleton, SupportedCurveType, bShouldTransact) end
+
 ---@param CurveId FAnimationCurveIdentifier
 ---@param TransformValues TArray<FTransform>
 ---@param TimeKeys TArray<float>
 ---@param bShouldTransact boolean
 ---@return boolean
 function IAnimationDataController:SetTransformCurveKeys(CurveId, TransformValues, TimeKeys, bShouldTransact) end
+
 ---@param CurveId FAnimationCurveIdentifier
 ---@param Time float
 ---@param Value FTransform
 ---@param bShouldTransact boolean
 ---@return boolean
 function IAnimationDataController:SetTransformCurveKey(CurveId, Time, Value, bShouldTransact) end
+
 ---@param Length float
 ---@param bShouldTransact boolean
 function IAnimationDataController:SetPlayLength(Length, bShouldTransact) end
+
 ---@param NewLengthInFrames FFrameNumber
 ---@param bShouldTransact boolean
 function IAnimationDataController:SetNumberOfFrames(NewLengthInFrames, bShouldTransact) end
+
 ---@param InModel TScriptInterface<IAnimationDataModel>
 function IAnimationDataController:SetModel(InModel) end
+
 ---@param FrameRate FFrameRate
 ---@param bShouldTransact boolean
 function IAnimationDataController:SetFrameRate(FrameRate, bShouldTransact) end
+
 ---@param CurveId FAnimationCurveIdentifier
 ---@param CurveKeys TArray<FRichCurveKey>
 ---@param bShouldTransact boolean
 ---@return boolean
 function IAnimationDataController:SetCurveKeys(CurveId, CurveKeys, bShouldTransact) end
+
 ---@param CurveId FAnimationCurveIdentifier
 ---@param Key FRichCurveKey
 ---@param bShouldTransact boolean
 ---@return boolean
 function IAnimationDataController:SetCurveKey(CurveId, Key, bShouldTransact) end
+
 ---@param CurveId FAnimationCurveIdentifier
 ---@param Flags int32
 ---@param bShouldTransact boolean
 ---@return boolean
 function IAnimationDataController:SetCurveFlags(CurveId, Flags, bShouldTransact) end
+
 ---@param CurveId FAnimationCurveIdentifier
 ---@param Flag EAnimAssetCurveFlags
 ---@param bState boolean
 ---@param bShouldTransact boolean
 ---@return boolean
 function IAnimationDataController:SetCurveFlag(CurveId, Flag, bState, bShouldTransact) end
+
 ---@param CurveId FAnimationCurveIdentifier
 ---@param Color FLinearColor
 ---@param bShouldTransact boolean
 ---@return boolean
 function IAnimationDataController:SetCurveColor(CurveId, Color, bShouldTransact) end
+
 ---@param BoneName FName
 ---@param PositionalKeys TArray<FVector>
 ---@param RotationalKeys TArray<FQuat>
@@ -11388,120 +11977,146 @@ function IAnimationDataController:SetCurveColor(CurveId, Color, bShouldTransact)
 ---@param bShouldTransact boolean
 ---@return boolean
 function IAnimationDataController:SetBoneTrackKeys(BoneName, PositionalKeys, RotationalKeys, ScalingKeys, bShouldTransact) end
+
 ---@param CurveId FAnimationCurveIdentifier
 ---@param Origin float
 ---@param Factor float
 ---@param bShouldTransact boolean
 ---@return boolean
 function IAnimationDataController:ScaleCurve(CurveId, Origin, Factor, bShouldTransact) end
+
 ---@param NewLength float
 ---@param T0 float
 ---@param T1 float
 ---@param bShouldTransact boolean
 function IAnimationDataController:ResizePlayLength(NewLength, T0, T1, bShouldTransact) end
+
 ---@param NewLengthInFrames FFrameNumber
 ---@param T0 FFrameNumber
 ---@param T1 FFrameNumber
 ---@param bShouldTransact boolean
 function IAnimationDataController:ResizeNumberOfFrames(NewLengthInFrames, T0, T1, bShouldTransact) end
+
 ---@param NewLengthInFrames FFrameNumber
 ---@param T0 FFrameNumber
 ---@param T1 FFrameNumber
 ---@param bShouldTransact boolean
 function IAnimationDataController:ResizeInFrames(NewLengthInFrames, T0, T1, bShouldTransact) end
+
 ---@param Length float
 ---@param T0 float
 ---@param T1 float
 ---@param bShouldTransact boolean
 function IAnimationDataController:Resize(Length, T0, T1, bShouldTransact) end
+
 ---@param CurveToRenameId FAnimationCurveIdentifier
 ---@param NewCurveId FAnimationCurveIdentifier
 ---@param bShouldTransact boolean
 ---@return boolean
 function IAnimationDataController:RenameCurve(CurveToRenameId, NewCurveId, bShouldTransact) end
+
 ---@param CurveId FAnimationCurveIdentifier
 ---@param Time float
 ---@param bShouldTransact boolean
 ---@return boolean
 function IAnimationDataController:RemoveTransformCurveKey(CurveId, Time, bShouldTransact) end
+
 ---@param CurveId FAnimationCurveIdentifier
 ---@param Time float
 ---@param bShouldTransact boolean
 ---@return boolean
 function IAnimationDataController:RemoveCurveKey(CurveId, Time, bShouldTransact) end
+
 ---@param CurveId FAnimationCurveIdentifier
 ---@param bShouldTransact boolean
 ---@return boolean
 function IAnimationDataController:RemoveCurve(CurveId, bShouldTransact) end
+
 ---@param BoneName FName
 ---@param bShouldTransact boolean
 ---@return boolean
 function IAnimationDataController:RemoveBoneTrack(BoneName, bShouldTransact) end
+
 ---@param AttributeIdentifier FAnimationAttributeIdentifier
 ---@param Time float
 ---@param bShouldTransact boolean
 ---@return boolean
 function IAnimationDataController:RemoveAttributeKey(AttributeIdentifier, Time, bShouldTransact) end
+
 ---@param AttributeIdentifier FAnimationAttributeIdentifier
 ---@param bShouldTransact boolean
 ---@return boolean
 function IAnimationDataController:RemoveAttribute(AttributeIdentifier, bShouldTransact) end
+
 ---@param SupportedCurveType ERawCurveTrackTypes
 ---@param bShouldTransact boolean
 function IAnimationDataController:RemoveAllCurvesOfType(SupportedCurveType, bShouldTransact) end
+
 ---@param bShouldTransact boolean
 function IAnimationDataController:RemoveAllBoneTracks(bShouldTransact) end
+
 ---@param BoneName FName
 ---@param bShouldTransact boolean
 ---@return int32
 function IAnimationDataController:RemoveAllAttributesForBone(BoneName, bShouldTransact) end
+
 ---@param bShouldTransact boolean
 ---@return int32
 function IAnimationDataController:RemoveAllAttributes(bShouldTransact) end
+
 ---@param InTitle FText
 ---@param bShouldTransact boolean
 function IAnimationDataController:OpenBracket(InTitle, bShouldTransact) end
+
 ---@param BoneName FName
 ---@param DesiredIndex int32
 ---@param bShouldTransact boolean
 ---@return int32
 function IAnimationDataController:InsertBoneTrack(BoneName, DesiredIndex, bShouldTransact) end
+
 ---@return TScriptInterface<IAnimationDataModel>
 function IAnimationDataController:GetModelInterface() end
+
 ---@param Skeleton USkeleton
 ---@param SupportedCurveType ERawCurveTrackTypes
 ---@param bShouldTransact boolean
 function IAnimationDataController:FindOrAddCurveNamesOnSkeleton(Skeleton, SupportedCurveType, bShouldTransact) end
+
 ---@param CopyCurveId FAnimationCurveIdentifier
 ---@param NewCurveId FAnimationCurveIdentifier
 ---@param bShouldTransact boolean
 ---@return boolean
 function IAnimationDataController:DuplicateCurve(CopyCurveId, NewCurveId, bShouldTransact) end
+
 ---@param AttributeIdentifier FAnimationAttributeIdentifier
 ---@param NewAttributeIdentifier FAnimationAttributeIdentifier
 ---@param bShouldTransact boolean
 ---@return boolean
 function IAnimationDataController:DuplicateAttribute(AttributeIdentifier, NewAttributeIdentifier, bShouldTransact) end
+
 ---@param bShouldTransact boolean
 function IAnimationDataController:CloseBracket(bShouldTransact) end
+
 ---@param CurveId FAnimationCurveIdentifier
 ---@param CurveFlags int32
 ---@param bShouldTransact boolean
 ---@return boolean
 function IAnimationDataController:AddCurve(CurveId, CurveFlags, bShouldTransact) end
+
 ---@param BoneName FName
 ---@param bShouldTransact boolean
 ---@return int32
 function IAnimationDataController:AddBoneTrack(BoneName, bShouldTransact) end
+
 ---@param BoneName FName
 ---@param bShouldTransact boolean
 ---@return boolean
 function IAnimationDataController:AddBoneCurve(BoneName, bShouldTransact) end
+
 ---@param AttributeIdentifier FAnimationAttributeIdentifier
 ---@param bShouldTransact boolean
 ---@return boolean
 function IAnimationDataController:AddAttribute(AttributeIdentifier, bShouldTransact) end
-
 
 ---@class IAnimationDataModel : IInterface
 IAnimationDataModel = {}
@@ -11509,51 +12124,65 @@ IAnimationDataModel = {}
 ---@param TrackName FName
 ---@return boolean
 function IAnimationDataModel:IsValidBoneTrackName(TrackName) end
+
 ---@param TrackIndex int32
 ---@return boolean
 function IAnimationDataModel:IsValidBoneTrackIndex(TrackIndex) end
+
 ---@return double
 function IAnimationDataModel:GetPlayLength() end
+
 ---@return int32
 function IAnimationDataModel:GetNumBoneTracks() end
+
 ---@return int32
 function IAnimationDataModel:GetNumberOfTransformCurves() end
+
 ---@return int32
 function IAnimationDataModel:GetNumberOfKeys() end
+
 ---@return int32
 function IAnimationDataModel:GetNumberOfFrames() end
+
 ---@return int32
 function IAnimationDataModel:GetNumberOfFloatCurves() end
+
 ---@return FFrameRate
 function IAnimationDataModel:GetFrameRate() end
+
 ---@param OutNames TArray<FName>
 function IAnimationDataModel:GetBoneTrackNames(OutNames) end
+
 ---@param TrackName FName
 ---@return int32
 function IAnimationDataModel:GetBoneTrackIndexByName(TrackName) end
+
 ---@param Track FBoneAnimationTrack
 ---@return int32
 function IAnimationDataModel:GetBoneTrackIndex(Track) end
+
 ---@param TrackName FName
 ---@return FBoneAnimationTrack
 function IAnimationDataModel:GetBoneTrackByName(TrackName) end
+
 ---@param TrackIndex int32
 ---@return FBoneAnimationTrack
 function IAnimationDataModel:GetBoneTrackByIndex(TrackIndex) end
+
 ---@return TArray<FBoneAnimationTrack>
 function IAnimationDataModel:GetBoneAnimationTracks() end
+
 ---@return UAnimSequence
 function IAnimationDataModel:GetAnimationSequence() end
-
 
 ---@class IAudioPanelWidgetInterface : IInterface
 IAudioPanelWidgetInterface = {}
 
 ---@return FName
 function IAudioPanelWidgetInterface:GetIconBrushName() end
+
 ---@return FText
 function IAudioPanelWidgetInterface:GetEditorName() end
-
 
 ---@class IBlendableInterface : IInterface
 IBlendableInterface = {}
@@ -11568,9 +12197,9 @@ ICameraLensEffectInterface = {}
 
 ---@return UFXSystemComponent
 function ICameraLensEffectInterface:GetPrimaryParticleComponent() end
+
 ---@return TArray<UFXSystemComponent>
 function ICameraLensEffectInterface:GetParticleComponents() end
-
 
 ---@class ICurveSourceInterface : IInterface
 ICurveSourceInterface = {}
@@ -11578,11 +12207,12 @@ ICurveSourceInterface = {}
 ---@param CurveName FName
 ---@return float
 function ICurveSourceInterface:GetCurveValue(CurveName) end
+
 ---@param OutValues TArray<FNamedCurveValue>
 function ICurveSourceInterface:GetCurves(OutValues) end
+
 ---@return FName
 function ICurveSourceInterface:GetBindingName() end
-
 
 ---@class IDeformableInterface : IInterface
 IDeformableInterface = {}
@@ -11644,12 +12274,14 @@ ILevelInstanceEditorPivotInterface = {}
 ILevelInstanceInterface = {}
 
 function ILevelInstanceInterface:UnloadLevelInstance() end
+
 function ILevelInstanceInterface:LoadLevelInstance() end
+
 ---@return boolean
 function ILevelInstanceInterface:IsLoaded() end
+
 ---@return TSoftObjectPtr<UWorld>
 function ILevelInstanceInterface:GetWorldAsset() end
-
 
 ---@class INavAgentInterface : IInterface
 INavAgentInterface = {}
@@ -11713,11 +12345,12 @@ ISoundEffectPresetWidgetInterface = {}
 ---@param Preset USoundEffectPreset
 ---@param PropertyName FName
 function ISoundEffectPresetWidgetInterface:OnPropertyChanged(Preset, PropertyName) end
+
 ---@param Preset USoundEffectPreset
 function ISoundEffectPresetWidgetInterface:OnConstructed(Preset) end
+
 ---@return TSubclassOf<USoundEffectPreset>
 function ISoundEffectPresetWidgetInterface:GetClass() end
-
 
 ---@class ISoundParameterControllerInterface : IAudioParameterControllerInterface
 ISoundParameterControllerInterface = {}
@@ -11729,7 +12362,6 @@ ISoundSubmixWidgetInterface = {}
 ---@param SoundSubmix USoundSubmixBase
 function ISoundSubmixWidgetInterface:OnConstructed(SoundSubmix) end
 
-
 ---@class ITypedElementWorldInterface : IInterface
 ITypedElementWorldInterface = {}
 
@@ -11737,77 +12369,96 @@ ITypedElementWorldInterface = {}
 ---@param InTransform FTransform
 ---@return boolean
 function ITypedElementWorldInterface:SetWorldTransform(InElementHandle, InTransform) end
+
 ---@param InElementHandle FScriptTypedElementHandle
 ---@param InTransform FTransform
 ---@return boolean
 function ITypedElementWorldInterface:SetRelativeTransform(InElementHandle, InTransform) end
+
 ---@param InElementHandle FScriptTypedElementHandle
 ---@param InPivotOffset FVector
 ---@return boolean
 function ITypedElementWorldInterface:SetPivotOffset(InElementHandle, InPivotOffset) end
+
 ---@param InElementHandle FScriptTypedElementHandle
 ---@param OverrideWorld UWorld
 ---@return FScriptTypedElementHandle
 function ITypedElementWorldInterface:PromoteElement(InElementHandle, OverrideWorld) end
+
 ---@param InElementHandle FScriptTypedElementHandle
 function ITypedElementWorldInterface:NotifyMovementStarted(InElementHandle) end
+
 ---@param InElementHandle FScriptTypedElementHandle
 function ITypedElementWorldInterface:NotifyMovementOngoing(InElementHandle) end
+
 ---@param InElementHandle FScriptTypedElementHandle
 function ITypedElementWorldInterface:NotifyMovementEnded(InElementHandle) end
+
 ---@param InElementHandle FScriptTypedElementHandle
 ---@return boolean
 function ITypedElementWorldInterface:IsTemplateElement(InElementHandle) end
+
 ---@param InElementHandle FScriptTypedElementHandle
 ---@param OutTransform FTransform
 ---@return boolean
 function ITypedElementWorldInterface:GetWorldTransform(InElementHandle, OutTransform) end
+
 ---@param InElementHandle FScriptTypedElementHandle
 ---@param OutTransform FTransform
 ---@return boolean
 function ITypedElementWorldInterface:GetRelativeTransform(InElementHandle, OutTransform) end
+
 ---@param InElementHandle FScriptTypedElementHandle
 ---@param OutPivotOffset FVector
 ---@return boolean
 function ITypedElementWorldInterface:GetPivotOffset(InElementHandle, OutPivotOffset) end
+
 ---@param InElementHandle FScriptTypedElementHandle
 ---@return UWorld
 function ITypedElementWorldInterface:GetOwnerWorld(InElementHandle) end
+
 ---@param InElementHandle FScriptTypedElementHandle
 ---@return ULevel
 function ITypedElementWorldInterface:GetOwnerLevel(InElementHandle) end
+
 ---@param InElementHandle FScriptTypedElementHandle
 ---@param OutBounds FBoxSphereBounds
 ---@return boolean
 function ITypedElementWorldInterface:GetBounds(InElementHandle, OutBounds) end
+
 ---@param InElementHandle FScriptTypedElementHandle
 ---@param InWorld UWorld
 ---@param InLocationOffset FVector
 ---@return FScriptTypedElementHandle
 function ITypedElementWorldInterface:DuplicateElement(InElementHandle, InWorld, InLocationOffset) end
+
 ---@param InElementHandle FScriptTypedElementHandle
 ---@param InWorld UWorld
 ---@param InSelectionSet UTypedElementSelectionSet
 ---@param InDeletionOptions FTypedElementDeletionOptions
 ---@return boolean
 function ITypedElementWorldInterface:DeleteElement(InElementHandle, InWorld, InSelectionSet, InDeletionOptions) end
+
 ---@param InElementHandle FScriptTypedElementHandle
 ---@return boolean
 function ITypedElementWorldInterface:CanPromoteElement(InElementHandle) end
+
 ---@param InElementHandle FScriptTypedElementHandle
 ---@param InWorldType ETypedElementWorldType
 ---@return boolean
 function ITypedElementWorldInterface:CanMoveElement(InElementHandle, InWorldType) end
+
 ---@param InElementHandle FScriptTypedElementHandle
 ---@return boolean
 function ITypedElementWorldInterface:CanEditElement(InElementHandle) end
+
 ---@param InElementHandle FScriptTypedElementHandle
 ---@return boolean
 function ITypedElementWorldInterface:CanDuplicateElement(InElementHandle) end
+
 ---@param InElementHandle FScriptTypedElementHandle
 ---@return boolean
 function ITypedElementWorldInterface:CanDeleteElement(InElementHandle) end
-
 
 ---@class IVisualLoggerDebugSnapshotInterface : IInterface
 IVisualLoggerDebugSnapshotInterface = {}
@@ -11826,9 +12477,9 @@ IWorldPartitionDestructibleInHLODInterface = {}
 
 ---@param InDestructionTag FWorldPartitionHLODDestructionTag
 function IWorldPartitionDestructibleInHLODInterface:SetHLODDestructionTag(InDestructionTag) end
+
 ---@return FWorldPartitionHLODDestructionTag
 function IWorldPartitionDestructibleInHLODInterface:GetHLODDestructionTag() end
-
 
 ---@class IWorldPartitionHLODProvider : IInterface
 IWorldPartitionHLODProvider = {}
@@ -11872,59 +12523,84 @@ UActorChannel = {}
 UActorComponent = {}
 
 function UActorComponent:ToggleActive() end
+
 ---@param NewTickGroup ETickingGroup
 function UActorComponent:SetTickGroup(NewTickGroup) end
+
 ---@param bTickableWhenPaused boolean
 function UActorComponent:SetTickableWhenPaused(bTickableWhenPaused) end
+
 ---@param ShouldReplicate boolean
 function UActorComponent:SetIsReplicated(ShouldReplicate) end
+
 ---@param TickInterval float
 function UActorComponent:SetComponentTickIntervalAndCooldown(TickInterval) end
+
 ---@param TickInterval float
 function UActorComponent:SetComponentTickInterval(TickInterval) end
+
 ---@param bEnabled boolean
 function UActorComponent:SetComponentTickEnabled(bEnabled) end
+
 ---@param bNewAutoActivate boolean
 function UActorComponent:SetAutoActivate(bNewAutoActivate) end
+
 ---@param bNewActive boolean
 ---@param bReset boolean
 function UActorComponent:SetActive(bNewActive, bReset) end
+
 ---@param PrerequisiteComponent UActorComponent
 function UActorComponent:RemoveTickPrerequisiteComponent(PrerequisiteComponent) end
+
 ---@param PrerequisiteActor AActor
 function UActorComponent:RemoveTickPrerequisiteActor(PrerequisiteActor) end
+
 ---@param DeltaSeconds float
 function UActorComponent:ReceiveTick(DeltaSeconds) end
+
 ---@param EndPlayReason EEndPlayReason::Type
 function UActorComponent:ReceiveEndPlay(EndPlayReason) end
+
 function UActorComponent:ReceiveBeginPlay() end
+
 ---@param DeltaSeconds float
 ---@param SimSeconds float
 function UActorComponent:ReceiveAsyncPhysicsTick(DeltaSeconds, SimSeconds) end
+
 function UActorComponent:OnRep_IsActive() end
+
 ---@param Object UObject
 function UActorComponent:K2_DestroyComponent(Object) end
+
 ---@return boolean
 function UActorComponent:IsComponentTickEnabled() end
+
 ---@return boolean
 function UActorComponent:IsBeingDestroyed() end
+
 ---@return boolean
 function UActorComponent:IsActive() end
+
 ---@return AActor
 function UActorComponent:GetOwner() end
+
 ---@return float
 function UActorComponent:GetComponentTickInterval() end
+
 function UActorComponent:Deactivate() end
+
 ---@param Tag FName
 ---@return boolean
 function UActorComponent:ComponentHasTag(Tag) end
+
 ---@param PrerequisiteComponent UActorComponent
 function UActorComponent:AddTickPrerequisiteComponent(PrerequisiteComponent) end
+
 ---@param PrerequisiteActor AActor
 function UActorComponent:AddTickPrerequisiteActor(PrerequisiteActor) end
+
 ---@param bReset boolean
 function UActorComponent:Activate(bReset) end
-
 
 ---@class UActorContainer : UObject
 ---@field Actors TMap<FName, AActor>
@@ -12209,87 +12885,113 @@ UAnimInstance = {}
 ---@param AnimNotifyType TSubclassOf<UAnimNotify>
 ---@return boolean
 function UAnimInstance:WasAnimNotifyTriggeredInStateMachine(MachineIndex, AnimNotifyType) end
+
 ---@param MachineIndex int32
 ---@param StateIndex int32
 ---@param AnimNotifyType TSubclassOf<UAnimNotify>
 ---@return boolean
 function UAnimInstance:WasAnimNotifyTriggeredInSourceState(MachineIndex, StateIndex, AnimNotifyType) end
+
 ---@param AnimNotifyType TSubclassOf<UAnimNotify>
 ---@return boolean
 function UAnimInstance:WasAnimNotifyTriggeredInAnyState(AnimNotifyType) end
+
 ---@param MachineIndex int32
 ---@param AnimNotifyStateType TSubclassOf<UAnimNotifyState>
 ---@return boolean
 function UAnimInstance:WasAnimNotifyStateActiveInStateMachine(MachineIndex, AnimNotifyStateType) end
+
 ---@param MachineIndex int32
 ---@param StateIndex int32
 ---@param AnimNotifyStateType TSubclassOf<UAnimNotifyState>
 ---@return boolean
 function UAnimInstance:WasAnimNotifyStateActiveInSourceState(MachineIndex, StateIndex, AnimNotifyStateType) end
+
 ---@param AnimNotifyStateType TSubclassOf<UAnimNotifyState>
 ---@return boolean
 function UAnimInstance:WasAnimNotifyStateActiveInAnyState(AnimNotifyStateType) end
+
 ---@param MachineIndex int32
 ---@param NotifyName FName
 ---@return boolean
 function UAnimInstance:WasAnimNotifyNameTriggeredInStateMachine(MachineIndex, NotifyName) end
+
 ---@param MachineIndex int32
 ---@param StateIndex int32
 ---@param NotifyName FName
 ---@return boolean
 function UAnimInstance:WasAnimNotifyNameTriggeredInSourceState(MachineIndex, StateIndex, NotifyName) end
+
 ---@param NotifyName FName
 ---@return boolean
 function UAnimInstance:WasAnimNotifyNameTriggeredInAnyState(NotifyName) end
+
 ---@param bUnlockMovement boolean
 ---@param UnlockAILogic boolean
 function UAnimInstance:UnlockAIResources(bUnlockMovement, UnlockAILogic) end
+
 ---@param InClass TSubclassOf<UAnimInstance>
 function UAnimInstance:UnlinkAnimClassLayers(InClass) end
+
 ---@return APawn
 function UAnimInstance:TryGetPawnOwner() end
+
 ---@param InBlendOutTime float
 ---@param SlotNodeName FName
 function UAnimInstance:StopSlotAnimation(InBlendOutTime, SlotNodeName) end
+
 ---@param Snapshot FPoseSnapshot
 function UAnimInstance:SnapshotPose(Snapshot) end
+
 ---@param bSet boolean
 function UAnimInstance:SetUseMainInstanceMontageEvaluationData(bSet) end
+
 ---@param Value ERootMotionMode::Type
 function UAnimInstance:SetRootMotionMode(Value) end
+
 ---@param bSet boolean
 function UAnimInstance:SetReceiveNotifiesFromLinkedInstances(bSet) end
+
 ---@param bSet boolean
 function UAnimInstance:SetPropagateNotifiesToLinkedInstances(bSet) end
+
 ---@param MorphTargetName FName
 ---@param Value float
 function UAnimInstance:SetMorphTarget(MorphTargetName, Value) end
+
 ---@param SnapshotName FName
 function UAnimInstance:SavePoseSnapshot(SnapshotName) end
+
 ---@param InTeleportType ETeleportType
 function UAnimInstance:ResetDynamics(InTeleportType) end
+
 ---@param EventName FName
 ---@param RequestTimeout double
 ---@param QueueMode ETransitionRequestQueueMode
 ---@param OverwriteMode ETransitionRequestOverwriteMode
 ---@return boolean
 function UAnimInstance:RequestTransitionEvent(EventName, RequestTimeout, QueueMode, OverwriteMode) end
+
 ---@param InSlotGroupName FName
 ---@param Duration float
 ---@param BlendProfile UBlendProfile
 function UAnimInstance:RequestSlotGroupInertialization(InSlotGroupName, Duration, BlendProfile) end
+
 ---@param SnapshotName FName
 function UAnimInstance:RemovePoseSnapshot(SnapshotName) end
+
 ---@param MachineIndex int32
 ---@param TransitionIndex int32
 ---@param EventName FName
 ---@return boolean
 function UAnimInstance:QueryTransitionEvent(MachineIndex, TransitionIndex, EventName) end
+
 ---@param MachineIndex int32
 ---@param TransitionIndex int32
 ---@param EventName FName
 ---@return boolean
 function UAnimInstance:QueryAndMarkTransitionEvent(MachineIndex, TransitionIndex, EventName) end
+
 ---@param Asset UAnimSequenceBase
 ---@param SlotNodeName FName
 ---@param BlendInSettings FMontageBlendSettings
@@ -12299,7 +13001,10 @@ function UAnimInstance:QueryAndMarkTransitionEvent(MachineIndex, TransitionIndex
 ---@param BlendOutTriggerTime float
 ---@param InTimeToStartMontageAt float
 ---@return UAnimMontage
-function UAnimInstance:PlaySlotAnimationAsDynamicMontage_WithBlendSettings(Asset, SlotNodeName, BlendInSettings, BlendOutSettings, InPlayRate, LoopCount, BlendOutTriggerTime, InTimeToStartMontageAt) end
+function UAnimInstance:PlaySlotAnimationAsDynamicMontage_WithBlendSettings(Asset, SlotNodeName, BlendInSettings,
+                                                                           BlendOutSettings, InPlayRate, LoopCount,
+                                                                           BlendOutTriggerTime, InTimeToStartMontageAt) end
+
 ---@param Asset UAnimSequenceBase
 ---@param SlotNodeName FName
 ---@param BlendIn FAlphaBlendArgs
@@ -12309,7 +13014,10 @@ function UAnimInstance:PlaySlotAnimationAsDynamicMontage_WithBlendSettings(Asset
 ---@param BlendOutTriggerTime float
 ---@param InTimeToStartMontageAt float
 ---@return UAnimMontage
-function UAnimInstance:PlaySlotAnimationAsDynamicMontage_WithBlendArgs(Asset, SlotNodeName, BlendIn, BlendOut, InPlayRate, LoopCount, BlendOutTriggerTime, InTimeToStartMontageAt) end
+function UAnimInstance:PlaySlotAnimationAsDynamicMontage_WithBlendArgs(Asset, SlotNodeName, BlendIn, BlendOut, InPlayRate,
+                                                                       LoopCount, BlendOutTriggerTime,
+                                                                       InTimeToStartMontageAt) end
+
 ---@param Asset UAnimSequenceBase
 ---@param SlotNodeName FName
 ---@param BlendInTime float
@@ -12319,37 +13027,49 @@ function UAnimInstance:PlaySlotAnimationAsDynamicMontage_WithBlendArgs(Asset, Sl
 ---@param BlendOutTriggerTime float
 ---@param InTimeToStartMontageAt float
 ---@return UAnimMontage
-function UAnimInstance:PlaySlotAnimationAsDynamicMontage(Asset, SlotNodeName, BlendInTime, BlendOutTime, InPlayRate, LoopCount, BlendOutTriggerTime, InTimeToStartMontageAt) end
+function UAnimInstance:PlaySlotAnimationAsDynamicMontage(Asset, SlotNodeName, BlendInTime, BlendOutTime, InPlayRate,
+                                                         LoopCount, BlendOutTriggerTime, InTimeToStartMontageAt) end
+
 ---@param MontageFollower UAnimMontage
 function UAnimInstance:MontageSync_StopFollowing(MontageFollower) end
+
 ---@param MontageFollower UAnimMontage
 ---@param OtherAnimInstance UAnimInstance
 ---@param MontageLeader UAnimMontage
 function UAnimInstance:MontageSync_Follow(MontageFollower, OtherAnimInstance, MontageLeader) end
+
 ---@param BlendOutSettings FMontageBlendSettings
 ---@param Montage UAnimMontage
 function UAnimInstance:Montage_StopWithBlendSettings(BlendOutSettings, Montage) end
+
 ---@param BlendOut FAlphaBlendArgs
 ---@param Montage UAnimMontage
 function UAnimInstance:Montage_StopWithBlendOut(BlendOut, Montage) end
+
 ---@param InBlendOutTime float
 ---@param GroupName FName
 function UAnimInstance:Montage_StopGroupByName(InBlendOutTime, GroupName) end
+
 ---@param InBlendOutTime float
 ---@param Montage UAnimMontage
 function UAnimInstance:Montage_Stop(InBlendOutTime, Montage) end
+
 ---@param Montage UAnimMontage
 ---@param NewPosition float
 function UAnimInstance:Montage_SetPosition(Montage, NewPosition) end
+
 ---@param Montage UAnimMontage
 ---@param NewPlayRate float
 function UAnimInstance:Montage_SetPlayRate(Montage, NewPlayRate) end
+
 ---@param SectionNameToChange FName
 ---@param NextSection FName
 ---@param Montage UAnimMontage
 function UAnimInstance:Montage_SetNextSection(SectionNameToChange, NextSection, Montage) end
+
 ---@param Montage UAnimMontage
 function UAnimInstance:Montage_Resume(Montage) end
+
 ---@param MontageToPlay UAnimMontage
 ---@param BlendInSettings FMontageBlendSettings
 ---@param InPlayRate float
@@ -12357,7 +13077,9 @@ function UAnimInstance:Montage_Resume(Montage) end
 ---@param InTimeToStartMontageAt float
 ---@param bStopAllMontages boolean
 ---@return float
-function UAnimInstance:Montage_PlayWithBlendSettings(MontageToPlay, BlendInSettings, InPlayRate, ReturnValueType, InTimeToStartMontageAt, bStopAllMontages) end
+function UAnimInstance:Montage_PlayWithBlendSettings(MontageToPlay, BlendInSettings, InPlayRate, ReturnValueType,
+                                                     InTimeToStartMontageAt, bStopAllMontages) end
+
 ---@param MontageToPlay UAnimMontage
 ---@param BlendIn FAlphaBlendArgs
 ---@param InPlayRate float
@@ -12365,7 +13087,9 @@ function UAnimInstance:Montage_PlayWithBlendSettings(MontageToPlay, BlendInSetti
 ---@param InTimeToStartMontageAt float
 ---@param bStopAllMontages boolean
 ---@return float
-function UAnimInstance:Montage_PlayWithBlendIn(MontageToPlay, BlendIn, InPlayRate, ReturnValueType, InTimeToStartMontageAt, bStopAllMontages) end
+function UAnimInstance:Montage_PlayWithBlendIn(MontageToPlay, BlendIn, InPlayRate, ReturnValueType,
+                                               InTimeToStartMontageAt, bStopAllMontages) end
+
 ---@param MontageToPlay UAnimMontage
 ---@param InPlayRate float
 ---@param ReturnValueType EMontagePlayReturnType
@@ -12373,199 +13097,264 @@ function UAnimInstance:Montage_PlayWithBlendIn(MontageToPlay, BlendIn, InPlayRat
 ---@param bStopAllMontages boolean
 ---@return float
 function UAnimInstance:Montage_Play(MontageToPlay, InPlayRate, ReturnValueType, InTimeToStartMontageAt, bStopAllMontages) end
+
 ---@param Montage UAnimMontage
 function UAnimInstance:Montage_Pause(Montage) end
+
 ---@param SectionName FName
 ---@param Montage UAnimMontage
 function UAnimInstance:Montage_JumpToSectionsEnd(SectionName, Montage) end
+
 ---@param SectionName FName
 ---@param Montage UAnimMontage
 function UAnimInstance:Montage_JumpToSection(SectionName, Montage) end
+
 ---@param Montage UAnimMontage
 ---@return boolean
 function UAnimInstance:Montage_IsPlaying(Montage) end
+
 ---@param Montage UAnimMontage
 ---@return boolean
 function UAnimInstance:Montage_IsActive(Montage) end
+
 ---@param Montage UAnimMontage
 ---@return float
 function UAnimInstance:Montage_GetPosition(Montage) end
+
 ---@param Montage UAnimMontage
 ---@return float
 function UAnimInstance:Montage_GetPlayRate(Montage) end
+
 ---@param Montage UAnimMontage
 ---@return boolean
 function UAnimInstance:Montage_GetIsStopped(Montage) end
+
 ---@param Montage UAnimMontage
 ---@return float
 function UAnimInstance:Montage_GetEffectivePlayRate(Montage) end
+
 ---@param Montage UAnimMontage
 ---@return FName
 function UAnimInstance:Montage_GetCurrentSection(Montage) end
+
 ---@param Montage UAnimMontage
 ---@return float
 function UAnimInstance:Montage_GetBlendTime(Montage) end
+
 ---@param bLockMovement boolean
 ---@param LockAILogic boolean
 function UAnimInstance:LockAIResources(bLockMovement, LockAILogic) end
+
 ---@param InTag FName
 ---@param InClass TSubclassOf<UAnimInstance>
 function UAnimInstance:LinkAnimGraphByTag(InTag, InClass) end
+
 ---@param InClass TSubclassOf<UAnimInstance>
 function UAnimInstance:LinkAnimClassLayers(InClass) end
+
 ---@return boolean
 function UAnimInstance:IsUsingMainInstanceMontageEvaluationData() end
+
 ---@param InSyncGroupName FName
 ---@param PreviousMarker FName
 ---@param NextMarker FName
 ---@param bRespectMarkerOrder boolean
 ---@return boolean
 function UAnimInstance:IsSyncGroupBetweenMarkers(InSyncGroupName, PreviousMarker, NextMarker, bRespectMarkerOrder) end
+
 ---@param SlotNodeName FName
 ---@return boolean
 function UAnimInstance:IsSlotActive(SlotNodeName) end
+
 ---@param Asset UAnimSequenceBase
 ---@param SlotNodeName FName
 ---@return boolean
 function UAnimInstance:IsPlayingSlotAnimation(Asset, SlotNodeName) end
+
 ---@return boolean
 function UAnimInstance:IsAnyMontagePlaying() end
+
 ---@param SyncGroup FName
 ---@param MarkerName FName
 ---@return boolean
 function UAnimInstance:HasMarkerBeenHitThisFrame(SyncGroup, MarkerName) end
+
 ---@param SyncGroup FName
 ---@param MarkerName FName
 ---@param OutMarkerTime float
 ---@return boolean
 function UAnimInstance:GetTimeToClosestMarker(SyncGroup, MarkerName, OutMarkerTime) end
+
 ---@param InSyncGroupName FName
 ---@return FMarkerSyncAnimPosition
 function UAnimInstance:GetSyncGroupPosition(InSyncGroupName) end
+
 ---@param MachineIndex int32
 ---@param StateIndex int32
 ---@return float
 function UAnimInstance:GetRelevantAnimTimeRemainingFraction(MachineIndex, StateIndex) end
+
 ---@param MachineIndex int32
 ---@param StateIndex int32
 ---@return float
 function UAnimInstance:GetRelevantAnimTimeRemaining(MachineIndex, StateIndex) end
+
 ---@param MachineIndex int32
 ---@param StateIndex int32
 ---@return float
 function UAnimInstance:GetRelevantAnimTimeFraction(MachineIndex, StateIndex) end
+
 ---@param MachineIndex int32
 ---@param StateIndex int32
 ---@return float
 function UAnimInstance:GetRelevantAnimTime(MachineIndex, StateIndex) end
+
 ---@param MachineIndex int32
 ---@param StateIndex int32
 ---@return float
 function UAnimInstance:GetRelevantAnimLength(MachineIndex, StateIndex) end
+
 ---@return boolean
 function UAnimInstance:GetReceiveNotifiesFromLinkedInstances() end
+
 ---@return boolean
 function UAnimInstance:GetPropagateNotifiesToLinkedInstances() end
+
 ---@return USkeletalMeshComponent
 function UAnimInstance:GetOwningComponent() end
+
 ---@return AActor
 function UAnimInstance:GetOwningActor() end
+
 ---@param InGroup FName
 ---@param OutLinkedInstances TArray<UAnimInstance>
 function UAnimInstance:GetLinkedAnimLayerInstancesByGroup(InGroup, OutLinkedInstances) end
+
 ---@param InGroup FName
 ---@param InClass TSubclassOf<UAnimInstance>
 ---@return UAnimInstance
 function UAnimInstance:GetLinkedAnimLayerInstanceByGroupAndClass(InGroup, InClass) end
+
 ---@param InGroup FName
 ---@return UAnimInstance
 function UAnimInstance:GetLinkedAnimLayerInstanceByGroup(InGroup) end
+
 ---@param InClass TSubclassOf<UAnimInstance>
 ---@return UAnimInstance
 function UAnimInstance:GetLinkedAnimLayerInstanceByClass(InClass) end
+
 ---@param InTag FName
 ---@param OutLinkedInstances TArray<UAnimInstance>
 function UAnimInstance:GetLinkedAnimGraphInstancesByTag(InTag, OutLinkedInstances) end
+
 ---@param InTag FName
 ---@return UAnimInstance
 function UAnimInstance:GetLinkedAnimGraphInstanceByTag(InTag) end
+
 ---@param MachineIndex int32
 ---@param TransitionIndex int32
 ---@return float
 function UAnimInstance:GetInstanceTransitionTimeElapsedFraction(MachineIndex, TransitionIndex) end
+
 ---@param MachineIndex int32
 ---@param TransitionIndex int32
 ---@return float
 function UAnimInstance:GetInstanceTransitionTimeElapsed(MachineIndex, TransitionIndex) end
+
 ---@param MachineIndex int32
 ---@param TransitionIndex int32
 ---@return float
 function UAnimInstance:GetInstanceTransitionCrossfadeDuration(MachineIndex, TransitionIndex) end
+
 ---@param MachineIndex int32
 ---@param StateIndex int32
 ---@return float
 function UAnimInstance:GetInstanceStateWeight(MachineIndex, StateIndex) end
+
 ---@param MachineIndex int32
 ---@return float
 function UAnimInstance:GetInstanceMachineWeight(MachineIndex) end
+
 ---@param MachineIndex int32
 ---@return float
 function UAnimInstance:GetInstanceCurrentStateElapsedTime(MachineIndex) end
+
 ---@param AssetPlayerIndex int32
 ---@return float
 function UAnimInstance:GetInstanceAssetPlayerTimeFromEndFraction(AssetPlayerIndex) end
+
 ---@param AssetPlayerIndex int32
 ---@return float
 function UAnimInstance:GetInstanceAssetPlayerTimeFromEnd(AssetPlayerIndex) end
+
 ---@param AssetPlayerIndex int32
 ---@return float
 function UAnimInstance:GetInstanceAssetPlayerTimeFraction(AssetPlayerIndex) end
+
 ---@param AssetPlayerIndex int32
 ---@return float
 function UAnimInstance:GetInstanceAssetPlayerTime(AssetPlayerIndex) end
+
 ---@param AssetPlayerIndex int32
 ---@return float
 function UAnimInstance:GetInstanceAssetPlayerLength(AssetPlayerIndex) end
+
 ---@return float
 function UAnimInstance:GetDeltaSeconds() end
+
 ---@param CurveName FName
 ---@param DefaultValue float
 ---@param OutValue float
 ---@return boolean
 function UAnimInstance:GetCurveValueWithDefault(CurveName, DefaultValue, OutValue) end
+
 ---@param CurveName FName
 ---@return float
 function UAnimInstance:GetCurveValue(CurveName) end
+
 ---@param MachineIndex int32
 ---@return FName
 function UAnimInstance:GetCurrentStateName(MachineIndex) end
+
 ---@return UAnimMontage
 function UAnimInstance:GetCurrentActiveMontage() end
+
 ---@param OutNames TArray<FName>
 function UAnimInstance:GetAllCurveNames(OutNames) end
+
 ---@param CurveType EAnimCurveType
 ---@param OutNames TArray<FName>
 function UAnimInstance:GetActiveCurveNames(CurveType, OutNames) end
+
 ---@param EventName FName
 function UAnimInstance:ClearTransitionEvents(EventName) end
+
 function UAnimInstance:ClearMorphTargets() end
+
 function UAnimInstance:ClearAllTransitionEvents() end
+
 ---@param Velocity FVector
 ---@param BaseRotation FRotator
 ---@return float
 function UAnimInstance:CalculateDirection(Velocity, BaseRotation) end
+
 ---@param DeltaTimeX float
 function UAnimInstance:BlueprintUpdateAnimation(DeltaTimeX) end
+
 ---@param DeltaTime float
 function UAnimInstance:BlueprintThreadSafeUpdateAnimation(DeltaTime) end
+
 function UAnimInstance:BlueprintPostEvaluateAnimation() end
+
 function UAnimInstance:BlueprintLinkedAnimationLayersInitialized() end
+
 function UAnimInstance:BlueprintInitializeAnimation() end
+
 function UAnimInstance:BlueprintBeginPlay() end
+
 ---@param SlotNodeName FName
 ---@return float
 function UAnimInstance:Blueprint_GetSlotMontageLocalWeight(SlotNodeName) end
-
 
 ---@class UAnimMetaData : UObject
 UAnimMetaData = {}
@@ -12597,27 +13386,37 @@ UAnimMontage = {}
 ---@param InSectionName FName
 ---@return boolean
 function UAnimMontage:IsValidSectionName(InSectionName) end
+
 ---@param SlotNodeName FName
 ---@return boolean
 function UAnimMontage:IsValidAdditiveSlot(SlotNodeName) end
+
 ---@param SectionIndex int32
 ---@return FName
 function UAnimMontage:GetSectionName(SectionIndex) end
+
 ---@param InSectionName FName
 ---@return int32
 function UAnimMontage:GetSectionIndex(InSectionName) end
+
 ---@return int32
 function UAnimMontage:GetNumSections() end
+
 ---@return FName
 function UAnimMontage:GetGroupName() end
+
 ---@return float
 function UAnimMontage:GetDefaultBlendOutTime() end
+
 ---@return float
 function UAnimMontage:GetDefaultBlendInTime() end
+
 ---@return FAlphaBlendArgs
 function UAnimMontage:GetBlendOutArgs() end
+
 ---@return FAlphaBlendArgs
 function UAnimMontage:GetBlendInArgs() end
+
 ---@param Asset UAnimSequenceBase
 ---@param SlotNodeName FName
 ---@param BlendInSettings FMontageBlendSettings
@@ -12626,8 +13425,9 @@ function UAnimMontage:GetBlendInArgs() end
 ---@param LoopCount int32
 ---@param InBlendOutTriggerTime float
 ---@return UAnimMontage
-function UAnimMontage:CreateSlotAnimationAsDynamicMontage_WithBlendSettings(Asset, SlotNodeName, BlendInSettings, BlendOutSettings, InPlayRate, LoopCount, InBlendOutTriggerTime) end
-
+function UAnimMontage:CreateSlotAnimationAsDynamicMontage_WithBlendSettings(Asset, SlotNodeName, BlendInSettings,
+                                                                            BlendOutSettings, InPlayRate, LoopCount,
+                                                                            InBlendOutTriggerTime) end
 
 ---@class UAnimNotify : UObject
 UAnimNotify = {}
@@ -12637,11 +13437,12 @@ UAnimNotify = {}
 ---@param EventReference FAnimNotifyEventReference
 ---@return boolean
 function UAnimNotify:Received_Notify(MeshComp, Animation, EventReference) end
+
 ---@return FString
 function UAnimNotify:GetNotifyName() end
+
 ---@return float
 function UAnimNotify:GetDefaultTriggerWeightThreshold() end
-
 
 ---@class UAnimNotifyLibrary : UBlueprintFunctionLibrary
 UAnimNotifyLibrary = {}
@@ -12649,19 +13450,22 @@ UAnimNotifyLibrary = {}
 ---@param EventReference FAnimNotifyEventReference
 ---@return boolean
 function UAnimNotifyLibrary:NotifyStateReachedEnd(EventReference) end
+
 ---@param EventReference FAnimNotifyEventReference
 ---@return float
 function UAnimNotifyLibrary:GetCurrentAnimationTimeRatio(EventReference) end
+
 ---@param EventReference FAnimNotifyEventReference
 ---@return float
 function UAnimNotifyLibrary:GetCurrentAnimationTime(EventReference) end
+
 ---@param EventReference FAnimNotifyEventReference
 ---@return float
 function UAnimNotifyLibrary:GetCurrentAnimationNotifyStateTimeRatio(EventReference) end
+
 ---@param EventReference FAnimNotifyEventReference
 ---@return float
 function UAnimNotifyLibrary:GetCurrentAnimationNotifyStateTime(EventReference) end
-
 
 ---@class UAnimNotifyMirrorInspectionLibrary : UBlueprintFunctionLibrary
 UAnimNotifyMirrorInspectionLibrary = {}
@@ -12669,10 +13473,10 @@ UAnimNotifyMirrorInspectionLibrary = {}
 ---@param EventReference FAnimNotifyEventReference
 ---@return boolean
 function UAnimNotifyMirrorInspectionLibrary:IsTriggeredByMirroredAnimation(EventReference) end
+
 ---@param EventReference FAnimNotifyEventReference
 ---@return UMirrorDataTable
 function UAnimNotifyMirrorInspectionLibrary:GetMirrorDataTable(EventReference) end
-
 
 ---@class UAnimNotifyState : UObject
 UAnimNotifyState = {}
@@ -12683,22 +13487,25 @@ UAnimNotifyState = {}
 ---@param EventReference FAnimNotifyEventReference
 ---@return boolean
 function UAnimNotifyState:Received_NotifyTick(MeshComp, Animation, FrameDeltaTime, EventReference) end
+
 ---@param MeshComp USkeletalMeshComponent
 ---@param Animation UAnimSequenceBase
 ---@param EventReference FAnimNotifyEventReference
 ---@return boolean
 function UAnimNotifyState:Received_NotifyEnd(MeshComp, Animation, EventReference) end
+
 ---@param MeshComp USkeletalMeshComponent
 ---@param Animation UAnimSequenceBase
 ---@param TotalDuration float
 ---@param EventReference FAnimNotifyEventReference
 ---@return boolean
 function UAnimNotifyState:Received_NotifyBegin(MeshComp, Animation, TotalDuration, EventReference) end
+
 ---@return FString
 function UAnimNotifyState:GetNotifyName() end
+
 ---@return float
 function UAnimNotifyState:GetDefaultTriggerWeightThreshold() end
-
 
 ---@class UAnimNotifyStateMachineInspectionLibrary : UBlueprintFunctionLibrary
 UAnimNotifyStateMachineInspectionLibrary = {}
@@ -12707,19 +13514,22 @@ UAnimNotifyStateMachineInspectionLibrary = {}
 ---@param AnimInstance UAnimInstance
 ---@param StateMachineName FName
 ---@return boolean
-function UAnimNotifyStateMachineInspectionLibrary:IsTriggeredByStateMachine(EventReference, AnimInstance, StateMachineName) end
+function UAnimNotifyStateMachineInspectionLibrary:IsTriggeredByStateMachine(EventReference, AnimInstance,
+                                                                            StateMachineName) end
+
 ---@param EventReference FAnimNotifyEventReference
 ---@param AnimInstance UAnimInstance
 ---@param StateMachineName FName
 ---@param StateName FName
 ---@return boolean
-function UAnimNotifyStateMachineInspectionLibrary:IsTriggeredByStateInStateMachine(EventReference, AnimInstance, StateMachineName, StateName) end
+function UAnimNotifyStateMachineInspectionLibrary:IsTriggeredByStateInStateMachine(EventReference, AnimInstance,
+                                                                                   StateMachineName, StateName) end
+
 ---@param EventReference FAnimNotifyEventReference
 ---@param AnimInstance UAnimInstance
 ---@param StateName FName
 ---@return boolean
 function UAnimNotifyStateMachineInspectionLibrary:IsTriggeredByState(EventReference, AnimInstance, StateName) end
-
 
 ---@class UAnimNotifyState_DisableRootMotion : UAnimNotifyState
 UAnimNotifyState_DisableRootMotion = {}
@@ -12748,7 +13558,6 @@ UAnimNotifyState_Trail = {}
 ---@param Animation UAnimSequenceBase
 ---@return UParticleSystem
 function UAnimNotifyState_Trail:OverridePSTemplate(MeshComp, Animation) end
-
 
 ---@class UAnimNotify_PauseClothingSimulation : UAnimNotify
 UAnimNotify_PauseClothingSimulation = {}
@@ -12841,44 +13650,57 @@ UAnimSet = {}
 UAnimSingleNodeInstance = {}
 
 function UAnimSingleNodeInstance:StopAnim() end
+
 ---@param bInReverse boolean
 function UAnimSingleNodeInstance:SetReverse(bInReverse) end
+
 ---@param PoseName FName
 ---@param Value float
 ---@param bRemoveIfZero boolean
 function UAnimSingleNodeInstance:SetPreviewCurveOverride(PoseName, Value, bRemoveIfZero) end
+
 ---@param InPosition float
 ---@param InPreviousTime float
 ---@param bFireNotifies boolean
 function UAnimSingleNodeInstance:SetPositionWithPreviousTime(InPosition, InPreviousTime, bFireNotifies) end
+
 ---@param InPosition float
 ---@param bFireNotifies boolean
 function UAnimSingleNodeInstance:SetPosition(InPosition, bFireNotifies) end
+
 ---@param InPlayRate float
 function UAnimSingleNodeInstance:SetPlayRate(InPlayRate) end
+
 ---@param bIsPlaying boolean
 function UAnimSingleNodeInstance:SetPlaying(bIsPlaying) end
+
 ---@param MirrorDataTable UMirrorDataTable
 function UAnimSingleNodeInstance:SetMirrorDataTable(MirrorDataTable) end
+
 ---@param bIsLooping boolean
 function UAnimSingleNodeInstance:SetLooping(bIsLooping) end
+
 ---@param InPosition FVector
 function UAnimSingleNodeInstance:SetBlendSpacePosition(InPosition) end
+
 ---@param NewAsset UAnimationAsset
 ---@param bIsLooping boolean
 ---@param InPlayRate float
 function UAnimSingleNodeInstance:SetAnimationAsset(NewAsset, bIsLooping, InPlayRate) end
+
 ---@param bIsLooping boolean
 ---@param InPlayRate float
 ---@param InStartPosition float
 function UAnimSingleNodeInstance:PlayAnim(bIsLooping, InPlayRate, InStartPosition) end
+
 ---@return UMirrorDataTable
 function UAnimSingleNodeInstance:GetMirrorDataTable() end
+
 ---@return float
 function UAnimSingleNodeInstance:GetLength() end
+
 ---@return UAnimationAsset
 function UAnimSingleNodeInstance:GetAnimationAsset() end
-
 
 ---@class UAnimStateMachineTypes : UObject
 UAnimStateMachineTypes = {}
@@ -12915,23 +13737,30 @@ UAnimatedSparseVolumeTextureController = {}
 
 ---@param DeltaTime float
 function UAnimatedSparseVolumeTextureController:Update(DeltaTime) end
+
 function UAnimatedSparseVolumeTextureController:Stop() end
+
 function UAnimatedSparseVolumeTextureController:Play() end
+
 function UAnimatedSparseVolumeTextureController:Pause() end
+
 ---@param FrameIndex int32
 ---@return USparseVolumeTextureFrame
 function UAnimatedSparseVolumeTextureController:GetFrameByIndex(FrameIndex) end
+
 ---@return float
 function UAnimatedSparseVolumeTextureController:GetFractionalFrameIndex() end
+
 ---@return float
 function UAnimatedSparseVolumeTextureController:GetDuration() end
+
 ---@param Frame0 USparseVolumeTextureFrame
 ---@param Frame1 USparseVolumeTextureFrame
 ---@param LerpAlpha float
 function UAnimatedSparseVolumeTextureController:GetCurrentFramesForInterpolation(Frame0, Frame1, LerpAlpha) end
+
 ---@return USparseVolumeTextureFrame
 function UAnimatedSparseVolumeTextureController:GetCurrentFrame() end
-
 
 ---@class UAnimationAsset : UObject
 ---@field Skeleton USkeleton
@@ -12941,7 +13770,6 @@ UAnimationAsset = {}
 
 ---@return float
 function UAnimationAsset:GetPlayLength() end
-
 
 ---@class UAnimationAssetExtensions : UBlueprintFunctionLibrary
 UAnimationAssetExtensions = {}
@@ -12954,20 +13782,20 @@ UAnimationAttributeIdentifierExtensions = {}
 ---@return boolean
 function UAnimationAttributeIdentifierExtensions:IsValid(Identifier) end
 
-
 ---@class UAnimationCurveIdentifierExtensions : UBlueprintFunctionLibrary
 UAnimationCurveIdentifierExtensions = {}
 
 ---@param Identifier FAnimationCurveIdentifier
 ---@return boolean
 function UAnimationCurveIdentifierExtensions:IsValid(Identifier) end
+
 ---@param Identifier FAnimationCurveIdentifier
 ---@return ERawCurveTrackTypes
 function UAnimationCurveIdentifierExtensions:GetType(Identifier) end
+
 ---@param Identifier FAnimationCurveIdentifier
 ---@return FName
 function UAnimationCurveIdentifierExtensions:GetName(Identifier) end
-
 
 ---@class UAnimationDataModelNotifiesExtensions : UBlueprintFunctionLibrary
 UAnimationDataModelNotifiesExtensions = {}
@@ -12998,7 +13826,6 @@ UAnimationSettings = {}
 ---@return TArray<FString>
 function UAnimationSettings:GetBoneCustomAttributeNamesToImport() end
 
-
 ---@class UApplicationLifecycleComponent : UActorComponent
 ---@field ApplicationWillDeactivateDelegate FApplicationLifecycleComponentApplicationWillDeactivateDelegate
 ---@field ApplicationHasReactivatedDelegate FApplicationLifecycleComponentApplicationHasReactivatedDelegate
@@ -13024,21 +13851,27 @@ UArrowComponent = {}
 
 ---@param bNewValue boolean
 function UArrowComponent:SetUseInEditorScaling(bNewValue) end
+
 ---@param bNewValue boolean
 function UArrowComponent:SetTreatAsASprite(bNewValue) end
+
 ---@param NewScreenSize float
 function UArrowComponent:SetScreenSize(NewScreenSize) end
+
 ---@param bNewValue boolean
 function UArrowComponent:SetIsScreenSizeScaled(bNewValue) end
+
 ---@param NewSize float
 function UArrowComponent:SetArrowSize(NewSize) end
+
 ---@param NewLength float
 function UArrowComponent:SetArrowLength(NewLength) end
+
 ---@param NewColor FColor
 function UArrowComponent:SetArrowFColor(NewColor) end
+
 ---@param NewColor FLinearColor
 function UArrowComponent:SetArrowColor(NewColor) end
-
 
 ---@class UAssetExportTask : UObject
 ---@field Object UObject
@@ -13117,13 +13950,16 @@ UAsyncActionChangePrimaryAssetBundles = {}
 ---@param AddBundles TArray<FName>
 ---@param RemoveBundles TArray<FName>
 ---@return UAsyncActionChangePrimaryAssetBundles
-function UAsyncActionChangePrimaryAssetBundles:AsyncChangeBundleStateForPrimaryAssetList(WorldContextObject, PrimaryAssetList, AddBundles, RemoveBundles) end
+function UAsyncActionChangePrimaryAssetBundles:AsyncChangeBundleStateForPrimaryAssetList(WorldContextObject,
+                                                                                         PrimaryAssetList, AddBundles,
+                                                                                         RemoveBundles) end
+
 ---@param WorldContextObject UObject
 ---@param NewBundles TArray<FName>
 ---@param OldBundles TArray<FName>
 ---@return UAsyncActionChangePrimaryAssetBundles
-function UAsyncActionChangePrimaryAssetBundles:AsyncChangeBundleStateForMatchingPrimaryAssets(WorldContextObject, NewBundles, OldBundles) end
-
+function UAsyncActionChangePrimaryAssetBundles:AsyncChangeBundleStateForMatchingPrimaryAssets(WorldContextObject,
+                                                                                              NewBundles, OldBundles) end
 
 ---@class UAsyncActionHandleSaveGame : UBlueprintAsyncActionBase
 ---@field Completed FAsyncActionHandleSaveGameCompleted
@@ -13136,12 +13972,12 @@ UAsyncActionHandleSaveGame = {}
 ---@param UserIndex int32
 ---@return UAsyncActionHandleSaveGame
 function UAsyncActionHandleSaveGame:AsyncSaveGameToSlot(WorldContextObject, SaveGameObject, SlotName, UserIndex) end
+
 ---@param WorldContextObject UObject
 ---@param SlotName FString
 ---@param UserIndex int32
 ---@return UAsyncActionHandleSaveGame
 function UAsyncActionHandleSaveGame:AsyncLoadGameFromSlot(WorldContextObject, SlotName, UserIndex) end
-
 
 ---@class UAsyncActionLoadPrimaryAsset : UAsyncActionLoadPrimaryAssetBase
 ---@field Completed FAsyncActionLoadPrimaryAssetCompleted
@@ -13152,7 +13988,6 @@ UAsyncActionLoadPrimaryAsset = {}
 ---@param LoadBundles TArray<FName>
 ---@return UAsyncActionLoadPrimaryAsset
 function UAsyncActionLoadPrimaryAsset:AsyncLoadPrimaryAsset(WorldContextObject, PrimaryAsset, LoadBundles) end
-
 
 ---@class UAsyncActionLoadPrimaryAssetBase : UBlueprintAsyncActionBase
 UAsyncActionLoadPrimaryAssetBase = {}
@@ -13168,7 +14003,6 @@ UAsyncActionLoadPrimaryAssetClass = {}
 ---@return UAsyncActionLoadPrimaryAssetClass
 function UAsyncActionLoadPrimaryAssetClass:AsyncLoadPrimaryAssetClass(WorldContextObject, PrimaryAsset, LoadBundles) end
 
-
 ---@class UAsyncActionLoadPrimaryAssetClassList : UAsyncActionLoadPrimaryAssetBase
 ---@field Completed FAsyncActionLoadPrimaryAssetClassListCompleted
 UAsyncActionLoadPrimaryAssetClassList = {}
@@ -13177,8 +14011,8 @@ UAsyncActionLoadPrimaryAssetClassList = {}
 ---@param PrimaryAssetList TArray<FPrimaryAssetId>
 ---@param LoadBundles TArray<FName>
 ---@return UAsyncActionLoadPrimaryAssetClassList
-function UAsyncActionLoadPrimaryAssetClassList:AsyncLoadPrimaryAssetClassList(WorldContextObject, PrimaryAssetList, LoadBundles) end
-
+function UAsyncActionLoadPrimaryAssetClassList:AsyncLoadPrimaryAssetClassList(WorldContextObject, PrimaryAssetList,
+                                                                              LoadBundles) end
 
 ---@class UAsyncActionLoadPrimaryAssetList : UAsyncActionLoadPrimaryAssetBase
 ---@field Completed FAsyncActionLoadPrimaryAssetListCompleted
@@ -13189,7 +14023,6 @@ UAsyncActionLoadPrimaryAssetList = {}
 ---@param LoadBundles TArray<FName>
 ---@return UAsyncActionLoadPrimaryAssetList
 function UAsyncActionLoadPrimaryAssetList:AsyncLoadPrimaryAssetList(WorldContextObject, PrimaryAssetList, LoadBundles) end
-
 
 ---@class UAsyncPhysicsData : UObject
 ---@field ServerFrame int32
@@ -13207,44 +14040,56 @@ UAsyncPhysicsInputComponent = {}
 
 ---@param AsyncPhysicsData UAsyncPhysicsData
 function UAsyncPhysicsInputComponent:ServerRPCBufferInput(AsyncPhysicsData) end
+
 ---@return UAsyncPhysicsData
 function UAsyncPhysicsInputComponent:GetDataToWrite() end
+
 ---@return UAsyncPhysicsData
 function UAsyncPhysicsInputComponent:GetDataToConsume() end
-
 
 ---@class UAtmosphericFogComponent : USkyAtmosphereComponent
 UAtmosphericFogComponent = {}
 
 ---@param NewSunMultiplier float
 function UAtmosphericFogComponent:SetSunMultiplier(NewSunMultiplier) end
+
 ---@param NewStartDistance float
 function UAtmosphericFogComponent:SetStartDistance(NewStartDistance) end
+
 ---@param DensityHeight float
 ---@param MaxScatteringOrder int32
 ---@param InscatterAltitudeSampleNum int32
 function UAtmosphericFogComponent:SetPrecomputeParams(DensityHeight, MaxScatteringOrder, InscatterAltitudeSampleNum) end
+
 ---@param NewFogMultiplier float
 function UAtmosphericFogComponent:SetFogMultiplier(NewFogMultiplier) end
+
 ---@param NewDistanceScale float
 function UAtmosphericFogComponent:SetDistanceScale(NewDistanceScale) end
+
 ---@param NewDistanceOffset float
 function UAtmosphericFogComponent:SetDistanceOffset(NewDistanceOffset) end
+
 ---@param NewDensityOffset float
 function UAtmosphericFogComponent:SetDensityOffset(NewDensityOffset) end
+
 ---@param NewDensityMultiplier float
 function UAtmosphericFogComponent:SetDensityMultiplier(NewDensityMultiplier) end
+
 ---@param NewLightColor FLinearColor
 function UAtmosphericFogComponent:SetDefaultLightColor(NewLightColor) end
+
 ---@param NewBrightness float
 function UAtmosphericFogComponent:SetDefaultBrightness(NewBrightness) end
+
 ---@param NewAltitudeScale float
 function UAtmosphericFogComponent:SetAltitudeScale(NewAltitudeScale) end
+
 ---@param NewSunDisk boolean
 function UAtmosphericFogComponent:DisableSunDisk(NewSunDisk) end
+
 ---@param NewGroundScattering boolean
 function UAtmosphericFogComponent:DisableGroundScattering(NewGroundScattering) end
-
 
 ---@class UAudioBus : UObject
 ---@field AudioBusChannels EAudioBusChannels
@@ -13304,54 +14149,74 @@ UAudioComponent = {}
 
 ---@param DelayTime float
 function UAudioComponent:StopDelayed(DelayTime) end
+
 function UAudioComponent:Stop() end
+
 ---@param InName FName
 ---@param InWave USoundWave
 function UAudioComponent:SetWaveParameter(InName, InWave) end
+
 ---@param NewVolumeMultiplier float
 function UAudioComponent:SetVolumeMultiplier(NewVolumeMultiplier) end
+
 ---@param bInUISound boolean
 function UAudioComponent:SetUISound(bInUISound) end
+
 ---@param Submix USoundSubmixBase
 ---@param SendLevel float
 function UAudioComponent:SetSubmixSend(Submix, SendLevel) end
+
 ---@param SoundSourceBus USoundSourceBus
 ---@param SourceBusSendLevel float
 function UAudioComponent:SetSourceBusSendPreEffect(SoundSourceBus, SourceBusSendLevel) end
+
 ---@param SoundSourceBus USoundSourceBus
 ---@param SourceBusSendLevel float
 function UAudioComponent:SetSourceBusSendPostEffect(SoundSourceBus, SourceBusSendLevel) end
+
 ---@param NewSound USoundBase
 function UAudioComponent:SetSound(NewSound) end
+
 ---@param NewPitchMultiplier float
 function UAudioComponent:SetPitchMultiplier(NewPitchMultiplier) end
+
 ---@param bPause boolean
 function UAudioComponent:SetPaused(bPause) end
+
 ---@param bInOutputToBusOnly boolean
 function UAudioComponent:SetOutputToBusOnly(bInOutputToBusOnly) end
+
 ---@param Modulators TSet<USoundModulatorBase>
 ---@param Destination EModulationDestination
 ---@param RoutingMethod EModulationRouting
 function UAudioComponent:SetModulationRouting(Modulators, Destination, RoutingMethod) end
+
 ---@param InLowPassFilterFrequency float
 function UAudioComponent:SetLowPassFilterFrequency(InLowPassFilterFrequency) end
+
 ---@param InLowPassFilterEnabled boolean
 function UAudioComponent:SetLowPassFilterEnabled(InLowPassFilterEnabled) end
+
 ---@param InName FName
 ---@param inInt int32
 function UAudioComponent:SetIntParameter(InName, inInt) end
+
 ---@param InName FName
 ---@param InFloat float
 function UAudioComponent:SetFloatParameter(InName, InFloat) end
+
 ---@param InName FName
 ---@param InBool boolean
 function UAudioComponent:SetBoolParameter(InName, InBool) end
+
 ---@param AudioBus UAudioBus
 ---@param AudioBusSendLevel float
 function UAudioComponent:SetAudioBusSendPreEffect(AudioBus, AudioBusSendLevel) end
+
 ---@param AudioBus UAudioBus
 ---@param AudioBusSendLevel float
 function UAudioComponent:SetAudioBusSendPostEffect(AudioBus, AudioBusSendLevel) end
+
 ---@param WorldContextObject UObject
 ---@param InClockHandle UQuartzClockHandle
 ---@param InQuantizationBoundary FQuartzQuantizationBoundary
@@ -13360,54 +14225,70 @@ function UAudioComponent:SetAudioBusSendPostEffect(AudioBus, AudioBusSendLevel) 
 ---@param InFadeInDuration float
 ---@param InFadeVolumeLevel float
 ---@param InFadeCurve EAudioFaderCurve
-function UAudioComponent:PlayQuantized(WorldContextObject, InClockHandle, InQuantizationBoundary, InDelegate, InStartTime, InFadeInDuration, InFadeVolumeLevel, InFadeCurve) end
+function UAudioComponent:PlayQuantized(WorldContextObject, InClockHandle, InQuantizationBoundary, InDelegate, InStartTime,
+                                       InFadeInDuration, InFadeVolumeLevel, InFadeCurve) end
+
 ---@param StartTime float
 function UAudioComponent:Play(StartTime) end
+
 ---@return boolean
 function UAudioComponent:IsVirtualized() end
+
 ---@return boolean
 function UAudioComponent:IsPlaying() end
+
 ---@return boolean
 function UAudioComponent:HasCookedFFTData() end
+
 ---@return boolean
 function UAudioComponent:HasCookedAmplitudeEnvelopeData() end
+
 ---@return EAudioComponentPlayState
 function UAudioComponent:GetPlayState() end
+
 ---@param Destination EModulationDestination
 ---@return TSet<USoundModulatorBase>
 function UAudioComponent:GetModulators(Destination) end
+
 ---@param OutSoundWaveSpectralData TArray<FSoundWaveSpectralDataPerSound>
 ---@return boolean
 function UAudioComponent:GetCookedFFTDataForAllPlayingSounds(OutSoundWaveSpectralData) end
+
 ---@param FrequenciesToGet TArray<float>
 ---@param OutSoundWaveSpectralData TArray<FSoundWaveSpectralData>
 ---@return boolean
 function UAudioComponent:GetCookedFFTData(FrequenciesToGet, OutSoundWaveSpectralData) end
+
 ---@param OutEnvelopeData TArray<FSoundWaveEnvelopeDataPerSound>
 ---@return boolean
 function UAudioComponent:GetCookedEnvelopeDataForAllPlayingSounds(OutEnvelopeData) end
+
 ---@param OutEnvelopeData float
 ---@return boolean
 function UAudioComponent:GetCookedEnvelopeData(OutEnvelopeData) end
+
 ---@param FadeOutDuration float
 ---@param FadeVolumeLevel float
 ---@param FadeCurve EAudioFaderCurve
 function UAudioComponent:FadeOut(FadeOutDuration, FadeVolumeLevel, FadeCurve) end
+
 ---@param FadeInDuration float
 ---@param FadeVolumeLevel float
 ---@param StartTime float
 ---@param FadeCurve EAudioFaderCurve
 function UAudioComponent:FadeIn(FadeInDuration, FadeVolumeLevel, StartTime, FadeCurve) end
+
 ---@param OutAttenuationSettings FSoundAttenuationSettings
 ---@return boolean
 function UAudioComponent:BP_GetAttenuationSettingsToApply(OutAttenuationSettings) end
+
 ---@param AdjustVolumeDuration float
 ---@param AdjustVolumeLevel float
 ---@param FadeCurve EAudioFaderCurve
 function UAudioComponent:AdjustVolume(AdjustVolumeDuration, AdjustVolumeLevel, FadeCurve) end
+
 ---@param InAttenuationSettings FSoundAttenuationSettings
 function UAudioComponent:AdjustAttenuation(InAttenuationSettings) end
-
 
 ---@class UAudioEngineSubsystem : UDynamicSubsystem
 UAudioEngineSubsystem = {}
@@ -13420,43 +14301,51 @@ UAudioParameterConversionStatics = {}
 ---@param String FString
 ---@return FAudioParameter
 function UAudioParameterConversionStatics:StringToAudioParameter(Name, String) end
+
 ---@param Name FName
 ---@param Strings TArray<FString>
 ---@return FAudioParameter
 function UAudioParameterConversionStatics:StringArrayToAudioParameter(Name, Strings) end
+
 ---@param Name FName
 ---@param Object UObject
 ---@return FAudioParameter
 function UAudioParameterConversionStatics:ObjectToAudioParameter(Name, Object) end
+
 ---@param Name FName
 ---@param Objects TArray<UObject>
 ---@return FAudioParameter
 function UAudioParameterConversionStatics:ObjectArrayToAudioParameter(Name, Objects) end
+
 ---@param Name FName
 ---@param Integer int32
 ---@return FAudioParameter
 function UAudioParameterConversionStatics:IntegerToAudioParameter(Name, Integer) end
+
 ---@param Name FName
 ---@param Integers TArray<int32>
 ---@return FAudioParameter
 function UAudioParameterConversionStatics:IntegerArrayToAudioParameter(Name, Integers) end
+
 ---@param Name FName
 ---@param float float
 ---@return FAudioParameter
 function UAudioParameterConversionStatics:FloatToAudioParameter(Name, float) end
+
 ---@param Name FName
 ---@param Floats TArray<float>
 ---@return FAudioParameter
 function UAudioParameterConversionStatics:FloatArrayToAudioParameter(Name, Floats) end
+
 ---@param Name FName
 ---@param bool boolean
 ---@return FAudioParameter
 function UAudioParameterConversionStatics:BooleanToAudioParameter(Name, bool) end
+
 ---@param Name FName
 ---@param Bools TArray<boolean>
 ---@return FAudioParameter
 function UAudioParameterConversionStatics:BooleanArrayToAudioParameter(Name, Bools) end
-
 
 ---@class UAudioSettings : UDeveloperSettings
 ---@field DefaultSoundClassName FSoftObjectPath
@@ -13508,7 +14397,6 @@ UAutoDestroySubsystem = {}
 ---@param EndPlayReason EEndPlayReason::Type
 function UAutoDestroySubsystem:OnActorEndPlay(Actor, EndPlayReason) end
 
-
 ---@class UAutomationTestSettings : UObject
 ---@field EngineTestModules TArray<FString>
 ---@field EditorTestModules TArray<FString>
@@ -13548,14 +14436,16 @@ UAvoidanceManager = {}
 ---@param AvoidanceWeight float
 ---@return boolean
 function UAvoidanceManager:RegisterMovementComponent(MovementComp, AvoidanceWeight) end
+
 ---@return int32
 function UAvoidanceManager:GetObjectCount() end
+
 ---@return int32
 function UAvoidanceManager:GetNewAvoidanceUID() end
+
 ---@param MovementComp UMovementComponent
 ---@return FVector
 function UAvoidanceManager:GetAvoidanceVelocityForComponent(MovementComp) end
-
 
 ---@class UBillboardComponent : UPrimitiveComponent
 ---@field Sprite UTexture2D
@@ -13573,17 +14463,19 @@ UBillboardComponent = {}
 ---@param NewV int32
 ---@param NewVL int32
 function UBillboardComponent:SetUV(NewU, NewUL, NewV, NewVL) end
+
 ---@param NewSprite UTexture2D
 ---@param NewU int32
 ---@param NewUL int32
 ---@param NewV int32
 ---@param NewVL int32
 function UBillboardComponent:SetSpriteAndUV(NewSprite, NewU, NewUL, NewV, NewVL) end
+
 ---@param NewSprite UTexture2D
 function UBillboardComponent:SetSprite(NewSprite) end
+
 ---@param RefVal float
 function UBillboardComponent:SetOpacityMaskRefVal(RefVal) end
-
 
 ---@class UBlendProfile : UObject
 ---@field OwningSkeleton USkeleton
@@ -13645,7 +14537,6 @@ UBlueprintAsyncActionBase = {}
 
 function UBlueprintAsyncActionBase:Activate() end
 
-
 ---@class UBlueprintCore : UObject
 ---@field SkeletonGeneratedClass UClass
 ---@field GeneratedClass UClass
@@ -13689,275 +14580,369 @@ UBlueprintMapLibrary = {}
 ---@param PropertyName FName
 ---@param Value TMap<int32, int32>
 function UBlueprintMapLibrary:SetMapPropertyByName(Object, PropertyName, Value) end
+
 ---@param TargetMap TMap<int32, int32>
 ---@param Values TArray<int32>
 function UBlueprintMapLibrary:Map_Values(TargetMap, Values) end
+
 ---@param TargetMap TMap<int32, int32>
 ---@param Key int32
 ---@return boolean
 function UBlueprintMapLibrary:Map_Remove(TargetMap, Key) end
+
 ---@param TargetMap TMap<int32, int32>
 ---@return int32
 function UBlueprintMapLibrary:Map_Length(TargetMap) end
+
 ---@param TargetMap TMap<int32, int32>
 ---@param Keys TArray<int32>
 function UBlueprintMapLibrary:Map_Keys(TargetMap, Keys) end
+
 ---@param TargetMap TMap<int32, int32>
 ---@return boolean
 function UBlueprintMapLibrary:Map_IsNotEmpty(TargetMap) end
+
 ---@param TargetMap TMap<int32, int32>
 ---@return boolean
 function UBlueprintMapLibrary:Map_IsEmpty(TargetMap) end
+
 ---@param TargetMap TMap<int32, int32>
 ---@param Key int32
 ---@param Value int32
 ---@return boolean
 function UBlueprintMapLibrary:Map_Find(TargetMap, Key, Value) end
+
 ---@param TargetMap TMap<int32, int32>
 ---@param Key int32
 ---@return boolean
 function UBlueprintMapLibrary:Map_Contains(TargetMap, Key) end
+
 ---@param TargetMap TMap<int32, int32>
 function UBlueprintMapLibrary:Map_Clear(TargetMap) end
+
 ---@param TargetMap TMap<int32, int32>
 ---@param Key int32
 ---@param Value int32
 function UBlueprintMapLibrary:Map_Add(TargetMap, Key, Value) end
-
 
 ---@class UBlueprintPathsLibrary : UBlueprintFunctionLibrary
 UBlueprintPathsLibrary = {}
 
 ---@return FString
 function UBlueprintPathsLibrary:VideoCaptureDir() end
+
 ---@param InPath FString
 ---@param bDidSucceed boolean
 ---@param OutReason FText
 function UBlueprintPathsLibrary:ValidatePath(InPath, bDidSucceed, OutReason) end
+
 ---@param InPath FString
 ---@param PathPart FString
 ---@param FilenamePart FString
 ---@param ExtensionPart FString
 function UBlueprintPathsLibrary:Split(InPath, PathPart, FilenamePart, ExtensionPart) end
+
 ---@return FString
 function UBlueprintPathsLibrary:SourceConfigDir() end
+
 ---@return boolean
 function UBlueprintPathsLibrary:ShouldSaveToUserDir() end
+
 ---@return FString
 function UBlueprintPathsLibrary:ShaderWorkingDir() end
+
 ---@param NewGameProjectFilePath FString
 function UBlueprintPathsLibrary:SetProjectFilePath(NewGameProjectFilePath) end
+
 ---@param InPath FString
 ---@param InNewExtension FString
 ---@return FString
 function UBlueprintPathsLibrary:SetExtension(InPath, InNewExtension) end
+
 ---@return FString
 function UBlueprintPathsLibrary:ScreenShotDir() end
+
 ---@return FString
 function UBlueprintPathsLibrary:SandboxesDir() end
+
 ---@return FString
 function UBlueprintPathsLibrary:RootDir() end
+
 ---@param InPath FString
 ---@param OutPath FString
 function UBlueprintPathsLibrary:RemoveDuplicateSlashes(InPath, OutPath) end
+
 ---@return FString
 function UBlueprintPathsLibrary:ProjectUserDir() end
+
 ---@return FString
 function UBlueprintPathsLibrary:ProjectSavedDir() end
+
 ---@return FString
 function UBlueprintPathsLibrary:ProjectPluginsDir() end
+
 ---@return FString
 function UBlueprintPathsLibrary:ProjectPersistentDownloadDir() end
+
 ---@return FString
 function UBlueprintPathsLibrary:ProjectModsDir() end
+
 ---@return FString
 function UBlueprintPathsLibrary:ProjectLogDir() end
+
 ---@return FString
 function UBlueprintPathsLibrary:ProjectIntermediateDir() end
+
 ---@return FString
 function UBlueprintPathsLibrary:ProjectDir() end
+
 ---@return FString
 function UBlueprintPathsLibrary:ProjectContentDir() end
+
 ---@return FString
 function UBlueprintPathsLibrary:ProjectConfigDir() end
+
 ---@return FString
 function UBlueprintPathsLibrary:ProfilingDir() end
+
 ---@param InPath FString
 ---@param OutPath FString
 function UBlueprintPathsLibrary:NormalizeFilename(InPath, OutPath) end
+
 ---@param InPath FString
 ---@param OutPath FString
 function UBlueprintPathsLibrary:NormalizeDirectoryName(InPath, OutPath) end
+
 ---@param InString FString
 ---@param InReplacementChar FString
 ---@return FString
 function UBlueprintPathsLibrary:MakeValidFileName(InString, InReplacementChar) end
+
 ---@param InPath FString
 ---@param OutPath FString
 function UBlueprintPathsLibrary:MakeStandardFilename(InPath, OutPath) end
+
 ---@param InPath FString
 ---@param OutPath FString
 function UBlueprintPathsLibrary:MakePlatformFilename(InPath, OutPath) end
+
 ---@param InPath FString
 ---@param InRelativeTo FString
 ---@param OutPath FString
 ---@return boolean
 function UBlueprintPathsLibrary:MakePathRelativeTo(InPath, InRelativeTo, OutPath) end
+
 ---@return FString
 function UBlueprintPathsLibrary:LaunchDir() end
+
 ---@param PathA FString
 ---@param PathB FString
 ---@return boolean
 function UBlueprintPathsLibrary:IsSamePath(PathA, PathB) end
+
 ---@param InPath FString
 ---@return boolean
 function UBlueprintPathsLibrary:IsRestrictedPath(InPath) end
+
 ---@param InPath FString
 ---@return boolean
 function UBlueprintPathsLibrary:IsRelative(InPath) end
+
 ---@return boolean
 function UBlueprintPathsLibrary:IsProjectFilePathSet() end
+
 ---@param InPath FString
 ---@return boolean
 function UBlueprintPathsLibrary:IsDrive(InPath) end
+
 ---@return boolean
 function UBlueprintPathsLibrary:HasProjectPersistentDownloadDir() end
+
 ---@return TArray<FString>
 function UBlueprintPathsLibrary:GetToolTipLocalizationPaths() end
+
 ---@return TArray<FString>
 function UBlueprintPathsLibrary:GetRestrictedFolderNames() end
+
 ---@return FString
 function UBlueprintPathsLibrary:GetRelativePathToRoot() end
+
 ---@return TArray<FString>
 function UBlueprintPathsLibrary:GetPropertyNameLocalizationPaths() end
+
 ---@return FString
 function UBlueprintPathsLibrary:GetProjectFilePath() end
+
 ---@param InPath FString
 ---@return FString
 function UBlueprintPathsLibrary:GetPath(InPath) end
+
 ---@return FString
 function UBlueprintPathsLibrary:GetInvalidFileSystemChars() end
+
 ---@return TArray<FString>
 function UBlueprintPathsLibrary:GetGameLocalizationPaths() end
+
 ---@param InPath FString
 ---@param bIncludeDot boolean
 ---@return FString
 function UBlueprintPathsLibrary:GetExtension(InPath, bIncludeDot) end
+
 ---@return TArray<FString>
 function UBlueprintPathsLibrary:GetEngineLocalizationPaths() end
+
 ---@return TArray<FString>
 function UBlueprintPathsLibrary:GetEditorLocalizationPaths() end
+
 ---@param InPath FString
 ---@return FString
 function UBlueprintPathsLibrary:GetCleanFilename(InPath) end
+
 ---@param InPath FString
 ---@param bRemovePath boolean
 ---@return FString
 function UBlueprintPathsLibrary:GetBaseFilename(InPath, bRemovePath) end
+
 ---@return FString
 function UBlueprintPathsLibrary:GeneratedConfigDir() end
+
 ---@return FString
 function UBlueprintPathsLibrary:GameUserDeveloperDir() end
+
 ---@return FString
 function UBlueprintPathsLibrary:GameSourceDir() end
+
 ---@return FString
 function UBlueprintPathsLibrary:GameDevelopersDir() end
+
 ---@return FString
 function UBlueprintPathsLibrary:GameAgnosticSavedDir() end
+
 ---@param InPath FString
 ---@return boolean
 function UBlueprintPathsLibrary:FileExists(InPath) end
+
 ---@return FString
 function UBlueprintPathsLibrary:FeaturePackDir() end
+
 ---@return FString
 function UBlueprintPathsLibrary:EnterprisePluginsDir() end
+
 ---@return FString
 function UBlueprintPathsLibrary:EnterpriseFeaturePackDir() end
+
 ---@return FString
 function UBlueprintPathsLibrary:EnterpriseDir() end
+
 ---@return FString
 function UBlueprintPathsLibrary:EngineVersionAgnosticUserDir() end
+
 ---@return FString
 function UBlueprintPathsLibrary:EngineUserDir() end
+
 ---@return FString
 function UBlueprintPathsLibrary:EngineSourceDir() end
+
 ---@return FString
 function UBlueprintPathsLibrary:EngineSavedDir() end
+
 ---@return FString
 function UBlueprintPathsLibrary:EnginePluginsDir() end
+
 ---@return FString
 function UBlueprintPathsLibrary:EngineIntermediateDir() end
+
 ---@return FString
 function UBlueprintPathsLibrary:EngineDir() end
+
 ---@return FString
 function UBlueprintPathsLibrary:EngineContentDir() end
+
 ---@return FString
 function UBlueprintPathsLibrary:EngineConfigDir() end
+
 ---@param InPath FString
 ---@return boolean
 function UBlueprintPathsLibrary:DirectoryExists(InPath) end
+
 ---@return FString
 function UBlueprintPathsLibrary:DiffDir() end
+
 ---@param Path FString
 ---@param Prefix FString
 ---@param Extension FString
 ---@return FString
 function UBlueprintPathsLibrary:CreateTempFilename(Path, Prefix, Extension) end
+
 ---@param InPath FString
 ---@param InSandboxName FString
 ---@return FString
 function UBlueprintPathsLibrary:ConvertToSandboxPath(InPath, InSandboxName) end
+
 ---@param InPath FString
 ---@param InBasePath FString
 ---@return FString
 function UBlueprintPathsLibrary:ConvertRelativePathToFull(InPath, InBasePath) end
+
 ---@param InPath FString
 ---@param InSandboxName FString
 ---@return FString
 function UBlueprintPathsLibrary:ConvertFromSandboxPath(InPath, InSandboxName) end
+
 ---@param InPaths TArray<FString>
 ---@return FString
 function UBlueprintPathsLibrary:Combine(InPaths) end
+
 ---@param InPath FString
 ---@param OutPath FString
 ---@return boolean
 function UBlueprintPathsLibrary:CollapseRelativeDirectories(InPath, OutPath) end
+
 ---@return FString
 function UBlueprintPathsLibrary:CloudDir() end
+
 ---@param InPath FString
 ---@param InNewExtension FString
 ---@return FString
 function UBlueprintPathsLibrary:ChangeExtension(InPath, InNewExtension) end
+
 ---@return FString
 function UBlueprintPathsLibrary:BugItDir() end
+
 ---@return FString
 function UBlueprintPathsLibrary:AutomationTransientDir() end
+
 ---@return FString
 function UBlueprintPathsLibrary:AutomationLogDir() end
+
 ---@return FString
 function UBlueprintPathsLibrary:AutomationDir() end
-
 
 ---@class UBlueprintPlatformLibrary : UBlueprintFunctionLibrary
 UBlueprintPlatformLibrary = {}
 
 ---@param NewAllowedDeviceOrientation EScreenOrientation::Type
 function UBlueprintPlatformLibrary:SetAllowedDeviceOrientation(NewAllowedDeviceOrientation) end
+
 ---@param inSecondsFromNow int32
 ---@param Title FText
 ---@param Body FText
 ---@param Action FText
 ---@param ActivationEvent FString
 ---@return int32
-function UBlueprintPlatformLibrary:ScheduleLocalNotificationFromNow(inSecondsFromNow, Title, Body, Action, ActivationEvent) end
+function UBlueprintPlatformLibrary:ScheduleLocalNotificationFromNow(inSecondsFromNow, Title, Body, Action,
+                                                                    ActivationEvent) end
+
 ---@param inSecondsFromNow int32
 ---@param ActivationEvent FString
 function UBlueprintPlatformLibrary:ScheduleLocalNotificationBadgeFromNow(inSecondsFromNow, ActivationEvent) end
+
 ---@param FireDateTime FDateTime
 ---@param LocalTime boolean
 ---@param ActivationEvent FString
 ---@return int32
 function UBlueprintPlatformLibrary:ScheduleLocalNotificationBadgeAtTime(FireDateTime, LocalTime, ActivationEvent) end
+
 ---@param FireDateTime FDateTime
 ---@param LocalTime boolean
 ---@param Title FText
@@ -13965,21 +14950,27 @@ function UBlueprintPlatformLibrary:ScheduleLocalNotificationBadgeAtTime(FireDate
 ---@param Action FText
 ---@param ActivationEvent FString
 ---@return int32
-function UBlueprintPlatformLibrary:ScheduleLocalNotificationAtTime(FireDateTime, LocalTime, Title, Body, Action, ActivationEvent) end
+function UBlueprintPlatformLibrary:ScheduleLocalNotificationAtTime(FireDateTime, LocalTime, Title, Body, Action,
+                                                                   ActivationEvent) end
+
 ---@param NotificationLaunchedApp boolean
 ---@param ActivationEvent FString
 ---@param FireDate int32
 function UBlueprintPlatformLibrary:GetLaunchNotification(NotificationLaunchedApp, ActivationEvent, FireDate) end
+
 ---@return EScreenOrientation::Type
 function UBlueprintPlatformLibrary:GetDeviceOrientation() end
+
 ---@return EScreenOrientation::Type
 function UBlueprintPlatformLibrary:GetAllowedDeviceOrientation() end
+
 function UBlueprintPlatformLibrary:ClearAllLocalNotifications() end
+
 ---@param NotificationId int32
 function UBlueprintPlatformLibrary:CancelLocalNotificationById(NotificationId) end
+
 ---@param ActivationEvent FString
 function UBlueprintPlatformLibrary:CancelLocalNotification(ActivationEvent) end
-
 
 ---@class UBlueprintSetLibrary : UBlueprintFunctionLibrary
 UBlueprintSetLibrary = {}
@@ -13988,50 +14979,62 @@ UBlueprintSetLibrary = {}
 ---@param PropertyName FName
 ---@param Value TSet<int32>
 function UBlueprintSetLibrary:SetSetPropertyByName(Object, PropertyName, Value) end
+
 ---@param A TSet<int32>
 ---@param B TSet<int32>
 ---@param Result TSet<int32>
 function UBlueprintSetLibrary:Set_Union(A, B, Result) end
+
 ---@param A TSet<int32>
 ---@param Result TArray<int32>
 function UBlueprintSetLibrary:Set_ToArray(A, Result) end
+
 ---@param TargetSet TSet<int32>
 ---@param Items TArray<int32>
 function UBlueprintSetLibrary:Set_RemoveItems(TargetSet, Items) end
+
 ---@param TargetSet TSet<int32>
 ---@param Item int32
 ---@return boolean
 function UBlueprintSetLibrary:Set_Remove(TargetSet, Item) end
+
 ---@param TargetSet TSet<int32>
 ---@return int32
 function UBlueprintSetLibrary:Set_Length(TargetSet) end
+
 ---@param TargetSet TSet<int32>
 ---@return boolean
 function UBlueprintSetLibrary:Set_IsNotEmpty(TargetSet) end
+
 ---@param TargetSet TSet<int32>
 ---@return boolean
 function UBlueprintSetLibrary:Set_IsEmpty(TargetSet) end
+
 ---@param A TSet<int32>
 ---@param B TSet<int32>
 ---@param Result TSet<int32>
 function UBlueprintSetLibrary:Set_Intersection(A, B, Result) end
+
 ---@param A TSet<int32>
 ---@param B TSet<int32>
 ---@param Result TSet<int32>
 function UBlueprintSetLibrary:Set_Difference(A, B, Result) end
+
 ---@param TargetSet TSet<int32>
 ---@param ItemToFind int32
 ---@return boolean
 function UBlueprintSetLibrary:Set_Contains(TargetSet, ItemToFind) end
+
 ---@param TargetSet TSet<int32>
 function UBlueprintSetLibrary:Set_Clear(TargetSet) end
+
 ---@param TargetSet TSet<int32>
 ---@param NewItems TArray<int32>
 function UBlueprintSetLibrary:Set_AddItems(TargetSet, NewItems) end
+
 ---@param TargetSet TSet<int32>
 ---@param NewItem int32
 function UBlueprintSetLibrary:Set_Add(TargetSet, NewItem) end
-
 
 ---@class UBlueprintTypeConversions : UObject
 UBlueprintTypeConversions = {}
@@ -14039,67 +15042,86 @@ UBlueprintTypeConversions = {}
 ---@param Inset TSet<int32>
 ---@return TSet<int32>
 function UBlueprintTypeConversions:ConvertSetType(Inset) end
+
 ---@param InMap TMap<int32, int32>
 ---@return TMap<int32, int32>
 function UBlueprintTypeConversions:ConvertMapType(InMap) end
+
 ---@param InFromData int32
 ---@return int32
 function UBlueprintTypeConversions:ConvertFVector4fToFVector4d(InFromData) end
+
 ---@param InFromData int32
 ---@return int32
 function UBlueprintTypeConversions:ConvertFVector4dToFVector4f(InFromData) end
+
 ---@param InFromData int32
 ---@return int32
 function UBlueprintTypeConversions:ConvertFVector3fToFVector3d(InFromData) end
+
 ---@param InFromData int32
 ---@return int32
 function UBlueprintTypeConversions:ConvertFVector3dToFVector3f(InFromData) end
+
 ---@param InFromData int32
 ---@return int32
 function UBlueprintTypeConversions:ConvertFVector2fToFVector2d(InFromData) end
+
 ---@param InFromData int32
 ---@return int32
 function UBlueprintTypeConversions:ConvertFVector2dToFVector2f(InFromData) end
+
 ---@param InFromData int32
 ---@return int32
 function UBlueprintTypeConversions:ConvertFTransform3fToFTransform3d(InFromData) end
+
 ---@param InFromData int32
 ---@return int32
 function UBlueprintTypeConversions:ConvertFTransform3dToFTransform3f(InFromData) end
+
 ---@param InFromData int32
 ---@return int32
 function UBlueprintTypeConversions:ConvertFRotator3fToFRotator3d(InFromData) end
+
 ---@param InFromData int32
 ---@return int32
 function UBlueprintTypeConversions:ConvertFRotator3dToFRotator3f(InFromData) end
+
 ---@param InFromData int32
 ---@return int32
 function UBlueprintTypeConversions:ConvertFQuat4fToFQuat4d(InFromData) end
+
 ---@param InFromData int32
 ---@return int32
 function UBlueprintTypeConversions:ConvertFQuat4dToFQuat4f(InFromData) end
+
 ---@param InFromData int32
 ---@return int32
 function UBlueprintTypeConversions:ConvertFPlane4fToFPlane4d(InFromData) end
+
 ---@param InFromData int32
 ---@return int32
 function UBlueprintTypeConversions:ConvertFPlane4dToFPlane4f(InFromData) end
+
 ---@param InFromData int32
 ---@return int32
 function UBlueprintTypeConversions:ConvertFMatrix44fToFMatrix44d(InFromData) end
+
 ---@param InFromData int32
 ---@return int32
 function UBlueprintTypeConversions:ConvertFMatrix44dToFMatrix44f(InFromData) end
+
 ---@param InFromData int32
 ---@return int32
 function UBlueprintTypeConversions:ConvertFBox2fToFBox2d(InFromData) end
+
 ---@param InFromData int32
 ---@return int32
 function UBlueprintTypeConversions:ConvertFBox2dToFBox2f(InFromData) end
+
 ---@param inArray TArray<int32>
 ---@return TArray<int32>
 function UBlueprintTypeConversions:ConvertArrayType(inArray) end
-
 
 ---@class UBodySetup : UBodySetupCore
 ---@field AggGeom FKAggregateGeom
@@ -14165,14 +15187,16 @@ UBoxComponent = {}
 
 ---@param Thickness float
 function UBoxComponent:SetLineThickness(Thickness) end
+
 ---@param InBoxExtent FVector
 ---@param bUpdateOverlaps boolean
 function UBoxComponent:SetBoxExtent(InBoxExtent, bUpdateOverlaps) end
+
 ---@return FVector
 function UBoxComponent:GetUnscaledBoxExtent() end
+
 ---@return FVector
 function UBoxComponent:GetScaledBoxExtent() end
-
 
 ---@class UBoxReflectionCaptureComponent : UReflectionCaptureComponent
 ---@field BoxTransitionDistance float
@@ -14218,15 +15242,16 @@ UCachedAnimDataLibrary = {}
 ---@param CachedAnimStateData FCachedAnimStateData
 ---@return boolean
 function UCachedAnimDataLibrary:StateMachine_IsStateRelevant(InAnimInstance, CachedAnimStateData) end
+
 ---@param InAnimInstance UAnimInstance
 ---@param CachedAnimStateData FCachedAnimStateData
 ---@return float
 function UCachedAnimDataLibrary:StateMachine_GetLocalWeight(InAnimInstance, CachedAnimStateData) end
+
 ---@param InAnimInstance UAnimInstance
 ---@param CachedAnimStateData FCachedAnimStateData
 ---@return float
 function UCachedAnimDataLibrary:StateMachine_GetGlobalWeight(InAnimInstance, CachedAnimStateData) end
-
 
 ---@class UCameraComponent : USceneComponent
 ---@field FieldOfView float
@@ -14247,34 +15272,46 @@ UCameraComponent = {}
 
 ---@param bInUseFieldOfViewForLOD boolean
 function UCameraComponent:SetUseFieldOfViewForLOD(bInUseFieldOfViewForLOD) end
+
 ---@param InProjectionMode ECameraProjectionMode::Type
 function UCameraComponent:SetProjectionMode(InProjectionMode) end
+
 ---@param InPostProcessBlendWeight float
 function UCameraComponent:SetPostProcessBlendWeight(InPostProcessBlendWeight) end
+
 ---@param InOrthoWidth float
 function UCameraComponent:SetOrthoWidth(InOrthoWidth) end
+
 ---@param InOrthoNearClipPlane float
 function UCameraComponent:SetOrthoNearClipPlane(InOrthoNearClipPlane) end
+
 ---@param InOrthoFarClipPlane float
 function UCameraComponent:SetOrthoFarClipPlane(InOrthoFarClipPlane) end
+
 ---@param InFieldOfView float
 function UCameraComponent:SetFieldOfView(InFieldOfView) end
+
 ---@param bInConstrainAspectRatio boolean
 function UCameraComponent:SetConstraintAspectRatio(bInConstrainAspectRatio) end
+
 ---@param InAspectRatioAxisConstraint EAspectRatioAxisConstraint
 function UCameraComponent:SetAspectRatioAxisConstraint(InAspectRatioAxisConstraint) end
+
 ---@param InAspectRatio float
 function UCameraComponent:SetAspectRatio(InAspectRatio) end
+
 ---@param InBlendableObject TScriptInterface<IBlendableInterface>
 function UCameraComponent:RemoveBlendable(InBlendableObject) end
+
 function UCameraComponent:OnCameraMeshHiddenChanged() end
+
 ---@param DeltaTime float
 ---@param DesiredView FMinimalViewInfo
 function UCameraComponent:GetCameraView(DeltaTime, DesiredView) end
+
 ---@param InBlendableObject TScriptInterface<IBlendableInterface>
 ---@param InWeight float
 function UCameraComponent:AddOrUpdateBlendable(InBlendableObject, InWeight) end
-
 
 ---@class UCameraLensEffectInterfaceClassSupportLibrary : UBlueprintFunctionLibrary
 UCameraLensEffectInterfaceClassSupportLibrary = {}
@@ -14283,16 +15320,18 @@ UCameraLensEffectInterfaceClassSupportLibrary = {}
 ---@param Var FCameraLensInterfaceClassSupport
 ---@param Result EInterfaceValidResult
 function UCameraLensEffectInterfaceClassSupportLibrary:SetInterfaceClass(Class, Var, Result) end
+
 ---@param CameraLens TScriptInterface<ICameraLensEffectInterface>
 ---@param Result EInterfaceValidResult
 function UCameraLensEffectInterfaceClassSupportLibrary:IsInterfaceValid(CameraLens, Result) end
+
 ---@param CameraLens FCameraLensInterfaceClassSupport
 ---@param Result EInterfaceValidResult
 function UCameraLensEffectInterfaceClassSupportLibrary:IsInterfaceClassValid(CameraLens, Result) end
+
 ---@param CameraLens FCameraLensInterfaceClassSupport
 ---@return TSubclassOf<AActor>
 function UCameraLensEffectInterfaceClassSupportLibrary:GetInterfaceClass(CameraLens) end
-
 
 ---@class UCameraModifier : UObject
 ---@field bDebug boolean
@@ -14306,17 +15345,23 @@ UCameraModifier = {}
 
 ---@param InOwner AActor
 function UCameraModifier:OnCameraOwnerDestroyed(InOwner) end
+
 ---@return boolean
 function UCameraModifier:IsDisabled() end
+
 ---@return AActor
 function UCameraModifier:GetViewTarget() end
+
 function UCameraModifier:EnableModifier() end
+
 ---@param bImmediate boolean
 function UCameraModifier:DisableModifier(bImmediate) end
+
 ---@param DeltaTime float
 ---@param PostProcessBlendWeight float
 ---@param PostProcessSettings FPostProcessSettings
 function UCameraModifier:BlueprintModifyPostProcess(DeltaTime, PostProcessBlendWeight, PostProcessSettings) end
+
 ---@param DeltaTime float
 ---@param ViewLocation FVector
 ---@param ViewRotation FRotator
@@ -14324,8 +15369,8 @@ function UCameraModifier:BlueprintModifyPostProcess(DeltaTime, PostProcessBlendW
 ---@param NewViewLocation FVector
 ---@param NewViewRotation FRotator
 ---@param NewFOV float
-function UCameraModifier:BlueprintModifyCamera(DeltaTime, ViewLocation, ViewRotation, FOV, NewViewLocation, NewViewRotation, NewFOV) end
-
+function UCameraModifier:BlueprintModifyCamera(DeltaTime, ViewLocation, ViewRotation, FOV, NewViewLocation,
+                                               NewViewRotation, NewFOV) end
 
 ---@class UCameraModifier_CameraShake : UCameraModifier
 ---@field ActiveShakes TArray<FActiveCameraShakeInfo>
@@ -14344,9 +15389,9 @@ UCameraShakeBase = {}
 
 ---@param InPattern UCameraShakePattern
 function UCameraShakeBase:SetRootShakePattern(InPattern) end
+
 ---@return UCameraShakePattern
 function UCameraShakeBase:GetRootShakePattern() end
-
 
 ---@class UCameraShakePattern : UObject
 UCameraShakePattern = {}
@@ -14363,26 +15408,29 @@ UCameraShakeSourceComponent = {}
 ---@param InCameraShake TSubclassOf<UCameraShakeBase>
 ---@param bImmediately boolean
 function UCameraShakeSourceComponent:StopAllCameraShakesOfType(InCameraShake, bImmediately) end
+
 ---@param bImmediately boolean
 function UCameraShakeSourceComponent:StopAllCameraShakes(bImmediately) end
+
 ---@param InCameraShake TSubclassOf<UCameraShakeBase>
 ---@param Scale float
 ---@param PlaySpace ECameraShakePlaySpace
 ---@param UserPlaySpaceRot FRotator
 function UCameraShakeSourceComponent:StartCameraShake(InCameraShake, Scale, PlaySpace, UserPlaySpaceRot) end
+
 function UCameraShakeSourceComponent:Start() end
+
 ---@param Location FVector
 ---@return float
 function UCameraShakeSourceComponent:GetAttenuationFactor(Location) end
-
 
 ---@class UCancellableAsyncAction : UBlueprintAsyncActionBase
 UCancellableAsyncAction = {}
 
 ---@return boolean
 function UCancellableAsyncAction:IsActive() end
-function UCancellableAsyncAction:Cancel() end
 
+function UCancellableAsyncAction:Cancel() end
 
 ---@class UCanvas : UObject
 ---@field OrgX float
@@ -14406,16 +15454,20 @@ UCanvas = {}
 ---@param Scale FVector2D
 ---@return FVector2D
 function UCanvas:K2_TextSize(RenderFont, RenderText, Scale) end
+
 ---@param RenderFont UFont
 ---@param RenderText FString
 ---@return FVector2D
 function UCanvas:K2_StrLen(RenderFont, RenderText) end
+
 ---@param WorldLocation FVector
 ---@return FVector
 function UCanvas:K2_Project(WorldLocation) end
+
 ---@param RenderTexture UTexture
 ---@param Triangles TArray<FCanvasUVTri>
 function UCanvas:K2_DrawTriangle(RenderTexture, Triangles) end
+
 ---@param RenderTexture UTexture
 ---@param ScreenPosition FVector2D
 ---@param ScreenSize FVector2D
@@ -14425,7 +15477,9 @@ function UCanvas:K2_DrawTriangle(RenderTexture, Triangles) end
 ---@param BlendMode EBlendMode
 ---@param Rotation float
 ---@param PivotPoint FVector2D
-function UCanvas:K2_DrawTexture(RenderTexture, ScreenPosition, ScreenSize, CoordinatePosition, CoordinateSize, RenderColor, BlendMode, Rotation, PivotPoint) end
+function UCanvas:K2_DrawTexture(RenderTexture, ScreenPosition, ScreenSize, CoordinatePosition, CoordinateSize,
+                                RenderColor, BlendMode, Rotation, PivotPoint) end
+
 ---@param RenderFont UFont
 ---@param RenderText FString
 ---@param ScreenPosition FVector2D
@@ -14438,16 +15492,20 @@ function UCanvas:K2_DrawTexture(RenderTexture, ScreenPosition, ScreenSize, Coord
 ---@param bCentreY boolean
 ---@param bOutlined boolean
 ---@param OutlineColor FLinearColor
-function UCanvas:K2_DrawText(RenderFont, RenderText, ScreenPosition, Scale, RenderColor, Kerning, ShadowColor, ShadowOffset, bCentreX, bCentreY, bOutlined, OutlineColor) end
+function UCanvas:K2_DrawText(RenderFont, RenderText, ScreenPosition, Scale, RenderColor, Kerning, ShadowColor,
+                             ShadowOffset, bCentreX, bCentreY, bOutlined, OutlineColor) end
+
 ---@param RenderTexture UTexture
 ---@param ScreenPosition FVector2D
 ---@param Radius FVector2D
 ---@param NumberOfSides int32
 ---@param RenderColor FLinearColor
 function UCanvas:K2_DrawPolygon(RenderTexture, ScreenPosition, Radius, NumberOfSides, RenderColor) end
+
 ---@param RenderMaterial UMaterialInterface
 ---@param Triangles TArray<FCanvasUVTri>
 function UCanvas:K2_DrawMaterialTriangle(RenderMaterial, Triangles) end
+
 ---@param RenderMaterial UMaterialInterface
 ---@param ScreenPosition FVector2D
 ---@param ScreenSize FVector2D
@@ -14455,17 +15513,21 @@ function UCanvas:K2_DrawMaterialTriangle(RenderMaterial, Triangles) end
 ---@param CoordinateSize FVector2D
 ---@param Rotation float
 ---@param PivotPoint FVector2D
-function UCanvas:K2_DrawMaterial(RenderMaterial, ScreenPosition, ScreenSize, CoordinatePosition, CoordinateSize, Rotation, PivotPoint) end
+function UCanvas:K2_DrawMaterial(RenderMaterial, ScreenPosition, ScreenSize, CoordinatePosition, CoordinateSize, Rotation,
+                                 PivotPoint) end
+
 ---@param ScreenPositionA FVector2D
 ---@param ScreenPositionB FVector2D
 ---@param Thickness float
 ---@param RenderColor FLinearColor
 function UCanvas:K2_DrawLine(ScreenPositionA, ScreenPositionB, Thickness, RenderColor) end
+
 ---@param ScreenPosition FVector2D
 ---@param ScreenSize FVector2D
 ---@param Thickness float
 ---@param RenderColor FLinearColor
 function UCanvas:K2_DrawBox(ScreenPosition, ScreenSize, Thickness, RenderColor) end
+
 ---@param BorderTexture UTexture
 ---@param BackgroundTexture UTexture
 ---@param LeftBorderTexture UTexture
@@ -14482,12 +15544,14 @@ function UCanvas:K2_DrawBox(ScreenPosition, ScreenSize, Thickness, RenderColor) 
 ---@param Rotation float
 ---@param PivotPoint FVector2D
 ---@param CornerSize FVector2D
-function UCanvas:K2_DrawBorder(BorderTexture, BackgroundTexture, LeftBorderTexture, RightBorderTexture, TopBorderTexture, BottomBorderTexture, ScreenPosition, ScreenSize, CoordinatePosition, CoordinateSize, RenderColor, BorderScale, BackgroundScale, Rotation, PivotPoint, CornerSize) end
+function UCanvas:K2_DrawBorder(BorderTexture, BackgroundTexture, LeftBorderTexture, RightBorderTexture, TopBorderTexture,
+                               BottomBorderTexture, ScreenPosition, ScreenSize, CoordinatePosition, CoordinateSize,
+                               RenderColor, BorderScale, BackgroundScale, Rotation, PivotPoint, CornerSize) end
+
 ---@param ScreenPosition FVector2D
 ---@param WorldOrigin FVector
 ---@param WorldDirection FVector
 function UCanvas:K2_Deproject(ScreenPosition, WorldOrigin, WorldDirection) end
-
 
 ---@class UCanvasRenderTarget2D : UTextureRenderTarget2D
 ---@field OnCanvasRenderTargetUpdate FCanvasRenderTarget2DOnCanvasRenderTargetUpdate
@@ -14496,20 +15560,22 @@ function UCanvas:K2_Deproject(ScreenPosition, WorldOrigin, WorldDirection) end
 UCanvasRenderTarget2D = {}
 
 function UCanvasRenderTarget2D:UpdateResource() end
+
 ---@param Canvas UCanvas
 ---@param Width int32
 ---@param Height int32
 function UCanvasRenderTarget2D:ReceiveUpdate(Canvas, Width, Height) end
+
 ---@param Width int32
 ---@param Height int32
 function UCanvasRenderTarget2D:GetSize(Width, Height) end
+
 ---@param WorldContextObject UObject
 ---@param CanvasRenderTarget2DClass TSubclassOf<UCanvasRenderTarget2D>
 ---@param Width int32
 ---@param Height int32
 ---@return UCanvasRenderTarget2D
 function UCanvasRenderTarget2D:CreateCanvasRenderTarget2D(WorldContextObject, CanvasRenderTarget2DClass, Width, Height) end
-
 
 ---@class UCapsuleComponent : UShapeComponent
 ---@field CapsuleHalfHeight float
@@ -14520,39 +15586,51 @@ UCapsuleComponent = {}
 ---@param InHalfHeight float
 ---@param bUpdateOverlaps boolean
 function UCapsuleComponent:SetCapsuleSize(InRadius, InHalfHeight, bUpdateOverlaps) end
+
 ---@param Radius float
 ---@param bUpdateOverlaps boolean
 function UCapsuleComponent:SetCapsuleRadius(Radius, bUpdateOverlaps) end
+
 ---@param HalfHeight float
 ---@param bUpdateOverlaps boolean
 function UCapsuleComponent:SetCapsuleHalfHeight(HalfHeight, bUpdateOverlaps) end
+
 ---@param OutRadius float
 ---@param OutHalfHeightWithoutHemisphere float
 function UCapsuleComponent:GetUnscaledCapsuleSize_WithoutHemisphere(OutRadius, OutHalfHeightWithoutHemisphere) end
+
 ---@param OutRadius float
 ---@param OutHalfHeight float
 function UCapsuleComponent:GetUnscaledCapsuleSize(OutRadius, OutHalfHeight) end
+
 ---@return float
 function UCapsuleComponent:GetUnscaledCapsuleRadius() end
+
 ---@return float
 function UCapsuleComponent:GetUnscaledCapsuleHalfHeight_WithoutHemisphere() end
+
 ---@return float
 function UCapsuleComponent:GetUnscaledCapsuleHalfHeight() end
+
 ---@return float
 function UCapsuleComponent:GetShapeScale() end
+
 ---@param OutRadius float
 ---@param OutHalfHeightWithoutHemisphere float
 function UCapsuleComponent:GetScaledCapsuleSize_WithoutHemisphere(OutRadius, OutHalfHeightWithoutHemisphere) end
+
 ---@param OutRadius float
 ---@param OutHalfHeight float
 function UCapsuleComponent:GetScaledCapsuleSize(OutRadius, OutHalfHeight) end
+
 ---@return float
 function UCapsuleComponent:GetScaledCapsuleRadius() end
+
 ---@return float
 function UCapsuleComponent:GetScaledCapsuleHalfHeight_WithoutHemisphere() end
+
 ---@return float
 function UCapsuleComponent:GetScaledCapsuleHalfHeight() end
-
 
 ---@class UChannel : UObject
 ---@field Connection UNetConnection
@@ -14566,7 +15644,6 @@ UChaosBlueprintLibrary = {}
 ---@param ContextObject UObject
 ---@return UChaosEventRelay
 function UChaosBlueprintLibrary:GetEventRelayFromContext(ContextObject) end
-
 
 ---@class UChaosEventRelay : UObject
 ---@field OnCollisionEvent FChaosEventRelayOnCollisionEvent
@@ -14740,99 +15817,139 @@ UCharacterMovementComponent = {}
 
 ---@param InWalkableFloorZ float
 function UCharacterMovementComponent:SetWalkableFloorZ(InWalkableFloorZ) end
+
 ---@param InWalkableFloorAngle float
 function UCharacterMovementComponent:SetWalkableFloorAngle(InWalkableFloorAngle) end
+
 ---@param NewMovementMode EMovementMode
 ---@param NewCustomMode uint8
 function UCharacterMovementComponent:SetMovementMode(NewMovementMode, NewCustomMode) end
+
 ---@param GroupMask FNavAvoidanceMask
 function UCharacterMovementComponent:SetGroupsToIgnoreMask(GroupMask) end
+
 ---@param GroupFlags int32
 function UCharacterMovementComponent:SetGroupsToIgnore(GroupFlags) end
+
 ---@param GroupMask FNavAvoidanceMask
 function UCharacterMovementComponent:SetGroupsToAvoidMask(GroupMask) end
+
 ---@param GroupFlags int32
 function UCharacterMovementComponent:SetGroupsToAvoid(GroupFlags) end
+
 ---@param NewValue float
 function UCharacterMovementComponent:SetCrouchedHalfHeight(NewValue) end
+
 ---@param GroupMask FNavAvoidanceMask
 function UCharacterMovementComponent:SetAvoidanceGroupMask(GroupMask) end
+
 ---@param GroupFlags int32
 function UCharacterMovementComponent:SetAvoidanceGroup(GroupFlags) end
+
 ---@param bEnable boolean
 function UCharacterMovementComponent:SetAvoidanceEnabled(bEnable) end
+
 ---@return float
 function UCharacterMovementComponent:K2_GetWalkableFloorZ() end
+
 ---@return float
 function UCharacterMovementComponent:K2_GetWalkableFloorAngle() end
+
 ---@param CapsuleLocation FVector
 ---@param FloorResult FFindFloorResult
 function UCharacterMovementComponent:K2_FindFloor(CapsuleLocation, FloorResult) end
+
 ---@param CapsuleLocation FVector
 ---@param LineDistance float
 ---@param SweepDistance float
 ---@param SweepRadius float
 ---@param FloorResult FFindFloorResult
-function UCharacterMovementComponent:K2_ComputeFloorDist(CapsuleLocation, LineDistance, SweepDistance, SweepRadius, FloorResult) end
+function UCharacterMovementComponent:K2_ComputeFloorDist(CapsuleLocation, LineDistance, SweepDistance, SweepRadius,
+                                                         FloorResult) end
+
 ---@return boolean
 function UCharacterMovementComponent:IsWalking() end
+
 ---@param Hit FHitResult
 ---@return boolean
 function UCharacterMovementComponent:IsWalkable(Hit) end
+
 ---@return float
 function UCharacterMovementComponent:GetValidPerchRadius() end
+
 ---@return float
 function UCharacterMovementComponent:GetPerchRadiusThreshold() end
+
 ---@return UPrimitiveComponent
 function UCharacterMovementComponent:GetMovementBase() end
+
 ---@return float
 function UCharacterMovementComponent:GetMinAnalogSpeed() end
+
 ---@return float
 function UCharacterMovementComponent:GetMaxJumpHeightWithJumpTime() end
+
 ---@return float
 function UCharacterMovementComponent:GetMaxJumpHeight() end
+
 ---@return float
 function UCharacterMovementComponent:GetMaxBrakingDeceleration() end
+
 ---@return float
 function UCharacterMovementComponent:GetMaxAcceleration() end
+
 ---@return FVector
 function UCharacterMovementComponent:GetLastUpdateVelocity() end
+
 ---@return FRotator
 function UCharacterMovementComponent:GetLastUpdateRotation() end
+
 ---@return FVector
 function UCharacterMovementComponent:GetLastUpdateRequestedVelocity() end
+
 ---@return FVector
 function UCharacterMovementComponent:GetLastUpdateLocation() end
+
 ---@return FVector
 function UCharacterMovementComponent:GetImpartedMovementBaseVelocity() end
+
 ---@return FVector
 function UCharacterMovementComponent:GetCurrentAcceleration() end
+
 ---@return float
 function UCharacterMovementComponent:GetCrouchedHalfHeight() end
+
 ---@return ACharacter
 function UCharacterMovementComponent:GetCharacterOwner() end
+
 ---@return float
 function UCharacterMovementComponent:GetAnalogInputModifier() end
+
 function UCharacterMovementComponent:DisableMovement() end
+
 function UCharacterMovementComponent:ClearAccumulatedForces() end
+
 ---@param OverlappedComp UPrimitiveComponent
 ---@param Other AActor
 ---@param OtherComp UPrimitiveComponent
 ---@param OtherBodyIndex int32
 ---@param bFromSweep boolean
 ---@param SweepResult FHitResult
-function UCharacterMovementComponent:CapsuleTouched(OverlappedComp, Other, OtherComp, OtherBodyIndex, bFromSweep, SweepResult) end
+function UCharacterMovementComponent:CapsuleTouched(OverlappedComp, Other, OtherComp, OtherBodyIndex, bFromSweep,
+                                                    SweepResult) end
+
 ---@param DeltaTime float
 ---@param Friction float
 ---@param bFluid boolean
 ---@param BrakingDeceleration float
 function UCharacterMovementComponent:CalcVelocity(DeltaTime, Friction, bFluid, BrakingDeceleration) end
+
 ---@param Impulse FVector
 ---@param bVelocityChange boolean
 function UCharacterMovementComponent:AddImpulse(Impulse, bVelocityChange) end
+
 ---@param Force FVector
 function UCharacterMovementComponent:AddForce(Force) end
-
 
 ---@class UCheatManager : UObject
 ---@field DebugCameraControllerRef ADebugCameraController
@@ -14841,85 +15958,140 @@ function UCharacterMovementComponent:AddForce(Force) end
 UCheatManager = {}
 
 function UCheatManager:Walk() end
+
 function UCheatManager:ViewSelf() end
+
 ---@param S FString
 function UCheatManager:ViewPlayer(S) end
+
 ---@param DesiredClass TSubclassOf<AActor>
 function UCheatManager:ViewClass(DesiredClass) end
+
 ---@param ActorName FName
 function UCheatManager:ViewActor(ActorName) end
+
 function UCheatManager:UpdateSafeArea() end
+
 function UCheatManager:ToggleServerStatReplicatorUpdateStatNet() end
+
 function UCheatManager:ToggleServerStatReplicatorClientOverwrite() end
+
 function UCheatManager:ToggleDebugCamera() end
+
 function UCheatManager:ToggleAILogging() end
+
 function UCheatManager:TestCollisionDistance() end
+
 function UCheatManager:Teleport() end
+
 ---@param ClassName FString
 function UCheatManager:Summon(ClassName) end
+
 ---@param PackageName FName
 function UCheatManager:StreamLevelOut(PackageName) end
+
 ---@param PackageName FName
 function UCheatManager:StreamLevelIn(PackageName) end
+
 function UCheatManager:SpawnServerStatReplicator() end
+
 ---@param NewTimeDilation float
 function UCheatManager:Slomo(NewTimeDilation) end
+
 function UCheatManager:SetWorldOrigin() end
+
 function UCheatManager:SetMouseSensitivityToDefault() end
+
 function UCheatManager:ServerToggleAILogging() end
+
 function UCheatManager:ReceiveInitCheatManager() end
+
 function UCheatManager:ReceiveEndPlay() end
+
 function UCheatManager:PlayersOnly() end
+
 ---@param Player AActor
 ---@param EndPlayReason EEndPlayReason::Type
 function UCheatManager:OnPlayerEndPlayed(Player, EndPlayReason) end
+
 ---@param PackageName FName
 function UCheatManager:OnlyLoadLevel(PackageName) end
+
 function UCheatManager:LogLoc() end
+
 function UCheatManager:InvertMouse() end
+
 function UCheatManager:God() end
+
 function UCheatManager:Ghost() end
+
 ---@return APlayerController
 function UCheatManager:GetPlayerController() end
+
 ---@param Delay float
 function UCheatManager:FreezeFrame(Delay) end
+
 function UCheatManager:Fly() end
+
 function UCheatManager:FlushLog() end
+
 function UCheatManager:EnableDebugCamera() end
+
 function UCheatManager:DumpVoiceMutingState() end
+
 function UCheatManager:DumpPartyState() end
+
 function UCheatManager:DumpOnlineSessionState() end
+
 function UCheatManager:DumpChatState() end
+
 function UCheatManager:DisableDebugCamera() end
+
 function UCheatManager:DestroyTarget() end
+
 function UCheatManager:DestroyServerStatReplicator() end
+
 ---@param aClass TSubclassOf<APawn>
 function UCheatManager:DestroyPawns(aClass) end
+
 function UCheatManager:DestroyAllPawnsExceptTarget() end
+
 ---@param aClass TSubclassOf<AActor>
 function UCheatManager:DestroyAll(aClass) end
+
 ---@param HalfHeight float
 ---@param Radius float
 function UCheatManager:DebugCapsuleSweepSize(HalfHeight, Radius) end
+
 function UCheatManager:DebugCapsuleSweepPawn() end
+
 ---@param bTraceComplex boolean
 function UCheatManager:DebugCapsuleSweepComplex(bTraceComplex) end
+
 function UCheatManager:DebugCapsuleSweepClear() end
+
 ---@param Channel ECollisionChannel
 function UCheatManager:DebugCapsuleSweepChannel(Channel) end
+
 function UCheatManager:DebugCapsuleSweepCapture() end
+
 function UCheatManager:DebugCapsuleSweep() end
+
 ---@param DamageAmount float
 function UCheatManager:DamageTarget(DamageAmount) end
+
 ---@param ScriptName FString
 function UCheatManager:CheatScript(ScriptName) end
+
 ---@param F float
 function UCheatManager:ChangeSize(F) end
+
 ---@param ViewLocation FVector
 ---@param ViewRotation FRotator
 ---@param GoString FString
 ---@param LocString FString
 function UCheatManager:BugItStringCreator(ViewLocation, ViewRotation, GoString, LocString) end
+
 ---@param X float
 ---@param Y float
 ---@param Z float
@@ -14927,18 +16099,19 @@ function UCheatManager:BugItStringCreator(ViewLocation, ViewRotation, GoString, 
 ---@param Yaw float
 ---@param Roll float
 function UCheatManager:BugItGo(X, Y, Z, Pitch, Yaw, Roll) end
+
 ---@param ScreenShotDescription FString
 function UCheatManager:BugIt(ScreenShotDescription) end
-
 
 ---@class UCheatManagerExtension : UObject
 UCheatManagerExtension = {}
 
 function UCheatManagerExtension:RemovedFromCheatManager() end
+
 ---@return APlayerController
 function UCheatManagerExtension:GetPlayerController() end
-function UCheatManagerExtension:AddedToCheatManager() end
 
+function UCheatManagerExtension:AddedToCheatManager() end
 
 ---@class UCheckBoxStyleAsset : UObject
 ---@field CheckBoxStyle FCheckBoxStyle
@@ -14955,10 +16128,11 @@ UChildActorComponent = {}
 
 ---@param InClass TSubclassOf<AActor>
 function UChildActorComponent:SetChildActorClass(InClass) end
+
 function UChildActorComponent:OnRep_ChildActor() end
+
 ---@param Actor AActor
 function UChildActorComponent:OnChildActorDestroyed(Actor) end
-
 
 ---@class UChildConnection : UNetConnection
 ---@field Parent UNetConnection
@@ -14991,32 +16165,41 @@ UClusterUnionComponent = {}
 
 ---@param bIsAnchored boolean
 function UClusterUnionComponent:SetIsAnchored(bIsAnchored) end
+
 ---@param InComponent UPrimitiveComponent
 function UClusterUnionComponent:RemoveComponentFromCluster(InComponent) end
+
 function UClusterUnionComponent:OnRep_RigidState() end
+
 ---@param Component UPrimitiveComponent
 ---@return boolean
 function UClusterUnionComponent:IsComponentAdded(Component) end
+
 ---@return boolean
 function UClusterUnionComponent:IsAuthority() end
+
 ---@param ChangedComponent UPrimitiveComponent
 ---@param StateChange EComponentPhysicsStateChange
 function UClusterUnionComponent:HandleComponentPhysicsStateChangePostAddIntoClusterUnion(ChangedComponent, StateChange) end
+
 ---@param ChangedComponent UPrimitiveComponent
 ---@param StateChange EComponentPhysicsStateChange
 function UClusterUnionComponent:HandleComponentPhysicsStateChange(ChangedComponent, StateChange) end
+
 ---@return TArray<UPrimitiveComponent>
 function UClusterUnionComponent:GetPrimitiveComponents() end
+
 ---@return TArray<AActor>
 function UClusterUnionComponent:GetActors() end
+
 ---@param InComponent UPrimitiveComponent
 ---@param BoneIds TArray<int32>
 ---@param ChildToParent TArray<FTransform>
 function UClusterUnionComponent:ForceSetChildToParent(InComponent, BoneIds, ChildToParent) end
+
 ---@param InComponent UPrimitiveComponent
 ---@param BoneIds TArray<int32>
 function UClusterUnionComponent:AddComponentToCluster(InComponent, BoneIds) end
-
 
 ---@class UClusterUnionReplicatedProxyComponent : UActorComponent
 ---@field ParentClusterUnion TWeakObjectPtr<UClusterUnionComponent>
@@ -15033,22 +16216,31 @@ UClusterUnionReplicatedProxyComponent = {}
 ---@param BoneID int32
 ---@param ChildToParent FTransform
 function UClusterUnionReplicatedProxyComponent:SetParticleChildToParent(BoneID, ChildToParent) end
+
 ---@param InIds TArray<int32>
 function UClusterUnionReplicatedProxyComponent:SetParticleBoneIds(InIds) end
+
 ---@param InComponent UClusterUnionComponent
 function UClusterUnionReplicatedProxyComponent:SetParentClusterUnion(InComponent) end
+
 ---@param InComponent UPrimitiveComponent
 function UClusterUnionReplicatedProxyComponent:SetChildClusteredComponent(InComponent) end
+
 function UClusterUnionReplicatedProxyComponent:OnRep_ParticleChildToParents() end
+
 function UClusterUnionReplicatedProxyComponent:OnRep_ParticleBoneIds() end
+
 function UClusterUnionReplicatedProxyComponent:OnRep_ParentClusterUnion() end
+
 function UClusterUnionReplicatedProxyComponent:OnRep_ChildClusteredComponent() end
+
 function UClusterUnionReplicatedProxyComponent:MarkPendingDeletion() end
+
 ---@return boolean
 function UClusterUnionReplicatedProxyComponent:IsPendingDeletion() end
+
 ---@return UClusterUnionComponent
 function UClusterUnionReplicatedProxyComponent:GetParentClusterUnionComponent() end
-
 
 ---@class UCollisionProfile : UDeveloperSettings
 ---@field Profiles TArray<FCollisionResponseTemplate>
@@ -15148,100 +16340,137 @@ UConstraintInstanceBlueprintLibrary = {}
 ---@param bEnableProjection boolean
 ---@param ProjectionLinearAlpha float
 ---@param ProjectionAngularAlpha float
-function UConstraintInstanceBlueprintLibrary:SetProjectionParams(Accessor, bEnableProjection, ProjectionLinearAlpha, ProjectionAngularAlpha) end
+function UConstraintInstanceBlueprintLibrary:SetProjectionParams(Accessor, bEnableProjection, ProjectionLinearAlpha,
+                                                                 ProjectionAngularAlpha) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param bParentDominates boolean
 function UConstraintInstanceBlueprintLibrary:SetParentDominates(Accessor, bParentDominates) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param bEnableTwistDrive boolean
 ---@param bEnableSwingDrive boolean
-function UConstraintInstanceBlueprintLibrary:SetOrientationDriveTwistAndSwing(Accessor, bEnableTwistDrive, bEnableSwingDrive) end
+function UConstraintInstanceBlueprintLibrary:SetOrientationDriveTwistAndSwing(Accessor, bEnableTwistDrive,
+                                                                              bEnableSwingDrive) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param bEnableSLERP boolean
 function UConstraintInstanceBlueprintLibrary:SetOrientationDriveSLERP(Accessor, bEnableSLERP) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param bEnableMassConditioning boolean
 function UConstraintInstanceBlueprintLibrary:SetMassConditioningEnabled(Accessor, bEnableMassConditioning) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param InVelTarget FVector
 function UConstraintInstanceBlueprintLibrary:SetLinearVelocityTarget(Accessor, InVelTarget) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param bEnableDriveX boolean
 ---@param bEnableDriveY boolean
 ---@param bEnableDriveZ boolean
 function UConstraintInstanceBlueprintLibrary:SetLinearVelocityDrive(Accessor, bEnableDriveX, bEnableDriveY, bEnableDriveZ) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param bSoftLinearLimit boolean
 ---@param LinearLimitStiffness float
 ---@param LinearLimitDamping float
 ---@param LinearLimitRestitution float
 ---@param LinearLimitContactDistance float
-function UConstraintInstanceBlueprintLibrary:SetLinearSoftLimitParams(Accessor, bSoftLinearLimit, LinearLimitStiffness, LinearLimitDamping, LinearLimitRestitution, LinearLimitContactDistance) end
+function UConstraintInstanceBlueprintLibrary:SetLinearSoftLimitParams(Accessor, bSoftLinearLimit, LinearLimitStiffness,
+                                                                      LinearLimitDamping, LinearLimitRestitution,
+                                                                      LinearLimitContactDistance) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param InPosTarget FVector
 function UConstraintInstanceBlueprintLibrary:SetLinearPositionTarget(Accessor, InPosTarget) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param bEnableDriveX boolean
 ---@param bEnableDriveY boolean
 ---@param bEnableDriveZ boolean
 function UConstraintInstanceBlueprintLibrary:SetLinearPositionDrive(Accessor, bEnableDriveX, bEnableDriveY, bEnableDriveZ) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param bLinearPlasticity boolean
 ---@param LinearPlasticityThreshold float
 ---@param PlasticityType EConstraintPlasticityType
-function UConstraintInstanceBlueprintLibrary:SetLinearPlasticity(Accessor, bLinearPlasticity, LinearPlasticityThreshold, PlasticityType) end
+function UConstraintInstanceBlueprintLibrary:SetLinearPlasticity(Accessor, bLinearPlasticity, LinearPlasticityThreshold,
+                                                                 PlasticityType) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param XMotion ELinearConstraintMotion
 ---@param YMotion ELinearConstraintMotion
 ---@param ZMotion ELinearConstraintMotion
 ---@param Limit float
 function UConstraintInstanceBlueprintLibrary:SetLinearLimits(Accessor, XMotion, YMotion, ZMotion, Limit) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param PositionStrength float
 ---@param VelocityStrength float
 ---@param InForceLimit float
-function UConstraintInstanceBlueprintLibrary:SetLinearDriveParams(Accessor, PositionStrength, VelocityStrength, InForceLimit) end
+function UConstraintInstanceBlueprintLibrary:SetLinearDriveParams(Accessor, PositionStrength, VelocityStrength,
+                                                                  InForceLimit) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param bLinearBreakable boolean
 ---@param LinearBreakThreshold float
 function UConstraintInstanceBlueprintLibrary:SetLinearBreakable(Accessor, bLinearBreakable, LinearBreakThreshold) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param bDisableCollision boolean
 function UConstraintInstanceBlueprintLibrary:SetDisableCollision(Accessor, bDisableCollision) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param ContactTransferScale float
 function UConstraintInstanceBlueprintLibrary:SetContactTransferScale(Accessor, ContactTransferScale) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param InVelTarget FVector
 function UConstraintInstanceBlueprintLibrary:SetAngularVelocityTarget(Accessor, InVelTarget) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param bEnableTwistDrive boolean
 ---@param bEnableSwingDrive boolean
-function UConstraintInstanceBlueprintLibrary:SetAngularVelocityDriveTwistAndSwing(Accessor, bEnableTwistDrive, bEnableSwingDrive) end
+function UConstraintInstanceBlueprintLibrary:SetAngularVelocityDriveTwistAndSwing(Accessor, bEnableTwistDrive,
+                                                                                  bEnableSwingDrive) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param bEnableSLERP boolean
 function UConstraintInstanceBlueprintLibrary:SetAngularVelocityDriveSLERP(Accessor, bEnableSLERP) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param bSoftTwistLimit boolean
 ---@param TwistLimitStiffness float
 ---@param TwistLimitDamping float
 ---@param TwistLimitRestitution float
 ---@param TwistLimitContactDistance float
-function UConstraintInstanceBlueprintLibrary:SetAngularSoftTwistLimitParams(Accessor, bSoftTwistLimit, TwistLimitStiffness, TwistLimitDamping, TwistLimitRestitution, TwistLimitContactDistance) end
+function UConstraintInstanceBlueprintLibrary:SetAngularSoftTwistLimitParams(Accessor, bSoftTwistLimit,
+                                                                            TwistLimitStiffness, TwistLimitDamping,
+                                                                            TwistLimitRestitution,
+                                                                            TwistLimitContactDistance) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param bSoftSwingLimit boolean
 ---@param SwingLimitStiffness float
 ---@param SwingLimitDamping float
 ---@param SwingLimitRestitution float
 ---@param SwingLimitContactDistance float
-function UConstraintInstanceBlueprintLibrary:SetAngularSoftSwingLimitParams(Accessor, bSoftSwingLimit, SwingLimitStiffness, SwingLimitDamping, SwingLimitRestitution, SwingLimitContactDistance) end
+function UConstraintInstanceBlueprintLibrary:SetAngularSoftSwingLimitParams(Accessor, bSoftSwingLimit,
+                                                                            SwingLimitStiffness, SwingLimitDamping,
+                                                                            SwingLimitRestitution,
+                                                                            SwingLimitContactDistance) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param bAngularPlasticity boolean
 ---@param AngularPlasticityThreshold float
-function UConstraintInstanceBlueprintLibrary:SetAngularPlasticity(Accessor, bAngularPlasticity, AngularPlasticityThreshold) end
+function UConstraintInstanceBlueprintLibrary:SetAngularPlasticity(Accessor, bAngularPlasticity,
+                                                                  AngularPlasticityThreshold) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param InPosTarget FRotator
 function UConstraintInstanceBlueprintLibrary:SetAngularOrientationTarget(Accessor, InPosTarget) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param Swing1MotionType EAngularConstraintMotion
 ---@param Swing1LimitAngle float
@@ -15249,121 +16478,168 @@ function UConstraintInstanceBlueprintLibrary:SetAngularOrientationTarget(Accesso
 ---@param Swing2LimitAngle float
 ---@param TwistMotionType EAngularConstraintMotion
 ---@param TwistLimitAngle float
-function UConstraintInstanceBlueprintLibrary:SetAngularLimits(Accessor, Swing1MotionType, Swing1LimitAngle, Swing2MotionType, Swing2LimitAngle, TwistMotionType, TwistLimitAngle) end
+function UConstraintInstanceBlueprintLibrary:SetAngularLimits(Accessor, Swing1MotionType, Swing1LimitAngle,
+                                                              Swing2MotionType, Swing2LimitAngle, TwistMotionType,
+                                                              TwistLimitAngle) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param PositionStrength float
 ---@param VelocityStrength float
 ---@param InForceLimit float
-function UConstraintInstanceBlueprintLibrary:SetAngularDriveParams(Accessor, PositionStrength, VelocityStrength, InForceLimit) end
+function UConstraintInstanceBlueprintLibrary:SetAngularDriveParams(Accessor, PositionStrength, VelocityStrength,
+                                                                   InForceLimit) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param DriveMode EAngularDriveMode::Type
 function UConstraintInstanceBlueprintLibrary:SetAngularDriveMode(Accessor, DriveMode) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param bAngularBreakable boolean
 ---@param AngularBreakThreshold float
 function UConstraintInstanceBlueprintLibrary:SetAngularBreakable(Accessor, bAngularBreakable, AngularBreakThreshold) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param bEnableProjection boolean
 ---@param ProjectionLinearAlpha float
 ---@param ProjectionAngularAlpha float
-function UConstraintInstanceBlueprintLibrary:GetProjectionParams(Accessor, bEnableProjection, ProjectionLinearAlpha, ProjectionAngularAlpha) end
+function UConstraintInstanceBlueprintLibrary:GetProjectionParams(Accessor, bEnableProjection, ProjectionLinearAlpha,
+                                                                 ProjectionAngularAlpha) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@return boolean
 function UConstraintInstanceBlueprintLibrary:GetParentDominates(Accessor) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param bOutEnableTwistDrive boolean
 ---@param bOutEnableSwingDrive boolean
-function UConstraintInstanceBlueprintLibrary:GetOrientationDriveTwistAndSwing(Accessor, bOutEnableTwistDrive, bOutEnableSwingDrive) end
+function UConstraintInstanceBlueprintLibrary:GetOrientationDriveTwistAndSwing(Accessor, bOutEnableTwistDrive,
+                                                                              bOutEnableSwingDrive) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param bOutEnableSLERP boolean
 function UConstraintInstanceBlueprintLibrary:GetOrientationDriveSLERP(Accessor, bOutEnableSLERP) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@return boolean
 function UConstraintInstanceBlueprintLibrary:GetMassConditioningEnabled(Accessor) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param OutVelTarget FVector
 function UConstraintInstanceBlueprintLibrary:GetLinearVelocityTarget(Accessor, OutVelTarget) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param bOutEnableDriveX boolean
 ---@param bOutEnableDriveY boolean
 ---@param bOutEnableDriveZ boolean
-function UConstraintInstanceBlueprintLibrary:GetLinearVelocityDrive(Accessor, bOutEnableDriveX, bOutEnableDriveY, bOutEnableDriveZ) end
+function UConstraintInstanceBlueprintLibrary:GetLinearVelocityDrive(Accessor, bOutEnableDriveX, bOutEnableDriveY,
+                                                                    bOutEnableDriveZ) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param bSoftLinearLimit boolean
 ---@param LinearLimitStiffness float
 ---@param LinearLimitDamping float
 ---@param LinearLimitRestitution float
 ---@param LinearLimitContactDistance float
-function UConstraintInstanceBlueprintLibrary:GetLinearSoftLimitParams(Accessor, bSoftLinearLimit, LinearLimitStiffness, LinearLimitDamping, LinearLimitRestitution, LinearLimitContactDistance) end
+function UConstraintInstanceBlueprintLibrary:GetLinearSoftLimitParams(Accessor, bSoftLinearLimit, LinearLimitStiffness,
+                                                                      LinearLimitDamping, LinearLimitRestitution,
+                                                                      LinearLimitContactDistance) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param OutPosTarget FVector
 function UConstraintInstanceBlueprintLibrary:GetLinearPositionTarget(Accessor, OutPosTarget) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param bOutEnableDriveX boolean
 ---@param bOutEnableDriveY boolean
 ---@param bOutEnableDriveZ boolean
-function UConstraintInstanceBlueprintLibrary:GetLinearPositionDrive(Accessor, bOutEnableDriveX, bOutEnableDriveY, bOutEnableDriveZ) end
+function UConstraintInstanceBlueprintLibrary:GetLinearPositionDrive(Accessor, bOutEnableDriveX, bOutEnableDriveY,
+                                                                    bOutEnableDriveZ) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param bLinearPlasticity boolean
 ---@param LinearPlasticityThreshold float
 ---@param PlasticityType EConstraintPlasticityType
-function UConstraintInstanceBlueprintLibrary:GetLinearPlasticity(Accessor, bLinearPlasticity, LinearPlasticityThreshold, PlasticityType) end
+function UConstraintInstanceBlueprintLibrary:GetLinearPlasticity(Accessor, bLinearPlasticity, LinearPlasticityThreshold,
+                                                                 PlasticityType) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param XMotion ELinearConstraintMotion
 ---@param YMotion ELinearConstraintMotion
 ---@param ZMotion ELinearConstraintMotion
 ---@param Limit float
 function UConstraintInstanceBlueprintLibrary:GetLinearLimits(Accessor, XMotion, YMotion, ZMotion, Limit) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param OutPositionStrength float
 ---@param OutVelocityStrength float
 ---@param OutForceLimit float
-function UConstraintInstanceBlueprintLibrary:GetLinearDriveParams(Accessor, OutPositionStrength, OutVelocityStrength, OutForceLimit) end
+function UConstraintInstanceBlueprintLibrary:GetLinearDriveParams(Accessor, OutPositionStrength, OutVelocityStrength,
+                                                                  OutForceLimit) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param bLinearBreakable boolean
 ---@param LinearBreakThreshold float
 function UConstraintInstanceBlueprintLibrary:GetLinearBreakable(Accessor, bLinearBreakable, LinearBreakThreshold) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@return boolean
 function UConstraintInstanceBlueprintLibrary:GetDisableCollsion(Accessor) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param ContactTransferScale float
 function UConstraintInstanceBlueprintLibrary:GetContactTransferScale(Accessor, ContactTransferScale) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param ParentBody FName
 ---@param ChildBody FName
 function UConstraintInstanceBlueprintLibrary:GetAttachedBodyNames(Accessor, ParentBody, ChildBody) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param OutVelTarget FVector
 function UConstraintInstanceBlueprintLibrary:GetAngularVelocityTarget(Accessor, OutVelTarget) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param bOutEnableTwistDrive boolean
 ---@param bOutEnableSwingDrive boolean
-function UConstraintInstanceBlueprintLibrary:GetAngularVelocityDriveTwistAndSwing(Accessor, bOutEnableTwistDrive, bOutEnableSwingDrive) end
+function UConstraintInstanceBlueprintLibrary:GetAngularVelocityDriveTwistAndSwing(Accessor, bOutEnableTwistDrive,
+                                                                                  bOutEnableSwingDrive) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param bOutEnableSLERP boolean
 function UConstraintInstanceBlueprintLibrary:GetAngularVelocityDriveSLERP(Accessor, bOutEnableSLERP) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param bSoftTwistLimit boolean
 ---@param TwistLimitStiffness float
 ---@param TwistLimitDamping float
 ---@param TwistLimitRestitution float
 ---@param TwistLimitContactDistance float
-function UConstraintInstanceBlueprintLibrary:GetAngularSoftTwistLimitParams(Accessor, bSoftTwistLimit, TwistLimitStiffness, TwistLimitDamping, TwistLimitRestitution, TwistLimitContactDistance) end
+function UConstraintInstanceBlueprintLibrary:GetAngularSoftTwistLimitParams(Accessor, bSoftTwistLimit,
+                                                                            TwistLimitStiffness, TwistLimitDamping,
+                                                                            TwistLimitRestitution,
+                                                                            TwistLimitContactDistance) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param bSoftSwingLimit boolean
 ---@param SwingLimitStiffness float
 ---@param SwingLimitDamping float
 ---@param SwingLimitRestitution float
 ---@param SwingLimitContactDistance float
-function UConstraintInstanceBlueprintLibrary:GetAngularSoftSwingLimitParams(Accessor, bSoftSwingLimit, SwingLimitStiffness, SwingLimitDamping, SwingLimitRestitution, SwingLimitContactDistance) end
+function UConstraintInstanceBlueprintLibrary:GetAngularSoftSwingLimitParams(Accessor, bSoftSwingLimit,
+                                                                            SwingLimitStiffness, SwingLimitDamping,
+                                                                            SwingLimitRestitution,
+                                                                            SwingLimitContactDistance) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param bAngularPlasticity boolean
 ---@param AngularPlasticityThreshold float
-function UConstraintInstanceBlueprintLibrary:GetAngularPlasticity(Accessor, bAngularPlasticity, AngularPlasticityThreshold) end
+function UConstraintInstanceBlueprintLibrary:GetAngularPlasticity(Accessor, bAngularPlasticity,
+                                                                  AngularPlasticityThreshold) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param OutPosTarget FRotator
 function UConstraintInstanceBlueprintLibrary:GetAngularOrientationTarget(Accessor, OutPosTarget) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param Swing1MotionType EAngularConstraintMotion
 ---@param Swing1LimitAngle float
@@ -15371,25 +16647,31 @@ function UConstraintInstanceBlueprintLibrary:GetAngularOrientationTarget(Accesso
 ---@param Swing2LimitAngle float
 ---@param TwistMotionType EAngularConstraintMotion
 ---@param TwistLimitAngle float
-function UConstraintInstanceBlueprintLibrary:GetAngularLimits(Accessor, Swing1MotionType, Swing1LimitAngle, Swing2MotionType, Swing2LimitAngle, TwistMotionType, TwistLimitAngle) end
+function UConstraintInstanceBlueprintLibrary:GetAngularLimits(Accessor, Swing1MotionType, Swing1LimitAngle,
+                                                              Swing2MotionType, Swing2LimitAngle, TwistMotionType,
+                                                              TwistLimitAngle) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param OutPositionStrength float
 ---@param OutVelocityStrength float
 ---@param OutForceLimit float
-function UConstraintInstanceBlueprintLibrary:GetAngularDriveParams(Accessor, OutPositionStrength, OutVelocityStrength, OutForceLimit) end
+function UConstraintInstanceBlueprintLibrary:GetAngularDriveParams(Accessor, OutPositionStrength, OutVelocityStrength,
+                                                                   OutForceLimit) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param OutDriveMode EAngularDriveMode::Type
 function UConstraintInstanceBlueprintLibrary:GetAngularDriveMode(Accessor, OutDriveMode) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param bAngularBreakable boolean
 ---@param AngularBreakThreshold float
 function UConstraintInstanceBlueprintLibrary:GetAngularBreakable(Accessor, bAngularBreakable, AngularBreakThreshold) end
+
 ---@param Accessor FConstraintInstanceAccessor
 ---@param SourceAccessor FConstraintInstanceAccessor
 ---@param bKeepPosition boolean
 ---@param bKeepRotation boolean
 function UConstraintInstanceBlueprintLibrary:CopyParams(Accessor, SourceAccessor, bKeepPosition, bKeepRotation) end
-
 
 ---@class UContentBundleDescriptor : UObject
 ---@field DisplayName FString
@@ -15432,10 +16714,10 @@ UCurveBase = {}
 ---@param MinValue float
 ---@param MaxValue float
 function UCurveBase:GetValueRange(MinValue, MaxValue) end
+
 ---@param MinTime float
 ---@param MaxTime float
 function UCurveBase:GetTimeRange(MinTime, MaxTime) end
-
 
 ---@class UCurveFloat : UCurveBase
 ---@field FloatCurve FRichCurve
@@ -15445,7 +16727,6 @@ UCurveFloat = {}
 ---@param InTime float
 ---@return float
 function UCurveFloat:GetFloatValue(InTime) end
-
 
 ---@class UCurveLinearColor : UCurveBase
 ---@field FloatCurves FRichCurve
@@ -15461,13 +16742,14 @@ UCurveLinearColor = {}
 ---@param InTime float
 ---@return FLinearColor
 function UCurveLinearColor:GetUnadjustedLinearColorValue(InTime) end
+
 ---@param InTime float
 ---@return FLinearColor
 function UCurveLinearColor:GetLinearColorValue(InTime) end
+
 ---@param InTime float
 ---@return FLinearColor
 function UCurveLinearColor:GetClampedLinearColorValue(InTime) end
-
 
 ---@class UCurveLinearColorAtlas : UTexture2D
 ---@field TextureSize uint32
@@ -15481,7 +16763,6 @@ UCurveLinearColorAtlas = {}
 ---@return boolean
 function UCurveLinearColorAtlas:GetCurvePosition(InCurve, Position) end
 
-
 ---@class UCurveTable : UObject
 UCurveTable = {}
 
@@ -15493,7 +16774,6 @@ UCurveVector = {}
 ---@param InTime float
 ---@return FVector
 function UCurveVector:GetVectorValue(InTime) end
-
 
 ---@class UDEPRECATED_Breakpoint : UObject
 UDEPRECATED_Breakpoint = {}
@@ -15514,28 +16794,37 @@ UDEPRECATED_DataLayer = {}
 
 ---@return boolean
 function UDEPRECATED_DataLayer:IsVisible() end
+
 ---@return boolean
 function UDEPRECATED_DataLayer:IsRuntime() end
+
 ---@return boolean
 function UDEPRECATED_DataLayer:IsInitiallyVisible() end
+
 ---@return boolean
 function UDEPRECATED_DataLayer:IsInitiallyActive() end
+
 ---@return boolean
 function UDEPRECATED_DataLayer:IsEffectiveVisible() end
+
 ---@return boolean
 function UDEPRECATED_DataLayer:IsDynamicallyLoaded() end
+
 ---@return EDataLayerState
 function UDEPRECATED_DataLayer:GetInitialState() end
+
 ---@return EDataLayerRuntimeState
 function UDEPRECATED_DataLayer:GetInitialRuntimeState() end
+
 ---@return FColor
 function UDEPRECATED_DataLayer:GetDebugColor() end
+
 ---@return FName
 function UDEPRECATED_DataLayer:GetDataLayerLabel() end
+
 ---@param ActorDataLayer FActorDataLayer
 ---@return boolean
 function UDEPRECATED_DataLayer:Equals(ActorDataLayer) end
-
 
 ---@class UDPICustomScalingRule : UObject
 UDPICustomScalingRule = {}
@@ -15579,11 +16868,12 @@ UDataLayerAsset = {}
 
 ---@return boolean
 function UDataLayerAsset:IsRuntime() end
+
 ---@return EDataLayerType
 function UDataLayerAsset:GetType() end
+
 ---@return FColor
 function UDataLayerAsset:GetDebugColor() end
-
 
 ---@class UDataLayerInstance : UObject
 ---@field InitialRuntimeState EDataLayerRuntimeState
@@ -15593,19 +16883,24 @@ UDataLayerInstance = {}
 
 ---@return boolean
 function UDataLayerInstance:IsVisible() end
+
 ---@return boolean
 function UDataLayerInstance:IsRuntime() end
+
 ---@return boolean
 function UDataLayerInstance:IsInitiallyVisible() end
+
 ---@return boolean
 function UDataLayerInstance:IsEffectiveVisible() end
+
 ---@return EDataLayerType
 function UDataLayerInstance:GetType() end
+
 ---@return EDataLayerRuntimeState
 function UDataLayerInstance:GetInitialRuntimeState() end
+
 ---@return FColor
 function UDataLayerInstance:GetDebugColor() end
-
 
 ---@class UDataLayerInstancePrivate : UDataLayerInstance
 ---@field ShortName FString
@@ -15634,24 +16929,28 @@ UDataLayerManager = {}
 ---@param bInIsRecursive boolean
 ---@return boolean
 function UDataLayerManager:SetDataLayerRuntimeState(InDataLayerAsset, InState, bInIsRecursive) end
+
 ---@param InDataLayerInstance UDataLayerInstance
 ---@param InState EDataLayerRuntimeState
 ---@param bInIsRecursive boolean
 ---@return boolean
 function UDataLayerManager:SetDataLayerInstanceRuntimeState(InDataLayerInstance, InState, bInIsRecursive) end
+
 ---@param InDataLayerInstance UDataLayerInstance
 ---@return EDataLayerRuntimeState
 function UDataLayerManager:GetDataLayerInstanceRuntimeState(InDataLayerInstance) end
+
 ---@param InDataLayerInstanceName FName
 ---@return UDataLayerInstance
 function UDataLayerManager:GetDataLayerInstanceFromName(InDataLayerInstanceName) end
+
 ---@param InDataLayerAsset UDataLayerAsset
 ---@return UDataLayerInstance
 function UDataLayerManager:GetDataLayerInstanceFromAsset(InDataLayerAsset) end
+
 ---@param InDataLayerInstance UDataLayerInstance
 ---@return EDataLayerRuntimeState
 function UDataLayerManager:GetDataLayerInstanceEffectiveRuntimeState(InDataLayerInstance) end
-
 
 ---@class UDataLayerSubsystem : UWorldSubsystem
 ---@field OnDataLayerRuntimeStateChanged FDataLayerSubsystemOnDataLayerRuntimeStateChanged
@@ -15661,62 +16960,79 @@ UDataLayerSubsystem = {}
 ---@param InDataLayerLabel FName
 ---@param InState EDataLayerState
 function UDataLayerSubsystem:SetDataLayerStateByLabel(InDataLayerLabel, InState) end
+
 ---@param InDataLayer FActorDataLayer
 ---@param InState EDataLayerState
 function UDataLayerSubsystem:SetDataLayerState(InDataLayer, InState) end
+
 ---@param InDataLayerLabel FName
 ---@param InState EDataLayerRuntimeState
 ---@param bInIsRecursive boolean
 function UDataLayerSubsystem:SetDataLayerRuntimeStateByLabel(InDataLayerLabel, InState, bInIsRecursive) end
+
 ---@param InDataLayer FActorDataLayer
 ---@param InState EDataLayerRuntimeState
 ---@param bInIsRecursive boolean
 function UDataLayerSubsystem:SetDataLayerRuntimeState(InDataLayer, InState, bInIsRecursive) end
+
 ---@param InDataLayerAsset UDataLayerAsset
 ---@param InState EDataLayerRuntimeState
 ---@param bInIsRecursive boolean
 function UDataLayerSubsystem:SetDataLayerInstanceRuntimeState(InDataLayerAsset, InState, bInIsRecursive) end
+
 ---@return TSet<FName>
 function UDataLayerSubsystem:GetLoadedDataLayerNames() end
+
 ---@param InDataLayerLabel FName
 ---@return EDataLayerState
 function UDataLayerSubsystem:GetDataLayerStateByLabel(InDataLayerLabel) end
+
 ---@param InDataLayer FActorDataLayer
 ---@return EDataLayerState
 function UDataLayerSubsystem:GetDataLayerState(InDataLayer) end
+
 ---@param InDataLayerLabel FName
 ---@return EDataLayerRuntimeState
 function UDataLayerSubsystem:GetDataLayerRuntimeStateByLabel(InDataLayerLabel) end
+
 ---@param InDataLayer FActorDataLayer
 ---@return EDataLayerRuntimeState
 function UDataLayerSubsystem:GetDataLayerRuntimeState(InDataLayer) end
+
 ---@param InDataLayerAsset UDataLayerAsset
 ---@return EDataLayerRuntimeState
 function UDataLayerSubsystem:GetDataLayerInstanceRuntimeState(InDataLayerAsset) end
+
 ---@param InDataLayerAsset UDataLayerAsset
 ---@return UDataLayerInstance
 function UDataLayerSubsystem:GetDataLayerInstanceFromAsset(InDataLayerAsset) end
+
 ---@param InDataLayerAsset UDataLayerAsset
 ---@return EDataLayerRuntimeState
 function UDataLayerSubsystem:GetDataLayerInstanceEffectiveRuntimeState(InDataLayerAsset) end
+
 ---@param InDataLayerName FName
 ---@return UDataLayerInstance
 function UDataLayerSubsystem:GetDataLayerFromName(InDataLayerName) end
+
 ---@param InDataLayerLabel FName
 ---@return UDataLayerInstance
 function UDataLayerSubsystem:GetDataLayerFromLabel(InDataLayerLabel) end
+
 ---@param InDataLayerLabel FName
 ---@return EDataLayerRuntimeState
 function UDataLayerSubsystem:GetDataLayerEffectiveRuntimeStateByLabel(InDataLayerLabel) end
+
 ---@param InDataLayer FActorDataLayer
 ---@return EDataLayerRuntimeState
 function UDataLayerSubsystem:GetDataLayerEffectiveRuntimeState(InDataLayer) end
+
 ---@param InDataLayer FActorDataLayer
 ---@return UDataLayerInstance
 function UDataLayerSubsystem:GetDataLayer(InDataLayer) end
+
 ---@return TSet<FName>
 function UDataLayerSubsystem:GetActiveDataLayerNames() end
-
 
 ---@class UDataStreamChannel : UChannel
 UDataStreamChannel = {}
@@ -15738,15 +17054,18 @@ UDataTableFunctionLibrary = {}
 ---@param Table UDataTable
 ---@param OutRowNames TArray<FName>
 function UDataTableFunctionLibrary:GetDataTableRowNames(Table, OutRowNames) end
+
 ---@param Table UDataTable
 ---@param RowName FName
 ---@param OutRow FTableRowBase
 ---@return boolean
 function UDataTableFunctionLibrary:GetDataTableRowFromName(Table, RowName, OutRow) end
+
 ---@param DataTable UDataTable
 ---@param PropertyName FName
 ---@return TArray<FString>
 function UDataTableFunctionLibrary:GetDataTableColumnAsString(DataTable, PropertyName) end
+
 ---@param CurveTable UCurveTable
 ---@param RowName FName
 ---@param InXY float
@@ -15754,11 +17073,11 @@ function UDataTableFunctionLibrary:GetDataTableColumnAsString(DataTable, Propert
 ---@param OutXY float
 ---@param ContextString FString
 function UDataTableFunctionLibrary:EvaluateCurveTableRow(CurveTable, RowName, InXY, OutResult, OutXY, ContextString) end
+
 ---@param Table UDataTable
 ---@param RowName FName
 ---@return boolean
 function UDataTableFunctionLibrary:DoesDataTableRowExist(Table, RowName) end
-
 
 ---@class UDebugCameraControllerSettings : UDeveloperSettings
 ---@field CycleViewModes TArray<FDebugCameraControllerSettingsViewModeIndex>
@@ -15793,32 +17112,42 @@ UDecalComponent = {}
 
 ---@param Value int32
 function UDecalComponent:SetSortOrder(Value) end
+
 ---@param NewFadeScreenSize float
 function UDecalComponent:SetFadeScreenSize(NewFadeScreenSize) end
+
 ---@param StartDelay float
 ---@param Duration float
 ---@param DestroyOwnerAfterFade boolean
 function UDecalComponent:SetFadeOut(StartDelay, Duration, DestroyOwnerAfterFade) end
+
 ---@param StartDelay float
 ---@param Duration float
 function UDecalComponent:SetFadeIn(StartDelay, Duration) end
+
 ---@param NewDecalMaterial UMaterialInterface
 function UDecalComponent:SetDecalMaterial(NewDecalMaterial) end
+
 ---@param Color FLinearColor
 function UDecalComponent:SetDecalColor(Color) end
+
 ---@return float
 function UDecalComponent:GetFadeStartDelay() end
+
 ---@return float
 function UDecalComponent:GetFadeInStartDelay() end
+
 ---@return float
 function UDecalComponent:GetFadeInDuration() end
+
 ---@return float
 function UDecalComponent:GetFadeDuration() end
+
 ---@return UMaterialInterface
 function UDecalComponent:GetDecalMaterial() end
+
 ---@return UMaterialInstanceDynamic
 function UDecalComponent:CreateDynamicMaterialInstance() end
-
 
 ---@class UDefault__AnimBlueprintGeneratedClass
 UDefault__AnimBlueprintGeneratedClass = {}
@@ -15947,41 +17276,57 @@ UDirectionalLightComponent = {}
 
 ---@param NewValue float
 function UDirectionalLightComponent:SetShadowSourceAngleFactor(NewValue) end
+
 ---@param NewValue float
 function UDirectionalLightComponent:SetShadowDistanceFadeoutFraction(NewValue) end
+
 ---@param NewValue float
 function UDirectionalLightComponent:SetShadowCascadeBiasDistribution(NewValue) end
+
 ---@param NewValue float
 function UDirectionalLightComponent:SetShadowAmount(NewValue) end
+
 ---@param NewValue float
 function UDirectionalLightComponent:SetOcclusionMaskDarkness(NewValue) end
+
 ---@param NewValue float
 function UDirectionalLightComponent:SetOcclusionDepthRange(NewValue) end
+
 ---@param NewValue float
 function UDirectionalLightComponent:SetLightSourceSoftAngle(NewValue) end
+
 ---@param NewValue float
 function UDirectionalLightComponent:SetLightSourceAngle(NewValue) end
+
 ---@param NewValue FVector
 function UDirectionalLightComponent:SetLightShaftOverrideDirection(NewValue) end
+
 ---@param NewValue int32
 function UDirectionalLightComponent:SetForwardShadingPriority(NewValue) end
+
 ---@param bNewValue boolean
 function UDirectionalLightComponent:SetEnableLightShaftOcclusion(bNewValue) end
+
 ---@param NewValue float
 function UDirectionalLightComponent:SetDynamicShadowDistanceStationaryLight(NewValue) end
+
 ---@param NewValue float
 function UDirectionalLightComponent:SetDynamicShadowDistanceMovableLight(NewValue) end
+
 ---@param NewValue int32
 function UDirectionalLightComponent:SetDynamicShadowCascades(NewValue) end
+
 ---@param NewValue float
 function UDirectionalLightComponent:SetCascadeTransitionFraction(NewValue) end
+
 ---@param NewValue float
 function UDirectionalLightComponent:SetCascadeDistributionExponent(NewValue) end
+
 ---@param NewValue int32
 function UDirectionalLightComponent:SetAtmosphereSunLightIndex(NewValue) end
+
 ---@param bNewValue boolean
 function UDirectionalLightComponent:SetAtmosphereSunLight(bNewValue) end
-
 
 ---@class UDistribution : UObject
 UDistribution = {}
@@ -16504,53 +17849,75 @@ UExponentialHeightFogComponent = {}
 
 ---@param NewValue float
 function UExponentialHeightFogComponent:SetVolumetricFogScatteringDistribution(NewValue) end
+
 ---@param NewValue float
 function UExponentialHeightFogComponent:SetVolumetricFogExtinctionScale(NewValue) end
+
 ---@param NewValue FLinearColor
 function UExponentialHeightFogComponent:SetVolumetricFogEmissive(NewValue) end
+
 ---@param NewValue float
 function UExponentialHeightFogComponent:SetVolumetricFogDistance(NewValue) end
+
 ---@param NewValue FColor
 function UExponentialHeightFogComponent:SetVolumetricFogAlbedo(NewValue) end
+
 ---@param bNewValue boolean
 function UExponentialHeightFogComponent:SetVolumetricFog(bNewValue) end
+
 ---@param Value float
 function UExponentialHeightFogComponent:SetStartDistance(Value) end
+
 ---@param Value float
 function UExponentialHeightFogComponent:SetSecondFogHeightOffset(Value) end
+
 ---@param Value float
 function UExponentialHeightFogComponent:SetSecondFogHeightFalloff(Value) end
+
 ---@param Value float
 function UExponentialHeightFogComponent:SetSecondFogDensity(Value) end
+
 ---@param NewValue FExponentialHeightFogData
 function UExponentialHeightFogComponent:SetSecondFogData(NewValue) end
+
 ---@param Value float
 function UExponentialHeightFogComponent:SetNonDirectionalInscatteringColorDistance(Value) end
+
 ---@param Value FLinearColor
 function UExponentialHeightFogComponent:SetInscatteringTextureTint(Value) end
+
 ---@param Value float
 function UExponentialHeightFogComponent:SetInscatteringColorCubemapAngle(Value) end
+
 ---@param Value UTextureCube
 function UExponentialHeightFogComponent:SetInscatteringColorCubemap(Value) end
+
 ---@param Value float
 function UExponentialHeightFogComponent:SetFullyDirectionalInscatteringColorDistance(Value) end
+
 ---@param Value float
 function UExponentialHeightFogComponent:SetFogMaxOpacity(Value) end
+
 ---@param Value FLinearColor
 function UExponentialHeightFogComponent:SetFogInscatteringColor(Value) end
+
 ---@param Value float
 function UExponentialHeightFogComponent:SetFogHeightFalloff(Value) end
+
 ---@param Value float
 function UExponentialHeightFogComponent:SetFogDensity(Value) end
+
 ---@param Value float
 function UExponentialHeightFogComponent:SetFogCutoffDistance(Value) end
+
 ---@param Value float
 function UExponentialHeightFogComponent:SetDirectionalInscatteringStartDistance(Value) end
+
 ---@param Value float
 function UExponentialHeightFogComponent:SetDirectionalInscatteringExponent(Value) end
+
 ---@param Value FLinearColor
 function UExponentialHeightFogComponent:SetDirectionalInscatteringColor(Value) end
-
 
 ---@class UExporter : UObject
 ---@field SupportedClass UClass
@@ -16568,13 +17935,14 @@ UExporter = {}
 ---@param Task UAssetExportTask
 ---@return boolean
 function UExporter:ScriptRunAssetExportTask(Task) end
+
 ---@param ExportTasks TArray<UAssetExportTask>
 ---@return boolean
 function UExporter:RunAssetExportTasks(ExportTasks) end
+
 ---@param Task UAssetExportTask
 ---@return boolean
 function UExporter:RunAssetExportTask(Task) end
-
 
 ---@class UFXSystemAsset : UObject
 ---@field MaxPoolSize uint32
@@ -16589,36 +17957,45 @@ UFXSystemComponent = {}
 ---@param ParameterName FName
 ---@param Param FVector
 function UFXSystemComponent:SetVectorParameter(ParameterName, Param) end
+
 ---@param bAutoManage boolean
 function UFXSystemComponent:SetUseAutoManageAttachment(bAutoManage) end
+
 ---@param ParameterName FName
 ---@param Param int32
 function UFXSystemComponent:SetIntParameter(ParameterName, Param) end
+
 ---@param ParameterName FName
 ---@param Param float
 function UFXSystemComponent:SetFloatParameter(ParameterName, Param) end
+
 ---@param EmitterName FName
 ---@param bNewEnableState boolean
 function UFXSystemComponent:SetEmitterEnable(EmitterName, bNewEnableState) end
+
 ---@param ParameterName FName
 ---@param Param FLinearColor
 function UFXSystemComponent:SetColorParameter(ParameterName, Param) end
+
 ---@param ParameterName FName
 ---@param Param boolean
 function UFXSystemComponent:SetBoolParameter(ParameterName, Param) end
+
 ---@param Parent USceneComponent
 ---@param SocketName FName
 ---@param LocationRule EAttachmentRule
 ---@param RotationRule EAttachmentRule
 ---@param ScaleRule EAttachmentRule
 function UFXSystemComponent:SetAutoAttachmentParameters(Parent, SocketName, LocationRule, RotationRule, ScaleRule) end
+
 ---@param ParameterName FName
 ---@param Param AActor
 function UFXSystemComponent:SetActorParameter(ParameterName, Param) end
+
 function UFXSystemComponent:ReleaseToPool() end
+
 ---@return UFXSystemAsset
 function UFXSystemComponent:GetFXSystemAsset() end
-
 
 ---@class UFieldNotificationLibrary : UBlueprintFunctionLibrary
 UFieldNotificationLibrary = {}
@@ -16633,7 +18010,10 @@ UFieldNotificationLibrary = {}
 ---@param bIsNetProperty boolean
 ---@param ExtraFieldIds TArray<FFieldNotificationId>
 ---@return boolean
-function UFieldNotificationLibrary:SetPropertyValueAndBroadcastFields(NewValueByRef, OldValue, NewValue, Object, NetOwner, bHasLocalRepNotify, bShouldFlushDormancyOnSet, bIsNetProperty, ExtraFieldIds) end
+function UFieldNotificationLibrary:SetPropertyValueAndBroadcastFields(NewValueByRef, OldValue, NewValue, Object, NetOwner,
+                                                                      bHasLocalRepNotify, bShouldFlushDormancyOnSet,
+                                                                      bIsNetProperty, ExtraFieldIds) end
+
 ---@param NewValueByRef boolean
 ---@param OldValue int32
 ---@param NewValue int32
@@ -16643,14 +18023,17 @@ function UFieldNotificationLibrary:SetPropertyValueAndBroadcastFields(NewValueBy
 ---@param bShouldFlushDormancyOnSet boolean
 ---@param bIsNetProperty boolean
 ---@return boolean
-function UFieldNotificationLibrary:SetPropertyValueAndBroadcast(NewValueByRef, OldValue, NewValue, Object, NetOwner, bHasLocalRepNotify, bShouldFlushDormancyOnSet, bIsNetProperty) end
+function UFieldNotificationLibrary:SetPropertyValueAndBroadcast(NewValueByRef, OldValue, NewValue, Object, NetOwner,
+                                                                bHasLocalRepNotify, bShouldFlushDormancyOnSet,
+                                                                bIsNetProperty) end
+
 ---@param Object UObject
 ---@param FieldId FFieldNotificationId
 function UFieldNotificationLibrary:BroadcastFieldValueChanged(Object, FieldId) end
+
 ---@param Object UObject
 ---@param FieldIds TArray<FFieldNotificationId>
 function UFieldNotificationLibrary:BroadcastFieldsValueChanged(Object, FieldIds) end
-
 
 ---@class UFloatingPawnMovement : UPawnMovementComponent
 ---@field MaxSpeed float
@@ -16722,18 +18105,22 @@ UForceFeedbackAttenuation = {}
 UForceFeedbackComponent = {}
 
 function UForceFeedbackComponent:Stop() end
+
 ---@param NewIntensityMultiplier float
 function UForceFeedbackComponent:SetIntensityMultiplier(NewIntensityMultiplier) end
+
 ---@param NewForceFeedbackEffect UForceFeedbackEffect
 function UForceFeedbackComponent:SetForceFeedbackEffect(NewForceFeedbackEffect) end
+
 ---@param StartTime float
 function UForceFeedbackComponent:Play(StartTime) end
+
 ---@param OutAttenuationSettings FForceFeedbackAttenuationSettings
 ---@return boolean
 function UForceFeedbackComponent:BP_GetAttenuationSettingsToApply(OutAttenuationSettings) end
+
 ---@param InAttenuationSettings FForceFeedbackAttenuationSettings
 function UForceFeedbackComponent:AdjustAttenuation(InAttenuationSettings) end
-
 
 ---@class UForceFeedbackEffect : UObject
 ---@field ChannelDetails TArray<FForceFeedbackChannelDetails>
@@ -16762,17 +18149,21 @@ UGameEngine = {}
 UGameInstance = {}
 
 function UGameInstance:ReceiveShutdown() end
+
 function UGameInstance:ReceiveInit() end
+
 ---@param FailureType ETravelFailure::Type
 function UGameInstance:HandleTravelError(FailureType) end
+
 ---@param FailureType ENetworkFailure::Type
 ---@param bIsServer boolean
 function UGameInstance:HandleNetworkError(FailureType, bIsServer) end
+
 ---@param ControllerId int32
 function UGameInstance:DebugRemovePlayer(ControllerId) end
+
 ---@param ControllerId int32
 function UGameInstance:DebugCreatePlayer(ControllerId) end
-
 
 ---@class UGameInstanceSubsystem : USubsystem
 UGameInstanceSubsystem = {}
@@ -16812,147 +18203,218 @@ UGameInstanceSubsystem = {}
 UGameUserSettings = {}
 
 function UGameUserSettings:ValidateSettings() end
+
 ---@return boolean
 function UGameUserSettings:SupportsHDRDisplayOutput() end
+
 ---@param bEnable boolean
 function UGameUserSettings:SetVSyncEnabled(bEnable) end
+
 ---@param Value int32
 function UGameUserSettings:SetVisualEffectQuality(Value) end
+
 ---@param Value int32
 function UGameUserSettings:SetViewDistanceQuality(Value) end
+
 function UGameUserSettings:SetToDefaults() end
+
 ---@param Value int32
 function UGameUserSettings:SetTextureQuality(Value) end
+
 ---@param Value int32
 function UGameUserSettings:SetShadowQuality(Value) end
+
 ---@param Value int32
 function UGameUserSettings:SetShadingQuality(Value) end
+
 ---@param Resolution FIntPoint
 function UGameUserSettings:SetScreenResolution(Resolution) end
+
 ---@param NewScaleValue float
 function UGameUserSettings:SetResolutionScaleValueEx(NewScaleValue) end
+
 ---@param NewScaleNormalized float
 function UGameUserSettings:SetResolutionScaleNormalized(NewScaleNormalized) end
+
 ---@param Value int32
 function UGameUserSettings:SetReflectionQuality(Value) end
+
 ---@param Value int32
 function UGameUserSettings:SetPostProcessingQuality(Value) end
+
 ---@param Value int32
 function UGameUserSettings:SetOverallScalabilityLevel(Value) end
+
 ---@param Value int32
 function UGameUserSettings:SetGlobalIlluminationQuality(Value) end
+
 ---@param InFullscreenMode EWindowMode::Type
 function UGameUserSettings:SetFullscreenMode(InFullscreenMode) end
+
 ---@param NewLimit float
 function UGameUserSettings:SetFrameRateLimit(NewLimit) end
+
 ---@param Value int32
 function UGameUserSettings:SetFoliageQuality(Value) end
+
 ---@param bEnable boolean
 function UGameUserSettings:SetDynamicResolutionEnabled(bEnable) end
+
 function UGameUserSettings:SetBenchmarkFallbackValues() end
+
 ---@param QualityLevel int32
 function UGameUserSettings:SetAudioQualityLevel(QualityLevel) end
+
 ---@param Value int32
 function UGameUserSettings:SetAntiAliasingQuality(Value) end
+
 function UGameUserSettings:SaveSettings() end
+
 ---@param WorkScale int32
 ---@param CPUMultiplier float
 ---@param GPUMultiplier float
 function UGameUserSettings:RunHardwareBenchmark(WorkScale, CPUMultiplier, GPUMultiplier) end
+
 function UGameUserSettings:RevertVideoMode() end
+
 function UGameUserSettings:ResetToCurrentSettings() end
+
 ---@param bForceReload boolean
 function UGameUserSettings:LoadSettings(bForceReload) end
+
 ---@return boolean
 function UGameUserSettings:IsVSyncEnabled() end
+
 ---@return boolean
 function UGameUserSettings:IsVSyncDirty() end
+
 ---@return boolean
 function UGameUserSettings:IsScreenResolutionDirty() end
+
 ---@return boolean
 function UGameUserSettings:IsHDREnabled() end
+
 ---@return boolean
 function UGameUserSettings:IsFullscreenModeDirty() end
+
 ---@return boolean
 function UGameUserSettings:IsDynamicResolutionEnabled() end
+
 ---@return boolean
 function UGameUserSettings:IsDynamicResolutionDirty() end
+
 ---@return boolean
 function UGameUserSettings:IsDirty() end
+
 ---@return int32
 function UGameUserSettings:GetVisualEffectQuality() end
+
 ---@return int32
 function UGameUserSettings:GetViewDistanceQuality() end
+
 ---@return int32
 function UGameUserSettings:GetTextureQuality() end
+
 ---@return int32
 function UGameUserSettings:GetSyncInterval() end
+
 ---@return int32
 function UGameUserSettings:GetShadowQuality() end
+
 ---@return int32
 function UGameUserSettings:GetShadingQuality() end
+
 ---@return FIntPoint
 function UGameUserSettings:GetScreenResolution() end
+
 ---@return float
 function UGameUserSettings:GetResolutionScaleNormalized() end
+
 ---@param CurrentScaleNormalized float
 ---@param CurrentScaleValue float
 ---@param MinScaleValue float
 ---@param MaxScaleValue float
-function UGameUserSettings:GetResolutionScaleInformationEx(CurrentScaleNormalized, CurrentScaleValue, MinScaleValue, MaxScaleValue) end
+function UGameUserSettings:GetResolutionScaleInformationEx(CurrentScaleNormalized, CurrentScaleValue, MinScaleValue,
+                                                           MaxScaleValue) end
+
 ---@return int32
 function UGameUserSettings:GetReflectionQuality() end
+
 ---@return float
 function UGameUserSettings:GetRecommendedResolutionScale() end
+
 ---@return EWindowMode::Type
 function UGameUserSettings:GetPreferredFullscreenMode() end
+
 ---@return int32
 function UGameUserSettings:GetPostProcessingQuality() end
+
 ---@return int32
 function UGameUserSettings:GetOverallScalabilityLevel() end
+
 ---@return FIntPoint
 function UGameUserSettings:GetLastConfirmedScreenResolution() end
+
 ---@return EWindowMode::Type
 function UGameUserSettings:GetLastConfirmedFullscreenMode() end
+
 ---@return int32
 function UGameUserSettings:GetGlobalIlluminationQuality() end
+
 ---@return UGameUserSettings
 function UGameUserSettings:GetGameUserSettings() end
+
 ---@return EWindowMode::Type
 function UGameUserSettings:GetFullscreenMode() end
+
 ---@return float
 function UGameUserSettings:GetFrameRateLimit() end
+
 ---@return int32
 function UGameUserSettings:GetFramePace() end
+
 ---@return int32
 function UGameUserSettings:GetFoliageQuality() end
+
 ---@return FIntPoint
 function UGameUserSettings:GetDesktopResolution() end
+
 ---@return FIntPoint
 function UGameUserSettings:GetDefaultWindowPosition() end
+
 ---@return EWindowMode::Type
 function UGameUserSettings:GetDefaultWindowMode() end
+
 ---@return float
 function UGameUserSettings:GetDefaultResolutionScale() end
+
 ---@return FIntPoint
 function UGameUserSettings:GetDefaultResolution() end
+
 ---@return int32
 function UGameUserSettings:GetCurrentHDRDisplayNits() end
+
 ---@return int32
 function UGameUserSettings:GetAudioQualityLevel() end
+
 ---@return int32
 function UGameUserSettings:GetAntiAliasingQuality() end
+
 ---@param bEnable boolean
 ---@param DisplayNits int32
 function UGameUserSettings:EnableHDRDisplayOutput(bEnable, DisplayNits) end
+
 function UGameUserSettings:ConfirmVideoMode() end
+
 ---@param bCheckForCommandLineOverrides boolean
 function UGameUserSettings:ApplySettings(bCheckForCommandLineOverrides) end
+
 ---@param bCheckForCommandLineOverrides boolean
 function UGameUserSettings:ApplyResolutionSettings(bCheckForCommandLineOverrides) end
-function UGameUserSettings:ApplyNonResolutionSettings() end
-function UGameUserSettings:ApplyHardwareBenchmarkResults() end
 
+function UGameUserSettings:ApplyNonResolutionSettings() end
+
+function UGameUserSettings:ApplyHardwareBenchmarkResults() end
 
 ---@class UGameViewportClient : UScriptViewportClient
 ---@field ViewportConsole UConsole
@@ -16963,26 +18425,30 @@ function UGameUserSettings:ApplyHardwareBenchmarkResults() end
 UGameViewportClient = {}
 
 function UGameViewportClient:SSSwapControllers() end
+
 function UGameViewportClient:ShowTitleSafeArea() end
+
 ---@param PlayerIndex int32
 function UGameViewportClient:SetConsoleTarget(PlayerIndex) end
-
 
 ---@class UGameplayStatics : UBlueprintFunctionLibrary
 UGameplayStatics = {}
 
 ---@param InSoundClass USoundClass
 function UGameplayStatics:UnRetainAllSoundsInSoundClass(InSoundClass) end
+
 ---@param WorldContextObject UObject
 ---@param Level TSoftObjectPtr<UWorld>
 ---@param LatentInfo FLatentActionInfo
 ---@param bShouldBlockOnUnload boolean
 function UGameplayStatics:UnloadStreamLevelBySoftObjectPtr(WorldContextObject, Level, LatentInfo, bShouldBlockOnUnload) end
+
 ---@param WorldContextObject UObject
 ---@param LevelName FName
 ---@param LatentInfo FLatentActionInfo
 ---@param bShouldBlockOnUnload boolean
 function UGameplayStatics:UnloadStreamLevel(WorldContextObject, LevelName, LatentInfo, bShouldBlockOnUnload) end
+
 ---@param WorldContextObject UObject
 ---@param OutLaunchVelocity FVector
 ---@param ProjectileStartLocation FVector
@@ -16994,7 +18460,11 @@ function UGameplayStatics:UnloadStreamLevel(WorldContextObject, LevelName, Laten
 ---@param DrawDebugTime float
 ---@param DrawDebugColor FLinearColor
 ---@return boolean
-function UGameplayStatics:SuggestProjectileVelocity_MovingTarget(WorldContextObject, OutLaunchVelocity, ProjectileStartLocation, TargetActor, TargetLocationOffset, GravityZOverride, TimeToTarget, DrawDebugType, DrawDebugTime, DrawDebugColor) end
+function UGameplayStatics:SuggestProjectileVelocity_MovingTarget(WorldContextObject, OutLaunchVelocity,
+                                                                 ProjectileStartLocation, TargetActor,
+                                                                 TargetLocationOffset, GravityZOverride, TimeToTarget,
+                                                                 DrawDebugType, DrawDebugTime, DrawDebugColor) end
+
 ---@param WorldContextObject UObject
 ---@param OutLaunchVelocity FVector
 ---@param StartPos FVector
@@ -17002,7 +18472,9 @@ function UGameplayStatics:SuggestProjectileVelocity_MovingTarget(WorldContextObj
 ---@param OverrideGravityZ float
 ---@param ArcParam float
 ---@return boolean
-function UGameplayStatics:SuggestProjectileVelocity_CustomArc(WorldContextObject, OutLaunchVelocity, StartPos, EndPos, OverrideGravityZ, ArcParam) end
+function UGameplayStatics:SuggestProjectileVelocity_CustomArc(WorldContextObject, OutLaunchVelocity, StartPos, EndPos,
+                                                              OverrideGravityZ, ArcParam) end
+
 ---@param Sound USoundBase
 ---@param AttachToComponent USceneComponent
 ---@param AttachPointName FName
@@ -17017,7 +18489,10 @@ function UGameplayStatics:SuggestProjectileVelocity_CustomArc(WorldContextObject
 ---@param ConcurrencySettings USoundConcurrency
 ---@param bAutoDestroy boolean
 ---@return UAudioComponent
-function UGameplayStatics:SpawnSoundAttached(Sound, AttachToComponent, AttachPointName, Location, Rotation, LocationType, bStopWhenAttachedToDestroyed, VolumeMultiplier, PitchMultiplier, StartTime, AttenuationSettings, ConcurrencySettings, bAutoDestroy) end
+function UGameplayStatics:SpawnSoundAttached(Sound, AttachToComponent, AttachPointName, Location, Rotation, LocationType,
+                                             bStopWhenAttachedToDestroyed, VolumeMultiplier, PitchMultiplier, StartTime,
+                                             AttenuationSettings, ConcurrencySettings, bAutoDestroy) end
+
 ---@param WorldContextObject UObject
 ---@param Sound USoundBase
 ---@param Location FVector
@@ -17029,7 +18504,10 @@ function UGameplayStatics:SpawnSoundAttached(Sound, AttachToComponent, AttachPoi
 ---@param ConcurrencySettings USoundConcurrency
 ---@param bAutoDestroy boolean
 ---@return UAudioComponent
-function UGameplayStatics:SpawnSoundAtLocation(WorldContextObject, Sound, Location, Rotation, VolumeMultiplier, PitchMultiplier, StartTime, AttenuationSettings, ConcurrencySettings, bAutoDestroy) end
+function UGameplayStatics:SpawnSoundAtLocation(WorldContextObject, Sound, Location, Rotation, VolumeMultiplier,
+                                               PitchMultiplier, StartTime, AttenuationSettings, ConcurrencySettings,
+                                               bAutoDestroy) end
+
 ---@param WorldContextObject UObject
 ---@param Sound USoundBase
 ---@param VolumeMultiplier float
@@ -17039,11 +18517,14 @@ function UGameplayStatics:SpawnSoundAtLocation(WorldContextObject, Sound, Locati
 ---@param bPersistAcrossLevelTransition boolean
 ---@param bAutoDestroy boolean
 ---@return UAudioComponent
-function UGameplayStatics:SpawnSound2D(WorldContextObject, Sound, VolumeMultiplier, PitchMultiplier, StartTime, ConcurrencySettings, bPersistAcrossLevelTransition, bAutoDestroy) end
+function UGameplayStatics:SpawnSound2D(WorldContextObject, Sound, VolumeMultiplier, PitchMultiplier, StartTime,
+                                       ConcurrencySettings, bPersistAcrossLevelTransition, bAutoDestroy) end
+
 ---@param ObjectClass UClass
 ---@param Outer UObject
 ---@return UObject
 function UGameplayStatics:SpawnObject(ObjectClass, Outer) end
+
 ---@param ForceFeedbackEffect UForceFeedbackEffect
 ---@param AttachToComponent USceneComponent
 ---@param AttachPointName FName
@@ -17057,7 +18538,10 @@ function UGameplayStatics:SpawnObject(ObjectClass, Outer) end
 ---@param AttenuationSettings UForceFeedbackAttenuation
 ---@param bAutoDestroy boolean
 ---@return UForceFeedbackComponent
-function UGameplayStatics:SpawnForceFeedbackAttached(ForceFeedbackEffect, AttachToComponent, AttachPointName, Location, Rotation, LocationType, bStopWhenAttachedToDestroyed, bLooping, IntensityMultiplier, StartTime, AttenuationSettings, bAutoDestroy) end
+function UGameplayStatics:SpawnForceFeedbackAttached(ForceFeedbackEffect, AttachToComponent, AttachPointName, Location,
+                                                     Rotation, LocationType, bStopWhenAttachedToDestroyed, bLooping,
+                                                     IntensityMultiplier, StartTime, AttenuationSettings, bAutoDestroy) end
+
 ---@param WorldContextObject UObject
 ---@param ForceFeedbackEffect UForceFeedbackEffect
 ---@param Location FVector
@@ -17068,7 +18552,10 @@ function UGameplayStatics:SpawnForceFeedbackAttached(ForceFeedbackEffect, Attach
 ---@param AttenuationSettings UForceFeedbackAttenuation
 ---@param bAutoDestroy boolean
 ---@return UForceFeedbackComponent
-function UGameplayStatics:SpawnForceFeedbackAtLocation(WorldContextObject, ForceFeedbackEffect, Location, Rotation, bLooping, IntensityMultiplier, StartTime, AttenuationSettings, bAutoDestroy) end
+function UGameplayStatics:SpawnForceFeedbackAtLocation(WorldContextObject, ForceFeedbackEffect, Location, Rotation,
+                                                       bLooping, IntensityMultiplier, StartTime, AttenuationSettings,
+                                                       bAutoDestroy) end
+
 ---@param EmitterTemplate UParticleSystem
 ---@param AttachToComponent USceneComponent
 ---@param AttachPointName FName
@@ -17080,7 +18567,9 @@ function UGameplayStatics:SpawnForceFeedbackAtLocation(WorldContextObject, Force
 ---@param PoolingMethod EPSCPoolMethod
 ---@param bAutoActivate boolean
 ---@return UParticleSystemComponent
-function UGameplayStatics:SpawnEmitterAttached(EmitterTemplate, AttachToComponent, AttachPointName, Location, Rotation, Scale, LocationType, bAutoDestroy, PoolingMethod, bAutoActivate) end
+function UGameplayStatics:SpawnEmitterAttached(EmitterTemplate, AttachToComponent, AttachPointName, Location, Rotation,
+                                               Scale, LocationType, bAutoDestroy, PoolingMethod, bAutoActivate) end
+
 ---@param WorldContextObject UObject
 ---@param EmitterTemplate UParticleSystem
 ---@param Location FVector
@@ -17090,7 +18579,9 @@ function UGameplayStatics:SpawnEmitterAttached(EmitterTemplate, AttachToComponen
 ---@param PoolingMethod EPSCPoolMethod
 ---@param bAutoActivateSystem boolean
 ---@return UParticleSystemComponent
-function UGameplayStatics:SpawnEmitterAtLocation(WorldContextObject, EmitterTemplate, Location, Rotation, Scale, bAutoDestroy, PoolingMethod, bAutoActivateSystem) end
+function UGameplayStatics:SpawnEmitterAtLocation(WorldContextObject, EmitterTemplate, Location, Rotation, Scale,
+                                                 bAutoDestroy, PoolingMethod, bAutoActivateSystem) end
+
 ---@param Dialogue UDialogueWave
 ---@param Context FDialogueContext
 ---@param AttachToComponent USceneComponent
@@ -17105,7 +18596,10 @@ function UGameplayStatics:SpawnEmitterAtLocation(WorldContextObject, EmitterTemp
 ---@param AttenuationSettings USoundAttenuation
 ---@param bAutoDestroy boolean
 ---@return UAudioComponent
-function UGameplayStatics:SpawnDialogueAttached(Dialogue, Context, AttachToComponent, AttachPointName, Location, Rotation, LocationType, bStopWhenAttachedToDestroyed, VolumeMultiplier, PitchMultiplier, StartTime, AttenuationSettings, bAutoDestroy) end
+function UGameplayStatics:SpawnDialogueAttached(Dialogue, Context, AttachToComponent, AttachPointName, Location, Rotation,
+                                                LocationType, bStopWhenAttachedToDestroyed, VolumeMultiplier,
+                                                PitchMultiplier, StartTime, AttenuationSettings, bAutoDestroy) end
+
 ---@param WorldContextObject UObject
 ---@param Dialogue UDialogueWave
 ---@param Context FDialogueContext
@@ -17117,7 +18611,10 @@ function UGameplayStatics:SpawnDialogueAttached(Dialogue, Context, AttachToCompo
 ---@param AttenuationSettings USoundAttenuation
 ---@param bAutoDestroy boolean
 ---@return UAudioComponent
-function UGameplayStatics:SpawnDialogueAtLocation(WorldContextObject, Dialogue, Context, Location, Rotation, VolumeMultiplier, PitchMultiplier, StartTime, AttenuationSettings, bAutoDestroy) end
+function UGameplayStatics:SpawnDialogueAtLocation(WorldContextObject, Dialogue, Context, Location, Rotation,
+                                                  VolumeMultiplier, PitchMultiplier, StartTime, AttenuationSettings,
+                                                  bAutoDestroy) end
+
 ---@param WorldContextObject UObject
 ---@param Dialogue UDialogueWave
 ---@param Context FDialogueContext
@@ -17126,7 +18623,9 @@ function UGameplayStatics:SpawnDialogueAtLocation(WorldContextObject, Dialogue, 
 ---@param StartTime float
 ---@param bAutoDestroy boolean
 ---@return UAudioComponent
-function UGameplayStatics:SpawnDialogue2D(WorldContextObject, Dialogue, Context, VolumeMultiplier, PitchMultiplier, StartTime, bAutoDestroy) end
+function UGameplayStatics:SpawnDialogue2D(WorldContextObject, Dialogue, Context, VolumeMultiplier, PitchMultiplier,
+                                          StartTime, bAutoDestroy) end
+
 ---@param DecalMaterial UMaterialInterface
 ---@param DecalSize FVector
 ---@param AttachToComponent USceneComponent
@@ -17136,7 +18635,9 @@ function UGameplayStatics:SpawnDialogue2D(WorldContextObject, Dialogue, Context,
 ---@param LocationType EAttachLocation::Type
 ---@param LifeSpan float
 ---@return UDecalComponent
-function UGameplayStatics:SpawnDecalAttached(DecalMaterial, DecalSize, AttachToComponent, AttachPointName, Location, Rotation, LocationType, LifeSpan) end
+function UGameplayStatics:SpawnDecalAttached(DecalMaterial, DecalSize, AttachToComponent, AttachPointName, Location,
+                                             Rotation, LocationType, LifeSpan) end
+
 ---@param WorldContextObject UObject
 ---@param DecalMaterial UMaterialInterface
 ---@param DecalSize FVector
@@ -17145,14 +18646,18 @@ function UGameplayStatics:SpawnDecalAttached(DecalMaterial, DecalSize, AttachToC
 ---@param LifeSpan float
 ---@return UDecalComponent
 function UGameplayStatics:SpawnDecalAtLocation(WorldContextObject, DecalMaterial, DecalSize, Location, Rotation, LifeSpan) end
+
 ---@param WorldContextObject UObject
 ---@param NewLocation FIntVector
 function UGameplayStatics:SetWorldOriginLocation(WorldContextObject, NewLocation) end
+
 ---@param WorldContextObject UObject
 ---@param MouseCaptureMode EMouseCaptureMode
 function UGameplayStatics:SetViewportMouseCaptureMode(WorldContextObject, MouseCaptureMode) end
+
 ---@param bEnabled boolean
 function UGameplayStatics:SetSubtitlesEnabled(bEnabled) end
+
 ---@param WorldContextObject UObject
 ---@param InSoundMixModifier USoundMix
 ---@param InSoundClass USoundClass
@@ -17160,28 +18665,36 @@ function UGameplayStatics:SetSubtitlesEnabled(bEnabled) end
 ---@param Pitch float
 ---@param FadeInTime float
 ---@param bApplyToChildren boolean
-function UGameplayStatics:SetSoundMixClassOverride(WorldContextObject, InSoundMixModifier, InSoundClass, Volume, Pitch, FadeInTime, bApplyToChildren) end
+function UGameplayStatics:SetSoundMixClassOverride(WorldContextObject, InSoundMixModifier, InSoundClass, Volume, Pitch,
+                                                   FadeInTime, bApplyToChildren) end
+
 ---@param WorldContextObject UObject
 ---@param SoundClass USoundClass
 ---@param DistanceAttenuationScale float
 ---@param TimeSec float
 function UGameplayStatics:SetSoundClassDistanceScale(WorldContextObject, SoundClass, DistanceAttenuationScale, TimeSec) end
+
 ---@param PlayerController APlayerController
 ---@param UserId FPlatformUserId
 function UGameplayStatics:SetPlayerPlatformUserId(PlayerController, UserId) end
+
 ---@param Player APlayerController
 ---@param ControllerId int32
 function UGameplayStatics:SetPlayerControllerID(Player, ControllerId) end
+
 ---@param WorldContextObject UObject
 ---@param MaxChannelCountScale float
 function UGameplayStatics:SetMaxAudioChannelsScaled(WorldContextObject, MaxChannelCountScale) end
+
 ---@param WorldContextObject UObject
 ---@param TimeDilation float
 function UGameplayStatics:SetGlobalTimeDilation(WorldContextObject, TimeDilation) end
+
 ---@param WorldContextObject UObject
 ---@param PitchModulation float
 ---@param TimeSec float
 function UGameplayStatics:SetGlobalPitchModulation(WorldContextObject, PitchModulation, TimeSec) end
+
 ---@param WorldContextObject UObject
 ---@param FocusAzimuthScale float
 ---@param NonFocusAzimuthScale float
@@ -17191,56 +18704,73 @@ function UGameplayStatics:SetGlobalPitchModulation(WorldContextObject, PitchModu
 ---@param NonFocusVolumeScale float
 ---@param FocusPriorityScale float
 ---@param NonFocusPriorityScale float
-function UGameplayStatics:SetGlobalListenerFocusParameters(WorldContextObject, FocusAzimuthScale, NonFocusAzimuthScale, FocusDistanceScale, NonFocusDistanceScale, FocusVolumeScale, NonFocusVolumeScale, FocusPriorityScale, NonFocusPriorityScale) end
+function UGameplayStatics:SetGlobalListenerFocusParameters(WorldContextObject, FocusAzimuthScale, NonFocusAzimuthScale,
+                                                           FocusDistanceScale, NonFocusDistanceScale, FocusVolumeScale,
+                                                           NonFocusVolumeScale, FocusPriorityScale, NonFocusPriorityScale) end
+
 ---@param WorldContextObject UObject
 ---@param bPaused boolean
 ---@return boolean
 function UGameplayStatics:SetGamePaused(WorldContextObject, bPaused) end
+
 ---@param WorldContextObject UObject
 ---@param bDisable boolean
 function UGameplayStatics:SetForceDisableSplitscreen(WorldContextObject, bDisable) end
+
 ---@param WorldContextObject UObject
 ---@param bEnable boolean
 function UGameplayStatics:SetEnableWorldRendering(WorldContextObject, bEnable) end
+
 ---@param WorldContextObject UObject
 ---@param InSoundMix USoundMix
 function UGameplayStatics:SetBaseSoundMix(WorldContextObject, InSoundMix) end
+
 ---@param WorldContextObject UObject
 ---@param InPluginName FName
 ---@return boolean
 function UGameplayStatics:SetActiveSpatialPluginByName(WorldContextObject, InPluginName) end
+
 ---@param SaveGameObject USaveGame
 ---@param SlotName FString
 ---@param UserIndex int32
 ---@return boolean
 function UGameplayStatics:SaveGameToSlot(SaveGameObject, SlotName, UserIndex) end
+
 ---@param Player APlayerController
 ---@param bDestroyPawn boolean
 function UGameplayStatics:RemovePlayer(Player, bDestroyPawn) end
+
 ---@param WorldContextObject UObject
 ---@param WorldLocation FVector
 ---@return FVector
 function UGameplayStatics:RebaseZeroOriginOntoLocal(WorldContextObject, WorldLocation) end
+
 ---@param WorldContextObject UObject
 ---@param WorldLocation FVector
 ---@return FVector
 function UGameplayStatics:RebaseLocalOriginOntoZero(WorldContextObject, WorldLocation) end
+
 ---@param WorldContextObject UObject
 ---@param InSoundMixModifier USoundMix
 function UGameplayStatics:PushSoundMixModifier(WorldContextObject, InSoundMixModifier) end
+
 ---@param Player APlayerController
 ---@param WorldPosition FVector
 ---@param ScreenPosition FVector2D
 ---@param bPlayerViewportRelative boolean
 ---@return boolean
 function UGameplayStatics:ProjectWorldToScreen(Player, WorldPosition, ScreenPosition, bPlayerViewportRelative) end
+
 ---@param InSound USoundBase
 function UGameplayStatics:PrimeSound(InSound) end
+
 ---@param InSoundClass USoundClass
 function UGameplayStatics:PrimeAllSoundsInSoundClass(InSoundClass) end
+
 ---@param WorldContextObject UObject
 ---@param InSoundMixModifier USoundMix
 function UGameplayStatics:PopSoundMixModifier(WorldContextObject, InSoundMixModifier) end
+
 ---@param WorldContextObject UObject
 ---@param Shake TSubclassOf<UCameraShakeBase>
 ---@param Epicenter FVector
@@ -17248,7 +18778,9 @@ function UGameplayStatics:PopSoundMixModifier(WorldContextObject, InSoundMixModi
 ---@param OuterRadius float
 ---@param Falloff float
 ---@param bOrientShakeTowardsEpicenter boolean
-function UGameplayStatics:PlayWorldCameraShake(WorldContextObject, Shake, Epicenter, InnerRadius, OuterRadius, Falloff, bOrientShakeTowardsEpicenter) end
+function UGameplayStatics:PlayWorldCameraShake(WorldContextObject, Shake, Epicenter, InnerRadius, OuterRadius, Falloff,
+                                               bOrientShakeTowardsEpicenter) end
+
 ---@param WorldContextObject UObject
 ---@param Sound USoundBase
 ---@param Location FVector
@@ -17260,7 +18792,10 @@ function UGameplayStatics:PlayWorldCameraShake(WorldContextObject, Shake, Epicen
 ---@param ConcurrencySettings USoundConcurrency
 ---@param OwningActor AActor
 ---@param InitialParams UInitialActiveSoundParams
-function UGameplayStatics:PlaySoundAtLocation(WorldContextObject, Sound, Location, Rotation, VolumeMultiplier, PitchMultiplier, StartTime, AttenuationSettings, ConcurrencySettings, OwningActor, InitialParams) end
+function UGameplayStatics:PlaySoundAtLocation(WorldContextObject, Sound, Location, Rotation, VolumeMultiplier,
+                                              PitchMultiplier, StartTime, AttenuationSettings, ConcurrencySettings,
+                                              OwningActor, InitialParams) end
+
 ---@param WorldContextObject UObject
 ---@param Sound USoundBase
 ---@param VolumeMultiplier float
@@ -17269,7 +18804,9 @@ function UGameplayStatics:PlaySoundAtLocation(WorldContextObject, Sound, Locatio
 ---@param ConcurrencySettings USoundConcurrency
 ---@param OwningActor AActor
 ---@param bIsUISound boolean
-function UGameplayStatics:PlaySound2D(WorldContextObject, Sound, VolumeMultiplier, PitchMultiplier, StartTime, ConcurrencySettings, OwningActor, bIsUISound) end
+function UGameplayStatics:PlaySound2D(WorldContextObject, Sound, VolumeMultiplier, PitchMultiplier, StartTime,
+                                      ConcurrencySettings, OwningActor, bIsUISound) end
+
 ---@param WorldContextObject UObject
 ---@param Dialogue UDialogueWave
 ---@param Context FDialogueContext
@@ -17279,32 +18816,40 @@ function UGameplayStatics:PlaySound2D(WorldContextObject, Sound, VolumeMultiplie
 ---@param PitchMultiplier float
 ---@param StartTime float
 ---@param AttenuationSettings USoundAttenuation
-function UGameplayStatics:PlayDialogueAtLocation(WorldContextObject, Dialogue, Context, Location, Rotation, VolumeMultiplier, PitchMultiplier, StartTime, AttenuationSettings) end
+function UGameplayStatics:PlayDialogueAtLocation(WorldContextObject, Dialogue, Context, Location, Rotation,
+                                                 VolumeMultiplier, PitchMultiplier, StartTime, AttenuationSettings) end
+
 ---@param WorldContextObject UObject
 ---@param Dialogue UDialogueWave
 ---@param Context FDialogueContext
 ---@param VolumeMultiplier float
 ---@param PitchMultiplier float
 ---@param StartTime float
-function UGameplayStatics:PlayDialogue2D(WorldContextObject, Dialogue, Context, VolumeMultiplier, PitchMultiplier, StartTime) end
+function UGameplayStatics:PlayDialogue2D(WorldContextObject, Dialogue, Context, VolumeMultiplier, PitchMultiplier,
+                                         StartTime) end
+
 ---@param Options FString
 ---@param Key FString
 ---@return FString
 function UGameplayStatics:ParseOption(Options, Key) end
+
 ---@param WorldContextObject UObject
 ---@param Level TSoftObjectPtr<UWorld>
 ---@param bAbsolute boolean
 ---@param Options FString
 function UGameplayStatics:OpenLevelBySoftObjectPtr(WorldContextObject, Level, bAbsolute, Options) end
+
 ---@param WorldContextObject UObject
 ---@param LevelName FName
 ---@param bAbsolute boolean
 ---@param Options FString
 function UGameplayStatics:OpenLevel(WorldContextObject, LevelName, bAbsolute, Options) end
+
 ---@param Object UObject
 ---@param ObjectClass UClass
 ---@return boolean
 function UGameplayStatics:ObjectIsA(Object, ObjectClass) end
+
 ---@param bBlockingHit boolean
 ---@param bInitialOverlap boolean
 ---@param Time float
@@ -17324,250 +18869,320 @@ function UGameplayStatics:ObjectIsA(Object, ObjectClass) end
 ---@param TraceStart FVector
 ---@param TraceEnd FVector
 ---@return FHitResult
-function UGameplayStatics:MakeHitResult(bBlockingHit, bInitialOverlap, Time, Distance, Location, ImpactPoint, Normal, ImpactNormal, PhysMat, HitActor, HitComponent, HitBoneName, BoneName, HitItem, ElementIndex, FaceIndex, TraceStart, TraceEnd) end
+function UGameplayStatics:MakeHitResult(bBlockingHit, bInitialOverlap, Time, Distance, Location, ImpactPoint, Normal,
+                                        ImpactNormal, PhysMat, HitActor, HitComponent, HitBoneName, BoneName, HitItem,
+                                        ElementIndex, FaceIndex, TraceStart, TraceEnd) end
+
 ---@param WorldContextObject UObject
 ---@param Level TSoftObjectPtr<UWorld>
 ---@param bMakeVisibleAfterLoad boolean
 ---@param bShouldBlockOnLoad boolean
 ---@param LatentInfo FLatentActionInfo
-function UGameplayStatics:LoadStreamLevelBySoftObjectPtr(WorldContextObject, Level, bMakeVisibleAfterLoad, bShouldBlockOnLoad, LatentInfo) end
+function UGameplayStatics:LoadStreamLevelBySoftObjectPtr(WorldContextObject, Level, bMakeVisibleAfterLoad,
+                                                         bShouldBlockOnLoad, LatentInfo) end
+
 ---@param WorldContextObject UObject
 ---@param LevelName FName
 ---@param bMakeVisibleAfterLoad boolean
 ---@param bShouldBlockOnLoad boolean
 ---@param LatentInfo FLatentActionInfo
-function UGameplayStatics:LoadStreamLevel(WorldContextObject, LevelName, bMakeVisibleAfterLoad, bShouldBlockOnLoad, LatentInfo) end
+function UGameplayStatics:LoadStreamLevel(WorldContextObject, LevelName, bMakeVisibleAfterLoad, bShouldBlockOnLoad,
+                                          LatentInfo) end
+
 ---@param SlotName FString
 ---@param UserIndex int32
 ---@return USaveGame
 function UGameplayStatics:LoadGameFromSlot(SlotName, UserIndex) end
+
 ---@param WorldContextObject UObject
 ---@return boolean
 function UGameplayStatics:IsSplitscreenForceDisabled(WorldContextObject) end
+
 ---@param WorldContextObject UObject
 ---@return boolean
 function UGameplayStatics:IsGamePaused(WorldContextObject) end
+
 ---@param WorldContextObject UObject
 ---@param Location FVector
 ---@param MaximumRange float
 ---@return boolean
 function UGameplayStatics:IsAnyLocalPlayerCameraWithinRange(WorldContextObject, Location, MaximumRange) end
+
 ---@param Options FString
 ---@param InKey FString
 ---@return boolean
 function UGameplayStatics:HasOption(Options, InKey) end
+
 ---@param OptionToCheck FString
 ---@return boolean
 function UGameplayStatics:HasLaunchOption(OptionToCheck) end
+
 ---@param WorldContextObject UObject
 ---@param StaticMesh UStaticMesh
 ---@param CenterPosition FVector
 ---@param Radius float
 ---@return int32
 function UGameplayStatics:GrassOverlappingSphereCount(WorldContextObject, StaticMesh, CenterPosition, Radius) end
+
 ---@param WorldContextObject UObject
 ---@return FIntVector
 function UGameplayStatics:GetWorldOriginLocation(WorldContextObject) end
+
 ---@param WorldContextObject UObject
 ---@return double
 function UGameplayStatics:GetWorldDeltaSeconds(WorldContextObject) end
+
 ---@param DesiredView FMinimalViewInfo
 ---@param ViewMatrix FMatrix
 ---@param ProjectionMatrix FMatrix
 ---@param ViewProjectionMatrix FMatrix
 function UGameplayStatics:GetViewProjectionMatrix(DesiredView, ViewMatrix, ProjectionMatrix, ViewProjectionMatrix) end
+
 ---@param WorldContextObject UObject
 ---@return EMouseCaptureMode
 function UGameplayStatics:GetViewportMouseCaptureMode(WorldContextObject) end
+
 ---@param WorldContextObject UObject
 ---@return double
 function UGameplayStatics:GetUnpausedTimeSeconds(WorldContextObject) end
+
 ---@param WorldContextObject UObject
 ---@return double
 function UGameplayStatics:GetTimeSeconds(WorldContextObject) end
+
 ---@param Hit FHitResult
 ---@return EPhysicalSurface
 function UGameplayStatics:GetSurfaceType(Hit) end
+
 ---@param WorldContextObject UObject
 ---@param PackageName FName
 ---@return ULevelStreaming
 function UGameplayStatics:GetStreamingLevel(WorldContextObject, PackageName) end
+
 ---@param WorldContextObject UObject
 ---@return double
 function UGameplayStatics:GetRealTimeSeconds(WorldContextObject) end
+
 ---@param WorldContextObject UObject
 ---@param UniqueID FUniqueNetIdRepl
 ---@return APlayerState
 function UGameplayStatics:GetPlayerStateFromUniqueNetId(WorldContextObject, UniqueID) end
+
 ---@param WorldContextObject UObject
 ---@param PlayerStateIndex int32
 ---@return APlayerState
 function UGameplayStatics:GetPlayerState(WorldContextObject, PlayerStateIndex) end
+
 ---@param WorldContextObject UObject
 ---@param PlayerIndex int32
 ---@return APawn
 function UGameplayStatics:GetPlayerPawn(WorldContextObject, PlayerIndex) end
+
 ---@param Player APlayerController
 ---@return int32
 function UGameplayStatics:GetPlayerControllerID(Player) end
+
 ---@param WorldContextObject UObject
 ---@param UserId FPlatformUserId
 ---@return APlayerController
 function UGameplayStatics:GetPlayerControllerFromPlatformUser(WorldContextObject, UserId) end
+
 ---@param WorldContextObject UObject
 ---@param ControllerId int32
 ---@return APlayerController
 function UGameplayStatics:GetPlayerControllerFromID(WorldContextObject, ControllerId) end
+
 ---@param WorldContextObject UObject
 ---@param PlayerIndex int32
 ---@return APlayerController
 function UGameplayStatics:GetPlayerController(WorldContextObject, PlayerIndex) end
+
 ---@param WorldContextObject UObject
 ---@param PlayerIndex int32
 ---@return ACharacter
 function UGameplayStatics:GetPlayerCharacter(WorldContextObject, PlayerIndex) end
+
 ---@param WorldContextObject UObject
 ---@param PlayerIndex int32
 ---@return APlayerCameraManager
 function UGameplayStatics:GetPlayerCameraManager(WorldContextObject, PlayerIndex) end
+
 ---@return FString
 function UGameplayStatics:GetPlatformName() end
+
 ---@param Object UObject
 ---@return UClass
 function UGameplayStatics:GetObjectClass(Object) end
+
 ---@param WorldContextObject UObject
 ---@return int32
 function UGameplayStatics:GetNumPlayerStates(WorldContextObject) end
+
 ---@param WorldContextObject UObject
 ---@return int32
 function UGameplayStatics:GetNumPlayerControllers(WorldContextObject) end
+
 ---@param WorldContextObject UObject
 ---@return int32
 function UGameplayStatics:GetNumLocalPlayerControllers(WorldContextObject) end
+
 ---@param WorldContextObject UObject
 ---@return int32
 function UGameplayStatics:GetMaxAudioChannelCount(WorldContextObject) end
+
 ---@param Pair FString
 ---@param Key FString
 ---@param Value FString
 function UGameplayStatics:GetKeyValue(Pair, Key, Value) end
+
 ---@param Options FString
 ---@param Key FString
 ---@param DefaultValue int32
 ---@return int32
 function UGameplayStatics:GetIntOption(Options, Key, DefaultValue) end
+
 ---@param WorldContextObject UObject
 ---@return float
 function UGameplayStatics:GetGlobalTimeDilation(WorldContextObject) end
+
 ---@param WorldContextObject UObject
 ---@return AGameStateBase
 function UGameplayStatics:GetGameState(WorldContextObject) end
+
 ---@param WorldContextObject UObject
 ---@return AGameModeBase
 function UGameplayStatics:GetGameMode(WorldContextObject) end
+
 ---@param WorldContextObject UObject
 ---@return UGameInstance
 function UGameplayStatics:GetGameInstance(WorldContextObject) end
+
 ---@param WorldContextObject UObject
 ---@return boolean
 function UGameplayStatics:GetEnableWorldRendering(WorldContextObject) end
+
 ---@param WorldContextObject UObject
 ---@return UReverbEffect
 function UGameplayStatics:GetCurrentReverbEffect(WorldContextObject) end
+
 ---@param WorldContextObject UObject
 ---@param bRemovePrefixString boolean
 ---@return FString
 function UGameplayStatics:GetCurrentLevelName(WorldContextObject, bRemovePrefixString) end
+
 ---@param WorldContextObject UObject
 ---@param Location FVector
 ---@param MaximumRange float
 ---@param bAllowAttenuationOverride boolean
 ---@param ListenerPosition FVector
 ---@return boolean
-function UGameplayStatics:GetClosestListenerLocation(WorldContextObject, Location, MaximumRange, bAllowAttenuationOverride, ListenerPosition) end
+function UGameplayStatics:GetClosestListenerLocation(WorldContextObject, Location, MaximumRange,
+                                                     bAllowAttenuationOverride, ListenerPosition) end
+
 ---@param WorldContextObject UObject
 ---@return TArray<FName>
 function UGameplayStatics:GetAvailableSpatialPluginNames(WorldContextObject) end
+
 ---@param WorldContextObject UObject
 ---@return double
 function UGameplayStatics:GetAudioTimeSeconds(WorldContextObject) end
+
 ---@param WorldContextObject UObject
 ---@param Tag FName
 ---@param OutActors TArray<AActor>
 function UGameplayStatics:GetAllActorsWithTag(WorldContextObject, Tag, OutActors) end
+
 ---@param WorldContextObject UObject
 ---@param Interface TSubclassOf<UInterface>
 ---@param OutActors TArray<AActor>
 function UGameplayStatics:GetAllActorsWithInterface(WorldContextObject, Interface, OutActors) end
+
 ---@param WorldContextObject UObject
 ---@param ActorClass TSubclassOf<AActor>
 ---@param Tag FName
 ---@param OutActors TArray<AActor>
 function UGameplayStatics:GetAllActorsOfClassWithTag(WorldContextObject, ActorClass, Tag, OutActors) end
+
 ---@param WorldContextObject UObject
 ---@param ActorClass TSubclassOf<AActor>
 ---@param OutActors TArray<AActor>
 function UGameplayStatics:GetAllActorsOfClass(WorldContextObject, ActorClass, OutActors) end
+
 ---@param WorldContextObject UObject
 ---@param ActorClass TSubclassOf<AActor>
 ---@return AActor
 function UGameplayStatics:GetActorOfClass(WorldContextObject, ActorClass) end
+
 ---@param Actors TArray<AActor>
 ---@param bOnlyCollidingComponents boolean
 ---@param Center FVector
 ---@param BoxExtent FVector
 function UGameplayStatics:GetActorArrayBounds(Actors, bOnlyCollidingComponents, Center, BoxExtent) end
+
 ---@param Actors TArray<AActor>
 ---@return FVector
 function UGameplayStatics:GetActorArrayAverageLocation(Actors) end
+
 ---@param WorldContextObject UObject
 ---@return FName
 function UGameplayStatics:GetActiveSpatialPluginName(WorldContextObject) end
+
 ---@param Seconds int32
 ---@param PartialSeconds double
 function UGameplayStatics:GetAccurateRealTime(Seconds, PartialSeconds) end
+
 ---@param WorldContextObject UObject
 function UGameplayStatics:FlushLevelStreaming(WorldContextObject) end
+
 ---@param Actor AActor
 ---@param SpawnTransform FTransform
 ---@param TransformScaleMethod ESpawnActorScaleMethod
 ---@return AActor
 function UGameplayStatics:FinishSpawningActor(Actor, SpawnTransform, TransformScaleMethod) end
+
 ---@param Origin FVector
 ---@param ActorsToCheck TArray<AActor>
 ---@param Distance float
 ---@return AActor
 function UGameplayStatics:FindNearestActor(Origin, ActorsToCheck, Distance) end
+
 ---@param Hit FHitResult
 ---@param UVChannel int32
 ---@param UV FVector2D
 ---@return boolean
 function UGameplayStatics:FindCollisionUV(Hit, UVChannel, UV) end
+
 ---@param Enable boolean
 function UGameplayStatics:EnableLiveStreaming(Enable) end
+
 ---@param SlotName FString
 ---@param UserIndex int32
 ---@return boolean
 function UGameplayStatics:DoesSaveGameExist(SlotName, UserIndex) end
+
 ---@param Player APlayerController
 ---@param ScreenPosition FVector2D
 ---@param WorldPosition FVector
 ---@param WorldDirection FVector
 ---@return boolean
 function UGameplayStatics:DeprojectScreenToWorld(Player, ScreenPosition, WorldPosition, WorldDirection) end
+
 ---@param SceneCapture2D ASceneCapture2D
 ---@param TargetUV FVector2D
 ---@param WorldPosition FVector
 ---@param WorldDirection FVector
 ---@return boolean
 function UGameplayStatics:DeprojectSceneCaptureToWorld(SceneCapture2D, TargetUV, WorldPosition, WorldDirection) end
+
 ---@param SlotName FString
 ---@param UserIndex int32
 ---@return boolean
 function UGameplayStatics:DeleteGameInSlot(SlotName, UserIndex) end
+
 ---@param WorldContextObject UObject
 ---@param TagName FName
 function UGameplayStatics:DeactivateReverbEffect(WorldContextObject, TagName) end
+
 ---@param WorldContextObject UObject
 ---@param Sound USoundBase
 ---@param VolumeMultiplier float
@@ -17577,28 +19192,36 @@ function UGameplayStatics:DeactivateReverbEffect(WorldContextObject, TagName) en
 ---@param bPersistAcrossLevelTransition boolean
 ---@param bAutoDestroy boolean
 ---@return UAudioComponent
-function UGameplayStatics:CreateSound2D(WorldContextObject, Sound, VolumeMultiplier, PitchMultiplier, StartTime, ConcurrencySettings, bPersistAcrossLevelTransition, bAutoDestroy) end
+function UGameplayStatics:CreateSound2D(WorldContextObject, Sound, VolumeMultiplier, PitchMultiplier, StartTime,
+                                        ConcurrencySettings, bPersistAcrossLevelTransition, bAutoDestroy) end
+
 ---@param SaveGameClass TSubclassOf<USaveGame>
 ---@return USaveGame
 function UGameplayStatics:CreateSaveGameObject(SaveGameClass) end
+
 ---@param WorldContextObject UObject
 ---@param UserId FPlatformUserId
 ---@param bSpawnPlayerController boolean
 ---@return APlayerController
 function UGameplayStatics:CreatePlayerFromPlatformUser(WorldContextObject, UserId, bSpawnPlayerController) end
+
 ---@param WorldContextObject UObject
 ---@param ControllerId int32
 ---@param bSpawnPlayerController boolean
 ---@return APlayerController
 function UGameplayStatics:CreatePlayer(WorldContextObject, ControllerId, bSpawnPlayerController) end
+
 ---@param WorldContextObject UObject
 function UGameplayStatics:ClearSoundMixModifiers(WorldContextObject) end
+
 ---@param WorldContextObject UObject
 ---@param InSoundMixModifier USoundMix
 ---@param InSoundClass USoundClass
 ---@param FadeOutTime float
 function UGameplayStatics:ClearSoundMixClassOverride(WorldContextObject, InSoundMixModifier, InSoundClass, FadeOutTime) end
+
 function UGameplayStatics:CancelAsyncLoading() end
+
 ---@param Hit FHitResult
 ---@param bBlockingHit boolean
 ---@param bInitialOverlap boolean
@@ -17618,7 +19241,10 @@ function UGameplayStatics:CancelAsyncLoading() end
 ---@param FaceIndex int32
 ---@param TraceStart FVector
 ---@param TraceEnd FVector
-function UGameplayStatics:BreakHitResult(Hit, bBlockingHit, bInitialOverlap, Time, Distance, Location, ImpactPoint, Normal, ImpactNormal, PhysMat, HitActor, HitComponent, HitBoneName, BoneName, HitItem, ElementIndex, FaceIndex, TraceStart, TraceEnd) end
+function UGameplayStatics:BreakHitResult(Hit, bBlockingHit, bInitialOverlap, Time, Distance, Location, ImpactPoint,
+                                         Normal, ImpactNormal, PhysMat, HitActor, HitComponent, HitBoneName, BoneName,
+                                         HitItem, ElementIndex, FaceIndex, TraceStart, TraceEnd) end
+
 ---@param WorldContextObject UObject
 ---@param TossVelocity FVector
 ---@param StartLocation FVector
@@ -17630,7 +19256,10 @@ function UGameplayStatics:BreakHitResult(Hit, bBlockingHit, bInitialOverlap, Tim
 ---@param bFavorHighArc boolean
 ---@param bDrawDebug boolean
 ---@return boolean
-function UGameplayStatics:BlueprintSuggestProjectileVelocity(WorldContextObject, TossVelocity, StartLocation, EndLocation, LaunchSpeed, OverrideGravityZ, TraceOption, CollisionRadius, bFavorHighArc, bDrawDebug) end
+function UGameplayStatics:BlueprintSuggestProjectileVelocity(WorldContextObject, TossVelocity, StartLocation, EndLocation,
+                                                             LaunchSpeed, OverrideGravityZ, TraceOption, CollisionRadius,
+                                                             bFavorHighArc, bDrawDebug) end
+
 ---@param WorldContextObject UObject
 ---@param OutHit FHitResult
 ---@param OutPathPositions TArray<FVector>
@@ -17648,7 +19277,13 @@ function UGameplayStatics:BlueprintSuggestProjectileVelocity(WorldContextObject,
 ---@param MaxSimTime float
 ---@param OverrideGravityZ float
 ---@return boolean
-function UGameplayStatics:Blueprint_PredictProjectilePath_ByTraceChannel(WorldContextObject, OutHit, OutPathPositions, OutLastTraceDestination, StartPos, LaunchVelocity, bTracePath, ProjectileRadius, TraceChannel, bTraceComplex, ActorsToIgnore, DrawDebugType, DrawDebugTime, SimFrequency, MaxSimTime, OverrideGravityZ) end
+function UGameplayStatics:Blueprint_PredictProjectilePath_ByTraceChannel(WorldContextObject, OutHit, OutPathPositions,
+                                                                         OutLastTraceDestination, StartPos,
+                                                                         LaunchVelocity, bTracePath, ProjectileRadius,
+                                                                         TraceChannel, bTraceComplex, ActorsToIgnore,
+                                                                         DrawDebugType, DrawDebugTime, SimFrequency,
+                                                                         MaxSimTime, OverrideGravityZ) end
+
 ---@param WorldContextObject UObject
 ---@param OutHit FHitResult
 ---@param OutPathPositions TArray<FVector>
@@ -17666,18 +19301,26 @@ function UGameplayStatics:Blueprint_PredictProjectilePath_ByTraceChannel(WorldCo
 ---@param MaxSimTime float
 ---@param OverrideGravityZ float
 ---@return boolean
-function UGameplayStatics:Blueprint_PredictProjectilePath_ByObjectType(WorldContextObject, OutHit, OutPathPositions, OutLastTraceDestination, StartPos, LaunchVelocity, bTracePath, ProjectileRadius, ObjectTypes, bTraceComplex, ActorsToIgnore, DrawDebugType, DrawDebugTime, SimFrequency, MaxSimTime, OverrideGravityZ) end
+function UGameplayStatics:Blueprint_PredictProjectilePath_ByObjectType(WorldContextObject, OutHit, OutPathPositions,
+                                                                       OutLastTraceDestination, StartPos, LaunchVelocity,
+                                                                       bTracePath, ProjectileRadius, ObjectTypes,
+                                                                       bTraceComplex, ActorsToIgnore, DrawDebugType,
+                                                                       DrawDebugTime, SimFrequency, MaxSimTime,
+                                                                       OverrideGravityZ) end
+
 ---@param WorldContextObject UObject
 ---@param PredictParams FPredictProjectilePathParams
 ---@param PredictResult FPredictProjectilePathResult
 ---@return boolean
 function UGameplayStatics:Blueprint_PredictProjectilePath_Advanced(WorldContextObject, PredictParams, PredictResult) end
+
 ---@param WorldContextObject UObject
 ---@param Blueprint UBlueprint
 ---@param SpawnTransform FTransform
 ---@param bNoCollisionFail boolean
 ---@return AActor
 function UGameplayStatics:BeginSpawningActorFromBlueprint(WorldContextObject, Blueprint, SpawnTransform, bNoCollisionFail) end
+
 ---@param WorldContextObject UObject
 ---@param ActorClass TSubclassOf<AActor>
 ---@param SpawnTransform FTransform
@@ -17685,14 +19328,18 @@ function UGameplayStatics:BeginSpawningActorFromBlueprint(WorldContextObject, Bl
 ---@param Owner AActor
 ---@param TransformScaleMethod ESpawnActorScaleMethod
 ---@return AActor
-function UGameplayStatics:BeginDeferredActorSpawnFromClass(WorldContextObject, ActorClass, SpawnTransform, CollisionHandlingOverride, Owner, TransformScaleMethod) end
+function UGameplayStatics:BeginDeferredActorSpawnFromClass(WorldContextObject, ActorClass, SpawnTransform,
+                                                           CollisionHandlingOverride, Owner, TransformScaleMethod) end
+
 ---@return boolean
 function UGameplayStatics:AreSubtitlesEnabled() end
+
 ---@param WorldContextObject UObject
 ---@param Location FVector
 ---@param MaximumRange float
 ---@return boolean
 function UGameplayStatics:AreAnyListenersWithinRange(WorldContextObject, Location, MaximumRange) end
+
 ---@param WorldContextObject UObject
 ---@param BaseDamage float
 ---@param MinimumDamage float
@@ -17706,7 +19353,11 @@ function UGameplayStatics:AreAnyListenersWithinRange(WorldContextObject, Locatio
 ---@param InstigatedByController AController
 ---@param DamagePreventionChannel ECollisionChannel
 ---@return boolean
-function UGameplayStatics:ApplyRadialDamageWithFalloff(WorldContextObject, BaseDamage, MinimumDamage, Origin, DamageInnerRadius, DamageOuterRadius, DamageFalloff, DamageTypeClass, IgnoreActors, DamageCauser, InstigatedByController, DamagePreventionChannel) end
+function UGameplayStatics:ApplyRadialDamageWithFalloff(WorldContextObject, BaseDamage, MinimumDamage, Origin,
+                                                       DamageInnerRadius, DamageOuterRadius, DamageFalloff,
+                                                       DamageTypeClass, IgnoreActors, DamageCauser,
+                                                       InstigatedByController, DamagePreventionChannel) end
+
 ---@param WorldContextObject UObject
 ---@param BaseDamage float
 ---@param Origin FVector
@@ -17718,7 +19369,10 @@ function UGameplayStatics:ApplyRadialDamageWithFalloff(WorldContextObject, BaseD
 ---@param bDoFullDamage boolean
 ---@param DamagePreventionChannel ECollisionChannel
 ---@return boolean
-function UGameplayStatics:ApplyRadialDamage(WorldContextObject, BaseDamage, Origin, DamageRadius, DamageTypeClass, IgnoreActors, DamageCauser, InstigatedByController, bDoFullDamage, DamagePreventionChannel) end
+function UGameplayStatics:ApplyRadialDamage(WorldContextObject, BaseDamage, Origin, DamageRadius, DamageTypeClass,
+                                            IgnoreActors, DamageCauser, InstigatedByController, bDoFullDamage,
+                                            DamagePreventionChannel) end
+
 ---@param DamagedActor AActor
 ---@param BaseDamage float
 ---@param HitFromDirection FVector
@@ -17727,7 +19381,9 @@ function UGameplayStatics:ApplyRadialDamage(WorldContextObject, BaseDamage, Orig
 ---@param DamageCauser AActor
 ---@param DamageTypeClass TSubclassOf<UDamageType>
 ---@return float
-function UGameplayStatics:ApplyPointDamage(DamagedActor, BaseDamage, HitFromDirection, HitInfo, EventInstigator, DamageCauser, DamageTypeClass) end
+function UGameplayStatics:ApplyPointDamage(DamagedActor, BaseDamage, HitFromDirection, HitInfo, EventInstigator,
+                                           DamageCauser, DamageTypeClass) end
+
 ---@param DamagedActor AActor
 ---@param BaseDamage float
 ---@param EventInstigator AController
@@ -17735,8 +19391,10 @@ function UGameplayStatics:ApplyPointDamage(DamagedActor, BaseDamage, HitFromDire
 ---@param DamageTypeClass TSubclassOf<UDamageType>
 ---@return float
 function UGameplayStatics:ApplyDamage(DamagedActor, BaseDamage, EventInstigator, DamageCauser, DamageTypeClass) end
+
 ---@param AnnouncementString FString
 function UGameplayStatics:AnnounceAccessibleString(AnnouncementString) end
+
 ---@param WorldContextObject UObject
 ---@param ReverbEffect UReverbEffect
 ---@param TagName FName
@@ -17744,7 +19402,6 @@ function UGameplayStatics:AnnounceAccessibleString(AnnouncementString) end
 ---@param Volume float
 ---@param FadeTime float
 function UGameplayStatics:ActivateReverbEffect(WorldContextObject, ReverbEffect, TagName, Priority, Volume, FadeTime) end
-
 
 ---@class UGarbageCollectionSettings : UDeveloperSettings
 ---@field TimeBetweenPurgingPendingKillObjects float
@@ -17854,11 +19511,12 @@ UHapticFeedbackEffect_SoundWave = {}
 UHealthSnapshotBlueprintLibrary = {}
 
 function UHealthSnapshotBlueprintLibrary:StopPerformanceSnapshots() end
+
 function UHealthSnapshotBlueprintLibrary:StartPerformanceSnapshots() end
+
 ---@param SnapshotTitle FString
 ---@param bResetStats boolean
 function UHealthSnapshotBlueprintLibrary:LogPerformanceSnapshot(SnapshotTitle, bResetStats) end
-
 
 ---@class UHeterogeneousVolumeComponent : UMeshComponent
 ---@field VolumeResolution FIntVector
@@ -17879,18 +19537,23 @@ UHeterogeneousVolumeComponent = {}
 
 ---@param NewValue float
 function UHeterogeneousVolumeComponent:SetStartFrame(NewValue) end
+
 ---@param NewValue boolean
 function UHeterogeneousVolumeComponent:SetPlaying(NewValue) end
+
 ---@param NewValue boolean
 function UHeterogeneousVolumeComponent:SetLooping(NewValue) end
+
 ---@param NewValue float
 function UHeterogeneousVolumeComponent:SetFrameRate(NewValue) end
+
 ---@param NewValue float
 function UHeterogeneousVolumeComponent:SetFrame(NewValue) end
+
 ---@param NewValue float
 function UHeterogeneousVolumeComponent:SetEndFrame(NewValue) end
-function UHeterogeneousVolumeComponent:Play() end
 
+function UHeterogeneousVolumeComponent:Play() end
 
 ---@class UHierarchicalInstancedStaticMeshComponent : UInstancedStaticMeshComponent
 ---@field bUseTranslatedInstanceSpace boolean
@@ -17910,9 +19573,9 @@ UHierarchicalInstancedStaticMeshComponent = {}
 
 ---@param InLODDistanceScale float
 function UHierarchicalInstancedStaticMeshComponent:SetLODDistanceScale(InLODDistanceScale) end
+
 ---@return float
 function UHierarchicalInstancedStaticMeshComponent:GetLODDistanceScale() end
-
 
 ---@class UHierarchicalLODSetup : UObject
 ---@field HierarchicalLODSetup TArray<FHierarchicalSimplification>
@@ -17929,37 +19592,44 @@ UImportanceSamplingLibrary = {}
 ---@param Seed float
 ---@return float
 function UImportanceSamplingLibrary:RandomSobolFloat(Index, Dimension, Seed) end
+
 ---@param Index int32
 ---@param NumCells int32
 ---@param Cell FVector
 ---@param Seed FVector
 ---@return FVector
 function UImportanceSamplingLibrary:RandomSobolCell3D(Index, NumCells, Cell, Seed) end
+
 ---@param Index int32
 ---@param NumCells int32
 ---@param Cell FVector2D
 ---@param Seed FVector2D
 ---@return FVector2D
 function UImportanceSamplingLibrary:RandomSobolCell2D(Index, NumCells, Cell, Seed) end
+
 ---@param Index int32
 ---@param Dimension int32
 ---@param PreviousValue float
 ---@return float
 function UImportanceSamplingLibrary:NextSobolFloat(Index, Dimension, PreviousValue) end
+
 ---@param Index int32
 ---@param NumCells int32
 ---@param PreviousValue FVector
 ---@return FVector
 function UImportanceSamplingLibrary:NextSobolCell3D(Index, NumCells, PreviousValue) end
+
 ---@param Index int32
 ---@param NumCells int32
 ---@param PreviousValue FVector2D
 ---@return FVector2D
 function UImportanceSamplingLibrary:NextSobolCell2D(Index, NumCells, PreviousValue) end
+
 ---@param Texture UTexture2D
 ---@param WeightingFunc EImportanceWeight::Type
 ---@return FImportanceTexture
 function UImportanceSamplingLibrary:MakeImportanceTexture(Texture, WeightingFunc) end
+
 ---@param Texture FImportanceTexture
 ---@param Rand FVector2D
 ---@param Samples int32
@@ -17968,12 +19638,13 @@ function UImportanceSamplingLibrary:MakeImportanceTexture(Texture, WeightingFunc
 ---@param SampleColor FLinearColor
 ---@param SampleIntensity float
 ---@param SampleSize float
-function UImportanceSamplingLibrary:ImportanceSample(Texture, Rand, Samples, Intensity, SamplePosition, SampleColor, SampleIntensity, SampleSize) end
+function UImportanceSamplingLibrary:ImportanceSample(Texture, Rand, Samples, Intensity, SamplePosition, SampleColor,
+                                                     SampleIntensity, SampleSize) end
+
 ---@param ImportanceTexture FImportanceTexture
 ---@param Texture UTexture2D
 ---@param WeightingFunc EImportanceWeight::Type
 function UImportanceSamplingLibrary:BreakImportanceTexture(ImportanceTexture, Texture, WeightingFunc) end
-
 
 ---@class UInGameAdManager : UPlatformInterfaceBase
 ---@field bShouldPauseWhileAdOpen boolean
@@ -18021,37 +19692,45 @@ UInputComponent = {}
 ---@param Key FKey
 ---@return boolean
 function UInputComponent:WasControllerKeyJustReleased(Key) end
+
 ---@param Key FKey
 ---@return boolean
 function UInputComponent:WasControllerKeyJustPressed(Key) end
+
 ---@param InOwner AActor
 ---@param EndPlayReason EEndPlayReason::Type
 function UInputComponent:OnInputOwnerEndPlayed(InOwner, EndPlayReason) end
+
 ---@param Key FKey
 ---@return boolean
 function UInputComponent:IsControllerKeyDown(Key) end
+
 ---@param FingerIndex int32
 ---@param LocationX float
 ---@param LocationY float
 ---@param bIsCurrentlyPressed boolean
 function UInputComponent:GetTouchState(FingerIndex, LocationX, LocationY, bIsCurrentlyPressed) end
+
 ---@param Key FKey
 ---@return FVector
 function UInputComponent:GetControllerVectorKeyState(Key) end
+
 ---@param DeltaX float
 ---@param DeltaY float
 function UInputComponent:GetControllerMouseDelta(DeltaX, DeltaY) end
+
 ---@param Key FKey
 ---@return float
 function UInputComponent:GetControllerKeyTimeDown(Key) end
+
 ---@param WhichStick EControllerAnalogStick::Type
 ---@param StickX float
 ---@param StickY float
 function UInputComponent:GetControllerAnalogStickState(WhichStick, StickX, StickY) end
+
 ---@param Key FKey
 ---@return float
 function UInputComponent:GetControllerAnalogKeyState(Key) end
-
 
 ---@class UInputDelegateBinding : UDynamicBlueprintBinding
 UInputDelegateBinding = {}
@@ -18069,74 +19748,95 @@ UInputDeviceLibrary = {}
 
 ---@return FPlatformUserId
 function UInputDeviceLibrary:PlatformUserId_None() end
+
 ---@param A FPlatformUserId
 ---@param B FPlatformUserId
 ---@return boolean
 function UInputDeviceLibrary:NotEqual_PlatformUserId(A, B) end
+
 ---@param A FInputDeviceId
 ---@param B FInputDeviceId
 ---@return boolean
 function UInputDeviceLibrary:NotEqual_InputDeviceId(A, B) end
+
 ---@param UserId FPlatformUserId
 ---@return boolean
 function UInputDeviceLibrary:IsValidPlatformId(UserId) end
+
 ---@param DeviceID FInputDeviceId
 ---@return boolean
 function UInputDeviceLibrary:IsValidInputDevice(DeviceID) end
+
 ---@param PlatformId FPlatformUserId
 ---@return boolean
 function UInputDeviceLibrary:IsUnpairedUserId(PlatformId) end
+
 ---@param InputDevice FInputDeviceId
 ---@return boolean
 function UInputDeviceLibrary:IsInputDeviceMappedToUnpairedUser(InputDevice) end
+
 ---@param InHandle FInputDevicePropertyHandle
 ---@return boolean
 function UInputDeviceLibrary:IsDevicePropertyHandleValid(InHandle) end
+
 ---@return FInputDeviceId
 function UInputDeviceLibrary:InputDeviceId_None() end
+
 ---@return FPlatformUserId
 function UInputDeviceLibrary:GetUserForUnpairedInputDevices() end
+
 ---@param DeviceID FInputDeviceId
 ---@return FPlatformUserId
 function UInputDeviceLibrary:GetUserForInputDevice(DeviceID) end
+
 ---@return FPlatformUserId
 function UInputDeviceLibrary:GetPrimaryPlatformUser() end
+
 ---@param UserId FPlatformUserId
 ---@return FInputDeviceId
 function UInputDeviceLibrary:GetPrimaryInputDeviceForUser(UserId) end
+
 ---@param UserId FPlatformUserId
 ---@return APlayerController
 function UInputDeviceLibrary:GetPlayerControllerFromPlatformUser(UserId) end
+
 ---@param DeviceID FInputDeviceId
 ---@return APlayerController
 function UInputDeviceLibrary:GetPlayerControllerFromInputDevice(DeviceID) end
+
 ---@param DeviceID FInputDeviceId
 ---@return EInputDeviceConnectionState
 function UInputDeviceLibrary:GetInputDeviceConnectionState(DeviceID) end
+
 ---@return FInputDeviceId
 function UInputDeviceLibrary:GetDefaultInputDevice() end
+
 ---@param UserId FPlatformUserId
 ---@param OutInputDevices TArray<FInputDeviceId>
 ---@return int32
 function UInputDeviceLibrary:GetAllInputDevicesForUser(UserId, OutInputDevices) end
+
 ---@param OutInputDevices TArray<FInputDeviceId>
 ---@return int32
 function UInputDeviceLibrary:GetAllInputDevices(OutInputDevices) end
+
 ---@param OutInputDevices TArray<FInputDeviceId>
 ---@return int32
 function UInputDeviceLibrary:GetAllConnectedInputDevices(OutInputDevices) end
+
 ---@param OutUsers TArray<FPlatformUserId>
 ---@return int32
 function UInputDeviceLibrary:GetAllActiveUsers(OutUsers) end
+
 ---@param A FPlatformUserId
 ---@param B FPlatformUserId
 ---@return boolean
 function UInputDeviceLibrary:EqualEqual_PlatformUserId(A, B) end
+
 ---@param A FInputDeviceId
 ---@param B FInputDeviceId
 ---@return boolean
 function UInputDeviceLibrary:EqualEqual_InputDeviceId(A, B) end
-
 
 ---@class UInputDeviceProperty : UObject
 ---@field PropertyDuration float
@@ -18146,15 +19846,16 @@ UInputDeviceProperty = {}
 ---@param DeviceID FInputDeviceId
 ---@param bForceReset boolean
 function UInputDeviceProperty:ResetDeviceProperty(PlatformUser, DeviceID, bForceReset) end
+
 ---@param PlatformUser FPlatformUserId
 ---@param DeviceID FInputDeviceId
 ---@param DeltaTime float
 ---@param Duration float
 function UInputDeviceProperty:EvaluateDeviceProperty(PlatformUser, DeviceID, DeltaTime, Duration) end
+
 ---@param UserId FPlatformUserId
 ---@param DeviceID FInputDeviceId
 function UInputDeviceProperty:ApplyDeviceProperty(UserId, DeviceID) end
-
 
 ---@class UInputDeviceSubsystem : UEngineSubsystem
 ---@field OnInputHardwareDeviceChanged FInputDeviceSubsystemOnInputHardwareDeviceChanged
@@ -18164,26 +19865,32 @@ UInputDeviceSubsystem = {}
 
 ---@param HandlesToRemove TSet<FInputDevicePropertyHandle>
 function UInputDeviceSubsystem:RemoveDevicePropertyHandles(HandlesToRemove) end
+
 ---@param HandleToRemove FInputDevicePropertyHandle
 function UInputDeviceSubsystem:RemoveDevicePropertyByHandle(HandleToRemove) end
+
 function UInputDeviceSubsystem:RemoveAllDeviceProperties() end
+
 ---@param Handle FInputDevicePropertyHandle
 ---@return boolean
 function UInputDeviceSubsystem:IsPropertyActive(Handle) end
+
 ---@param InUserId FPlatformUserId
 ---@return FHardwareDeviceIdentifier
 function UInputDeviceSubsystem:GetMostRecentlyUsedHardwareDevice(InUserId) end
+
 ---@param InputDevice FInputDeviceId
 ---@return FHardwareDeviceIdentifier
 function UInputDeviceSubsystem:GetInputDeviceHardwareIdentifier(InputDevice) end
+
 ---@param Handle FInputDevicePropertyHandle
 ---@return UInputDeviceProperty
 function UInputDeviceSubsystem:GetActiveDeviceProperty(Handle) end
+
 ---@param PropertyClass TSubclassOf<UInputDeviceProperty>
 ---@param Params FActivateDevicePropertyParams
 ---@return FInputDevicePropertyHandle
 function UInputDeviceSubsystem:ActivateDevicePropertyOfClass(PropertyClass, Params) end
-
 
 ---@class UInputDeviceTriggerEffect : UInputDeviceProperty
 ---@field BaseTriggerData FDeviceTriggerBaseData
@@ -18265,32 +19972,41 @@ UInputPlatformSettings = {}
 UInputSettings = {}
 
 function UInputSettings:SaveKeyMappings() end
+
 ---@param KeyMapping FInputAxisKeyMapping
 ---@param bForceRebuildKeymaps boolean
 function UInputSettings:RemoveAxisMapping(KeyMapping, bForceRebuildKeymaps) end
+
 ---@param KeyMapping FInputActionKeyMapping
 ---@param bForceRebuildKeymaps boolean
 function UInputSettings:RemoveActionMapping(KeyMapping, bForceRebuildKeymaps) end
+
 ---@return UInputSettings
 function UInputSettings:GetInputSettings() end
+
 ---@param AxisNames TArray<FName>
 function UInputSettings:GetAxisNames(AxisNames) end
+
 ---@param InAxisName FName
 ---@param OutMappings TArray<FInputAxisKeyMapping>
 function UInputSettings:GetAxisMappingByName(InAxisName, OutMappings) end
+
 ---@param ActionNames TArray<FName>
 function UInputSettings:GetActionNames(ActionNames) end
+
 ---@param InActionName FName
 ---@param OutMappings TArray<FInputActionKeyMapping>
 function UInputSettings:GetActionMappingByName(InActionName, OutMappings) end
+
 function UInputSettings:ForceRebuildKeymaps() end
+
 ---@param KeyMapping FInputAxisKeyMapping
 ---@param bForceRebuildKeymaps boolean
 function UInputSettings:AddAxisMapping(KeyMapping, bForceRebuildKeymaps) end
+
 ---@param KeyMapping FInputActionKeyMapping
 ---@param bForceRebuildKeymaps boolean
 function UInputSettings:AddActionMapping(KeyMapping, bForceRebuildKeymaps) end
-
 
 ---@class UInputTouchDelegateBinding : UInputDelegateBinding
 ---@field InputTouchDelegateBindings TArray<FBlueprintInputTouchDelegateBinding>
@@ -18326,54 +20042,71 @@ UInstancedStaticMeshComponent = {}
 ---@param bMarkRenderStateDirty boolean
 ---@param bTeleport boolean
 ---@return boolean
-function UInstancedStaticMeshComponent:UpdateInstanceTransform(InstanceIndex, NewInstanceTransform, bWorldSpace, bMarkRenderStateDirty, bTeleport) end
+function UInstancedStaticMeshComponent:UpdateInstanceTransform(InstanceIndex, NewInstanceTransform, bWorldSpace,
+                                                               bMarkRenderStateDirty, bTeleport) end
+
 ---@param InNumCustomDataFloats int32
 function UInstancedStaticMeshComponent:SetNumCustomDataFloats(InNumCustomDataFloats) end
+
 ---@param InstanceIndex int32
 ---@param CustomDataIndex int32
 ---@param CustomDataValue float
 ---@param bMarkRenderStateDirty boolean
 ---@return boolean
-function UInstancedStaticMeshComponent:SetCustomDataValue(InstanceIndex, CustomDataIndex, CustomDataValue, bMarkRenderStateDirty) end
+function UInstancedStaticMeshComponent:SetCustomDataValue(InstanceIndex, CustomDataIndex, CustomDataValue,
+                                                          bMarkRenderStateDirty) end
+
 ---@param StartCullDistance int32
 ---@param EndCullDistance int32
 function UInstancedStaticMeshComponent:SetCullDistances(StartCullDistance, EndCullDistance) end
+
 ---@param InstancesToRemove TArray<int32>
 ---@return boolean
 function UInstancedStaticMeshComponent:RemoveInstances(InstancesToRemove) end
+
 ---@param InstanceIndex int32
 ---@return boolean
 function UInstancedStaticMeshComponent:RemoveInstance(InstanceIndex) end
+
 ---@param InstanceIndex int32
 ---@return boolean
 function UInstancedStaticMeshComponent:IsValidInstance(InstanceIndex) end
+
 ---@param InstanceIndex int32
 ---@param OutInstanceTransform FTransform
 ---@param bWorldSpace boolean
 ---@return boolean
 function UInstancedStaticMeshComponent:GetInstanceTransform(InstanceIndex, OutInstanceTransform, bWorldSpace) end
+
 ---@param Center FVector
 ---@param Radius float
 ---@param bSphereInWorldSpace boolean
 ---@return TArray<int32>
 function UInstancedStaticMeshComponent:GetInstancesOverlappingSphere(Center, Radius, bSphereInWorldSpace) end
+
 ---@param Box FBox
 ---@param bBoxInWorldSpace boolean
 ---@return TArray<int32>
 function UInstancedStaticMeshComponent:GetInstancesOverlappingBox(Box, bBoxInWorldSpace) end
+
 ---@return int32
 function UInstancedStaticMeshComponent:GetInstanceCount() end
+
 ---@param OutStartCullDistance int32
 ---@param OutEndCullDistance int32
 function UInstancedStaticMeshComponent:GetCullDistances(OutStartCullDistance, OutEndCullDistance) end
+
 function UInstancedStaticMeshComponent:ClearInstances() end
+
 ---@param StartInstanceIndex int32
 ---@param NewInstancesTransforms TArray<FTransform>
 ---@param bWorldSpace boolean
 ---@param bMarkRenderStateDirty boolean
 ---@param bTeleport boolean
 ---@return boolean
-function UInstancedStaticMeshComponent:BatchUpdateInstancesTransforms(StartInstanceIndex, NewInstancesTransforms, bWorldSpace, bMarkRenderStateDirty, bTeleport) end
+function UInstancedStaticMeshComponent:BatchUpdateInstancesTransforms(StartInstanceIndex, NewInstancesTransforms,
+                                                                      bWorldSpace, bMarkRenderStateDirty, bTeleport) end
+
 ---@param StartInstanceIndex int32
 ---@param NumInstances int32
 ---@param NewInstancesTransform FTransform
@@ -18381,20 +20114,24 @@ function UInstancedStaticMeshComponent:BatchUpdateInstancesTransforms(StartInsta
 ---@param bMarkRenderStateDirty boolean
 ---@param bTeleport boolean
 ---@return boolean
-function UInstancedStaticMeshComponent:BatchUpdateInstancesTransform(StartInstanceIndex, NumInstances, NewInstancesTransform, bWorldSpace, bMarkRenderStateDirty, bTeleport) end
+function UInstancedStaticMeshComponent:BatchUpdateInstancesTransform(StartInstanceIndex, NumInstances,
+                                                                     NewInstancesTransform, bWorldSpace,
+                                                                     bMarkRenderStateDirty, bTeleport) end
+
 ---@param WorldTransform FTransform
 ---@return int32
 function UInstancedStaticMeshComponent:AddInstanceWorldSpace(WorldTransform) end
+
 ---@param InstanceTransforms TArray<FTransform>
 ---@param bShouldReturnIndices boolean
 ---@param bWorldSpace boolean
 ---@return TArray<int32>
 function UInstancedStaticMeshComponent:AddInstances(InstanceTransforms, bShouldReturnIndices, bWorldSpace) end
+
 ---@param InstanceTransform FTransform
 ---@param bWorldSpace boolean
 ---@return int32
 function UInstancedStaticMeshComponent:AddInstance(InstanceTransform, bWorldSpace) end
-
 
 ---@class UIntSerialization : UObject
 ---@field UnsignedInt16Variable uint16
@@ -18436,29 +20173,37 @@ UInterpToMovementComponent = {}
 
 ---@param HitResult FHitResult
 function UInterpToMovementComponent:StopSimulating(HitResult) end
+
 ---@param InitialDirection float
 function UInterpToMovementComponent:RestartMovement(InitialDirection) end
+
 function UInterpToMovementComponent:ResetControlPoints() end
+
 ---@param ImpactResult FHitResult
 ---@param Time float
 function UInterpToMovementComponent:OnInterpToWaitEndDelegate__DelegateSignature(ImpactResult, Time) end
+
 ---@param ImpactResult FHitResult
 ---@param Time float
 function UInterpToMovementComponent:OnInterpToWaitBeginDelegate__DelegateSignature(ImpactResult, Time) end
+
 ---@param ImpactResult FHitResult
 ---@param Time float
 function UInterpToMovementComponent:OnInterpToStopDelegate__DelegateSignature(ImpactResult, Time) end
+
 ---@param ImpactResult FHitResult
 ---@param Time float
 function UInterpToMovementComponent:OnInterpToReverseDelegate__DelegateSignature(ImpactResult, Time) end
+
 ---@param ImpactResult FHitResult
 ---@param Time float
 function UInterpToMovementComponent:OnInterpToResetDelegate__DelegateSignature(ImpactResult, Time) end
+
 function UInterpToMovementComponent:FinaliseControlPoints() end
+
 ---@param Pos FVector
 ---@param bPositionIsRelative boolean
 function UInterpToMovementComponent:AddControlPointPosition(Pos, bPositionIsRelative) end
-
 
 ---@class UKismetArrayLibrary : UBlueprintFunctionLibrary
 UKismetArrayLibrary = {}
@@ -18467,95 +20212,119 @@ UKismetArrayLibrary = {}
 ---@param PropertyName FName
 ---@param Value TArray<int32>
 function UKismetArrayLibrary:SetArrayPropertyByName(Object, PropertyName, Value) end
+
 ---@param TargetArray TArray<AActor>
 ---@param FilterClass TSubclassOf<AActor>
 ---@param FilteredArray TArray<AActor>
 function UKismetArrayLibrary:FilterArray(TargetArray, FilterClass, FilteredArray) end
+
 ---@param TargetArray TArray<int32>
 ---@param FirstIndex int32
 ---@param SecondIndex int32
 function UKismetArrayLibrary:Array_Swap(TargetArray, FirstIndex, SecondIndex) end
+
 ---@param TargetArray TArray<int32>
 ---@param RandomStream FRandomStream
 function UKismetArrayLibrary:Array_ShuffleFromStream(TargetArray, RandomStream) end
+
 ---@param TargetArray TArray<int32>
 function UKismetArrayLibrary:Array_Shuffle(TargetArray) end
+
 ---@param TargetArray TArray<int32>
 ---@param Index int32
 ---@param Item int32
 ---@param bSizeToFit boolean
 function UKismetArrayLibrary:Array_Set(TargetArray, Index, Item, bSizeToFit) end
+
 ---@param TargetArray TArray<int32>
 function UKismetArrayLibrary:Array_Reverse(TargetArray) end
+
 ---@param TargetArray TArray<int32>
 ---@param Size int32
 function UKismetArrayLibrary:Array_Resize(TargetArray, Size) end
+
 ---@param TargetArray TArray<int32>
 ---@param Item int32
 ---@return boolean
 function UKismetArrayLibrary:Array_RemoveItem(TargetArray, Item) end
+
 ---@param TargetArray TArray<int32>
 ---@param IndexToRemove int32
 function UKismetArrayLibrary:Array_Remove(TargetArray, IndexToRemove) end
+
 ---@param TargetArray TArray<int32>
 ---@param RandomStream FRandomStream
 ---@param OutItem int32
 ---@param OutIndex int32
 function UKismetArrayLibrary:Array_RandomFromStream(TargetArray, RandomStream, OutItem, OutIndex) end
+
 ---@param TargetArray TArray<int32>
 ---@param OutItem int32
 ---@param OutIndex int32
 function UKismetArrayLibrary:Array_Random(TargetArray, OutItem, OutIndex) end
+
 ---@param TargetArray TArray<int32>
 ---@return int32
 function UKismetArrayLibrary:Array_Length(TargetArray) end
+
 ---@param TargetArray TArray<int32>
 ---@return int32
 function UKismetArrayLibrary:Array_LastIndex(TargetArray) end
+
 ---@param TargetArray TArray<int32>
 ---@param IndexToTest int32
 ---@return boolean
 function UKismetArrayLibrary:Array_IsValidIndex(TargetArray, IndexToTest) end
+
 ---@param TargetArray TArray<int32>
 ---@return boolean
 function UKismetArrayLibrary:Array_IsNotEmpty(TargetArray) end
+
 ---@param TargetArray TArray<int32>
 ---@return boolean
 function UKismetArrayLibrary:Array_IsEmpty(TargetArray) end
+
 ---@param TargetArray TArray<int32>
 ---@param NewItem int32
 ---@param Index int32
 function UKismetArrayLibrary:Array_Insert(TargetArray, NewItem, Index) end
+
 ---@param ArrayA TArray<int32>
 ---@param ArrayB TArray<int32>
 ---@return boolean
 function UKismetArrayLibrary:Array_Identical(ArrayA, ArrayB) end
+
 ---@param TargetArray TArray<int32>
 ---@param Index int32
 ---@param Item int32
 function UKismetArrayLibrary:Array_Get(TargetArray, Index, Item) end
+
 ---@param TargetArray TArray<int32>
 ---@param ItemToFind int32
 ---@return int32
 function UKismetArrayLibrary:Array_Find(TargetArray, ItemToFind) end
+
 ---@param TargetArray TArray<int32>
 ---@param ItemToFind int32
 ---@return boolean
 function UKismetArrayLibrary:Array_Contains(TargetArray, ItemToFind) end
+
 ---@param TargetArray TArray<int32>
 function UKismetArrayLibrary:Array_Clear(TargetArray) end
+
 ---@param TargetArray TArray<int32>
 ---@param SourceArray TArray<int32>
 function UKismetArrayLibrary:Array_Append(TargetArray, SourceArray) end
+
 ---@param TargetArray TArray<int32>
 ---@param NewItem int32
 ---@return int32
 function UKismetArrayLibrary:Array_AddUnique(TargetArray, NewItem) end
+
 ---@param TargetArray TArray<int32>
 ---@param NewItem int32
 ---@return int32
 function UKismetArrayLibrary:Array_Add(TargetArray, NewItem) end
-
 
 ---@class UKismetGuidLibrary : UBlueprintFunctionLibrary
 UKismetGuidLibrary = {}
@@ -18564,25 +20333,30 @@ UKismetGuidLibrary = {}
 ---@param OutGuid FGuid
 ---@param Success boolean
 function UKismetGuidLibrary:Parse_StringToGuid(GuidString, OutGuid, Success) end
+
 ---@param A FGuid
 ---@param B FGuid
 ---@return boolean
 function UKismetGuidLibrary:NotEqual_GuidGuid(A, B) end
+
 ---@return FGuid
 function UKismetGuidLibrary:NewGuid() end
+
 ---@param InGuid FGuid
 ---@return boolean
 function UKismetGuidLibrary:IsValid_Guid(InGuid) end
+
 ---@param InGuid FGuid
 function UKismetGuidLibrary:Invalidate_Guid(InGuid) end
+
 ---@param A FGuid
 ---@param B FGuid
 ---@return boolean
 function UKismetGuidLibrary:EqualEqual_GuidGuid(A, B) end
+
 ---@param InGuid FGuid
 ---@return FString
 function UKismetGuidLibrary:Conv_GuidToString(InGuid) end
-
 
 ---@class UKismetInputLibrary : UBlueprintFunctionLibrary
 UKismetInputLibrary = {}
@@ -18590,167 +20364,219 @@ UKismetInputLibrary = {}
 ---@param Input FPointerEvent
 ---@return boolean
 function UKismetInputLibrary:PointerEvent_IsTouchEvent(Input) end
+
 ---@param Input FPointerEvent
 ---@param MouseButton FKey
 ---@return boolean
 function UKismetInputLibrary:PointerEvent_IsMouseButtonDown(Input, MouseButton) end
+
 ---@param Input FPointerEvent
 ---@return float
 function UKismetInputLibrary:PointerEvent_GetWheelDelta(Input) end
+
 ---@param Input FPointerEvent
 ---@return int32
 function UKismetInputLibrary:PointerEvent_GetUserIndex(Input) end
+
 ---@param Input FPointerEvent
 ---@return int32
 function UKismetInputLibrary:PointerEvent_GetTouchpadIndex(Input) end
+
 ---@param Input FPointerEvent
 ---@return FVector2D
 function UKismetInputLibrary:PointerEvent_GetScreenSpacePosition(Input) end
+
 ---@param Input FPointerEvent
 ---@return int32
 function UKismetInputLibrary:PointerEvent_GetPointerIndex(Input) end
+
 ---@param Input FPointerEvent
 ---@return FVector2D
 function UKismetInputLibrary:PointerEvent_GetLastScreenSpacePosition(Input) end
+
 ---@param Input FPointerEvent
 ---@return ESlateGesture
 function UKismetInputLibrary:PointerEvent_GetGestureType(Input) end
+
 ---@param Input FPointerEvent
 ---@return FVector2D
 function UKismetInputLibrary:PointerEvent_GetGestureDelta(Input) end
+
 ---@param Input FPointerEvent
 ---@return FKey
 function UKismetInputLibrary:PointerEvent_GetEffectingButton(Input) end
+
 ---@param Input FPointerEvent
 ---@return FVector2D
 function UKismetInputLibrary:PointerEvent_GetCursorDelta(Input) end
+
 ---@param KeysState FSlateModifierKeysState
 ---@return boolean
 function UKismetInputLibrary:ModifierKeysState_IsShiftDown(KeysState) end
+
 ---@param KeysState FSlateModifierKeysState
 ---@return boolean
 function UKismetInputLibrary:ModifierKeysState_IsControlDown(KeysState) end
+
 ---@param KeysState FSlateModifierKeysState
 ---@return boolean
 function UKismetInputLibrary:ModifierKeysState_IsCommandDown(KeysState) end
+
 ---@param KeysState FSlateModifierKeysState
 ---@return boolean
 function UKismetInputLibrary:ModifierKeysState_IsAltDown(KeysState) end
+
 ---@param Key FKey
 ---@return boolean
 function UKismetInputLibrary:Key_IsVectorAxis(Key) end
+
 ---@param Key FKey
 ---@return boolean
 function UKismetInputLibrary:Key_IsValid(Key) end
+
 ---@param Key FKey
 ---@return boolean
 function UKismetInputLibrary:Key_IsMouseButton(Key) end
+
 ---@param Key FKey
 ---@return boolean
 function UKismetInputLibrary:Key_IsModifierKey(Key) end
+
 ---@param Key FKey
 ---@return boolean
 function UKismetInputLibrary:Key_IsKeyboardKey(Key) end
+
 ---@param Key FKey
 ---@return boolean
 function UKismetInputLibrary:Key_IsGamepadKey(Key) end
+
 ---@param Key FKey
 ---@return boolean
 function UKismetInputLibrary:Key_IsDigital(Key) end
+
 ---@param Key FKey
 ---@return boolean
 function UKismetInputLibrary:Key_IsButtonAxis(Key) end
+
 ---@param Key FKey
 ---@return boolean
 function UKismetInputLibrary:Key_IsAxis3D(Key) end
+
 ---@param Key FKey
 ---@return boolean
 function UKismetInputLibrary:Key_IsAxis2D(Key) end
+
 ---@param Key FKey
 ---@return boolean
 function UKismetInputLibrary:Key_IsAxis1D(Key) end
+
 ---@param Key FKey
 ---@return boolean
 function UKismetInputLibrary:Key_IsAnalog(Key) end
+
 ---@param InKeyEvent FKeyEvent
 ---@return EUINavigation
 function UKismetInputLibrary:Key_GetNavigationDirectionFromKey(InKeyEvent) end
+
 ---@param InAnalogEvent FAnalogInputEvent
 ---@return EUINavigation
 function UKismetInputLibrary:Key_GetNavigationDirectionFromAnalog(InAnalogEvent) end
+
 ---@param InKeyEvent FKeyEvent
 ---@return EUINavigationAction
 function UKismetInputLibrary:Key_GetNavigationActionFromKey(InKeyEvent) end
+
 ---@param InKey FKey
 ---@return EUINavigationAction
 function UKismetInputLibrary:Key_GetNavigationAction(InKey) end
+
 ---@param Key FKey
 ---@param bLongDisplayName boolean
 ---@return FText
 function UKismetInputLibrary:Key_GetDisplayName(Key, bLongDisplayName) end
+
 ---@param Input FInputEvent
 ---@return boolean
 function UKismetInputLibrary:InputEvent_IsShiftDown(Input) end
+
 ---@param Input FInputEvent
 ---@return boolean
 function UKismetInputLibrary:InputEvent_IsRightShiftDown(Input) end
+
 ---@param Input FInputEvent
 ---@return boolean
 function UKismetInputLibrary:InputEvent_IsRightControlDown(Input) end
+
 ---@param Input FInputEvent
 ---@return boolean
 function UKismetInputLibrary:InputEvent_IsRightCommandDown(Input) end
+
 ---@param Input FInputEvent
 ---@return boolean
 function UKismetInputLibrary:InputEvent_IsRightAltDown(Input) end
+
 ---@param Input FInputEvent
 ---@return boolean
 function UKismetInputLibrary:InputEvent_IsRepeat(Input) end
+
 ---@param Input FInputEvent
 ---@return boolean
 function UKismetInputLibrary:InputEvent_IsLeftShiftDown(Input) end
+
 ---@param Input FInputEvent
 ---@return boolean
 function UKismetInputLibrary:InputEvent_IsLeftControlDown(Input) end
+
 ---@param Input FInputEvent
 ---@return boolean
 function UKismetInputLibrary:InputEvent_IsLeftCommandDown(Input) end
+
 ---@param Input FInputEvent
 ---@return boolean
 function UKismetInputLibrary:InputEvent_IsLeftAltDown(Input) end
+
 ---@param Input FInputEvent
 ---@return boolean
 function UKismetInputLibrary:InputEvent_IsControlDown(Input) end
+
 ---@param Input FInputEvent
 ---@return boolean
 function UKismetInputLibrary:InputEvent_IsCommandDown(Input) end
+
 ---@param Input FInputEvent
 ---@return boolean
 function UKismetInputLibrary:InputEvent_IsAltDown(Input) end
+
 ---@param Key FInputChord
 ---@return FText
 function UKismetInputLibrary:InputChord_GetDisplayName(Key) end
+
 ---@param Input FKeyEvent
 ---@return int32
 function UKismetInputLibrary:GetUserIndex(Input) end
+
 ---@return FSlateModifierKeysState
 function UKismetInputLibrary:GetModifierKeysState() end
+
 ---@param Input FKeyEvent
 ---@return FKey
 function UKismetInputLibrary:GetKey(Input) end
+
 ---@param Input FAnalogInputEvent
 ---@return float
 function UKismetInputLibrary:GetAnalogValue(Input) end
+
 ---@param A FKey
 ---@param B FKey
 ---@return boolean
 function UKismetInputLibrary:EqualEqual_KeyKey(A, B) end
+
 ---@param A FInputChord
 ---@param B FInputChord
 ---@return boolean
 function UKismetInputLibrary:EqualEqual_InputChordInputChord(A, B) end
-function UKismetInputLibrary:CalibrateTilt() end
 
+function UKismetInputLibrary:CalibrateTilt() end
 
 ---@class UKismetInternationalizationLibrary : UBlueprintFunctionLibrary
 UKismetInternationalizationLibrary = {}
@@ -18759,54 +20585,67 @@ UKismetInternationalizationLibrary = {}
 ---@param SaveToConfig boolean
 ---@return boolean
 function UKismetInternationalizationLibrary:SetCurrentLocale(Culture, SaveToConfig) end
+
 ---@param Culture FString
 ---@param SaveToConfig boolean
 ---@return boolean
 function UKismetInternationalizationLibrary:SetCurrentLanguageAndLocale(Culture, SaveToConfig) end
+
 ---@param Culture FString
 ---@param SaveToConfig boolean
 ---@return boolean
 function UKismetInternationalizationLibrary:SetCurrentLanguage(Culture, SaveToConfig) end
+
 ---@param Culture FString
 ---@param SaveToConfig boolean
 ---@return boolean
 function UKismetInternationalizationLibrary:SetCurrentCulture(Culture, SaveToConfig) end
+
 ---@param AssetGroup FName
 ---@param Culture FString
 ---@param SaveToConfig boolean
 ---@return boolean
 function UKismetInternationalizationLibrary:SetCurrentAssetGroupCulture(AssetGroup, Culture, SaveToConfig) end
+
 ---@param AvailableCultures TArray<FString>
 ---@param CultureToMatch FString
 ---@param FallbackCulture FString
 ---@return FString
 function UKismetInternationalizationLibrary:GetSuitableCulture(AvailableCultures, CultureToMatch, FallbackCulture) end
+
 ---@param TextCategory ELocalizedTextSourceCategory
 ---@return FString
 function UKismetInternationalizationLibrary:GetNativeCulture(TextCategory) end
+
 ---@param IncludeGame boolean
 ---@param IncludeEngine boolean
 ---@param IncludeEditor boolean
 ---@param IncludeAdditional boolean
 ---@return TArray<FString>
-function UKismetInternationalizationLibrary:GetLocalizedCultures(IncludeGame, IncludeEngine, IncludeEditor, IncludeAdditional) end
+function UKismetInternationalizationLibrary:GetLocalizedCultures(IncludeGame, IncludeEngine, IncludeEditor,
+                                                                 IncludeAdditional) end
+
 ---@return FString
 function UKismetInternationalizationLibrary:GetCurrentLocale() end
+
 ---@return FString
 function UKismetInternationalizationLibrary:GetCurrentLanguage() end
+
 ---@return FString
 function UKismetInternationalizationLibrary:GetCurrentCulture() end
+
 ---@param AssetGroup FName
 ---@return FString
 function UKismetInternationalizationLibrary:GetCurrentAssetGroupCulture(AssetGroup) end
+
 ---@param Culture FString
 ---@param Localized boolean
 ---@return FString
 function UKismetInternationalizationLibrary:GetCultureDisplayName(Culture, Localized) end
+
 ---@param AssetGroup FName
 ---@param SaveToConfig boolean
 function UKismetInternationalizationLibrary:ClearCurrentAssetGroupCulture(AssetGroup, SaveToConfig) end
-
 
 ---@class UKismetMaterialLibrary : UBlueprintFunctionLibrary
 UKismetMaterialLibrary = {}
@@ -18816,28 +20655,31 @@ UKismetMaterialLibrary = {}
 ---@param ParameterName FName
 ---@param ParameterValue FLinearColor
 function UKismetMaterialLibrary:SetVectorParameterValue(WorldContextObject, Collection, ParameterName, ParameterValue) end
+
 ---@param WorldContextObject UObject
 ---@param Collection UMaterialParameterCollection
 ---@param ParameterName FName
 ---@param ParameterValue float
 function UKismetMaterialLibrary:SetScalarParameterValue(WorldContextObject, Collection, ParameterName, ParameterValue) end
+
 ---@param WorldContextObject UObject
 ---@param Collection UMaterialParameterCollection
 ---@param ParameterName FName
 ---@return FLinearColor
 function UKismetMaterialLibrary:GetVectorParameterValue(WorldContextObject, Collection, ParameterName) end
+
 ---@param WorldContextObject UObject
 ---@param Collection UMaterialParameterCollection
 ---@param ParameterName FName
 ---@return float
 function UKismetMaterialLibrary:GetScalarParameterValue(WorldContextObject, Collection, ParameterName) end
+
 ---@param WorldContextObject UObject
 ---@param Parent UMaterialInterface
 ---@param OptionalName FName
 ---@param CreationFlags EMIDCreationFlags
 ---@return UMaterialInstanceDynamic
 function UKismetMaterialLibrary:CreateDynamicMaterialInstance(WorldContextObject, Parent, OptionalName, CreationFlags) end
-
 
 ---@class UKismetMathLibrary : UBlueprintFunctionLibrary
 UKismetMathLibrary = {}
@@ -18846,65 +20688,80 @@ UKismetMathLibrary = {}
 ---@param B int32
 ---@return int32
 function UKismetMathLibrary:Xor_IntInt(A, B) end
+
 ---@param A int64
 ---@param B int64
 ---@return int64
 function UKismetMathLibrary:Xor_Int64Int64(A, B) end
+
 ---@param Value int32
 ---@param Min int32
 ---@param Max int32
 ---@return int32
 function UKismetMathLibrary:Wrap(Value, Min, Max) end
+
 ---@param CurrentSample FVector
 ---@param PreviousSample FVector
 ---@param Weight float
 ---@return FVector
 function UKismetMathLibrary:WeightedMovingAverage_FVector(CurrentSample, PreviousSample, Weight) end
+
 ---@param CurrentSample FRotator
 ---@param PreviousSample FRotator
 ---@param Weight float
 ---@return FRotator
 function UKismetMathLibrary:WeightedMovingAverage_FRotator(CurrentSample, PreviousSample, Weight) end
+
 ---@param CurrentSample float
 ---@param PreviousSample float
 ---@param Weight float
 ---@return float
 function UKismetMathLibrary:WeightedMovingAverage_Float(CurrentSample, PreviousSample, Weight) end
+
 ---@param A FVector
 ---@return double
 function UKismetMathLibrary:VSizeXYSquared(A) end
+
 ---@param A FVector
 ---@return double
 function UKismetMathLibrary:VSizeXY(A) end
+
 ---@param A FVector
 ---@return double
 function UKismetMathLibrary:VSizeSquared(A) end
+
 ---@param A FVector2D
 ---@return double
 function UKismetMathLibrary:VSize2DSquared(A) end
+
 ---@param A FVector2D
 ---@return double
 function UKismetMathLibrary:VSize2D(A) end
+
 ---@param A FVector
 ---@return double
 function UKismetMathLibrary:VSize(A) end
+
 ---@param A FVector
 ---@param B FVector
 ---@param Alpha float
 ---@return FVector
 function UKismetMathLibrary:VLerp(A, B, Alpha) end
+
 ---@param Current FVector
 ---@param Target FVector
 ---@param DeltaTime float
 ---@param InterpSpeed float
 ---@return FVector
 function UKismetMathLibrary:VInterpTo_Constant(Current, Target, DeltaTime, InterpSpeed) end
+
 ---@param Current FVector
 ---@param Target FVector
 ---@param DeltaTime float
 ---@param InterpSpeed float
 ---@return FVector
 function UKismetMathLibrary:VInterpTo(Current, Target, DeltaTime, InterpSpeed) end
+
 ---@param Current FVector
 ---@param Target FVector
 ---@param SpringState FVectorSpringState
@@ -18918,257 +20775,333 @@ function UKismetMathLibrary:VInterpTo(Current, Target, DeltaTime, InterpSpeed) e
 ---@param MaxValue FVector
 ---@param bInitializeFromTarget boolean
 ---@return FVector
-function UKismetMathLibrary:VectorSpringInterp(Current, Target, SpringState, Stiffness, CriticalDampingFactor, DeltaTime, Mass, TargetVelocityAmount, bClamp, MinValue, MaxValue, bInitializeFromTarget) end
+function UKismetMathLibrary:VectorSpringInterp(Current, Target, SpringState, Stiffness, CriticalDampingFactor, DeltaTime,
+                                               Mass, TargetVelocityAmount, bClamp, MinValue, MaxValue,
+                                               bInitializeFromTarget) end
+
 ---@return FVector
 function UKismetMathLibrary:Vector_Zero() end
+
 ---@return FVector
 function UKismetMathLibrary:Vector_Up() end
+
 ---@param A FVector
 function UKismetMathLibrary:Vector_UnwindEuler(A) end
+
 ---@param A FVector
 ---@return FVector2D
 function UKismetMathLibrary:Vector_UnitCartesianToSpherical(A) end
+
 ---@param A FVector
 ---@return FVector
 function UKismetMathLibrary:Vector_ToRadians(A) end
+
 ---@param A FVector
 ---@return FVector
 function UKismetMathLibrary:Vector_ToDegrees(A) end
+
 ---@param InVect FVector
 ---@param InGridSize float
 ---@return FVector
 function UKismetMathLibrary:Vector_SnappedToGrid(InVect, InGridSize) end
+
 ---@param Vector FVector
 ---@param Direction FVector
 ---@param Alpha double
 ---@return FVector
 function UKismetMathLibrary:Vector_SlerpVectorToDirection(Vector, Direction, Alpha) end
+
 ---@param NormalA FVector
 ---@param NormalB FVector
 ---@param Alpha double
 ---@return FVector
 function UKismetMathLibrary:Vector_SlerpNormals(NormalA, NormalB, Alpha) end
+
 ---@param A FVector
 ---@param X double
 ---@param Y double
 ---@param Z double
 function UKismetMathLibrary:Vector_Set(A, X, Y, Z) end
+
 ---@return FVector
 function UKismetMathLibrary:Vector_Right() end
+
 ---@param A FVector
 ---@return FVector
 function UKismetMathLibrary:Vector_Reciprocal(A) end
+
 ---@param V FVector
 ---@param InNormal FVector
 ---@return FVector
 function UKismetMathLibrary:Vector_ProjectOnToNormal(V, InNormal) end
+
 ---@return FVector
 function UKismetMathLibrary:Vector_One() end
+
 ---@param A FVector
 ---@return FVector
 function UKismetMathLibrary:Vector_NormalUnsafe(A) end
+
 ---@param A FVector
 ---@param Tolerance float
 function UKismetMathLibrary:Vector_Normalize(A, Tolerance) end
+
 ---@param A FVector
 ---@param Tolerance float
 ---@return FVector
 function UKismetMathLibrary:Vector_Normal2D(A, Tolerance) end
+
 ---@param A FVector
 ---@param InPlane FPlane
 ---@return FVector
 function UKismetMathLibrary:Vector_MirrorByPlane(A, InPlane) end
+
 ---@return FVector
 function UKismetMathLibrary:Vector_Left() end
+
 ---@param A FVector
 ---@return boolean
 function UKismetMathLibrary:Vector_IsZero(A) end
+
 ---@param A FVector
 ---@param SquaredLenthTolerance float
 ---@return boolean
 function UKismetMathLibrary:Vector_IsUnit(A, SquaredLenthTolerance) end
+
 ---@param A FVector
 ---@param Tolerance float
 ---@return boolean
 function UKismetMathLibrary:Vector_IsUniform(A, Tolerance) end
+
 ---@param A FVector
 ---@return boolean
 function UKismetMathLibrary:Vector_IsNormal(A) end
+
 ---@param A FVector
 ---@param Tolerance float
 ---@return boolean
 function UKismetMathLibrary:Vector_IsNearlyZero(A, Tolerance) end
+
 ---@param A FVector
 ---@return boolean
 function UKismetMathLibrary:Vector_IsNAN(A) end
+
 ---@param A FVector
 ---@return double
 function UKismetMathLibrary:Vector_HeadingAngle(A) end
+
 ---@param A FVector
 ---@return FVector
 function UKismetMathLibrary:Vector_GetSignVector(A) end
+
 ---@param A FVector
 ---@return FVector
 function UKismetMathLibrary:Vector_GetProjection(A) end
+
 ---@param A FVector
 ---@return double
 function UKismetMathLibrary:Vector_GetAbsMin(A) end
+
 ---@param A FVector
 ---@return double
 function UKismetMathLibrary:Vector_GetAbsMax(A) end
+
 ---@param A FVector
 ---@return FVector
 function UKismetMathLibrary:Vector_GetAbs(A) end
+
 ---@return FVector
 function UKismetMathLibrary:Vector_Forward() end
+
 ---@return FVector
 function UKismetMathLibrary:Vector_Down() end
+
 ---@param v1 FVector
 ---@param v2 FVector
 ---@return double
 function UKismetMathLibrary:Vector_DistanceSquared(v1, v2) end
+
 ---@param v1 FVector
 ---@param v2 FVector
 ---@return double
 function UKismetMathLibrary:Vector_Distance2DSquared(v1, v2) end
+
 ---@param v1 FVector
 ---@param v2 FVector
 ---@return double
 function UKismetMathLibrary:Vector_Distance2D(v1, v2) end
+
 ---@param v1 FVector
 ---@param v2 FVector
 ---@return double
 function UKismetMathLibrary:Vector_Distance(v1, v2) end
+
 ---@param A FVector
 ---@param B FVector
 ---@return double
 function UKismetMathLibrary:Vector_CosineAngle2D(A, B) end
+
 ---@param A FVector
 ---@param B FVector
 ---@return FVector
 function UKismetMathLibrary:Vector_ComponentMin(A, B) end
+
 ---@param A FVector
 ---@param B FVector
 ---@return FVector
 function UKismetMathLibrary:Vector_ComponentMax(A, B) end
+
 ---@param A FVector
 ---@param Max double
 ---@return FVector
 function UKismetMathLibrary:Vector_ClampSizeMax2D(A, Max) end
+
 ---@param A FVector
 ---@param Max double
 ---@return FVector
 function UKismetMathLibrary:Vector_ClampSizeMax(A, Max) end
+
 ---@param A FVector
 ---@param Min double
 ---@param Max double
 ---@return FVector
 function UKismetMathLibrary:Vector_ClampSize2D(A, Min, Max) end
+
 ---@param InVect FVector
 ---@param InRadius float
 ---@return FVector
 function UKismetMathLibrary:Vector_BoundedToCube(InVect, InRadius) end
+
 ---@param InVect FVector
 ---@param InBoxMin FVector
 ---@param InBoxMax FVector
 ---@return FVector
 function UKismetMathLibrary:Vector_BoundedToBox(InVect, InBoxMin, InBoxMax) end
+
 ---@return FVector
 function UKismetMathLibrary:Vector_Backward() end
+
 ---@param A FVector
 ---@param InVector FVector
 function UKismetMathLibrary:Vector_Assign(A, InVector) end
+
 ---@param A FVector
 ---@param InAddVect FVector
 ---@param InRadius float
 function UKismetMathLibrary:Vector_AddBounded(A, InAddVect, InRadius) end
+
 ---@return FVector4
 function UKismetMathLibrary:Vector4_Zero() end
+
 ---@param A FVector4
 ---@return double
 function UKismetMathLibrary:Vector4_SizeSquared3(A) end
+
 ---@param A FVector4
 ---@return double
 function UKismetMathLibrary:Vector4_SizeSquared(A) end
+
 ---@param A FVector4
 ---@return double
 function UKismetMathLibrary:Vector4_Size3(A) end
+
 ---@param A FVector4
 ---@return double
 function UKismetMathLibrary:Vector4_Size(A) end
+
 ---@param A FVector4
 ---@param X double
 ---@param Y double
 ---@param Z double
 ---@param W double
 function UKismetMathLibrary:Vector4_Set(A, X, Y, Z, W) end
+
 ---@param A FVector4
 ---@return FVector4
 function UKismetMathLibrary:Vector4_NormalUnsafe3(A) end
+
 ---@param A FVector4
 ---@param Tolerance float
 function UKismetMathLibrary:Vector4_Normalize3(A, Tolerance) end
+
 ---@param A FVector4
 ---@param Tolerance float
 ---@return FVector4
 function UKismetMathLibrary:Vector4_Normal3(A, Tolerance) end
+
 ---@param A FVector4
 ---@return FVector4
 function UKismetMathLibrary:Vector4_Negated(A) end
+
 ---@param Direction FVector4
 ---@param SurfaceNormal FVector4
 ---@return FVector4
 function UKismetMathLibrary:Vector4_MirrorByVector3(Direction, SurfaceNormal) end
+
 ---@param A FVector4
 ---@return boolean
 function UKismetMathLibrary:Vector4_IsZero(A) end
+
 ---@param A FVector4
 ---@param SquaredLenthTolerance float
 ---@return boolean
 function UKismetMathLibrary:Vector4_IsUnit3(A, SquaredLenthTolerance) end
+
 ---@param A FVector4
 ---@return boolean
 function UKismetMathLibrary:Vector4_IsNormal3(A) end
+
 ---@param A FVector4
 ---@param Tolerance float
 ---@return boolean
 function UKismetMathLibrary:Vector4_IsNearlyZero3(A, Tolerance) end
+
 ---@param A FVector4
 ---@return boolean
 function UKismetMathLibrary:Vector4_IsNAN(A) end
+
 ---@param A FVector4
 ---@param B FVector4
 ---@return double
 function UKismetMathLibrary:Vector4_DotProduct3(A, B) end
+
 ---@param A FVector4
 ---@param B FVector4
 ---@return double
 function UKismetMathLibrary:Vector4_DotProduct(A, B) end
+
 ---@param A FVector4
 ---@param B FVector4
 ---@return FVector4
 function UKismetMathLibrary:Vector4_CrossProduct3(A, B) end
+
 ---@param A FVector4
 ---@param InVector FVector4
 function UKismetMathLibrary:Vector4_Assign(A, InVector) end
+
 ---@param Current FVector2D
 ---@param Target FVector2D
 ---@param DeltaTime float
 ---@param InterpSpeed float
 ---@return FVector2D
 function UKismetMathLibrary:Vector2DInterpTo_Constant(Current, Target, DeltaTime, InterpSpeed) end
+
 ---@param Current FVector2D
 ---@param Target FVector2D
 ---@param DeltaTime float
 ---@param InterpSpeed float
 ---@return FVector2D
 function UKismetMathLibrary:Vector2DInterpTo(Current, Target, DeltaTime, InterpSpeed) end
+
 ---@return FVector2D
 function UKismetMathLibrary:Vector2D_Zero() end
+
 ---@return FVector2D
 function UKismetMathLibrary:Vector2D_Unit45Deg() end
+
 ---@return FVector2D
 function UKismetMathLibrary:Vector2D_One() end
+
 ---@param A FVector
 ---@param B FVector
 ---@param Alpha float
@@ -19177,74 +21110,95 @@ function UKismetMathLibrary:Vector2D_One() end
 ---@param Steps int32
 ---@return FVector
 function UKismetMathLibrary:VEase(A, B, Alpha, EasingFunc, BlendExp, Steps) end
+
 ---@return FDateTime
 function UKismetMathLibrary:UtcNow() end
+
 ---@param Matrix FMatrix
 ---@param Vec4 FVector4
 ---@return FVector4
 function UKismetMathLibrary:TransformVector4(Matrix, Vec4) end
+
 ---@param T FTransform
 ---@param Rotation FRotator
 ---@return FRotator
 function UKismetMathLibrary:TransformRotation(T, Rotation) end
+
 ---@param T FTransform
 ---@param Location FVector
 ---@return FVector
 function UKismetMathLibrary:TransformLocation(T, Location) end
+
 ---@param T FTransform
 ---@param Direction FVector
 ---@return FVector
 function UKismetMathLibrary:TransformDirection(T, Direction) end
+
 ---@param Transform FTransform
 ---@return float
 function UKismetMathLibrary:Transform_Determinant(Transform) end
+
 ---@param Time FDateTime
 ---@return double
 function UKismetMathLibrary:ToUnixTimestampDouble(Time) end
+
 ---@param Time FDateTime
 ---@return int64
 function UKismetMathLibrary:ToUnixTimestamp(Time) end
+
 ---@param A FVector2D
 ---@return FVector2D
 function UKismetMathLibrary:ToSign2D(A) end
+
 ---@param A FVector2D
 ---@return FVector2D
 function UKismetMathLibrary:ToRounded2D(A) end
+
 ---@param InColor FLinearColor
 ---@return FString
 function UKismetMathLibrary:ToHex_LinearColor(InColor) end
+
 ---@param A FVector2D
 ---@param OutDir FVector2D
 ---@param OutLength double
 function UKismetMathLibrary:ToDirectionAndLength2D(A, OutDir, OutLength) end
+
 ---@return FDateTime
 function UKismetMathLibrary:Today() end
+
 ---@param A FTransform
 ---@param B FTransform
 ---@param Alpha float
 ---@param InterpMode ELerpInterpolationMode::Type
 ---@return FTransform
 function UKismetMathLibrary:TLerp(A, B, Alpha, InterpMode) end
+
 ---@param Current FTransform
 ---@param Target FTransform
 ---@param DeltaTime float
 ---@param InterpSpeed float
 ---@return FTransform
 function UKismetMathLibrary:TInterpTo(Current, Target, DeltaTime, InterpSpeed) end
+
 ---@return FTimespan
 function UKismetMathLibrary:TimespanZeroValue() end
+
 ---@param A FTimespan
 ---@param B FTimespan
 ---@return float
 function UKismetMathLibrary:TimespanRatio(A, B) end
+
 ---@return FTimespan
 function UKismetMathLibrary:TimespanMinValue() end
+
 ---@return FTimespan
 function UKismetMathLibrary:TimespanMaxValue() end
+
 ---@param TimespanString FString
 ---@param Result FTimespan
 ---@return boolean
 function UKismetMathLibrary:TimespanFromString(TimespanString, Result) end
+
 ---@param A FTransform
 ---@param B FTransform
 ---@param Alpha float
@@ -19253,218 +21207,274 @@ function UKismetMathLibrary:TimespanFromString(TimespanString, Result) end
 ---@param Steps int32
 ---@return FTransform
 function UKismetMathLibrary:TEase(A, B, Alpha, EasingFunc, BlendExp, Steps) end
+
 ---@param A double
 ---@return double
 function UKismetMathLibrary:Tan(A) end
+
 ---@param A FVector
 ---@param B FVector
 ---@return FVector
 function UKismetMathLibrary:Subtract_VectorVector(A, B) end
+
 ---@param A FVector
 ---@param B int32
 ---@return FVector
 function UKismetMathLibrary:Subtract_VectorInt(A, B) end
+
 ---@param A FVector
 ---@param B double
 ---@return FVector
 function UKismetMathLibrary:Subtract_VectorFloat(A, B) end
+
 ---@param A FVector4
 ---@param B FVector4
 ---@return FVector4
 function UKismetMathLibrary:Subtract_Vector4Vector4(A, B) end
+
 ---@param A FVector2D
 ---@param B FVector2D
 ---@return FVector2D
 function UKismetMathLibrary:Subtract_Vector2DVector2D(A, B) end
+
 ---@param A FVector2D
 ---@param B double
 ---@return FVector2D
 function UKismetMathLibrary:Subtract_Vector2DFloat(A, B) end
+
 ---@param A FTimespan
 ---@param B FTimespan
 ---@return FTimespan
 function UKismetMathLibrary:Subtract_TimespanTimespan(A, B) end
+
 ---@param A FQuat
 ---@param B FQuat
 ---@return FQuat
 function UKismetMathLibrary:Subtract_QuatQuat(A, B) end
+
 ---@param A FLinearColor
 ---@param B FLinearColor
 ---@return FLinearColor
 function UKismetMathLibrary:Subtract_LinearColorLinearColor(A, B) end
+
 ---@param A FIntPoint
 ---@param B FIntPoint
 ---@return FIntPoint
 function UKismetMathLibrary:Subtract_IntPointIntPoint(A, B) end
+
 ---@param A FIntPoint
 ---@param B int32
 ---@return FIntPoint
 function UKismetMathLibrary:Subtract_IntPointInt(A, B) end
+
 ---@param A int32
 ---@param B int32
 ---@return int32
 function UKismetMathLibrary:Subtract_IntInt(A, B) end
+
 ---@param A int64
 ---@param B int64
 ---@return int64
 function UKismetMathLibrary:Subtract_Int64Int64(A, B) end
+
 ---@param A double
 ---@param B double
 ---@return double
 function UKismetMathLibrary:Subtract_DoubleDouble(A, B) end
+
 ---@param A FDateTime
 ---@param B FTimespan
 ---@return FDateTime
 function UKismetMathLibrary:Subtract_DateTimeTimespan(A, B) end
+
 ---@param A FDateTime
 ---@param B FDateTime
 ---@return FTimespan
 function UKismetMathLibrary:Subtract_DateTimeDateTime(A, B) end
+
 ---@param A uint8
 ---@param B uint8
 ---@return uint8
 function UKismetMathLibrary:Subtract_ByteByte(A, B) end
+
 ---@param A double
 ---@return double
 function UKismetMathLibrary:Square(A) end
+
 ---@param A double
 ---@return double
 function UKismetMathLibrary:Sqrt(A) end
+
 ---@param A FVector2D
 ---@return FVector
 function UKismetMathLibrary:Spherical2DToUnitCartesian(A) end
+
 ---@param A double
 ---@return double
 function UKismetMathLibrary:Sin(A) end
+
 ---@param A int64
 ---@return int64
 function UKismetMathLibrary:SignOfInteger64(A) end
+
 ---@param A int32
 ---@return int32
 function UKismetMathLibrary:SignOfInteger(A) end
+
 ---@param A double
 ---@return double
 function UKismetMathLibrary:SignOfFloat(A) end
+
 ---@param SpringState FVectorSpringState
 ---@param Velocity FVector
 function UKismetMathLibrary:SetVectorSpringStateVelocity(SpringState, Velocity) end
+
 ---@param Stream FRandomStream
----@param NewSeed int32
-function UKismetMathLibrary:SetRandomStreamSeed(Stream, NewSeed) end
+---@param newSeed int32
+function UKismetMathLibrary:SetRandomStreamSeed(Stream, newSeed) end
+
 ---@param SpringState FQuaternionSpringState
 ---@param AngularVelocity FVector
 function UKismetMathLibrary:SetQuaternionSpringStateAngularVelocity(SpringState, AngularVelocity) end
+
 ---@param SpringState FFloatSpringState
 ---@param Velocity float
 function UKismetMathLibrary:SetFloatSpringStateVelocity(SpringState, Velocity) end
+
 ---@param A FVector2D
 ---@param X double
 ---@param Y double
 function UKismetMathLibrary:Set2D(A, X, Y) end
+
 ---@param A FVector
 ---@param B FVector
 ---@param bPickA boolean
 ---@return FVector
 function UKismetMathLibrary:SelectVector(A, B, bPickA) end
+
 ---@param A FTransform
 ---@param B FTransform
 ---@param bPickA boolean
 ---@return FTransform
 function UKismetMathLibrary:SelectTransform(A, B, bPickA) end
+
 ---@param A FString
 ---@param B FString
 ---@param bPickA boolean
 ---@return FString
 function UKismetMathLibrary:SelectString(A, B, bPickA) end
+
 ---@param A FRotator
 ---@param B FRotator
 ---@param bPickA boolean
 ---@return FRotator
 function UKismetMathLibrary:SelectRotator(A, B, bPickA) end
+
 ---@param A UObject
 ---@param B UObject
 ---@param bSelectA boolean
 ---@return UObject
 function UKismetMathLibrary:SelectObject(A, B, bSelectA) end
+
 ---@param A int32
 ---@param B int32
 ---@param bPickA boolean
 ---@return int32
 function UKismetMathLibrary:SelectInt(A, B, bPickA) end
+
 ---@param A double
 ---@param B double
 ---@param bPickA boolean
 ---@return double
 function UKismetMathLibrary:SelectFloat(A, B, bPickA) end
+
 ---@param A FLinearColor
 ---@param B FLinearColor
 ---@param bPickA boolean
 ---@return FLinearColor
 function UKismetMathLibrary:SelectColor(A, B, bPickA) end
+
 ---@param A UClass
 ---@param B UClass
 ---@param bSelectA boolean
 ---@return UClass
 function UKismetMathLibrary:SelectClass(A, B, bSelectA) end
+
 ---@param Stream FRandomStream
 function UKismetMathLibrary:SeedRandomStream(Stream) end
+
 ---@param A double
 ---@param B double
 ---@return double
 function UKismetMathLibrary:SafeDivide(A, B) end
+
 ---@param A double
 ---@return int64
 function UKismetMathLibrary:Round64(A) end
+
 ---@param A double
 ---@return int32
 function UKismetMathLibrary:Round(A) end
+
 ---@param Axis FVector
 ---@param Angle float
 ---@return FRotator
 function UKismetMathLibrary:RotatorFromAxisAndAngle(Axis, Angle) end
+
 ---@param InVect FVector
 ---@param AngleDeg float
 ---@param Axis FVector
 ---@return FVector
 function UKismetMathLibrary:RotateAngleAxis(InVect, AngleDeg, Axis) end
+
 ---@param A FRotator
 ---@param B FRotator
 ---@param Alpha float
 ---@param bShortestPath boolean
 ---@return FRotator
 function UKismetMathLibrary:RLerp(A, B, Alpha, bShortestPath) end
+
 ---@param Current FRotator
 ---@param Target FRotator
 ---@param DeltaTime float
 ---@param InterpSpeed float
 ---@return FRotator
 function UKismetMathLibrary:RInterpTo_Constant(Current, Target, DeltaTime, InterpSpeed) end
+
 ---@param Current FRotator
 ---@param Target FRotator
 ---@param DeltaTime float
 ---@param InterpSpeed float
 ---@return FRotator
 function UKismetMathLibrary:RInterpTo(Current, Target, DeltaTime, InterpSpeed) end
+
 ---@param RGB FLinearColor
 ---@param HSV FLinearColor
 function UKismetMathLibrary:RGBToHSV_Vector(RGB, HSV) end
+
 ---@param InColor FLinearColor
 ---@param H float
 ---@param S float
 ---@param V float
 ---@param A float
 function UKismetMathLibrary:RGBToHSV(InColor, H, S, V, A) end
+
 ---@param RGB FLinearColor
 ---@return FLinearColor
 function UKismetMathLibrary:RGBLinearToHSV(RGB) end
+
 ---@param SpringState FVectorSpringState
 function UKismetMathLibrary:ResetVectorSpringState(SpringState) end
+
 ---@param Stream FRandomStream
 function UKismetMathLibrary:ResetRandomStream(Stream) end
+
 ---@param SpringState FQuaternionSpringState
 function UKismetMathLibrary:ResetQuaternionSpringState(SpringState) end
+
 ---@param SpringState FFloatSpringState
 function UKismetMathLibrary:ResetFloatSpringState(SpringState) end
+
 ---@param A FRotator
 ---@param B FRotator
 ---@param Alpha float
@@ -19474,126 +21484,160 @@ function UKismetMathLibrary:ResetFloatSpringState(SpringState) end
 ---@param Steps int32
 ---@return FRotator
 function UKismetMathLibrary:REase(A, B, Alpha, bShortestPath, EasingFunc, BlendExp, Steps) end
+
 ---@param Stream FRandomStream
 ---@param ConeDir FVector
 ---@param MaxYawInRadians float
 ---@param MaxPitchInRadians float
 ---@return FVector
-function UKismetMathLibrary:RandomUnitVectorInEllipticalConeInRadiansFromStream(Stream, ConeDir, MaxYawInRadians, MaxPitchInRadians) end
+function UKismetMathLibrary:RandomUnitVectorInEllipticalConeInRadiansFromStream(Stream, ConeDir, MaxYawInRadians,
+                                                                                MaxPitchInRadians) end
+
 ---@param ConeDir FVector
 ---@param MaxYawInRadians float
 ---@param MaxPitchInRadians float
 ---@return FVector
 function UKismetMathLibrary:RandomUnitVectorInEllipticalConeInRadians(ConeDir, MaxYawInRadians, MaxPitchInRadians) end
+
 ---@param Stream FRandomStream
 ---@param ConeDir FVector
 ---@param MaxYawInDegrees float
 ---@param MaxPitchInDegrees float
 ---@return FVector
-function UKismetMathLibrary:RandomUnitVectorInEllipticalConeInDegreesFromStream(Stream, ConeDir, MaxYawInDegrees, MaxPitchInDegrees) end
+function UKismetMathLibrary:RandomUnitVectorInEllipticalConeInDegreesFromStream(Stream, ConeDir, MaxYawInDegrees,
+                                                                                MaxPitchInDegrees) end
+
 ---@param ConeDir FVector
 ---@param MaxYawInDegrees float
 ---@param MaxPitchInDegrees float
 ---@return FVector
 function UKismetMathLibrary:RandomUnitVectorInEllipticalConeInDegrees(ConeDir, MaxYawInDegrees, MaxPitchInDegrees) end
+
 ---@param Stream FRandomStream
 ---@param ConeDir FVector
 ---@param ConeHalfAngleInRadians float
 ---@return FVector
 function UKismetMathLibrary:RandomUnitVectorInConeInRadiansFromStream(Stream, ConeDir, ConeHalfAngleInRadians) end
+
 ---@param ConeDir FVector
 ---@param ConeHalfAngleInRadians float
 ---@return FVector
 function UKismetMathLibrary:RandomUnitVectorInConeInRadians(ConeDir, ConeHalfAngleInRadians) end
+
 ---@param Stream FRandomStream
 ---@param ConeDir FVector
 ---@param ConeHalfAngleInDegrees float
 ---@return FVector
 function UKismetMathLibrary:RandomUnitVectorInConeInDegreesFromStream(Stream, ConeDir, ConeHalfAngleInDegrees) end
+
 ---@param ConeDir FVector
 ---@param ConeHalfAngleInDegrees float
 ---@return FVector
 function UKismetMathLibrary:RandomUnitVectorInConeInDegrees(ConeDir, ConeHalfAngleInDegrees) end
+
 ---@param Stream FRandomStream
 ---@return FVector
 function UKismetMathLibrary:RandomUnitVectorFromStream(Stream) end
+
 ---@return FVector
 function UKismetMathLibrary:RandomUnitVector() end
+
 ---@param Stream FRandomStream
 ---@param bRoll boolean
 ---@return FRotator
 function UKismetMathLibrary:RandomRotatorFromStream(Stream, bRoll) end
+
 ---@param bRoll boolean
 ---@return FRotator
 function UKismetMathLibrary:RandomRotator(bRoll) end
+
 ---@param Stream FRandomStream
 ---@param Box FBox
 ---@return FVector
 function UKismetMathLibrary:RandomPointInBoundingBoxFromStream_Box(Stream, Box) end
+
 ---@param Stream FRandomStream
 ---@param Center FVector
 ---@param HalfSize FVector
 ---@return FVector
 function UKismetMathLibrary:RandomPointInBoundingBoxFromStream(Stream, Center, HalfSize) end
+
 ---@param Box FBox
 ---@return FVector
 function UKismetMathLibrary:RandomPointInBoundingBox_Box(Box) end
+
 ---@param Center FVector
 ---@param HalfSize FVector
 ---@return FVector
 function UKismetMathLibrary:RandomPointInBoundingBox(Center, HalfSize) end
+
 ---@param Stream FRandomStream
 ---@param Min int32
 ---@param Max int32
 ---@return int32
 function UKismetMathLibrary:RandomIntegerInRangeFromStream(Stream, Min, Max) end
+
 ---@param Min int32
 ---@param Max int32
 ---@return int32
 function UKismetMathLibrary:RandomIntegerInRange(Min, Max) end
+
 ---@param Stream FRandomStream
 ---@param Max int32
 ---@return int32
 function UKismetMathLibrary:RandomIntegerFromStream(Stream, Max) end
+
 ---@param Min int64
 ---@param Max int64
 ---@return int64
 function UKismetMathLibrary:RandomInteger64InRange(Min, Max) end
+
 ---@param Max int64
 ---@return int64
 function UKismetMathLibrary:RandomInteger64(Max) end
+
 ---@param Max int32
 ---@return int32
 function UKismetMathLibrary:RandomInteger(Max) end
+
 ---@param Stream FRandomStream
 ---@param Min float
 ---@param Max float
 ---@return float
 function UKismetMathLibrary:RandomFloatInRangeFromStream(Stream, Min, Max) end
+
 ---@param Min double
 ---@param Max double
 ---@return double
 function UKismetMathLibrary:RandomFloatInRange(Min, Max) end
+
 ---@param Stream FRandomStream
 ---@return float
 function UKismetMathLibrary:RandomFloatFromStream(Stream) end
+
 ---@return double
 function UKismetMathLibrary:RandomFloat() end
+
 ---@param RandomStream FRandomStream
 ---@param Weight float
 ---@return boolean
 function UKismetMathLibrary:RandomBoolWithWeightFromStream(RandomStream, Weight) end
+
 ---@param Weight float
 ---@return boolean
 function UKismetMathLibrary:RandomBoolWithWeight(Weight) end
+
 ---@param Stream FRandomStream
 ---@return boolean
 function UKismetMathLibrary:RandomBoolFromStream(Stream) end
+
 ---@return boolean
 function UKismetMathLibrary:RandomBool() end
+
 ---@param A double
 ---@return double
 function UKismetMathLibrary:RadiansToDegrees(A) end
+
 ---@param Current FQuat
 ---@param Target FQuat
 ---@param SpringState FQuaternionSpringState
@@ -19604,294 +21648,374 @@ function UKismetMathLibrary:RadiansToDegrees(A) end
 ---@param TargetVelocityAmount float
 ---@param bInitializeFromTarget boolean
 ---@return FQuat
-function UKismetMathLibrary:QuaternionSpringInterp(Current, Target, SpringState, Stiffness, CriticalDampingFactor, DeltaTime, Mass, TargetVelocityAmount, bInitializeFromTarget) end
+function UKismetMathLibrary:QuaternionSpringInterp(Current, Target, SpringState, Stiffness, CriticalDampingFactor,
+                                                   DeltaTime, Mass, TargetVelocityAmount, bInitializeFromTarget) end
+
 ---@param Q FQuat
 ---@return FVector
 function UKismetMathLibrary:Quat_VectorUp(Q) end
+
 ---@param Q FQuat
 ---@return FVector
 function UKismetMathLibrary:Quat_VectorRight(Q) end
+
 ---@param Q FQuat
 ---@return FVector
 function UKismetMathLibrary:Quat_VectorForward(Q) end
+
 ---@param Q FQuat
 ---@param V FVector
 ---@return FVector
 function UKismetMathLibrary:Quat_UnrotateVector(Q, V) end
+
 ---@param A FQuat
 ---@param B FQuat
 ---@param Alpha double
 ---@return FQuat
 function UKismetMathLibrary:Quat_Slerp(A, B, Alpha) end
+
 ---@param Q FQuat
 ---@return float
 function UKismetMathLibrary:Quat_SizeSquared(Q) end
+
 ---@param Q FQuat
 ---@return float
 function UKismetMathLibrary:Quat_Size(Q) end
+
 ---@param Q FQuat
 ---@param Euler FVector
 function UKismetMathLibrary:Quat_SetFromEuler(Q, Euler) end
+
 ---@param Q FQuat
 ---@param X float
 ---@param Y float
 ---@param Z float
 ---@param W float
 function UKismetMathLibrary:Quat_SetComponents(Q, X, Y, Z, W) end
+
 ---@param Q FQuat
 ---@return FRotator
 function UKismetMathLibrary:Quat_Rotator(Q) end
+
 ---@param Q FQuat
 ---@param V FVector
 ---@return FVector
 function UKismetMathLibrary:Quat_RotateVector(Q, V) end
+
 ---@param Q FQuat
 ---@param Tolerance float
 ---@return FQuat
 function UKismetMathLibrary:Quat_Normalized(Q, Tolerance) end
+
 ---@param Q FQuat
 ---@param Tolerance float
 function UKismetMathLibrary:Quat_Normalize(Q, Tolerance) end
+
 ---@param Euler FVector
 ---@return FQuat
 function UKismetMathLibrary:Quat_MakeFromEuler(Euler) end
+
 ---@param Q FQuat
 ---@return FQuat
 function UKismetMathLibrary:Quat_Log(Q) end
+
 ---@param Q FQuat
 ---@return boolean
 function UKismetMathLibrary:Quat_IsNormalized(Q) end
+
 ---@param Q FQuat
 ---@return boolean
 function UKismetMathLibrary:Quat_IsNonFinite(Q) end
+
 ---@param Q FQuat
 ---@param Tolerance float
 ---@return boolean
 function UKismetMathLibrary:Quat_IsIdentity(Q, Tolerance) end
+
 ---@param Q FQuat
 ---@return boolean
 function UKismetMathLibrary:Quat_IsFinite(Q) end
+
 ---@param Q FQuat
 ---@return FQuat
 function UKismetMathLibrary:Quat_Inversed(Q) end
+
 ---@return FQuat
 function UKismetMathLibrary:Quat_Identity() end
+
 ---@param Q FQuat
 ---@return FVector
 function UKismetMathLibrary:Quat_GetRotationAxis(Q) end
+
 ---@param Q FQuat
 ---@return FVector
 function UKismetMathLibrary:Quat_GetAxisZ(Q) end
+
 ---@param Q FQuat
 ---@return FVector
 function UKismetMathLibrary:Quat_GetAxisY(Q) end
+
 ---@param Q FQuat
 ---@return FVector
 function UKismetMathLibrary:Quat_GetAxisX(Q) end
+
 ---@param Q FQuat
 ---@return float
 function UKismetMathLibrary:Quat_GetAngle(Q) end
+
 ---@param Start FVector
 ---@param End FVector
 ---@return FQuat
 function UKismetMathLibrary:Quat_FindBetweenVectors(Start, End) end
+
 ---@param StartNormal FVector
 ---@param EndNormal FVector
 ---@return FQuat
 function UKismetMathLibrary:Quat_FindBetweenNormals(StartNormal, EndNormal) end
+
 ---@param Q FQuat
 ---@return FQuat
 function UKismetMathLibrary:Quat_Exp(Q) end
+
 ---@param Q FQuat
 ---@return FVector
 function UKismetMathLibrary:Quat_Euler(Q) end
+
 ---@param A FQuat
 ---@param B FQuat
 function UKismetMathLibrary:Quat_EnforceShortestArcWith(A, B) end
+
 ---@param A FQuat
 ---@param B FQuat
 ---@return float
 function UKismetMathLibrary:Quat_AngularDistance(A, B) end
+
 ---@param V FVector
 ---@param Target FVector
 ---@return FVector
 function UKismetMathLibrary:ProjectVectorOnToVector(V, Target) end
+
 ---@param V FVector
 ---@param PlaneNormal FVector
 ---@return FVector
 function UKismetMathLibrary:ProjectVectorOnToPlane(V, PlaneNormal) end
+
 ---@param Point FVector
 ---@param PlaneBase FVector
 ---@param PlaneNormal FVector
 ---@return FVector
 function UKismetMathLibrary:ProjectPointOnToPlane(Point, PlaneBase, PlaneNormal) end
+
 ---@param Points TArray<FVector>
 ---@param Tolerance float
 ---@return boolean
 function UKismetMathLibrary:PointsAreCoplanar(Points, Tolerance) end
+
 ---@param Value float
 ---@return float
 function UKismetMathLibrary:PerlinNoise1D(Value) end
+
 ---@param A int32
 ---@param B int32
 ---@return int32
 function UKismetMathLibrary:Percent_IntInt(A, B) end
+
 ---@param A int64
 ---@param B int64
 ---@return int64
 function UKismetMathLibrary:Percent_Int64Int64(A, B) end
+
 ---@param A double
 ---@param B double
 ---@return double
 function UKismetMathLibrary:Percent_FloatFloat(A, B) end
+
 ---@param A uint8
 ---@param B uint8
 ---@return uint8
 function UKismetMathLibrary:Percent_ByteByte(A, B) end
+
 ---@param A int32
 ---@param B int32
 ---@return int32
 function UKismetMathLibrary:Or_IntInt(A, B) end
+
 ---@param A int64
 ---@param B int64
 ---@return int64
 function UKismetMathLibrary:Or_Int64Int64(A, B) end
+
 ---@return FDateTime
 function UKismetMathLibrary:Now() end
+
 ---@param A FVector
 ---@param B FVector
 ---@return boolean
 function UKismetMathLibrary:NotEqualExactly_VectorVector(A, B) end
+
 ---@param A FVector4
 ---@param B FVector4
 ---@return boolean
 function UKismetMathLibrary:NotEqualExactly_Vector4Vector4(A, B) end
+
 ---@param A FVector2D
 ---@param B FVector2D
 ---@return boolean
 function UKismetMathLibrary:NotEqualExactly_Vector2DVector2D(A, B) end
+
 ---@param A FVector
 ---@param B FVector
 ---@param ErrorTolerance float
 ---@return boolean
 function UKismetMathLibrary:NotEqual_VectorVector(A, B, ErrorTolerance) end
+
 ---@param A FVector4
 ---@param B FVector4
 ---@param ErrorTolerance float
 ---@return boolean
 function UKismetMathLibrary:NotEqual_Vector4Vector4(A, B, ErrorTolerance) end
+
 ---@param A FVector2D
 ---@param B FVector2D
 ---@param ErrorTolerance float
 ---@return boolean
 function UKismetMathLibrary:NotEqual_Vector2DVector2D(A, B, ErrorTolerance) end
+
 ---@param A FTimespan
 ---@param B FTimespan
 ---@return boolean
 function UKismetMathLibrary:NotEqual_TimespanTimespan(A, B) end
+
 ---@param A FRotator
 ---@param B FRotator
 ---@param ErrorTolerance float
 ---@return boolean
 function UKismetMathLibrary:NotEqual_RotatorRotator(A, B, ErrorTolerance) end
+
 ---@param A FQuat
 ---@param B FQuat
 ---@param ErrorTolerance float
 ---@return boolean
 function UKismetMathLibrary:NotEqual_QuatQuat(A, B, ErrorTolerance) end
+
 ---@param A UObject
 ---@param B UObject
 ---@return boolean
 function UKismetMathLibrary:NotEqual_ObjectObject(A, B) end
+
 ---@param A FName
 ---@param B FName
 ---@return boolean
 function UKismetMathLibrary:NotEqual_NameName(A, B) end
+
 ---@param A FMatrix
 ---@param B FMatrix
 ---@param Tolerance float
 ---@return boolean
 function UKismetMathLibrary:NotEqual_MatrixMatrix(A, B, Tolerance) end
+
 ---@param A FLinearColor
 ---@param B FLinearColor
 ---@return boolean
 function UKismetMathLibrary:NotEqual_LinearColorLinearColor(A, B) end
+
 ---@param A FIntPoint
 ---@param B FIntPoint
 ---@return boolean
 function UKismetMathLibrary:NotEqual_IntPointIntPoint(A, B) end
+
 ---@param A int32
 ---@param B int32
 ---@return boolean
 function UKismetMathLibrary:NotEqual_IntInt(A, B) end
+
 ---@param A int64
 ---@param B int64
 ---@return boolean
 function UKismetMathLibrary:NotEqual_Int64Int64(A, B) end
+
 ---@param A double
 ---@param B double
 ---@return boolean
 function UKismetMathLibrary:NotEqual_DoubleDouble(A, B) end
+
 ---@param A FDateTime
 ---@param B FDateTime
 ---@return boolean
 function UKismetMathLibrary:NotEqual_DateTimeDateTime(A, B) end
+
 ---@param A UClass
 ---@param B UClass
 ---@return boolean
 function UKismetMathLibrary:NotEqual_ClassClass(A, B) end
+
 ---@param A uint8
 ---@param B uint8
 ---@return boolean
 function UKismetMathLibrary:NotEqual_ByteByte(A, B) end
+
 ---@param A boolean
 ---@param B boolean
 ---@return boolean
 function UKismetMathLibrary:NotEqual_BoolBool(A, B) end
+
 ---@param A boolean
 ---@return boolean
 function UKismetMathLibrary:Not_PreBool(A) end
+
 ---@param A int64
 ---@return int64
 function UKismetMathLibrary:Not_Int64(A) end
+
 ---@param A int32
 ---@return int32
 function UKismetMathLibrary:Not_Int(A) end
+
 ---@param A FVector2D
 ---@param Tolerance float
 ---@return FVector2D
 function UKismetMathLibrary:NormalSafe2D(A, Tolerance) end
+
 ---@param Value double
 ---@param RangeMin double
 ---@param RangeMax double
 ---@return double
 function UKismetMathLibrary:NormalizeToRange(Value, RangeMin, RangeMax) end
+
 ---@param A FRotator
 ---@param B FRotator
 ---@return FRotator
 function UKismetMathLibrary:NormalizedDeltaRotator(A, B) end
+
 ---@param Angle float
 ---@return float
 function UKismetMathLibrary:NormalizeAxis(Angle) end
+
 ---@param A FVector2D
 ---@param Tolerance float
 function UKismetMathLibrary:Normalize2D(A, Tolerance) end
+
 ---@param A FVector2D
 ---@return FVector2D
 function UKismetMathLibrary:Normal2D(A) end
+
 ---@param A FVector
 ---@param Tolerance float
 ---@return FVector
 function UKismetMathLibrary:Normal(A, Tolerance) end
+
 ---@param A FVector
 ---@return FVector
 function UKismetMathLibrary:NegateVector(A) end
+
 ---@param A FRotator
 ---@return FRotator
 function UKismetMathLibrary:NegateRotator(A) end
+
 ---@param A FVector2D
 ---@return FVector2D
 function UKismetMathLibrary:Negated2D(A) end
+
 ---@param A FTransform
 ---@param B FTransform
 ---@param LocationTolerance float
@@ -19899,122 +22023,152 @@ function UKismetMathLibrary:Negated2D(A) end
 ---@param Scale3DTolerance float
 ---@return boolean
 function UKismetMathLibrary:NearlyEqual_TransformTransform(A, B, LocationTolerance, RotationTolerance, Scale3DTolerance) end
+
 ---@param A double
 ---@param B double
 ---@param ErrorTolerance double
 ---@return boolean
 function UKismetMathLibrary:NearlyEqual_FloatFloat(A, B, ErrorTolerance) end
+
 ---@param base double
 ---@param Exp double
 ---@return double
 function UKismetMathLibrary:MultiplyMultiply_FloatFloat(base, Exp) end
+
 ---@param Value double
 ---@return double
 function UKismetMathLibrary:MultiplyByPi(Value) end
+
 ---@param A FVector
 ---@param B FVector
 ---@return FVector
 function UKismetMathLibrary:Multiply_VectorVector(A, B) end
+
 ---@param A FVector
 ---@param B int32
 ---@return FVector
 function UKismetMathLibrary:Multiply_VectorInt(A, B) end
+
 ---@param A FVector
 ---@param B double
 ---@return FVector
 function UKismetMathLibrary:Multiply_VectorFloat(A, B) end
+
 ---@param A FVector4
 ---@param B FVector4
 ---@return FVector4
 function UKismetMathLibrary:Multiply_Vector4Vector4(A, B) end
+
 ---@param A FVector2D
 ---@param B FVector2D
 ---@return FVector2D
 function UKismetMathLibrary:Multiply_Vector2DVector2D(A, B) end
+
 ---@param A FVector2D
 ---@param B double
 ---@return FVector2D
 function UKismetMathLibrary:Multiply_Vector2DFloat(A, B) end
+
 ---@param A FTimespan
 ---@param Scalar float
 ---@return FTimespan
 function UKismetMathLibrary:Multiply_TimespanFloat(A, Scalar) end
+
 ---@param A FRotator
 ---@param B int32
 ---@return FRotator
 function UKismetMathLibrary:Multiply_RotatorInt(A, B) end
+
 ---@param A FRotator
 ---@param B float
 ---@return FRotator
 function UKismetMathLibrary:Multiply_RotatorFloat(A, B) end
+
 ---@param A FQuat
 ---@param B FQuat
 ---@return FQuat
 function UKismetMathLibrary:Multiply_QuatQuat(A, B) end
+
 ---@param A FMatrix
 ---@param B FMatrix
 ---@return FMatrix
 function UKismetMathLibrary:Multiply_MatrixMatrix(A, B) end
+
 ---@param A FMatrix
 ---@param B double
 ---@return FMatrix
 function UKismetMathLibrary:Multiply_MatrixFloat(A, B) end
+
 ---@param A FLinearColor
 ---@param B FLinearColor
 ---@return FLinearColor
 function UKismetMathLibrary:Multiply_LinearColorLinearColor(A, B) end
+
 ---@param A FLinearColor
 ---@param B float
 ---@return FLinearColor
 function UKismetMathLibrary:Multiply_LinearColorFloat(A, B) end
+
 ---@param A FIntPoint
 ---@param B FIntPoint
 ---@return FIntPoint
 function UKismetMathLibrary:Multiply_IntPointIntPoint(A, B) end
+
 ---@param A FIntPoint
 ---@param B int32
 ---@return FIntPoint
 function UKismetMathLibrary:Multiply_IntPointInt(A, B) end
+
 ---@param A int32
 ---@param B int32
 ---@return int32
 function UKismetMathLibrary:Multiply_IntInt(A, B) end
+
 ---@param A int32
 ---@param B double
 ---@return double
 function UKismetMathLibrary:Multiply_IntFloat(A, B) end
+
 ---@param A int64
 ---@param B int64
 ---@return int64
 function UKismetMathLibrary:Multiply_Int64Int64(A, B) end
+
 ---@param A double
 ---@param B double
 ---@return double
 function UKismetMathLibrary:Multiply_DoubleDouble(A, B) end
+
 ---@param A uint8
 ---@param B uint8
 ---@return uint8
 function UKismetMathLibrary:Multiply_ByteByte(A, B) end
+
 ---@param InVect FVector
 ---@param InNormal FVector
 ---@return FVector
 function UKismetMathLibrary:MirrorVectorByNormal(InVect, InNormal) end
+
 ---@param IntArray TArray<int32>
 ---@param IndexOfMinValue int32
 ---@param MinValue int32
 function UKismetMathLibrary:MinOfIntArray(IntArray, IndexOfMinValue, MinValue) end
+
 ---@param FloatArray TArray<float>
 ---@param IndexOfMinValue int32
 ---@param MinValue float
 function UKismetMathLibrary:MinOfFloatArray(FloatArray, IndexOfMinValue, MinValue) end
+
 ---@param ByteArray TArray<uint8>
 ---@param IndexOfMinValue int32
 ---@param MinValue uint8
 function UKismetMathLibrary:MinOfByteArray(ByteArray, IndexOfMinValue, MinValue) end
+
 ---@param A int64
 ---@param B int64
 ---@return int64
 function UKismetMathLibrary:MinInt64(A, B) end
+
 ---@param WorldContextObject UObject
 ---@param InVerts TArray<FVector>
 ---@param SampleSurfaceNormal FVector
@@ -20023,7 +22177,9 @@ function UKismetMathLibrary:MinInt64(A, B) end
 ---@param OutSideLengthX float
 ---@param OutSideLengthY float
 ---@param bDebugDraw boolean
-function UKismetMathLibrary:MinimumAreaRectangle(WorldContextObject, InVerts, SampleSurfaceNormal, OutRectCenter, OutRectRotation, OutSideLengthX, OutSideLengthY, bDebugDraw) end
+function UKismetMathLibrary:MinimumAreaRectangle(WorldContextObject, InVerts, SampleSurfaceNormal, OutRectCenter,
+                                                 OutRectRotation, OutSideLengthX, OutSideLengthY, bDebugDraw) end
+
 ---@param WorldContextObject UObject
 ---@param InPoints TArray<FVector>
 ---@param SampleSurfaceNormal FVector
@@ -20032,174 +22188,221 @@ function UKismetMathLibrary:MinimumAreaRectangle(WorldContextObject, InVerts, Sa
 ---@param OutRectLengthX float
 ---@param OutRectLengthY float
 ---@param bDebugDraw boolean
-function UKismetMathLibrary:MinAreaRectangle(WorldContextObject, InPoints, SampleSurfaceNormal, OutRectCenter, OutRectRotation, OutRectLengthX, OutRectLengthY, bDebugDraw) end
+function UKismetMathLibrary:MinAreaRectangle(WorldContextObject, InPoints, SampleSurfaceNormal, OutRectCenter,
+                                             OutRectRotation, OutRectLengthX, OutRectLengthY, bDebugDraw) end
+
 ---@param A int32
 ---@param B int32
 ---@return int32
 function UKismetMathLibrary:Min(A, B) end
+
 ---@param IntArray TArray<int32>
 ---@param MedianValue float
 function UKismetMathLibrary:MedianOfIntArray(IntArray, MedianValue) end
+
 ---@param IntArray TArray<int32>
 ---@param IndexOfMaxValue int32
 ---@param MaxValue int32
 function UKismetMathLibrary:MaxOfIntArray(IntArray, IndexOfMaxValue, MaxValue) end
+
 ---@param FloatArray TArray<float>
 ---@param IndexOfMaxValue int32
 ---@param MaxValue float
 function UKismetMathLibrary:MaxOfFloatArray(FloatArray, IndexOfMaxValue, MaxValue) end
+
 ---@param ByteArray TArray<uint8>
 ---@param IndexOfMaxValue int32
 ---@param MaxValue uint8
 function UKismetMathLibrary:MaxOfByteArray(ByteArray, IndexOfMaxValue, MaxValue) end
+
 ---@param A int64
 ---@param B int64
 ---@return int64
 function UKismetMathLibrary:MaxInt64(A, B) end
+
 ---@param A int32
 ---@param B int32
 ---@return int32
 function UKismetMathLibrary:Max(A, B) end
+
 ---@param M FMatrix
 ---@param V FVector4
 ---@return FVector4
 function UKismetMathLibrary:Matrix_TransformVector4(M, V) end
+
 ---@param M FMatrix
 ---@param V FVector
 ---@return FVector4
 function UKismetMathLibrary:Matrix_TransformVector(M, V) end
+
 ---@param M FMatrix
 ---@param V FVector
 ---@return FVector4
 function UKismetMathLibrary:Matrix_TransformPosition(M, V) end
+
 ---@param M FMatrix
 ---@return FQuat
 function UKismetMathLibrary:Matrix_ToQuat(M) end
+
 ---@param M FMatrix
 ---@param NewOrigin FVector
 function UKismetMathLibrary:Matrix_SetOrigin(M, NewOrigin) end
+
 ---@param M FMatrix
 ---@param Column EMatrixColumns::Type
 ---@param Value FVector
 function UKismetMathLibrary:Matrix_SetColumn(M, Column, Value) end
+
 ---@param M FMatrix
 ---@param Axis EAxis::Type
 ---@param AxisVector FVector
 function UKismetMathLibrary:Matrix_SetAxis(M, Axis, AxisVector) end
+
 ---@param M FMatrix
 ---@param Scale3D FVector
 ---@return FMatrix
 function UKismetMathLibrary:Matrix_ScaleTranslation(M, Scale3D) end
+
 ---@param M FMatrix
 ---@return FMatrix
 function UKismetMathLibrary:Matrix_RemoveTranslation(M) end
+
 ---@param M FMatrix
 ---@param Tolerance float
 function UKismetMathLibrary:Matrix_RemoveScaling(M, Tolerance) end
+
 ---@param M FMatrix
 ---@param MirrorAxis EAxis::Type
 ---@param FlipAxis EAxis::Type
 ---@return FMatrix
 function UKismetMathLibrary:Matrix_Mirror(M, MirrorAxis, FlipAxis) end
+
 ---@param M FMatrix
 ---@param V FVector
 ---@return FVector
 function UKismetMathLibrary:Matrix_InverseTransformVector(M, V) end
+
 ---@param M FMatrix
 ---@param V FVector
 ---@return FVector
 function UKismetMathLibrary:Matrix_InverseTransformPosition(M, V) end
+
 ---@return FMatrix
 function UKismetMathLibrary:Matrix_Identity() end
+
 ---@param M FMatrix
 ---@param Axis EAxis::Type
 ---@return FVector
 function UKismetMathLibrary:Matrix_GetUnitAxis(M, Axis) end
+
 ---@param M FMatrix
 ---@param X FVector
 ---@param Y FVector
 ---@param Z FVector
 function UKismetMathLibrary:Matrix_GetUnitAxes(M, X, Y, Z) end
+
 ---@param M FMatrix
 ---@return FMatrix
 function UKismetMathLibrary:Matrix_GetTransposed(M) end
+
 ---@param M FMatrix
 ---@return FMatrix
 function UKismetMathLibrary:Matrix_GetTransposeAdjoint(M) end
+
 ---@param M FMatrix
 ---@param Tolerance float
 ---@return FVector
 function UKismetMathLibrary:Matrix_GetScaleVector(M, Tolerance) end
+
 ---@param M FMatrix
 ---@param Axis EAxis::Type
 ---@return FVector
 function UKismetMathLibrary:Matrix_GetScaledAxis(M, Axis) end
+
 ---@param M FMatrix
 ---@param X FVector
 ---@param Y FVector
 ---@param Z FVector
 function UKismetMathLibrary:Matrix_GetScaledAxes(M, X, Y, Z) end
+
 ---@param M FMatrix
 ---@return float
 function UKismetMathLibrary:Matrix_GetRotDeterminant(M) end
+
 ---@param M FMatrix
 ---@return FRotator
 function UKismetMathLibrary:Matrix_GetRotator(M) end
+
 ---@param InMatrix FMatrix
 ---@return FVector
 function UKismetMathLibrary:Matrix_GetOrigin(InMatrix) end
+
 ---@param M FMatrix
 ---@return float
 function UKismetMathLibrary:Matrix_GetMaximumAxisScale(M) end
+
 ---@param M FMatrix
 ---@param Tolerance float
 ---@return FMatrix
 function UKismetMathLibrary:Matrix_GetMatrixWithoutScale(M, Tolerance) end
+
 ---@param M FMatrix
 ---@return FMatrix
 function UKismetMathLibrary:Matrix_GetInverse(M) end
+
 ---@param M FMatrix
 ---@param OutPlane FPlane
 ---@return boolean
 function UKismetMathLibrary:Matrix_GetFrustumTopPlane(M, OutPlane) end
+
 ---@param M FMatrix
 ---@param OutPlane FPlane
 ---@return boolean
 function UKismetMathLibrary:Matrix_GetFrustumRightPlane(M, OutPlane) end
+
 ---@param M FMatrix
 ---@param OutPlane FPlane
 ---@return boolean
 function UKismetMathLibrary:Matrix_GetFrustumNearPlane(M, OutPlane) end
+
 ---@param M FMatrix
 ---@param OutPlane FPlane
 ---@return boolean
 function UKismetMathLibrary:Matrix_GetFrustumLeftPlane(M, OutPlane) end
+
 ---@param M FMatrix
 ---@param OutPlane FPlane
 ---@return boolean
 function UKismetMathLibrary:Matrix_GetFrustumFarPlane(M, OutPlane) end
+
 ---@param M FMatrix
 ---@param OutPlane FPlane
 ---@return boolean
 function UKismetMathLibrary:Matrix_GetFrustumBottomPlane(M, OutPlane) end
+
 ---@param M FMatrix
 ---@return float
 function UKismetMathLibrary:Matrix_GetDeterminant(M) end
+
 ---@param M FMatrix
 ---@param Column EMatrixColumns::Type
 ---@return FVector
 function UKismetMathLibrary:Matrix_GetColumn(M, Column) end
+
 ---@param M FMatrix
 ---@return boolean
 function UKismetMathLibrary:Matrix_ContainsNaN(M) end
+
 ---@param M FMatrix
 ---@param Translation FVector
 ---@return FMatrix
 function UKismetMathLibrary:Matrix_ConcatenateTranslation(M, Translation) end
+
 ---@param M FMatrix
 ---@param Scale float
 ---@return FMatrix
 function UKismetMathLibrary:Matrix_ApplyScale(M, Scale) end
+
 ---@param Value double
 ---@param InRangeA double
 ---@param InRangeB double
@@ -20207,6 +22410,7 @@ function UKismetMathLibrary:Matrix_ApplyScale(M, Scale) end
 ---@param OutRangeB double
 ---@return double
 function UKismetMathLibrary:MapRangeUnclamped(Value, InRangeA, InRangeB, OutRangeA, OutRangeB) end
+
 ---@param Value double
 ---@param InRangeA double
 ---@param InRangeB double
@@ -20214,46 +22418,55 @@ function UKismetMathLibrary:MapRangeUnclamped(Value, InRangeA, InRangeB, OutRang
 ---@param OutRangeB double
 ---@return double
 function UKismetMathLibrary:MapRangeClamped(Value, InRangeA, InRangeB, OutRangeA, OutRangeB) end
+
 ---@param X double
 ---@param Y double
 ---@param Z double
 ---@return FVector_NetQuantizeNormal
 function UKismetMathLibrary:MakeVector_NetQuantizeNormal(X, Y, Z) end
+
 ---@param X double
 ---@param Y double
 ---@param Z double
 ---@return FVector_NetQuantize100
 function UKismetMathLibrary:MakeVector_NetQuantize100(X, Y, Z) end
+
 ---@param X double
 ---@param Y double
 ---@param Z double
 ---@return FVector_NetQuantize10
 function UKismetMathLibrary:MakeVector_NetQuantize10(X, Y, Z) end
+
 ---@param X double
 ---@param Y double
 ---@param Z double
 ---@return FVector_NetQuantize
 function UKismetMathLibrary:MakeVector_NetQuantize(X, Y, Z) end
+
 ---@param X double
 ---@param Y double
 ---@param Z double
 ---@param W double
 ---@return FVector4
 function UKismetMathLibrary:MakeVector4(X, Y, Z, W) end
+
 ---@param X double
 ---@param Y double
 ---@return FVector2D
 function UKismetMathLibrary:MakeVector2D(X, Y) end
+
 ---@param X double
 ---@param Y double
 ---@param Z double
 ---@return FVector
 function UKismetMathLibrary:MakeVector(X, Y, Z) end
+
 ---@param Location FVector
 ---@param Rotation FRotator
 ---@param Scale FVector
 ---@return FTransform
 function UKismetMathLibrary:MakeTransform(Location, Rotation, Scale) end
+
 ---@param Days int32
 ---@param Hours int32
 ---@param Minutes int32
@@ -20261,6 +22474,7 @@ function UKismetMathLibrary:MakeTransform(Location, Rotation, Scale) end
 ---@param FractionNano int32
 ---@return FTimespan
 function UKismetMathLibrary:MakeTimespan2(Days, Hours, Minutes, Seconds, FractionNano) end
+
 ---@param Days int32
 ---@param Hours int32
 ---@param Minutes int32
@@ -20268,80 +22482,99 @@ function UKismetMathLibrary:MakeTimespan2(Days, Hours, Minutes, Seconds, Fractio
 ---@param Milliseconds int32
 ---@return FTimespan
 function UKismetMathLibrary:MakeTimespan(Days, Hours, Minutes, Seconds, Milliseconds) end
+
 ---@param Z FVector
 ---@param Y FVector
 ---@return FRotator
 function UKismetMathLibrary:MakeRotFromZY(Z, Y) end
+
 ---@param Z FVector
 ---@param X FVector
 ---@return FRotator
 function UKismetMathLibrary:MakeRotFromZX(Z, X) end
+
 ---@param Z FVector
 ---@return FRotator
 function UKismetMathLibrary:MakeRotFromZ(Z) end
+
 ---@param Y FVector
 ---@param Z FVector
 ---@return FRotator
 function UKismetMathLibrary:MakeRotFromYZ(Y, Z) end
+
 ---@param Y FVector
 ---@param X FVector
 ---@return FRotator
 function UKismetMathLibrary:MakeRotFromYX(Y, X) end
+
 ---@param Y FVector
 ---@return FRotator
 function UKismetMathLibrary:MakeRotFromY(Y) end
+
 ---@param X FVector
 ---@param Z FVector
 ---@return FRotator
 function UKismetMathLibrary:MakeRotFromXZ(X, Z) end
+
 ---@param X FVector
 ---@param Y FVector
 ---@return FRotator
 function UKismetMathLibrary:MakeRotFromXY(X, Y) end
+
 ---@param X FVector
 ---@return FRotator
 function UKismetMathLibrary:MakeRotFromX(X) end
+
 ---@param Roll float
 ---@param Pitch float
 ---@param Yaw float
 ---@return FRotator
 function UKismetMathLibrary:MakeRotator(Roll, Pitch, Yaw) end
+
 ---@param Forward FVector
 ---@param Right FVector
 ---@param Up FVector
 ---@return FRotator
 function UKismetMathLibrary:MakeRotationFromAxes(Forward, Right, Up) end
+
 ---@param A FTransform
 ---@param RelativeTo FTransform
 ---@return FTransform
 function UKismetMathLibrary:MakeRelativeTransform(A, RelativeTo) end
+
 ---@param InitialSeed int32
 ---@return FRandomStream
 function UKismetMathLibrary:MakeRandomStream(InitialSeed) end
+
 ---@param X float
 ---@param Y float
 ---@param Z float
 ---@param W float
 ---@return FQuat
 function UKismetMathLibrary:MakeQuat(X, Y, Z, W) end
+
 ---@param Frame FFrameNumber
 ---@param FrameRate FFrameRate
 ---@param SubFrame float
 ---@return FQualifiedFrameTime
 function UKismetMathLibrary:MakeQualifiedFrameTime(Frame, FrameRate, SubFrame) end
+
 ---@param InCurrentTime float
 ---@param InPulsesPerSecond float
 ---@param InPhase float
 ---@return float
 function UKismetMathLibrary:MakePulsatingValue(InCurrentTime, InPulsesPerSecond, InPhase) end
+
 ---@param Point FVector
 ---@param Normal FVector
 ---@return FPlane
 function UKismetMathLibrary:MakePlaneFromPointAndNormal(Point, Normal) end
+
 ---@param Numerator int32
 ---@param Denominator int32
 ---@return FFrameRate
 function UKismetMathLibrary:MakeFrameRate(Numerator, Denominator) end
+
 ---@param Year int32
 ---@param Month int32
 ---@param Day int32
@@ -20351,32 +22584,39 @@ function UKismetMathLibrary:MakeFrameRate(Numerator, Denominator) end
 ---@param Millisecond int32
 ---@return FDateTime
 function UKismetMathLibrary:MakeDateTime(Year, Month, Day, Hour, Minute, Second, Millisecond) end
+
 ---@param R float
 ---@param G float
 ---@param B float
 ---@param A float
 ---@return FLinearColor
 function UKismetMathLibrary:MakeColor(R, G, B, A) end
+
 ---@param Origin FVector
 ---@param BoxExtent FVector
 ---@param SphereRadius float
 ---@return FBoxSphereBounds
 function UKismetMathLibrary:MakeBoxSphereBounds(Origin, BoxExtent, SphereRadius) end
+
 ---@param Min FVector2D
 ---@param Max FVector2D
 ---@return FBox2D
 function UKismetMathLibrary:MakeBox2D(Min, Max) end
+
 ---@param Min FVector
 ---@param Max FVector
 ---@return FBox
 function UKismetMathLibrary:MakeBox(Min, Max) end
+
 ---@param A double
 ---@return double
 function UKismetMathLibrary:Loge(A) end
+
 ---@param A double
 ---@param base double
 ---@return double
 function UKismetMathLibrary:Log(A, base) end
+
 ---@param LineStart FVector
 ---@param LineEnd FVector
 ---@param PlaneOrigin FVector
@@ -20384,7 +22624,9 @@ function UKismetMathLibrary:Log(A, base) end
 ---@param T float
 ---@param Intersection FVector
 ---@return boolean
-function UKismetMathLibrary:LinePlaneIntersection_OriginNormal(LineStart, LineEnd, PlaneOrigin, PlaneNormal, T, Intersection) end
+function UKismetMathLibrary:LinePlaneIntersection_OriginNormal(LineStart, LineEnd, PlaneOrigin, PlaneNormal, T,
+                                                               Intersection) end
+
 ---@param LineStart FVector
 ---@param LineEnd FVector
 ---@param APlane FPlane
@@ -20392,212 +22634,273 @@ function UKismetMathLibrary:LinePlaneIntersection_OriginNormal(LineStart, LineEn
 ---@param Intersection FVector
 ---@return boolean
 function UKismetMathLibrary:LinePlaneIntersection(LineStart, LineEnd, APlane, T, Intersection) end
+
 ---@param A FLinearColor
 ---@param B FLinearColor
 ---@param Alpha float
 ---@return FLinearColor
 function UKismetMathLibrary:LinearColorLerpUsingHSV(A, B, Alpha) end
+
 ---@param A FLinearColor
 ---@param B FLinearColor
 ---@param Alpha float
 ---@return FLinearColor
 function UKismetMathLibrary:LinearColorLerp(A, B, Alpha) end
+
 ---@return FLinearColor
 function UKismetMathLibrary:LinearColor_Yellow() end
+
 ---@return FLinearColor
 function UKismetMathLibrary:LinearColor_White() end
+
 ---@return FLinearColor
 function UKismetMathLibrary:LinearColor_Transparent() end
+
 ---@param InLinearColor FLinearColor
 ---@return FColor
 function UKismetMathLibrary:LinearColor_ToRGBE(InLinearColor) end
+
 ---@param InColor FLinearColor
 ---@param InOpacity float
 ---@return FLinearColor
 function UKismetMathLibrary:LinearColor_ToNewOpacity(InColor, InOpacity) end
+
 ---@param InOutColor FLinearColor
 ---@param InTemperature float
 function UKismetMathLibrary:LinearColor_SetTemperature(InOutColor, InTemperature) end
+
 ---@param InOutColor FLinearColor
 ---@param R float
 ---@param G float
 ---@param B float
 ---@param A float
 function UKismetMathLibrary:LinearColor_SetRGBA(InOutColor, R, G, B, A) end
+
 ---@param InOutColor FLinearColor
 function UKismetMathLibrary:LinearColor_SetRandomHue(InOutColor) end
+
 ---@param InOutColor FLinearColor
 ---@param InSRGB FColor
 function UKismetMathLibrary:LinearColor_SetFromSRGB(InOutColor, InSRGB) end
+
 ---@param InOutColor FLinearColor
 ---@param InColor FColor
 function UKismetMathLibrary:LinearColor_SetFromPow22(InOutColor, InColor) end
+
 ---@param InOutColor FLinearColor
 ---@param H float
 ---@param S float
 ---@param V float
 ---@param A float
 function UKismetMathLibrary:LinearColor_SetFromHSV(InOutColor, H, S, V, A) end
+
 ---@param InOutColor FLinearColor
 ---@param InColor FLinearColor
 function UKismetMathLibrary:LinearColor_Set(InOutColor, InColor) end
+
 ---@return FLinearColor
 function UKismetMathLibrary:LinearColor_Red() end
+
 ---@param InColor FLinearColor
 ---@return FColor
 function UKismetMathLibrary:LinearColor_QuantizeRound(InColor) end
+
 ---@param InColor FLinearColor
 ---@return FColor
 function UKismetMathLibrary:LinearColor_Quantize(InColor) end
+
 ---@param A FLinearColor
 ---@param B FLinearColor
 ---@param Tolerance float
 ---@return boolean
 function UKismetMathLibrary:LinearColor_IsNearEqual(A, B, Tolerance) end
+
 ---@return FLinearColor
 function UKismetMathLibrary:LinearColor_Green() end
+
 ---@return FLinearColor
 function UKismetMathLibrary:LinearColor_Gray() end
+
 ---@param InColor FLinearColor
 ---@return float
 function UKismetMathLibrary:LinearColor_GetMin(InColor) end
+
 ---@param InColor FLinearColor
 ---@return float
 function UKismetMathLibrary:LinearColor_GetMax(InColor) end
+
 ---@param InColor FLinearColor
 ---@return float
 function UKismetMathLibrary:LinearColor_GetLuminance(InColor) end
+
 ---@param C1 FLinearColor
 ---@param C2 FLinearColor
 ---@return float
 function UKismetMathLibrary:LinearColor_Distance(C1, C2) end
+
 ---@param InColor FLinearColor
 ---@param InDesaturation float
 ---@return FLinearColor
 function UKismetMathLibrary:LinearColor_Desaturated(InColor, InDesaturation) end
+
 ---@return FLinearColor
 function UKismetMathLibrary:LinearColor_Blue() end
+
 ---@return FLinearColor
 function UKismetMathLibrary:LinearColor_Black() end
+
 ---@param A FVector
 ---@param B FRotator
 ---@return FVector
 function UKismetMathLibrary:LessLess_VectorRotator(A, B) end
+
 ---@param A FTimespan
 ---@param B FTimespan
 ---@return boolean
 function UKismetMathLibrary:LessEqual_TimespanTimespan(A, B) end
+
 ---@param A int32
 ---@param B int32
 ---@return boolean
 function UKismetMathLibrary:LessEqual_IntInt(A, B) end
+
 ---@param A int64
 ---@param B int64
 ---@return boolean
 function UKismetMathLibrary:LessEqual_Int64Int64(A, B) end
+
 ---@param A double
 ---@param B double
 ---@return boolean
 function UKismetMathLibrary:LessEqual_DoubleDouble(A, B) end
+
 ---@param A FDateTime
 ---@param B FDateTime
 ---@return boolean
 function UKismetMathLibrary:LessEqual_DateTimeDateTime(A, B) end
+
 ---@param A uint8
 ---@param B uint8
 ---@return boolean
 function UKismetMathLibrary:LessEqual_ByteByte(A, B) end
+
 ---@param A FTimespan
 ---@param B FTimespan
 ---@return boolean
 function UKismetMathLibrary:Less_TimespanTimespan(A, B) end
+
 ---@param A int32
 ---@param B int32
 ---@return boolean
 function UKismetMathLibrary:Less_IntInt(A, B) end
+
 ---@param A int64
 ---@param B int64
 ---@return boolean
 function UKismetMathLibrary:Less_Int64Int64(A, B) end
+
 ---@param A double
 ---@param B double
 ---@return boolean
 function UKismetMathLibrary:Less_DoubleDouble(A, B) end
+
 ---@param A FDateTime
 ---@param B FDateTime
 ---@return boolean
 function UKismetMathLibrary:Less_DateTimeDateTime(A, B) end
+
 ---@param A uint8
 ---@param B uint8
 ---@return boolean
 function UKismetMathLibrary:Less_ByteByte(A, B) end
+
 ---@param A double
 ---@param B double
 ---@param Alpha double
 ---@return double
 function UKismetMathLibrary:Lerp(A, B, Alpha) end
+
 ---@param A FVector2D
 ---@return boolean
 function UKismetMathLibrary:IsZero2D(A) end
+
 ---@param Point FVector
 ---@param BoxWorldTransform FTransform
 ---@param BoxExtent FBox
 ---@return boolean
 function UKismetMathLibrary:IsPointInBoxWithTransform_Box(Point, BoxWorldTransform, BoxExtent) end
+
 ---@param Point FVector
 ---@param BoxWorldTransform FTransform
 ---@param BoxExtent FVector
 ---@return boolean
 function UKismetMathLibrary:IsPointInBoxWithTransform(Point, BoxWorldTransform, BoxExtent) end
+
 ---@param Point FVector
 ---@param Box FBox
 ---@return boolean
 function UKismetMathLibrary:IsPointInBox_Box(Point, Box) end
+
 ---@param Point FVector
 ---@param BoxOrigin FVector
 ---@param BoxExtent FVector
 ---@return boolean
 function UKismetMathLibrary:IsPointInBox(Point, BoxOrigin, BoxExtent) end
+
 ---@param A FVector2D
 ---@param Tolerance float
 ---@return boolean
 function UKismetMathLibrary:IsNearlyZero2D(A, Tolerance) end
+
 ---@param A FDateTime
 ---@return boolean
 function UKismetMathLibrary:IsMorning(A) end
+
 ---@param Year int32
 ---@return boolean
 function UKismetMathLibrary:IsLeapYear(Year) end
+
 ---@param A FDateTime
 ---@return boolean
 function UKismetMathLibrary:IsAfternoon(A) end
+
 ---@param T FTransform
 ---@return FTransform
 function UKismetMathLibrary:InvertTransform(T) end
+
 ---@param T FTransform
 ---@param Rotation FRotator
 ---@return FRotator
 function UKismetMathLibrary:InverseTransformRotation(T, Rotation) end
+
 ---@param T FTransform
 ---@param Location FVector
 ---@return FVector
 function UKismetMathLibrary:InverseTransformLocation(T, Location) end
+
 ---@param T FTransform
 ---@param Direction FVector
 ---@return FVector
 function UKismetMathLibrary:InverseTransformDirection(T, Direction) end
+
 ---@return FIntPoint
 function UKismetMathLibrary:IntPoint_Zero() end
+
 ---@return FIntPoint
 function UKismetMathLibrary:IntPoint_Up() end
+
 ---@return FIntPoint
 function UKismetMathLibrary:IntPoint_Right() end
+
 ---@return FIntPoint
 function UKismetMathLibrary:IntPoint_One() end
+
 ---@return FIntPoint
 function UKismetMathLibrary:IntPoint_Left() end
+
 ---@return FIntPoint
 function UKismetMathLibrary:IntPoint_Down() end
+
 ---@param Value int32
 ---@param Min int32
 ---@param Max int32
@@ -20605,6 +22908,7 @@ function UKismetMathLibrary:IntPoint_Down() end
 ---@param InclusiveMax boolean
 ---@return boolean
 function UKismetMathLibrary:InRange_IntInt(Value, Min, Max, InclusiveMin, InclusiveMax) end
+
 ---@param Value int64
 ---@param Min int64
 ---@param Max int64
@@ -20612,6 +22916,7 @@ function UKismetMathLibrary:InRange_IntInt(Value, Min, Max, InclusiveMin, Inclus
 ---@param InclusiveMax boolean
 ---@return boolean
 function UKismetMathLibrary:InRange_Int64Int64(Value, Min, Max, InclusiveMin, InclusiveMax) end
+
 ---@param Value double
 ---@param Min double
 ---@param Max double
@@ -20619,273 +22924,351 @@ function UKismetMathLibrary:InRange_Int64Int64(Value, Min, Max, InclusiveMin, In
 ---@param InclusiveMax boolean
 ---@return boolean
 function UKismetMathLibrary:InRange_FloatFloat(Value, Min, Max, InclusiveMin, InclusiveMax) end
+
 ---@param Width double
 ---@param Height double
 ---@return double
 function UKismetMathLibrary:Hypotenuse(Width, Height) end
+
 ---@param HSV FLinearColor
 ---@return FLinearColor
 function UKismetMathLibrary:HSVToRGBLinear(HSV) end
+
 ---@param HSV FLinearColor
 ---@param RGB FLinearColor
 function UKismetMathLibrary:HSVToRGB_Vector(HSV, RGB) end
+
 ---@param H float
 ---@param S float
 ---@param V float
 ---@param A float
 ---@return FLinearColor
 function UKismetMathLibrary:HSVToRGB(H, S, V, A) end
+
 ---@param Location double
 ---@param GridSize double
 ---@return double
 function UKismetMathLibrary:GridSnap_Float(Location, GridSize) end
+
 ---@param A FVector
 ---@param B FRotator
 ---@return FVector
 function UKismetMathLibrary:GreaterGreater_VectorRotator(A, B) end
+
 ---@param A FTimespan
 ---@param B FTimespan
 ---@return boolean
 function UKismetMathLibrary:GreaterEqual_TimespanTimespan(A, B) end
+
 ---@param A int32
 ---@param B int32
 ---@return boolean
 function UKismetMathLibrary:GreaterEqual_IntInt(A, B) end
+
 ---@param A int64
 ---@param B int64
 ---@return boolean
 function UKismetMathLibrary:GreaterEqual_Int64Int64(A, B) end
+
 ---@param A double
 ---@param B double
 ---@return boolean
 function UKismetMathLibrary:GreaterEqual_DoubleDouble(A, B) end
+
 ---@param A FDateTime
 ---@param B FDateTime
 ---@return boolean
 function UKismetMathLibrary:GreaterEqual_DateTimeDateTime(A, B) end
+
 ---@param A uint8
 ---@param B uint8
 ---@return boolean
 function UKismetMathLibrary:GreaterEqual_ByteByte(A, B) end
+
 ---@param A FTimespan
 ---@param B FTimespan
 ---@return boolean
 function UKismetMathLibrary:Greater_TimespanTimespan(A, B) end
+
 ---@param A int32
 ---@param B int32
 ---@return boolean
 function UKismetMathLibrary:Greater_IntInt(A, B) end
+
 ---@param A int64
 ---@param B int64
 ---@return boolean
 function UKismetMathLibrary:Greater_Int64Int64(A, B) end
+
 ---@param A double
 ---@param B double
 ---@return boolean
 function UKismetMathLibrary:Greater_DoubleDouble(A, B) end
+
 ---@param A FDateTime
 ---@param B FDateTime
 ---@return boolean
 function UKismetMathLibrary:Greater_DateTimeDateTime(A, B) end
+
 ---@param A uint8
 ---@param B uint8
 ---@return boolean
 function UKismetMathLibrary:Greater_ByteByte(A, B) end
+
 ---@param A FDateTime
 ---@return int32
 function UKismetMathLibrary:GetYear(A) end
+
 ---@param InVec FVector
 ---@param Yaw float
 ---@param Pitch float
 function UKismetMathLibrary:GetYawPitchFromVector(InVec, Yaw, Pitch) end
+
 ---@param Vectors TArray<FVector>
 ---@return FVector
 function UKismetMathLibrary:GetVectorArrayAverage(Vectors) end
+
 ---@param InRot FRotator
 ---@return FVector
 function UKismetMathLibrary:GetUpVector(InRot) end
+
 ---@param A FTimespan
 ---@return float
 function UKismetMathLibrary:GetTotalSeconds(A) end
+
 ---@param A FTimespan
 ---@return float
 function UKismetMathLibrary:GetTotalMinutes(A) end
+
 ---@param A FTimespan
 ---@return float
 function UKismetMathLibrary:GetTotalMilliseconds(A) end
+
 ---@param A FTimespan
 ---@return float
 function UKismetMathLibrary:GetTotalHours(A) end
+
 ---@param A FTimespan
 ---@return float
 function UKismetMathLibrary:GetTotalDays(A) end
+
 ---@param A FDateTime
 ---@return FTimespan
 function UKismetMathLibrary:GetTimeOfDay(A) end
+
 ---@return double
 function UKismetMathLibrary:GetTAU() end
+
 ---@param MyRightYAxis FVector
 ---@param FloorNormal FVector
 ---@param UpVector FVector
 ---@param OutSlopePitchDegreeAngle float
 ---@param OutSlopeRollDegreeAngle float
-function UKismetMathLibrary:GetSlopeDegreeAngles(MyRightYAxis, FloorNormal, UpVector, OutSlopePitchDegreeAngle, OutSlopeRollDegreeAngle) end
+function UKismetMathLibrary:GetSlopeDegreeAngles(MyRightYAxis, FloorNormal, UpVector, OutSlopePitchDegreeAngle,
+                                                 OutSlopeRollDegreeAngle) end
+
 ---@param A FTimespan
 ---@return int32
 function UKismetMathLibrary:GetSeconds(A) end
+
 ---@param A FDateTime
 ---@return int32
 function UKismetMathLibrary:GetSecond(A) end
+
 ---@param A FVector2D
 ---@param AngleDeg float
 ---@return FVector2D
 function UKismetMathLibrary:GetRotated2D(A, AngleDeg) end
+
 ---@param InRot FRotator
 ---@return FVector
 function UKismetMathLibrary:GetRightVector(InRot) end
+
 ---@param Direction FVector
 ---@param SurfaceNormal FVector
 ---@return FVector
 function UKismetMathLibrary:GetReflectionVector(Direction, SurfaceNormal) end
+
 ---@param Point FVector
 ---@param SegmentStart FVector
 ---@param SegmentEnd FVector
 ---@return float
 function UKismetMathLibrary:GetPointDistanceToSegment(Point, SegmentStart, SegmentEnd) end
+
 ---@param Point FVector
 ---@param LineOrigin FVector
 ---@param LineDirection FVector
 ---@return float
 function UKismetMathLibrary:GetPointDistanceToLine(Point, LineOrigin, LineDirection) end
+
 ---@return double
 function UKismetMathLibrary:GetPI() end
+
 ---@param A FDateTime
 ---@return int32
 function UKismetMathLibrary:GetMonth(A) end
+
 ---@param A FTimespan
 ---@return int32
 function UKismetMathLibrary:GetMinutes(A) end
+
 ---@param A FDateTime
 ---@return int32
 function UKismetMathLibrary:GetMinute(A) end
+
 ---@param A FVector
 ---@return double
 function UKismetMathLibrary:GetMinElement(A) end
+
 ---@param A FVector2D
 ---@return double
 function UKismetMathLibrary:GetMin2D(A) end
+
 ---@param A FTimespan
 ---@return int32
 function UKismetMathLibrary:GetMilliseconds(A) end
+
 ---@param A FDateTime
 ---@return int32
 function UKismetMathLibrary:GetMillisecond(A) end
+
 ---@param A FVector
 ---@return double
 function UKismetMathLibrary:GetMaxElement(A) end
+
 ---@param A FVector2D
 ---@return double
 function UKismetMathLibrary:GetMax2D(A) end
+
 ---@param A FTimespan
 ---@return int32
 function UKismetMathLibrary:GetHours(A) end
+
 ---@param A FDateTime
 ---@return int32
 function UKismetMathLibrary:GetHour12(A) end
+
 ---@param A FDateTime
 ---@return int32
 function UKismetMathLibrary:GetHour(A) end
+
 ---@param InRot FRotator
 ---@return FVector
 function UKismetMathLibrary:GetForwardVector(InRot) end
+
 ---@param A FTimespan
 ---@return FTimespan
 function UKismetMathLibrary:GetDuration(A) end
+
 ---@param From FVector
 ---@param To FVector
 ---@return FVector
 function UKismetMathLibrary:GetDirectionUnitVector(From, To) end
+
 ---@param A FTimespan
 ---@return int32
 function UKismetMathLibrary:GetDays(A) end
+
 ---@param A FDateTime
 ---@return int32
 function UKismetMathLibrary:GetDayOfYear(A) end
+
 ---@param A FDateTime
 ---@return int32
 function UKismetMathLibrary:GetDay(A) end
+
 ---@param A FDateTime
 ---@return FDateTime
 function UKismetMathLibrary:GetDate(A) end
+
 ---@param InDirection FVector
 ---@param ReferenceFrame FTransform
 ---@param Azimuth float
 ---@param Elevation float
 function UKismetMathLibrary:GetAzimuthAndElevation(InDirection, ReferenceFrame, Azimuth, Elevation) end
+
 ---@param A FRotator
 ---@param X FVector
 ---@param Y FVector
 ---@param Z FVector
 function UKismetMathLibrary:GetAxes(A, X, Y, Z) end
+
 ---@param A FVector2D
 ---@return double
 function UKismetMathLibrary:GetAbsMax2D(A) end
+
 ---@param A FVector2D
 ---@return FVector2D
 function UKismetMathLibrary:GetAbs2D(A) end
+
 ---@param Value double
 ---@param Min double
 ---@param Max double
 ---@return double
 function UKismetMathLibrary:FWrap(Value, Min, Max) end
+
 ---@param InVector FVector
 ---@return FIntVector
 function UKismetMathLibrary:FTruncVector(InVector) end
+
 ---@param A double
 ---@return int64
 function UKismetMathLibrary:FTrunc64(A) end
+
 ---@param A double
 ---@return int32
 function UKismetMathLibrary:FTrunc(A) end
+
 ---@param UnixTime int64
 ---@return FDateTime
 function UKismetMathLibrary:FromUnixTimestamp(UnixTime) end
+
 ---@param Seconds float
 ---@return FTimespan
 function UKismetMathLibrary:FromSeconds(Seconds) end
+
 ---@param Minutes float
 ---@return FTimespan
 function UKismetMathLibrary:FromMinutes(Minutes) end
+
 ---@param Milliseconds float
 ---@return FTimespan
 function UKismetMathLibrary:FromMilliseconds(Milliseconds) end
+
 ---@param Hours float
 ---@return FTimespan
 function UKismetMathLibrary:FromHours(Hours) end
+
 ---@param Days float
 ---@return FTimespan
 function UKismetMathLibrary:FromDays(Days) end
+
 ---@param A double
 ---@return double
 function UKismetMathLibrary:Fraction(A) end
+
 ---@param Dividend double
 ---@param Divisor double
 ---@param Remainder double
 ---@return int64
 function UKismetMathLibrary:FMod64(Dividend, Divisor, Remainder) end
+
 ---@param Dividend double
 ---@param Divisor double
 ---@param Remainder double
 ---@return int32
 function UKismetMathLibrary:FMod(Dividend, Divisor, Remainder) end
+
 ---@param A double
 ---@param B double
 ---@return double
 function UKismetMathLibrary:FMin(A, B) end
+
 ---@param A double
 ---@param B double
 ---@return double
 function UKismetMathLibrary:FMax(A, B) end
+
 ---@param Current float
 ---@param Target float
 ---@param SpringState FFloatSpringState
@@ -20899,169 +23282,210 @@ function UKismetMathLibrary:FMax(A, B) end
 ---@param MaxValue float
 ---@param bInitializeFromTarget boolean
 ---@return float
-function UKismetMathLibrary:FloatSpringInterp(Current, Target, SpringState, Stiffness, CriticalDampingFactor, DeltaTime, Mass, TargetVelocityAmount, bClamp, MinValue, MaxValue, bInitializeFromTarget) end
+function UKismetMathLibrary:FloatSpringInterp(Current, Target, SpringState, Stiffness, CriticalDampingFactor, DeltaTime,
+                                              Mass, TargetVelocityAmount, bClamp, MinValue, MaxValue,
+                                              bInitializeFromTarget) end
+
 ---@param InCurrent float
 ---@param InDesired float
 ---@param InDeltaRate float
 ---@return float
 function UKismetMathLibrary:FixedTurn(InCurrent, InDesired, InDeltaRate) end
+
 ---@param Current double
 ---@param Target double
 ---@param DeltaTime double
 ---@param InterpSpeed double
 ---@return double
 function UKismetMathLibrary:FInterpTo_Constant(Current, Target, DeltaTime, InterpSpeed) end
+
 ---@param Current double
 ---@param Target double
 ---@param DeltaTime double
 ---@param InterpSpeed double
 ---@return double
 function UKismetMathLibrary:FInterpTo(Current, Target, DeltaTime, InterpSpeed) end
+
 ---@param A double
 ---@param B double
 ---@param Alpha double
 ---@param Exponent double
 ---@return double
 function UKismetMathLibrary:FInterpEaseInOut(A, B, Alpha, Exponent) end
+
 ---@param StartTransform FTransform
 ---@param TargetLocation FVector
 ---@return FRotator
 function UKismetMathLibrary:FindRelativeLookAtRotation(StartTransform, TargetLocation) end
+
 ---@param Segment1Start FVector
 ---@param Segment1End FVector
 ---@param Segment2Start FVector
 ---@param Segment2End FVector
 ---@param Segment1Point FVector
 ---@param Segment2Point FVector
-function UKismetMathLibrary:FindNearestPointsOnLineSegments(Segment1Start, Segment1End, Segment2Start, Segment2End, Segment1Point, Segment2Point) end
+function UKismetMathLibrary:FindNearestPointsOnLineSegments(Segment1Start, Segment1End, Segment2Start, Segment2End,
+                                                            Segment1Point, Segment2Point) end
+
 ---@param Start FVector
 ---@param Target FVector
 ---@return FRotator
 function UKismetMathLibrary:FindLookAtRotation(Start, Target) end
+
 ---@param Point FVector
 ---@param SegmentStart FVector
 ---@param SegmentEnd FVector
 ---@return FVector
 function UKismetMathLibrary:FindClosestPointOnSegment(Point, SegmentStart, SegmentEnd) end
+
 ---@param Point FVector
 ---@param LineOrigin FVector
 ---@param LineDirection FVector
 ---@return FVector
 function UKismetMathLibrary:FindClosestPointOnLine(Point, LineOrigin, LineDirection) end
+
 ---@param A double
 ---@return int64
 function UKismetMathLibrary:FFloor64(A) end
+
 ---@param A double
 ---@return int32
 function UKismetMathLibrary:FFloor(A) end
+
 ---@param Value double
 ---@param Min double
 ---@param Max double
 ---@return double
 function UKismetMathLibrary:FClamp(Value, Min, Max) end
+
 ---@param A double
 ---@return int64
 function UKismetMathLibrary:FCeil64(A) end
+
 ---@param A double
 ---@return int32
 function UKismetMathLibrary:FCeil(A) end
+
 ---@param A double
 ---@return double
 function UKismetMathLibrary:Exp(A) end
+
 ---@param A FVector
 ---@param B FVector
 ---@return boolean
 function UKismetMathLibrary:EqualExactly_VectorVector(A, B) end
+
 ---@param A FVector4
 ---@param B FVector4
 ---@return boolean
 function UKismetMathLibrary:EqualExactly_Vector4Vector4(A, B) end
+
 ---@param A FVector2D
 ---@param B FVector2D
 ---@return boolean
 function UKismetMathLibrary:EqualExactly_Vector2DVector2D(A, B) end
+
 ---@param A FVector
 ---@param B FVector
 ---@param ErrorTolerance float
 ---@return boolean
 function UKismetMathLibrary:EqualEqual_VectorVector(A, B, ErrorTolerance) end
+
 ---@param A FVector4
 ---@param B FVector4
 ---@param ErrorTolerance float
 ---@return boolean
 function UKismetMathLibrary:EqualEqual_Vector4Vector4(A, B, ErrorTolerance) end
+
 ---@param A FVector2D
 ---@param B FVector2D
 ---@param ErrorTolerance float
 ---@return boolean
 function UKismetMathLibrary:EqualEqual_Vector2DVector2D(A, B, ErrorTolerance) end
+
 ---@param A FTransform
 ---@param B FTransform
 ---@return boolean
 function UKismetMathLibrary:EqualEqual_TransformTransform(A, B) end
+
 ---@param A FTimespan
 ---@param B FTimespan
 ---@return boolean
 function UKismetMathLibrary:EqualEqual_TimespanTimespan(A, B) end
+
 ---@param A FRotator
 ---@param B FRotator
 ---@param ErrorTolerance float
 ---@return boolean
 function UKismetMathLibrary:EqualEqual_RotatorRotator(A, B, ErrorTolerance) end
+
 ---@param A FQuat
 ---@param B FQuat
 ---@param Tolerance float
 ---@return boolean
 function UKismetMathLibrary:EqualEqual_QuatQuat(A, B, Tolerance) end
+
 ---@param A UObject
 ---@param B UObject
 ---@return boolean
 function UKismetMathLibrary:EqualEqual_ObjectObject(A, B) end
+
 ---@param A FName
 ---@param B FName
 ---@return boolean
 function UKismetMathLibrary:EqualEqual_NameName(A, B) end
+
 ---@param A FMatrix
 ---@param B FMatrix
 ---@param Tolerance float
 ---@return boolean
 function UKismetMathLibrary:EqualEqual_MatrixMatrix(A, B, Tolerance) end
+
 ---@param A FLinearColor
 ---@param B FLinearColor
 ---@return boolean
 function UKismetMathLibrary:EqualEqual_LinearColorLinearColor(A, B) end
+
 ---@param A int32
 ---@param B int32
 ---@return boolean
 function UKismetMathLibrary:EqualEqual_IntInt(A, B) end
+
 ---@param A int64
 ---@param B int64
 ---@return boolean
 function UKismetMathLibrary:EqualEqual_Int64Int64(A, B) end
+
 ---@param A double
 ---@param B double
 ---@return boolean
 function UKismetMathLibrary:EqualEqual_DoubleDouble(A, B) end
+
 ---@param A FDateTime
 ---@param B FDateTime
 ---@return boolean
 function UKismetMathLibrary:EqualEqual_DateTimeDateTime(A, B) end
+
 ---@param A UClass
 ---@param B UClass
 ---@return boolean
 function UKismetMathLibrary:EqualEqual_ClassClass(A, B) end
+
 ---@param A uint8
 ---@param B uint8
 ---@return boolean
 function UKismetMathLibrary:EqualEqual_ByteByte(A, B) end
+
 ---@param A boolean
 ---@param B boolean
 ---@return boolean
 function UKismetMathLibrary:EqualEqual_BoolBool(A, B) end
+
 ---@param A FIntPoint
 ---@param B FIntPoint
 ---@return boolean
 function UKismetMathLibrary:Equal_IntPointIntPoint(A, B) end
+
 ---@param A double
 ---@param B double
 ---@param Alpha double
@@ -21070,373 +23494,476 @@ function UKismetMathLibrary:Equal_IntPointIntPoint(A, B) end
 ---@param Steps int32
 ---@return double
 function UKismetMathLibrary:Ease(A, B, Alpha, EasingFunc, BlendExp, Steps) end
+
 ---@param CurrentSample FVector
 ---@param PreviousSample FVector
 ---@param MaxDistance float
 ---@param MinWeight float
 ---@param MaxWeight float
 ---@return FVector
-function UKismetMathLibrary:DynamicWeightedMovingAverage_FVector(CurrentSample, PreviousSample, MaxDistance, MinWeight, MaxWeight) end
+function UKismetMathLibrary:DynamicWeightedMovingAverage_FVector(CurrentSample, PreviousSample, MaxDistance, MinWeight,
+                                                                 MaxWeight) end
+
 ---@param CurrentSample FRotator
 ---@param PreviousSample FRotator
 ---@param MaxDistance float
 ---@param MinWeight float
 ---@param MaxWeight float
 ---@return FRotator
-function UKismetMathLibrary:DynamicWeightedMovingAverage_FRotator(CurrentSample, PreviousSample, MaxDistance, MinWeight, MaxWeight) end
+function UKismetMathLibrary:DynamicWeightedMovingAverage_FRotator(CurrentSample, PreviousSample, MaxDistance, MinWeight,
+                                                                  MaxWeight) end
+
 ---@param CurrentSample float
 ---@param PreviousSample float
 ---@param MaxDistance float
 ---@param MinWeight float
 ---@param MaxWeight float
 ---@return float
-function UKismetMathLibrary:DynamicWeightedMovingAverage_Float(CurrentSample, PreviousSample, MaxDistance, MinWeight, MaxWeight) end
+function UKismetMathLibrary:DynamicWeightedMovingAverage_Float(CurrentSample, PreviousSample, MaxDistance, MinWeight,
+                                                               MaxWeight) end
+
 ---@param A FVector2D
 ---@param B FVector2D
 ---@return double
 function UKismetMathLibrary:DotProduct2D(A, B) end
+
 ---@param A FVector
 ---@param B FVector
 ---@return double
 function UKismetMathLibrary:Dot_VectorVector(A, B) end
+
 ---@param A FVector
 ---@param B FVector
 ---@return FVector
 function UKismetMathLibrary:Divide_VectorVector(A, B) end
+
 ---@param A FVector
 ---@param B int32
 ---@return FVector
 function UKismetMathLibrary:Divide_VectorInt(A, B) end
+
 ---@param A FVector
 ---@param B double
 ---@return FVector
 function UKismetMathLibrary:Divide_VectorFloat(A, B) end
+
 ---@param A FVector4
 ---@param B FVector4
 ---@return FVector4
 function UKismetMathLibrary:Divide_Vector4Vector4(A, B) end
+
 ---@param A FVector2D
 ---@param B FVector2D
 ---@return FVector2D
 function UKismetMathLibrary:Divide_Vector2DVector2D(A, B) end
+
 ---@param A FVector2D
 ---@param B double
 ---@return FVector2D
 function UKismetMathLibrary:Divide_Vector2DFloat(A, B) end
+
 ---@param A FTimespan
 ---@param Scalar float
 ---@return FTimespan
 function UKismetMathLibrary:Divide_TimespanFloat(A, Scalar) end
+
 ---@param A FLinearColor
 ---@param B FLinearColor
 ---@return FLinearColor
 function UKismetMathLibrary:Divide_LinearColorLinearColor(A, B) end
+
 ---@param A FIntPoint
 ---@param B FIntPoint
 ---@return FIntPoint
 function UKismetMathLibrary:Divide_IntPointIntPoint(A, B) end
+
 ---@param A FIntPoint
 ---@param B int32
 ---@return FIntPoint
 function UKismetMathLibrary:Divide_IntPointInt(A, B) end
+
 ---@param A int32
 ---@param B int32
 ---@return int32
 function UKismetMathLibrary:Divide_IntInt(A, B) end
+
 ---@param A int64
 ---@param B int64
 ---@return int64
 function UKismetMathLibrary:Divide_Int64Int64(A, B) end
+
 ---@param A double
 ---@param B double
 ---@return double
 function UKismetMathLibrary:Divide_DoubleDouble(A, B) end
+
 ---@param A uint8
 ---@param B uint8
 ---@return uint8
 function UKismetMathLibrary:Divide_ByteByte(A, B) end
+
 ---@param v1 FVector2D
 ---@param v2 FVector2D
 ---@return double
 function UKismetMathLibrary:DistanceSquared2D(v1, v2) end
+
 ---@param v1 FVector2D
 ---@param v2 FVector2D
 ---@return double
 function UKismetMathLibrary:Distance2D(v1, v2) end
+
 ---@param A double
 ---@return double
 function UKismetMathLibrary:DegTan(A) end
+
 ---@param A double
 ---@return double
 function UKismetMathLibrary:DegSin(A) end
+
 ---@param A double
 ---@return double
 function UKismetMathLibrary:DegreesToRadians(A) end
+
 ---@param A double
 ---@return double
 function UKismetMathLibrary:DegCos(A) end
+
 ---@param Y double
 ---@param X double
 ---@return double
 function UKismetMathLibrary:DegAtan2(Y, X) end
+
 ---@param A double
 ---@return double
 function UKismetMathLibrary:DegAtan(A) end
+
 ---@param A double
 ---@return double
 function UKismetMathLibrary:DegAsin(A) end
+
 ---@param A double
 ---@return double
 function UKismetMathLibrary:DegAcos(A) end
+
 ---@param Year int32
 ---@return int32
 function UKismetMathLibrary:DaysInYear(Year) end
+
 ---@param Year int32
 ---@param Month int32
 ---@return int32
 function UKismetMathLibrary:DaysInMonth(Year, Month) end
+
 ---@return FDateTime
 function UKismetMathLibrary:DateTimeMinValue() end
+
 ---@return FDateTime
 function UKismetMathLibrary:DateTimeMaxValue() end
+
 ---@param DateTimeString FString
 ---@param Result FDateTime
 ---@return boolean
 function UKismetMathLibrary:DateTimeFromString(DateTimeString, Result) end
+
 ---@param IsoString FString
 ---@param Result FDateTime
 ---@return boolean
 function UKismetMathLibrary:DateTimeFromIsoString(IsoString, Result) end
+
 ---@param A FVector2D
 ---@param B FVector2D
 ---@return double
 function UKismetMathLibrary:CrossProduct2D(A, B) end
+
 ---@param A FVector
 ---@param B FVector
 ---@return FVector
 function UKismetMathLibrary:Cross_VectorVector(A, B) end
+
 ---@param Yaw float
 ---@param Pitch float
 ---@param Length float
 ---@return FVector
 function UKismetMathLibrary:CreateVectorFromYawPitch(Yaw, Pitch, Length) end
+
 ---@param A double
 ---@return double
 function UKismetMathLibrary:Cos(A) end
+
 ---@param InVector FVector
 ---@return FVector2D
 function UKismetMathLibrary:Conv_VectorToVector2D(InVector) end
+
 ---@param InLocation FVector
 ---@return FTransform
 function UKismetMathLibrary:Conv_VectorToTransform(InLocation) end
+
 ---@param InVec FVector
 ---@return FRotator
 function UKismetMathLibrary:Conv_VectorToRotator(InVec) end
+
 ---@param InVec FVector
 ---@return FQuat
 function UKismetMathLibrary:Conv_VectorToQuaternion(InVec) end
+
 ---@param InVec FVector
 ---@return FLinearColor
 function UKismetMathLibrary:Conv_VectorToLinearColor(InVec) end
+
 ---@param InVector4 FVector4
 ---@return FVector
 function UKismetMathLibrary:Conv_Vector4ToVector(InVector4) end
+
 ---@param InVec FVector4
 ---@return FRotator
 function UKismetMathLibrary:Conv_Vector4ToRotator(InVec) end
+
 ---@param InVec FVector4
 ---@return FQuat
 function UKismetMathLibrary:Conv_Vector4ToQuaternion(InVec) end
+
 ---@param InVector2D FVector2D
 ---@param Z float
 ---@return FVector
 function UKismetMathLibrary:Conv_Vector2DToVector(InVector2D, Z) end
+
 ---@param InVector2D FVector2D
 ---@return FIntPoint
 function UKismetMathLibrary:Conv_Vector2DToIntPoint(InVector2D) end
+
 ---@param Transform FTransform
 ---@return FMatrix
 function UKismetMathLibrary:Conv_TransformToMatrix(Transform) end
+
 ---@param InRot FRotator
 ---@return FVector
 function UKismetMathLibrary:Conv_RotatorToVector(InRot) end
+
 ---@param InRotator FRotator
 ---@return FTransform
 function UKismetMathLibrary:Conv_RotatorToTransform(InRotator) end
+
 ---@param InRot FRotator
 ---@return FQuat
 function UKismetMathLibrary:Conv_RotatorToQuaternion(InRot) end
+
 ---@param InMatrix FMatrix
 ---@return FTransform
 function UKismetMathLibrary:Conv_MatrixToTransform(InMatrix) end
+
 ---@param InMatrix FMatrix
 ---@return FRotator
 function UKismetMathLibrary:Conv_MatrixToRotator(InMatrix) end
+
 ---@param InLinearColor FLinearColor
 ---@return FVector
 function UKismetMathLibrary:Conv_LinearColorToVector(InLinearColor) end
+
 ---@param InLinearColor FLinearColor
 ---@param InUseSRGB boolean
 ---@return FColor
 function UKismetMathLibrary:Conv_LinearColorToColor(InLinearColor, InUseSRGB) end
+
 ---@param InIntVector FIntVector
 ---@return FVector
 function UKismetMathLibrary:Conv_IntVectorToVector(InIntVector) end
+
 ---@param inInt int32
 ---@return FVector
 function UKismetMathLibrary:Conv_IntToVector(inInt) end
+
 ---@param inInt int32
 ---@return FIntVector
 function UKismetMathLibrary:Conv_IntToIntVector(inInt) end
+
 ---@param inInt int32
 ---@return int64
 function UKismetMathLibrary:Conv_IntToInt64(inInt) end
+
 ---@param inInt int32
 ---@return double
 function UKismetMathLibrary:Conv_IntToDouble(inInt) end
+
 ---@param inInt int32
 ---@return uint8
 function UKismetMathLibrary:Conv_IntToByte(inInt) end
+
 ---@param inInt int32
 ---@return boolean
 function UKismetMathLibrary:Conv_IntToBool(inInt) end
+
 ---@param InIntPoint FIntPoint
 ---@return FVector2D
 function UKismetMathLibrary:Conv_IntPointToVector2D(InIntPoint) end
+
 ---@param inInt int64
 ---@return int32
 function UKismetMathLibrary:Conv_Int64ToInt(inInt) end
+
 ---@param inInt int64
 ---@return double
 function UKismetMathLibrary:Conv_Int64ToDouble(inInt) end
+
 ---@param inInt int64
 ---@return uint8
 function UKismetMathLibrary:Conv_Int64ToByte(inInt) end
+
 ---@param InFloat float
 ---@return double
 function UKismetMathLibrary:Conv_FloatToDouble(InFloat) end
+
 ---@param InDouble double
 ---@return FVector2D
 function UKismetMathLibrary:Conv_DoubleToVector2D(InDouble) end
+
 ---@param InDouble double
 ---@return FVector
 function UKismetMathLibrary:Conv_DoubleToVector(InDouble) end
+
 ---@param InDouble double
 ---@return FLinearColor
 function UKismetMathLibrary:Conv_DoubleToLinearColor(InDouble) end
+
 ---@param InDouble double
 ---@return int64
 function UKismetMathLibrary:Conv_DoubleToInt64(InDouble) end
+
 ---@param InDouble double
 ---@return float
 function UKismetMathLibrary:Conv_DoubleToFloat(InDouble) end
+
 ---@param InColor FColor
 ---@return FLinearColor
 function UKismetMathLibrary:Conv_ColorToLinearColor(InColor) end
+
 ---@param InByte uint8
 ---@return int64
 function UKismetMathLibrary:Conv_ByteToInt64(InByte) end
+
 ---@param InByte uint8
 ---@return int32
 function UKismetMathLibrary:Conv_ByteToInt(InByte) end
+
 ---@param InByte uint8
 ---@return double
 function UKismetMathLibrary:Conv_ByteToDouble(InByte) end
+
 ---@param InBool boolean
 ---@return int32
 function UKismetMathLibrary:Conv_BoolToInt(InBool) end
+
 ---@param InBool boolean
 ---@return double
 function UKismetMathLibrary:Conv_BoolToDouble(InBool) end
+
 ---@param InBool boolean
 ---@return uint8
 function UKismetMathLibrary:Conv_BoolToByte(InBool) end
+
 ---@param A FTransform
 ---@param B FTransform
 ---@return FTransform
 function UKismetMathLibrary:ComposeTransforms(A, B) end
+
 ---@param A FRotator
 ---@param B FRotator
 ---@return FRotator
 function UKismetMathLibrary:ComposeRotators(A, B) end
+
 ---@param TestClass UClass
 ---@param ParentClass UClass
 ---@return boolean
 function UKismetMathLibrary:ClassIsChildOf(TestClass, ParentClass) end
+
 ---@param A FVector
 ---@param Min double
 ---@param Max double
 ---@return FVector
 function UKismetMathLibrary:ClampVectorSize(A, Min, Max) end
+
 ---@param Value int64
 ---@param Min int64
 ---@param Max int64
 ---@return int64
 function UKismetMathLibrary:ClampInt64(Value, Min, Max) end
+
 ---@param Angle float
 ---@return float
 function UKismetMathLibrary:ClampAxis(Angle) end
+
 ---@param A FVector2D
 ---@param MinAxisVal double
 ---@param MaxAxisVal double
 ---@return FVector2D
 function UKismetMathLibrary:ClampAxes2D(A, MinAxisVal, MaxAxisVal) end
+
 ---@param AngleDegrees double
 ---@param MinAngleDegrees double
 ---@param MaxAngleDegrees double
 ---@return double
 function UKismetMathLibrary:ClampAngle(AngleDegrees, MinAngleDegrees, MaxAngleDegrees) end
+
 ---@param Value int32
 ---@param Min int32
 ---@param Max int32
 ---@return int32
 function UKismetMathLibrary:Clamp(Value, Min, Max) end
+
 ---@param Current FLinearColor
 ---@param Target FLinearColor
 ---@param DeltaTime float
 ---@param InterpSpeed float
 ---@return FLinearColor
 function UKismetMathLibrary:CInterpTo(Current, Target, DeltaTime, InterpSpeed) end
+
 ---@param InVec FVector_NetQuantizeNormal
 ---@param X double
 ---@param Y double
 ---@param Z double
 function UKismetMathLibrary:BreakVector_NetQuantizeNormal(InVec, X, Y, Z) end
+
 ---@param InVec FVector_NetQuantize100
 ---@param X double
 ---@param Y double
 ---@param Z double
 function UKismetMathLibrary:BreakVector_NetQuantize100(InVec, X, Y, Z) end
+
 ---@param InVec FVector_NetQuantize10
 ---@param X double
 ---@param Y double
 ---@param Z double
 function UKismetMathLibrary:BreakVector_NetQuantize10(InVec, X, Y, Z) end
+
 ---@param InVec FVector_NetQuantize
 ---@param X double
 ---@param Y double
 ---@param Z double
 function UKismetMathLibrary:BreakVector_NetQuantize(InVec, X, Y, Z) end
+
 ---@param InVec FVector4
 ---@param X double
 ---@param Y double
 ---@param Z double
 ---@param W double
 function UKismetMathLibrary:BreakVector4(InVec, X, Y, Z, W) end
+
 ---@param InVec FVector2D
 ---@param X double
 ---@param Y double
 function UKismetMathLibrary:BreakVector2D(InVec, X, Y) end
+
 ---@param InVec FVector
 ---@param X double
 ---@param Y double
 ---@param Z double
 function UKismetMathLibrary:BreakVector(InVec, X, Y, Z) end
+
 ---@param InTransform FTransform
 ---@param Location FVector
 ---@param Rotation FRotator
 ---@param Scale FVector
 function UKismetMathLibrary:BreakTransform(InTransform, Location, Rotation, Scale) end
+
 ---@param InTimespan FTimespan
 ---@param Days int32
 ---@param Hours int32
@@ -21444,6 +23971,7 @@ function UKismetMathLibrary:BreakTransform(InTransform, Location, Rotation, Scal
 ---@param Seconds int32
 ---@param FractionNano int32
 function UKismetMathLibrary:BreakTimespan2(InTimespan, Days, Hours, Minutes, Seconds, FractionNano) end
+
 ---@param InTimespan FTimespan
 ---@param Days int32
 ---@param Hours int32
@@ -21451,34 +23979,41 @@ function UKismetMathLibrary:BreakTimespan2(InTimespan, Days, Hours, Minutes, Sec
 ---@param Seconds int32
 ---@param Milliseconds int32
 function UKismetMathLibrary:BreakTimespan(InTimespan, Days, Hours, Minutes, Seconds, Milliseconds) end
+
 ---@param InRot FRotator
 ---@param X FVector
 ---@param Y FVector
 ---@param Z FVector
 function UKismetMathLibrary:BreakRotIntoAxes(InRot, X, Y, Z) end
+
 ---@param InRot FRotator
 ---@param Roll float
 ---@param Pitch float
 ---@param Yaw float
 function UKismetMathLibrary:BreakRotator(InRot, Roll, Pitch, Yaw) end
+
 ---@param InRandomStream FRandomStream
 ---@param InitialSeed int32
 function UKismetMathLibrary:BreakRandomStream(InRandomStream, InitialSeed) end
+
 ---@param InQuat FQuat
 ---@param X float
 ---@param Y float
 ---@param Z float
 ---@param W float
 function UKismetMathLibrary:BreakQuat(InQuat, X, Y, Z, W) end
+
 ---@param InFrameTime FQualifiedFrameTime
 ---@param Frame FFrameNumber
 ---@param FrameRate FFrameRate
 ---@param SubFrame float
 function UKismetMathLibrary:BreakQualifiedFrameTime(InFrameTime, Frame, FrameRate, SubFrame) end
+
 ---@param InFrameRate FFrameRate
 ---@param Numerator int32
 ---@param Denominator int32
 function UKismetMathLibrary:BreakFrameRate(InFrameRate, Numerator, Denominator) end
+
 ---@param InDateTime FDateTime
 ---@param Year int32
 ---@param Month int32
@@ -21488,151 +24023,187 @@ function UKismetMathLibrary:BreakFrameRate(InFrameRate, Numerator, Denominator) 
 ---@param Second int32
 ---@param Millisecond int32
 function UKismetMathLibrary:BreakDateTime(InDateTime, Year, Month, Day, Hour, Minute, Second, Millisecond) end
+
 ---@param InColor FLinearColor
 ---@param R float
 ---@param G float
 ---@param B float
 ---@param A float
 function UKismetMathLibrary:BreakColor(InColor, R, G, B, A) end
+
 ---@param InBoxSphereBounds FBoxSphereBounds
 ---@param Origin FVector
 ---@param BoxExtent FVector
 ---@param SphereRadius float
 function UKismetMathLibrary:BreakBoxSphereBounds(InBoxSphereBounds, Origin, BoxExtent, SphereRadius) end
+
 ---@param A boolean
 ---@param B boolean
 ---@return boolean
 function UKismetMathLibrary:BooleanXOR(A, B) end
+
 ---@param A boolean
 ---@param B boolean
 ---@return boolean
 function UKismetMathLibrary:BooleanOR(A, B) end
+
 ---@param A boolean
 ---@param B boolean
 ---@return boolean
 function UKismetMathLibrary:BooleanNOR(A, B) end
+
 ---@param A boolean
 ---@param B boolean
 ---@return boolean
 function UKismetMathLibrary:BooleanNAND(A, B) end
+
 ---@param A boolean
 ---@param B boolean
 ---@return boolean
 function UKismetMathLibrary:BooleanAND(A, B) end
+
 ---@param A uint8
 ---@param B uint8
 ---@return uint8
 function UKismetMathLibrary:BMin(A, B) end
+
 ---@param A uint8
 ---@param B uint8
 ---@return uint8
 function UKismetMathLibrary:BMax(A, B) end
+
 ---@param IntArray TArray<int32>
 ---@param AverageValue float
 function UKismetMathLibrary:AverageOfIntArray(IntArray, AverageValue) end
+
 ---@param Y double
 ---@param X double
 ---@return double
 function UKismetMathLibrary:Atan2(Y, X) end
+
 ---@param A double
 ---@return double
 function UKismetMathLibrary:Atan(A) end
+
 ---@param A double
 ---@return double
 function UKismetMathLibrary:Asin(A) end
+
 ---@param A int32
 ---@param B int32
 ---@return int32
 function UKismetMathLibrary:And_IntInt(A, B) end
+
 ---@param A int64
 ---@param B int64
 ---@return int64
 function UKismetMathLibrary:And_Int64Int64(A, B) end
+
 ---@param A FVector
 ---@param B FVector
 ---@return FVector
 function UKismetMathLibrary:Add_VectorVector(A, B) end
+
 ---@param A FVector
 ---@param B int32
 ---@return FVector
 function UKismetMathLibrary:Add_VectorInt(A, B) end
+
 ---@param A FVector
 ---@param B double
 ---@return FVector
 function UKismetMathLibrary:Add_VectorFloat(A, B) end
+
 ---@param A FVector4
 ---@param B FVector4
 ---@return FVector4
 function UKismetMathLibrary:Add_Vector4Vector4(A, B) end
+
 ---@param A FVector2D
 ---@param B FVector2D
 ---@return FVector2D
 function UKismetMathLibrary:Add_Vector2DVector2D(A, B) end
+
 ---@param A FVector2D
 ---@param B double
 ---@return FVector2D
 function UKismetMathLibrary:Add_Vector2DFloat(A, B) end
+
 ---@param A FTimespan
 ---@param B FTimespan
 ---@return FTimespan
 function UKismetMathLibrary:Add_TimespanTimespan(A, B) end
+
 ---@param A FQuat
 ---@param B FQuat
 ---@return FQuat
 function UKismetMathLibrary:Add_QuatQuat(A, B) end
+
 ---@param A FMatrix
 ---@param B FMatrix
 ---@return FMatrix
 function UKismetMathLibrary:Add_MatrixMatrix(A, B) end
+
 ---@param A FLinearColor
 ---@param B FLinearColor
 ---@return FLinearColor
 function UKismetMathLibrary:Add_LinearColorLinearColor(A, B) end
+
 ---@param A FIntPoint
 ---@param B FIntPoint
 ---@return FIntPoint
 function UKismetMathLibrary:Add_IntPointIntPoint(A, B) end
+
 ---@param A FIntPoint
 ---@param B int32
 ---@return FIntPoint
 function UKismetMathLibrary:Add_IntPointInt(A, B) end
+
 ---@param A int32
 ---@param B int32
 ---@return int32
 function UKismetMathLibrary:Add_IntInt(A, B) end
+
 ---@param A int64
 ---@param B int64
 ---@return int64
 function UKismetMathLibrary:Add_Int64Int64(A, B) end
+
 ---@param A double
 ---@param B double
 ---@return double
 function UKismetMathLibrary:Add_DoubleDouble(A, B) end
+
 ---@param A FDateTime
 ---@param B FTimespan
 ---@return FDateTime
 function UKismetMathLibrary:Add_DateTimeTimespan(A, B) end
+
 ---@param A FDateTime
 ---@param B FDateTime
 ---@return FDateTime
 function UKismetMathLibrary:Add_DateTimeDateTime(A, B) end
+
 ---@param A uint8
 ---@param B uint8
 ---@return uint8
 function UKismetMathLibrary:Add_ByteByte(A, B) end
+
 ---@param A double
 ---@return double
 function UKismetMathLibrary:Acos(A) end
+
 ---@param A int64
 ---@return int64
 function UKismetMathLibrary:Abs_Int64(A) end
+
 ---@param A int32
 ---@return int32
 function UKismetMathLibrary:Abs_Int(A) end
+
 ---@param A double
 ---@return double
 function UKismetMathLibrary:Abs(A) end
-
 
 ---@class UKismetNodeHelperLibrary : UBlueprintFunctionLibrary
 UKismetNodeHelperLibrary = {}
@@ -21640,56 +24211,67 @@ UKismetNodeHelperLibrary = {}
 ---@param Data int32
 ---@param Index int32
 function UKismetNodeHelperLibrary:MarkBit(Data, Index) end
+
 ---@param Data int32
 ---@param NumBits int32
 ---@return boolean
 function UKismetNodeHelperLibrary:HasUnmarkedBit(Data, NumBits) end
+
 ---@param Data int32
 ---@param NumBits int32
 ---@return boolean
 function UKismetNodeHelperLibrary:HasMarkedBit(Data, NumBits) end
+
 ---@param Enum UEnum
 ---@param EnumeratorValue uint8
 ---@return uint8
 function UKismetNodeHelperLibrary:GetValidValue(Enum, EnumeratorValue) end
+
 ---@param Data int32
 ---@param StartIdx int32
 ---@param NumBits int32
 ---@param bRandom boolean
 ---@return int32
 function UKismetNodeHelperLibrary:GetUnmarkedBit(Data, StartIdx, NumBits, bRandom) end
+
 ---@param Data int32
 ---@param StartIdx int32
 ---@param NumBits int32
 ---@return int32
 function UKismetNodeHelperLibrary:GetRandomUnmarkedBit(Data, StartIdx, NumBits) end
+
 ---@param Data int32
 ---@param StartIdx int32
 ---@param NumBits int32
 ---@return int32
 function UKismetNodeHelperLibrary:GetFirstUnmarkedBit(Data, StartIdx, NumBits) end
+
 ---@param Enum UEnum
 ---@param EnumeratorIndex uint8
 ---@return uint8
 function UKismetNodeHelperLibrary:GetEnumeratorValueFromIndex(Enum, EnumeratorIndex) end
+
 ---@param Enum UEnum
 ---@param EnumeratorValue uint8
 ---@return FString
 function UKismetNodeHelperLibrary:GetEnumeratorUserFriendlyName(Enum, EnumeratorValue) end
+
 ---@param Enum UEnum
 ---@param EnumeratorValue uint8
 ---@return FName
 function UKismetNodeHelperLibrary:GetEnumeratorName(Enum, EnumeratorValue) end
+
 ---@param Data int32
 ---@param Index int32
 function UKismetNodeHelperLibrary:ClearBit(Data, Index) end
+
 ---@param Data int32
 function UKismetNodeHelperLibrary:ClearAllBits(Data) end
+
 ---@param Data int32
 ---@param Index int32
 ---@return boolean
 function UKismetNodeHelperLibrary:BitIsMarked(Data, Index) end
-
 
 ---@class UKismetRenderingLibrary : UBlueprintFunctionLibrary
 UKismetRenderingLibrary = {}
@@ -21697,32 +24279,41 @@ UKismetRenderingLibrary = {}
 ---@param PrimitiveComponent UPrimitiveComponent
 ---@param bCastInsetShadow boolean
 ---@param bLightAttachmentsAsGroup boolean
-function UKismetRenderingLibrary:SetCastInsetShadowForAllAttachments(PrimitiveComponent, bCastInsetShadow, bLightAttachmentsAsGroup) end
+function UKismetRenderingLibrary:SetCastInsetShadowForAllAttachments(PrimitiveComponent, bCastInsetShadow,
+                                                                     bLightAttachmentsAsGroup) end
+
 ---@param TextureRenderTarget UTextureRenderTarget2D
 ---@param Width int32
 ---@param Height int32
 function UKismetRenderingLibrary:ResizeRenderTarget2D(TextureRenderTarget, Width, Height) end
+
 ---@param RenderTarget UTextureRenderTarget2D
 ---@param Name FString
 ---@param CompressionSettings TextureCompressionSettings
 ---@param MipSettings TextureMipGenSettings
 ---@return UTexture2D
-function UKismetRenderingLibrary:RenderTargetCreateStaticTexture2DEditorOnly(RenderTarget, Name, CompressionSettings, MipSettings) end
+function UKismetRenderingLibrary:RenderTargetCreateStaticTexture2DEditorOnly(RenderTarget, Name, CompressionSettings,
+                                                                             MipSettings) end
+
 ---@param TextureRenderTarget UTextureRenderTarget2D
 function UKismetRenderingLibrary:ReleaseRenderTarget2D(TextureRenderTarget) end
+
 function UKismetRenderingLibrary:RefreshPathTracingOutput() end
+
 ---@param WorldContextObject UObject
 ---@param TextureRenderTarget UTextureRenderTarget2D
 ---@param U float
 ---@param V float
 ---@return FColor
 function UKismetRenderingLibrary:ReadRenderTargetUV(WorldContextObject, TextureRenderTarget, U, V) end
+
 ---@param WorldContextObject UObject
 ---@param TextureRenderTarget UTextureRenderTarget2D
 ---@param Area FBox2D
 ---@param bNormalize boolean
 ---@return TArray<FLinearColor>
 function UKismetRenderingLibrary:ReadRenderTargetRawUVArea(WorldContextObject, TextureRenderTarget, Area, bNormalize) end
+
 ---@param WorldContextObject UObject
 ---@param TextureRenderTarget UTextureRenderTarget2D
 ---@param U float
@@ -21730,6 +24321,7 @@ function UKismetRenderingLibrary:ReadRenderTargetRawUVArea(WorldContextObject, T
 ---@param bNormalize boolean
 ---@return FLinearColor
 function UKismetRenderingLibrary:ReadRenderTargetRawUV(WorldContextObject, TextureRenderTarget, U, V, bNormalize) end
+
 ---@param WorldContextObject UObject
 ---@param TextureRenderTarget UTextureRenderTarget2D
 ---@param MinX int32
@@ -21738,7 +24330,9 @@ function UKismetRenderingLibrary:ReadRenderTargetRawUV(WorldContextObject, Textu
 ---@param MaxY int32
 ---@param bNormalize boolean
 ---@return TArray<FLinearColor>
-function UKismetRenderingLibrary:ReadRenderTargetRawPixelArea(WorldContextObject, TextureRenderTarget, MinX, MinY, MaxX, MaxY, bNormalize) end
+function UKismetRenderingLibrary:ReadRenderTargetRawPixelArea(WorldContextObject, TextureRenderTarget, MinX, MinY, MaxX,
+                                                              MaxY, bNormalize) end
+
 ---@param WorldContextObject UObject
 ---@param TextureRenderTarget UTextureRenderTarget2D
 ---@param X int32
@@ -21746,24 +24340,29 @@ function UKismetRenderingLibrary:ReadRenderTargetRawPixelArea(WorldContextObject
 ---@param bNormalize boolean
 ---@return FLinearColor
 function UKismetRenderingLibrary:ReadRenderTargetRawPixel(WorldContextObject, TextureRenderTarget, X, Y, bNormalize) end
+
 ---@param WorldContextObject UObject
 ---@param TextureRenderTarget UTextureRenderTarget2D
 ---@param OutLinearSamples TArray<FLinearColor>
 ---@param bNormalize boolean
 ---@return boolean
-function UKismetRenderingLibrary:ReadRenderTargetRaw(WorldContextObject, TextureRenderTarget, OutLinearSamples, bNormalize) end
+function UKismetRenderingLibrary:ReadRenderTargetRaw(WorldContextObject, TextureRenderTarget, OutLinearSamples,
+                                                     bNormalize) end
+
 ---@param WorldContextObject UObject
 ---@param TextureRenderTarget UTextureRenderTarget2D
 ---@param X int32
 ---@param Y int32
 ---@return FColor
 function UKismetRenderingLibrary:ReadRenderTargetPixel(WorldContextObject, TextureRenderTarget, X, Y) end
+
 ---@param WorldContextObject UObject
 ---@param TextureRenderTarget UTextureRenderTarget2D
 ---@param OutSamples TArray<FColor>
 ---@param bNormalize boolean
 ---@return boolean
 function UKismetRenderingLibrary:ReadRenderTarget(WorldContextObject, TextureRenderTarget, OutSamples, bNormalize) end
+
 ---@param Bone0 int32
 ---@param Weight0 uint8
 ---@param Bone1 int32
@@ -21774,33 +24373,41 @@ function UKismetRenderingLibrary:ReadRenderTarget(WorldContextObject, TextureRen
 ---@param Weight3 uint8
 ---@return FSkelMeshSkinWeightInfo
 function UKismetRenderingLibrary:MakeSkinWeightInfo(Bone0, Weight0, Bone1, Weight1, Bone2, Weight2, Bone3, Weight3) end
+
 ---@param WorldContextObject UObject
 ---@param Filename FString
 ---@return UTexture2D
 function UKismetRenderingLibrary:ImportFileAsTexture2D(WorldContextObject, Filename) end
+
 ---@param WorldContextObject UObject
 ---@param Buffer TArray<uint8>
 ---@return UTexture2D
 function UKismetRenderingLibrary:ImportBufferAsTexture2D(WorldContextObject, Buffer) end
+
 ---@param WorldContextObject UObject
 ---@param Texture UTexture2D
 ---@param FilePath FString
 ---@param Filename FString
 function UKismetRenderingLibrary:ExportTexture2D(WorldContextObject, Texture, FilePath, Filename) end
+
 ---@param WorldContextObject UObject
 ---@param TextureRenderTarget UTextureRenderTarget2D
 ---@param FilePath FString
 ---@param Filename FString
 function UKismetRenderingLibrary:ExportRenderTarget(WorldContextObject, TextureRenderTarget, FilePath, Filename) end
+
 ---@param WorldContextObject UObject
 ---@param Context FDrawToRenderTargetContext
 function UKismetRenderingLibrary:EndDrawCanvasToRenderTarget(WorldContextObject, Context) end
+
 ---@param bEnablePathTracer boolean
 function UKismetRenderingLibrary:EnablePathTracing(bEnablePathTracer) end
+
 ---@param WorldContextObject UObject
 ---@param TextureRenderTarget UTextureRenderTarget2D
 ---@param Material UMaterialInterface
 function UKismetRenderingLibrary:DrawMaterialToRenderTarget(WorldContextObject, TextureRenderTarget, Material) end
+
 ---@param WorldContextObject UObject
 ---@param Width int32
 ---@param Height int32
@@ -21810,7 +24417,9 @@ function UKismetRenderingLibrary:DrawMaterialToRenderTarget(WorldContextObject, 
 ---@param bAutoGenerateMipMaps boolean
 ---@param bSupportUAVs boolean
 ---@return UTextureRenderTargetVolume
-function UKismetRenderingLibrary:CreateRenderTargetVolume(WorldContextObject, Width, Height, Depth, Format, ClearColor, bAutoGenerateMipMaps, bSupportUAVs) end
+function UKismetRenderingLibrary:CreateRenderTargetVolume(WorldContextObject, Width, Height, Depth, Format, ClearColor,
+                                                          bAutoGenerateMipMaps, bSupportUAVs) end
+
 ---@param WorldContextObject UObject
 ---@param Width int32
 ---@param Height int32
@@ -21820,7 +24429,9 @@ function UKismetRenderingLibrary:CreateRenderTargetVolume(WorldContextObject, Wi
 ---@param bAutoGenerateMipMaps boolean
 ---@param bSupportUAVs boolean
 ---@return UTextureRenderTarget2DArray
-function UKismetRenderingLibrary:CreateRenderTarget2DArray(WorldContextObject, Width, Height, Slices, Format, ClearColor, bAutoGenerateMipMaps, bSupportUAVs) end
+function UKismetRenderingLibrary:CreateRenderTarget2DArray(WorldContextObject, Width, Height, Slices, Format, ClearColor,
+                                                           bAutoGenerateMipMaps, bSupportUAVs) end
+
 ---@param WorldContextObject UObject
 ---@param Width int32
 ---@param Height int32
@@ -21829,18 +24440,23 @@ function UKismetRenderingLibrary:CreateRenderTarget2DArray(WorldContextObject, W
 ---@param bAutoGenerateMipMaps boolean
 ---@param bSupportUAVs boolean
 ---@return UTextureRenderTarget2D
-function UKismetRenderingLibrary:CreateRenderTarget2D(WorldContextObject, Width, Height, Format, ClearColor, bAutoGenerateMipMaps, bSupportUAVs) end
+function UKismetRenderingLibrary:CreateRenderTarget2D(WorldContextObject, Width, Height, Format, ClearColor,
+                                                      bAutoGenerateMipMaps, bSupportUAVs) end
+
 ---@param WorldContextObject UObject
 ---@param RenderTarget UTextureRenderTarget2D
 ---@param Texture UTexture2D
 function UKismetRenderingLibrary:ConvertRenderTargetToTexture2DEditorOnly(WorldContextObject, RenderTarget, Texture) end
+
 ---@param WorldContextObject UObject
 ---@param TextureRenderTarget UTextureRenderTarget2D
 ---@param ClearColor FLinearColor
 function UKismetRenderingLibrary:ClearRenderTarget2D(WorldContextObject, TextureRenderTarget, ClearColor) end
+
 ---@param MinimalViewInfo FMinimalViewInfo
 ---@return FMatrix
 function UKismetRenderingLibrary:CalculateProjectionMatrix(MinimalViewInfo) end
+
 ---@param InWeight FSkelMeshSkinWeightInfo
 ---@param Bone0 int32
 ---@param Weight0 uint8
@@ -21850,14 +24466,16 @@ function UKismetRenderingLibrary:CalculateProjectionMatrix(MinimalViewInfo) end
 ---@param Weight2 uint8
 ---@param Bone3 int32
 ---@param Weight3 uint8
-function UKismetRenderingLibrary:BreakSkinWeightInfo(InWeight, Bone0, Weight0, Bone1, Weight1, Bone2, Weight2, Bone3, Weight3) end
+function UKismetRenderingLibrary:BreakSkinWeightInfo(InWeight, Bone0, Weight0, Bone1, Weight1, Bone2, Weight2, Bone3,
+                                                     Weight3) end
+
 ---@param WorldContextObject UObject
 ---@param TextureRenderTarget UTextureRenderTarget2D
 ---@param Canvas UCanvas
 ---@param Size FVector2D
 ---@param Context FDrawToRenderTargetContext
-function UKismetRenderingLibrary:BeginDrawCanvasToRenderTarget(WorldContextObject, TextureRenderTarget, Canvas, Size, Context) end
-
+function UKismetRenderingLibrary:BeginDrawCanvasToRenderTarget(WorldContextObject, TextureRenderTarget, Canvas, Size,
+                                                               Context) end
 
 ---@class UKismetStringLibrary : UBlueprintFunctionLibrary
 UKismetStringLibrary = {}
@@ -21865,23 +24483,29 @@ UKismetStringLibrary = {}
 ---@param SourceString FString
 ---@return FString
 function UKismetStringLibrary:TrimTrailing(SourceString) end
+
 ---@param SourceString FString
 ---@return FString
 function UKismetStringLibrary:Trim(SourceString) end
+
 ---@param SourceString FString
 ---@return FString
 function UKismetStringLibrary:ToUpper(SourceString) end
+
 ---@param SourceString FString
 ---@return FString
 function UKismetStringLibrary:ToLower(SourceString) end
+
 ---@param InSeconds float
 ---@return FString
 function UKismetStringLibrary:TimeSecondsToString(InSeconds) end
+
 ---@param SourceString FString
 ---@param InPrefix FString
 ---@param SearchCase ESearchCase::Type
 ---@return boolean
 function UKismetStringLibrary:StartsWith(SourceString, InPrefix, SearchCase) end
+
 ---@param SourceString FString
 ---@param InStr FString
 ---@param LeftS FString
@@ -21890,93 +24514,115 @@ function UKismetStringLibrary:StartsWith(SourceString, InPrefix, SearchCase) end
 ---@param SearchDir ESearchDir::Type
 ---@return boolean
 function UKismetStringLibrary:Split(SourceString, InStr, LeftS, RightS, SearchCase, SearchDir) end
+
 ---@param SourceString FString
 ---@param ChCount int32
 ---@return FString
 function UKismetStringLibrary:RightPad(SourceString, ChCount) end
+
 ---@param SourceString FString
 ---@param Count int32
 ---@return FString
 function UKismetStringLibrary:RightChop(SourceString, Count) end
+
 ---@param SourceString FString
 ---@param Count int32
 ---@return FString
 function UKismetStringLibrary:Right(SourceString, Count) end
+
 ---@param SourceString FString
 ---@return FString
 function UKismetStringLibrary:Reverse(SourceString) end
+
 ---@param SourceString FString
 ---@param SearchText FString
 ---@param ReplacementText FString
 ---@param SearchCase ESearchCase::Type
 ---@return int32
 function UKismetStringLibrary:ReplaceInline(SourceString, SearchText, ReplacementText, SearchCase) end
+
 ---@param SourceString FString
 ---@param From FString
 ---@param To FString
 ---@param SearchCase ESearchCase::Type
 ---@return FString
 function UKismetStringLibrary:Replace(SourceString, From, To, SearchCase) end
+
 ---@param SourceString FString
 ---@param Delimiter FString
 ---@param CullEmptyStrings boolean
 ---@return TArray<FString>
 function UKismetStringLibrary:ParseIntoArray(SourceString, Delimiter, CullEmptyStrings) end
+
 ---@param A FString
 ---@param B FString
 ---@return boolean
 function UKismetStringLibrary:NotEqual_StrStr(A, B) end
+
 ---@param A FString
 ---@param B FString
 ---@return boolean
 function UKismetStringLibrary:NotEqual_StriStri(A, B) end
+
 ---@param SourceString FString
 ---@param Start int32
 ---@param Count int32
 ---@return FString
 function UKismetStringLibrary:Mid(SourceString, Start, Count) end
+
 ---@param SourceString FString
 ---@param Wildcard FString
 ---@param SearchCase ESearchCase::Type
 ---@return boolean
 function UKismetStringLibrary:MatchesWildcard(SourceString, Wildcard, SearchCase) end
+
 ---@param S FString
 ---@return int32
 function UKismetStringLibrary:Len(S) end
+
 ---@param SourceString FString
 ---@param ChCount int32
 ---@return FString
 function UKismetStringLibrary:LeftPad(SourceString, ChCount) end
+
 ---@param SourceString FString
 ---@param Count int32
 ---@return FString
 function UKismetStringLibrary:LeftChop(SourceString, Count) end
+
 ---@param SourceString FString
 ---@param Count int32
 ---@return FString
 function UKismetStringLibrary:Left(SourceString, Count) end
+
 ---@param SourceArray TArray<FString>
 ---@param Separator FString
 ---@return FString
 function UKismetStringLibrary:JoinStringArray(SourceArray, Separator) end
+
 ---@param SourceString FString
 ---@return boolean
 function UKismetStringLibrary:IsNumeric(SourceString) end
+
 ---@param InString FString
 ---@return boolean
 function UKismetStringLibrary:IsEmpty(InString) end
+
 ---@param SourceString FString
 ---@param StartIndex int32
 ---@param Length int32
 ---@return FString
 function UKismetStringLibrary:GetSubstring(SourceString, StartIndex, Length) end
+
 ---@param SourceString FString
 ---@param Index int32
 ---@return int32
 function UKismetStringLibrary:GetCharacterAsNumber(SourceString, Index) end
+
 ---@param SourceString FString
 ---@return TArray<FString>
 function UKismetStringLibrary:GetCharacterArrayFromString(SourceString) end
+
 ---@param SearchIn FString
 ---@param Substring FString
 ---@param bUseCase boolean
@@ -21984,173 +24630,216 @@ function UKismetStringLibrary:GetCharacterArrayFromString(SourceString) end
 ---@param StartPosition int32
 ---@return int32
 function UKismetStringLibrary:FindSubstring(SearchIn, Substring, bUseCase, bSearchFromEnd, StartPosition) end
+
 ---@param A FString
 ---@param B FString
 ---@return boolean
 function UKismetStringLibrary:EqualEqual_StrStr(A, B) end
+
 ---@param A FString
 ---@param B FString
 ---@return boolean
 function UKismetStringLibrary:EqualEqual_StriStri(A, B) end
+
 ---@param SourceString FString
 ---@param InSuffix FString
 ---@param SearchCase ESearchCase::Type
 ---@return boolean
 function UKismetStringLibrary:EndsWith(SourceString, InSuffix, SearchCase) end
+
 ---@param SourceString FString
 ---@param inArray TArray<FString>
 ---@return int32
 function UKismetStringLibrary:CullArray(SourceString, inArray) end
+
 ---@param InVec FVector
 ---@return FString
 function UKismetStringLibrary:Conv_VectorToString(InVec) end
+
 ---@param InVec FVector3f
 ---@return FString
 function UKismetStringLibrary:Conv_Vector3fToString(InVec) end
+
 ---@param InVec FVector2D
 ---@return FString
 function UKismetStringLibrary:Conv_Vector2dToString(InVec) end
+
 ---@param InTrans FTransform
 ---@return FString
 function UKismetStringLibrary:Conv_TransformToString(InTrans) end
+
 ---@param InString FString
 ---@param OutConvertedVector FVector3f
 ---@param OutIsValid boolean
 function UKismetStringLibrary:Conv_StringToVector3f(InString, OutConvertedVector, OutIsValid) end
+
 ---@param InString FString
 ---@param OutConvertedVector2D FVector2D
 ---@param OutIsValid boolean
 function UKismetStringLibrary:Conv_StringToVector2D(InString, OutConvertedVector2D, OutIsValid) end
+
 ---@param InString FString
 ---@param OutConvertedVector FVector
 ---@param OutIsValid boolean
 function UKismetStringLibrary:Conv_StringToVector(InString, OutConvertedVector, OutIsValid) end
+
 ---@param InString FString
 ---@param OutConvertedRotator FRotator
 ---@param OutIsValid boolean
 function UKismetStringLibrary:Conv_StringToRotator(InString, OutConvertedRotator, OutIsValid) end
+
 ---@param InString FString
 ---@return FName
 function UKismetStringLibrary:Conv_StringToName(InString) end
+
 ---@param InString FString
 ---@return int64
 function UKismetStringLibrary:Conv_StringToInt64(InString) end
+
 ---@param InString FString
 ---@return int32
 function UKismetStringLibrary:Conv_StringToInt(InString) end
+
 ---@param InString FString
 ---@return double
 function UKismetStringLibrary:Conv_StringToDouble(InString) end
+
 ---@param InString FString
 ---@param OutConvertedColor FLinearColor
 ---@param OutIsValid boolean
 function UKismetStringLibrary:Conv_StringToColor(InString, OutConvertedColor, OutIsValid) end
+
 ---@param InRot FRotator
 ---@return FString
 function UKismetStringLibrary:Conv_RotatorToString(InRot) end
+
 ---@param InPlatformUserId FPlatformUserId
 ---@return FString
 function UKismetStringLibrary:Conv_PlatformUserIdToString(InPlatformUserId) end
+
 ---@param InObj UObject
 ---@return FString
 function UKismetStringLibrary:Conv_ObjectToString(InObj) end
+
 ---@param InName FName
 ---@return FString
 function UKismetStringLibrary:Conv_NameToString(InName) end
+
 ---@param InMatrix FMatrix
 ---@return FString
 function UKismetStringLibrary:Conv_MatrixToString(InMatrix) end
+
 ---@param InIntVec FIntVector
 ---@return FString
 function UKismetStringLibrary:Conv_IntVectorToString(InIntVec) end
+
 ---@param inInt int32
 ---@return FString
 function UKismetStringLibrary:Conv_IntToString(inInt) end
+
 ---@param InIntPoint FIntPoint
 ---@return FString
 function UKismetStringLibrary:Conv_IntPointToString(InIntPoint) end
+
 ---@param inInt int64
 ---@return FString
 function UKismetStringLibrary:Conv_Int64ToString(inInt) end
+
 ---@param InDeviceId FInputDeviceId
 ---@return FString
 function UKismetStringLibrary:Conv_InputDeviceIdToString(InDeviceId) end
+
 ---@param InDouble double
 ---@return FString
 function UKismetStringLibrary:Conv_DoubleToString(InDouble) end
+
 ---@param InColor FLinearColor
 ---@return FString
 function UKismetStringLibrary:Conv_ColorToString(InColor) end
+
 ---@param InByte uint8
 ---@return FString
 function UKismetStringLibrary:Conv_ByteToString(InByte) end
+
 ---@param InBool boolean
 ---@return FString
 function UKismetStringLibrary:Conv_BoolToString(InBool) end
+
 ---@param SearchIn FString
 ---@param Substring FString
 ---@param bUseCase boolean
 ---@param bSearchFromEnd boolean
 ---@return boolean
 function UKismetStringLibrary:Contains(SearchIn, Substring, bUseCase, bSearchFromEnd) end
+
 ---@param A FString
 ---@param B FString
 ---@return FString
 function UKismetStringLibrary:Concat_StrStr(A, B) end
+
 ---@param AppendTo FString
 ---@param Prefix FString
 ---@param InVector2D FVector2D
 ---@param Suffix FString
 ---@return FString
 function UKismetStringLibrary:BuildString_Vector2d(AppendTo, Prefix, InVector2D, Suffix) end
+
 ---@param AppendTo FString
 ---@param Prefix FString
 ---@param InVector FVector
 ---@param Suffix FString
 ---@return FString
 function UKismetStringLibrary:BuildString_Vector(AppendTo, Prefix, InVector, Suffix) end
+
 ---@param AppendTo FString
 ---@param Prefix FString
 ---@param InRot FRotator
 ---@param Suffix FString
 ---@return FString
 function UKismetStringLibrary:BuildString_Rotator(AppendTo, Prefix, InRot, Suffix) end
+
 ---@param AppendTo FString
 ---@param Prefix FString
 ---@param InObj UObject
 ---@param Suffix FString
 ---@return FString
 function UKismetStringLibrary:BuildString_Object(AppendTo, Prefix, InObj, Suffix) end
+
 ---@param AppendTo FString
 ---@param Prefix FString
 ---@param InName FName
 ---@param Suffix FString
 ---@return FString
 function UKismetStringLibrary:BuildString_Name(AppendTo, Prefix, InName, Suffix) end
+
 ---@param AppendTo FString
 ---@param Prefix FString
 ---@param InIntVector FIntVector
 ---@param Suffix FString
 ---@return FString
 function UKismetStringLibrary:BuildString_IntVector(AppendTo, Prefix, InIntVector, Suffix) end
+
 ---@param AppendTo FString
 ---@param Prefix FString
 ---@param inInt int32
 ---@param Suffix FString
 ---@return FString
 function UKismetStringLibrary:BuildString_Int(AppendTo, Prefix, inInt, Suffix) end
+
 ---@param AppendTo FString
 ---@param Prefix FString
 ---@param InDouble double
 ---@param Suffix FString
 ---@return FString
 function UKismetStringLibrary:BuildString_Double(AppendTo, Prefix, InDouble, Suffix) end
+
 ---@param AppendTo FString
 ---@param Prefix FString
 ---@param InColor FLinearColor
 ---@param Suffix FString
 ---@return FString
 function UKismetStringLibrary:BuildString_Color(AppendTo, Prefix, InColor, Suffix) end
+
 ---@param AppendTo FString
 ---@param Prefix FString
 ---@param InBool boolean
@@ -22158,51 +24847,61 @@ function UKismetStringLibrary:BuildString_Color(AppendTo, Prefix, InColor, Suffi
 ---@return FString
 function UKismetStringLibrary:BuildString_Bool(AppendTo, Prefix, InBool, Suffix) end
 
-
 ---@class UKismetStringTableLibrary : UBlueprintFunctionLibrary
 UKismetStringTableLibrary = {}
 
 ---@param TableId FName
 ---@return boolean
 function UKismetStringTableLibrary:IsRegisteredTableId(TableId) end
+
 ---@param TableId FName
 ---@param Key FString
 ---@return boolean
 function UKismetStringTableLibrary:IsRegisteredTableEntry(TableId, Key) end
+
 ---@param TableId FName
 ---@return FString
 function UKismetStringTableLibrary:GetTableNamespace(TableId) end
+
 ---@param TableId FName
 ---@param Key FString
 ---@return FString
 function UKismetStringTableLibrary:GetTableEntrySourceString(TableId, Key) end
+
 ---@param TableId FName
 ---@param Key FString
 ---@param MetaDataId FName
 ---@return FString
 function UKismetStringTableLibrary:GetTableEntryMetaData(TableId, Key, MetaDataId) end
+
 ---@return TArray<FName>
 function UKismetStringTableLibrary:GetRegisteredStringTables() end
+
 ---@param TableId FName
 ---@param Key FString
 ---@return TArray<FName>
 function UKismetStringTableLibrary:GetMetaDataIdsFromStringTableEntry(TableId, Key) end
+
 ---@param TableId FName
 ---@return TArray<FString>
 function UKismetStringTableLibrary:GetKeysFromStringTable(TableId) end
-
 
 ---@class UKismetSystemLibrary : UBlueprintFunctionLibrary
 UKismetSystemLibrary = {}
 
 function UKismetSystemLibrary:UnregisterForRemoteNotifications() end
+
 ---@param PrimaryAssetIdList TArray<FPrimaryAssetId>
 function UKismetSystemLibrary:UnloadPrimaryAssetList(PrimaryAssetIdList) end
+
 ---@param PrimaryAssetId FPrimaryAssetId
 function UKismetSystemLibrary:UnloadPrimaryAsset(PrimaryAssetId) end
+
 ---@param Object UObject
 function UKismetSystemLibrary:TransactObject(Object) end
+
 function UKismetSystemLibrary:StackTrace() end
+
 ---@param WorldContextObject UObject
 ---@param Start FVector
 ---@param End FVector
@@ -22217,7 +24916,10 @@ function UKismetSystemLibrary:StackTrace() end
 ---@param TraceHitColor FLinearColor
 ---@param DrawTime float
 ---@return boolean
-function UKismetSystemLibrary:SphereTraceSingleForObjects(WorldContextObject, Start, End, Radius, ObjectTypes, bTraceComplex, ActorsToIgnore, DrawDebugType, OutHit, bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+function UKismetSystemLibrary:SphereTraceSingleForObjects(WorldContextObject, Start, End, Radius, ObjectTypes,
+                                                          bTraceComplex, ActorsToIgnore, DrawDebugType, OutHit,
+                                                          bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+
 ---@param WorldContextObject UObject
 ---@param Start FVector
 ---@param End FVector
@@ -22232,7 +24934,10 @@ function UKismetSystemLibrary:SphereTraceSingleForObjects(WorldContextObject, St
 ---@param TraceHitColor FLinearColor
 ---@param DrawTime float
 ---@return boolean
-function UKismetSystemLibrary:SphereTraceSingleByProfile(WorldContextObject, Start, End, Radius, ProfileName, bTraceComplex, ActorsToIgnore, DrawDebugType, OutHit, bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+function UKismetSystemLibrary:SphereTraceSingleByProfile(WorldContextObject, Start, End, Radius, ProfileName,
+                                                         bTraceComplex, ActorsToIgnore, DrawDebugType, OutHit,
+                                                         bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+
 ---@param WorldContextObject UObject
 ---@param Start FVector
 ---@param End FVector
@@ -22247,7 +24952,10 @@ function UKismetSystemLibrary:SphereTraceSingleByProfile(WorldContextObject, Sta
 ---@param TraceHitColor FLinearColor
 ---@param DrawTime float
 ---@return boolean
-function UKismetSystemLibrary:SphereTraceSingle(WorldContextObject, Start, End, Radius, TraceChannel, bTraceComplex, ActorsToIgnore, DrawDebugType, OutHit, bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+function UKismetSystemLibrary:SphereTraceSingle(WorldContextObject, Start, End, Radius, TraceChannel, bTraceComplex,
+                                                ActorsToIgnore, DrawDebugType, OutHit, bIgnoreSelf, TraceColor,
+                                                TraceHitColor, DrawTime) end
+
 ---@param WorldContextObject UObject
 ---@param Start FVector
 ---@param End FVector
@@ -22262,7 +24970,10 @@ function UKismetSystemLibrary:SphereTraceSingle(WorldContextObject, Start, End, 
 ---@param TraceHitColor FLinearColor
 ---@param DrawTime float
 ---@return boolean
-function UKismetSystemLibrary:SphereTraceMultiForObjects(WorldContextObject, Start, End, Radius, ObjectTypes, bTraceComplex, ActorsToIgnore, DrawDebugType, OutHits, bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+function UKismetSystemLibrary:SphereTraceMultiForObjects(WorldContextObject, Start, End, Radius, ObjectTypes,
+                                                         bTraceComplex, ActorsToIgnore, DrawDebugType, OutHits,
+                                                         bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+
 ---@param WorldContextObject UObject
 ---@param Start FVector
 ---@param End FVector
@@ -22277,7 +24988,10 @@ function UKismetSystemLibrary:SphereTraceMultiForObjects(WorldContextObject, Sta
 ---@param TraceHitColor FLinearColor
 ---@param DrawTime float
 ---@return boolean
-function UKismetSystemLibrary:SphereTraceMultiByProfile(WorldContextObject, Start, End, Radius, ProfileName, bTraceComplex, ActorsToIgnore, DrawDebugType, OutHits, bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+function UKismetSystemLibrary:SphereTraceMultiByProfile(WorldContextObject, Start, End, Radius, ProfileName,
+                                                        bTraceComplex, ActorsToIgnore, DrawDebugType, OutHits,
+                                                        bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+
 ---@param WorldContextObject UObject
 ---@param Start FVector
 ---@param End FVector
@@ -22292,7 +25006,10 @@ function UKismetSystemLibrary:SphereTraceMultiByProfile(WorldContextObject, Star
 ---@param TraceHitColor FLinearColor
 ---@param DrawTime float
 ---@return boolean
-function UKismetSystemLibrary:SphereTraceMulti(WorldContextObject, Start, End, Radius, TraceChannel, bTraceComplex, ActorsToIgnore, DrawDebugType, OutHits, bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+function UKismetSystemLibrary:SphereTraceMulti(WorldContextObject, Start, End, Radius, TraceChannel, bTraceComplex,
+                                               ActorsToIgnore, DrawDebugType, OutHits, bIgnoreSelf, TraceColor,
+                                               TraceHitColor, DrawTime) end
+
 ---@param WorldContextObject UObject
 ---@param SpherePos FVector
 ---@param SphereRadius float
@@ -22301,7 +25018,9 @@ function UKismetSystemLibrary:SphereTraceMulti(WorldContextObject, Start, End, R
 ---@param ActorsToIgnore TArray<AActor>
 ---@param OutComponents TArray<UPrimitiveComponent>
 ---@return boolean
-function UKismetSystemLibrary:SphereOverlapComponents(WorldContextObject, SpherePos, SphereRadius, ObjectTypes, ComponentClassFilter, ActorsToIgnore, OutComponents) end
+function UKismetSystemLibrary:SphereOverlapComponents(WorldContextObject, SpherePos, SphereRadius, ObjectTypes,
+                                                      ComponentClassFilter, ActorsToIgnore, OutComponents) end
+
 ---@param WorldContextObject UObject
 ---@param SpherePos FVector
 ---@param SphereRadius float
@@ -22310,131 +25029,171 @@ function UKismetSystemLibrary:SphereOverlapComponents(WorldContextObject, Sphere
 ---@param ActorsToIgnore TArray<AActor>
 ---@param OutActors TArray<AActor>
 ---@return boolean
-function UKismetSystemLibrary:SphereOverlapActors(WorldContextObject, SpherePos, SphereRadius, ObjectTypes, ActorClassFilter, ActorsToIgnore, OutActors) end
+function UKismetSystemLibrary:SphereOverlapActors(WorldContextObject, SpherePos, SphereRadius, ObjectTypes,
+                                                  ActorClassFilter, ActorsToIgnore, OutActors) end
+
 ---@param Object UObject
 function UKismetSystemLibrary:SnapshotObject(Object) end
+
 ---@param CategoryName FString
 function UKismetSystemLibrary:ShowPlatformSpecificLeaderboardScreen(CategoryName) end
+
 ---@param SpecificPlayer APlayerController
 function UKismetSystemLibrary:ShowPlatformSpecificAchievementsScreen(SpecificPlayer) end
+
 function UKismetSystemLibrary:ShowInterstitialAd() end
+
 ---@param AdIdIndex int32
 ---@param bShowOnBottomOfScreen boolean
 function UKismetSystemLibrary:ShowAdBanner(AdIdIndex, bShowOnBottomOfScreen) end
+
 ---@param Title FText
 function UKismetSystemLibrary:SetWindowTitle(Title) end
+
 ---@param bEnabled boolean
 function UKismetSystemLibrary:SetVolumeButtonsHandledBySystem(bEnabled) end
+
 ---@param Object UObject
 ---@param PropertyName FName
 ---@param Value FVector
 function UKismetSystemLibrary:SetVectorPropertyByName(Object, PropertyName, Value) end
+
 ---@param Object UObject
 ---@param PropertyName FName
 ---@param Value FVector3f
 function UKismetSystemLibrary:SetVector3fPropertyByName(Object, PropertyName, Value) end
+
 ---@param UserActivity FUserActivity
 function UKismetSystemLibrary:SetUserActivity(UserActivity) end
+
 ---@param Object UObject
 ---@param PropertyName FName
 ---@param Value FTransform
 function UKismetSystemLibrary:SetTransformPropertyByName(Object, PropertyName, Value) end
+
 ---@param Object UObject
 ---@param PropertyName FName
 ---@param Value FText
 function UKismetSystemLibrary:SetTextPropertyByName(Object, PropertyName, Value) end
+
 ---@param WorldContextObject UObject
 ---@param bState boolean
 function UKismetSystemLibrary:SetSuppressViewportTransitionMessage(WorldContextObject, bState) end
+
 ---@param Object UObject
 ---@param PropertyName FName
 ---@param Value FGenericStruct
 function UKismetSystemLibrary:SetStructurePropertyByName(Object, PropertyName, Value) end
+
 ---@param Object UObject
 ---@param PropertyName FName
 ---@param Value FString
 function UKismetSystemLibrary:SetStringPropertyByName(Object, PropertyName, Value) end
+
 ---@param Object UObject
 ---@param PropertyName FName
 ---@param Value TSoftObjectPtr<UObject>
 function UKismetSystemLibrary:SetSoftObjectPropertyByName(Object, PropertyName, Value) end
+
 ---@param Object UObject
 ---@param PropertyName FName
 ---@param Value TSoftClassPtr<UObject>
 function UKismetSystemLibrary:SetSoftClassPropertyByName(Object, PropertyName, Value) end
+
 ---@param Object UObject
 ---@param PropertyName FName
 ---@param Value FRotator
 function UKismetSystemLibrary:SetRotatorPropertyByName(Object, PropertyName, Value) end
+
 ---@param Object UObject
 ---@param PropertyName FName
 ---@param Value UObject
 function UKismetSystemLibrary:SetObjectPropertyByName(Object, PropertyName, Value) end
+
 ---@param Object UObject
 ---@param PropertyName FName
 ---@param Value FName
 function UKismetSystemLibrary:SetNamePropertyByName(Object, PropertyName, Value) end
+
 ---@param Object UObject
 ---@param PropertyName FName
 ---@param Value FLinearColor
 function UKismetSystemLibrary:SetLinearColorPropertyByName(Object, PropertyName, Value) end
+
 ---@param Object UObject
 ---@param PropertyName FName
 ---@param Value int32
 function UKismetSystemLibrary:SetIntPropertyByName(Object, PropertyName, Value) end
+
 ---@param Object UObject
 ---@param PropertyName FName
 ---@param Value FScriptInterface
 function UKismetSystemLibrary:SetInterfacePropertyByName(Object, PropertyName, Value) end
+
 ---@param Object UObject
 ---@param PropertyName FName
 ---@param Value int64
 function UKismetSystemLibrary:SetInt64PropertyByName(Object, PropertyName, Value) end
+
 ---@param bBlock boolean
 function UKismetSystemLibrary:SetGamepadsBlockDeviceFeedback(bBlock) end
+
 ---@param Object UObject
 ---@param PropertyName FName
 ---@param Value TFieldPath<FField>
 function UKismetSystemLibrary:SetFieldPathPropertyByName(Object, PropertyName, Value) end
+
 ---@param Object UObject
 ---@param PropertyName FName
 ---@param Value double
 function UKismetSystemLibrary:SetDoublePropertyByName(Object, PropertyName, Value) end
+
 ---@param Object UObject
 ---@param PropertyName FName
 ---@param Value FColor
 function UKismetSystemLibrary:SetColorPropertyByName(Object, PropertyName, Value) end
+
 ---@param Object UObject
 ---@param PropertyName FName
 ---@param Value FCollisionProfileName
 function UKismetSystemLibrary:SetCollisionProfileNameProperty(Object, PropertyName, Value) end
+
 ---@param Object UObject
 ---@param PropertyName FName
 ---@param Value UClass
 function UKismetSystemLibrary:SetClassPropertyByName(Object, PropertyName, Value) end
+
 ---@param Object UObject
 ---@param PropertyName FName
 ---@param Value uint8
 function UKismetSystemLibrary:SetBytePropertyByName(Object, PropertyName, Value) end
+
 ---@param Object UObject
 ---@param PropertyName FName
 ---@param Value boolean
 function UKismetSystemLibrary:SetBoolPropertyByName(Object, PropertyName, Value) end
+
 ---@param WorldContextObject UObject
 ---@param Duration float
 ---@param LatentInfo FLatentActionInfo
 function UKismetSystemLibrary:RetriggerableDelay(WorldContextObject, Duration, LatentInfo) end
+
 ---@param ControllerId int32
 function UKismetSystemLibrary:ResetGamepadAssignmentToController(ControllerId) end
+
 function UKismetSystemLibrary:ResetGamepadAssignments() end
+
 function UKismetSystemLibrary:RegisterForRemoteNotifications() end
+
 ---@param WorldContextObject UObject
 ---@param SpecificPlayer APlayerController
 ---@param QuitPreference EQuitPreference::Type
 ---@param bIgnorePlatformRestrictions boolean
 function UKismetSystemLibrary:QuitGame(WorldContextObject, SpecificPlayer, QuitPreference, bIgnorePlatformRestrictions) end
+
 ---@param InString FString
 function UKismetSystemLibrary:PrintWarning(InString) end
+
 ---@param WorldContextObject UObject
 ---@param InText FText
 ---@param bPrintToScreen boolean
@@ -22443,6 +25202,7 @@ function UKismetSystemLibrary:PrintWarning(InString) end
 ---@param Duration float
 ---@param Key FName
 function UKismetSystemLibrary:PrintText(WorldContextObject, InText, bPrintToScreen, bPrintToLog, TextColor, Duration, Key) end
+
 ---@param WorldContextObject UObject
 ---@param InString FString
 ---@param bPrintToScreen boolean
@@ -22450,44 +25210,56 @@ function UKismetSystemLibrary:PrintText(WorldContextObject, InText, bPrintToScre
 ---@param TextColor FLinearColor
 ---@param Duration float
 ---@param Key FName
-function UKismetSystemLibrary:PrintString(WorldContextObject, InString, bPrintToScreen, bPrintToLog, TextColor, Duration, Key) end
+function UKismetSystemLibrary:PrintString(WorldContextObject, InString, bPrintToScreen, bPrintToLog, TextColor, Duration,
+                                          Key) end
+
 ---@param InString FString
 ---@param InParam FString
 ---@param OutValue FString
 ---@return boolean
 function UKismetSystemLibrary:ParseParamValue(InString, InParam, OutValue) end
+
 ---@param InString FString
 ---@param InParam FString
 ---@return boolean
 function UKismetSystemLibrary:ParseParam(InString, InParam) end
+
 ---@param InCmdLine FString
 ---@param OutTokens TArray<FString>
 ---@param OutSwitches TArray<FString>
 ---@param OutParams TMap<FString, FString>
 function UKismetSystemLibrary:ParseCommandLine(InCmdLine, OutTokens, OutSwitches, OutParams) end
+
 ---@param Loaded UObject
 function UKismetSystemLibrary:OnAssetLoaded__DelegateSignature(Loaded) end
+
 ---@param Loaded UClass
 function UKismetSystemLibrary:OnAssetClassLoaded__DelegateSignature(Loaded) end
+
 ---@param A TSoftObjectPtr<UObject>
 ---@param B TSoftObjectPtr<UObject>
 ---@return boolean
 function UKismetSystemLibrary:NotEqual_SoftObjectReference(A, B) end
+
 ---@param A TSoftClassPtr<UObject>
 ---@param B TSoftClassPtr<UObject>
 ---@return boolean
 function UKismetSystemLibrary:NotEqual_SoftClassReference(A, B) end
+
 ---@param A FPrimaryAssetType
 ---@param B FPrimaryAssetType
 ---@return boolean
 function UKismetSystemLibrary:NotEqual_PrimaryAssetType(A, B) end
+
 ---@param A FPrimaryAssetId
 ---@param B FPrimaryAssetId
 ---@return boolean
 function UKismetSystemLibrary:NotEqual_PrimaryAssetId(A, B) end
+
 ---@param InFilename FString
 ---@return FString
 function UKismetSystemLibrary:NormalizeFilename(InFilename) end
+
 ---@param Component USceneComponent
 ---@param TargetRelativeLocation FVector
 ---@param TargetRelativeRotation FRotator
@@ -22497,41 +25269,54 @@ function UKismetSystemLibrary:NormalizeFilename(InFilename) end
 ---@param bForceShortestRotationPath boolean
 ---@param MoveAction EMoveComponentAction::Type
 ---@param LatentInfo FLatentActionInfo
-function UKismetSystemLibrary:MoveComponentTo(Component, TargetRelativeLocation, TargetRelativeRotation, bEaseOut, bEaseIn, OverTime, bForceShortestRotationPath, MoveAction, LatentInfo) end
+function UKismetSystemLibrary:MoveComponentTo(Component, TargetRelativeLocation, TargetRelativeRotation, bEaseOut,
+                                              bEaseIn, OverTime, bForceShortestRotationPath, MoveAction, LatentInfo) end
+
 ---@param PackageName FString
 ---@param AssetName FString
 ---@return FTopLevelAssetPath
 function UKismetSystemLibrary:MakeTopLevelAssetPath(PackageName, AssetName) end
+
 ---@param PathString FString
 ---@return FSoftObjectPath
 function UKismetSystemLibrary:MakeSoftObjectPath(PathString) end
+
 ---@param PathString FString
 ---@return FSoftClassPath
 function UKismetSystemLibrary:MakeSoftClassPath(PathString) end
+
 ---@param Value FText
 ---@return FText
 function UKismetSystemLibrary:MakeLiteralText(Value) end
+
 ---@param Value FString
 ---@return FString
 function UKismetSystemLibrary:MakeLiteralString(Value) end
+
 ---@param Value FName
 ---@return FName
 function UKismetSystemLibrary:MakeLiteralName(Value) end
+
 ---@param Value int64
 ---@return int64
 function UKismetSystemLibrary:MakeLiteralInt64(Value) end
+
 ---@param Value int32
 ---@return int32
 function UKismetSystemLibrary:MakeLiteralInt(Value) end
+
 ---@param Value double
 ---@return double
 function UKismetSystemLibrary:MakeLiteralDouble(Value) end
+
 ---@param Value uint8
 ---@return uint8
 function UKismetSystemLibrary:MakeLiteralByte(Value) end
+
 ---@param Value boolean
 ---@return boolean
 function UKismetSystemLibrary:MakeLiteralBool(Value) end
+
 ---@param PackageNames TArray<FName>
 ---@param PackagePaths TArray<FName>
 ---@param SoftObjectPaths TArray<FSoftObjectPath>
@@ -22543,28 +25328,37 @@ function UKismetSystemLibrary:MakeLiteralBool(Value) end
 ---@param bRecursiveClasses boolean
 ---@param bIncludeOnlyOnDiskAssets boolean
 ---@return FARFilter
-function UKismetSystemLibrary:MakeARFilter(PackageNames, PackagePaths, SoftObjectPaths, ClassPaths, RecursiveClassPathsExclusionSet, ClassNames, RecursiveClassesExclusionSet, bRecursivePaths, bRecursiveClasses, bIncludeOnlyOnDiskAssets) end
+function UKismetSystemLibrary:MakeARFilter(PackageNames, PackagePaths, SoftObjectPaths, ClassPaths,
+                                           RecursiveClassPathsExclusionSet, ClassNames, RecursiveClassesExclusionSet,
+                                           bRecursivePaths, bRecursiveClasses, bIncludeOnlyOnDiskAssets) end
+
 ---@param InString FString
 ---@param bPrintToLog boolean
 function UKismetSystemLibrary:LogString(InString, bPrintToLog) end
+
 ---@param AdIdIndex int32
 function UKismetSystemLibrary:LoadInterstitialAd(AdIdIndex) end
+
 ---@param AssetClass TSoftClassPtr<UObject>
 ---@return UClass
 function UKismetSystemLibrary:LoadClassAsset_Blocking(AssetClass) end
+
 ---@param WorldContextObject UObject
 ---@param AssetClass TSoftClassPtr<UObject>
 ---@param OnLoaded FLoadAssetClassOnLoaded
 ---@param LatentInfo FLatentActionInfo
 function UKismetSystemLibrary:LoadAssetClass(WorldContextObject, AssetClass, OnLoaded, LatentInfo) end
+
 ---@param Asset TSoftObjectPtr<UObject>
 ---@return UObject
 function UKismetSystemLibrary:LoadAsset_Blocking(Asset) end
+
 ---@param WorldContextObject UObject
 ---@param Asset TSoftObjectPtr<UObject>
 ---@param OnLoaded FLoadAssetOnLoaded
 ---@param LatentInfo FLatentActionInfo
 function UKismetSystemLibrary:LoadAsset(WorldContextObject, Asset, OnLoaded, LatentInfo) end
+
 ---@param WorldContextObject UObject
 ---@param Start FVector
 ---@param End FVector
@@ -22578,7 +25372,10 @@ function UKismetSystemLibrary:LoadAsset(WorldContextObject, Asset, OnLoaded, Lat
 ---@param TraceHitColor FLinearColor
 ---@param DrawTime float
 ---@return boolean
-function UKismetSystemLibrary:LineTraceSingleForObjects(WorldContextObject, Start, End, ObjectTypes, bTraceComplex, ActorsToIgnore, DrawDebugType, OutHit, bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+function UKismetSystemLibrary:LineTraceSingleForObjects(WorldContextObject, Start, End, ObjectTypes, bTraceComplex,
+                                                        ActorsToIgnore, DrawDebugType, OutHit, bIgnoreSelf, TraceColor,
+                                                        TraceHitColor, DrawTime) end
+
 ---@param WorldContextObject UObject
 ---@param Start FVector
 ---@param End FVector
@@ -22592,7 +25389,10 @@ function UKismetSystemLibrary:LineTraceSingleForObjects(WorldContextObject, Star
 ---@param TraceHitColor FLinearColor
 ---@param DrawTime float
 ---@return boolean
-function UKismetSystemLibrary:LineTraceSingleByProfile(WorldContextObject, Start, End, ProfileName, bTraceComplex, ActorsToIgnore, DrawDebugType, OutHit, bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+function UKismetSystemLibrary:LineTraceSingleByProfile(WorldContextObject, Start, End, ProfileName, bTraceComplex,
+                                                       ActorsToIgnore, DrawDebugType, OutHit, bIgnoreSelf, TraceColor,
+                                                       TraceHitColor, DrawTime) end
+
 ---@param WorldContextObject UObject
 ---@param Start FVector
 ---@param End FVector
@@ -22606,7 +25406,9 @@ function UKismetSystemLibrary:LineTraceSingleByProfile(WorldContextObject, Start
 ---@param TraceHitColor FLinearColor
 ---@param DrawTime float
 ---@return boolean
-function UKismetSystemLibrary:LineTraceSingle(WorldContextObject, Start, End, TraceChannel, bTraceComplex, ActorsToIgnore, DrawDebugType, OutHit, bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+function UKismetSystemLibrary:LineTraceSingle(WorldContextObject, Start, End, TraceChannel, bTraceComplex, ActorsToIgnore,
+                                              DrawDebugType, OutHit, bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+
 ---@param WorldContextObject UObject
 ---@param Start FVector
 ---@param End FVector
@@ -22620,7 +25422,10 @@ function UKismetSystemLibrary:LineTraceSingle(WorldContextObject, Start, End, Tr
 ---@param TraceHitColor FLinearColor
 ---@param DrawTime float
 ---@return boolean
-function UKismetSystemLibrary:LineTraceMultiForObjects(WorldContextObject, Start, End, ObjectTypes, bTraceComplex, ActorsToIgnore, DrawDebugType, OutHits, bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+function UKismetSystemLibrary:LineTraceMultiForObjects(WorldContextObject, Start, End, ObjectTypes, bTraceComplex,
+                                                       ActorsToIgnore, DrawDebugType, OutHits, bIgnoreSelf, TraceColor,
+                                                       TraceHitColor, DrawTime) end
+
 ---@param WorldContextObject UObject
 ---@param Start FVector
 ---@param End FVector
@@ -22634,7 +25439,10 @@ function UKismetSystemLibrary:LineTraceMultiForObjects(WorldContextObject, Start
 ---@param TraceHitColor FLinearColor
 ---@param DrawTime float
 ---@return boolean
-function UKismetSystemLibrary:LineTraceMultiByProfile(WorldContextObject, Start, End, ProfileName, bTraceComplex, ActorsToIgnore, DrawDebugType, OutHits, bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+function UKismetSystemLibrary:LineTraceMultiByProfile(WorldContextObject, Start, End, ProfileName, bTraceComplex,
+                                                      ActorsToIgnore, DrawDebugType, OutHits, bIgnoreSelf, TraceColor,
+                                                      TraceHitColor, DrawTime) end
+
 ---@param WorldContextObject UObject
 ---@param Start FVector
 ---@param End FVector
@@ -22648,35 +25456,46 @@ function UKismetSystemLibrary:LineTraceMultiByProfile(WorldContextObject, Start,
 ---@param TraceHitColor FLinearColor
 ---@param DrawTime float
 ---@return boolean
-function UKismetSystemLibrary:LineTraceMulti(WorldContextObject, Start, End, TraceChannel, bTraceComplex, ActorsToIgnore, DrawDebugType, OutHits, bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+function UKismetSystemLibrary:LineTraceMulti(WorldContextObject, Start, End, TraceChannel, bTraceComplex, ActorsToIgnore,
+                                             DrawDebugType, OutHits, bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+
 ---@param URL FString
 function UKismetSystemLibrary:LaunchURL(URL) end
+
 ---@param WorldContextObject UObject
 ---@param Handle FTimerHandle
 function UKismetSystemLibrary:K2_UnPauseTimerHandle(WorldContextObject, Handle) end
+
 ---@param Delegate FK2_UnPauseTimerDelegateDelegate
 function UKismetSystemLibrary:K2_UnPauseTimerDelegate(Delegate) end
+
 ---@param Object UObject
 ---@param FunctionName FString
 function UKismetSystemLibrary:K2_UnPauseTimer(Object, FunctionName) end
+
 ---@param WorldContextObject UObject
 ---@param Handle FTimerHandle
 ---@return boolean
 function UKismetSystemLibrary:K2_TimerExistsHandle(WorldContextObject, Handle) end
+
 ---@param Delegate FK2_TimerExistsDelegateDelegate
 ---@return boolean
 function UKismetSystemLibrary:K2_TimerExistsDelegate(Delegate) end
+
 ---@param Object UObject
 ---@param FunctionName FString
 ---@return boolean
 function UKismetSystemLibrary:K2_TimerExists(Object, FunctionName) end
+
 ---@param Delegate FK2_SetTimerForNextTickDelegateDelegate
 ---@return FTimerHandle
 function UKismetSystemLibrary:K2_SetTimerForNextTickDelegate(Delegate) end
+
 ---@param Object UObject
 ---@param FunctionName FString
 ---@return FTimerHandle
 function UKismetSystemLibrary:K2_SetTimerForNextTick(Object, FunctionName) end
+
 ---@param Delegate FK2_SetTimerDelegateDelegate
 ---@param Time float
 ---@param bLooping boolean
@@ -22684,6 +25503,7 @@ function UKismetSystemLibrary:K2_SetTimerForNextTick(Object, FunctionName) end
 ---@param InitialStartDelayVariance float
 ---@return FTimerHandle
 function UKismetSystemLibrary:K2_SetTimerDelegate(Delegate, Time, bLooping, InitialStartDelay, InitialStartDelayVariance) end
+
 ---@param Object UObject
 ---@param FunctionName FString
 ---@param Time float
@@ -22691,318 +25511,430 @@ function UKismetSystemLibrary:K2_SetTimerDelegate(Delegate, Time, bLooping, Init
 ---@param InitialStartDelay float
 ---@param InitialStartDelayVariance float
 ---@return FTimerHandle
-function UKismetSystemLibrary:K2_SetTimer(Object, FunctionName, Time, bLooping, InitialStartDelay, InitialStartDelayVariance) end
+function UKismetSystemLibrary:K2_SetTimer(Object, FunctionName, Time, bLooping, InitialStartDelay,
+                                          InitialStartDelayVariance) end
+
 ---@param WorldContextObject UObject
 ---@param Handle FTimerHandle
 function UKismetSystemLibrary:K2_PauseTimerHandle(WorldContextObject, Handle) end
+
 ---@param Delegate FK2_PauseTimerDelegateDelegate
 function UKismetSystemLibrary:K2_PauseTimerDelegate(Delegate) end
+
 ---@param Object UObject
 ---@param FunctionName FString
 function UKismetSystemLibrary:K2_PauseTimer(Object, FunctionName) end
+
 ---@param Handle FTimerHandle
 ---@return boolean
 function UKismetSystemLibrary:K2_IsValidTimerHandle(Handle) end
+
 ---@param WorldContextObject UObject
 ---@param Handle FTimerHandle
 ---@return boolean
 function UKismetSystemLibrary:K2_IsTimerPausedHandle(WorldContextObject, Handle) end
+
 ---@param Delegate FK2_IsTimerPausedDelegateDelegate
 ---@return boolean
 function UKismetSystemLibrary:K2_IsTimerPausedDelegate(Delegate) end
+
 ---@param Object UObject
 ---@param FunctionName FString
 ---@return boolean
 function UKismetSystemLibrary:K2_IsTimerPaused(Object, FunctionName) end
+
 ---@param WorldContextObject UObject
 ---@param Handle FTimerHandle
 ---@return boolean
 function UKismetSystemLibrary:K2_IsTimerActiveHandle(WorldContextObject, Handle) end
+
 ---@param Delegate FK2_IsTimerActiveDelegateDelegate
 ---@return boolean
 function UKismetSystemLibrary:K2_IsTimerActiveDelegate(Delegate) end
+
 ---@param Object UObject
 ---@param FunctionName FString
 ---@return boolean
 function UKismetSystemLibrary:K2_IsTimerActive(Object, FunctionName) end
+
 ---@param Handle FTimerHandle
 ---@return FTimerHandle
 function UKismetSystemLibrary:K2_InvalidateTimerHandle(Handle) end
+
 ---@param WorldContextObject UObject
 ---@param Handle FTimerHandle
 ---@return float
 function UKismetSystemLibrary:K2_GetTimerRemainingTimeHandle(WorldContextObject, Handle) end
+
 ---@param Delegate FK2_GetTimerRemainingTimeDelegateDelegate
 ---@return float
 function UKismetSystemLibrary:K2_GetTimerRemainingTimeDelegate(Delegate) end
+
 ---@param Object UObject
 ---@param FunctionName FString
 ---@return float
 function UKismetSystemLibrary:K2_GetTimerRemainingTime(Object, FunctionName) end
+
 ---@param WorldContextObject UObject
 ---@param Handle FTimerHandle
 ---@return float
 function UKismetSystemLibrary:K2_GetTimerElapsedTimeHandle(WorldContextObject, Handle) end
+
 ---@param Delegate FK2_GetTimerElapsedTimeDelegateDelegate
 ---@return float
 function UKismetSystemLibrary:K2_GetTimerElapsedTimeDelegate(Delegate) end
+
 ---@param Object UObject
 ---@param FunctionName FString
 ---@return float
 function UKismetSystemLibrary:K2_GetTimerElapsedTime(Object, FunctionName) end
+
 ---@param WorldContextObject UObject
 ---@param Handle FTimerHandle
 function UKismetSystemLibrary:K2_ClearTimerHandle(WorldContextObject, Handle) end
+
 ---@param Delegate FK2_ClearTimerDelegateDelegate
 function UKismetSystemLibrary:K2_ClearTimerDelegate(Delegate) end
+
 ---@param Object UObject
 ---@param FunctionName FString
 function UKismetSystemLibrary:K2_ClearTimer(Object, FunctionName) end
+
 ---@param WorldContextObject UObject
 ---@param Handle FTimerHandle
 function UKismetSystemLibrary:K2_ClearAndInvalidateTimerHandle(WorldContextObject, Handle) end
+
 ---@param SoftObjectReference TSoftObjectPtr<UObject>
 ---@return boolean
 function UKismetSystemLibrary:IsValidSoftObjectReference(SoftObjectReference) end
+
 ---@param SoftClassReference TSoftClassPtr<UObject>
 ---@return boolean
 function UKismetSystemLibrary:IsValidSoftClassReference(SoftClassReference) end
+
 ---@param PrimaryAssetType FPrimaryAssetType
 ---@return boolean
 function UKismetSystemLibrary:IsValidPrimaryAssetType(PrimaryAssetType) end
+
 ---@param PrimaryAssetId FPrimaryAssetId
 ---@return boolean
 function UKismetSystemLibrary:IsValidPrimaryAssetId(PrimaryAssetId) end
+
 ---@param Class UClass
 ---@return boolean
 function UKismetSystemLibrary:IsValidClass(Class) end
+
 ---@param Object UObject
 ---@return boolean
 function UKismetSystemLibrary:IsValid(Object) end
+
 ---@return boolean
 function UKismetSystemLibrary:IsUnattended() end
+
 ---@param WorldContextObject UObject
 ---@return boolean
 function UKismetSystemLibrary:IsStandalone(WorldContextObject) end
+
 ---@param WorldContextObject UObject
 ---@return boolean
 function UKismetSystemLibrary:IsSplitScreen(WorldContextObject) end
+
 ---@param WorldContextObject UObject
 ---@return boolean
 function UKismetSystemLibrary:IsServer(WorldContextObject) end
+
 ---@return boolean
 function UKismetSystemLibrary:IsScreensaverEnabled() end
+
 ---@return boolean
 function UKismetSystemLibrary:IsPackagedForDistribution() end
+
 ---@param SpecificPlayer APlayerController
 ---@return boolean
 function UKismetSystemLibrary:IsLoggedIn(SpecificPlayer) end
+
 ---@return boolean
 function UKismetSystemLibrary:IsInterstitialAdRequested() end
+
 ---@return boolean
 function UKismetSystemLibrary:IsInterstitialAdAvailable() end
+
 ---@param WorldContextObject UObject
 ---@return boolean
 function UKismetSystemLibrary:IsDedicatedServer(WorldContextObject) end
+
 ---@param ControllerId int32
 ---@return boolean
 function UKismetSystemLibrary:IsControllerAssignedToGamepad(ControllerId) end
+
 function UKismetSystemLibrary:HideAdBanner() end
+
 ---@param WorldContextObject UObject
 ---@return boolean
 function UKismetSystemLibrary:HasMultipleLocalPlayers(WorldContextObject) end
+
 ---@return boolean
 function UKismetSystemLibrary:GetVolumeButtonsHandledBySystem() end
+
 ---@return FString
 function UKismetSystemLibrary:GetUniqueDeviceId() end
+
 ---@param Object UObject
 ---@return FString
 function UKismetSystemLibrary:GetSystemPath(Object) end
+
 ---@param Resolutions TArray<FIntPoint>
 ---@return boolean
 function UKismetSystemLibrary:GetSupportedFullscreenResolutions(Resolutions) end
+
 ---@param Struct UScriptStruct
 ---@return FTopLevelAssetPath
 function UKismetSystemLibrary:GetStructTopLevelAssetPath(Struct) end
+
 ---@param PrimaryAssetId FPrimaryAssetId
 ---@return TSoftObjectPtr<UObject>
 function UKismetSystemLibrary:GetSoftObjectReferenceFromPrimaryAssetId(PrimaryAssetId) end
+
 ---@param Object UObject
 ---@return FSoftObjectPath
 function UKismetSystemLibrary:GetSoftObjectPath(Object) end
+
 ---@param SoftClassReference TSoftClassPtr<UObject>
 ---@return FTopLevelAssetPath
 function UKismetSystemLibrary:GetSoftClassTopLevelAssetPath(SoftClassReference) end
+
 ---@param PrimaryAssetId FPrimaryAssetId
 ---@return TSoftClassPtr<UObject>
 function UKismetSystemLibrary:GetSoftClassReferenceFromPrimaryAssetId(PrimaryAssetId) end
+
 ---@param Class UClass
 ---@return FSoftClassPath
 function UKismetSystemLibrary:GetSoftClassPath(Class) end
+
 ---@return int32
 function UKismetSystemLibrary:GetRenderingMaterialQualityLevel() end
+
 ---@return int32
 function UKismetSystemLibrary:GetRenderingDetailMode() end
+
 ---@return FString
 function UKismetSystemLibrary:GetProjectSavedDirectory() end
+
 ---@return FString
 function UKismetSystemLibrary:GetProjectDirectory() end
+
 ---@return FString
 function UKismetSystemLibrary:GetProjectContentDirectory() end
+
 ---@param RequiredBundles TArray<FName>
 ---@param ExcludedBundles TArray<FName>
 ---@param ValidTypes TArray<FPrimaryAssetType>
 ---@param bForceCurrentState boolean
 ---@param OutPrimaryAssetIdList TArray<FPrimaryAssetId>
-function UKismetSystemLibrary:GetPrimaryAssetsWithBundleState(RequiredBundles, ExcludedBundles, ValidTypes, bForceCurrentState, OutPrimaryAssetIdList) end
+function UKismetSystemLibrary:GetPrimaryAssetsWithBundleState(RequiredBundles, ExcludedBundles, ValidTypes,
+                                                              bForceCurrentState, OutPrimaryAssetIdList) end
+
 ---@param PrimaryAssetType FPrimaryAssetType
 ---@param OutPrimaryAssetIdList TArray<FPrimaryAssetId>
 function UKismetSystemLibrary:GetPrimaryAssetIdList(PrimaryAssetType, OutPrimaryAssetIdList) end
+
 ---@param SoftObjectReference TSoftObjectPtr<UObject>
 ---@return FPrimaryAssetId
 function UKismetSystemLibrary:GetPrimaryAssetIdFromSoftObjectReference(SoftObjectReference) end
+
 ---@param SoftClassReference TSoftClassPtr<UObject>
 ---@return FPrimaryAssetId
 function UKismetSystemLibrary:GetPrimaryAssetIdFromSoftClassReference(SoftClassReference) end
+
 ---@param Object UObject
 ---@return FPrimaryAssetId
 function UKismetSystemLibrary:GetPrimaryAssetIdFromObject(Object) end
+
 ---@param Class UClass
 ---@return FPrimaryAssetId
 function UKismetSystemLibrary:GetPrimaryAssetIdFromClass(Class) end
+
 ---@return TArray<FString>
 function UKismetSystemLibrary:GetPreferredLanguages() end
+
 ---@return FString
 function UKismetSystemLibrary:GetPlatformUserName() end
+
 ---@return FString
 function UKismetSystemLibrary:GetPlatformUserDir() end
+
 ---@param Object UObject
 ---@return FString
 function UKismetSystemLibrary:GetPathName(Object) end
+
 ---@param Object UObject
 ---@return UObject
 function UKismetSystemLibrary:GetOuterObject(Object) end
+
 ---@param Object UObject
 ---@return FString
 function UKismetSystemLibrary:GetObjectName(Object) end
+
 ---@param PrimaryAssetId FPrimaryAssetId
 ---@return UObject
 function UKismetSystemLibrary:GetObjectFromPrimaryAssetId(PrimaryAssetId) end
+
 ---@return int32
 function UKismetSystemLibrary:GetMinYResolutionForUI() end
+
 ---@return int32
 function UKismetSystemLibrary:GetMinYResolutionFor3DView() end
+
 ---@return FString
 function UKismetSystemLibrary:GetLocalCurrencySymbol() end
+
 ---@return FString
 function UKismetSystemLibrary:GetLocalCurrencyCode() end
+
 ---@param WorldContextObject UObject
 ---@return double
 function UKismetSystemLibrary:GetGameTimeInSeconds(WorldContextObject) end
+
 ---@param ControllerId int32
 ---@return FString
 function UKismetSystemLibrary:GetGamepadControllerName(ControllerId) end
+
 ---@param ButtonKey FString
 ---@param ControllerIndex int32
 ---@return UTexture2D
 function UKismetSystemLibrary:GetGamepadButtonGlyph(ButtonKey, ControllerIndex) end
+
 ---@return FString
 function UKismetSystemLibrary:GetGameName() end
+
 ---@return FString
 function UKismetSystemLibrary:GetGameBundleId() end
+
 ---@return int64
 function UKismetSystemLibrary:GetFrameCount() end
+
 ---@param Enum UEnum
 ---@return FTopLevelAssetPath
 function UKismetSystemLibrary:GetEnumTopLevelAssetPath(Enum) end
+
 ---@return FString
 function UKismetSystemLibrary:GetEngineVersion() end
+
 ---@param Object UObject
 ---@return FString
 function UKismetSystemLibrary:GetDisplayName(Object) end
+
 ---@return FString
 function UKismetSystemLibrary:GetDeviceId() end
+
 ---@return FString
 function UKismetSystemLibrary:GetDefaultLocale() end
+
 ---@return FString
 function UKismetSystemLibrary:GetDefaultLanguage() end
+
 ---@param PrimaryAssetId FPrimaryAssetId
 ---@param bForceCurrentState boolean
 ---@param OutBundles TArray<FName>
 ---@return boolean
 function UKismetSystemLibrary:GetCurrentBundleState(PrimaryAssetId, bForceCurrentState, OutBundles) end
+
 ---@param Resolutions TArray<FIntPoint>
 ---@return boolean
 function UKismetSystemLibrary:GetConvenientWindowedResolutions(Resolutions) end
+
 ---@param VariableName FString
 ---@return FString
 function UKismetSystemLibrary:GetConsoleVariableStringValue(VariableName) end
+
 ---@param VariableName FString
 ---@return int32
 function UKismetSystemLibrary:GetConsoleVariableIntValue(VariableName) end
+
 ---@param VariableName FString
 ---@return float
 function UKismetSystemLibrary:GetConsoleVariableFloatValue(VariableName) end
+
 ---@param VariableName FString
 ---@return boolean
 function UKismetSystemLibrary:GetConsoleVariableBoolValue(VariableName) end
+
 ---@param Component USceneComponent
 ---@param Origin FVector
 ---@param BoxExtent FVector
 ---@param SphereRadius float
 function UKismetSystemLibrary:GetComponentBounds(Component, Origin, BoxExtent, SphereRadius) end
+
 ---@return FString
 function UKismetSystemLibrary:GetCommandLine() end
+
 ---@param Class UClass
 ---@return FTopLevelAssetPath
 function UKismetSystemLibrary:GetClassTopLevelAssetPath(Class) end
+
 ---@param PrimaryAssetId FPrimaryAssetId
 ---@return UClass
 function UKismetSystemLibrary:GetClassFromPrimaryAssetId(PrimaryAssetId) end
+
 ---@param Class UClass
 ---@return FString
 function UKismetSystemLibrary:GetClassDisplayName(Class) end
+
 ---@return FString
 function UKismetSystemLibrary:GetBuildVersion() end
+
 ---@return FString
 function UKismetSystemLibrary:GetBuildConfiguration() end
+
 ---@return int32
 function UKismetSystemLibrary:GetAdIDCount() end
+
 ---@param ComponentList TArray<UPrimitiveComponent>
 ---@param ActorClassFilter UClass
 ---@param OutActorList TArray<AActor>
 function UKismetSystemLibrary:GetActorListFromComponentList(ComponentList, ActorClassFilter, OutActorList) end
+
 ---@param Actor AActor
 ---@param Origin FVector
 ---@param BoxExtent FVector
 function UKismetSystemLibrary:GetActorBounds(Actor, Origin, BoxExtent) end
+
 function UKismetSystemLibrary:ForceCloseAdBanner() end
+
 ---@param WorldContextObject UObject
 function UKismetSystemLibrary:FlushPersistentDebugLines(WorldContextObject) end
+
 ---@param WorldContextObject UObject
 function UKismetSystemLibrary:FlushDebugStrings(WorldContextObject) end
+
 ---@param WorldContextObject UObject
 ---@param Command FString
 ---@param SpecificPlayer APlayerController
 function UKismetSystemLibrary:ExecuteConsoleCommand(WorldContextObject, Command, SpecificPlayer) end
+
 ---@param A TSoftObjectPtr<UObject>
 ---@param B TSoftObjectPtr<UObject>
 ---@return boolean
 function UKismetSystemLibrary:EqualEqual_SoftObjectReference(A, B) end
+
 ---@param A TSoftClassPtr<UObject>
 ---@param B TSoftClassPtr<UObject>
 ---@return boolean
 function UKismetSystemLibrary:EqualEqual_SoftClassReference(A, B) end
+
 ---@param A FPrimaryAssetType
 ---@param B FPrimaryAssetType
 ---@return boolean
 function UKismetSystemLibrary:EqualEqual_PrimaryAssetType(A, B) end
+
 ---@param A FPrimaryAssetId
 ---@param B FPrimaryAssetId
 ---@return boolean
 function UKismetSystemLibrary:EqualEqual_PrimaryAssetId(A, B) end
+
 ---@return int32
 function UKismetSystemLibrary:EndTransaction() end
+
 ---@param WorldContextObject UObject
 ---@param TextLocation FVector
 ---@param Text FString
@@ -23010,6 +25942,7 @@ function UKismetSystemLibrary:EndTransaction() end
 ---@param TextColor FLinearColor
 ---@param Duration float
 function UKismetSystemLibrary:DrawDebugString(WorldContextObject, TextLocation, Text, TestBaseActor, TextColor, Duration) end
+
 ---@param WorldContextObject UObject
 ---@param Center FVector
 ---@param Radius float
@@ -23017,13 +25950,16 @@ function UKismetSystemLibrary:DrawDebugString(WorldContextObject, TextLocation, 
 ---@param LineColor FLinearColor
 ---@param Duration float
 ---@param Thickness float
-function UKismetSystemLibrary:DrawDebugSphere(WorldContextObject, Center, Radius, Segments, LineColor, Duration, Thickness) end
+function UKismetSystemLibrary:DrawDebugSphere(WorldContextObject, Center, Radius, Segments, LineColor, Duration,
+                                              Thickness) end
+
 ---@param WorldContextObject UObject
 ---@param Position FVector
 ---@param Size float
 ---@param PointColor FLinearColor
 ---@param Duration float
 function UKismetSystemLibrary:DrawDebugPoint(WorldContextObject, Position, Size, PointColor, Duration) end
+
 ---@param WorldContextObject UObject
 ---@param PlaneCoordinates FPlane
 ---@param Location FVector
@@ -23031,6 +25967,7 @@ function UKismetSystemLibrary:DrawDebugPoint(WorldContextObject, Position, Size,
 ---@param PlaneColor FLinearColor
 ---@param Duration float
 function UKismetSystemLibrary:DrawDebugPlane(WorldContextObject, PlaneCoordinates, Location, Size, PlaneColor, Duration) end
+
 ---@param WorldContextObject UObject
 ---@param LineStart FVector
 ---@param LineEnd FVector
@@ -23038,26 +25975,32 @@ function UKismetSystemLibrary:DrawDebugPlane(WorldContextObject, PlaneCoordinate
 ---@param Duration float
 ---@param Thickness float
 function UKismetSystemLibrary:DrawDebugLine(WorldContextObject, LineStart, LineEnd, LineColor, Duration, Thickness) end
+
 ---@param WorldContextObject UObject
 ---@param FrustumTransform FTransform
 ---@param FrustumColor FLinearColor
 ---@param Duration float
 ---@param Thickness float
 function UKismetSystemLibrary:DrawDebugFrustum(WorldContextObject, FrustumTransform, FrustumColor, Duration, Thickness) end
+
 ---@param WorldContextObject UObject
 ---@param FloatHistory FDebugFloatHistory
 ---@param DrawTransform FTransform
 ---@param DrawSize FVector2D
 ---@param DrawColor FLinearColor
 ---@param Duration float
-function UKismetSystemLibrary:DrawDebugFloatHistoryTransform(WorldContextObject, FloatHistory, DrawTransform, DrawSize, DrawColor, Duration) end
+function UKismetSystemLibrary:DrawDebugFloatHistoryTransform(WorldContextObject, FloatHistory, DrawTransform, DrawSize,
+                                                             DrawColor, Duration) end
+
 ---@param WorldContextObject UObject
 ---@param FloatHistory FDebugFloatHistory
 ---@param DrawLocation FVector
 ---@param DrawSize FVector2D
 ---@param DrawColor FLinearColor
 ---@param Duration float
-function UKismetSystemLibrary:DrawDebugFloatHistoryLocation(WorldContextObject, FloatHistory, DrawLocation, DrawSize, DrawColor, Duration) end
+function UKismetSystemLibrary:DrawDebugFloatHistoryLocation(WorldContextObject, FloatHistory, DrawLocation, DrawSize,
+                                                            DrawColor, Duration) end
+
 ---@param WorldContextObject UObject
 ---@param Start FVector
 ---@param End FVector
@@ -23066,7 +26009,9 @@ function UKismetSystemLibrary:DrawDebugFloatHistoryLocation(WorldContextObject, 
 ---@param LineColor FLinearColor
 ---@param Duration float
 ---@param Thickness float
-function UKismetSystemLibrary:DrawDebugCylinder(WorldContextObject, Start, End, Radius, Segments, LineColor, Duration, Thickness) end
+function UKismetSystemLibrary:DrawDebugCylinder(WorldContextObject, Start, End, Radius, Segments, LineColor, Duration,
+                                                Thickness) end
+
 ---@param WorldContextObject UObject
 ---@param AxisLoc FVector
 ---@param AxisRot FRotator
@@ -23074,6 +26019,7 @@ function UKismetSystemLibrary:DrawDebugCylinder(WorldContextObject, Start, End, 
 ---@param Duration float
 ---@param Thickness float
 function UKismetSystemLibrary:DrawDebugCoordinateSystem(WorldContextObject, AxisLoc, AxisRot, Scale, Duration, Thickness) end
+
 ---@param WorldContextObject UObject
 ---@param Origin FVector
 ---@param Direction FVector
@@ -23084,7 +26030,9 @@ function UKismetSystemLibrary:DrawDebugCoordinateSystem(WorldContextObject, Axis
 ---@param LineColor FLinearColor
 ---@param Duration float
 ---@param Thickness float
-function UKismetSystemLibrary:DrawDebugConeInDegrees(WorldContextObject, Origin, Direction, Length, AngleWidth, AngleHeight, NumSides, LineColor, Duration, Thickness) end
+function UKismetSystemLibrary:DrawDebugConeInDegrees(WorldContextObject, Origin, Direction, Length, AngleWidth,
+                                                     AngleHeight, NumSides, LineColor, Duration, Thickness) end
+
 ---@param WorldContextObject UObject
 ---@param Origin FVector
 ---@param Direction FVector
@@ -23095,7 +26043,9 @@ function UKismetSystemLibrary:DrawDebugConeInDegrees(WorldContextObject, Origin,
 ---@param LineColor FLinearColor
 ---@param Duration float
 ---@param Thickness float
-function UKismetSystemLibrary:DrawDebugCone(WorldContextObject, Origin, Direction, Length, AngleWidth, AngleHeight, NumSides, LineColor, Duration, Thickness) end
+function UKismetSystemLibrary:DrawDebugCone(WorldContextObject, Origin, Direction, Length, AngleWidth, AngleHeight,
+                                            NumSides, LineColor, Duration, Thickness) end
+
 ---@param WorldContextObject UObject
 ---@param Center FVector
 ---@param Radius float
@@ -23106,7 +26056,9 @@ function UKismetSystemLibrary:DrawDebugCone(WorldContextObject, Origin, Directio
 ---@param YAxis FVector
 ---@param ZAxis FVector
 ---@param bDrawAxis boolean
-function UKismetSystemLibrary:DrawDebugCircle(WorldContextObject, Center, Radius, NumSegments, LineColor, Duration, Thickness, YAxis, ZAxis, bDrawAxis) end
+function UKismetSystemLibrary:DrawDebugCircle(WorldContextObject, Center, Radius, NumSegments, LineColor, Duration,
+                                              Thickness, YAxis, ZAxis, bDrawAxis) end
+
 ---@param WorldContextObject UObject
 ---@param Center FVector
 ---@param HalfHeight float
@@ -23115,11 +26067,14 @@ function UKismetSystemLibrary:DrawDebugCircle(WorldContextObject, Center, Radius
 ---@param LineColor FLinearColor
 ---@param Duration float
 ---@param Thickness float
-function UKismetSystemLibrary:DrawDebugCapsule(WorldContextObject, Center, HalfHeight, Radius, Rotation, LineColor, Duration, Thickness) end
+function UKismetSystemLibrary:DrawDebugCapsule(WorldContextObject, Center, HalfHeight, Radius, Rotation, LineColor,
+                                               Duration, Thickness) end
+
 ---@param CameraActor ACameraActor
 ---@param CameraColor FLinearColor
 ---@param Duration float
 function UKismetSystemLibrary:DrawDebugCamera(CameraActor, CameraColor, Duration) end
+
 ---@param WorldContextObject UObject
 ---@param Center FVector
 ---@param Extent FVector
@@ -23128,6 +26083,7 @@ function UKismetSystemLibrary:DrawDebugCamera(CameraActor, CameraColor, Duration
 ---@param Duration float
 ---@param Thickness float
 function UKismetSystemLibrary:DrawDebugBox(WorldContextObject, Center, Extent, LineColor, Rotation, Duration, Thickness) end
+
 ---@param WorldContextObject UObject
 ---@param LineStart FVector
 ---@param LineEnd FVector
@@ -23135,74 +26091,98 @@ function UKismetSystemLibrary:DrawDebugBox(WorldContextObject, Center, Extent, L
 ---@param LineColor FLinearColor
 ---@param Duration float
 ---@param Thickness float
-function UKismetSystemLibrary:DrawDebugArrow(WorldContextObject, LineStart, LineEnd, ArrowSize, LineColor, Duration, Thickness) end
+function UKismetSystemLibrary:DrawDebugArrow(WorldContextObject, LineStart, LineEnd, ArrowSize, LineColor, Duration,
+                                             Thickness) end
+
 ---@param TestObject UObject
 ---@param Interface TSubclassOf<UInterface>
 ---@return boolean
 function UKismetSystemLibrary:DoesImplementInterface(TestObject, Interface) end
+
 ---@param WorldContextObject UObject
 ---@param LatentInfo FLatentActionInfo
 function UKismetSystemLibrary:DelayUntilNextTick(WorldContextObject, LatentInfo) end
+
 ---@param WorldContextObject UObject
 ---@param Duration float
 ---@param LatentInfo FLatentActionInfo
 function UKismetSystemLibrary:Delay(WorldContextObject, Duration, LatentInfo) end
+
 ---@param ObjectToModify UObject
 function UKismetSystemLibrary:CreateCopyForUndoBuffer(ObjectToModify) end
+
 ---@param Filename FString
 ---@return FString
 function UKismetSystemLibrary:ConvertToRelativePath(Filename) end
+
 ---@param Filename FString
 ---@return FString
 function UKismetSystemLibrary:ConvertToAbsolutePath(Filename) end
+
 ---@param SoftObjectReference TSoftObjectPtr<UObject>
 ---@return FSoftObjectPath
 function UKismetSystemLibrary:Conv_SoftObjRefToSoftObjPath(SoftObjectReference) end
+
 ---@param SoftClassReference TSoftClassPtr<UObject>
 ---@return FSoftClassPath
 function UKismetSystemLibrary:Conv_SoftObjRefToSoftClassPath(SoftClassReference) end
+
 ---@param SoftObjectPath FSoftObjectPath
 ---@return TSoftObjectPtr<UObject>
 function UKismetSystemLibrary:Conv_SoftObjPathToSoftObjRef(SoftObjectPath) end
+
 ---@param SoftObjectReference TSoftObjectPtr<UObject>
 ---@return FString
 function UKismetSystemLibrary:Conv_SoftObjectReferenceToString(SoftObjectReference) end
+
 ---@param SoftObject TSoftObjectPtr<UObject>
 ---@return UObject
 function UKismetSystemLibrary:Conv_SoftObjectReferenceToObject(SoftObject) end
+
 ---@param SoftClassReference TSoftClassPtr<UObject>
 ---@return FString
 function UKismetSystemLibrary:Conv_SoftClassReferenceToString(SoftClassReference) end
+
 ---@param SoftClass TSoftClassPtr<UObject>
 ---@return UClass
 function UKismetSystemLibrary:Conv_SoftClassReferenceToClass(SoftClass) end
+
 ---@param SoftClassPath FSoftClassPath
 ---@return TSoftClassPtr<UObject>
 function UKismetSystemLibrary:Conv_SoftClassPathToSoftClassRef(SoftClassPath) end
+
 ---@param PrimaryAssetType FPrimaryAssetType
 ---@return FString
 function UKismetSystemLibrary:Conv_PrimaryAssetTypeToString(PrimaryAssetType) end
+
 ---@param PrimaryAssetId FPrimaryAssetId
 ---@return FString
 function UKismetSystemLibrary:Conv_PrimaryAssetIdToString(PrimaryAssetId) end
+
 ---@param Object UObject
 ---@return TSoftObjectPtr<UObject>
 function UKismetSystemLibrary:Conv_ObjectToSoftObjectReference(Object) end
+
 ---@param Object UObject
 ---@param Class UClass
 ---@return UClass
 function UKismetSystemLibrary:Conv_ObjectToClass(Object, Class) end
+
 ---@param Interface FScriptInterface
 ---@return UObject
 function UKismetSystemLibrary:Conv_InterfaceToObject(Interface) end
+
 ---@param ComponentReference FComponentReference
 ---@return FSoftComponentReference
 function UKismetSystemLibrary:Conv_ComponentReferenceToSoftComponentReference(ComponentReference) end
+
 ---@param Class UClass
 ---@return TSoftClassPtr<UObject>
 function UKismetSystemLibrary:Conv_ClassToSoftClassReference(Class) end
+
 ---@param bAllowScreenSaver boolean
 function UKismetSystemLibrary:ControlScreensaver(bAllowScreenSaver) end
+
 ---@param Component UPrimitiveComponent
 ---@param ComponentTransform FTransform
 ---@param ObjectTypes TArray<EObjectTypeQuery>
@@ -23210,7 +26190,9 @@ function UKismetSystemLibrary:ControlScreensaver(bAllowScreenSaver) end
 ---@param ActorsToIgnore TArray<AActor>
 ---@param OutComponents TArray<UPrimitiveComponent>
 ---@return boolean
-function UKismetSystemLibrary:ComponentOverlapComponents(Component, ComponentTransform, ObjectTypes, ComponentClassFilter, ActorsToIgnore, OutComponents) end
+function UKismetSystemLibrary:ComponentOverlapComponents(Component, ComponentTransform, ObjectTypes, ComponentClassFilter,
+                                                         ActorsToIgnore, OutComponents) end
+
 ---@param Component UPrimitiveComponent
 ---@param ComponentTransform FTransform
 ---@param ObjectTypes TArray<EObjectTypeQuery>
@@ -23218,8 +26200,11 @@ function UKismetSystemLibrary:ComponentOverlapComponents(Component, ComponentTra
 ---@param ActorsToIgnore TArray<AActor>
 ---@param OutActors TArray<AActor>
 ---@return boolean
-function UKismetSystemLibrary:ComponentOverlapActors(Component, ComponentTransform, ObjectTypes, ActorClassFilter, ActorsToIgnore, OutActors) end
+function UKismetSystemLibrary:ComponentOverlapActors(Component, ComponentTransform, ObjectTypes, ActorClassFilter,
+                                                     ActorsToIgnore, OutActors) end
+
 function UKismetSystemLibrary:CollectGarbage() end
+
 ---@param WorldContextObject UObject
 ---@param Start FVector
 ---@param End FVector
@@ -23235,7 +26220,10 @@ function UKismetSystemLibrary:CollectGarbage() end
 ---@param TraceHitColor FLinearColor
 ---@param DrawTime float
 ---@return boolean
-function UKismetSystemLibrary:CapsuleTraceSingleForObjects(WorldContextObject, Start, End, Radius, HalfHeight, ObjectTypes, bTraceComplex, ActorsToIgnore, DrawDebugType, OutHit, bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+function UKismetSystemLibrary:CapsuleTraceSingleForObjects(WorldContextObject, Start, End, Radius, HalfHeight,
+                                                           ObjectTypes, bTraceComplex, ActorsToIgnore, DrawDebugType,
+                                                           OutHit, bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+
 ---@param WorldContextObject UObject
 ---@param Start FVector
 ---@param End FVector
@@ -23251,7 +26239,10 @@ function UKismetSystemLibrary:CapsuleTraceSingleForObjects(WorldContextObject, S
 ---@param TraceHitColor FLinearColor
 ---@param DrawTime float
 ---@return boolean
-function UKismetSystemLibrary:CapsuleTraceSingleByProfile(WorldContextObject, Start, End, Radius, HalfHeight, ProfileName, bTraceComplex, ActorsToIgnore, DrawDebugType, OutHit, bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+function UKismetSystemLibrary:CapsuleTraceSingleByProfile(WorldContextObject, Start, End, Radius, HalfHeight, ProfileName,
+                                                          bTraceComplex, ActorsToIgnore, DrawDebugType, OutHit,
+                                                          bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+
 ---@param WorldContextObject UObject
 ---@param Start FVector
 ---@param End FVector
@@ -23267,7 +26258,10 @@ function UKismetSystemLibrary:CapsuleTraceSingleByProfile(WorldContextObject, St
 ---@param TraceHitColor FLinearColor
 ---@param DrawTime float
 ---@return boolean
-function UKismetSystemLibrary:CapsuleTraceSingle(WorldContextObject, Start, End, Radius, HalfHeight, TraceChannel, bTraceComplex, ActorsToIgnore, DrawDebugType, OutHit, bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+function UKismetSystemLibrary:CapsuleTraceSingle(WorldContextObject, Start, End, Radius, HalfHeight, TraceChannel,
+                                                 bTraceComplex, ActorsToIgnore, DrawDebugType, OutHit, bIgnoreSelf,
+                                                 TraceColor, TraceHitColor, DrawTime) end
+
 ---@param WorldContextObject UObject
 ---@param Start FVector
 ---@param End FVector
@@ -23283,7 +26277,10 @@ function UKismetSystemLibrary:CapsuleTraceSingle(WorldContextObject, Start, End,
 ---@param TraceHitColor FLinearColor
 ---@param DrawTime float
 ---@return boolean
-function UKismetSystemLibrary:CapsuleTraceMultiForObjects(WorldContextObject, Start, End, Radius, HalfHeight, ObjectTypes, bTraceComplex, ActorsToIgnore, DrawDebugType, OutHits, bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+function UKismetSystemLibrary:CapsuleTraceMultiForObjects(WorldContextObject, Start, End, Radius, HalfHeight, ObjectTypes,
+                                                          bTraceComplex, ActorsToIgnore, DrawDebugType, OutHits,
+                                                          bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+
 ---@param WorldContextObject UObject
 ---@param Start FVector
 ---@param End FVector
@@ -23299,7 +26296,10 @@ function UKismetSystemLibrary:CapsuleTraceMultiForObjects(WorldContextObject, St
 ---@param TraceHitColor FLinearColor
 ---@param DrawTime float
 ---@return boolean
-function UKismetSystemLibrary:CapsuleTraceMultiByProfile(WorldContextObject, Start, End, Radius, HalfHeight, ProfileName, bTraceComplex, ActorsToIgnore, DrawDebugType, OutHits, bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+function UKismetSystemLibrary:CapsuleTraceMultiByProfile(WorldContextObject, Start, End, Radius, HalfHeight, ProfileName,
+                                                         bTraceComplex, ActorsToIgnore, DrawDebugType, OutHits,
+                                                         bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+
 ---@param WorldContextObject UObject
 ---@param Start FVector
 ---@param End FVector
@@ -23315,7 +26315,10 @@ function UKismetSystemLibrary:CapsuleTraceMultiByProfile(WorldContextObject, Sta
 ---@param TraceHitColor FLinearColor
 ---@param DrawTime float
 ---@return boolean
-function UKismetSystemLibrary:CapsuleTraceMulti(WorldContextObject, Start, End, Radius, HalfHeight, TraceChannel, bTraceComplex, ActorsToIgnore, DrawDebugType, OutHits, bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+function UKismetSystemLibrary:CapsuleTraceMulti(WorldContextObject, Start, End, Radius, HalfHeight, TraceChannel,
+                                                bTraceComplex, ActorsToIgnore, DrawDebugType, OutHits, bIgnoreSelf,
+                                                TraceColor, TraceHitColor, DrawTime) end
+
 ---@param WorldContextObject UObject
 ---@param CapsulePos FVector
 ---@param Radius float
@@ -23325,7 +26328,9 @@ function UKismetSystemLibrary:CapsuleTraceMulti(WorldContextObject, Start, End, 
 ---@param ActorsToIgnore TArray<AActor>
 ---@param OutComponents TArray<UPrimitiveComponent>
 ---@return boolean
-function UKismetSystemLibrary:CapsuleOverlapComponents(WorldContextObject, CapsulePos, Radius, HalfHeight, ObjectTypes, ComponentClassFilter, ActorsToIgnore, OutComponents) end
+function UKismetSystemLibrary:CapsuleOverlapComponents(WorldContextObject, CapsulePos, Radius, HalfHeight, ObjectTypes,
+                                                       ComponentClassFilter, ActorsToIgnore, OutComponents) end
+
 ---@param WorldContextObject UObject
 ---@param CapsulePos FVector
 ---@param Radius float
@@ -23335,21 +26340,28 @@ function UKismetSystemLibrary:CapsuleOverlapComponents(WorldContextObject, Capsu
 ---@param ActorsToIgnore TArray<AActor>
 ---@param OutActors TArray<AActor>
 ---@return boolean
-function UKismetSystemLibrary:CapsuleOverlapActors(WorldContextObject, CapsulePos, Radius, HalfHeight, ObjectTypes, ActorClassFilter, ActorsToIgnore, OutActors) end
+function UKismetSystemLibrary:CapsuleOverlapActors(WorldContextObject, CapsulePos, Radius, HalfHeight, ObjectTypes,
+                                                   ActorClassFilter, ActorsToIgnore, OutActors) end
+
 ---@param URL FString
 ---@return boolean
 function UKismetSystemLibrary:CanLaunchURL(URL) end
+
 ---@param Index int32
 function UKismetSystemLibrary:CancelTransaction(Index) end
+
 ---@param TopLevelAssetPath FTopLevelAssetPath
 ---@param PathString FString
 function UKismetSystemLibrary:BreakTopLevelAssetPath(TopLevelAssetPath, PathString) end
+
 ---@param InSoftObjectPath FSoftObjectPath
 ---@param PathString FString
 function UKismetSystemLibrary:BreakSoftObjectPath(InSoftObjectPath, PathString) end
+
 ---@param InSoftClassPath FSoftClassPath
 ---@param PathString FString
 function UKismetSystemLibrary:BreakSoftClassPath(InSoftClassPath, PathString) end
+
 ---@param InARFilter FARFilter
 ---@param PackageNames TArray<FName>
 ---@param PackagePaths TArray<FName>
@@ -23361,7 +26373,10 @@ function UKismetSystemLibrary:BreakSoftClassPath(InSoftClassPath, PathString) en
 ---@param bRecursivePaths boolean
 ---@param bRecursiveClasses boolean
 ---@param bIncludeOnlyOnDiskAssets boolean
-function UKismetSystemLibrary:BreakARFilter(InARFilter, PackageNames, PackagePaths, SoftObjectPaths, ClassPaths, RecursiveClassPathsExclusionSet, ClassNames, RecursiveClassesExclusionSet, bRecursivePaths, bRecursiveClasses, bIncludeOnlyOnDiskAssets) end
+function UKismetSystemLibrary:BreakARFilter(InARFilter, PackageNames, PackagePaths, SoftObjectPaths, ClassPaths,
+                                            RecursiveClassPathsExclusionSet, ClassNames, RecursiveClassesExclusionSet,
+                                            bRecursivePaths, bRecursiveClasses, bIncludeOnlyOnDiskAssets) end
+
 ---@param WorldContextObject UObject
 ---@param Start FVector
 ---@param End FVector
@@ -23377,7 +26392,10 @@ function UKismetSystemLibrary:BreakARFilter(InARFilter, PackageNames, PackagePat
 ---@param TraceHitColor FLinearColor
 ---@param DrawTime float
 ---@return boolean
-function UKismetSystemLibrary:BoxTraceSingleForObjects(WorldContextObject, Start, End, HalfSize, Orientation, ObjectTypes, bTraceComplex, ActorsToIgnore, DrawDebugType, OutHit, bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+function UKismetSystemLibrary:BoxTraceSingleForObjects(WorldContextObject, Start, End, HalfSize, Orientation, ObjectTypes,
+                                                       bTraceComplex, ActorsToIgnore, DrawDebugType, OutHit, bIgnoreSelf,
+                                                       TraceColor, TraceHitColor, DrawTime) end
+
 ---@param WorldContextObject UObject
 ---@param Start FVector
 ---@param End FVector
@@ -23393,7 +26411,10 @@ function UKismetSystemLibrary:BoxTraceSingleForObjects(WorldContextObject, Start
 ---@param TraceHitColor FLinearColor
 ---@param DrawTime float
 ---@return boolean
-function UKismetSystemLibrary:BoxTraceSingleByProfile(WorldContextObject, Start, End, HalfSize, Orientation, ProfileName, bTraceComplex, ActorsToIgnore, DrawDebugType, OutHit, bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+function UKismetSystemLibrary:BoxTraceSingleByProfile(WorldContextObject, Start, End, HalfSize, Orientation, ProfileName,
+                                                      bTraceComplex, ActorsToIgnore, DrawDebugType, OutHit, bIgnoreSelf,
+                                                      TraceColor, TraceHitColor, DrawTime) end
+
 ---@param WorldContextObject UObject
 ---@param Start FVector
 ---@param End FVector
@@ -23409,7 +26430,10 @@ function UKismetSystemLibrary:BoxTraceSingleByProfile(WorldContextObject, Start,
 ---@param TraceHitColor FLinearColor
 ---@param DrawTime float
 ---@return boolean
-function UKismetSystemLibrary:BoxTraceSingle(WorldContextObject, Start, End, HalfSize, Orientation, TraceChannel, bTraceComplex, ActorsToIgnore, DrawDebugType, OutHit, bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+function UKismetSystemLibrary:BoxTraceSingle(WorldContextObject, Start, End, HalfSize, Orientation, TraceChannel,
+                                             bTraceComplex, ActorsToIgnore, DrawDebugType, OutHit, bIgnoreSelf,
+                                             TraceColor, TraceHitColor, DrawTime) end
+
 ---@param WorldContextObject UObject
 ---@param Start FVector
 ---@param End FVector
@@ -23425,7 +26449,10 @@ function UKismetSystemLibrary:BoxTraceSingle(WorldContextObject, Start, End, Hal
 ---@param TraceHitColor FLinearColor
 ---@param DrawTime float
 ---@return boolean
-function UKismetSystemLibrary:BoxTraceMultiForObjects(WorldContextObject, Start, End, HalfSize, Orientation, ObjectTypes, bTraceComplex, ActorsToIgnore, DrawDebugType, OutHits, bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+function UKismetSystemLibrary:BoxTraceMultiForObjects(WorldContextObject, Start, End, HalfSize, Orientation, ObjectTypes,
+                                                      bTraceComplex, ActorsToIgnore, DrawDebugType, OutHits, bIgnoreSelf,
+                                                      TraceColor, TraceHitColor, DrawTime) end
+
 ---@param WorldContextObject UObject
 ---@param Start FVector
 ---@param End FVector
@@ -23441,7 +26468,10 @@ function UKismetSystemLibrary:BoxTraceMultiForObjects(WorldContextObject, Start,
 ---@param TraceHitColor FLinearColor
 ---@param DrawTime float
 ---@return boolean
-function UKismetSystemLibrary:BoxTraceMultiByProfile(WorldContextObject, Start, End, HalfSize, Orientation, ProfileName, bTraceComplex, ActorsToIgnore, DrawDebugType, OutHits, bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+function UKismetSystemLibrary:BoxTraceMultiByProfile(WorldContextObject, Start, End, HalfSize, Orientation, ProfileName,
+                                                     bTraceComplex, ActorsToIgnore, DrawDebugType, OutHits, bIgnoreSelf,
+                                                     TraceColor, TraceHitColor, DrawTime) end
+
 ---@param WorldContextObject UObject
 ---@param Start FVector
 ---@param End FVector
@@ -23457,7 +26487,10 @@ function UKismetSystemLibrary:BoxTraceMultiByProfile(WorldContextObject, Start, 
 ---@param TraceHitColor FLinearColor
 ---@param DrawTime float
 ---@return boolean
-function UKismetSystemLibrary:BoxTraceMulti(WorldContextObject, Start, End, HalfSize, Orientation, TraceChannel, bTraceComplex, ActorsToIgnore, DrawDebugType, OutHits, bIgnoreSelf, TraceColor, TraceHitColor, DrawTime) end
+function UKismetSystemLibrary:BoxTraceMulti(WorldContextObject, Start, End, HalfSize, Orientation, TraceChannel,
+                                            bTraceComplex, ActorsToIgnore, DrawDebugType, OutHits, bIgnoreSelf,
+                                            TraceColor, TraceHitColor, DrawTime) end
+
 ---@param WorldContextObject UObject
 ---@param BoxPos FVector
 ---@param Extent FVector
@@ -23466,7 +26499,9 @@ function UKismetSystemLibrary:BoxTraceMulti(WorldContextObject, Start, End, Half
 ---@param ActorsToIgnore TArray<AActor>
 ---@param OutComponents TArray<UPrimitiveComponent>
 ---@return boolean
-function UKismetSystemLibrary:BoxOverlapComponents(WorldContextObject, BoxPos, Extent, ObjectTypes, ComponentClassFilter, ActorsToIgnore, OutComponents) end
+function UKismetSystemLibrary:BoxOverlapComponents(WorldContextObject, BoxPos, Extent, ObjectTypes, ComponentClassFilter,
+                                                   ActorsToIgnore, OutComponents) end
+
 ---@param WorldContextObject UObject
 ---@param BoxPos FVector
 ---@param BoxExtent FVector
@@ -23475,17 +26510,19 @@ function UKismetSystemLibrary:BoxOverlapComponents(WorldContextObject, BoxPos, E
 ---@param ActorsToIgnore TArray<AActor>
 ---@param OutActors TArray<AActor>
 ---@return boolean
-function UKismetSystemLibrary:BoxOverlapActors(WorldContextObject, BoxPos, BoxExtent, ObjectTypes, ActorClassFilter, ActorsToIgnore, OutActors) end
+function UKismetSystemLibrary:BoxOverlapActors(WorldContextObject, BoxPos, BoxExtent, ObjectTypes, ActorClassFilter,
+                                               ActorsToIgnore, OutActors) end
+
 ---@param Context FString
 ---@param Description FText
 ---@param PrimaryObject UObject
 ---@return int32
 function UKismetSystemLibrary:BeginTransaction(Context, Description, PrimaryObject) end
+
 ---@param Value float
 ---@param FloatHistory FDebugFloatHistory
 ---@return FDebugFloatHistory
 function UKismetSystemLibrary:AddFloatHistorySample(Value, FloatHistory) end
-
 
 ---@class UKismetTextLibrary : UBlueprintFunctionLibrary
 UKismetTextLibrary = {}
@@ -23493,98 +26530,126 @@ UKismetTextLibrary = {}
 ---@param InText FText
 ---@return FText
 function UKismetTextLibrary:TextTrimTrailing(InText) end
+
 ---@param InText FText
 ---@return FText
 function UKismetTextLibrary:TextTrimPrecedingAndTrailing(InText) end
+
 ---@param InText FText
 ---@return FText
 function UKismetTextLibrary:TextTrimPreceding(InText) end
+
 ---@param InText FText
 ---@return FText
 function UKismetTextLibrary:TextToUpper(InText) end
+
 ---@param InText FText
 ---@return FText
 function UKismetTextLibrary:TextToLower(InText) end
+
 ---@param InText FText
 ---@return boolean
 function UKismetTextLibrary:TextIsTransient(InText) end
+
 ---@param Text FText
 ---@return boolean
 function UKismetTextLibrary:TextIsFromStringTable(Text) end
+
 ---@param InText FText
 ---@return boolean
 function UKismetTextLibrary:TextIsEmpty(InText) end
+
 ---@param InText FText
 ---@return boolean
 function UKismetTextLibrary:TextIsCultureInvariant(InText) end
+
 ---@param TableId FName
 ---@param Key FString
 ---@return FText
 function UKismetTextLibrary:TextFromStringTable(TableId, Key) end
+
 ---@param Text FText
 ---@param OutTableId FName
 ---@param OutKey FString
 ---@return boolean
 function UKismetTextLibrary:StringTableIdAndKeyFromText(Text, OutTableId, OutKey) end
+
 ---@param PolyglotData FPolyglotTextData
 ---@return FText
 function UKismetTextLibrary:PolyglotDataToText(PolyglotData) end
+
 ---@param A FText
 ---@param B FText
 ---@return boolean
 function UKismetTextLibrary:NotEqual_TextText(A, B) end
+
 ---@param A FText
 ---@param B FText
 ---@return boolean
 function UKismetTextLibrary:NotEqual_IgnoreCase_TextText(A, B) end
+
 ---@param PolyglotData FPolyglotTextData
 ---@param IsValid boolean
 ---@param ErrorMessage FText
 function UKismetTextLibrary:IsPolyglotDataValid(PolyglotData, IsValid, ErrorMessage) end
+
 ---@return FText
 function UKismetTextLibrary:GetEmptyText() end
+
 ---@param InPattern FText
 ---@param InArgs TArray<FFormatArgumentData>
 ---@return FText
 function UKismetTextLibrary:Format(InPattern, InArgs) end
+
 ---@param Namespace FString
 ---@param Key FString
 ---@param OutText FText
 ---@param SourceString FString
 ---@return boolean
 function UKismetTextLibrary:FindTextInLocalizationTable(Namespace, Key, OutText, SourceString) end
+
 ---@param A FText
 ---@param B FText
 ---@return boolean
 function UKismetTextLibrary:EqualEqual_TextText(A, B) end
+
 ---@param A FText
 ---@param B FText
 ---@return boolean
 function UKismetTextLibrary:EqualEqual_IgnoreCase_TextText(A, B) end
+
 ---@param InVec FVector
 ---@return FText
 function UKismetTextLibrary:Conv_VectorToText(InVec) end
+
 ---@param InVec FVector2D
 ---@return FText
 function UKismetTextLibrary:Conv_Vector2dToText(InVec) end
+
 ---@param InTrans FTransform
 ---@return FText
 function UKismetTextLibrary:Conv_TransformToText(InTrans) end
+
 ---@param InText FText
 ---@return FString
 function UKismetTextLibrary:Conv_TextToString(InText) end
+
 ---@param InString FString
 ---@return FText
 function UKismetTextLibrary:Conv_StringToText(InString) end
+
 ---@param InRot FRotator
 ---@return FText
 function UKismetTextLibrary:Conv_RotatorToText(InRot) end
+
 ---@param InObj UObject
 ---@return FText
 function UKismetTextLibrary:Conv_ObjectToText(InObj) end
+
 ---@param InName FName
 ---@return FText
 function UKismetTextLibrary:Conv_NameToText(InName) end
+
 ---@param Value int32
 ---@param bAlwaysSign boolean
 ---@param bUseGrouping boolean
@@ -23592,13 +26657,16 @@ function UKismetTextLibrary:Conv_NameToText(InName) end
 ---@param MaximumIntegralDigits int32
 ---@return FText
 function UKismetTextLibrary:Conv_IntToText(Value, bAlwaysSign, bUseGrouping, MinimumIntegralDigits, MaximumIntegralDigits) end
+
 ---@param Value int64
 ---@param bAlwaysSign boolean
 ---@param bUseGrouping boolean
 ---@param MinimumIntegralDigits int32
 ---@param MaximumIntegralDigits int32
 ---@return FText
-function UKismetTextLibrary:Conv_Int64ToText(Value, bAlwaysSign, bUseGrouping, MinimumIntegralDigits, MaximumIntegralDigits) end
+function UKismetTextLibrary:Conv_Int64ToText(Value, bAlwaysSign, bUseGrouping, MinimumIntegralDigits,
+                                             MaximumIntegralDigits) end
+
 ---@param Value double
 ---@param RoundingMode ERoundingMode
 ---@param bAlwaysSign boolean
@@ -23608,34 +26676,44 @@ function UKismetTextLibrary:Conv_Int64ToText(Value, bAlwaysSign, bUseGrouping, M
 ---@param MinimumFractionalDigits int32
 ---@param MaximumFractionalDigits int32
 ---@return FText
-function UKismetTextLibrary:Conv_DoubleToText(Value, RoundingMode, bAlwaysSign, bUseGrouping, MinimumIntegralDigits, MaximumIntegralDigits, MinimumFractionalDigits, MaximumFractionalDigits) end
+function UKismetTextLibrary:Conv_DoubleToText(Value, RoundingMode, bAlwaysSign, bUseGrouping, MinimumIntegralDigits,
+                                              MaximumIntegralDigits, MinimumFractionalDigits, MaximumFractionalDigits) end
+
 ---@param InColor FLinearColor
 ---@return FText
 function UKismetTextLibrary:Conv_ColorToText(InColor) end
+
 ---@param Value uint8
 ---@return FText
 function UKismetTextLibrary:Conv_ByteToText(Value) end
+
 ---@param InBool boolean
 ---@return FText
 function UKismetTextLibrary:Conv_BoolToText(InBool) end
+
 ---@param InDateTime FDateTime
 ---@param InTimeZone FString
 ---@return FText
 function UKismetTextLibrary:AsTimeZoneTime_DateTime(InDateTime, InTimeZone) end
+
 ---@param InDateTime FDateTime
 ---@param InTimeZone FString
 ---@return FText
 function UKismetTextLibrary:AsTimeZoneDateTime_DateTime(InDateTime, InTimeZone) end
+
 ---@param InDateTime FDateTime
 ---@param InTimeZone FString
 ---@return FText
 function UKismetTextLibrary:AsTimeZoneDate_DateTime(InDateTime, InTimeZone) end
+
 ---@param InTimespan FTimespan
 ---@return FText
 function UKismetTextLibrary:AsTimespan_Timespan(InTimespan) end
+
 ---@param In FDateTime
 ---@return FText
 function UKismetTextLibrary:AsTime_DateTime(In) end
+
 ---@param Value float
 ---@param RoundingMode ERoundingMode
 ---@param bAlwaysSign boolean
@@ -23645,17 +26723,22 @@ function UKismetTextLibrary:AsTime_DateTime(In) end
 ---@param MinimumFractionalDigits int32
 ---@param MaximumFractionalDigits int32
 ---@return FText
-function UKismetTextLibrary:AsPercent_Float(Value, RoundingMode, bAlwaysSign, bUseGrouping, MinimumIntegralDigits, MaximumIntegralDigits, MinimumFractionalDigits, MaximumFractionalDigits) end
+function UKismetTextLibrary:AsPercent_Float(Value, RoundingMode, bAlwaysSign, bUseGrouping, MinimumIntegralDigits,
+                                            MaximumIntegralDigits, MinimumFractionalDigits, MaximumFractionalDigits) end
+
 ---@param In FDateTime
 ---@return FText
 function UKismetTextLibrary:AsDateTime_DateTime(In) end
+
 ---@param InDateTime FDateTime
 ---@return FText
 function UKismetTextLibrary:AsDate_DateTime(InDateTime) end
+
 ---@param BaseValue int32
 ---@param CurrencyCode FString
 ---@return FText
 function UKismetTextLibrary:AsCurrencyBase(BaseValue, CurrencyCode) end
+
 ---@param Value int32
 ---@param RoundingMode ERoundingMode
 ---@param bAlwaysSign boolean
@@ -23666,7 +26749,10 @@ function UKismetTextLibrary:AsCurrencyBase(BaseValue, CurrencyCode) end
 ---@param MaximumFractionalDigits int32
 ---@param CurrencyCode FString
 ---@return FText
-function UKismetTextLibrary:AsCurrency_Integer(Value, RoundingMode, bAlwaysSign, bUseGrouping, MinimumIntegralDigits, MaximumIntegralDigits, MinimumFractionalDigits, MaximumFractionalDigits, CurrencyCode) end
+function UKismetTextLibrary:AsCurrency_Integer(Value, RoundingMode, bAlwaysSign, bUseGrouping, MinimumIntegralDigits,
+                                               MaximumIntegralDigits, MinimumFractionalDigits, MaximumFractionalDigits,
+                                               CurrencyCode) end
+
 ---@param Value float
 ---@param RoundingMode ERoundingMode
 ---@param bAlwaysSign boolean
@@ -23677,8 +26763,9 @@ function UKismetTextLibrary:AsCurrency_Integer(Value, RoundingMode, bAlwaysSign,
 ---@param MaximumFractionalDigits int32
 ---@param CurrencyCode FString
 ---@return FText
-function UKismetTextLibrary:AsCurrency_Float(Value, RoundingMode, bAlwaysSign, bUseGrouping, MinimumIntegralDigits, MaximumIntegralDigits, MinimumFractionalDigits, MaximumFractionalDigits, CurrencyCode) end
-
+function UKismetTextLibrary:AsCurrency_Float(Value, RoundingMode, bAlwaysSign, bUseGrouping, MinimumIntegralDigits,
+                                             MaximumIntegralDigits, MinimumFractionalDigits, MaximumFractionalDigits,
+                                             CurrencyCode) end
 
 ---@class ULODSyncComponent : UActorComponent
 ---@field NumLODs int32
@@ -23694,7 +26781,6 @@ ULODSyncComponent = {}
 
 ---@return FString
 function ULODSyncComponent:GetLODSyncDebugText() end
-
 
 ---@class ULayer : UObject
 ---@field LayerName FName
@@ -23789,34 +26875,46 @@ ULevelStreaming = {}
 
 ---@return boolean
 function ULevelStreaming:ShouldBeLoaded() end
+
 ---@param bInShouldBeVisible boolean
 function ULevelStreaming:SetShouldBeVisible(bInShouldBeVisible) end
+
 ---@param bInShouldBeLoaded boolean
 function ULevelStreaming:SetShouldBeLoaded(bInShouldBeLoaded) end
+
 ---@param NewPriority int32
 function ULevelStreaming:SetPriority(NewPriority) end
+
 ---@param LODIndex int32
 function ULevelStreaming:SetLevelLODIndex(LODIndex) end
+
 ---@param bInIsRequestingUnloadAndRemoval boolean
 function ULevelStreaming:SetIsRequestingUnloadAndRemoval(bInIsRequestingUnloadAndRemoval) end
+
 ---@return boolean
 function ULevelStreaming:IsStreamingStatePending() end
+
 ---@return boolean
 function ULevelStreaming:IsLevelVisible() end
+
 ---@return boolean
 function ULevelStreaming:IsLevelLoaded() end
+
 ---@return FName
 function ULevelStreaming:GetWorldAssetPackageFName() end
+
 ---@return ULevel
 function ULevelStreaming:GetLoadedLevel() end
+
 ---@return ALevelScriptActor
 function ULevelStreaming:GetLevelScriptActor() end
+
 ---@return boolean
 function ULevelStreaming:GetIsRequestingUnloadAndRemoval() end
+
 ---@param UniqueInstanceName FString
 ---@return ULevelStreaming
 function ULevelStreaming:CreateInstance(UniqueInstanceName) end
-
 
 ---@class ULevelStreamingAlwaysLoaded : ULevelStreaming
 ULevelStreamingAlwaysLoaded = {}
@@ -23836,7 +26934,10 @@ ULevelStreamingDynamic = {}
 ---@param OptionalLevelStreamingClass TSubclassOf<ULevelStreamingDynamic>
 ---@param bLoadAsTempPackage boolean
 ---@return ULevelStreamingDynamic
-function ULevelStreamingDynamic:LoadLevelInstanceBySoftObjectPtr(WorldContextObject, Level, Location, Rotation, bOutSuccess, OptionalLevelNameOverride, OptionalLevelStreamingClass, bLoadAsTempPackage) end
+function ULevelStreamingDynamic:LoadLevelInstanceBySoftObjectPtr(WorldContextObject, Level, Location, Rotation,
+                                                                 bOutSuccess, OptionalLevelNameOverride,
+                                                                 OptionalLevelStreamingClass, bLoadAsTempPackage) end
+
 ---@param WorldContextObject UObject
 ---@param LevelName FString
 ---@param Location FVector
@@ -23846,8 +26947,9 @@ function ULevelStreamingDynamic:LoadLevelInstanceBySoftObjectPtr(WorldContextObj
 ---@param OptionalLevelStreamingClass TSubclassOf<ULevelStreamingDynamic>
 ---@param bLoadAsTempPackage boolean
 ---@return ULevelStreamingDynamic
-function ULevelStreamingDynamic:LoadLevelInstance(WorldContextObject, LevelName, Location, Rotation, bOutSuccess, OptionalLevelNameOverride, OptionalLevelStreamingClass, bLoadAsTempPackage) end
-
+function ULevelStreamingDynamic:LoadLevelInstance(WorldContextObject, LevelName, Location, Rotation, bOutSuccess,
+                                                  OptionalLevelNameOverride, OptionalLevelStreamingClass,
+                                                  bLoadAsTempPackage) end
 
 ---@class ULevelStreamingLevelInstance : ULevelStreamingDynamic
 ULevelStreamingLevelInstance = {}
@@ -23904,60 +27006,84 @@ ULightComponent = {}
 
 ---@param NewIntensity float
 function ULightComponent:SetVolumetricScatteringIntensity(NewIntensity) end
+
 ---@param bNewValue boolean
 function ULightComponent:SetUseTemperature(bNewValue) end
+
 ---@param bNewValue boolean
 function ULightComponent:SetUseIESBrightness(bNewValue) end
+
 ---@param bNewValue boolean
 function ULightComponent:SetTransmission(bNewValue) end
+
 ---@param NewTemperature float
 function ULightComponent:SetTemperature(NewTemperature) end
+
 ---@param NewValue float
 function ULightComponent:SetSpecularScale(NewValue) end
+
 ---@param NewValue float
 function ULightComponent:SetShadowSlopeBias(NewValue) end
+
 ---@param NewValue float
 function ULightComponent:SetShadowBias(NewValue) end
+
 ---@param bChannel0 boolean
 ---@param bChannel1 boolean
 ---@param bChannel2 boolean
 function ULightComponent:SetLightingChannels(bChannel0, bChannel1, bChannel2) end
+
 ---@param NewLightFunctionScale FVector
 function ULightComponent:SetLightFunctionScale(NewLightFunctionScale) end
+
 ---@param NewLightFunctionMaterial UMaterialInterface
 function ULightComponent:SetLightFunctionMaterial(NewLightFunctionMaterial) end
+
 ---@param NewLightFunctionFadeDistance float
 function ULightComponent:SetLightFunctionFadeDistance(NewLightFunctionFadeDistance) end
+
 ---@param NewValue float
 function ULightComponent:SetLightFunctionDisabledBrightness(NewValue) end
+
 ---@param NewLightColor FColor
 function ULightComponent:SetLightFColor(NewLightColor) end
+
 ---@param NewLightColor FLinearColor
 ---@param bSRGB boolean
 function ULightComponent:SetLightColor(NewLightColor, bSRGB) end
+
 ---@param NewIntensity float
 function ULightComponent:SetIntensity(NewIntensity) end
+
 ---@param NewIntensity float
 function ULightComponent:SetIndirectLightingIntensity(NewIntensity) end
+
 ---@param NewValue UTextureLightProfile
 function ULightComponent:SetIESTexture(NewValue) end
+
 ---@param NewValue float
 function ULightComponent:SetIESBrightnessScale(NewValue) end
+
 ---@param bNewValue boolean
 function ULightComponent:SetForceCachedShadowsForMovablePrimitives(bNewValue) end
+
 ---@param bNewValue boolean
 function ULightComponent:SetEnableLightShaftBloom(bNewValue) end
+
 ---@param NewValue FColor
 function ULightComponent:SetBloomTint(NewValue) end
+
 ---@param NewValue float
 function ULightComponent:SetBloomThreshold(NewValue) end
+
 ---@param NewValue float
 function ULightComponent:SetBloomScale(NewValue) end
+
 ---@param NewValue float
 function ULightComponent:SetBloomMaxBrightness(NewValue) end
+
 ---@param bNewValue boolean
 function ULightComponent:SetAffectTranslucentLighting(bNewValue) end
-
 
 ---@class ULightComponentBase : USceneComponent
 ---@field LightGuid FGuid
@@ -23984,23 +27110,30 @@ ULightComponentBase = {}
 
 ---@param NewValue int32
 function ULightComponentBase:SetSamplesPerPixel(NewValue) end
+
 ---@param bNewValue boolean
 function ULightComponentBase:SetCastVolumetricShadow(bNewValue) end
+
 ---@param bNewValue boolean
 function ULightComponentBase:SetCastShadows(bNewValue) end
+
 ---@param bNewValue ECastRayTracedShadow::Type
 function ULightComponentBase:SetCastRaytracedShadows(bNewValue) end
+
 ---@param bNewValue boolean
 function ULightComponentBase:SetCastRaytracedShadow(bNewValue) end
+
 ---@param bNewValue boolean
 function ULightComponentBase:SetCastDeepShadow(bNewValue) end
+
 ---@param bNewValue boolean
 function ULightComponentBase:SetAffectReflection(bNewValue) end
+
 ---@param bNewValue boolean
 function ULightComponentBase:SetAffectGlobalIllumination(bNewValue) end
+
 ---@return FLinearColor
 function ULightComponentBase:GetLightColor() end
-
 
 ---@class ULightMapTexture2D : UTexture2D
 ULightMapTexture2D = {}
@@ -24025,10 +27158,10 @@ ULightWeightInstanceBlueprintFunctionLibrary = {}
 ---@param World UWorld
 ---@return FActorInstanceHandle
 function ULightWeightInstanceBlueprintFunctionLibrary:CreateNewLightWeightInstance(ActorClass, Transform, Layer, World) end
+
 ---@param Actor AActor
 ---@return FActorInstanceHandle
 function ULightWeightInstanceBlueprintFunctionLibrary:ConvertActorToLightWeightInstance(Actor) end
-
 
 ---@class ULightmappedSurfaceCollection : UObject
 ---@field SourceModel UModel
@@ -24077,14 +27210,15 @@ ULocalLightComponent = {}
 
 ---@param NewIntensityUnits ELightUnits
 function ULocalLightComponent:SetIntensityUnits(NewIntensityUnits) end
+
 ---@param NewRadius float
 function ULocalLightComponent:SetAttenuationRadius(NewRadius) end
+
 ---@param SrcUnits ELightUnits
 ---@param TargetUnits ELightUnits
 ---@param CosHalfConeAngle float
 ---@return float
 function ULocalLightComponent:GetUnitsConversionFactor(SrcUnits, TargetUnits, CosHalfConeAngle) end
-
 
 ---@class ULocalMessage : UObject
 ULocalMessage = {}
@@ -24112,48 +27246,67 @@ ULocalPlayerSaveGame = {}
 
 ---@return boolean
 function ULocalPlayerSaveGame:WasSaveRequested() end
+
 ---@return boolean
 function ULocalPlayerSaveGame:WasLoaded() end
+
 ---@return boolean
 function ULocalPlayerSaveGame:WasLastSaveSuccessful() end
+
 ---@return boolean
 function ULocalPlayerSaveGame:SaveGameToSlotForLocalPlayer() end
+
 function ULocalPlayerSaveGame:ResetToDefault() end
+
 function ULocalPlayerSaveGame:OnResetToDefault() end
+
 function ULocalPlayerSaveGame:OnPreSave() end
+
 ---@param bSuccess boolean
 function ULocalPlayerSaveGame:OnPostSave(bSuccess) end
+
 function ULocalPlayerSaveGame:OnPostLoad() end
+
 ---@param SaveGameClass TSubclassOf<ULocalPlayerSaveGame>
 ---@param LocalPlayerController APlayerController
 ---@param SlotName FString
 ---@return ULocalPlayerSaveGame
 function ULocalPlayerSaveGame:LoadOrCreateSaveGameForLocalPlayer(SaveGameClass, LocalPlayerController, SlotName) end
+
 ---@return boolean
 function ULocalPlayerSaveGame:IsSaveInProgress() end
+
 ---@return FString
 function ULocalPlayerSaveGame:GetSaveSlotName() end
+
 ---@return int32
 function ULocalPlayerSaveGame:GetSavedDataVersion() end
+
 ---@return int32
 function ULocalPlayerSaveGame:GetPlatformUserIndex() end
+
 ---@return FPlatformUserId
 function ULocalPlayerSaveGame:GetPlatformUserId() end
+
 ---@return APlayerController
 function ULocalPlayerSaveGame:GetLocalPlayerController() end
+
 ---@return int32
 function ULocalPlayerSaveGame:GetLatestDataVersion() end
+
 ---@return int32
 function ULocalPlayerSaveGame:GetInvalidDataVersion() end
+
 ---@return boolean
 function ULocalPlayerSaveGame:AsyncSaveGameToSlotForLocalPlayer() end
+
 ---@param SaveGameClass TSubclassOf<ULocalPlayerSaveGame>
 ---@param LocalPlayerController APlayerController
 ---@param SlotName FString
 ---@param Delegate FAsyncLoadOrCreateSaveGameForLocalPlayerDelegate
 ---@return boolean
-function ULocalPlayerSaveGame:AsyncLoadOrCreateSaveGameForLocalPlayer(SaveGameClass, LocalPlayerController, SlotName, Delegate) end
-
+function ULocalPlayerSaveGame:AsyncLoadOrCreateSaveGameForLocalPlayer(SaveGameClass, LocalPlayerController, SlotName,
+                                                                      Delegate) end
 
 ---@class ULocalPlayerSubsystem : USubsystem
 ULocalPlayerSubsystem = {}
@@ -24288,14 +27441,15 @@ UMaterialBillboardComponent = {}
 
 ---@param NewElements TArray<FMaterialSpriteElement>
 function UMaterialBillboardComponent:SetElements(NewElements) end
+
 ---@param Material UMaterialInterface
 ---@param DistanceToOpacityCurve UCurveFloat
 ---@param bSizeIsInScreenSpace boolean
 ---@param BaseSizeX float
 ---@param BaseSizeY float
 ---@param DistanceToSizeCurve UCurveFloat
-function UMaterialBillboardComponent:AddElement(Material, DistanceToOpacityCurve, bSizeIsInScreenSpace, BaseSizeX, BaseSizeY, DistanceToSizeCurve) end
-
+function UMaterialBillboardComponent:AddElement(Material, DistanceToOpacityCurve, bSizeIsInScreenSpace, BaseSizeX,
+                                                BaseSizeY, DistanceToSizeCurve) end
 
 ---@class UMaterialEditorOnlyData : UMaterialInterfaceEditorOnlyData
 ---@field BaseColor FColorMaterialInput
@@ -24693,7 +27847,6 @@ UMaterialExpressionDataDrivenShaderPlatformInfoSwitch = {}
 ---@return TArray<FString>
 function UMaterialExpressionDataDrivenShaderPlatformInfoSwitch:GetNameOptions() end
 
-
 ---@class UMaterialExpressionDecalColor : UMaterialExpression
 UMaterialExpressionDecalColor = {}
 
@@ -24953,9 +28106,9 @@ UMaterialExpressionGIReplace = {}
 UMaterialExpressionGenericConstant = {}
 
 
----@class UMaterialExpressionGetLocal : UMaterialExpression
+---@class UMaterialExpressionGet: UMaterialExpression
 ---@field LocalName FName
-UMaterialExpressionGetLocal = {}
+UMaterialExpressionGet = {}
 
 
 
@@ -25610,11 +28763,11 @@ UMaterialExpressionSceneTexture = {}
 UMaterialExpressionScreenPosition = {}
 
 
----@class UMaterialExpressionSetLocal : UMaterialExpression
+---@class UMaterialExpressionSet: UMaterialExpression
 ---@field Exec FExpressionExecOutput
 ---@field Value FExpressionInput
 ---@field LocalName FName
-UMaterialExpressionSetLocal = {}
+UMaterialExpressionSet = {}
 
 
 
@@ -26451,13 +29604,14 @@ UMaterialInstanceConstant = {}
 ---@param ParameterName FName
 ---@return FLinearColor
 function UMaterialInstanceConstant:K2_GetVectorParameterValue(ParameterName) end
+
 ---@param ParameterName FName
 ---@return UTexture
 function UMaterialInstanceConstant:K2_GetTextureParameterValue(ParameterName) end
+
 ---@param ParameterName FName
 ---@return float
 function UMaterialInstanceConstant:K2_GetScalarParameterValue(ParameterName) end
-
 
 ---@class UMaterialInstanceDynamic : UMaterialInstance
 UMaterialInstanceDynamic = {}
@@ -26465,72 +29619,92 @@ UMaterialInstanceDynamic = {}
 ---@param ParameterInfo FMaterialParameterInfo
 ---@param Value FLinearColor
 function UMaterialInstanceDynamic:SetVectorParameterValueByInfo(ParameterInfo, Value) end
+
 ---@param ParameterName FName
 ---@param Value FLinearColor
 function UMaterialInstanceDynamic:SetVectorParameterValue(ParameterName, Value) end
+
 ---@param ParameterInfo FMaterialParameterInfo
 ---@param Value UTexture
 function UMaterialInstanceDynamic:SetTextureParameterValueByInfo(ParameterInfo, Value) end
+
 ---@param ParameterName FName
 ---@param Value UTexture
 function UMaterialInstanceDynamic:SetTextureParameterValue(ParameterName, Value) end
+
 ---@param ParameterName FName
 ---@param Value USparseVolumeTexture
 function UMaterialInstanceDynamic:SetSparseVolumeTextureParameterValue(ParameterName, Value) end
+
 ---@param ParameterInfo FMaterialParameterInfo
 ---@param Value float
 function UMaterialInstanceDynamic:SetScalarParameterValueByInfo(ParameterInfo, Value) end
+
 ---@param ParameterName FName
 ---@param Value float
 function UMaterialInstanceDynamic:SetScalarParameterValue(ParameterName, Value) end
+
 ---@param ParameterIndex int32
 ---@param Value float
 ---@return boolean
 function UMaterialInstanceDynamic:SetScalarParameterByIndex(ParameterIndex, Value) end
+
 ---@param ParameterInfo FMaterialParameterInfo
 ---@param Value URuntimeVirtualTexture
 function UMaterialInstanceDynamic:SetRuntimeVirtualTextureParameterValueByInfo(ParameterInfo, Value) end
+
 ---@param ParameterName FName
 ---@param Value URuntimeVirtualTexture
 function UMaterialInstanceDynamic:SetRuntimeVirtualTextureParameterValue(ParameterName, Value) end
+
 ---@param ParameterName FName
 ---@param Value FVector4
 function UMaterialInstanceDynamic:SetDoubleVectorParameterValue(ParameterName, Value) end
+
 ---@param SourceA UMaterialInstance
 ---@param SourceB UMaterialInstance
 ---@param Alpha float
 function UMaterialInstanceDynamic:K2_InterpolateMaterialInstanceParams(SourceA, SourceB, Alpha) end
+
 ---@param ParameterInfo FMaterialParameterInfo
 ---@return FLinearColor
 function UMaterialInstanceDynamic:K2_GetVectorParameterValueByInfo(ParameterInfo) end
+
 ---@param ParameterName FName
 ---@return FLinearColor
 function UMaterialInstanceDynamic:K2_GetVectorParameterValue(ParameterName) end
+
 ---@param ParameterInfo FMaterialParameterInfo
 ---@return UTexture
 function UMaterialInstanceDynamic:K2_GetTextureParameterValueByInfo(ParameterInfo) end
+
 ---@param ParameterName FName
 ---@return UTexture
 function UMaterialInstanceDynamic:K2_GetTextureParameterValue(ParameterName) end
+
 ---@param ParameterInfo FMaterialParameterInfo
 ---@return float
 function UMaterialInstanceDynamic:K2_GetScalarParameterValueByInfo(ParameterInfo) end
+
 ---@param ParameterName FName
 ---@return float
 function UMaterialInstanceDynamic:K2_GetScalarParameterValue(ParameterName) end
+
 ---@param Source UMaterialInterface
 ---@param bQuickParametersOnly boolean
 function UMaterialInstanceDynamic:K2_CopyMaterialInstanceParameters(Source, bQuickParametersOnly) end
+
 ---@param ParameterName FName
 ---@param Value float
 ---@param OutParameterIndex int32
 ---@return boolean
 function UMaterialInstanceDynamic:InitializeScalarParameterAndGetIndex(ParameterName, Value, OutParameterIndex) end
+
 ---@param MaterialInstance UMaterialInstance
 function UMaterialInstanceDynamic:CopyParameterOverrides(MaterialInstance) end
+
 ---@param Source UMaterialInstance
 function UMaterialInstanceDynamic:CopyInterpParameters(Source) end
-
 
 ---@class UMaterialInstanceEditorOnlyData : UMaterialInterfaceEditorOnlyData
 ---@field StaticParameters FStaticParameterSetEditorOnlyData
@@ -26552,26 +29726,34 @@ UMaterialInterface = {}
 ---@param ForceDuration float
 ---@param CinematicTextureGroups int32
 ---@param bFastResponse boolean
-function UMaterialInterface:SetForceMipLevelsToBeResident(OverrideForceMiplevelsToBeResident, bForceMiplevelsToBeResidentValue, ForceDuration, CinematicTextureGroups, bFastResponse) end
+function UMaterialInterface:SetForceMipLevelsToBeResident(OverrideForceMiplevelsToBeResident,
+                                                          bForceMiplevelsToBeResidentValue, ForceDuration,
+                                                          CinematicTextureGroups, bFastResponse) end
+
 ---@return UPhysicalMaterialMask
 function UMaterialInterface:GetPhysicalMaterialMask() end
+
 ---@param Index int32
 ---@return UPhysicalMaterial
 function UMaterialInterface:GetPhysicalMaterialFromMap(Index) end
+
 ---@return UPhysicalMaterial
 function UMaterialInterface:GetPhysicalMaterial() end
+
 ---@param Association EMaterialParameterAssociation
 ---@param ParameterName FName
 ---@param LayerFunction UMaterialFunctionInterface
 ---@return FMaterialParameterInfo
 function UMaterialInterface:GetParameterInfo(Association, ParameterName, LayerFunction) end
+
 ---@return UMaterialInterface
 function UMaterialInterface:GetNaniteOverideMaterial() end
+
 ---@return EBlendMode
 function UMaterialInterface:GetBlendMode() end
+
 ---@return UMaterial
 function UMaterialInterface:GetBaseMaterial() end
-
 
 ---@class UMaterialInterfaceEditorOnlyData : UObject
 UMaterialInterfaceEditorOnlyData = {}
@@ -26585,17 +29767,19 @@ UMaterialParameterCollection = {}
 
 ---@return TArray<FName>
 function UMaterialParameterCollection:GetVectorParameterNames() end
+
 ---@param ParameterName FName
 ---@param bParameterFound boolean
 ---@return FLinearColor
 function UMaterialParameterCollection:GetVectorParameterDefaultValue(ParameterName, bParameterFound) end
+
 ---@return TArray<FName>
 function UMaterialParameterCollection:GetScalarParameterNames() end
+
 ---@param ParameterName FName
 ---@param bParameterFound boolean
 ---@return float
 function UMaterialParameterCollection:GetScalarParameterDefaultValue(ParameterName, bParameterFound) end
-
 
 ---@class UMaterialParameterCollectionInstance : UObject
 ---@field Collection TWeakObjectPtr<UMaterialParameterCollection>
@@ -26620,32 +29804,41 @@ UMeshComponent = {}
 ---@param ParameterName FName
 ---@param ParameterValue FVector
 function UMeshComponent:SetVectorParameterValueOnMaterials(ParameterName, ParameterValue) end
+
 ---@param ParameterName FName
 ---@param ParameterValue float
 function UMeshComponent:SetScalarParameterValueOnMaterials(ParameterName, ParameterValue) end
+
 ---@param InMaxDrawDistance float
 function UMeshComponent:SetOverlayMaterialMaxDrawDistance(InMaxDrawDistance) end
+
 ---@param NewOverlayMaterial UMaterialInterface
 function UMeshComponent:SetOverlayMaterial(NewOverlayMaterial) end
+
 ---@param Seconds float
 ---@param bPrioritizeCharacterTextures boolean
 ---@param CinematicTextureGroups int32
 function UMeshComponent:PrestreamTextures(Seconds, bPrioritizeCharacterTextures, CinematicTextureGroups) end
+
 ---@param MaterialSlotName FName
 ---@return boolean
 function UMeshComponent:IsMaterialSlotNameValid(MaterialSlotName) end
+
 ---@return float
 function UMeshComponent:GetOverlayMaterialMaxDrawDistance() end
+
 ---@return UMaterialInterface
 function UMeshComponent:GetOverlayMaterial() end
+
 ---@return TArray<FName>
 function UMeshComponent:GetMaterialSlotNames() end
+
 ---@return TArray<UMaterialInterface>
 function UMeshComponent:GetMaterials() end
+
 ---@param MaterialSlotName FName
 ---@return int32
 function UMeshComponent:GetMaterialIndex(MaterialSlotName) end
-
 
 ---@class UMeshDeformer : UObject
 UMeshDeformer = {}
@@ -26671,17 +29864,19 @@ UMeshVertexPainterKismetLibrary = {}
 
 ---@param StaticMeshComponent UStaticMeshComponent
 function UMeshVertexPainterKismetLibrary:RemovePaintedVertices(StaticMeshComponent) end
+
 ---@param StaticMeshComponent UStaticMeshComponent
 ---@param FillColor FLinearColor
 ---@param bConvertToSRGB boolean
 function UMeshVertexPainterKismetLibrary:PaintVerticesSingleColor(StaticMeshComponent, FillColor, bConvertToSRGB) end
+
 ---@param StaticMeshComponent UStaticMeshComponent
 ---@param StartColor FLinearColor
 ---@param EndColor FLinearColor
 ---@param Axis EVertexPaintAxis
 ---@param bConvertToSRGB boolean
-function UMeshVertexPainterKismetLibrary:PaintVerticesLerpAlongAxis(StaticMeshComponent, StartColor, EndColor, Axis, bConvertToSRGB) end
-
+function UMeshVertexPainterKismetLibrary:PaintVerticesLerpAlongAxis(StaticMeshComponent, StartColor, EndColor, Axis,
+                                                                    bConvertToSRGB) end
 
 ---@class UMicroTransactionBase : UPlatformInterfaceBase
 ---@field AvailableProducts TArray<FPurchaseInfo>
@@ -26733,22 +29928,31 @@ UMorphTarget = {}
 UMovementComponent = {}
 
 function UMovementComponent:StopMovementImmediately() end
+
 function UMovementComponent:SnapUpdatedComponentToPlane() end
+
 ---@param NewUpdatedComponent USceneComponent
 function UMovementComponent:SetUpdatedComponent(NewUpdatedComponent) end
+
 ---@param PlaneOrigin FVector
 function UMovementComponent:SetPlaneConstraintOrigin(PlaneOrigin) end
+
 ---@param PlaneNormal FVector
 function UMovementComponent:SetPlaneConstraintNormal(PlaneNormal) end
+
 ---@param Forward FVector
 ---@param Up FVector
 function UMovementComponent:SetPlaneConstraintFromVectors(Forward, Up) end
+
 ---@param bEnabled boolean
 function UMovementComponent:SetPlaneConstraintEnabled(bEnabled) end
+
 ---@param NewAxisSetting EPlaneConstraintAxisSetting
 function UMovementComponent:SetPlaneConstraintAxisSetting(NewAxisSetting) end
+
 ---@param NewVolume APhysicsVolume
 function UMovementComponent:PhysicsVolumeChanged(NewVolume) end
+
 ---@param Delta FVector
 ---@param NewRotation FRotator
 ---@param OutHit FHitResult
@@ -26756,31 +29960,40 @@ function UMovementComponent:PhysicsVolumeChanged(NewVolume) end
 ---@param bTeleport boolean
 ---@return boolean
 function UMovementComponent:K2_MoveUpdatedComponent(Delta, NewRotation, OutHit, bSweep, bTeleport) end
+
 ---@param MaxSpeed float
 ---@return boolean
 function UMovementComponent:IsExceedingMaxSpeed(MaxSpeed) end
+
 ---@return FVector
 function UMovementComponent:GetPlaneConstraintOrigin() end
+
 ---@return FVector
 function UMovementComponent:GetPlaneConstraintNormal() end
+
 ---@return EPlaneConstraintAxisSetting
 function UMovementComponent:GetPlaneConstraintAxisSetting() end
+
 ---@return APhysicsVolume
 function UMovementComponent:GetPhysicsVolume() end
+
 ---@return float
 function UMovementComponent:GetMaxSpeed() end
+
 ---@return float
 function UMovementComponent:GetGravityZ() end
+
 ---@param Normal FVector
 ---@return FVector
 function UMovementComponent:ConstrainNormalToPlane(Normal) end
+
 ---@param Location FVector
 ---@return FVector
 function UMovementComponent:ConstrainLocationToPlane(Location) end
+
 ---@param Direction FVector
 ---@return FVector
 function UMovementComponent:ConstrainDirectionToPlane(Direction) end
-
 
 ---@class UNavAreaBase : UObject
 UNavAreaBase = {}
@@ -26810,18 +30023,23 @@ UNavLinkDefinition = {}
 UNavMovementComponent = {}
 
 function UNavMovementComponent:StopMovementKeepPathing() end
+
 function UNavMovementComponent:StopActiveMovement() end
+
 ---@return boolean
 function UNavMovementComponent:IsSwimming() end
+
 ---@return boolean
 function UNavMovementComponent:IsMovingOnGround() end
+
 ---@return boolean
 function UNavMovementComponent:IsFlying() end
+
 ---@return boolean
 function UNavMovementComponent:IsFalling() end
+
 ---@return boolean
 function UNavMovementComponent:IsCrouching() end
-
 
 ---@class UNavigationDataChunk : UObject
 ---@field NavigationDataName FName
@@ -26909,10 +30127,10 @@ UNetPushModelHelpers = {}
 ---@param RepIndex int32
 ---@param PropertyName FName
 function UNetPushModelHelpers:MarkPropertyDirtyFromRepIndex(Object, RepIndex, PropertyName) end
+
 ---@param Object UObject
 ---@param PropertyName FName
 function UNetPushModelHelpers:MarkPropertyDirty(Object, PropertyName) end
-
 
 ---@class UNetworkPhysicsComponent : UActorComponent
 ---@field ReplicatedInputs TArray<uint8>
@@ -26921,9 +30139,10 @@ UNetworkPhysicsComponent = {}
 
 ---@param ClientInputs TArray<uint8>
 function UNetworkPhysicsComponent:ServerReceiveInputsDatas(ClientInputs) end
-function UNetworkPhysicsComponent:OnRep_SetReplicatedStates() end
-function UNetworkPhysicsComponent:OnRep_SetReplicatedInputs() end
 
+function UNetworkPhysicsComponent:OnRep_SetReplicatedStates() end
+
+function UNetworkPhysicsComponent:OnRep_SetReplicatedInputs() end
 
 ---@class UNetworkPhysicsSystem : UWorldSubsystem
 UNetworkPhysicsSystem = {}
@@ -27989,7 +31208,7 @@ UParticleModuleVectorFieldGlobal = {}
 
 
 
----@class UParticleModuleVectorFieldLocal : UParticleModuleVectorFieldBase
+---@class UParticleModuleVectorField: UParticleModuleVectorFieldBase
 ---@field VectorField UVectorField
 ---@field RelativeTranslation FVector
 ---@field RelativeRotation FRotator
@@ -28001,7 +31220,7 @@ UParticleModuleVectorFieldGlobal = {}
 ---@field bTileY boolean
 ---@field bTileZ boolean
 ---@field bUseFixDT boolean
-UParticleModuleVectorFieldLocal = {}
+UParticleModuleVectorField = {}
 
 
 
@@ -28120,7 +31339,6 @@ UParticleSystem = {}
 ---@return boolean
 function UParticleSystem:ContainsEmitterType(TypeData) end
 
-
 ---@class UParticleSystemComponent : UFXSystemComponent
 ---@field Template UParticleSystem
 ---@field EmitterMaterials TArray<UMaterialInterface>
@@ -28162,98 +31380,120 @@ UParticleSystemComponent = {}
 ---@param InWidthMode ETrailWidthMode
 ---@param InWidth float
 function UParticleSystemComponent:SetTrailSourceData(InFirstSocketName, InSecondSocketName, InWidthMode, InWidth) end
+
 ---@param NewTemplate UParticleSystem
 function UParticleSystemComponent:SetTemplate(NewTemplate) end
+
 ---@param ParameterName FName
 ---@param Param UMaterialInterface
 function UParticleSystemComponent:SetMaterialParameter(ParameterName, Param) end
+
 ---@param EmitterIndex int32
 ---@param NewTangentPoint FVector
 ---@param TargetIndex int32
 function UParticleSystemComponent:SetBeamTargetTangent(EmitterIndex, NewTangentPoint, TargetIndex) end
+
 ---@param EmitterIndex int32
 ---@param NewTargetStrength float
 ---@param TargetIndex int32
 function UParticleSystemComponent:SetBeamTargetStrength(EmitterIndex, NewTargetStrength, TargetIndex) end
+
 ---@param EmitterIndex int32
 ---@param NewTargetPoint FVector
 ---@param TargetIndex int32
 function UParticleSystemComponent:SetBeamTargetPoint(EmitterIndex, NewTargetPoint, TargetIndex) end
+
 ---@param EmitterIndex int32
 ---@param NewTangentPoint FVector
 ---@param SourceIndex int32
 function UParticleSystemComponent:SetBeamSourceTangent(EmitterIndex, NewTangentPoint, SourceIndex) end
+
 ---@param EmitterIndex int32
 ---@param NewSourceStrength float
 ---@param SourceIndex int32
 function UParticleSystemComponent:SetBeamSourceStrength(EmitterIndex, NewSourceStrength, SourceIndex) end
+
 ---@param EmitterIndex int32
 ---@param NewSourcePoint FVector
 ---@param SourceIndex int32
 function UParticleSystemComponent:SetBeamSourcePoint(EmitterIndex, NewSourcePoint, SourceIndex) end
+
 ---@param EmitterIndex int32
 ---@param NewEndPoint FVector
 function UParticleSystemComponent:SetBeamEndPoint(EmitterIndex, NewEndPoint) end
+
 ---@param Parent USceneComponent
 ---@param SocketName FName
 ---@param LocationType EAttachLocation::Type
 function UParticleSystemComponent:SetAutoAttachParams(Parent, SocketName, LocationType) end
+
 ---@return int32
 function UParticleSystemComponent:GetNumActiveParticles() end
+
 ---@param InName FName
 ---@return UMaterialInterface
 function UParticleSystemComponent:GetNamedMaterial(InName) end
+
 ---@param EmitterIndex int32
 ---@param TargetIndex int32
 ---@param OutTangentPoint FVector
 ---@return boolean
 function UParticleSystemComponent:GetBeamTargetTangent(EmitterIndex, TargetIndex, OutTangentPoint) end
+
 ---@param EmitterIndex int32
 ---@param TargetIndex int32
 ---@param OutTargetStrength float
 ---@return boolean
 function UParticleSystemComponent:GetBeamTargetStrength(EmitterIndex, TargetIndex, OutTargetStrength) end
+
 ---@param EmitterIndex int32
 ---@param TargetIndex int32
 ---@param OutTargetPoint FVector
 ---@return boolean
 function UParticleSystemComponent:GetBeamTargetPoint(EmitterIndex, TargetIndex, OutTargetPoint) end
+
 ---@param EmitterIndex int32
 ---@param SourceIndex int32
 ---@param OutTangentPoint FVector
 ---@return boolean
 function UParticleSystemComponent:GetBeamSourceTangent(EmitterIndex, SourceIndex, OutTangentPoint) end
+
 ---@param EmitterIndex int32
 ---@param SourceIndex int32
 ---@param OutSourceStrength float
 ---@return boolean
 function UParticleSystemComponent:GetBeamSourceStrength(EmitterIndex, SourceIndex, OutSourceStrength) end
+
 ---@param EmitterIndex int32
 ---@param SourceIndex int32
 ---@param OutSourcePoint FVector
 ---@return boolean
 function UParticleSystemComponent:GetBeamSourcePoint(EmitterIndex, SourceIndex, OutSourcePoint) end
+
 ---@param EmitterIndex int32
 ---@param OutEndPoint FVector
 ---@return boolean
 function UParticleSystemComponent:GetBeamEndPoint(EmitterIndex, OutEndPoint) end
+
 ---@param InEventName FName
 ---@param InEmitterTime float
 ---@param InLocation FVector
 ---@param InDirection FVector
 ---@param InVelocity FVector
 function UParticleSystemComponent:GenerateParticleEvent(InEventName, InEmitterTime, InLocation, InDirection, InVelocity) end
+
 function UParticleSystemComponent:EndTrails() end
+
 ---@param InName FName
 ---@param SourceMaterial UMaterialInterface
 ---@return UMaterialInstanceDynamic
 function UParticleSystemComponent:CreateNamedDynamicMaterialInstance(InName, SourceMaterial) end
+
 ---@param InFirstSocketName FName
 ---@param InSecondSocketName FName
 ---@param InWidthMode ETrailWidthMode
 ---@param InWidth float
 function UParticleSystemComponent:BeginTrails(InFirstSocketName, InSecondSocketName, InWidthMode, InWidth) end
-
 
 ---@class UParticleSystemReplay : UObject
 ---@field ClipIDNumber int32
@@ -28271,28 +31511,36 @@ UPawnMovementComponent = {}
 ---@param ActionType EPhysicsStateAction
 ---@param ActionDatas FVector
 ---@param ActionPosition FVector
-function UPawnMovementComponent:ServerAsyncPhysicsStateAction(ActionComponent, BoneName, Timestamp, ActionType, ActionDatas, ActionPosition) end
+function UPawnMovementComponent:ServerAsyncPhysicsStateAction(ActionComponent, BoneName, Timestamp, ActionType,
+                                                              ActionDatas, ActionPosition) end
+
 ---@param ActionComponent UPrimitiveComponent
 ---@param BoneName FName
 ---@param Timestamp FAsyncPhysicsTimestamp
 ---@param ActionType EPhysicsStateAction
 ---@param ActionDatas FVector
 ---@param ActionPosition FVector
-function UPawnMovementComponent:MulticastAsyncPhysicsStateAction(ActionComponent, BoneName, Timestamp, ActionType, ActionDatas, ActionPosition) end
+function UPawnMovementComponent:MulticastAsyncPhysicsStateAction(ActionComponent, BoneName, Timestamp, ActionType,
+                                                                 ActionDatas, ActionPosition) end
+
 ---@return boolean
 function UPawnMovementComponent:IsMoveInputIgnored() end
+
 ---@return FVector
 function UPawnMovementComponent:GetPendingInputVector() end
+
 ---@return APawn
 function UPawnMovementComponent:GetPawnOwner() end
+
 ---@return FVector
 function UPawnMovementComponent:GetLastInputVector() end
+
 ---@return FVector
 function UPawnMovementComponent:ConsumeInputVector() end
+
 ---@param WorldVector FVector
 ---@param bForce boolean
 function UPawnMovementComponent:AddInputVector(WorldVector, bForce) end
-
 
 ---@class UPawnNoiseEmitterComponent : UActorComponent
 ---@field bAIPerceptionSystemCompatibilityMode boolean
@@ -28309,7 +31557,6 @@ UPawnNoiseEmitterComponent = {}
 ---@param NoiseLocation FVector
 function UPawnNoiseEmitterComponent:MakeNoise(NoiseMaker, Loudness, NoiseLocation) end
 
-
 ---@class UPendingNetGame : UObject
 ---@field NetDriver UNetDriver
 ---@field DemoNetDriver UDemoNetDriver
@@ -28324,24 +31571,29 @@ UPhysicalAnimationComponent = {}
 
 ---@param InStrengthMultiplyer float
 function UPhysicalAnimationComponent:SetStrengthMultiplyer(InStrengthMultiplyer) end
+
 ---@param InSkeletalMeshComponent USkeletalMeshComponent
 function UPhysicalAnimationComponent:SetSkeletalMeshComponent(InSkeletalMeshComponent) end
+
 ---@param BodyName FName
 ---@return FTransform
 function UPhysicalAnimationComponent:GetBodyTargetTransform(BodyName) end
+
 ---@param BodyName FName
 ---@param PhysicalAnimationData FPhysicalAnimationData
 ---@param bIncludeSelf boolean
 function UPhysicalAnimationComponent:ApplyPhysicalAnimationSettingsBelow(BodyName, PhysicalAnimationData, bIncludeSelf) end
+
 ---@param BodyName FName
 ---@param PhysicalAnimationData FPhysicalAnimationData
 function UPhysicalAnimationComponent:ApplyPhysicalAnimationSettings(BodyName, PhysicalAnimationData) end
+
 ---@param BodyName FName
 ---@param ProfileName FName
 ---@param bIncludeSelf boolean
 ---@param bClearNotFound boolean
-function UPhysicalAnimationComponent:ApplyPhysicalAnimationProfileBelow(BodyName, ProfileName, bIncludeSelf, bClearNotFound) end
-
+function UPhysicalAnimationComponent:ApplyPhysicalAnimationProfileBelow(BodyName, ProfileName, bIncludeSelf,
+                                                                        bClearNotFound) end
 
 ---@class UPhysicalMaterialMask : UObject
 ---@field UVChannelIndex int32
@@ -28388,115 +31640,152 @@ UPhysicsConstraintComponent = {}
 ---@param bEnableTwistDrive boolean
 ---@param bEnableSwingDrive boolean
 function UPhysicsConstraintComponent:SetOrientationDriveTwistAndSwing(bEnableTwistDrive, bEnableSwingDrive) end
+
 ---@param bEnableSLERP boolean
 function UPhysicsConstraintComponent:SetOrientationDriveSLERP(bEnableSLERP) end
+
 ---@param ConstraintType ELinearConstraintMotion
 ---@param LimitSize float
 function UPhysicsConstraintComponent:SetLinearZLimit(ConstraintType, LimitSize) end
+
 ---@param ConstraintType ELinearConstraintMotion
 ---@param LimitSize float
 function UPhysicsConstraintComponent:SetLinearYLimit(ConstraintType, LimitSize) end
+
 ---@param ConstraintType ELinearConstraintMotion
 ---@param LimitSize float
 function UPhysicsConstraintComponent:SetLinearXLimit(ConstraintType, LimitSize) end
+
 ---@param InVelTarget FVector
 function UPhysicsConstraintComponent:SetLinearVelocityTarget(InVelTarget) end
+
 ---@param bEnableDriveX boolean
 ---@param bEnableDriveY boolean
 ---@param bEnableDriveZ boolean
 function UPhysicsConstraintComponent:SetLinearVelocityDrive(bEnableDriveX, bEnableDriveY, bEnableDriveZ) end
+
 ---@param InPosTarget FVector
 function UPhysicsConstraintComponent:SetLinearPositionTarget(InPosTarget) end
+
 ---@param bEnableDriveX boolean
 ---@param bEnableDriveY boolean
 ---@param bEnableDriveZ boolean
 function UPhysicsConstraintComponent:SetLinearPositionDrive(bEnableDriveX, bEnableDriveY, bEnableDriveZ) end
+
 ---@param bLinearPlasticity boolean
 ---@param LinearPlasticityThreshold float
 ---@param PlasticityType EConstraintPlasticityType
 function UPhysicsConstraintComponent:SetLinearPlasticity(bLinearPlasticity, LinearPlasticityThreshold, PlasticityType) end
+
 ---@param PositionStrength float
 ---@param VelocityStrength float
 ---@param InForceLimit float
 function UPhysicsConstraintComponent:SetLinearDriveParams(PositionStrength, VelocityStrength, InForceLimit) end
+
 ---@param bLinearBreakable boolean
 ---@param LinearBreakThreshold float
 function UPhysicsConstraintComponent:SetLinearBreakable(bLinearBreakable, LinearBreakThreshold) end
+
 ---@param bDisableCollision boolean
 function UPhysicsConstraintComponent:SetDisableCollision(bDisableCollision) end
+
 ---@param ContactTransferScale float
 function UPhysicsConstraintComponent:SetContactTransferScale(ContactTransferScale) end
+
 ---@param Frame EConstraintFrame::Type
 ---@param RefPosition FVector
 function UPhysicsConstraintComponent:SetConstraintReferencePosition(Frame, RefPosition) end
+
 ---@param Frame EConstraintFrame::Type
 ---@param PriAxis FVector
 ---@param SecAxis FVector
 function UPhysicsConstraintComponent:SetConstraintReferenceOrientation(Frame, PriAxis, SecAxis) end
+
 ---@param Frame EConstraintFrame::Type
 ---@param RefFrame FTransform
 function UPhysicsConstraintComponent:SetConstraintReferenceFrame(Frame, RefFrame) end
+
 ---@param Component1 UPrimitiveComponent
 ---@param BoneName1 FName
 ---@param Component2 UPrimitiveComponent
 ---@param BoneName2 FName
 function UPhysicsConstraintComponent:SetConstrainedComponents(Component1, BoneName1, Component2, BoneName2) end
+
 ---@param InVelTarget FVector
 function UPhysicsConstraintComponent:SetAngularVelocityTarget(InVelTarget) end
+
 ---@param bEnableTwistDrive boolean
 ---@param bEnableSwingDrive boolean
 function UPhysicsConstraintComponent:SetAngularVelocityDriveTwistAndSwing(bEnableTwistDrive, bEnableSwingDrive) end
+
 ---@param bEnableSLERP boolean
 function UPhysicsConstraintComponent:SetAngularVelocityDriveSLERP(bEnableSLERP) end
+
 ---@param bEnableSwingDrive boolean
 ---@param bEnableTwistDrive boolean
 function UPhysicsConstraintComponent:SetAngularVelocityDrive(bEnableSwingDrive, bEnableTwistDrive) end
+
 ---@param ConstraintType EAngularConstraintMotion
 ---@param TwistLimitAngle float
 function UPhysicsConstraintComponent:SetAngularTwistLimit(ConstraintType, TwistLimitAngle) end
+
 ---@param MotionType EAngularConstraintMotion
 ---@param Swing2LimitAngle float
 function UPhysicsConstraintComponent:SetAngularSwing2Limit(MotionType, Swing2LimitAngle) end
+
 ---@param MotionType EAngularConstraintMotion
 ---@param Swing1LimitAngle float
 function UPhysicsConstraintComponent:SetAngularSwing1Limit(MotionType, Swing1LimitAngle) end
+
 ---@param bAngularPlasticity boolean
 ---@param AngularPlasticityThreshold float
 function UPhysicsConstraintComponent:SetAngularPlasticity(bAngularPlasticity, AngularPlasticityThreshold) end
+
 ---@param InPosTarget FRotator
 function UPhysicsConstraintComponent:SetAngularOrientationTarget(InPosTarget) end
+
 ---@param bEnableSwingDrive boolean
 ---@param bEnableTwistDrive boolean
 function UPhysicsConstraintComponent:SetAngularOrientationDrive(bEnableSwingDrive, bEnableTwistDrive) end
+
 ---@param PositionStrength float
 ---@param VelocityStrength float
 ---@param InForceLimit float
 function UPhysicsConstraintComponent:SetAngularDriveParams(PositionStrength, VelocityStrength, InForceLimit) end
+
 ---@param DriveMode EAngularDriveMode::Type
 function UPhysicsConstraintComponent:SetAngularDriveMode(DriveMode) end
+
 ---@param bAngularBreakable boolean
 ---@param AngularBreakThreshold float
 function UPhysicsConstraintComponent:SetAngularBreakable(bAngularBreakable, AngularBreakThreshold) end
+
 ---@return boolean
 function UPhysicsConstraintComponent:IsBroken() end
+
 ---@return float
 function UPhysicsConstraintComponent:GetCurrentTwist() end
+
 ---@return float
 function UPhysicsConstraintComponent:GetCurrentSwing2() end
+
 ---@return float
 function UPhysicsConstraintComponent:GetCurrentSwing1() end
+
 ---@param OutLinearForce FVector
 ---@param OutAngularForce FVector
 function UPhysicsConstraintComponent:GetConstraintForce(OutLinearForce, OutAngularForce) end
+
 ---@return FConstraintInstanceAccessor
 function UPhysicsConstraintComponent:GetConstraint() end
+
 ---@param OutComponent1 UPrimitiveComponent
 ---@param OutBoneName1 FName
 ---@param OutComponent2 UPrimitiveComponent
 ---@param OutBoneName2 FName
 function UPhysicsConstraintComponent:GetConstrainedComponents(OutComponent1, OutBoneName1, OutComponent2, OutBoneName2) end
-function UPhysicsConstraintComponent:BreakConstraint() end
 
+function UPhysicsConstraintComponent:BreakConstraint() end
 
 ---@class UPhysicsConstraintTemplate : UObject
 ---@field DefaultInstance FConstraintInstance
@@ -28518,17 +31807,18 @@ UPhysicsFieldStatics = {}
 ---@param VectorType EFieldVectorType
 ---@return FVector
 function UPhysicsFieldStatics:EvalPhysicsVectorField(WorldContextObject, WorldPosition, VectorType) end
+
 ---@param WorldContextObject UObject
 ---@param WorldPosition FVector
 ---@param ScalarType EFieldScalarType
 ---@return float
 function UPhysicsFieldStatics:EvalPhysicsScalarField(WorldContextObject, WorldPosition, ScalarType) end
+
 ---@param WorldContextObject UObject
 ---@param WorldPosition FVector
 ---@param IntegerType EFieldIntegerType
 ---@return int32
 function UPhysicsFieldStatics:EvalPhysicsIntegerField(WorldContextObject, WorldPosition, IntegerType) end
-
 
 ---@class UPhysicsHandleComponent : UActorComponent
 ---@field GrabbedComponent UPrimitiveComponent
@@ -28544,42 +31834,54 @@ UPhysicsHandleComponent = {}
 
 ---@param NewRotation FRotator
 function UPhysicsHandleComponent:SetTargetRotation(NewRotation) end
+
 ---@param NewLocation FVector
 ---@param NewRotation FRotator
 function UPhysicsHandleComponent:SetTargetLocationAndRotation(NewLocation, NewRotation) end
+
 ---@param NewLocation FVector
 function UPhysicsHandleComponent:SetTargetLocation(NewLocation) end
+
 ---@param NewLinearStiffness float
 function UPhysicsHandleComponent:SetLinearStiffness(NewLinearStiffness) end
+
 ---@param NewLinearDamping float
 function UPhysicsHandleComponent:SetLinearDamping(NewLinearDamping) end
+
 ---@param NewInterpolationSpeed float
 function UPhysicsHandleComponent:SetInterpolationSpeed(NewInterpolationSpeed) end
+
 ---@param NewAngularStiffness float
 function UPhysicsHandleComponent:SetAngularStiffness(NewAngularStiffness) end
+
 ---@param NewAngularDamping float
 function UPhysicsHandleComponent:SetAngularDamping(NewAngularDamping) end
+
 function UPhysicsHandleComponent:ReleaseComponent() end
+
 ---@param Component UPrimitiveComponent
 ---@param InBoneName FName
 ---@param Location FVector
 ---@param Rotation FRotator
 function UPhysicsHandleComponent:GrabComponentAtLocationWithRotation(Component, InBoneName, Location, Rotation) end
+
 ---@param Component UPrimitiveComponent
 ---@param InBoneName FName
 ---@param GrabLocation FVector
 function UPhysicsHandleComponent:GrabComponentAtLocation(Component, InBoneName, GrabLocation) end
+
 ---@param Component UPrimitiveComponent
 ---@param InBoneName FName
 ---@param GrabLocation FVector
 ---@param bConstrainRotation boolean
 function UPhysicsHandleComponent:GrabComponent(Component, InBoneName, GrabLocation, bConstrainRotation) end
+
 ---@param TargetLocation FVector
 ---@param TargetRotation FRotator
 function UPhysicsHandleComponent:GetTargetLocationAndRotation(TargetLocation, TargetRotation) end
+
 ---@return UPrimitiveComponent
 function UPhysicsHandleComponent:GetGrabbedComponent() end
-
 
 ---@class UPhysicsObjectBlueprintLibrary : UBlueprintFunctionLibrary
 UPhysicsObjectBlueprintLibrary = {}
@@ -28588,14 +31890,17 @@ UPhysicsObjectBlueprintLibrary = {}
 ---@param BoneName FName
 ---@return FTransform
 function UPhysicsObjectBlueprintLibrary:GetPhysicsObjectWorldTransform(Component, BoneName) end
+
 ---@param Component UPrimitiveComponent
 ---@param WorldLocation FVector
 ---@return FClosestPhysicsObjectResult
 function UPhysicsObjectBlueprintLibrary:GetClosestPhysicsObjectFromWorldLocation(Component, WorldLocation) end
+
 ---@param Result FClosestPhysicsObjectResult
 ---@param OutName FName
 ---@return boolean
 function UPhysicsObjectBlueprintLibrary:ExtractClosestPhysicsObjectResults(Result, OutName) end
+
 ---@param Component UPrimitiveComponent
 ---@param Origin FVector
 ---@param Radius float
@@ -28603,7 +31908,6 @@ function UPhysicsObjectBlueprintLibrary:ExtractClosestPhysicsObjectResults(Resul
 ---@param Falloff ERadialImpulseFalloff
 ---@param bApplyStrain boolean
 function UPhysicsObjectBlueprintLibrary:ApplyRadialImpulse(Component, Origin, Radius, Strength, Falloff, bApplyStrain) end
-
 
 ---@class UPhysicsSettings : UPhysicsSettingsCore
 ---@field PhysicsPrediction FPhysicsPredictionSettings
@@ -28638,7 +31942,6 @@ UPhysicsSettings = {}
 ---@return int32
 function UPhysicsSettings:GetPhysicsHistoryCount() end
 
-
 ---@class UPhysicsSpringComponent : USceneComponent
 ---@field SpringStiffness float
 ---@field SpringDamping float
@@ -28651,13 +31954,15 @@ UPhysicsSpringComponent = {}
 
 ---@return FVector
 function UPhysicsSpringComponent:GetSpringRestingPoint() end
+
 ---@return FVector
 function UPhysicsSpringComponent:GetSpringDirection() end
+
 ---@return FVector
 function UPhysicsSpringComponent:GetSpringCurrentEndPoint() end
+
 ---@return float
 function UPhysicsSpringComponent:GetNormalizedCompressionScalar() end
-
 
 ---@class UPhysicsThreadLibrary : UBlueprintFunctionLibrary
 UPhysicsThreadLibrary = {}
@@ -28666,7 +31971,6 @@ UPhysicsThreadLibrary = {}
 ---@param Force FVector
 ---@param bAccelChange boolean
 function UPhysicsThreadLibrary:AddForce(Handle, Force, bAccelChange) end
-
 
 ---@class UPhysicsThrusterComponent : USceneComponent
 ---@field ThrustStrength float
@@ -28717,12 +32021,14 @@ UPlatformEventsComponent = {}
 
 ---@return boolean
 function UPlatformEventsComponent:SupportsConvertibleLaptops() end
+
 function UPlatformEventsComponent:PlatformEventDelegate__DelegateSignature() end
+
 ---@return boolean
 function UPlatformEventsComponent:IsInTabletMode() end
+
 ---@return boolean
 function UPlatformEventsComponent:IsInLaptopMode() end
-
 
 ---@class UPlatformGameInstance : UGameInstance
 ---@field ApplicationWillDeactivateDelegate FPlatformGameInstanceApplicationWillDeactivateDelegate
@@ -28758,14 +32064,15 @@ UPlatformInterfaceWebResponse = {}
 
 ---@return int32
 function UPlatformInterfaceWebResponse:GetNumHeaders() end
+
 ---@param HeaderName FString
 ---@return FString
 function UPlatformInterfaceWebResponse:GetHeaderValue(HeaderName) end
+
 ---@param HeaderIndex int32
 ---@param Header FString
 ---@param Value FString
 function UPlatformInterfaceWebResponse:GetHeader(HeaderIndex, Header, Value) end
-
 
 ---@class UPlayer : UObject
 ---@field PlayerController APlayerController
@@ -28783,17 +32090,21 @@ UPlayerInput = {}
 
 ---@param Sensitivity float
 function UPlayerInput:SetMouseSensitivity(Sensitivity) end
+
 ---@param BindName FName
 ---@param Command FString
 function UPlayerInput:SetBind(BindName, Command) end
+
 ---@param AxisKey FKey
 function UPlayerInput:InvertAxisKey(AxisKey) end
+
 ---@param AxisName FName
 function UPlayerInput:InvertAxis(AxisName) end
+
 ---@return APlayerController
 function UPlayerInput:GetOuterAPlayerController() end
-function UPlayerInput:ClearSmoothing() end
 
+function UPlayerInput:ClearSmoothing() end
 
 ---@class UPlayerStateCountLimiterConfig : UNetObjectCountLimiterConfig
 UPlayerStateCountLimiterConfig = {}
@@ -28805,49 +32116,60 @@ UPluginBlueprintLibrary = {}
 ---@param PluginName FString
 ---@return boolean
 function UPluginBlueprintLibrary:IsPluginMounted(PluginName) end
+
 ---@param PluginName FString
 ---@param OutVersionName FString
 ---@return boolean
 function UPluginBlueprintLibrary:GetPluginVersionName(PluginName, OutVersionName) end
+
 ---@param PluginName FString
 ---@param OutVersion int32
 ---@return boolean
 function UPluginBlueprintLibrary:GetPluginVersion(PluginName, OutVersion) end
+
 ---@param ObjectPath FSoftObjectPath
 ---@param OutPluginName FString
 ---@return boolean
 function UPluginBlueprintLibrary:GetPluginNameForObjectPath(ObjectPath, OutPluginName) end
+
 ---@param PluginName FString
 ---@param OutAssetPath FString
 ---@return boolean
 function UPluginBlueprintLibrary:GetPluginMountedAssetPath(PluginName, OutAssetPath) end
+
 ---@param PluginName FString
 ---@param OutVirtualPath FString
 ---@return boolean
 function UPluginBlueprintLibrary:GetPluginEditorCustomVirtualPath(PluginName, OutVirtualPath) end
+
 ---@param PluginName FString
 ---@param OutFilePath FString
 ---@return boolean
 function UPluginBlueprintLibrary:GetPluginDescriptorFilePath(PluginName, OutFilePath) end
+
 ---@param PluginName FString
 ---@param OutDescription FString
 ---@return boolean
 function UPluginBlueprintLibrary:GetPluginDescription(PluginName, OutDescription) end
+
 ---@param PluginName FString
 ---@param OutContentDir FString
 ---@return boolean
 function UPluginBlueprintLibrary:GetPluginContentDir(PluginName, OutContentDir) end
+
 ---@param PluginName FString
 ---@param OutBaseDir FString
 ---@return boolean
 function UPluginBlueprintLibrary:GetPluginBaseDir(PluginName, OutBaseDir) end
+
 ---@return TArray<FString>
 function UPluginBlueprintLibrary:GetEnabledPluginNames() end
+
 ---@return TArray<FString>
 function UPluginBlueprintLibrary:GetAdditionalProjectPluginSearchPaths() end
+
 ---@return TArray<FString>
 function UPluginBlueprintLibrary:GetAdditionalPluginSearchPaths() end
-
 
 ---@class UPluginCommandlet : UCommandlet
 UPluginCommandlet = {}
@@ -28863,17 +32185,21 @@ UPointLightComponent = {}
 
 ---@param bNewValue boolean
 function UPointLightComponent:SetUseInverseSquaredFalloff(bNewValue) end
+
 ---@param bNewValue float
 function UPointLightComponent:SetSourceRadius(bNewValue) end
+
 ---@param NewValue float
 function UPointLightComponent:SetSourceLength(NewValue) end
+
 ---@param bNewValue float
 function UPointLightComponent:SetSoftSourceRadius(bNewValue) end
+
 ---@param NewLightFalloffExponent float
 function UPointLightComponent:SetLightFalloffExponent(NewLightFalloffExponent) end
+
 ---@param NewInverseExposureBlend float
 function UPointLightComponent:SetInverseExposureBlend(NewInverseExposureBlend) end
-
 
 ---@class UPolys : UObject
 UPolys = {}
@@ -28912,39 +32238,47 @@ UPoseableMeshComponent = {}
 ---@param InTransform FTransform
 ---@param BoneSpace EBoneSpaces::Type
 function UPoseableMeshComponent:SetBoneTransformByName(BoneName, InTransform, BoneSpace) end
+
 ---@param BoneName FName
 ---@param InScale3D FVector
 ---@param BoneSpace EBoneSpaces::Type
 function UPoseableMeshComponent:SetBoneScaleByName(BoneName, InScale3D, BoneSpace) end
+
 ---@param BoneName FName
 ---@param InRotation FRotator
 ---@param BoneSpace EBoneSpaces::Type
 function UPoseableMeshComponent:SetBoneRotationByName(BoneName, InRotation, BoneSpace) end
+
 ---@param BoneName FName
 ---@param InLocation FVector
 ---@param BoneSpace EBoneSpaces::Type
 function UPoseableMeshComponent:SetBoneLocationByName(BoneName, InLocation, BoneSpace) end
+
 ---@param BoneName FName
 function UPoseableMeshComponent:ResetBoneTransformByName(BoneName) end
+
 ---@param BoneName FName
 ---@param BoneSpace EBoneSpaces::Type
 ---@return FTransform
 function UPoseableMeshComponent:GetBoneTransformByName(BoneName, BoneSpace) end
+
 ---@param BoneName FName
 ---@param BoneSpace EBoneSpaces::Type
 ---@return FVector
 function UPoseableMeshComponent:GetBoneScaleByName(BoneName, BoneSpace) end
+
 ---@param BoneName FName
 ---@param BoneSpace EBoneSpaces::Type
 ---@return FRotator
 function UPoseableMeshComponent:GetBoneRotationByName(BoneName, BoneSpace) end
+
 ---@param BoneName FName
 ---@param BoneSpace EBoneSpaces::Type
 ---@return FVector
 function UPoseableMeshComponent:GetBoneLocationByName(BoneName, BoneSpace) end
+
 ---@param InComponentToCopy USkeletalMeshComponent
 function UPoseableMeshComponent:CopyPoseFromSkeletalComponent(InComponentToCopy) end
-
 
 ---@class UPostProcessComponent : USceneComponent
 ---@field Settings FPostProcessSettings
@@ -28958,7 +32292,6 @@ UPostProcessComponent = {}
 ---@param InBlendableObject TScriptInterface<IBlendableInterface>
 ---@param InWeight float
 function UPostProcessComponent:AddOrUpdateBlendable(InBlendableObject, InWeight) end
-
 
 ---@class UPreviewMeshCollection : UDataAsset
 ---@field Skeleton USkeleton
@@ -29095,200 +32428,279 @@ UPrimitiveComponent = {}
 ---@param Tolerance float
 ---@return boolean
 function UPrimitiveComponent:WasRecentlyRendered(Tolerance) end
+
 ---@param BoneName FName
 function UPrimitiveComponent:WakeRigidBody(BoneName) end
+
 function UPrimitiveComponent:WakeAllRigidBodies() end
+
 ---@param NewOverride FWalkableSlopeOverride
 function UPrimitiveComponent:SetWalkableSlopeOverride(NewOverride) end
+
 ---@param bValue boolean
 function UPrimitiveComponent:SetVisibleInSceneCaptureOnly(bValue) end
+
 ---@param bNewVisibleInRayTracing boolean
 function UPrimitiveComponent:SetVisibleInRayTracing(bNewVisibleInRayTracing) end
+
 ---@param ParameterName FName
 ---@param Value FVector4
 function UPrimitiveComponent:SetVectorParameterForDefaultCustomPrimitiveData(ParameterName, Value) end
+
 ---@param ParameterName FName
 ---@param Value FVector4
 function UPrimitiveComponent:SetVectorParameterForCustomPrimitiveData(ParameterName, Value) end
+
 ---@param InUseCCD boolean
 ---@param BoneName FName
 function UPrimitiveComponent:SetUseCCD(InUseCCD, BoneName) end
+
 ---@param NewTranslucentSortPriority int32
 function UPrimitiveComponent:SetTranslucentSortPriority(NewTranslucentSortPriority) end
+
 ---@param NewTranslucencySortDistanceOffset float
 function UPrimitiveComponent:SetTranslucencySortDistanceOffset(NewTranslucencySortDistanceOffset) end
+
 ---@param bInStaticWhenNotMoveable boolean
 function UPrimitiveComponent:SetStaticWhenNotMoveable(bInStaticWhenNotMoveable) end
+
 ---@param bNewSingleSampleShadowFromStationaryLights boolean
 function UPrimitiveComponent:SetSingleSampleShadowFromStationaryLights(bNewSingleSampleShadowFromStationaryLights) end
+
 ---@param bSimulate boolean
 function UPrimitiveComponent:SetSimulatePhysics(bSimulate) end
+
 ---@param ParameterName FName
 ---@param Value float
 function UPrimitiveComponent:SetScalarParameterForDefaultCustomPrimitiveData(ParameterName, Value) end
+
 ---@param ParameterName FName
 ---@param Value float
 function UPrimitiveComponent:SetScalarParameterForCustomPrimitiveData(ParameterName, Value) end
+
 ---@param bValue boolean
 function UPrimitiveComponent:SetRenderInMainPass(bValue) end
+
 ---@param bValue boolean
 function UPrimitiveComponent:SetRenderInDepthPass(bValue) end
+
 ---@param bValue boolean
 function UPrimitiveComponent:SetRenderCustomDepth(bValue) end
+
 ---@param bNewReceivesDecals boolean
 function UPrimitiveComponent:SetReceivesDecals(bNewReceivesDecals) end
+
 ---@param NewPhysMaterial UPhysicalMaterial
 function UPrimitiveComponent:SetPhysMaterialOverride(NewPhysMaterial) end
+
 ---@param NewMaxAngVel float
 ---@param bAddToCurrent boolean
 ---@param BoneName FName
 function UPrimitiveComponent:SetPhysicsMaxAngularVelocityInRadians(NewMaxAngVel, bAddToCurrent, BoneName) end
+
 ---@param NewMaxAngVel float
 ---@param bAddToCurrent boolean
 ---@param BoneName FName
 function UPrimitiveComponent:SetPhysicsMaxAngularVelocityInDegrees(NewMaxAngVel, bAddToCurrent, BoneName) end
+
 ---@param NewVel FVector
 ---@param bAddToCurrent boolean
 ---@param BoneName FName
 function UPrimitiveComponent:SetPhysicsLinearVelocity(NewVel, bAddToCurrent, BoneName) end
+
 ---@param NewAngVel FVector
 ---@param bAddToCurrent boolean
 ---@param BoneName FName
 function UPrimitiveComponent:SetPhysicsAngularVelocityInRadians(NewAngVel, bAddToCurrent, BoneName) end
+
 ---@param NewAngVel FVector
 ---@param bAddToCurrent boolean
 ---@param BoneName FName
 function UPrimitiveComponent:SetPhysicsAngularVelocityInDegrees(NewAngVel, bAddToCurrent, BoneName) end
+
 ---@param bNewOwnerNoSee boolean
 function UPrimitiveComponent:SetOwnerNoSee(bNewOwnerNoSee) end
+
 ---@param bNewOnlyOwnerSee boolean
 function UPrimitiveComponent:SetOnlyOwnerSee(bNewOnlyOwnerSee) end
+
 ---@param bNewNotifyRigidBodyCollision boolean
 function UPrimitiveComponent:SetNotifyRigidBodyCollision(bNewNotifyRigidBodyCollision) end
+
 ---@param MaterialSlotName FName
 ---@param Material UMaterialInterface
 function UPrimitiveComponent:SetMaterialByName(MaterialSlotName, Material) end
+
 ---@param ElementIndex int32
 ---@param Material UMaterialInterface
 function UPrimitiveComponent:SetMaterial(ElementIndex, Material) end
+
 ---@param BoneName FName
 ---@param InMassScale float
 function UPrimitiveComponent:SetMassScale(BoneName, InMassScale) end
+
 ---@param BoneName FName
 ---@param MassInKg float
 ---@param bOverrideMass boolean
 function UPrimitiveComponent:SetMassOverrideInKg(BoneName, MassInKg, bOverrideMass) end
+
 ---@param InDamping float
 function UPrimitiveComponent:SetLinearDamping(InDamping) end
+
 ---@param bChannel0 boolean
 ---@param bChannel1 boolean
 ---@param bChannel2 boolean
 function UPrimitiveComponent:SetLightingChannels(bChannel0, bChannel1, bChannel2) end
+
 ---@param bInLightAttachmentsAsGroup boolean
 function UPrimitiveComponent:SetLightAttachmentsAsGroup(bInLightAttachmentsAsGroup) end
+
 ---@param bIgnore boolean
 function UPrimitiveComponent:SetIgnoreBoundsForEditorFocus(bIgnore) end
+
 ---@param bNewHoldout boolean
 function UPrimitiveComponent:SetHoldout(bNewHoldout) end
+
 ---@param bValue boolean
 function UPrimitiveComponent:SetHiddenInSceneCapture(bValue) end
+
 ---@param bInGenerateOverlapEvents boolean
 function UPrimitiveComponent:SetGenerateOverlapEvents(bInGenerateOverlapEvents) end
+
 ---@param bInExcludeFromLightAttachmentGroup boolean
 function UPrimitiveComponent:SetExcludeFromLightAttachmentGroup(bInExcludeFromLightAttachmentGroup) end
+
 ---@param InExcludeForSpecificHLODLevels TArray<int32>
 function UPrimitiveComponent:SetExcludeForSpecificHLODLevels(InExcludeForSpecificHLODLevels) end
+
 ---@param HLODLevel EHLODLevelExclusion
 ---@param bExcluded boolean
 function UPrimitiveComponent:SetExcludedFromHLODLevel(HLODLevel, bExcluded) end
+
 ---@param bGravityEnabled boolean
 function UPrimitiveComponent:SetEnableGravity(bGravityEnabled) end
+
 ---@param NewEmissiveLightSource boolean
 function UPrimitiveComponent:SetEmissiveLightSource(NewEmissiveLightSource) end
+
 ---@param DataIndex int32
 ---@param Value FVector4
 function UPrimitiveComponent:SetDefaultCustomPrimitiveDataVector4(DataIndex, Value) end
+
 ---@param DataIndex int32
 ---@param Value FVector
 function UPrimitiveComponent:SetDefaultCustomPrimitiveDataVector3(DataIndex, Value) end
+
 ---@param DataIndex int32
 ---@param Value FVector2D
 function UPrimitiveComponent:SetDefaultCustomPrimitiveDataVector2(DataIndex, Value) end
+
 ---@param DataIndex int32
 ---@param Value float
 function UPrimitiveComponent:SetDefaultCustomPrimitiveDataFloat(DataIndex, Value) end
+
 ---@param DataIndex int32
 ---@param Value FVector4
 function UPrimitiveComponent:SetCustomPrimitiveDataVector4(DataIndex, Value) end
+
 ---@param DataIndex int32
 ---@param Value FVector
 function UPrimitiveComponent:SetCustomPrimitiveDataVector3(DataIndex, Value) end
+
 ---@param DataIndex int32
 ---@param Value FVector2D
 function UPrimitiveComponent:SetCustomPrimitiveDataVector2(DataIndex, Value) end
+
 ---@param DataIndex int32
 ---@param Value float
 function UPrimitiveComponent:SetCustomPrimitiveDataFloat(DataIndex, Value) end
+
 ---@param WriteMaskBit ERendererStencilMask
 function UPrimitiveComponent:SetCustomDepthStencilWriteMask(WriteMaskBit) end
+
 ---@param Value int32
 function UPrimitiveComponent:SetCustomDepthStencilValue(Value) end
+
 ---@param NewCullDistance float
 function UPrimitiveComponent:SetCullDistance(NewCullDistance) end
+
 ---@param ConstraintMode EDOFMode::Type
 function UPrimitiveComponent:SetConstraintMode(ConstraintMode) end
+
 ---@param Channel ECollisionChannel
 ---@param NewResponse ECollisionResponse
 function UPrimitiveComponent:SetCollisionResponseToChannel(Channel, NewResponse) end
+
 ---@param NewResponse ECollisionResponse
 function UPrimitiveComponent:SetCollisionResponseToAllChannels(NewResponse) end
+
 ---@param InCollisionProfileName FName
 ---@param bUpdateOverlaps boolean
 function UPrimitiveComponent:SetCollisionProfileName(InCollisionProfileName, bUpdateOverlaps) end
+
 ---@param Channel ECollisionChannel
 function UPrimitiveComponent:SetCollisionObjectType(Channel) end
+
 ---@param NewType ECollisionEnabled::Type
 function UPrimitiveComponent:SetCollisionEnabled(NewType) end
+
 ---@param CenterOfMassOffset FVector
 ---@param BoneName FName
 function UPrimitiveComponent:SetCenterOfMass(CenterOfMassOffset, BoneName) end
+
 ---@param NewCastShadow boolean
 function UPrimitiveComponent:SetCastShadow(NewCastShadow) end
+
 ---@param bInCastInsetShadow boolean
 function UPrimitiveComponent:SetCastInsetShadow(bInCastInsetShadow) end
+
 ---@param NewCastHiddenShadow boolean
 function UPrimitiveComponent:SetCastHiddenShadow(NewCastHiddenShadow) end
+
 ---@param bInCastContactShadow boolean
 function UPrimitiveComponent:SetCastContactShadow(bInCastContactShadow) end
+
 ---@param NewBoundsScale float
 function UPrimitiveComponent:SetBoundsScale(NewBoundsScale) end
+
 ---@param InDamping float
 function UPrimitiveComponent:SetAngularDamping(InDamping) end
+
 ---@param InUseCCD boolean
 function UPrimitiveComponent:SetAllUseCCD(InUseCCD) end
+
 ---@param NewVel FVector
 ---@param bAddToCurrent boolean
 function UPrimitiveComponent:SetAllPhysicsLinearVelocity(NewVel, bAddToCurrent) end
+
 ---@param NewAngVel FVector
 ---@param bAddToCurrent boolean
 function UPrimitiveComponent:SetAllPhysicsAngularVelocityInRadians(NewAngVel, bAddToCurrent) end
+
 ---@param NewAngVel FVector
 ---@param bAddToCurrent boolean
 function UPrimitiveComponent:SetAllPhysicsAngularVelocityInDegrees(NewAngVel, bAddToCurrent) end
+
 ---@param InMassScale float
 function UPrimitiveComponent:SetAllMassScale(InMassScale) end
+
 ---@param bNewAffectIndirectLightingWhileHidden boolean
 function UPrimitiveComponent:SetAffectIndirectLightingWhileHidden(bNewAffectIndirectLightingWhileHidden) end
+
 ---@param bNewAffectDynamicIndirectLighting boolean
 function UPrimitiveComponent:SetAffectDynamicIndirectLighting(bNewAffectDynamicIndirectLighting) end
+
 ---@param NewAffectDistanceFieldLighting boolean
 function UPrimitiveComponent:SetAffectDistanceFieldLighting(NewAffectDistanceFieldLighting) end
+
 ---@param InputVector FVector
 ---@param BoneName FName
 ---@return FVector
 function UPrimitiveComponent:ScaleByMomentOfInertia(InputVector, BoneName) end
+
 ---@param BoneName FName
 function UPrimitiveComponent:PutRigidBodyToSleep(BoneName) end
+
 ---@param TraceStart FVector
 ---@param TraceEnd FVector
 ---@param SphereRadius float
@@ -29300,7 +32712,9 @@ function UPrimitiveComponent:PutRigidBodyToSleep(BoneName) end
 ---@param BoneName FName
 ---@param OutHit FHitResult
 ---@return boolean
-function UPrimitiveComponent:K2_SphereTraceComponent(TraceStart, TraceEnd, SphereRadius, bTraceComplex, bShowTrace, bPersistentShowTrace, HitLocation, HitNormal, BoneName, OutHit) end
+function UPrimitiveComponent:K2_SphereTraceComponent(TraceStart, TraceEnd, SphereRadius, bTraceComplex, bShowTrace,
+                                                     bPersistentShowTrace, HitLocation, HitNormal, BoneName, OutHit) end
+
 ---@param InSphereCentre FVector
 ---@param InSphereRadius float
 ---@param bTraceComplex boolean
@@ -29311,7 +32725,9 @@ function UPrimitiveComponent:K2_SphereTraceComponent(TraceStart, TraceEnd, Spher
 ---@param BoneName FName
 ---@param OutHit FHitResult
 ---@return boolean
-function UPrimitiveComponent:K2_SphereOverlapComponent(InSphereCentre, InSphereRadius, bTraceComplex, bShowTrace, bPersistentShowTrace, HitLocation, HitNormal, BoneName, OutHit) end
+function UPrimitiveComponent:K2_SphereOverlapComponent(InSphereCentre, InSphereRadius, bTraceComplex, bShowTrace,
+                                                       bPersistentShowTrace, HitLocation, HitNormal, BoneName, OutHit) end
+
 ---@param TraceStart FVector
 ---@param TraceEnd FVector
 ---@param bTraceComplex boolean
@@ -29322,13 +32738,18 @@ function UPrimitiveComponent:K2_SphereOverlapComponent(InSphereCentre, InSphereR
 ---@param BoneName FName
 ---@param OutHit FHitResult
 ---@return boolean
-function UPrimitiveComponent:K2_LineTraceComponent(TraceStart, TraceEnd, bTraceComplex, bShowTrace, bPersistentShowTrace, HitLocation, HitNormal, BoneName, OutHit) end
+function UPrimitiveComponent:K2_LineTraceComponent(TraceStart, TraceEnd, bTraceComplex, bShowTrace, bPersistentShowTrace,
+                                                   HitLocation, HitNormal, BoneName, OutHit) end
+
 ---@return boolean
 function UPrimitiveComponent:K2_IsQueryCollisionEnabled() end
+
 ---@return boolean
 function UPrimitiveComponent:K2_IsPhysicsCollisionEnabled() end
+
 ---@return boolean
 function UPrimitiveComponent:K2_IsCollisionEnabled() end
+
 ---@param InBoxCentre FVector
 ---@param InBox FBox
 ---@param bTraceComplex boolean
@@ -29339,178 +32760,234 @@ function UPrimitiveComponent:K2_IsCollisionEnabled() end
 ---@param BoneName FName
 ---@param OutHit FHitResult
 ---@return boolean
-function UPrimitiveComponent:K2_BoxOverlapComponent(InBoxCentre, InBox, bTraceComplex, bShowTrace, bPersistentShowTrace, HitLocation, HitNormal, BoneName, OutHit) end
+function UPrimitiveComponent:K2_BoxOverlapComponent(InBoxCentre, InBox, bTraceComplex, bShowTrace, bPersistentShowTrace,
+                                                    HitLocation, HitNormal, BoneName, OutHit) end
+
 ---@param OtherComp UPrimitiveComponent
 ---@return boolean
 function UPrimitiveComponent:IsOverlappingComponent(OtherComp) end
+
 ---@param Other AActor
 ---@return boolean
 function UPrimitiveComponent:IsOverlappingActor(Other) end
+
 ---@return boolean
 function UPrimitiveComponent:IsGravityEnabled() end
+
 ---@param HLODLevel EHLODLevelExclusion
 ---@return boolean
 function UPrimitiveComponent:IsExcludedFromHLODLevel(HLODLevel) end
+
 ---@return boolean
 function UPrimitiveComponent:IsAnyRigidBodyAwake() end
+
 function UPrimitiveComponent:InvalidateLumenSurfaceCache() end
+
 ---@param Component UPrimitiveComponent
 ---@param bShouldIgnore boolean
 function UPrimitiveComponent:IgnoreComponentWhenMoving(Component, bShouldIgnore) end
+
 ---@param Actor AActor
 ---@param bShouldIgnore boolean
 function UPrimitiveComponent:IgnoreActorWhenMoving(Actor, bShouldIgnore) end
+
 ---@return FWalkableSlopeOverride
 function UPrimitiveComponent:GetWalkableSlopeOverride() end
+
 ---@return boolean
 function UPrimitiveComponent:GetStaticWhenNotMoveable() end
+
 ---@param Point FVector
 ---@param BoneName FName
 ---@return FVector
 function UPrimitiveComponent:GetPhysicsLinearVelocityAtPoint(Point, BoneName) end
+
 ---@param BoneName FName
 ---@return FVector
 function UPrimitiveComponent:GetPhysicsLinearVelocity(BoneName) end
+
 ---@param BoneName FName
 ---@return FVector
 function UPrimitiveComponent:GetPhysicsAngularVelocityInRadians(BoneName) end
+
 ---@param BoneName FName
 ---@return FVector
 function UPrimitiveComponent:GetPhysicsAngularVelocityInDegrees(BoneName) end
+
 ---@param OutOverlappingComponents TArray<UPrimitiveComponent>
 function UPrimitiveComponent:GetOverlappingComponents(OutOverlappingComponents) end
+
 ---@param OverlappingActors TArray<AActor>
 ---@param ClassFilter TSubclassOf<AActor>
 function UPrimitiveComponent:GetOverlappingActors(OverlappingActors, ClassFilter) end
+
 ---@return int32
 function UPrimitiveComponent:GetNumMaterials() end
+
 ---@param FaceIndex int32
 ---@param SectionIndex int32
 ---@return UMaterialInterface
 function UPrimitiveComponent:GetMaterialFromCollisionFaceIndex(FaceIndex, SectionIndex) end
+
 ---@param ElementIndex int32
 ---@return UMaterialInterface
 function UPrimitiveComponent:GetMaterial(ElementIndex) end
+
 ---@param BoneName FName
 ---@return float
 function UPrimitiveComponent:GetMassScale(BoneName) end
+
 ---@return float
 function UPrimitiveComponent:GetMass() end
+
 ---@return float
 function UPrimitiveComponent:GetLinearDamping() end
+
 ---@param BoneName FName
 ---@return FVector
 function UPrimitiveComponent:GetInertiaTensor(BoneName) end
+
 ---@return boolean
 function UPrimitiveComponent:GetIgnoreBoundsForEditorFocus() end
+
 ---@return boolean
 function UPrimitiveComponent:GetGenerateOverlapEvents() end
+
 ---@return TArray<int32>
 function UPrimitiveComponent:GetExcludeForSpecificHLODLevels() end
+
 ---@param ParameterName FName
 ---@return int32
 function UPrimitiveComponent:GetCustomPrimitiveDataIndexForVectorParameter(ParameterName) end
+
 ---@param ParameterName FName
 ---@return int32
 function UPrimitiveComponent:GetCustomPrimitiveDataIndexForScalarParameter(ParameterName) end
+
 ---@param Channel ECollisionChannel
 ---@return ECollisionResponse
 function UPrimitiveComponent:GetCollisionResponseToChannel(Channel) end
+
 ---@return FName
 function UPrimitiveComponent:GetCollisionProfileName() end
+
 ---@return ECollisionChannel
 function UPrimitiveComponent:GetCollisionObjectType() end
+
 ---@return ECollisionEnabled::Type
 function UPrimitiveComponent:GetCollisionEnabled() end
+
 ---@param Point FVector
 ---@param OutPointOnBody FVector
 ---@param BoneName FName
 ---@return float
 function UPrimitiveComponent:GetClosestPointOnCollision(Point, OutPointOnBody, BoneName) end
+
 ---@param BoneName FName
 ---@return FVector
 function UPrimitiveComponent:GetCenterOfMass(BoneName) end
+
 ---@param BoneName FName
 ---@param bGetWelded boolean
 ---@param Index int32
 ---@return FBodyInstanceAsyncPhysicsTickHandle
 function UPrimitiveComponent:GetBodyInstanceAsyncPhysicsTickHandle(BoneName, bGetWelded, Index) end
+
 ---@return float
 function UPrimitiveComponent:GetAngularDamping() end
+
 ---@param ElementIndex int32
 ---@param SourceMaterial UMaterialInterface
 ---@param OptionalName FName
 ---@return UMaterialInstanceDynamic
 function UPrimitiveComponent:CreateDynamicMaterialInstance(ElementIndex, SourceMaterial, OptionalName) end
+
 ---@param ElementIndex int32
 ---@param Parent UMaterialInterface
 ---@return UMaterialInstanceDynamic
 function UPrimitiveComponent:CreateAndSetMaterialInstanceDynamicFromMaterial(ElementIndex, Parent) end
+
 ---@param ElementIndex int32
 ---@return UMaterialInstanceDynamic
 function UPrimitiveComponent:CreateAndSetMaterialInstanceDynamic(ElementIndex) end
+
 ---@return TArray<UPrimitiveComponent>
 function UPrimitiveComponent:CopyArrayOfMoveIgnoreComponents() end
+
 ---@return TArray<AActor>
 function UPrimitiveComponent:CopyArrayOfMoveIgnoreActors() end
+
 function UPrimitiveComponent:ClearMoveIgnoreComponents() end
+
 function UPrimitiveComponent:ClearMoveIgnoreActors() end
+
 ---@param Pawn APawn
 ---@return boolean
 function UPrimitiveComponent:CanCharacterStepUp(Pawn) end
+
 ---@param Impulse FVector
 ---@param Location FVector
 ---@param BoneName FName
 function UPrimitiveComponent:AddVelocityChangeImpulseAtLocation(Impulse, Location, BoneName) end
+
 ---@param Torque FVector
 ---@param BoneName FName
 ---@param bAccelChange boolean
 function UPrimitiveComponent:AddTorqueInRadians(Torque, BoneName, bAccelChange) end
+
 ---@param Torque FVector
 ---@param BoneName FName
 ---@param bAccelChange boolean
 function UPrimitiveComponent:AddTorqueInDegrees(Torque, BoneName, bAccelChange) end
+
 ---@param Origin FVector
 ---@param Radius float
 ---@param Strength float
 ---@param Falloff ERadialImpulseFalloff
 ---@param bVelChange boolean
 function UPrimitiveComponent:AddRadialImpulse(Origin, Radius, Strength, Falloff, bVelChange) end
+
 ---@param Origin FVector
 ---@param Radius float
 ---@param Strength float
 ---@param Falloff ERadialImpulseFalloff
 ---@param bAccelChange boolean
 function UPrimitiveComponent:AddRadialForce(Origin, Radius, Strength, Falloff, bAccelChange) end
+
 ---@param Impulse FVector
 ---@param Location FVector
 ---@param BoneName FName
 function UPrimitiveComponent:AddImpulseAtLocation(Impulse, Location, BoneName) end
+
 ---@param Impulse FVector
 ---@param BoneName FName
 ---@param bVelChange boolean
 function UPrimitiveComponent:AddImpulse(Impulse, BoneName, bVelChange) end
+
 ---@param Force FVector
 ---@param Location FVector
 ---@param BoneName FName
 function UPrimitiveComponent:AddForceAtLocationLocal(Force, Location, BoneName) end
+
 ---@param Force FVector
 ---@param Location FVector
 ---@param BoneName FName
 function UPrimitiveComponent:AddForceAtLocation(Force, Location, BoneName) end
+
 ---@param Force FVector
 ---@param BoneName FName
 ---@param bAccelChange boolean
 function UPrimitiveComponent:AddForce(Force, BoneName, bAccelChange) end
+
 ---@param Impulse FVector
 ---@param BoneName FName
 ---@param bVelChange boolean
 function UPrimitiveComponent:AddAngularImpulseInRadians(Impulse, BoneName, bVelChange) end
+
 ---@param Impulse FVector
 ---@param BoneName FName
 ---@param bVelChange boolean
 function UPrimitiveComponent:AddAngularImpulseInDegrees(Impulse, BoneName, bVelChange) end
-
 
 ---@class UProjectileMovementComponent : UMovementComponent
 ---@field InitialSpeed float
@@ -29556,27 +33033,35 @@ UProjectileMovementComponent = {}
 
 ---@param HitResult FHitResult
 function UProjectileMovementComponent:StopSimulating(HitResult) end
+
 ---@param NewVelocity FVector
 function UProjectileMovementComponent:SetVelocityInLocalSpace(NewVelocity) end
+
 ---@param Component USceneComponent
 function UProjectileMovementComponent:SetInterpolatedComponent(Component) end
+
 function UProjectileMovementComponent:ResetInterpolation() end
+
 ---@param ImpactResult FHitResult
 function UProjectileMovementComponent:OnProjectileStopDelegate__DelegateSignature(ImpactResult) end
+
 ---@param ImpactResult FHitResult
 ---@param ImpactVelocity FVector
 function UProjectileMovementComponent:OnProjectileBounceDelegate__DelegateSignature(ImpactResult, ImpactVelocity) end
+
 ---@param NewLocation FVector
 ---@param NewRotation FRotator
 function UProjectileMovementComponent:MoveInterpolationTarget(NewLocation, NewRotation) end
+
 ---@param NewVelocity FVector
 ---@return FVector
 function UProjectileMovementComponent:LimitVelocity(NewVelocity) end
+
 ---@return boolean
 function UProjectileMovementComponent:IsVelocityUnderSimulationThreshold() end
+
 ---@return boolean
 function UProjectileMovementComponent:IsInterpolationComplete() end
-
 
 ---@class UProxyLODMeshSimplificationSettings : UDeveloperSettings
 ---@field ProxyLODMeshReductionModuleName FName
@@ -29612,10 +33097,11 @@ URadialForceComponent = {}
 
 ---@param ObjectType EObjectTypeQuery
 function URadialForceComponent:RemoveObjectTypeToAffect(ObjectType) end
+
 function URadialForceComponent:FireImpulse() end
+
 ---@param ObjectType EObjectTypeQuery
 function URadialForceComponent:AddObjectTypeToAffect(ObjectType) end
-
 
 ---@class URawAnimSequenceTrackExtensions : UBlueprintFunctionLibrary
 URawAnimSequenceTrackExtensions = {}
@@ -29623,13 +33109,14 @@ URawAnimSequenceTrackExtensions = {}
 ---@param Track FRawAnimSequenceTrack
 ---@return TArray<FVector>
 function URawAnimSequenceTrackExtensions:GetScaleKeys(Track) end
+
 ---@param Track FRawAnimSequenceTrack
 ---@return TArray<FQuat>
 function URawAnimSequenceTrackExtensions:GetRotationalKeys(Track) end
+
 ---@param Track FRawAnimSequenceTrack
 ---@return TArray<FVector>
 function URawAnimSequenceTrackExtensions:GetPositionalKeys(Track) end
-
 
 ---@class URectLightComponent : ULocalLightComponent
 ---@field SourceWidth float
@@ -29641,15 +33128,18 @@ URectLightComponent = {}
 
 ---@param NewValue float
 function URectLightComponent:SetSourceWidth(NewValue) end
+
 ---@param NewValue UTexture
 function URectLightComponent:SetSourceTexture(NewValue) end
+
 ---@param NewValue float
 function URectLightComponent:SetSourceHeight(NewValue) end
+
 ---@param NewValue float
 function URectLightComponent:SetBarnDoorLength(NewValue) end
+
 ---@param NewValue float
 function URectLightComponent:SetBarnDoorAngle(NewValue) end
-
 
 ---@class UReflectionCaptureComponent : USceneComponent
 ---@field CaptureOffsetComponent UBillboardComponent
@@ -29830,15 +33320,18 @@ UReplayNetConnection = {}
 UReplaySubsystem = {}
 
 function UReplaySubsystem:RequestCheckpoint() end
+
 ---@return boolean
 function UReplaySubsystem:IsRecording() end
+
 ---@return boolean
 function UReplaySubsystem:IsPlaying() end
+
 ---@return float
 function UReplaySubsystem:GetReplayCurrentTime() end
+
 ---@return FString
 function UReplaySubsystem:GetActiveReplayName() end
-
 
 ---@class UReplicationConnectionDriver : UObject
 UReplicationConnectionDriver = {}
@@ -29948,15 +33441,18 @@ URuntimeVirtualTexture = {}
 
 ---@return int32
 function URuntimeVirtualTexture:GetTileSize() end
+
 ---@return int32
 function URuntimeVirtualTexture:GetTileCount() end
+
 ---@return int32
 function URuntimeVirtualTexture:GetTileBorderSize() end
+
 ---@return int32
 function URuntimeVirtualTexture:GetSize() end
+
 ---@return int32
 function URuntimeVirtualTexture:GetPageTableSize() end
-
 
 ---@class URuntimeVirtualTextureComponent : USceneComponent
 ---@field BoundsAlignActor TSoftObjectPtr<AActor>
@@ -29976,7 +33472,6 @@ URuntimeVirtualTextureComponent = {}
 
 ---@param WorldBounds FBoxSphereBounds
 function URuntimeVirtualTextureComponent:Invalidate(WorldBounds) end
-
 
 ---@class URuntimeVirtualTextureStreamingProxy : UTexture2D
 URuntimeVirtualTextureStreamingProxy = {}
@@ -30050,24 +33545,31 @@ USceneCaptureComponent = {}
 
 ---@param InComponent UPrimitiveComponent
 function USceneCaptureComponent:ShowOnlyComponent(InComponent) end
+
 ---@param InActor AActor
 ---@param bIncludeFromChildActors boolean
 function USceneCaptureComponent:ShowOnlyActorComponents(InActor, bIncludeFromChildActors) end
+
 ---@param NewCaptureSortPriority int32
 function USceneCaptureComponent:SetCaptureSortPriority(NewCaptureSortPriority) end
+
 ---@param InComponent UPrimitiveComponent
 function USceneCaptureComponent:RemoveShowOnlyComponent(InComponent) end
+
 ---@param InActor AActor
 ---@param bIncludeFromChildActors boolean
 function USceneCaptureComponent:RemoveShowOnlyActorComponents(InActor, bIncludeFromChildActors) end
+
 ---@param InComponent UPrimitiveComponent
 function USceneCaptureComponent:HideComponent(InComponent) end
+
 ---@param InActor AActor
 ---@param bIncludeFromChildActors boolean
 function USceneCaptureComponent:HideActorComponents(InActor, bIncludeFromChildActors) end
-function USceneCaptureComponent:ClearShowOnlyComponents() end
-function USceneCaptureComponent:ClearHiddenComponents() end
 
+function USceneCaptureComponent:ClearShowOnlyComponents() end
+
+function USceneCaptureComponent:ClearHiddenComponents() end
 
 ---@class USceneCaptureComponent2D : USceneCaptureComponent
 ---@field ProjectionType ECameraProjectionMode::Type
@@ -30094,11 +33596,12 @@ USceneCaptureComponent2D = {}
 
 ---@param InBlendableObject TScriptInterface<IBlendableInterface>
 function USceneCaptureComponent2D:RemoveBlendable(InBlendableObject) end
+
 function USceneCaptureComponent2D:CaptureScene() end
+
 ---@param InBlendableObject TScriptInterface<IBlendableInterface>
 ---@param InWeight float
 function USceneCaptureComponent2D:AddOrUpdateBlendable(InBlendableObject, InWeight) end
-
 
 ---@class USceneCaptureComponentCube : USceneCaptureComponent
 ---@field TextureTarget UTextureRenderTargetCube
@@ -30106,7 +33609,6 @@ function USceneCaptureComponent2D:AddOrUpdateBlendable(InBlendableObject, InWeig
 USceneCaptureComponentCube = {}
 
 function USceneCaptureComponentCube:CaptureScene() end
-
 
 ---@class USceneComponent : UActorComponent
 ---@field PhysicsVolume TWeakObjectPtr<APhysicsVolume>
@@ -30142,86 +33644,113 @@ USceneComponent = {}
 
 ---@param bPropagateToChildren boolean
 function USceneComponent:ToggleVisibility(bPropagateToChildren) end
+
 ---@param NewScale FVector
 function USceneComponent:SetWorldScale3D(NewScale) end
+
 ---@param bNewVisibility boolean
 ---@param bPropagateToChildren boolean
 function USceneComponent:SetVisibility(bNewVisibility, bPropagateToChildren) end
+
 ---@param bInShouldUpdatePhysicsVolume boolean
 function USceneComponent:SetShouldUpdatePhysicsVolume(bInShouldUpdatePhysicsVolume) end
+
 ---@param NewScale3D FVector
 function USceneComponent:SetRelativeScale3D(NewScale3D) end
+
 ---@param NewMobility EComponentMobility::Type
 function USceneComponent:SetMobility(NewMobility) end
+
 ---@param NewHidden boolean
 ---@param bPropagateToChildren boolean
 function USceneComponent:SetHiddenInGame(NewHidden, bPropagateToChildren) end
+
 ---@param bNewAbsoluteLocation boolean
 ---@param bNewAbsoluteRotation boolean
 ---@param bNewAbsoluteScale boolean
 function USceneComponent:SetAbsolute(bNewAbsoluteLocation, bNewAbsoluteRotation, bNewAbsoluteScale) end
+
 function USceneComponent:ResetRelativeTransform() end
+
 ---@param OldValue boolean
 function USceneComponent:OnRep_Visibility(OldValue) end
+
 function USceneComponent:OnRep_Transform() end
+
 function USceneComponent:OnRep_AttachSocketName() end
+
 function USceneComponent:OnRep_AttachParent() end
+
 function USceneComponent:OnRep_AttachChildren() end
+
 ---@param NewTransform FTransform
 ---@param bSweep boolean
 ---@param SweepHitResult FHitResult
 ---@param bTeleport boolean
 function USceneComponent:K2_SetWorldTransform(NewTransform, bSweep, SweepHitResult, bTeleport) end
+
 ---@param NewRotation FRotator
 ---@param bSweep boolean
 ---@param SweepHitResult FHitResult
 ---@param bTeleport boolean
 function USceneComponent:K2_SetWorldRotation(NewRotation, bSweep, SweepHitResult, bTeleport) end
+
 ---@param NewLocation FVector
 ---@param NewRotation FRotator
 ---@param bSweep boolean
 ---@param SweepHitResult FHitResult
 ---@param bTeleport boolean
 function USceneComponent:K2_SetWorldLocationAndRotation(NewLocation, NewRotation, bSweep, SweepHitResult, bTeleport) end
+
 ---@param NewLocation FVector
 ---@param bSweep boolean
 ---@param SweepHitResult FHitResult
 ---@param bTeleport boolean
 function USceneComponent:K2_SetWorldLocation(NewLocation, bSweep, SweepHitResult, bTeleport) end
+
 ---@param NewTransform FTransform
 ---@param bSweep boolean
 ---@param SweepHitResult FHitResult
 ---@param bTeleport boolean
 function USceneComponent:K2_SetRelativeTransform(NewTransform, bSweep, SweepHitResult, bTeleport) end
+
 ---@param NewRotation FRotator
 ---@param bSweep boolean
 ---@param SweepHitResult FHitResult
 ---@param bTeleport boolean
 function USceneComponent:K2_SetRelativeRotation(NewRotation, bSweep, SweepHitResult, bTeleport) end
+
 ---@param NewLocation FVector
 ---@param NewRotation FRotator
 ---@param bSweep boolean
 ---@param SweepHitResult FHitResult
 ---@param bTeleport boolean
 function USceneComponent:K2_SetRelativeLocationAndRotation(NewLocation, NewRotation, bSweep, SweepHitResult, bTeleport) end
+
 ---@param NewLocation FVector
 ---@param bSweep boolean
 ---@param SweepHitResult FHitResult
 ---@param bTeleport boolean
 function USceneComponent:K2_SetRelativeLocation(NewLocation, bSweep, SweepHitResult, bTeleport) end
+
 ---@return FTransform
 function USceneComponent:K2_GetComponentToWorld() end
+
 ---@return FVector
 function USceneComponent:K2_GetComponentScale() end
+
 ---@return FRotator
 function USceneComponent:K2_GetComponentRotation() end
+
 ---@return FVector
 function USceneComponent:K2_GetComponentLocation() end
+
 ---@param LocationRule EDetachmentRule
 ---@param RotationRule EDetachmentRule
 ---@param ScaleRule EDetachmentRule
 ---@param bCallModify boolean
 function USceneComponent:K2_DetachFromComponent(LocationRule, RotationRule, ScaleRule, bCallModify) end
+
 ---@param Parent USceneComponent
 ---@param SocketName FName
 ---@param LocationRule EAttachmentRule
@@ -30229,115 +33758,148 @@ function USceneComponent:K2_DetachFromComponent(LocationRule, RotationRule, Scal
 ---@param ScaleRule EAttachmentRule
 ---@param bWeldSimulatedBodies boolean
 ---@return boolean
-function USceneComponent:K2_AttachToComponent(Parent, SocketName, LocationRule, RotationRule, ScaleRule, bWeldSimulatedBodies) end
+function USceneComponent:K2_AttachToComponent(Parent, SocketName, LocationRule, RotationRule, ScaleRule,
+                                              bWeldSimulatedBodies) end
+
 ---@param InParent USceneComponent
 ---@param InSocketName FName
 ---@param AttachType EAttachLocation::Type
 ---@param bWeldSimulatedBodies boolean
 ---@return boolean
 function USceneComponent:K2_AttachTo(InParent, InSocketName, AttachType, bWeldSimulatedBodies) end
+
 ---@param DeltaTransform FTransform
 ---@param bSweep boolean
 ---@param SweepHitResult FHitResult
 ---@param bTeleport boolean
 function USceneComponent:K2_AddWorldTransformKeepScale(DeltaTransform, bSweep, SweepHitResult, bTeleport) end
+
 ---@param DeltaTransform FTransform
 ---@param bSweep boolean
 ---@param SweepHitResult FHitResult
 ---@param bTeleport boolean
 function USceneComponent:K2_AddWorldTransform(DeltaTransform, bSweep, SweepHitResult, bTeleport) end
+
 ---@param DeltaRotation FRotator
 ---@param bSweep boolean
 ---@param SweepHitResult FHitResult
 ---@param bTeleport boolean
 function USceneComponent:K2_AddWorldRotation(DeltaRotation, bSweep, SweepHitResult, bTeleport) end
+
 ---@param DeltaLocation FVector
 ---@param bSweep boolean
 ---@param SweepHitResult FHitResult
 ---@param bTeleport boolean
 function USceneComponent:K2_AddWorldOffset(DeltaLocation, bSweep, SweepHitResult, bTeleport) end
+
 ---@param DeltaRotation FRotator
 ---@param bSweep boolean
 ---@param SweepHitResult FHitResult
 ---@param bTeleport boolean
 function USceneComponent:K2_AddRelativeRotation(DeltaRotation, bSweep, SweepHitResult, bTeleport) end
+
 ---@param DeltaLocation FVector
 ---@param bSweep boolean
 ---@param SweepHitResult FHitResult
 ---@param bTeleport boolean
 function USceneComponent:K2_AddRelativeLocation(DeltaLocation, bSweep, SweepHitResult, bTeleport) end
+
 ---@param DeltaTransform FTransform
 ---@param bSweep boolean
 ---@param SweepHitResult FHitResult
 ---@param bTeleport boolean
 function USceneComponent:K2_AddLocalTransform(DeltaTransform, bSweep, SweepHitResult, bTeleport) end
+
 ---@param DeltaRotation FRotator
 ---@param bSweep boolean
 ---@param SweepHitResult FHitResult
 ---@param bTeleport boolean
 function USceneComponent:K2_AddLocalRotation(DeltaRotation, bSweep, SweepHitResult, bTeleport) end
+
 ---@param DeltaLocation FVector
 ---@param bSweep boolean
 ---@param SweepHitResult FHitResult
 ---@param bTeleport boolean
 function USceneComponent:K2_AddLocalOffset(DeltaLocation, bSweep, SweepHitResult, bTeleport) end
+
 ---@return boolean
 function USceneComponent:IsVisible() end
+
 ---@param BoneName FName
 ---@return boolean
 function USceneComponent:IsSimulatingPhysics(BoneName) end
+
 ---@return boolean
 function USceneComponent:IsAnySimulatingPhysics() end
+
 ---@return FVector
 function USceneComponent:GetUpVector() end
+
 ---@param InSocketName FName
 ---@param TransformSpace ERelativeTransformSpace
 ---@return FTransform
 function USceneComponent:GetSocketTransform(InSocketName, TransformSpace) end
+
 ---@param InSocketName FName
 ---@return FRotator
 function USceneComponent:GetSocketRotation(InSocketName) end
+
 ---@param InSocketName FName
 ---@return FQuat
 function USceneComponent:GetSocketQuaternion(InSocketName) end
+
 ---@param InSocketName FName
 ---@return FVector
 function USceneComponent:GetSocketLocation(InSocketName) end
+
 ---@return boolean
 function USceneComponent:GetShouldUpdatePhysicsVolume() end
+
 ---@return FVector
 function USceneComponent:GetRightVector() end
+
 ---@return FTransform
 function USceneComponent:GetRelativeTransform() end
+
 ---@return APhysicsVolume
 function USceneComponent:GetPhysicsVolume() end
+
 ---@param Parents TArray<USceneComponent>
 function USceneComponent:GetParentComponents(Parents) end
+
 ---@return int32
 function USceneComponent:GetNumChildrenComponents() end
+
 ---@return FVector
 function USceneComponent:GetForwardVector() end
+
 ---@return FVector
 function USceneComponent:GetComponentVelocity() end
+
 ---@param bIncludeAllDescendants boolean
 ---@param Children TArray<USceneComponent>
 function USceneComponent:GetChildrenComponents(bIncludeAllDescendants, Children) end
+
 ---@param ChildIndex int32
 ---@return USceneComponent
 function USceneComponent:GetChildComponent(ChildIndex) end
+
 ---@return FName
 function USceneComponent:GetAttachSocketName() end
+
 ---@return USceneComponent
 function USceneComponent:GetAttachParent() end
+
 ---@return TArray<FName>
 function USceneComponent:GetAllSocketNames() end
+
 ---@param InSocketName FName
 ---@return boolean
 function USceneComponent:DoesSocketExist(InSocketName) end
+
 ---@param bMaintainWorldPosition boolean
 ---@param bCallModify boolean
 function USceneComponent:DetachFromParent(bMaintainWorldPosition, bCallModify) end
-
 
 ---@class UScriptViewportClient : UObject
 UScriptViewportClient = {}
@@ -30418,71 +33980,98 @@ USkeletalMesh = {}
 
 ---@param InSkeleton USkeleton
 function USkeletalMesh:SetSkeleton(InSkeleton) end
+
 ---@param InMaxDrawDistance float
 function USkeletalMesh:SetOverlayMaterialMaxDrawDistance(InMaxDrawDistance) end
+
 ---@param NewOverlayMaterial UMaterialInterface
 function USkeletalMesh:SetOverlayMaterial(NewOverlayMaterial) end
+
 ---@param InMorphTargets TArray<UMorphTarget>
 function USkeletalMesh:SetMorphTargets(InMorphTargets) end
+
 ---@param QualityLevelMinimumLODs TMap<EPerQualityLevels, int32>
 ---@param Default int32
 function USkeletalMesh:SetMinLODForQualityLevels(QualityLevelMinimumLODs, Default) end
+
 ---@param InMeshClothingAssets TArray<UClothingAssetBase>
 function USkeletalMesh:SetMeshClothingAssets(InMeshClothingAssets) end
+
 ---@param InMaterials TArray<FSkeletalMaterial>
 function USkeletalMesh:SetMaterials(InMaterials) end
+
 ---@param InLODSettings USkeletalMeshLODSettings
 function USkeletalMesh:SetLODSettings(InLODSettings) end
+
 ---@param InAnimatingRig TSoftObjectPtr<UObject>
 function USkeletalMesh:SetDefaultAnimatingRig(InAnimatingRig) end
+
 ---@return int32
 function USkeletalMesh:NumSockets() end
+
 ---@return TArray<FString>
 function USkeletalMesh:K2_GetAllMorphTargetNames() end
+
 ---@param InSectionIndex int32
 ---@param bCheckCorrespondingSections boolean
 ---@return boolean
 function USkeletalMesh:IsSectionUsingCloth(InSectionIndex, bCheckCorrespondingSections) end
+
 ---@param Index int32
 ---@return USkeletalMeshSocket
 function USkeletalMesh:GetSocketByIndex(Index) end
+
 ---@return USkeleton
 function USkeletalMesh:GetSkeleton() end
+
 ---@return UPhysicsAsset
 function USkeletalMesh:GetShadowPhysicsAsset() end
+
 ---@return UPhysicsAsset
 function USkeletalMesh:GetPhysicsAsset() end
+
 ---@return float
 function USkeletalMesh:GetOverlayMaterialMaxDrawDistance() end
+
 ---@return UMaterialInterface
 function USkeletalMesh:GetOverlayMaterial() end
+
 ---@return TArray<UNodeMappingContainer>
 function USkeletalMesh:GetNodeMappingData() end
+
 ---@param SourceAsset UBlueprint
 ---@return UNodeMappingContainer
 function USkeletalMesh:GetNodeMappingContainer(SourceAsset) end
+
 ---@return TArray<UMorphTarget>
 function USkeletalMesh:GetMorphTargetsPtrConv() end
+
 ---@param QualityLevelMinimumLODs TMap<EPerQualityLevels, int32>
 ---@param Default int32
 function USkeletalMesh:GetMinLODForQualityLevels(QualityLevelMinimumLODs, Default) end
+
 ---@return TArray<UClothingAssetBase>
 function USkeletalMesh:GetMeshClothingAssets() end
+
 ---@return TArray<FSkeletalMaterial>
 function USkeletalMesh:GetMaterials() end
+
 ---@return USkeletalMeshLODSettings
 function USkeletalMesh:GetLODSettings() end
+
 ---@return FBoxSphereBounds
 function USkeletalMesh:GetImportedBounds() end
+
 ---@return TSoftObjectPtr<UObject>
 function USkeletalMesh:GetDefaultAnimatingRig() end
+
 ---@return FBoxSphereBounds
 function USkeletalMesh:GetBounds() end
+
 ---@param InSocketName FName
 ---@param OutIndex int32
 ---@return USkeletalMeshSocket
 function USkeletalMesh:FindSocketAndIndex(InSocketName, OutIndex) end
-
 
 ---@class USkeletalMeshComponent : USkinnedMeshComponent
 ---@field SkeletalMeshAsset USkeletalMesh
@@ -30554,166 +34143,229 @@ USkeletalMeshComponent = {}
 
 ---@param InClass TSubclassOf<UAnimInstance>
 function USkeletalMeshComponent:UnlinkAnimClassLayers(InClass) end
+
 ---@param bRestoreSimulationSpace boolean
 function USkeletalMeshComponent:UnbindClothFromLeaderPoseComponent(bRestoreSimulationSpace) end
+
 function USkeletalMeshComponent:ToggleDisablePostProcessBlueprint() end
+
 ---@param ParentBoneName FName
 function USkeletalMeshComponent:TermBodiesBelow(ParentBoneName) end
+
 function USkeletalMeshComponent:SuspendClothingSimulation() end
+
 function USkeletalMeshComponent:Stop() end
+
 ---@param Snapshot FPoseSnapshot
 function USkeletalMeshComponent:SnapshotPose(Snapshot) end
+
 ---@param NewUpdateState boolean
 function USkeletalMeshComponent:SetUpdateClothInEditor(NewUpdateState) end
+
 ---@param NewUpdateState boolean
 function USkeletalMeshComponent:SetUpdateAnimationInEditor(NewUpdateState) end
+
 ---@param Threshold float
 function USkeletalMeshComponent:SetTeleportRotationThreshold(Threshold) end
+
 ---@param Threshold float
 function USkeletalMeshComponent:SetTeleportDistanceThreshold(Threshold) end
+
 ---@param NewMesh USkeletalMesh
 function USkeletalMeshComponent:SetSkeletalMeshAsset(NewMesh) end
+
 ---@param InPos float
 ---@param bFireNotifies boolean
 function USkeletalMeshComponent:SetPosition(InPos, bFireNotifies) end
+
 ---@param Rate float
 function USkeletalMeshComponent:SetPlayRate(Rate) end
+
 ---@param PhysicsBlendWeight float
 function USkeletalMeshComponent:SetPhysicsBlendWeight(PhysicsBlendWeight) end
+
 ---@param bNewNotifyRigidBodyCollision boolean
 ---@param BoneName FName
 ---@param bIncludeSelf boolean
 function USkeletalMeshComponent:SetNotifyRigidBodyCollisionBelow(bNewNotifyRigidBodyCollision, BoneName, bIncludeSelf) end
+
 ---@param MorphTargetName FName
 ---@param Value float
 ---@param bRemoveZeroWeight boolean
 function USkeletalMeshComponent:SetMorphTarget(MorphTargetName, Value, bRemoveZeroWeight) end
+
 ---@param bNewBlendPhysics boolean
 function USkeletalMeshComponent:SetEnablePhysicsBlending(bNewBlendPhysics) end
+
 ---@param bEnableGravity boolean
 ---@param BoneName FName
 ---@param bIncludeSelf boolean
 function USkeletalMeshComponent:SetEnableGravityOnAllBodiesBelow(bEnableGravity, BoneName, bIncludeSelf) end
+
 ---@param bEnableGravity boolean
 ---@param BoneName FName
 function USkeletalMeshComponent:SetEnableBodyGravity(bEnableGravity, BoneName) end
+
 ---@param bInDisablePostProcess boolean
 function USkeletalMeshComponent:SetDisablePostProcessBlueprint(bInDisablePostProcess) end
+
 ---@param bInDisableAnimCurves boolean
 function USkeletalMeshComponent:SetDisableAnimCurves(bInDisableAnimCurves) end
+
 ---@param ProfileName FName
 ---@param bDefaultIfNotFound boolean
 function USkeletalMeshComponent:SetConstraintProfileForAll(ProfileName, bDefaultIfNotFound) end
+
 ---@param JointName FName
 ---@param ProfileName FName
 ---@param bDefaultIfNotFound boolean
 function USkeletalMeshComponent:SetConstraintProfile(JointName, ProfileName, bDefaultIfNotFound) end
+
 ---@param Scale float
 function USkeletalMeshComponent:SetClothMaxDistanceScale(Scale) end
+
 ---@param bNewNotifyRigidBodyCollision boolean
 ---@param BoneName FName
 function USkeletalMeshComponent:SetBodyNotifyRigidBodyCollision(bNewNotifyRigidBodyCollision, BoneName) end
+
 ---@param NewClass UClass
 function USkeletalMeshComponent:SetAnimClass(NewClass) end
+
 ---@param InAnimationMode EAnimationMode::Type
 ---@param bForceInitAnimScriptInstance boolean
 function USkeletalMeshComponent:SetAnimationMode(InAnimationMode, bForceInitAnimScriptInstance) end
+
 ---@param NewAnimToPlay UAnimationAsset
 function USkeletalMeshComponent:SetAnimation(NewAnimToPlay) end
+
 ---@param InBoneName FName
 ---@param Swing1LimitAngle float
 ---@param TwistLimitAngle float
 ---@param Swing2LimitAngle float
 function USkeletalMeshComponent:SetAngularLimits(InBoneName, Swing1LimitAngle, TwistLimitAngle, Swing2LimitAngle) end
+
 ---@param bInAllow boolean
 ---@param bReinitAnim boolean
 function USkeletalMeshComponent:SetAllowRigidBodyAnimNode(bInAllow, bReinitAnim) end
+
 ---@param List TArray<FName>
 ---@param bAllow boolean
 function USkeletalMeshComponent:SetAllowedAnimCurvesEvaluation(List, bAllow) end
+
 ---@param bInAllow boolean
 function USkeletalMeshComponent:SetAllowClothActors(bInAllow) end
+
 ---@param bInAllow boolean
 function USkeletalMeshComponent:SetAllowAnimCurveEvaluation(bInAllow) end
+
 ---@param bEnableSwingDrive boolean
 ---@param bEnableTwistDrive boolean
 ---@param bSkipCustomPhysicsType boolean
-function USkeletalMeshComponent:SetAllMotorsAngularVelocityDrive(bEnableSwingDrive, bEnableTwistDrive, bSkipCustomPhysicsType) end
+function USkeletalMeshComponent:SetAllMotorsAngularVelocityDrive(bEnableSwingDrive, bEnableTwistDrive,
+                                                                 bSkipCustomPhysicsType) end
+
 ---@param bEnableSwingDrive boolean
 ---@param bEnableTwistDrive boolean
 ---@param bSkipCustomPhysicsType boolean
-function USkeletalMeshComponent:SetAllMotorsAngularPositionDrive(bEnableSwingDrive, bEnableTwistDrive, bSkipCustomPhysicsType) end
+function USkeletalMeshComponent:SetAllMotorsAngularPositionDrive(bEnableSwingDrive, bEnableTwistDrive,
+                                                                 bSkipCustomPhysicsType) end
+
 ---@param InSpring float
 ---@param InDamping float
 ---@param InForceLimit float
 ---@param bSkipCustomPhysicsType boolean
 function USkeletalMeshComponent:SetAllMotorsAngularDriveParams(InSpring, InDamping, InForceLimit, bSkipCustomPhysicsType) end
+
 ---@param bNewSimulate boolean
 function USkeletalMeshComponent:SetAllBodiesSimulatePhysics(bNewSimulate) end
+
 ---@param PhysicsBlendWeight float
 ---@param bSkipCustomPhysicsType boolean
 function USkeletalMeshComponent:SetAllBodiesPhysicsBlendWeight(PhysicsBlendWeight, bSkipCustomPhysicsType) end
+
 ---@param InBoneName FName
 ---@param bNewSimulate boolean
 ---@param bIncludeSelf boolean
 function USkeletalMeshComponent:SetAllBodiesBelowSimulatePhysics(InBoneName, bNewSimulate, bIncludeSelf) end
+
 ---@param InBoneName FName
 ---@param bDisabled boolean
 ---@param bIncludeSelf boolean
 function USkeletalMeshComponent:SetAllBodiesBelowPhysicsDisabled(InBoneName, bDisabled, bIncludeSelf) end
+
 ---@param InBoneName FName
 ---@param PhysicsBlendWeight float
 ---@param bSkipCustomPhysicsType boolean
 ---@param bIncludeSelf boolean
-function USkeletalMeshComponent:SetAllBodiesBelowPhysicsBlendWeight(InBoneName, PhysicsBlendWeight, bSkipCustomPhysicsType, bIncludeSelf) end
+function USkeletalMeshComponent:SetAllBodiesBelowPhysicsBlendWeight(InBoneName, PhysicsBlendWeight,
+                                                                    bSkipCustomPhysicsType, bIncludeSelf) end
+
 ---@param InBoneName FName
 ---@param LinearVelocity FVector
 ---@param bIncludeSelf boolean
 function USkeletalMeshComponent:SetAllBodiesBelowLinearVelocity(InBoneName, LinearVelocity, bIncludeSelf) end
+
 function USkeletalMeshComponent:ResumeClothingSimulation() end
+
 function USkeletalMeshComponent:ResetClothTeleportMode() end
+
 ---@param InTeleportType ETeleportType
 function USkeletalMeshComponent:ResetAnimInstanceDynamics(InTeleportType) end
+
 function USkeletalMeshComponent:ResetAllowedAnimCurveEvaluation() end
+
 function USkeletalMeshComponent:ResetAllBodiesSimulatePhysics() end
+
 ---@param NewAnimToPlay UAnimationAsset
 ---@param bLooping boolean
 function USkeletalMeshComponent:PlayAnimation(NewAnimToPlay, bLooping) end
+
 ---@param bLooping boolean
 function USkeletalMeshComponent:Play(bLooping) end
+
 ---@param InAnimToPlay UAnimationAsset
 ---@param bIsLooping boolean
 ---@param bIsPlaying boolean
 ---@param Position float
 ---@param PlayRate float
 function USkeletalMeshComponent:OverrideAnimationData(InAnimToPlay, bIsLooping, bIsPlaying, Position, PlayRate) end
+
 ---@param InTag FName
 ---@param InClass TSubclassOf<UAnimInstance>
 function USkeletalMeshComponent:LinkAnimGraphByTag(InTag, InClass) end
+
 ---@param InClass TSubclassOf<UAnimInstance>
 function USkeletalMeshComponent:LinkAnimClassLayers(InClass) end
+
 ---@param WorldPosition FVector
 ---@param ClosestWorldPosition FVector
 ---@param Normal FVector
 ---@param BoneName FName
 ---@param Distance float
 ---@return boolean
-function USkeletalMeshComponent:K2_GetClosestPointOnPhysicsAsset(WorldPosition, ClosestWorldPosition, Normal, BoneName, Distance) end
+function USkeletalMeshComponent:K2_GetClosestPointOnPhysicsAsset(WorldPosition, ClosestWorldPosition, Normal, BoneName,
+                                                                 Distance) end
+
 ---@return boolean
 function USkeletalMeshComponent:IsPlaying() end
+
 ---@return boolean
 function USkeletalMeshComponent:IsClothingSimulationSuspended() end
+
 ---@param BoneName FName
 ---@return boolean
 function USkeletalMeshComponent:IsBodyGravityEnabled(BoneName) end
+
 ---@return boolean
 function USkeletalMeshComponent:HasValidAnimationInstance() end
+
 ---@param BoneName FName
 ---@param AttributeName FName
 ---@param OutValue FTransform
 ---@param LookupType ECustomBoneAttributeLookup
 ---@return boolean
 function USkeletalMeshComponent:GetTransformAttribute_Ref(BoneName, AttributeName, OutValue, LookupType) end
+
 ---@param BoneName FName
 ---@param AttributeName FName
 ---@param DefaultValue FTransform
@@ -30721,16 +34373,20 @@ function USkeletalMeshComponent:GetTransformAttribute_Ref(BoneName, AttributeNam
 ---@param LookupType ECustomBoneAttributeLookup
 ---@return boolean
 function USkeletalMeshComponent:GetTransformAttribute(BoneName, AttributeName, DefaultValue, OutValue, LookupType) end
+
 ---@return float
 function USkeletalMeshComponent:GetTeleportRotationThreshold() end
+
 ---@return float
 function USkeletalMeshComponent:GetTeleportDistanceThreshold() end
+
 ---@param BoneName FName
 ---@param AttributeName FName
 ---@param OutValue FString
 ---@param LookupType ECustomBoneAttributeLookup
 ---@return boolean
 function USkeletalMeshComponent:GetStringAttribute_Ref(BoneName, AttributeName, OutValue, LookupType) end
+
 ---@param BoneName FName
 ---@param AttributeName FName
 ---@param DefaultValue FString
@@ -30738,37 +34394,49 @@ function USkeletalMeshComponent:GetStringAttribute_Ref(BoneName, AttributeName, 
 ---@param LookupType ECustomBoneAttributeLookup
 ---@return boolean
 function USkeletalMeshComponent:GetStringAttribute(BoneName, AttributeName, DefaultValue, OutValue, LookupType) end
+
 ---@return USkeletalMesh
 function USkeletalMeshComponent:GetSkeletalMeshAsset() end
+
 ---@return FVector
 function USkeletalMeshComponent:GetSkeletalCenterOfMass() end
+
 ---@return UAnimInstance
 function USkeletalMeshComponent:GetPostProcessInstance() end
+
 ---@return float
 function USkeletalMeshComponent:GetPosition() end
+
 ---@return float
 function USkeletalMeshComponent:GetPlayRate() end
+
 ---@param MorphTargetName FName
 ---@return float
 function USkeletalMeshComponent:GetMorphTarget(MorphTargetName) end
+
 ---@param InGroup FName
 ---@return UAnimInstance
 function USkeletalMeshComponent:GetLinkedAnimLayerInstanceByGroup(InGroup) end
+
 ---@param InClass TSubclassOf<UAnimInstance>
 ---@return UAnimInstance
 function USkeletalMeshComponent:GetLinkedAnimLayerInstanceByClass(InClass) end
+
 ---@param InTag FName
 ---@param OutLinkedInstances TArray<UAnimInstance>
 function USkeletalMeshComponent:GetLinkedAnimGraphInstancesByTag(InTag, OutLinkedInstances) end
+
 ---@param InTag FName
 ---@return UAnimInstance
 function USkeletalMeshComponent:GetLinkedAnimGraphInstanceByTag(InTag) end
+
 ---@param BoneName FName
 ---@param AttributeName FName
 ---@param OutValue int32
 ---@param LookupType ECustomBoneAttributeLookup
 ---@return boolean
 function USkeletalMeshComponent:GetIntegerAttribute_Ref(BoneName, AttributeName, OutValue, LookupType) end
+
 ---@param BoneName FName
 ---@param AttributeName FName
 ---@param DefaultValue int32
@@ -30776,12 +34444,14 @@ function USkeletalMeshComponent:GetIntegerAttribute_Ref(BoneName, AttributeName,
 ---@param LookupType ECustomBoneAttributeLookup
 ---@return boolean
 function USkeletalMeshComponent:GetIntegerAttribute(BoneName, AttributeName, DefaultValue, OutValue, LookupType) end
+
 ---@param BoneName FName
 ---@param AttributeName FName
 ---@param OutValue float
 ---@param LookupType ECustomBoneAttributeLookup
 ---@return boolean
 function USkeletalMeshComponent:GetFloatAttribute_Ref(BoneName, AttributeName, OutValue, LookupType) end
+
 ---@param BoneName FName
 ---@param AttributeName FName
 ---@param DefaultValue float
@@ -30789,80 +34459,107 @@ function USkeletalMeshComponent:GetFloatAttribute_Ref(BoneName, AttributeName, O
 ---@param LookupType ECustomBoneAttributeLookup
 ---@return boolean
 function USkeletalMeshComponent:GetFloatAttribute(BoneName, AttributeName, DefaultValue, OutValue, LookupType) end
+
 ---@return boolean
 function USkeletalMeshComponent:GetDisablePostProcessBlueprint() end
+
 ---@return boolean
 function USkeletalMeshComponent:GetDisableAnimCurves() end
+
 ---@param InBoneName FName
 ---@param Swing1Angle float
 ---@param TwistAngle float
 ---@param Swing2Angle float
 function USkeletalMeshComponent:GetCurrentJointAngles(InBoneName, Swing1Angle, TwistAngle, Swing2Angle) end
+
 ---@param BodyName FName
 ---@param bParentConstraints boolean
 ---@param bChildConstraints boolean
 ---@param bIncludesTerminated boolean
 ---@param OutConstraints TArray<FConstraintInstanceAccessor>
-function USkeletalMeshComponent:GetConstraintsFromBody(BodyName, bParentConstraints, bChildConstraints, bIncludesTerminated, OutConstraints) end
+function USkeletalMeshComponent:GetConstraintsFromBody(BodyName, bParentConstraints, bChildConstraints,
+                                                       bIncludesTerminated, OutConstraints) end
+
 ---@param bIncludesTerminated boolean
 ---@param OutConstraints TArray<FConstraintInstanceAccessor>
 function USkeletalMeshComponent:GetConstraints(bIncludesTerminated, OutConstraints) end
+
 ---@param ConstraintName FName
 ---@param bIncludesTerminated boolean
 ---@return FConstraintInstanceAccessor
 function USkeletalMeshComponent:GetConstraintByName(ConstraintName, bIncludesTerminated) end
+
 ---@return float
 function USkeletalMeshComponent:GetClothMaxDistanceScale() end
+
 ---@return UClothingSimulationInteractor
 function USkeletalMeshComponent:GetClothingSimulationInteractor() end
+
 ---@param BoneName FName
 ---@param bScaleMass boolean
 ---@return float
 function USkeletalMeshComponent:GetBoneMass(BoneName, bScaleMass) end
+
 ---@param InBoneName FName
 ---@return FVector
 function USkeletalMeshComponent:GetBoneLinearVelocity(InBoneName) end
+
 ---@return UAnimInstance
 function USkeletalMeshComponent:GetAnimInstance() end
+
 ---@return UClass
 function USkeletalMeshComponent:GetAnimClass() end
+
 ---@return EAnimationMode::Type
 function USkeletalMeshComponent:GetAnimationMode() end
+
 ---@return boolean
 function USkeletalMeshComponent:GetAllowRigidBodyAnimNode() end
+
 ---@return boolean
 function USkeletalMeshComponent:GetAllowedAnimCurveEvaluate() end
+
 ---@return boolean
 function USkeletalMeshComponent:GetAllowClothActors() end
+
 function USkeletalMeshComponent:ForceClothNextUpdateTeleportAndReset() end
+
 function USkeletalMeshComponent:ForceClothNextUpdateTeleport() end
+
 ---@param ConstraintIndex int32
 ---@return FName
 function USkeletalMeshComponent:FindConstraintBoneName(ConstraintIndex) end
+
 function USkeletalMeshComponent:ClearMorphTargets() end
+
 ---@param Impulse FVector
 ---@param HitLocation FVector
 ---@param InBoneName FName
 function USkeletalMeshComponent:BreakConstraint(Impulse, HitLocation, InBoneName) end
+
 function USkeletalMeshComponent:BindClothToLeaderPoseComponent() end
+
 ---@param NameOfCurve FName
 ---@param bAllow boolean
 function USkeletalMeshComponent:AllowAnimCurveEvaluation(NameOfCurve, bAllow) end
+
 ---@param Impulse FVector
 ---@param BoneName FName
 ---@param bVelChange boolean
 ---@param bIncludeSelf boolean
 function USkeletalMeshComponent:AddImpulseToAllBodiesBelow(Impulse, BoneName, bVelChange, bIncludeSelf) end
+
 ---@param Force FVector
 ---@param BoneName FName
 ---@param bAccelChange boolean
 ---@param bIncludeSelf boolean
 function USkeletalMeshComponent:AddForceToAllBodiesBelow(Force, BoneName, bAccelChange, bIncludeSelf) end
+
 ---@param InBoneName FName
 ---@param AddPhysicsBlendWeight float
 ---@param bSkipCustomPhysicsType boolean
-function USkeletalMeshComponent:AccumulateAllBodiesBelowPhysicsBlendWeight(InBoneName, AddPhysicsBlendWeight, bSkipCustomPhysicsType) end
-
+function USkeletalMeshComponent:AccumulateAllBodiesBelowPhysicsBlendWeight(InBoneName, AddPhysicsBlendWeight,
+                                                                           bSkipCustomPhysicsType) end
 
 ---@class USkeletalMeshEditorData : UObject
 USkeletalMeshEditorData = {}
@@ -30900,10 +34597,10 @@ USkeletalMeshSocket = {}
 ---@param WorldLocation FVector
 ---@param WorldNormal FVector
 function USkeletalMeshSocket:InitializeSocketFromLocation(SkelComp, WorldLocation, WorldNormal) end
+
 ---@param SkelComp USkeletalMeshComponent
 ---@return FVector
 function USkeletalMeshSocket:GetSocketLocation(SkelComp) end
-
 
 ---@class USkeleton : UObject
 ---@field BoneTree TArray<FBoneNode>
@@ -30920,11 +34617,12 @@ USkeleton = {}
 ---@param InProfileName FName
 ---@return UBlendProfile
 function USkeleton:GetBlendProfile(InProfileName) end
+
 ---@param SourceSkeleton TSoftObjectPtr<USkeleton>
 function USkeleton:AddCompatibleSkeletonSoft(SourceSkeleton) end
+
 ---@param SourceSkeleton USkeleton
 function USkeleton:AddCompatibleSkeleton(SourceSkeleton) end
-
 
 ---@class USkinnedAsset : UStreamableRenderAsset
 USkinnedAsset = {}
@@ -30935,10 +34633,10 @@ USkinnedAsset = {}
 ---@param OutIndex int32
 ---@return USkeletalMeshSocket
 function USkinnedAsset:FindSocketInfo(InSocketName, OutTransform, OutBoneIndex, OutIndex) end
+
 ---@param InSocketName FName
 ---@return USkeletalMeshSocket
 function USkinnedAsset:FindSocket(InSocketName) end
-
 
 ---@class USkinnedMeshComponent : UMeshComponent
 ---@field SkeletalMesh USkeletalMesh
@@ -30984,149 +34682,197 @@ function USkinnedAsset:FindSocket(InSocketName) end
 USkinnedMeshComponent = {}
 
 function USkinnedMeshComponent:UnsetMeshDeformer() end
+
 ---@param InProfileName FName
 function USkinnedMeshComponent:UnloadSkinWeightProfile(InProfileName) end
+
 ---@param BoneName FName
 function USkinnedMeshComponent:UnHideBoneByName(BoneName) end
+
 ---@param BoneName FName
 ---@param InPosition FVector
 ---@param InRotation FRotator
 ---@param OutPosition FVector
 ---@param OutRotation FRotator
 function USkinnedMeshComponent:TransformToBoneSpace(BoneName, InPosition, InRotation, OutPosition, OutRotation) end
+
 ---@param BoneName FName
 ---@param InPosition FVector
 ---@param InRotation FRotator
 ---@param OutPosition FVector
 ---@param OutRotation FRotator
 function USkinnedMeshComponent:TransformFromBoneSpace(BoneName, InPosition, InRotation, OutPosition, OutRotation) end
+
 ---@param MaterialID int32
 ---@param SectionIndex int32
 ---@param bShow boolean
 ---@param LODIndex int32
 function USkinnedMeshComponent:ShowMaterialSection(MaterialID, SectionIndex, bShow, LODIndex) end
+
 ---@param LODIndex int32
 function USkinnedMeshComponent:ShowAllMaterialSections(LODIndex) end
+
 ---@param LODIndex int32
 ---@param Usage int32
 function USkinnedMeshComponent:SetVertexOffsetUsage(LODIndex, Usage) end
+
 ---@param LODIndex int32
 ---@param VertexColors TArray<FLinearColor>
 function USkinnedMeshComponent:SetVertexColorOverride_LinearColor(LODIndex, VertexColors) end
+
 ---@param InProfileName FName
 ---@return boolean
 function USkinnedMeshComponent:SetSkinWeightProfile(InProfileName) end
+
 ---@param LODIndex int32
 ---@param SkinWeights TArray<FSkelMeshSkinWeightInfo>
 function USkinnedMeshComponent:SetSkinWeightOverride(LODIndex, SkinWeights) end
+
 ---@param NewMesh USkinnedAsset
 ---@param bReinitPose boolean
 function USkinnedMeshComponent:SetSkinnedAssetAndUpdate(NewMesh, bReinitPose) end
+
 ---@param bNewValue boolean
 function USkinnedMeshComponent:SetRenderStatic(bNewValue) end
+
 ---@param LODIndex int32
 ---@param Offsets TArray<FVector>
 function USkinnedMeshComponent:SetPreSkinningOffsets(LODIndex, Offsets) end
+
 ---@param LODIndex int32
 ---@param Offsets TArray<FVector>
 function USkinnedMeshComponent:SetPostSkinningOffsets(LODIndex, Offsets) end
+
 ---@param NewPhysicsAsset UPhysicsAsset
 ---@param bForceReInit boolean
 function USkinnedMeshComponent:SetPhysicsAsset(NewPhysicsAsset, bForceReInit) end
+
 ---@param InNewMinLOD int32
 function USkinnedMeshComponent:SetMinLOD(InNewMinLOD) end
+
 ---@param InMeshDeformer UMeshDeformer
 function USkinnedMeshComponent:SetMeshDeformer(InMeshDeformer) end
+
 ---@param NewLeaderBoneComponent USkinnedMeshComponent
 ---@param bForceUpdate boolean
 ---@param bInFollowerShouldTickPose boolean
 function USkinnedMeshComponent:SetLeaderPoseComponent(NewLeaderBoneComponent, bForceUpdate, bInFollowerShouldTickPose) end
+
 ---@param InNewForcedLOD int32
 function USkinnedMeshComponent:SetForcedLOD(InNewForcedLOD) end
+
 ---@param bNewValue boolean
 function USkinnedMeshComponent:SetCastCapsuleIndirectShadow(bNewValue) end
+
 ---@param bNewValue boolean
 function USkinnedMeshComponent:SetCastCapsuleDirectShadow(bNewValue) end
+
 ---@param NewValue float
 function USkinnedMeshComponent:SetCapsuleIndirectShadowMinVisibility(NewValue) end
+
 ---@return boolean
 function USkinnedMeshComponent:IsUsingSkinWeightProfile() end
+
 ---@param MaterialID int32
 ---@param LODIndex int32
 ---@return boolean
 function USkinnedMeshComponent:IsMaterialSectionShown(MaterialID, LODIndex) end
+
 ---@param BoneName FName
 ---@return boolean
 function USkinnedMeshComponent:IsBoneHiddenByName(BoneName) end
+
 ---@param BoneName FName
 ---@param PhysBodyOption EPhysBodyOp
 function USkinnedMeshComponent:HideBoneByName(BoneName, PhysBodyOption) end
+
 ---@param LODIndex int32
 ---@return int32
 function USkinnedMeshComponent:GetVertexOffsetUsage(LODIndex) end
+
 ---@param BoneName FName
 ---@param OutTwistAngle float
 ---@param OutSwingAngle float
 ---@return boolean
 function USkinnedMeshComponent:GetTwistAndSwingAngleOfDeltaRotationFromRefPose(BoneName, OutTwistAngle, OutSwingAngle) end
+
 ---@param InSocketName FName
 ---@return FName
 function USkinnedMeshComponent:GetSocketBoneName(InSocketName) end
+
 ---@return USkinnedAsset
 function USkinnedMeshComponent:GetSkinnedAsset() end
+
 ---@return USkeletalMesh
 function USkinnedMeshComponent:GetSkeletalMesh_DEPRECATED() end
+
 ---@param BoneIndex int32
 ---@return FTransform
 function USkinnedMeshComponent:GetRefPoseTransform(BoneIndex) end
+
 ---@param BoneIndex int32
 ---@return FVector
 function USkinnedMeshComponent:GetRefPosePosition(BoneIndex) end
+
 ---@return int32
 function USkinnedMeshComponent:GetPredictedLODLevel() end
+
 ---@param BoneName FName
 ---@return FName
 function USkinnedMeshComponent:GetParentBone(BoneName) end
+
 ---@return int32
 function USkinnedMeshComponent:GetNumLODs() end
+
 ---@return int32
 function USkinnedMeshComponent:GetNumBones() end
+
 ---@return UMeshDeformerInstance
 function USkinnedMeshComponent:GetMeshDeformerInstance() end
+
 ---@return int32
 function USkinnedMeshComponent:GetForcedLOD() end
+
 ---@param BoneName FName
 ---@param BaseName FName
 ---@return FTransform
 function USkinnedMeshComponent:GetDeltaTransformFromRefPose(BoneName, BaseName) end
+
 ---@return FName
 function USkinnedMeshComponent:GetCurrentSkinWeightProfileName() end
+
 ---@param InBoneName FName
 ---@param TransformSpace ERelativeTransformSpace
 ---@return FTransform
 function USkinnedMeshComponent:GetBoneTransform(InBoneName, TransformSpace) end
+
 ---@param BoneIndex int32
 ---@return FName
 function USkinnedMeshComponent:GetBoneName(BoneIndex) end
+
 ---@param BoneName FName
 ---@return int32
 function USkinnedMeshComponent:GetBoneIndex(BoneName) end
+
 ---@param TestLocation FVector
 ---@param BoneLocation FVector
 ---@param IgnoreScale float
 ---@param bRequirePhysicsAsset boolean
 ---@return FName
 function USkinnedMeshComponent:FindClosestBone_K2(TestLocation, BoneLocation, IgnoreScale, bRequirePhysicsAsset) end
+
 ---@param LODIndex int32
 function USkinnedMeshComponent:ClearVertexColorOverride(LODIndex) end
+
 function USkinnedMeshComponent:ClearSkinWeightProfile() end
+
 ---@param LODIndex int32
 function USkinnedMeshComponent:ClearSkinWeightOverride(LODIndex) end
+
 ---@param BoneName FName
 ---@param ParentBoneName FName
 ---@return boolean
 function USkinnedMeshComponent:BoneIsChildOf(BoneName, ParentBoneName) end
-
 
 ---@class USkyAtmosphereComponent : USceneComponent
 ---@field TransformMode ESkyAtmosphereTransformMode
@@ -31157,55 +34903,76 @@ USkyAtmosphereComponent = {}
 
 ---@param NewValue FLinearColor
 function USkyAtmosphereComponent:SetSkyLuminanceFactor(NewValue) end
+
 ---@param NewValue float
 function USkyAtmosphereComponent:SetRayleighScatteringScale(NewValue) end
+
 ---@param NewValue FLinearColor
 function USkyAtmosphereComponent:SetRayleighScattering(NewValue) end
+
 ---@param NewValue float
 function USkyAtmosphereComponent:SetRayleighExponentialDistribution(NewValue) end
+
 ---@param NewValue float
 function USkyAtmosphereComponent:SetOtherAbsorptionScale(NewValue) end
+
 ---@param NewValue FLinearColor
 function USkyAtmosphereComponent:SetOtherAbsorption(NewValue) end
+
 ---@param NewValue float
 function USkyAtmosphereComponent:SetMultiScatteringFactor(NewValue) end
+
 ---@param NewValue float
 function USkyAtmosphereComponent:SetMieScatteringScale(NewValue) end
+
 ---@param NewValue FLinearColor
 function USkyAtmosphereComponent:SetMieScattering(NewValue) end
+
 ---@param NewValue float
 function USkyAtmosphereComponent:SetMieExponentialDistribution(NewValue) end
+
 ---@param NewValue float
 function USkyAtmosphereComponent:SetMieAnisotropy(NewValue) end
+
 ---@param NewValue float
 function USkyAtmosphereComponent:SetMieAbsorptionScale(NewValue) end
+
 ---@param NewValue FLinearColor
 function USkyAtmosphereComponent:SetMieAbsorption(NewValue) end
+
 ---@param NewValue float
 function USkyAtmosphereComponent:SetHeightFogContribution(NewValue) end
+
 ---@param NewValue FColor
 function USkyAtmosphereComponent:SetGroundAlbedo(NewValue) end
+
 ---@param NewValue float
 function USkyAtmosphereComponent:SetBottomRadius(NewValue) end
+
 ---@param NewValue float
 function USkyAtmosphereComponent:SetAtmosphereHeight(NewValue) end
+
 ---@param NewValue float
 function USkyAtmosphereComponent:SetAerialPespectiveViewDistanceScale(NewValue) end
+
 ---@param AtmosphereLightIndex int32
 function USkyAtmosphereComponent:ResetAtmosphereLightDirectionOverride(AtmosphereLightIndex) end
+
 ---@param AtmosphereLightIndex int32
 ---@param LightDirection FVector
 function USkyAtmosphereComponent:OverrideAtmosphereLightDirection(AtmosphereLightIndex, LightDirection) end
+
 ---@param AtmosphereLightIndex int32
 ---@return boolean
 function USkyAtmosphereComponent:IsAtmosphereLightDirectionOverriden(AtmosphereLightIndex) end
+
 ---@param AtmosphereLightIndex int32
 ---@return FVector
 function USkyAtmosphereComponent:GetOverridenAtmosphereLightDirection(AtmosphereLightIndex) end
+
 ---@param DirectionalLight UDirectionalLightComponent
 ---@return FLinearColor
 function USkyAtmosphereComponent:GetAtmosphereTransmitanceOnGroundAtPlanetTop(DirectionalLight) end
-
 
 ---@class USkyLightComponent : ULightComponentBase
 ---@field bRealTimeCapture boolean
@@ -31234,32 +35001,43 @@ USkyLightComponent = {}
 
 ---@param NewIntensity float
 function USkyLightComponent:SetVolumetricScatteringIntensity(NewIntensity) end
+
 ---@param NewValue float
 function USkyLightComponent:SetSourceCubemapAngle(NewValue) end
+
 ---@param InTint FColor
 function USkyLightComponent:SetOcclusionTint(InTint) end
+
 ---@param InOcclusionExponent float
 function USkyLightComponent:SetOcclusionExponent(InOcclusionExponent) end
+
 ---@param InOcclusionContrast float
 function USkyLightComponent:SetOcclusionContrast(InOcclusionContrast) end
+
 ---@param InMinOcclusion float
 function USkyLightComponent:SetMinOcclusion(InMinOcclusion) end
+
 ---@param InLowerHemisphereColor FLinearColor
 function USkyLightComponent:SetLowerHemisphereColor(InLowerHemisphereColor) end
+
 ---@param NewLightColor FLinearColor
 function USkyLightComponent:SetLightColor(NewLightColor) end
+
 ---@param NewIntensity float
 function USkyLightComponent:SetIntensity(NewIntensity) end
+
 ---@param NewIntensity float
 function USkyLightComponent:SetIndirectLightingIntensity(NewIntensity) end
+
 ---@param SourceCubemap UTextureCube
 ---@param DestinationCubemap UTextureCube
 ---@param InBlendFraction float
 function USkyLightComponent:SetCubemapBlend(SourceCubemap, DestinationCubemap, InBlendFraction) end
+
 ---@param NewCubemap UTextureCube
 function USkyLightComponent:SetCubemap(NewCubemap) end
-function USkyLightComponent:RecaptureSky() end
 
+function USkyLightComponent:RecaptureSky() end
 
 ---@class USlateBrushAsset : UObject
 ---@field Brush FSlateBrush
@@ -31305,7 +35083,6 @@ USoundBase = {}
 
 ---@return boolean
 function USoundBase:IsAttenuationSettingsEditable() end
-
 
 ---@class USoundClass : UObject
 ---@field Properties FSoundClassProperties
@@ -31584,44 +35361,58 @@ USoundSubmix = {}
 
 ---@param WorldContextObject UObject
 function USoundSubmix:StopSpectralAnalysis(WorldContextObject) end
+
 ---@param WorldContextObject UObject
 ---@param ExportType EAudioRecordingExportType
 ---@param Name FString
 ---@param Path FString
 ---@param ExistingSoundWaveToOverwrite USoundWave
 function USoundSubmix:StopRecordingOutput(WorldContextObject, ExportType, Name, Path, ExistingSoundWaveToOverwrite) end
+
 ---@param WorldContextObject UObject
 function USoundSubmix:StopEnvelopeFollowing(WorldContextObject) end
+
 ---@param WorldContextObject UObject
 ---@param FFTSize EFFTSize
 ---@param InterpolationMethod EFFTPeakInterpolationMethod
 ---@param WindowType EFFTWindowType
 ---@param HopSize float
 ---@param SpectrumType EAudioSpectrumType
-function USoundSubmix:StartSpectralAnalysis(WorldContextObject, FFTSize, InterpolationMethod, WindowType, HopSize, SpectrumType) end
+function USoundSubmix:StartSpectralAnalysis(WorldContextObject, FFTSize, InterpolationMethod, WindowType, HopSize,
+                                            SpectrumType) end
+
 ---@param WorldContextObject UObject
 ---@param ExpectedDuration float
 function USoundSubmix:StartRecordingOutput(WorldContextObject, ExpectedDuration) end
+
 ---@param WorldContextObject UObject
 function USoundSubmix:StartEnvelopeFollowing(WorldContextObject) end
+
 ---@param InVolMod FSoundModulationDestinationSettings
 function USoundSubmix:SetWetVolumeModulation(InVolMod) end
+
 ---@param WorldContextObject UObject
 ---@param InWetLevel float
 function USoundSubmix:SetSubmixWetLevel(WorldContextObject, InWetLevel) end
+
 ---@param WorldContextObject UObject
 ---@param InOutputVolume float
 function USoundSubmix:SetSubmixOutputVolume(WorldContextObject, InOutputVolume) end
+
 ---@param WorldContextObject UObject
 ---@param InDryLevel float
 function USoundSubmix:SetSubmixDryLevel(WorldContextObject, InDryLevel) end
+
 ---@param InVolMod FSoundModulationDestinationSettings
 function USoundSubmix:SetOutputVolumeModulation(InVolMod) end
+
 ---@param InVolMod FSoundModulationDestinationSettings
 function USoundSubmix:SetDryVolumeModulation(InVolMod) end
+
 ---@param WorldContextObject UObject
 ---@param OnSubmixSpectralAnalysisBP FRemoveSpectralAnalysisDelegateOnSubmixSpectralAnalysisBP
 function USoundSubmix:RemoveSpectralAnalysisDelegate(WorldContextObject, OnSubmixSpectralAnalysisBP) end
+
 ---@param WorldContextObject UObject
 ---@param InBandSettings TArray<FSoundSubmixSpectralAnalysisBandSettings>
 ---@param OnSubmixSpectralAnalysisBP FAddSpectralAnalysisDelegateOnSubmixSpectralAnalysisBP
@@ -31631,11 +35422,13 @@ function USoundSubmix:RemoveSpectralAnalysisDelegate(WorldContextObject, OnSubmi
 ---@param bDoAutoRange boolean
 ---@param AutoRangeAttackTime float
 ---@param AutoRangeReleaseTime float
-function USoundSubmix:AddSpectralAnalysisDelegate(WorldContextObject, InBandSettings, OnSubmixSpectralAnalysisBP, UpdateRate, DecibelNoiseFloor, bDoNormalize, bDoAutoRange, AutoRangeAttackTime, AutoRangeReleaseTime) end
+function USoundSubmix:AddSpectralAnalysisDelegate(WorldContextObject, InBandSettings, OnSubmixSpectralAnalysisBP,
+                                                  UpdateRate, DecibelNoiseFloor, bDoNormalize, bDoAutoRange,
+                                                  AutoRangeAttackTime, AutoRangeReleaseTime) end
+
 ---@param WorldContextObject UObject
 ---@param OnSubmixEnvelopeBP FAddEnvelopeFollowerDelegateOnSubmixEnvelopeBP
 function USoundSubmix:AddEnvelopeFollowerDelegate(WorldContextObject, OnSubmixEnvelopeBP) end
-
 
 ---@class USoundSubmixBase : UObject
 ---@field bAutoDisable boolean
@@ -31686,13 +35479,15 @@ USoundWave = {}
 ---@param InSoundAssetCompressionType ESoundAssetCompressionType
 ---@param bMarkDirty boolean
 function USoundWave:SetSoundAssetCompressionType(InSoundAssetCompressionType, bMarkDirty) end
+
 ---@return ESoundAssetCompressionType
 function USoundWave:GetSoundAssetCompressionType() end
+
 ---@return TArray<FSoundWaveCuePoint>
 function USoundWave:GetLoopRegions() end
+
 ---@return TArray<FSoundWaveCuePoint>
 function USoundWave:GetCuePoints() end
-
 
 ---@class USoundWaveProcedural : USoundWave
 USoundWaveProcedural = {}
@@ -31723,15 +35518,18 @@ USparseVolumeTexture = {}
 
 ---@return int32
 function USparseVolumeTexture:GetSizeZ() end
+
 ---@return int32
 function USparseVolumeTexture:GetSizeY() end
+
 ---@return int32
 function USparseVolumeTexture:GetSizeX() end
+
 ---@return int32
 function USparseVolumeTexture:GetNumMipLevels() end
+
 ---@return int32
 function USparseVolumeTexture:GetNumFrames() end
-
 
 ---@class USparseVolumeTextureFrame : USparseVolumeTexture
 ---@field Owner USparseVolumeTexture
@@ -31760,13 +35558,15 @@ USphereComponent = {}
 ---@param InSphereRadius float
 ---@param bUpdateOverlaps boolean
 function USphereComponent:SetSphereRadius(InSphereRadius, bUpdateOverlaps) end
+
 ---@return float
 function USphereComponent:GetUnscaledSphereRadius() end
+
 ---@return float
 function USphereComponent:GetShapeScale() end
+
 ---@return float
 function USphereComponent:GetScaledSphereRadius() end
-
 
 ---@class USphereReflectionCaptureComponent : UReflectionCaptureComponent
 ---@field InfluenceRadius float
@@ -31797,364 +35597,461 @@ USphereReflectionCaptureComponent = {}
 USplineComponent = {}
 
 function USplineComponent:UpdateSpline() end
+
 ---@param PointIndex int32
 ---@param InLocation FVector
 function USplineComponent:SetWorldLocationAtSplinePoint(PointIndex, InLocation) end
+
 ---@param PointIndex int32
 ---@param InUpVector FVector
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@param bUpdateSpline boolean
 function USplineComponent:SetUpVectorAtSplinePoint(PointIndex, InUpVector, CoordinateSpace, bUpdateSpline) end
+
 ---@param SegmentColor FLinearColor
 function USplineComponent:SetUnselectedSplineSegmentColor(SegmentColor) end
+
 ---@param PointIndex int32
 ---@param InArriveTangent FVector
 ---@param InLeaveTangent FVector
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@param bUpdateSpline boolean
-function USplineComponent:SetTangentsAtSplinePoint(PointIndex, InArriveTangent, InLeaveTangent, CoordinateSpace, bUpdateSpline) end
+function USplineComponent:SetTangentsAtSplinePoint(PointIndex, InArriveTangent, InLeaveTangent, CoordinateSpace,
+                                                   bUpdateSpline) end
+
 ---@param TangentColor FLinearColor
 function USplineComponent:SetTangentColor(TangentColor) end
+
 ---@param PointIndex int32
 ---@param InTangent FVector
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@param bUpdateSpline boolean
 function USplineComponent:SetTangentAtSplinePoint(PointIndex, InTangent, CoordinateSpace, bUpdateSpline) end
+
 ---@param Points TArray<FVector>
 function USplineComponent:SetSplineWorldPoints(Points) end
+
 ---@param PointIndex int32
 ---@param Type ESplinePointType::Type
 ---@param bUpdateSpline boolean
 function USplineComponent:SetSplinePointType(PointIndex, Type, bUpdateSpline) end
+
 ---@param Points TArray<FVector>
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@param bUpdateSpline boolean
 function USplineComponent:SetSplinePoints(Points, CoordinateSpace, bUpdateSpline) end
+
 ---@param Points TArray<FVector>
 function USplineComponent:SetSplineLocalPoints(Points) end
+
 ---@param SegmentColor FLinearColor
 function USplineComponent:SetSelectedSplineSegmentColor(SegmentColor) end
+
 ---@param PointIndex int32
 ---@param InScaleVector FVector
 ---@param bUpdateSpline boolean
 function USplineComponent:SetScaleAtSplinePoint(PointIndex, InScaleVector, bUpdateSpline) end
+
 ---@param PointIndex int32
 ---@param InRotation FRotator
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@param bUpdateSpline boolean
 function USplineComponent:SetRotationAtSplinePoint(PointIndex, InRotation, CoordinateSpace, bUpdateSpline) end
+
 ---@param PointIndex int32
 ---@param InLocation FVector
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@param bUpdateSpline boolean
 function USplineComponent:SetLocationAtSplinePoint(PointIndex, InLocation, CoordinateSpace, bUpdateSpline) end
+
 ---@param bShow boolean
 function USplineComponent:SetDrawDebug(bShow) end
+
 ---@param UpVector FVector
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 function USplineComponent:SetDefaultUpVector(UpVector, CoordinateSpace) end
+
 ---@param bInClosedLoop boolean
 ---@param Key float
 ---@param bUpdateSpline boolean
 function USplineComponent:SetClosedLoopAtPosition(bInClosedLoop, Key, bUpdateSpline) end
+
 ---@param bInClosedLoop boolean
 ---@param bUpdateSpline boolean
 function USplineComponent:SetClosedLoop(bInClosedLoop, bUpdateSpline) end
+
 ---@param Index int32
 ---@param bUpdateSpline boolean
 function USplineComponent:RemoveSplinePoint(Index, bUpdateSpline) end
+
 ---@return boolean
 function USplineComponent:IsClosedLoop() end
+
 ---@param Distance float
 ---@return FVector
 function USplineComponent:GetWorldTangentAtDistanceAlongSpline(Distance) end
+
 ---@param Time float
 ---@param bUseConstantVelocity boolean
 ---@return FRotator
 function USplineComponent:GetWorldRotationAtTime(Time, bUseConstantVelocity) end
+
 ---@param Distance float
 ---@return FRotator
 function USplineComponent:GetWorldRotationAtDistanceAlongSpline(Distance) end
+
 ---@param Time float
 ---@param bUseConstantVelocity boolean
 ---@return FVector
 function USplineComponent:GetWorldLocationAtTime(Time, bUseConstantVelocity) end
+
 ---@param PointIndex int32
 ---@return FVector
 function USplineComponent:GetWorldLocationAtSplinePoint(PointIndex) end
+
 ---@param Distance float
 ---@return FVector
 function USplineComponent:GetWorldLocationAtDistanceAlongSpline(Distance) end
+
 ---@param Time float
 ---@param bUseConstantVelocity boolean
 ---@return FVector
 function USplineComponent:GetWorldDirectionAtTime(Time, bUseConstantVelocity) end
+
 ---@param Distance float
 ---@return FVector
 function USplineComponent:GetWorldDirectionAtDistanceAlongSpline(Distance) end
+
 ---@param Index int32
 ---@param PropertyName FName
 ---@return FVector
 function USplineComponent:GetVectorPropertyAtSplinePoint(Index, PropertyName) end
+
 ---@param InKey float
 ---@param PropertyName FName
 ---@return FVector
 function USplineComponent:GetVectorPropertyAtSplineInputKey(InKey, PropertyName) end
+
 ---@param Time float
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@param bUseConstantVelocity boolean
 ---@return FVector
 function USplineComponent:GetUpVectorAtTime(Time, CoordinateSpace, bUseConstantVelocity) end
+
 ---@param PointIndex int32
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@return FVector
 function USplineComponent:GetUpVectorAtSplinePoint(PointIndex, CoordinateSpace) end
+
 ---@param InKey float
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@return FVector
 function USplineComponent:GetUpVectorAtSplineInputKey(InKey, CoordinateSpace) end
+
 ---@param Distance float
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@return FVector
 function USplineComponent:GetUpVectorAtDistanceAlongSpline(Distance, CoordinateSpace) end
+
 ---@param Time float
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@param bUseConstantVelocity boolean
 ---@param bUseScale boolean
 ---@return FTransform
 function USplineComponent:GetTransformAtTime(Time, CoordinateSpace, bUseConstantVelocity, bUseScale) end
+
 ---@param PointIndex int32
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@param bUseScale boolean
 ---@return FTransform
 function USplineComponent:GetTransformAtSplinePoint(PointIndex, CoordinateSpace, bUseScale) end
+
 ---@param InKey float
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@param bUseScale boolean
 ---@return FTransform
 function USplineComponent:GetTransformAtSplineInputKey(InKey, CoordinateSpace, bUseScale) end
+
 ---@param Distance float
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@param bUseScale boolean
 ---@return FTransform
 function USplineComponent:GetTransformAtDistanceAlongSpline(Distance, CoordinateSpace, bUseScale) end
+
 ---@param Distance float
 ---@return float
 function USplineComponent:GetTimeAtDistanceAlongSpline(Distance) end
+
 ---@param Time float
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@param bUseConstantVelocity boolean
 ---@return FVector
 function USplineComponent:GetTangentAtTime(Time, CoordinateSpace, bUseConstantVelocity) end
+
 ---@param PointIndex int32
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@return FVector
 function USplineComponent:GetTangentAtSplinePoint(PointIndex, CoordinateSpace) end
+
 ---@param InKey float
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@return FVector
 function USplineComponent:GetTangentAtSplineInputKey(InKey, CoordinateSpace) end
+
 ---@param Distance float
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@return FVector
 function USplineComponent:GetTangentAtDistanceAlongSpline(Distance, CoordinateSpace) end
+
 ---@param PointIndex int32
 ---@return ESplinePointType::Type
 function USplineComponent:GetSplinePointType(PointIndex) end
+
 ---@param PointIndex int32
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@return FSplinePoint
 function USplineComponent:GetSplinePointAt(PointIndex, CoordinateSpace) end
+
 ---@return float
 function USplineComponent:GetSplineLength() end
+
 ---@param Time float
 ---@param bUseConstantVelocity boolean
 ---@return FVector
 function USplineComponent:GetScaleAtTime(Time, bUseConstantVelocity) end
+
 ---@param PointIndex int32
 ---@return FVector
 function USplineComponent:GetScaleAtSplinePoint(PointIndex) end
+
 ---@param InKey float
 ---@return FVector
 function USplineComponent:GetScaleAtSplineInputKey(InKey) end
+
 ---@param Distance float
 ---@return FVector
 function USplineComponent:GetScaleAtDistanceAlongSpline(Distance) end
+
 ---@param Time float
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@param bUseConstantVelocity boolean
 ---@return FRotator
 function USplineComponent:GetRotationAtTime(Time, CoordinateSpace, bUseConstantVelocity) end
+
 ---@param PointIndex int32
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@return FRotator
 function USplineComponent:GetRotationAtSplinePoint(PointIndex, CoordinateSpace) end
+
 ---@param InKey float
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@return FRotator
 function USplineComponent:GetRotationAtSplineInputKey(InKey, CoordinateSpace) end
+
 ---@param Distance float
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@return FRotator
 function USplineComponent:GetRotationAtDistanceAlongSpline(Distance, CoordinateSpace) end
+
 ---@param Time float
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@param bUseConstantVelocity boolean
 ---@return float
 function USplineComponent:GetRollAtTime(Time, CoordinateSpace, bUseConstantVelocity) end
+
 ---@param PointIndex int32
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@return float
 function USplineComponent:GetRollAtSplinePoint(PointIndex, CoordinateSpace) end
+
 ---@param InKey float
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@return float
 function USplineComponent:GetRollAtSplineInputKey(InKey, CoordinateSpace) end
+
 ---@param Distance float
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@return float
 function USplineComponent:GetRollAtDistanceAlongSpline(Distance, CoordinateSpace) end
+
 ---@param Time float
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@param bUseConstantVelocity boolean
 ---@return FVector
 function USplineComponent:GetRightVectorAtTime(Time, CoordinateSpace, bUseConstantVelocity) end
+
 ---@param PointIndex int32
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@return FVector
 function USplineComponent:GetRightVectorAtSplinePoint(PointIndex, CoordinateSpace) end
+
 ---@param InKey float
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@return FVector
 function USplineComponent:GetRightVectorAtSplineInputKey(InKey, CoordinateSpace) end
+
 ---@param Distance float
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@return FVector
 function USplineComponent:GetRightVectorAtDistanceAlongSpline(Distance, CoordinateSpace) end
+
 ---@return int32
 function USplineComponent:GetNumberOfSplineSegments() end
+
 ---@return int32
 function USplineComponent:GetNumberOfSplinePoints() end
+
 ---@param Time float
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@param bUseConstantVelocity boolean
 ---@return FVector
 function USplineComponent:GetLocationAtTime(Time, CoordinateSpace, bUseConstantVelocity) end
+
 ---@param PointIndex int32
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@return FVector
 function USplineComponent:GetLocationAtSplinePoint(PointIndex, CoordinateSpace) end
+
 ---@param InKey float
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@return FVector
 function USplineComponent:GetLocationAtSplineInputKey(InKey, CoordinateSpace) end
+
 ---@param Distance float
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@return FVector
 function USplineComponent:GetLocationAtDistanceAlongSpline(Distance, CoordinateSpace) end
+
 ---@param PointIndex int32
 ---@param Location FVector
 ---@param Tangent FVector
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 function USplineComponent:GetLocationAndTangentAtSplinePoint(PointIndex, Location, Tangent, CoordinateSpace) end
+
 ---@param PointIndex int32
 ---@param LocalLocation FVector
 ---@param LocalTangent FVector
 function USplineComponent:GetLocalLocationAndTangentAtSplinePoint(PointIndex, LocalLocation, LocalTangent) end
+
 ---@param PointIndex int32
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@return FVector
 function USplineComponent:GetLeaveTangentAtSplinePoint(PointIndex, CoordinateSpace) end
+
 ---@param PointIndex int32
 ---@return float
 function USplineComponent:GetInputKeyValueAtSplinePoint(PointIndex) end
+
 ---@param Distance float
 ---@return float
 function USplineComponent:GetInputKeyValueAtDistanceAlongSpline(Distance) end
+
 ---@param Distance float
 ---@return float
 function USplineComponent:GetInputKeyAtDistanceAlongSpline(Distance) end
+
 ---@param Index int32
 ---@param PropertyName FName
 ---@return float
 function USplineComponent:GetFloatPropertyAtSplinePoint(Index, PropertyName) end
+
 ---@param InKey float
 ---@param PropertyName FName
 ---@return float
 function USplineComponent:GetFloatPropertyAtSplineInputKey(InKey, PropertyName) end
+
 ---@param PointIndex int32
 ---@return float
 function USplineComponent:GetDistanceAlongSplineAtSplinePoint(PointIndex) end
+
 ---@param InKey float
 ---@return float
 function USplineComponent:GetDistanceAlongSplineAtSplineInputKey(InKey) end
+
 ---@param InLocation FVector
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@return float
 function USplineComponent:GetDistanceAlongSplineAtLocation(InLocation, CoordinateSpace) end
+
 ---@param Time float
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@param bUseConstantVelocity boolean
 ---@return FVector
 function USplineComponent:GetDirectionAtTime(Time, CoordinateSpace, bUseConstantVelocity) end
+
 ---@param PointIndex int32
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@return FVector
 function USplineComponent:GetDirectionAtSplinePoint(PointIndex, CoordinateSpace) end
+
 ---@param InKey float
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@return FVector
 function USplineComponent:GetDirectionAtSplineInputKey(InKey, CoordinateSpace) end
+
 ---@param Distance float
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@return FVector
 function USplineComponent:GetDirectionAtDistanceAlongSpline(Distance, CoordinateSpace) end
+
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@return FVector
 function USplineComponent:GetDefaultUpVector(CoordinateSpace) end
+
 ---@param PointIndex int32
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@return FVector
 function USplineComponent:GetArriveTangentAtSplinePoint(PointIndex, CoordinateSpace) end
+
 ---@param WorldLocation FVector
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@return FVector
 function USplineComponent:FindUpVectorClosestToWorldLocation(WorldLocation, CoordinateSpace) end
+
 ---@param WorldLocation FVector
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@param bUseScale boolean
 ---@return FTransform
 function USplineComponent:FindTransformClosestToWorldLocation(WorldLocation, CoordinateSpace, bUseScale) end
+
 ---@param WorldLocation FVector
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@return FVector
 function USplineComponent:FindTangentClosestToWorldLocation(WorldLocation, CoordinateSpace) end
+
 ---@param WorldLocation FVector
 ---@return FVector
 function USplineComponent:FindScaleClosestToWorldLocation(WorldLocation) end
+
 ---@param WorldLocation FVector
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@return FRotator
 function USplineComponent:FindRotationClosestToWorldLocation(WorldLocation, CoordinateSpace) end
+
 ---@param WorldLocation FVector
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@return float
 function USplineComponent:FindRollClosestToWorldLocation(WorldLocation, CoordinateSpace) end
+
 ---@param WorldLocation FVector
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@return FVector
 function USplineComponent:FindRightVectorClosestToWorldLocation(WorldLocation, CoordinateSpace) end
+
 ---@param WorldLocation FVector
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@return FVector
 function USplineComponent:FindLocationClosestToWorldLocation(WorldLocation, CoordinateSpace) end
+
 ---@param WorldLocation FVector
 ---@return float
 function USplineComponent:FindInputKeyClosestToWorldLocation(WorldLocation) end
+
 ---@param WorldLocation FVector
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@return FVector
 function USplineComponent:FindDirectionClosestToWorldLocation(WorldLocation, CoordinateSpace) end
+
 ---@param StartDistanceAlongSpline float
 ---@param EndDistanceAlongSpline float
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
@@ -32162,47 +36059,60 @@ function USplineComponent:FindDirectionClosestToWorldLocation(WorldLocation, Coo
 ---@param OutPoints TArray<FVector>
 ---@param OutDistancesAlongSpline TArray<double>
 ---@return boolean
-function USplineComponent:DivideSplineIntoPolylineRecursiveWithDistances(StartDistanceAlongSpline, EndDistanceAlongSpline, CoordinateSpace, MaxSquareDistanceFromSpline, OutPoints, OutDistancesAlongSpline) end
+function USplineComponent:DivideSplineIntoPolylineRecursiveWithDistances(StartDistanceAlongSpline, EndDistanceAlongSpline,
+                                                                         CoordinateSpace, MaxSquareDistanceFromSpline,
+                                                                         OutPoints, OutDistancesAlongSpline) end
+
 ---@param StartDistanceAlongSpline float
 ---@param EndDistanceAlongSpline float
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@param MaxSquareDistanceFromSpline float
 ---@param OutPoints TArray<FVector>
 ---@return boolean
-function USplineComponent:DivideSplineIntoPolylineRecursive(StartDistanceAlongSpline, EndDistanceAlongSpline, CoordinateSpace, MaxSquareDistanceFromSpline, OutPoints) end
+function USplineComponent:DivideSplineIntoPolylineRecursive(StartDistanceAlongSpline, EndDistanceAlongSpline,
+                                                            CoordinateSpace, MaxSquareDistanceFromSpline, OutPoints) end
+
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@param MaxSquareDistanceFromSpline float
 ---@param OutPoints TArray<FVector>
 ---@return boolean
 function USplineComponent:ConvertSplineToPolyLine(CoordinateSpace, MaxSquareDistanceFromSpline, OutPoints) end
+
 ---@param SplinePointStartIndex int32
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@param MaxSquareDistanceFromSpline float
 ---@param OutPoints TArray<FVector>
 ---@return boolean
-function USplineComponent:ConvertSplineSegmentToPolyLine(SplinePointStartIndex, CoordinateSpace, MaxSquareDistanceFromSpline, OutPoints) end
+function USplineComponent:ConvertSplineSegmentToPolyLine(SplinePointStartIndex, CoordinateSpace,
+                                                         MaxSquareDistanceFromSpline, OutPoints) end
+
 ---@param bUpdateSpline boolean
 function USplineComponent:ClearSplinePoints(bUpdateSpline) end
+
 ---@param Position FVector
 function USplineComponent:AddSplineWorldPoint(Position) end
+
 ---@param Position FVector
 ---@param Index int32
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@param bUpdateSpline boolean
 function USplineComponent:AddSplinePointAtIndex(Position, Index, CoordinateSpace, bUpdateSpline) end
+
 ---@param Position FVector
 ---@param CoordinateSpace ESplineCoordinateSpace::Type
 ---@param bUpdateSpline boolean
 function USplineComponent:AddSplinePoint(Position, CoordinateSpace, bUpdateSpline) end
+
 ---@param Position FVector
 function USplineComponent:AddSplineLocalPoint(Position) end
+
 ---@param Points TArray<FSplinePoint>
 ---@param bUpdateSpline boolean
 function USplineComponent:AddPoints(Points, bUpdateSpline) end
+
 ---@param Point FSplinePoint
 ---@param bUpdateSpline boolean
 function USplineComponent:AddPoint(Point, bUpdateSpline) end
-
 
 ---@class USplineMeshComponent : UStaticMeshComponent
 ---@field SplineParams FSplineMeshParams
@@ -32220,89 +36130,119 @@ function USplineComponent:AddPoint(Point, bUpdateSpline) end
 USplineMeshComponent = {}
 
 function USplineMeshComponent:UpdateMesh() end
+
 ---@param StartTangent FVector
 ---@param bUpdateMesh boolean
 function USplineMeshComponent:SetStartTangent(StartTangent, bUpdateMesh) end
+
 ---@param StartScale FVector2D
 ---@param bUpdateMesh boolean
 function USplineMeshComponent:SetStartScale(StartScale, bUpdateMesh) end
+
 ---@param StartRollDegrees float
 ---@param bUpdateMesh boolean
 function USplineMeshComponent:SetStartRollDegrees(StartRollDegrees, bUpdateMesh) end
+
 ---@param StartRoll float
 ---@param bUpdateMesh boolean
 function USplineMeshComponent:SetStartRoll(StartRoll, bUpdateMesh) end
+
 ---@param StartPos FVector
 ---@param bUpdateMesh boolean
 function USplineMeshComponent:SetStartPosition(StartPos, bUpdateMesh) end
+
 ---@param StartOffset FVector2D
 ---@param bUpdateMesh boolean
 function USplineMeshComponent:SetStartOffset(StartOffset, bUpdateMesh) end
+
 ---@param StartPos FVector
 ---@param StartTangent FVector
 ---@param EndPos FVector
 ---@param EndTangent FVector
 ---@param bUpdateMesh boolean
 function USplineMeshComponent:SetStartAndEnd(StartPos, StartTangent, EndPos, EndTangent, bUpdateMesh) end
+
 ---@param InSplineUpDir FVector
 ---@param bUpdateMesh boolean
 function USplineMeshComponent:SetSplineUpDir(InSplineUpDir, bUpdateMesh) end
+
 ---@param InForwardAxis ESplineMeshAxis::Type
 ---@param bUpdateMesh boolean
 function USplineMeshComponent:SetForwardAxis(InForwardAxis, bUpdateMesh) end
+
 ---@param EndTangent FVector
 ---@param bUpdateMesh boolean
 function USplineMeshComponent:SetEndTangent(EndTangent, bUpdateMesh) end
+
 ---@param EndScale FVector2D
 ---@param bUpdateMesh boolean
 function USplineMeshComponent:SetEndScale(EndScale, bUpdateMesh) end
+
 ---@param EndRollDegrees float
 ---@param bUpdateMesh boolean
 function USplineMeshComponent:SetEndRollDegrees(EndRollDegrees, bUpdateMesh) end
+
 ---@param EndRoll float
 ---@param bUpdateMesh boolean
 function USplineMeshComponent:SetEndRoll(EndRoll, bUpdateMesh) end
+
 ---@param EndPos FVector
 ---@param bUpdateMesh boolean
 function USplineMeshComponent:SetEndPosition(EndPos, bUpdateMesh) end
+
 ---@param EndOffset FVector2D
 ---@param bUpdateMesh boolean
 function USplineMeshComponent:SetEndOffset(EndOffset, bUpdateMesh) end
+
 ---@param InBoundaryMin float
 ---@param bUpdateMesh boolean
 function USplineMeshComponent:SetBoundaryMin(InBoundaryMin, bUpdateMesh) end
+
 ---@param InBoundaryMax float
 ---@param bUpdateMesh boolean
 function USplineMeshComponent:SetBoundaryMax(InBoundaryMax, bUpdateMesh) end
+
 ---@return FVector
 function USplineMeshComponent:GetStartTangent() end
+
 ---@return FVector2D
 function USplineMeshComponent:GetStartScale() end
+
 ---@return float
 function USplineMeshComponent:GetStartRoll() end
+
 ---@return FVector
 function USplineMeshComponent:GetStartPosition() end
+
 ---@return FVector2D
 function USplineMeshComponent:GetStartOffset() end
+
 ---@return FVector
 function USplineMeshComponent:GetSplineUpDir() end
+
 ---@return ESplineMeshAxis::Type
 function USplineMeshComponent:GetForwardAxis() end
+
 ---@return FVector
 function USplineMeshComponent:GetEndTangent() end
+
 ---@return FVector2D
 function USplineMeshComponent:GetEndScale() end
+
 ---@return float
 function USplineMeshComponent:GetEndRoll() end
+
 ---@return FVector
 function USplineMeshComponent:GetEndPosition() end
+
 ---@return FVector2D
 function USplineMeshComponent:GetEndOffset() end
+
 ---@return float
 function USplineMeshComponent:GetBoundaryMin() end
+
 ---@return float
 function USplineMeshComponent:GetBoundaryMax() end
-
 
 ---@class USplineMetadata : UObject
 USplineMetadata = {}
@@ -32315,9 +36255,9 @@ USpotLightComponent = {}
 
 ---@param NewOuterConeAngle float
 function USpotLightComponent:SetOuterConeAngle(NewOuterConeAngle) end
+
 ---@param NewInnerConeAngle float
 function USpotLightComponent:SetInnerConeAngle(NewInnerConeAngle) end
-
 
 ---@class USpringArmComponent : USceneComponent
 ---@field TargetArmLength float
@@ -32343,11 +36283,12 @@ USpringArmComponent = {}
 
 ---@return boolean
 function USpringArmComponent:IsCollisionFixApplied() end
+
 ---@return FVector
 function USpringArmComponent:GetUnfixedCameraPosition() end
+
 ---@return FRotator
 function USpringArmComponent:GetTargetRotation() end
-
 
 ---@class UStaticMesh : UStreamableRenderAsset
 ---@field MinQualityLevelLOD FPerQualityLevelInt
@@ -32380,71 +36321,94 @@ UStaticMesh = {}
 
 ---@param InStaticMaterials TArray<FStaticMaterial>
 function UStaticMesh:SetStaticMaterials(InStaticMaterials) end
+
 ---@param QualityLevelMinimumLODs TMap<EPerQualityLevels, int32>
 ---@param Default int32
 function UStaticMesh:SetMinLODForQualityLevels(QualityLevelMinimumLODs, Default) end
+
 ---@param PlatformMinimumLODs TMap<FName, int32>
 function UStaticMesh:SetMinimumLODForPlatforms(PlatformMinimumLODs) end
+
 ---@param PlatformName FName
 ---@param InMinLOD int32
 function UStaticMesh:SetMinimumLODForPlatform(PlatformName, InMinLOD) end
+
 ---@param Socket UStaticMeshSocket
 function UStaticMesh:RemoveSocket(Socket) end
+
 ---@param LODIndex int32
 ---@return UStaticMeshDescription
 function UStaticMesh:GetStaticMeshDescription(LODIndex) end
+
 ---@return TArray<FStaticMaterial>
 function UStaticMesh:GetStaticMaterials() end
+
 ---@param InSocketTag FString
 ---@return TArray<UStaticMeshSocket>
 function UStaticMesh:GetSocketsByTag(InSocketTag) end
+
 ---@param LODIndex int32
 ---@return int32
 function UStaticMesh:GetNumTriangles(LODIndex) end
+
 ---@param InLOD int32
 ---@return int32
 function UStaticMesh:GetNumSections(InLOD) end
+
 ---@return int32
 function UStaticMesh:GetNumLODs() end
+
 ---@param QualityLevelMinimumLODs TMap<EPerQualityLevels, int32>
 ---@param Default int32
 function UStaticMesh:GetMinLODForQualityLevels(QualityLevelMinimumLODs, Default) end
+
 ---@param QualityLevelMinimumLODs TMap<FName, int32>
 function UStaticMesh:GetMinimumLODForQualityLevels(QualityLevelMinimumLODs) end
+
 ---@param QualityLevel FName
 ---@return int32
 function UStaticMesh:GetMinimumLODForQualityLevel(QualityLevel) end
+
 ---@param PlatformMinimumLODs TMap<FName, int32>
 function UStaticMesh:GetMinimumLODForPlatforms(PlatformMinimumLODs) end
+
 ---@param PlatformName FName
 ---@return int32
 function UStaticMesh:GetMinimumLODForPlatform(PlatformName) end
+
 ---@param MaterialSlotName FName
 ---@return int32
 function UStaticMesh:GetMaterialIndex(MaterialSlotName) end
+
 ---@param MaterialIndex int32
 ---@return UMaterialInterface
 function UStaticMesh:GetMaterial(MaterialIndex) end
+
 ---@return FBoxSphereBounds
 function UStaticMesh:GetBounds() end
+
 ---@return FBox
 function UStaticMesh:GetBoundingBox() end
+
 ---@param InSocketName FName
 ---@return UStaticMeshSocket
 function UStaticMesh:FindSocket(InSocketName) end
+
 ---@param Outer UObject
 ---@return UStaticMeshDescription
 function UStaticMesh:CreateStaticMeshDescription(Outer) end
+
 ---@param StaticMeshDescriptions TArray<UStaticMeshDescription>
 ---@param bBuildSimpleCollision boolean
 ---@param bFastBuild boolean
 function UStaticMesh:BuildFromStaticMeshDescriptions(StaticMeshDescriptions, bBuildSimpleCollision, bFastBuild) end
+
 ---@param Socket UStaticMeshSocket
 function UStaticMesh:AddSocket(Socket) end
+
 ---@param Material UMaterialInterface
 ---@return FName
 function UStaticMesh:AddMaterial(Material) end
-
 
 ---@class UStaticMeshComponent : UMeshComponent
 ---@field ForcedLodModel int32
@@ -32484,29 +36448,38 @@ UStaticMeshComponent = {}
 
 ---@param NewValue int32
 function UStaticMeshComponent:SetWorldPositionOffsetDisableDistance(NewValue) end
+
 ---@param NewMesh UStaticMesh
 ---@return boolean
 function UStaticMeshComponent:SetStaticMesh(NewMesh) end
+
 ---@param ReverseCulling boolean
 function UStaticMeshComponent:SetReverseCulling(ReverseCulling) end
+
 ---@param NewForcedLodModel int32
 function UStaticMeshComponent:SetForcedLodModel(NewForcedLodModel) end
+
 ---@param bInForceDisableNanite boolean
 function UStaticMeshComponent:SetForceDisableNanite(bInForceDisableNanite) end
+
 ---@param NewValue boolean
 function UStaticMeshComponent:SetEvaluateWorldPositionOffsetInRayTracing(NewValue) end
+
 ---@param NewValue boolean
 function UStaticMeshComponent:SetEvaluateWorldPositionOffset(NewValue) end
+
 ---@param NewValue float
 function UStaticMeshComponent:SetDistanceFieldSelfShadowBias(NewValue) end
+
 ---@param OldStaticMesh UStaticMesh
 function UStaticMeshComponent:OnRep_StaticMesh(OldStaticMesh) end
+
 ---@param Min FVector
 ---@param Max FVector
 function UStaticMeshComponent:GetLocalBounds(Min, Max) end
+
 ---@return boolean
 function UStaticMeshComponent:GetInitialEvaluateWorldPositionOffset() end
-
 
 ---@class UStaticMeshDescriptionBulkData : UMeshDescriptionBaseBulkData
 UStaticMeshDescriptionBulkData = {}
@@ -32547,43 +36520,55 @@ UStereoLayerComponent = {}
 
 ---@param InUVRect FBox2D
 function UStereoLayerComponent:SetUVRect(InUVRect) end
+
 ---@param InTexture UTexture
 function UStereoLayerComponent:SetTexture(InTexture) end
+
 ---@param InQuadSize FVector2D
 function UStereoLayerComponent:SetQuadSize(InQuadSize) end
+
 ---@param InPriority int32
 function UStereoLayerComponent:SetPriority(InPriority) end
+
 ---@param InTexture UTexture
 function UStereoLayerComponent:SetLeftTexture(InTexture) end
+
 ---@param InEquirectProps FEquirectProps
 function UStereoLayerComponent:SetEquirectProps(InEquirectProps) end
+
 function UStereoLayerComponent:MarkTextureForUpdate() end
+
 ---@return FBox2D
 function UStereoLayerComponent:GetUVRect() end
+
 ---@return UTexture
 function UStereoLayerComponent:GetTexture() end
+
 ---@return FVector2D
 function UStereoLayerComponent:GetQuadSize() end
+
 ---@return int32
 function UStereoLayerComponent:GetPriority() end
+
 ---@return UTexture
 function UStereoLayerComponent:GetLeftTexture() end
-
 
 ---@class UStereoLayerFunctionLibrary : UBlueprintFunctionLibrary
 UStereoLayerFunctionLibrary = {}
 
 function UStereoLayerFunctionLibrary:ShowSplashScreen() end
+
 ---@param Texture UTexture
 ---@param Scale FVector2D
 ---@param Offset FVector
 ---@param bShowLoadingMovie boolean
 ---@param bShowOnSet boolean
 function UStereoLayerFunctionLibrary:SetSplashScreen(Texture, Scale, Offset, bShowLoadingMovie, bShowOnSet) end
+
 function UStereoLayerFunctionLibrary:HideSplashScreen() end
+
 ---@param InAutoShowEnabled boolean
 function UStereoLayerFunctionLibrary:EnableAutoLoadingSplashScreen(InAutoShowEnabled) end
-
 
 ---@class UStereoLayerShape : UObject
 UStereoLayerShape = {}
@@ -32601,11 +36586,12 @@ UStereoLayerShapeCylinder = {}
 
 ---@param InRadius float
 function UStereoLayerShapeCylinder:SetRadius(InRadius) end
+
 ---@param InOverlayArc float
 function UStereoLayerShapeCylinder:SetOverlayArc(InOverlayArc) end
+
 ---@param InHeight int32
 function UStereoLayerShapeCylinder:SetHeight(InHeight) end
-
 
 ---@class UStereoLayerShapeEquirect : UStereoLayerShape
 ---@field LeftUVRect FBox2D
@@ -32619,7 +36605,6 @@ UStereoLayerShapeEquirect = {}
 
 ---@param InScaleBiases FEquirectProps
 function UStereoLayerShapeEquirect:SetEquirectProps(InScaleBiases) end
-
 
 ---@class UStereoLayerShapeQuad : UStereoLayerShape
 UStereoLayerShapeQuad = {}
@@ -32641,7 +36626,6 @@ UStreamableRenderAsset = {}
 ---@param Seconds float
 ---@param CinematicLODGroupMask int32
 function UStreamableRenderAsset:SetForceMipLevelsToBeResident(Seconds, CinematicLODGroupMask) end
-
 
 ---@class UStreamableSparseVolumeTexture : USparseVolumeTexture
 ---@field VolumeResolution FIntVector
@@ -32720,26 +36704,30 @@ USubsystemBlueprintLibrary = {}
 ---@param Class TSubclassOf<UWorldSubsystem>
 ---@return UWorldSubsystem
 function USubsystemBlueprintLibrary:GetWorldSubsystem(ContextObject, Class) end
+
 ---@param PlayerController APlayerController
 ---@param Class TSubclassOf<ULocalPlayerSubsystem>
 ---@return ULocalPlayerSubsystem
 function USubsystemBlueprintLibrary:GetLocalPlayerSubSystemFromPlayerController(PlayerController, Class) end
+
 ---@param ContextObject UObject
 ---@param Class TSubclassOf<ULocalPlayerSubsystem>
 ---@return ULocalPlayerSubsystem
 function USubsystemBlueprintLibrary:GetLocalPlayerSubsystem(ContextObject, Class) end
+
 ---@param ContextObject UObject
 ---@param Class TSubclassOf<UGameInstanceSubsystem>
 ---@return UGameInstanceSubsystem
 function USubsystemBlueprintLibrary:GetGameInstanceSubsystem(ContextObject, Class) end
+
 ---@param Class TSubclassOf<UEngineSubsystem>
 ---@return UEngineSubsystem
 function USubsystemBlueprintLibrary:GetEngineSubsystem(Class) end
+
 ---@param ContextObject UObject
 ---@param Class TSubclassOf<UAudioEngineSubsystem>
 ---@return UAudioEngineSubsystem
 function USubsystemBlueprintLibrary:GetAudioEngineSubsystem(ContextObject, Class) end
-
 
 ---@class USystemTimeTimecodeProvider : UTimecodeProvider
 ---@field FrameRate FFrameRate
@@ -32775,33 +36763,45 @@ UTextRenderComponent = {}
 
 ---@param Value float
 function UTextRenderComponent:SetYScale(Value) end
+
 ---@param Value float
 function UTextRenderComponent:SetXScale(Value) end
+
 ---@param Value float
 function UTextRenderComponent:SetWorldSize(Value) end
+
 ---@param Value float
 function UTextRenderComponent:SetVertSpacingAdjust(Value) end
+
 ---@param Value EVerticalTextAligment
 function UTextRenderComponent:SetVerticalAlignment(Value) end
+
 ---@param Value FColor
 function UTextRenderComponent:SetTextRenderColor(Value) end
+
 ---@param Material UMaterialInterface
 function UTextRenderComponent:SetTextMaterial(Material) end
+
 ---@param Value FText
 function UTextRenderComponent:SetText(Value) end
+
 ---@param Value float
 function UTextRenderComponent:SetHorizSpacingAdjust(Value) end
+
 ---@param Value EHorizTextAligment
 function UTextRenderComponent:SetHorizontalAlignment(Value) end
+
 ---@param Value UFont
 function UTextRenderComponent:SetFont(Value) end
+
 ---@param Value FText
 function UTextRenderComponent:K2_SetText(Value) end
+
 ---@return FVector
 function UTextRenderComponent:GetTextWorldSize() end
+
 ---@return FVector
 function UTextRenderComponent:GetTextLocalSize() end
-
 
 ---@class UTexture : UStreamableRenderAsset
 ---@field LightingGuid FGuid
@@ -32827,12 +36827,13 @@ UTexture = {}
 ---@param OutColorMax FLinearColor
 ---@return boolean
 function UTexture:ComputeTextureSourceChannelMinMax(OutColorMin, OutColorMax) end
+
 ---@param OutDiskSize int64
 ---@param OutMemorySize int64
 function UTexture:Blueprint_GetTextureSourceDiskAndMemorySize(OutDiskSize, OutMemorySize) end
+
 ---@return int64
 function UTexture:Blueprint_GetMemorySize() end
-
 
 ---@class UTexture2D : UTexture
 ---@field FirstResourceMemMip int32
@@ -32844,9 +36845,9 @@ UTexture2D = {}
 
 ---@return int32
 function UTexture2D:Blueprint_GetSizeY() end
+
 ---@return int32
 function UTexture2D:Blueprint_GetSizeX() end
-
 
 ---@class UTexture2DArray : UTexture
 ---@field AddressX TextureAddress
@@ -32986,21 +36987,27 @@ UTimecodeProvider = {}
 
 ---@return FTimecode
 function UTimecodeProvider:GetTimecode() end
+
 ---@return ETimecodeProviderSynchronizationState
 function UTimecodeProvider:GetSynchronizationState() end
+
 ---@return FQualifiedFrameTime
 function UTimecodeProvider:GetQualifiedFrameTime() end
+
 ---@return FFrameRate
 function UTimecodeProvider:GetFrameRate() end
+
 ---@return FTimecode
 function UTimecodeProvider:GetDelayedTimecode() end
+
 ---@return FQualifiedFrameTime
 function UTimecodeProvider:GetDelayedQualifiedFrameTime() end
+
 ---@param OutFrameTime FQualifiedFrameTime
 ---@return boolean
 function UTimecodeProvider:FetchTimecode(OutFrameTime) end
-function UTimecodeProvider:FetchAndUpdate() end
 
+function UTimecodeProvider:FetchAndUpdate() end
 
 ---@class UTimelineComponent : UActorComponent
 ---@field TheTimeline FTimeline
@@ -33008,76 +37015,104 @@ function UTimecodeProvider:FetchAndUpdate() end
 UTimelineComponent = {}
 
 function UTimelineComponent:Stop() end
+
 ---@param NewVectorCurve UCurveVector
 ---@param VectorTrackName FName
 function UTimelineComponent:SetVectorCurve(NewVectorCurve, VectorTrackName) end
+
 ---@param NewTimelinePostUpdateFunc FSetTimelinePostUpdateFuncNewTimelinePostUpdateFunc
 function UTimelineComponent:SetTimelinePostUpdateFunc(NewTimelinePostUpdateFunc) end
+
 ---@param NewLengthMode ETimelineLengthMode
 function UTimelineComponent:SetTimelineLengthMode(NewLengthMode) end
+
 ---@param NewLength float
 function UTimelineComponent:SetTimelineLength(NewLength) end
+
 ---@param NewTimelineFinishedFunc FSetTimelineFinishedFuncNewTimelineFinishedFunc
 function UTimelineComponent:SetTimelineFinishedFunc(NewTimelineFinishedFunc) end
+
 ---@param NewRate float
 function UTimelineComponent:SetPlayRate(NewRate) end
+
 ---@param NewPosition float
 ---@param bFireEvents boolean
 ---@param bFireUpdate boolean
 function UTimelineComponent:SetPlaybackPosition(NewPosition, bFireEvents, bFireUpdate) end
+
 ---@param NewTime float
 function UTimelineComponent:SetNewTime(NewTime) end
+
 ---@param bNewLooping boolean
 function UTimelineComponent:SetLooping(bNewLooping) end
+
 ---@param NewLinearColorCurve UCurveLinearColor
 ---@param LinearColorTrackName FName
 function UTimelineComponent:SetLinearColorCurve(NewLinearColorCurve, LinearColorTrackName) end
+
 ---@param bNewIgnoreTimeDilation boolean
 function UTimelineComponent:SetIgnoreTimeDilation(bNewIgnoreTimeDilation) end
+
 ---@param NewFloatCurve UCurveFloat
 ---@param FloatTrackName FName
 function UTimelineComponent:SetFloatCurve(NewFloatCurve, FloatTrackName) end
+
 function UTimelineComponent:ReverseFromEnd() end
+
 function UTimelineComponent:Reverse() end
+
 function UTimelineComponent:PlayFromStart() end
+
 function UTimelineComponent:Play() end
+
 ---@param OldTimeline FTimeline
 function UTimelineComponent:OnRep_Timeline(OldTimeline) end
+
 ---@return boolean
 function UTimelineComponent:IsReversing() end
+
 ---@return boolean
 function UTimelineComponent:IsPlaying() end
+
 ---@return boolean
 function UTimelineComponent:IsLooping() end
+
 ---@return float
 function UTimelineComponent:GetTimelineLength() end
+
 ---@return float
 function UTimelineComponent:GetScaledTimelineLength() end
+
 ---@return float
 function UTimelineComponent:GetPlayRate() end
+
 ---@return float
 function UTimelineComponent:GetPlaybackPosition() end
+
 ---@return boolean
 function UTimelineComponent:GetIgnoreTimeDilation() end
+
 ---@param VectorCurve UCurveVector
 ---@param InterpFunc FAddInterpVectorInterpFunc
 ---@param PropertyName FName
 ---@param TrackName FName
 function UTimelineComponent:AddInterpVector(VectorCurve, InterpFunc, PropertyName, TrackName) end
+
 ---@param LinearColorCurve UCurveLinearColor
 ---@param InterpFunc FAddInterpLinearColorInterpFunc
 ---@param PropertyName FName
 ---@param TrackName FName
 function UTimelineComponent:AddInterpLinearColor(LinearColorCurve, InterpFunc, PropertyName, TrackName) end
+
 ---@param FloatCurve UCurveFloat
 ---@param InterpFunc FAddInterpFloatInterpFunc
 ---@param PropertyName FName
 ---@param TrackName FName
 function UTimelineComponent:AddInterpFloat(FloatCurve, InterpFunc, PropertyName, TrackName) end
+
 ---@param Time float
 ---@param EventFunc FAddEventEventFunc
 function UTimelineComponent:AddEvent(Time, EventFunc) end
-
 
 ---@class UTimelineTemplate : UObject
 ---@field TimelineLength float
@@ -33141,22 +37176,27 @@ UTwitterIntegrationBase = {}
 ---@param AccountIndex int32
 ---@return boolean
 function UTwitterIntegrationBase:TwitterRequest(URL, ParamKeysAndValues, RequestMethod, AccountIndex) end
+
 ---@param InitialMessage FString
 ---@param URL FString
 ---@param Picture FString
 ---@return boolean
 function UTwitterIntegrationBase:ShowTweetUI(InitialMessage, URL, Picture) end
+
 function UTwitterIntegrationBase:Init() end
+
 ---@return int32
 function UTwitterIntegrationBase:GetNumAccounts() end
+
 ---@param AccountIndex int32
 ---@return FString
 function UTwitterIntegrationBase:GetAccountName(AccountIndex) end
+
 ---@return boolean
 function UTwitterIntegrationBase:CanShowTweetUI() end
+
 ---@return boolean
 function UTwitterIntegrationBase:AuthorizeAccounts() end
-
 
 ---@class UTypedElementCommonActions : UObject
 UTypedElementCommonActions = {}
@@ -33167,58 +37207,68 @@ UTypedElementCommonActions = {}
 ---@param InputString FString
 ---@return TArray<FScriptTypedElementHandle>
 function UTypedElementCommonActions:PasteNormalizedElementsFromString(ElementList, World, PasteOption, InputString) end
+
 ---@param SelectionSet UTypedElementSelectionSet
 ---@param World UWorld
 ---@param PasteOption FTypedElementPasteOptions
 ---@param InputString FString
 ---@return TArray<FScriptTypedElementHandle>
 function UTypedElementCommonActions:PasteElementsFromString(SelectionSet, World, PasteOption, InputString) end
+
 ---@param ElementList FScriptTypedElementListProxy
 ---@param World UWorld
 ---@param PasteOption FTypedElementPasteOptions
 ---@return TArray<FScriptTypedElementHandle>
 function UTypedElementCommonActions:K2_PasteNormalizedElements(ElementList, World, PasteOption) end
+
 ---@param SelectionSet UTypedElementSelectionSet
 ---@param World UWorld
 ---@param PasteOption FTypedElementPasteOptions
 ---@return TArray<FScriptTypedElementHandle>
 function UTypedElementCommonActions:K2_PasteElements(SelectionSet, World, PasteOption) end
+
 ---@param SelectionSet UTypedElementSelectionSet
 ---@param World UWorld
 ---@param LocationOffset FVector
 ---@return TArray<FScriptTypedElementHandle>
 function UTypedElementCommonActions:K2_DuplicateSelectedElements(SelectionSet, World, LocationOffset) end
+
 ---@param ElementList FScriptTypedElementListProxy
 ---@param World UWorld
 ---@param LocationOffset FVector
 ---@return TArray<FScriptTypedElementHandle>
 function UTypedElementCommonActions:DuplicateNormalizedElements(ElementList, World, LocationOffset) end
+
 ---@param SelectionSet UTypedElementSelectionSet
 ---@param World UWorld
 ---@param DeletionOptions FTypedElementDeletionOptions
 ---@return boolean
 function UTypedElementCommonActions:DeleteSelectedElements(SelectionSet, World, DeletionOptions) end
+
 ---@param ElementList FScriptTypedElementListProxy
 ---@param World UWorld
 ---@param InSelectionSet UTypedElementSelectionSet
 ---@param DeletionOptions FTypedElementDeletionOptions
 ---@return boolean
 function UTypedElementCommonActions:DeleteNormalizedElements(ElementList, World, InSelectionSet, DeletionOptions) end
+
 ---@param SelectionSet UTypedElementSelectionSet
 ---@param OutputString FString
 ---@return boolean
 function UTypedElementCommonActions:CopySelectedElementsToString(SelectionSet, OutputString) end
+
 ---@param SelectionSet UTypedElementSelectionSet
 ---@return boolean
 function UTypedElementCommonActions:CopySelectedElements(SelectionSet) end
+
 ---@param ElementList FScriptTypedElementListProxy
 ---@param OutputString FString
 ---@return boolean
 function UTypedElementCommonActions:CopyNormalizedElementsToString(ElementList, OutputString) end
+
 ---@param ElementList FScriptTypedElementListProxy
 ---@return boolean
 function UTypedElementCommonActions:CopyNormalizedElements(ElementList) end
-
 
 ---@class UUserDefinedEnum : UEnum
 ---@field DisplayNameMap TMap<FName, FText>
@@ -33265,22 +37315,24 @@ UVOIPStatics = {}
 ---@param InThreshold float
 function UVOIPStatics:SetMicThreshold(InThreshold) end
 
-
 ---@class UVOIPTalker : UActorComponent
 ---@field Settings FVoiceSettings
 UVOIPTalker = {}
 
 ---@param OwningState APlayerState
 function UVOIPTalker:RegisterWithPlayerState(OwningState) end
+
 ---@return float
 function UVOIPTalker:GetVoiceLevel() end
+
 ---@param OwningState APlayerState
 ---@return UVOIPTalker
 function UVOIPTalker:CreateTalkerForPlayer(OwningState) end
+
 function UVOIPTalker:BPOnTalkingEnd() end
+
 ---@param AudioComponent UAudioComponent
 function UVOIPTalker:BPOnTalkingBegin(AudioComponent) end
-
 
 ---@class UVariableFrameStrippingSettings : UObject
 ---@field UseVariableFrameStripping FPerPlatformBool
@@ -33324,7 +37376,6 @@ UVectorFieldComponent = {}
 ---@param NewIntensity float
 function UVectorFieldComponent:SetIntensity(NewIntensity) end
 
-
 ---@class UVectorFieldStatic : UVectorField
 ---@field SizeX int32
 ---@field SizeY int32
@@ -33343,15 +37394,16 @@ UViewportStatsSubsystem = {}
 
 ---@param IndexToRemove int32
 function UViewportStatsSubsystem:RemoveDisplayDelegate(IndexToRemove) end
+
 ---@param Text FText
 ---@param Color FLinearColor
 ---@param Duration float
 ---@param DisplayOffset FVector2D
 function UViewportStatsSubsystem:AddTimedDisplay(Text, Color, Duration, DisplayOffset) end
+
 ---@param Delegate FAddDisplayDelegateDelegate
 ---@return int32
 function UViewportStatsSubsystem:AddDisplayDelegate(Delegate) end
-
 
 ---@class UVirtualTexture : UObject
 UVirtualTexture = {}
@@ -33391,11 +37443,13 @@ UVisualLoggerKismetLibrary = {}
 ---@param SourceOwner UObject
 ---@param DestinationOwner UObject
 function UVisualLoggerKismetLibrary:RedirectVislog(SourceOwner, DestinationOwner) end
+
 ---@param WorldContextObject UObject
 ---@param Text FString
 ---@param LogCategory FName
 ---@param bAddToMessageLog boolean
 function UVisualLoggerKismetLibrary:LogText(WorldContextObject, Text, LogCategory, bAddToMessageLog) end
+
 ---@param WorldContextObject UObject
 ---@param SegmentStart FVector
 ---@param SegmentEnd FVector
@@ -33404,7 +37458,9 @@ function UVisualLoggerKismetLibrary:LogText(WorldContextObject, Text, LogCategor
 ---@param Thickness float
 ---@param CategoryName FName
 ---@param bAddToMessageLog boolean
-function UVisualLoggerKismetLibrary:LogSegment(WorldContextObject, SegmentStart, SegmentEnd, Text, ObjectColor, Thickness, CategoryName, bAddToMessageLog) end
+function UVisualLoggerKismetLibrary:LogSegment(WorldContextObject, SegmentStart, SegmentEnd, Text, ObjectColor, Thickness,
+                                               CategoryName, bAddToMessageLog) end
+
 ---@param WorldContextObject UObject
 ---@param Location FVector
 ---@param Text FString
@@ -33412,7 +37468,9 @@ function UVisualLoggerKismetLibrary:LogSegment(WorldContextObject, SegmentStart,
 ---@param Radius float
 ---@param LogCategory FName
 ---@param bAddToMessageLog boolean
-function UVisualLoggerKismetLibrary:LogLocation(WorldContextObject, Location, Text, ObjectColor, Radius, LogCategory, bAddToMessageLog) end
+function UVisualLoggerKismetLibrary:LogLocation(WorldContextObject, Location, Text, ObjectColor, Radius, LogCategory,
+                                                bAddToMessageLog) end
+
 ---@param WorldContextObject UObject
 ---@param BoxShape FBox
 ---@param Text FString
@@ -33420,9 +37478,9 @@ function UVisualLoggerKismetLibrary:LogLocation(WorldContextObject, Location, Te
 ---@param LogCategory FName
 ---@param bAddToMessageLog boolean
 function UVisualLoggerKismetLibrary:LogBox(WorldContextObject, BoxShape, Text, ObjectColor, LogCategory, bAddToMessageLog) end
+
 ---@param bEnabled boolean
 function UVisualLoggerKismetLibrary:EnableRecording(bEnabled) end
-
 
 ---@class UVoiceChannel : UChannel
 UVoiceChannel = {}
@@ -33463,39 +37521,54 @@ UVolumetricCloudComponent = {}
 
 ---@param NewValue float
 function UVolumetricCloudComponent:SetViewSampleCountScale(NewValue) end
+
 ---@param NewValue float
 function UVolumetricCloudComponent:SetTracingStartMaxDistance(NewValue) end
+
 ---@param NewValue float
 function UVolumetricCloudComponent:SetTracingMaxDistance(NewValue) end
+
 ---@param NewValue float
 function UVolumetricCloudComponent:SetStopTracingTransmittanceThreshold(NewValue) end
+
 ---@param NewValue float
 function UVolumetricCloudComponent:SetSkyLightCloudBottomOcclusion(NewValue) end
+
 ---@param NewValue float
 function UVolumetricCloudComponent:SetShadowViewSampleCountScale(NewValue) end
+
 ---@param NewValue float
 function UVolumetricCloudComponent:SetShadowTracingDistance(NewValue) end
+
 ---@param NewValue float
 function UVolumetricCloudComponent:SetShadowReflectionViewSampleCountScale(NewValue) end
+
 ---@param NewValue float
 function UVolumetricCloudComponent:SetShadowReflectionSampleCountScale(NewValue) end
+
 ---@param NewValue float
 function UVolumetricCloudComponent:SetReflectionViewSampleCountScale(NewValue) end
+
 ---@param NewValue float
 function UVolumetricCloudComponent:SetReflectionSampleCountScale(NewValue) end
+
 ---@param NewValue float
 function UVolumetricCloudComponent:SetPlanetRadius(NewValue) end
+
 ---@param NewValue UMaterialInterface
 function UVolumetricCloudComponent:SetMaterial(NewValue) end
+
 ---@param NewValue float
 function UVolumetricCloudComponent:SetLayerHeight(NewValue) end
+
 ---@param NewValue float
 function UVolumetricCloudComponent:SetLayerBottomAltitude(NewValue) end
+
 ---@param NewValue FColor
 function UVolumetricCloudComponent:SetGroundAlbedo(NewValue) end
+
 ---@param NewValue boolean
 function UVolumetricCloudComponent:SetbUsePerSampleAtmosphericLightTransmittance(NewValue) end
-
 
 ---@class UWindDirectionalSourceComponent : USceneComponent
 ---@field Strength float
@@ -33508,17 +37581,21 @@ UWindDirectionalSourceComponent = {}
 
 ---@param InNewType EWindSourceType
 function UWindDirectionalSourceComponent:SetWindType(InNewType) end
+
 ---@param InNewStrength float
 function UWindDirectionalSourceComponent:SetStrength(InNewStrength) end
+
 ---@param InNewSpeed float
 function UWindDirectionalSourceComponent:SetSpeed(InNewSpeed) end
+
 ---@param InNewRadius float
 function UWindDirectionalSourceComponent:SetRadius(InNewRadius) end
+
 ---@param InNewMinGust float
 function UWindDirectionalSourceComponent:SetMinimumGustAmount(InNewMinGust) end
+
 ---@param InNewMaxGust float
 function UWindDirectionalSourceComponent:SetMaximumGustAmount(InNewMaxGust) end
-
 
 ---@class UWorld : UObject
 ---@field PersistentLevel ULevel
@@ -33563,10 +37640,11 @@ UWorld = {}
 
 ---@return AWorldSettings
 function UWorld:K2_GetWorldSettings() end
+
 function UWorld:HandleTimelineScrubbed() end
+
 ---@return UDataLayerManager
 function UWorld:GetDataLayerManager() end
-
 
 ---@class UWorldComposition : UObject
 ---@field TilesStreaming TArray<ULevelStreaming>
@@ -33595,27 +37673,34 @@ UWorldPartitionBlueprintLibrary = {}
 
 ---@param InActorsToUnpin TArray<FGuid>
 function UWorldPartitionBlueprintLibrary:UnpinActors(InActorsToUnpin) end
+
 ---@param InActorsToUnload TArray<FGuid>
 function UWorldPartitionBlueprintLibrary:UnloadActors(InActorsToUnload) end
+
 ---@param InActorsToPin TArray<FGuid>
 function UWorldPartitionBlueprintLibrary:PinActors(InActorsToPin) end
+
 ---@param InActorsToLoad TArray<FGuid>
 function UWorldPartitionBlueprintLibrary:LoadActors(InActorsToLoad) end
+
 ---@return FBox
 function UWorldPartitionBlueprintLibrary:GetRuntimeWorldBounds() end
+
 ---@param InBox FBox
 ---@param OutActorDescs TArray<FActorDesc>
 ---@return boolean
 function UWorldPartitionBlueprintLibrary:GetIntersectingActorDescs(InBox, OutActorDescs) end
+
 ---@return FBox
 function UWorldPartitionBlueprintLibrary:GetEditorWorldBounds() end
+
 ---@param WorldContextObject UObject
 ---@return UDataLayerManager
 function UWorldPartitionBlueprintLibrary:GetDataLayerManager(WorldContextObject) end
+
 ---@param OutActorDescs TArray<FActorDesc>
 ---@return boolean
 function UWorldPartitionBlueprintLibrary:GetActorDescs(OutActorDescs) end
-
 
 ---@class UWorldPartitionDestructibleHLODComponent : USceneComponent
 ---@field DestructibleActors TArray<FName>
@@ -33637,10 +37722,10 @@ UWorldPartitionDestructibleInHLODSupportLibrary = {}
 
 ---@param DestructibleInHLOD TScriptInterface<IWorldPartitionDestructibleInHLODInterface>
 function UWorldPartitionDestructibleInHLODSupportLibrary:DestroyInHLOD(DestructibleInHLOD) end
+
 ---@param DestructibleInHLOD TScriptInterface<IWorldPartitionDestructibleInHLODInterface>
 ---@param DamagePercent float
 function UWorldPartitionDestructibleInHLODSupportLibrary:DamageInHLOD(DestructibleInHLOD, DamagePercent) end
-
 
 ---@class UWorldPartitionEditorHash : UObject
 UWorldPartitionEditorHash = {}
@@ -33735,8 +37820,8 @@ UWorldPartitionRuntimeHashSet = {}
 UWorldPartitionRuntimeLevelStreamingCell = {}
 
 function UWorldPartitionRuntimeLevelStreamingCell:OnLevelShown() end
-function UWorldPartitionRuntimeLevelStreamingCell:OnLevelHidden() end
 
+function UWorldPartitionRuntimeLevelStreamingCell:OnLevelHidden() end
 
 ---@class UWorldPartitionRuntimeSpatialHash : UWorldPartitionRuntimeHash
 ---@field UseAlignedGridLevels EWorldPartitionCVarProjectDefaultOverride
@@ -33768,11 +37853,13 @@ UWorldPartitionStreamingSourceComponent = {}
 
 ---@return boolean
 function UWorldPartitionStreamingSourceComponent:IsStreamingSourceEnabled() end
+
 ---@return boolean
 function UWorldPartitionStreamingSourceComponent:IsStreamingCompleted() end
-function UWorldPartitionStreamingSourceComponent:EnableStreamingSource() end
-function UWorldPartitionStreamingSourceComponent:DisableStreamingSource() end
 
+function UWorldPartitionStreamingSourceComponent:EnableStreamingSource() end
+
+function UWorldPartitionStreamingSourceComponent:DisableStreamingSource() end
 
 ---@class UWorldPartitionSubsystem : UTickableWorldSubsystem
 UWorldPartitionSubsystem = {}
@@ -33782,11 +37869,9 @@ UWorldPartitionSubsystem = {}
 ---@param bExactState boolean
 ---@return boolean
 function UWorldPartitionSubsystem:IsStreamingCompleted(QueryState, QuerySources, bExactState) end
+
 ---@return boolean
 function UWorldPartitionSubsystem:IsAllStreamingCompleted() end
 
-
 ---@class UWorldSubsystem : USubsystem
 UWorldSubsystem = {}
-
-

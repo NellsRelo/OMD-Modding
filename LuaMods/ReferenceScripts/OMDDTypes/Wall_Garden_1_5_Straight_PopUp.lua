@@ -5,6 +5,3 @@
 ---@field CSC_300_GardenWallTrap UStaticMeshComponent
 ---@field Wall00 URSTTrapGridBoxComponent
 AWall_Garden_1_5_Straight_PopUp_C = {}
-
-
-

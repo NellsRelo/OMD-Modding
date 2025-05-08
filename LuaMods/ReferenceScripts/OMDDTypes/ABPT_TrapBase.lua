@@ -90,20 +90,32 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field ['Close Sequence (Optional)'] UAnimSequenceBase
 ---@field bHasClosedOnCooldownSequence boolean
 ---@field ['ClosedCooldownBS (Optional)'] UBlendSpace1D
+---@field IsResetting boolean
 UABPT_TrapBase_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABPT_TrapBase_C:AnimGraph(AnimGraph) end
+
 function UABPT_TrapBase_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_TrapBase_AnimGraphNode_TransitionResult_F10D0274411DFF32E1AAF6ADB94FF590() end
+
 function UABPT_TrapBase_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_TrapBase_AnimGraphNode_TransitionResult_09C6111A4E48D6F3E8A6FF9154B0822E() end
+
 function UABPT_TrapBase_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_TrapBase_AnimGraphNode_TransitionResult_9D4A7E4646C37D9C121846B957EF3A8F() end
+
 function UABPT_TrapBase_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_TrapBase_AnimGraphNode_TransitionResult_A3DA2F2940EF3557FCBFF1B972784433() end
+
 function UABPT_TrapBase_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_TrapBase_AnimGraphNode_TransitionResult_68D6B9DE41C66C6C817C8AB2A9B18B66() end
+
 function UABPT_TrapBase_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_TrapBase_AnimGraphNode_TransitionResult_4DF7D2904EA2A3A134DC139CB528F08C() end
+
 function UABPT_TrapBase_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_TrapBase_AnimGraphNode_TransitionResult_5A95D11A45AE92BB25DF4A9A9106FD6E() end
+
 function UABPT_TrapBase_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABPT_TrapBase_AnimGraphNode_TransitionResult_38ADBE704FE235D2A97651BA363D83F5() end
+
+---@param DeltaTimeX float
+function UABPT_TrapBase_C:BlueprintUpdateAnimation(DeltaTimeX) end
+
 function UABPT_TrapBase_C:BlueprintInitializeAnimation() end
+
 ---@param EntryPoint int32
 function UABPT_TrapBase_C:ExecuteUbergraph_ABPT_TrapBase(EntryPoint) end
-
-

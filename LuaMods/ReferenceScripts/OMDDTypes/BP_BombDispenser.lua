@@ -5,5 +5,3 @@ ABP_BombDispenser_C = {}
 
 ---@return boolean
 function ABP_BombDispenser_C:IsReadyForActivation() end
-
-

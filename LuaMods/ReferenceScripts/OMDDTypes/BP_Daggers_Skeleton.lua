@@ -14,13 +14,16 @@ ABP_Daggers_Skeleton_C = {}
 
 ---@return UPrimitiveComponent
 function ABP_Daggers_Skeleton_C:GetCollisionComponent() end
+
 function ABP_Daggers_Skeleton_C:Timeline__FinishedFunc() end
+
 function ABP_Daggers_Skeleton_C:Timeline__UpdateFunc() end
+
 ---@param Tag FGameplayTag
 function ABP_Daggers_Skeleton_C:ProcessNotify(Tag) end
-ABP_Daggers_Skeleton_C['Perform Dissolve'] = function() end
+
+ABP_Daggers_Skeleton_C['Perform Dissolve'] = function(self,) end
 function ABP_Daggers_Skeleton_C:ReceiveBeginPlay() end
+
 ---@param EntryPoint int32
 function ABP_Daggers_Skeleton_C:ExecuteUbergraph_BP_Daggers_Skeleton(EntryPoint) end
-
-

@@ -421,6 +421,3 @@
 ---@field Proto_Dome_E1_Tile_Sides UStaticMeshComponent
 ---@field Props USceneComponent
 ABP_Garden_EastWing_Corridor_C = {}
-
-
-

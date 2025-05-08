@@ -21,6 +21,3 @@
 ---@field Column_OctoTaper_2x2_StoneWall_SM UStaticMeshComponent
 ---@field Geometry USceneComponent
 ABP_CastlePlaza_Vista_Wall_Tower_A_C = {}
-
-
-

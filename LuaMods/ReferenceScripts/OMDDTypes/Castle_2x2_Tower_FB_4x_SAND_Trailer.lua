@@ -19,6 +19,3 @@
 ---@field Wall_Middle_02 URSTTrapGridBoxComponent
 ---@field Wall_Middle_01 URSTTrapGridBoxComponent
 ACastle_2x2_Tower_FB_4x_SAND_Trailer_C = {}
-
-
-

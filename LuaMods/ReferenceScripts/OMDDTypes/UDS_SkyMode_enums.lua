@@ -8,4 +8,3 @@ UDS_SkyMode = {
     NewEnumerator10 = 5,
     UDS_MAX = 6,
 }
-

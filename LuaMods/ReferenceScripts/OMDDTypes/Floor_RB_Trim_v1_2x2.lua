@@ -9,6 +9,3 @@
 ---@field Trim_Floor_MetalBand_Corner_1a_RB UStaticMeshComponent
 ---@field Floor00 URSTTrapGridBoxComponent
 AFloor_RB_Trim_v1_2x2_C = {}
-
-
-

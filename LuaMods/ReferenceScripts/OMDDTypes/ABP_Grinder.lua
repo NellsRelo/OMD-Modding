@@ -25,6 +25,10 @@ FAnimBlueprintGeneratedConstantData = {}
 
 
 
+---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
+FAnimBlueprintGeneratedMutableData = {}
+
+
 ---@class UABP_Grinder_C : URSTAnimInstanceTrap
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance
@@ -48,7 +52,6 @@ UABP_Grinder_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_Grinder_C:AnimGraph(AnimGraph) end
+
 ---@param EntryPoint int32
 function UABP_Grinder_C:ExecuteUbergraph_ABP_Grinder(EntryPoint) end
-
-

@@ -11,6 +11,3 @@
 ---@field Collision USceneComponent
 ---@field Geometry USceneComponent
 AHub_Riftroom_Column_C = {}
-
-
-

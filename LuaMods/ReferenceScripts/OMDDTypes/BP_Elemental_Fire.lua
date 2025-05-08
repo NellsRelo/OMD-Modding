@@ -8,6 +8,3 @@
 ---@field RSTRangedFirePoint URSTRangedFirePointComponent
 ---@field CombatCapsule URSTCombatCapsuleComponent
 ABP_Elemental_Fire_C = {}
-
-
-

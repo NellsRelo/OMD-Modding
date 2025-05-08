@@ -6,6 +6,3 @@
 ---@field Audio_FireLoop UAudioComponent
 ---@field CombatCapsule URSTCombatCapsuleComponent
 ABP_Elemental_Fireling_C = {}
-
-
-

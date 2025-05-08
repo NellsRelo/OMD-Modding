@@ -7,6 +7,3 @@
 ---@field Column_HubRiftRoom_Large_SM UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 AHub_Pillar_RiftRoom_SecondFloor_C = {}
-
-
-

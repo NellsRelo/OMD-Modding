@@ -28,6 +28,3 @@ UPlatformSettings = {}
 ---@class UPlatformSettingsManager : UObject
 ---@field SettingsMap TMap<TSubclassOf<UPlatformSettings>, FPlatformSettingsInstances>
 UPlatformSettingsManager = {}
-
-
-

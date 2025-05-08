@@ -14,12 +14,14 @@ FSubtitleFormat = {}
 UMediaSubtitlesPlayer = {}
 
 function UMediaSubtitlesPlayer:Stop() end
+
 ---@param Subtitles UOverlays
 function UMediaSubtitlesPlayer:SetSubtitles(Subtitles) end
+
 function UMediaSubtitlesPlayer:Play() end
+
 ---@param InMediaPlayer UMediaPlayer
 function UMediaSubtitlesPlayer:BindToMediaPlayer(InMediaPlayer) end
-
 
 ---@class USubtitleDisplay : UWidget
 ---@field Format FSubtitleFormat
@@ -33,7 +35,6 @@ USubtitleDisplay = {}
 
 ---@return boolean
 function USubtitleDisplay:HasSubtitles() end
-
 
 ---@class USubtitleDisplayOptions : UDataAsset
 ---@field Font FSlateFontInfo
@@ -49,6 +50,3 @@ USubtitleDisplayOptions = {}
 ---@class USubtitleDisplaySubsystem : UGameInstanceSubsystem
 ---@field SubtitleFormat FSubtitleFormat
 USubtitleDisplaySubsystem = {}
-
-
-

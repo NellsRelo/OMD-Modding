@@ -29,15 +29,17 @@ UEyeTrackerFunctionLibrary = {}
 
 ---@param PlayerController APlayerController
 function UEyeTrackerFunctionLibrary:SetEyeTrackedPlayer(PlayerController) end
+
 ---@return boolean
 function UEyeTrackerFunctionLibrary:IsStereoGazeDataAvailable() end
+
 ---@return boolean
 function UEyeTrackerFunctionLibrary:IsEyeTrackerConnected() end
+
 ---@param OutGazeData FEyeTrackerStereoGazeData
 ---@return boolean
 function UEyeTrackerFunctionLibrary:GetStereoGazeData(OutGazeData) end
+
 ---@param OutGazeData FEyeTrackerGazeData
 ---@return boolean
 function UEyeTrackerFunctionLibrary:GetGazeData(OutGazeData) end
-
-

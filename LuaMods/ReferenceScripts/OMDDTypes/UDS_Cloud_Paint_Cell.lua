@@ -7,6 +7,3 @@
 ---@field ['Mid Coverage Present'] boolean
 ---@field ['Full Coverage Present'] boolean
 UUDS_Cloud_Paint_Cell_C = {}
-
-
-

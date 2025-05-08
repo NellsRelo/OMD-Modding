@@ -2,5 +2,3 @@
 
 ---@class UInterchangeTextureWriter : UInterchangeWriterBase
 UInterchangeTextureWriter = {}
-
-

@@ -144,6 +144,3 @@ FTransformNoScale = {}
 ---@class UAnimationDataSourceRegistry : UObject
 ---@field DataSources TMap<FName, TWeakObjectPtr<UObject>>
 UAnimationDataSourceRegistry = {}
-
-
-

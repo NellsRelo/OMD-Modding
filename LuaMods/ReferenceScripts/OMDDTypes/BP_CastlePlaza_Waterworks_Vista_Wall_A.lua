@@ -50,6 +50,3 @@
 ---@field Collision USceneComponent
 ---@field Geometry USceneComponent
 ABP_CastlePlaza_Waterworks_Vista_Wall_A_C = {}
-
-
-

@@ -9,6 +9,3 @@
 ---@field Geo USceneComponent
 ---@field SharedRoot USceneComponent
 ABP_ShipBuild_SmallTable_C = {}
-
-
-

@@ -10,6 +10,3 @@
 ---@field Fortress_Coastal_GateTower_Foundation_SM UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Windmill_A_C = {}
-
-
-

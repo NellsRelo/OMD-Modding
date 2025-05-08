@@ -63,6 +63,3 @@ UMovieSceneMediaSection = {}
 ---@class UMovieSceneMediaTrack : UMovieSceneNameableTrack
 ---@field MediaSections TArray<UMovieSceneSection>
 UMovieSceneMediaTrack = {}
-
-
-

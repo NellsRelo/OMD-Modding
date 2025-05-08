@@ -24,28 +24,32 @@ UGA_Sniper_Passive_C = {}
 
 ---@param Hits int32
 ---@param bCapped boolean
-UGA_Sniper_Passive_C['Is Capped'] = function(Hits, bCapped) end
+UGA_Sniper_Passive_C['Is Capped'] = function(self, Hits, bCapped) end
 ---@param StreakIndex int32
-UGA_Sniper_Passive_C['Get Streak Index'] = function(StreakIndex) end
+UGA_Sniper_Passive_C['Get Streak Index'] = function(self, StreakIndex) end
 ---@param ProxyObject UAsyncAction_ListenForGameplayMessage
 ---@param ActualChannel FGameplayTag
 function UGA_Sniper_Passive_C:OnMessageReceived_30AF440B47BA589DAC7C698990FCBDB0(ProxyObject, ActualChannel) end
+
 ---@param ProxyObject UAsyncAction_ListenForGameplayMessage
 ---@param ActualChannel FGameplayTag
 function UGA_Sniper_Passive_C:OnMessageReceived_F4BAD59B437B59E6C5B0979C5A31A463(ProxyObject, ActualChannel) end
+
 function UGA_Sniper_Passive_C:K2_ActivateAbility() end
+
 ---@param bWasCancelled boolean
 function UGA_Sniper_Passive_C:K2_OnEndAbility(bWasCancelled) end
+
 ---@param CurrentStreak int32
 function UGA_Sniper_Passive_C:Client_NotifyStreakUpdate(CurrentStreak) end
-UGA_Sniper_Passive_C['Reload Received'] = function() end
-UGA_Sniper_Passive_C['Process Headshot Cap'] = function() end
+
+UGA_Sniper_Passive_C['Reload Received'] = function(self,) end
+UGA_Sniper_Passive_C['Process Headshot Cap'] = function(self,) end
 function UGA_Sniper_Passive_C:K2_OnNewAvatarSet() end
-UGA_Sniper_Passive_C['Reset Streak'] = function() end
-UGA_Sniper_Passive_C['Apply Headshot Damage Multiplier'] = function() end
-UGA_Sniper_Passive_C['Clear Granted Effect Handles'] = function() end
-UGA_Sniper_Passive_C['Perform Ult Grant'] = function() end
+
+UGA_Sniper_Passive_C['Reset Streak'] = function(self,) end
+UGA_Sniper_Passive_C['Apply Headshot Damage Multiplier'] = function(self,) end
+UGA_Sniper_Passive_C['Clear Granted Effect Handles'] = function(self,) end
+UGA_Sniper_Passive_C['Perform Ult Grant'] = function(self,) end
 ---@param EntryPoint int32
 function UGA_Sniper_Passive_C:ExecuteUbergraph_GA_Sniper_Passive(EntryPoint) end
-
-

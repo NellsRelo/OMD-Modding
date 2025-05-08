@@ -81,6 +81,3 @@ URigVMMemory_Literal = {}
 ---@field RigVMModel___RigVMFunction_MathQuaternionFromAxisAndAngle_1_1_1_1_Angle float
 ---@field RigVMModel___RigUnit_SetRotation_3_CachedIndex TArray<FCachedRigElement>
 URigVMMemory_Work = {}
-
-
-

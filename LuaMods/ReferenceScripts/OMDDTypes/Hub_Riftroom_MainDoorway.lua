@@ -126,6 +126,3 @@
 ---@field Geometry USceneComponent
 ---@field TrapGrid USceneComponent
 AHub_Riftroom_MainDoorway_C = {}
-
-
-

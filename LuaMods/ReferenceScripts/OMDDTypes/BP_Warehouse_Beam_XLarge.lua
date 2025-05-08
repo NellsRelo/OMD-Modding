@@ -7,6 +7,3 @@
 ---@field Trap_Wall2 URSTTrapGridBoxComponent
 ---@field Trap_Wall1 URSTTrapGridBoxComponent
 ABP_Warehouse_Beam_XLarge_C = {}
-
-
-

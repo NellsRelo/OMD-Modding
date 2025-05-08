@@ -8,6 +8,3 @@
 ---@field W_AbilityDisplaySlot_Special UW_AbilityDisplaySlot_Special_C
 ---@field W_AbilityDisplaySlot_Ultimate UW_AbilityDisplaySlot_Ultimate_C
 UW_HUD_AbilityDisplay_C = {}
-
-
-

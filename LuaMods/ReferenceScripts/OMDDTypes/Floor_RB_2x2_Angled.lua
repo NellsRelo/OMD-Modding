@@ -6,6 +6,3 @@
 ---@field Wall_Sec_2_2_V2_RB UStaticMeshComponent
 ---@field Floor00 URSTTrapGridBoxComponent
 AFloor_RB_2x2_Angled_C = {}
-
-
-

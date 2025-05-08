@@ -6,6 +6,3 @@
 ---@field P_Brazier_Fire UParticleSystemComponent
 ---@field FishMarket_Ceramic_01 UStaticMeshComponent
 ABP_Colosseum_Candelabra_Lit_C = {}
-
-
-

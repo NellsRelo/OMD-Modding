@@ -44,4 +44,3 @@ UDS_Modifier_Color_Property = {
     NewEnumerator42 = 41,
     UDS_Modifier_Color_MAX = 42,
 }
-

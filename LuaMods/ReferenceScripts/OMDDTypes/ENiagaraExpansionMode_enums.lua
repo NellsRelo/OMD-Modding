@@ -5,4 +5,3 @@ ENiagaraExpansionMode = {
     NewEnumerator2 = 2,
     ENiagaraExpansionMode_MAX = 3,
 }
-

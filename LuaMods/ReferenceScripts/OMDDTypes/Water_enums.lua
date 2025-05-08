@@ -37,4 +37,3 @@ EWaveSpectrumType = {
     JONSWAP = 2,
     EWaveSpectrumType_MAX = 3,
 }
-

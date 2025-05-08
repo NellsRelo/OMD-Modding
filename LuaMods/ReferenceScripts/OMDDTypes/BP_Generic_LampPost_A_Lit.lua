@@ -6,6 +6,3 @@
 ---@field Generic_Lamppost_A UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Generic_LampPost_A_Lit_C = {}
-
-
-

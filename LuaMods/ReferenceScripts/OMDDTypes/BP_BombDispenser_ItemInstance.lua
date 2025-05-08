@@ -6,6 +6,3 @@
 ---@field Radius double
 ---@field ['Critical Hit Chance'] double
 ABP_BombDispenser_ItemInstance_C = {}
-
-
-

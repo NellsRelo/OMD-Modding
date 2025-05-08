@@ -15,6 +15,3 @@
 ---@field Box UBoxComponent
 ---@field RSTTrapGridBox URSTTrapGridBoxComponent
 ABP_CastlePlaza_Tower_A_Merged_C = {}
-
-
-

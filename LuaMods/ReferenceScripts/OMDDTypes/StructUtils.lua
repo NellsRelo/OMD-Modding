@@ -59,5 +59,3 @@ UPropertyBag = {}
 
 ---@class UPropertyBagMissingObject : UObject
 UPropertyBagMissingObject = {}
-
-

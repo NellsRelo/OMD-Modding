@@ -7,6 +7,3 @@
 ---@field StatusEffectDuration double
 ---@field ['Critical Hit Chance'] double
 ABP_IceLance_ItemInstance_C = {}
-
-
-

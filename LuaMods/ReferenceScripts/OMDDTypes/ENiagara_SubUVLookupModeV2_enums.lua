@@ -7,4 +7,3 @@ ENiagara_SubUVLookupModeV2 = {
     NewEnumerator5 = 4,
     ENiagara_MAX = 5,
 }
-

@@ -11,6 +11,3 @@
 ---@field Wood_Support_A UStaticMeshComponent
 ---@field WoodPlank_4x1_Floor UStaticMeshComponent
 ABP_Courtyard_Balcony_A_C = {}
-
-
-

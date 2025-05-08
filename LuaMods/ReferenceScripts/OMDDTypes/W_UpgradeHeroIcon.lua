@@ -16,17 +16,23 @@ UW_UpgradeHeroIcon_C = {}
 
 ---@param SelectedTag FGameplayTag
 ---@param bIsSelected boolean
-UW_UpgradeHeroIcon_C['Set Is Selected'] = function(SelectedTag, bIsSelected) end
+UW_UpgradeHeroIcon_C['Set Is Selected'] = function(self, SelectedTag, bIsSelected) end
 function UW_UpgradeHeroIcon_C:Construct() end
+
 ---@param Button UCommonButtonBase
-function UW_UpgradeHeroIcon_C:BndEvt__W_UpgradeHeroIcon_W_ButtonBasic_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_UpgradeHeroIcon_C:BndEvt__W_UpgradeHeroIcon_W_ButtonBasic_K2Node_ComponentBoundEvent_0_CommonButtonBaseClicked__DelegateSignature(
+    Button) end
+
 ---@param Button UCommonButtonBase
-function UW_UpgradeHeroIcon_C:BndEvt__W_UpgradeHeroIcon_W_ButtonBasic_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_UpgradeHeroIcon_C:BndEvt__W_UpgradeHeroIcon_W_ButtonBasic_K2Node_ComponentBoundEvent_1_CommonButtonBaseClicked__DelegateSignature(
+    Button) end
+
 ---@param Button UCommonButtonBase
-function UW_UpgradeHeroIcon_C:BndEvt__W_UpgradeHeroIcon_W_ButtonBasic_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(Button) end
+function UW_UpgradeHeroIcon_C:BndEvt__W_UpgradeHeroIcon_W_ButtonBasic_K2Node_ComponentBoundEvent_2_CommonButtonBaseClicked__DelegateSignature(
+    Button) end
+
 ---@param EntryPoint int32
 function UW_UpgradeHeroIcon_C:ExecuteUbergraph_W_UpgradeHeroIcon(EntryPoint) end
+
 ---@param ClickedButton UW_UpgradeHeroIcon_C
 function UW_UpgradeHeroIcon_C:OnClicked__DelegateSignature(ClickedButton) end
-
-

@@ -8,6 +8,3 @@
 ---@field UseForPerfTest boolean
 ---@field LevelSequence ULevelSequence
 ABP_TeleportingRiftLocation_C = {}
-
-
-

@@ -14,27 +14,29 @@ ALandscape = {}
 ---@param OutRenderTarget UTextureRenderTarget2D
 function ALandscape:RenderHeightmap(InWorldTransform, InExtents, OutRenderTarget) end
 
-
 ---@class ALandscapeBlueprintBrushBase : AActor
 ALandscapeBlueprintBrushBase = {}
 
 ---@param bInUserTriggered boolean
 function ALandscapeBlueprintBrushBase:RequestLandscapeUpdate(bInUserTriggered) end
+
 ---@param InParameters FLandscapeBrushParameters
 ---@return UTextureRenderTarget2D
 function ALandscapeBlueprintBrushBase:RenderLayer(InParameters) end
+
 ---@param InIsHeightmap boolean
 ---@param InCombinedResult UTextureRenderTarget2D
 ---@param InWeightmapLayerName FName
 ---@return UTextureRenderTarget2D
 function ALandscapeBlueprintBrushBase:Render(InIsHeightmap, InCombinedResult, InWeightmapLayerName) end
+
 ---@param InLandscapeTransform FTransform
 ---@param InLandscapeSize FIntPoint
 ---@param InLandscapeRenderTargetSize FIntPoint
 function ALandscapeBlueprintBrushBase:Initialize(InLandscapeTransform, InLandscapeSize, InLandscapeRenderTargetSize) end
+
 ---@param OutStreamableAssets TArray<UObject>
 function ALandscapeBlueprintBrushBase:GetBlueprintRenderDependencies(OutStreamableAssets) end
-
 
 ---@class ALandscapeGizmoActiveActor : ALandscapeGizmoActor
 ALandscapeGizmoActiveActor = {}
@@ -118,24 +120,32 @@ ALandscapeProxy = {}
 
 ---@param InType ERuntimeVirtualTextureMainPassType
 function ALandscapeProxy:SetVirtualTextureRenderPassType(InType) end
+
 ---@param ParameterName FName
 ---@param Value FLinearColor
 function ALandscapeProxy:SetLandscapeMaterialVectorParameterValue(ParameterName, Value) end
+
 ---@param ParameterName FName
 ---@param Value UTexture
 function ALandscapeProxy:SetLandscapeMaterialTextureParameterValue(ParameterName, Value) end
+
 ---@param ParameterName FName
 ---@param Value float
 function ALandscapeProxy:SetLandscapeMaterialScalarParameterValue(ParameterName, Value) end
+
 ---@param InRenderTarget UTextureRenderTarget2D
 ---@param InExportHeightIntoRGChannel boolean
 ---@param InExportLandscapeProxies boolean
 ---@return boolean
-function ALandscapeProxy:LandscapeExportHeightmapToRenderTarget(InRenderTarget, InExportHeightIntoRGChannel, InExportLandscapeProxies) end
+function ALandscapeProxy:LandscapeExportHeightmapToRenderTarget(InRenderTarget, InExportHeightIntoRGChannel,
+                                                                InExportLandscapeProxies) end
+
 ---@return ALandscape
 function ALandscapeProxy:GetLandscapeActor() end
+
 ---@param NewLandscapeMaterial UMaterialInterface
 function ALandscapeProxy:EditorSetLandscapeMaterial(NewLandscapeMaterial) end
+
 ---@param InSplineComponent USplineComponent
 ---@param StartWidth float
 ---@param EndWidth float
@@ -148,12 +158,15 @@ function ALandscapeProxy:EditorSetLandscapeMaterial(NewLandscapeMaterial) end
 ---@param bLowerHeights boolean
 ---@param PaintLayer ULandscapeLayerInfoObject
 ---@param EditLayerName FName
-function ALandscapeProxy:EditorApplySpline(InSplineComponent, StartWidth, EndWidth, StartSideFalloff, EndSideFalloff, StartRoll, EndRoll, NumSubdivisions, bRaiseHeights, bLowerHeights, PaintLayer, EditLayerName) end
+function ALandscapeProxy:EditorApplySpline(InSplineComponent, StartWidth, EndWidth, StartSideFalloff, EndSideFalloff,
+                                           StartRoll, EndRoll, NumSubdivisions, bRaiseHeights, bLowerHeights, PaintLayer,
+                                           EditLayerName) end
+
 ---@param InLODDistanceFactor float
 function ALandscapeProxy:ChangeLODDistanceFactor(InLODDistanceFactor) end
+
 ---@param InComponentScreenSizeToUseSubSections float
 function ALandscapeProxy:ChangeComponentScreenSizeToUseSubSections(InComponentScreenSizeToUseSubSections) end
-
 
 ---@class ALandscapeSplineActor : AActor
 ---@field LandscapeGuid FGuid
@@ -468,20 +481,23 @@ ULandscapeComponent = {}
 
 ---@param InLODBias int32
 function ULandscapeComponent:SetLODBias(InLODBias) end
+
 ---@param InForcedLOD int32
 function ULandscapeComponent:SetForcedLOD(InForcedLOD) end
+
 ---@param InIndex int32
 ---@return UMaterialInstanceDynamic
 function ULandscapeComponent:GetMaterialInstanceDynamic(InIndex) end
+
 ---@param InLocation FVector
 ---@param InPaintLayerName FName
 ---@return float
 function ULandscapeComponent:EditorGetPaintLayerWeightByNameAtLocation(InLocation, InPaintLayerName) end
+
 ---@param InLocation FVector
 ---@param PaintLayer ULandscapeLayerInfoObject
 ---@return float
 function ULandscapeComponent:EditorGetPaintLayerWeightAtLocation(InLocation, PaintLayer) end
-
 
 ---@class ULandscapeGizmoRenderComponent : UPrimitiveComponent
 ULandscapeGizmoRenderComponent = {}
@@ -521,7 +537,6 @@ ULandscapeHeightfieldCollisionComponent = {}
 
 ---@return ULandscapeComponent
 function ULandscapeHeightfieldCollisionComponent:GetRenderComponent() end
-
 
 ---@class ULandscapeInfo : UObject
 ---@field LandscapeActor TWeakObjectPtr<ALandscape>
@@ -637,7 +652,6 @@ ULandscapeSplinesComponent = {}
 ---@return TArray<USplineMeshComponent>
 function ULandscapeSplinesComponent:GetSplineMeshComponents() end
 
-
 ---@class ULandscapeSubsystem : UTickableWorldSubsystem
 ULandscapeSubsystem = {}
 
@@ -710,5 +724,3 @@ UMaterialExpressionLandscapePhysicalMaterialOutput = {}
 
 ---@class UMaterialExpressionLandscapeVisibilityMask : UMaterialExpression
 UMaterialExpressionLandscapeVisibilityMask = {}
-
-

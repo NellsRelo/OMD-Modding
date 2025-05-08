@@ -1,54 +1,30 @@
 ---@meta
 
 ---@class ABP_Building_Resort_E_C : ABP_OMDTrapGrid_C
----@field Wall_Resort_Adobe_Corner_1x2_B_SM8 UStaticMeshComponent
----@field Wall_Resort_Adobe_Corner_1x2_B_SM7 UStaticMeshComponent
----@field Wall_Resort_Adobe_4x2_B_SM1 UStaticMeshComponent
----@field Wall_Resort_Adobe_4x2_B_SM UStaticMeshComponent
----@field Stairside_Resort_Adobe_A_SM1 UStaticMeshComponent
+---@field Trap_Wall7 URSTTrapGridBoxComponent
+---@field Trap_Wall6 URSTTrapGridBoxComponent
+---@field Trap_Wall5 URSTTrapGridBoxComponent
+---@field Trap_Wall4 URSTTrapGridBoxComponent
+---@field Trap_Wall3 URSTTrapGridBoxComponent
+---@field Building_Resort_Foundation_E_SM UStaticMeshComponent
+---@field Trap_Wall2 URSTTrapGridBoxComponent
+---@field Trap_Wall1 URSTTrapGridBoxComponent
+---@field trap_wall URSTTrapGridBoxComponent
+---@field TrapGrid USceneComponent
 ---@field Wall_Resort_Adobe_2x2_B_SM1 UStaticMeshComponent
 ---@field WoodPlank_4x4_Floor_A1 UStaticMeshComponent
 ---@field WoodPlank_4x4_Floor_A UStaticMeshComponent
 ---@field Wall_Resort_Adobe_2x2_B_SM UStaticMeshComponent
----@field Door_Resort_Wood_D_SM UStaticMeshComponent
----@field Wall_WindowSmall_Stucco_2x2_A_SM5 UStaticMeshComponent
----@field Wall_Door_Resort_Adobe_4x3_A_SM UStaticMeshComponent
----@field Wall_WindowSmall_Stucco_2x2_A_SM4 UStaticMeshComponent
----@field Stairside_Resort_Adobe_A_SM UStaticMeshComponent
----@field Dormer_Resort_Terracotta_B_SM1 UStaticMeshComponent
----@field Dormer_Resort_Terracotta_B_SM UStaticMeshComponent
----@field Roof_Terracotta_6x5_A_SM1 UStaticMeshComponent
----@field Window_Resort_Wood_B_SM13 UStaticMeshComponent
----@field Shutters_Resort_Wood_A_SM13 UStaticMeshComponent
----@field Shutters_Resort_Wood_A_SM12 UStaticMeshComponent
----@field Window_Resort_Wood_B_SM12 UStaticMeshComponent
----@field Window_Resort_Wood_B_SM7 UStaticMeshComponent
----@field Shutters_Resort_Wood_A_SM11 UStaticMeshComponent
 ---@field Roof_Terracotta_6x5_A_SM UStaticMeshComponent
----@field Wall_Resort_Adobe_Corner_1x2_B_SM6 UStaticMeshComponent
----@field Wall_WindowSmall_Stucco_2x2_A_SM3 UStaticMeshComponent
----@field Wall_WindowSmall_Stucco_2x2_A_SM2 UStaticMeshComponent
----@field Wall_WindowSmall_Stucco_2x2_A_SM1 UStaticMeshComponent
----@field Wall_WindowSmall_Stucco_2x2_A_SM UStaticMeshComponent
----@field Wall_Resort_Adobe_Corner_1x2_B_SM5 UStaticMeshComponent
----@field Wall_Resort_Adobe_Corner_1x2_B_SM4 UStaticMeshComponent
----@field Wall_Window_Resort_Adobe_4x2_B_SM4 UStaticMeshComponent
----@field Wall_Window_Resort_Adobe_4x2_B_SM3 UStaticMeshComponent
----@field Wall_Resort_Adobe_Corner_1x2_B_SM3 UStaticMeshComponent
----@field Crenel_TrimA_SM10 UStaticMeshComponent
----@field Crenel_TrimA_SM4 UStaticMeshComponent
+---@field Door_Resort_Wood_D_SM UStaticMeshComponent
 ---@field Shutters_Resort_Wood_A_SM10 UStaticMeshComponent
----@field Window_Resort_Wood_B_SM6 UStaticMeshComponent
----@field Crenel_TrimA_SM9 UStaticMeshComponent
----@field Crenel_TrimA_SM8 UStaticMeshComponent
----@field Crenel_TrimA_SM7 UStaticMeshComponent
----@field Crenel_TrimA_SM2 UStaticMeshComponent
----@field Crenel_TrimA_SM6 UStaticMeshComponent
----@field Crenel_TrimA_SM1 UStaticMeshComponent
----@field Trap_Wall2 URSTTrapGridBoxComponent
----@field Trap_Wall1 URSTTrapGridBoxComponent
----@field trap_wall URSTTrapGridBoxComponent
+---@field Stairside_Resort_Adobe_A_SM1 UStaticMeshComponent
+---@field Shutters_Resort_Wood_A_SM11 UStaticMeshComponent
+---@field Shutters_Resort_Wood_A_SM13 UStaticMeshComponent
+---@field Roof_Terracotta_6x5_A_SM1 UStaticMeshComponent
+---@field Dormer_Resort_Terracotta_B_SM UStaticMeshComponent
+---@field Dormer_Resort_Terracotta_B_SM1 UStaticMeshComponent
+---@field Stairside_Resort_Adobe_A_SM UStaticMeshComponent
+---@field Shutters_Resort_Wood_A_SM12 UStaticMeshComponent
+---@field Geo USceneComponent
 ABP_Building_Resort_E_C = {}
-
-
-

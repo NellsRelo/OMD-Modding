@@ -6,5 +6,3 @@ USteamSocketsNetConnection = {}
 
 ---@class USteamSocketsNetDriver : UNetDriver
 USteamSocketsNetDriver = {}
-
-

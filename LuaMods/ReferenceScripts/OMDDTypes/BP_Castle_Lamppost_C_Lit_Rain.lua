@@ -5,6 +5,3 @@
 ---@field PointLight UPointLightComponent
 ---@field Geometry USceneComponent
 ABP_Castle_Lamppost_C_Lit_Rain_C = {}
-
-
-

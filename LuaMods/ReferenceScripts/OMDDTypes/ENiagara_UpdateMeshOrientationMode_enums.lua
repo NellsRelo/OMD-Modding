@@ -7,4 +7,3 @@ ENiagara_UpdateMeshOrientationMode = {
     NewEnumerator6 = 4,
     ENiagara_MAX = 5,
 }
-

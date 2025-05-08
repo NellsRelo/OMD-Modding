@@ -52,6 +52,3 @@
 ---@field Crenel_TrimA_SM3 UStaticMeshComponent
 ---@field trap_wall URSTTrapGridBoxComponent
 ABP_Resort_Hotel_Front_C = {}
-
-
-

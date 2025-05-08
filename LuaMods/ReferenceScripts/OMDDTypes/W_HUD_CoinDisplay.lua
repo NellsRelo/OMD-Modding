@@ -8,24 +8,25 @@
 UW_HUD_CoinDisplay_C = {}
 
 ---@param bWidgetVisible boolean
-UW_HUD_CoinDisplay_C['Should Widget Update'] = function(bWidgetVisible) end
+UW_HUD_CoinDisplay_C['Should Widget Update'] = function(self, bWidgetVisible) end
 ---@param PlayerState ARSTPlayerState
-UW_HUD_CoinDisplay_C['Bind Player State'] = function(PlayerState) end
+UW_HUD_CoinDisplay_C['Bind Player State'] = function(self, PlayerState) end
 ---@param MyGeometry FGeometry
 ---@param InDeltaTime float
 function UW_HUD_CoinDisplay_C:Tick(MyGeometry, InDeltaTime) end
+
 function UW_HUD_CoinDisplay_C:OnInitialized() end
+
 ---@param DeltaTime double
 function UW_HUD_CoinDisplay_C:UpdateText(DeltaTime) end
+
 ---@param Delta int32
 ---@param Reason ERSTCoinGrantReason
-UW_HUD_CoinDisplay_C['On Coin Granted'] = function(Delta, Reason) end
+UW_HUD_CoinDisplay_C['On Coin Granted'] = function(self, Delta, Reason) end
 ---@param InputPin int32
-UW_HUD_CoinDisplay_C['Do Process Coin Grant'] = function(InputPin) end
-UW_HUD_CoinDisplay_C['On Coin Flyoff Timer Elapsed'] = function() end
+UW_HUD_CoinDisplay_C['Do Process Coin Grant'] = function(self, InputPin) end
+UW_HUD_CoinDisplay_C['On Coin Flyoff Timer Elapsed'] = function(self,) end
 ---@param Delta int32
-UW_HUD_CoinDisplay_C['On Coin Changed'] = function(Delta) end
+UW_HUD_CoinDisplay_C['On Coin Changed'] = function(self, Delta) end
 ---@param EntryPoint int32
 function UW_HUD_CoinDisplay_C:ExecuteUbergraph_W_HUD_CoinDisplay(EntryPoint) end
-
-

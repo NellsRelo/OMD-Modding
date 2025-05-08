@@ -10,6 +10,10 @@ FAnimBlueprintGeneratedConstantData = {}
 
 
 
+---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
+FAnimBlueprintGeneratedMutableData = {}
+
+
 ---@class UABP_Hero_Sniper_Skin_Order_Physics_C : UAnimInstance
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance
@@ -30,7 +34,6 @@ UABP_Hero_Sniper_Skin_Order_Physics_C = {}
 ---@param InPose FPoseLink
 ---@param AnimGraph FPoseLink
 function UABP_Hero_Sniper_Skin_Order_Physics_C:AnimGraph(InPose, AnimGraph) end
+
 ---@param EntryPoint int32
 function UABP_Hero_Sniper_Skin_Order_Physics_C:ExecuteUbergraph_ABP_Hero_Sniper_Skin_Order_Physics(EntryPoint) end
-
-

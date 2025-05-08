@@ -158,6 +158,3 @@
 ---@field Geometry USceneComponent
 ---@field TrapGrid USceneComponent
 ABP_Archway_C_C = {}
-
-
-

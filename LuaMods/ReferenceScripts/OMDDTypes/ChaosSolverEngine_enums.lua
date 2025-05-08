@@ -9,4 +9,3 @@ EClusterConnectionTypeEnum = {
     Chaos_EClsuterCreationParameters_Max = 6,
     Chaos_MAX = 7,
 }
-

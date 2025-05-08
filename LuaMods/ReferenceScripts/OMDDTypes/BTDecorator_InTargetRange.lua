@@ -7,5 +7,3 @@ UBTDecorator_InTargetRange_C = {}
 ---@param ControlledPawn APawn
 ---@return boolean
 function UBTDecorator_InTargetRange_C:PerformConditionCheckAI(OwnerController, ControlledPawn) end
-
-

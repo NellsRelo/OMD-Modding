@@ -48,6 +48,3 @@
 ---@field Geo USceneComponent
 ---@field TrapGrid USceneComponent
 ABP_Crane_DryDocks_Large_C = {}
-
-
-

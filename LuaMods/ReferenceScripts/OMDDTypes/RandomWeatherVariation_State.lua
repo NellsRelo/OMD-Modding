@@ -9,6 +9,3 @@
 ---@field LastRandomWeatherType_41_4367B1AC4E64A2564E3960B3ED6E25D8 UObject
 ---@field Forecast_36_FB829F034AD4245050A506B528B86CC0 TArray<UObject>
 FRandomWeatherVariation_State = {}
-
-
-

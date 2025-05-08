@@ -130,6 +130,3 @@
 ---@field Scene USceneComponent
 ---@field SharedRoot USceneComponent
 AHub_Blacksmith_Bridge_C = {}
-
-
-

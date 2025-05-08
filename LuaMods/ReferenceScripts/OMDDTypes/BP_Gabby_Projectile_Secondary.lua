@@ -7,8 +7,6 @@
 ABP_Gabby_Projectile_Secondary_C = {}
 
 ---@param HitNormal FVector
-ABP_Gabby_Projectile_Secondary_C['Explode!'] = function(HitNormal) end
+ABP_Gabby_Projectile_Secondary_C['Explode!'] = function(self, HitNormal) end
 ---@param EntryPoint int32
 function ABP_Gabby_Projectile_Secondary_C:ExecuteUbergraph_BP_Gabby_Projectile_Secondary(EntryPoint) end
-
-

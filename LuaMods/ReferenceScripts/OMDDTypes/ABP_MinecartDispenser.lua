@@ -16,6 +16,10 @@ FAnimBlueprintGeneratedConstantData = {}
 
 
 
+---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
+FAnimBlueprintGeneratedMutableData = {}
+
+
 ---@class UABP_MinecartDispenser_C : UAnimInstance
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance
@@ -27,7 +31,6 @@ UABP_MinecartDispenser_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_MinecartDispenser_C:AnimGraph(AnimGraph) end
+
 ---@param EntryPoint int32
 function UABP_MinecartDispenser_C:ExecuteUbergraph_ABP_MinecartDispenser(EntryPoint) end
-
-

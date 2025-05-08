@@ -6,6 +6,3 @@
 ---@field Lizardman_Banner_Poles UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ALizard_Banner_Vertical_C = {}
-
-
-

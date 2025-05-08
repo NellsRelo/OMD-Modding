@@ -14,4 +14,3 @@ ETargetingTraceType = {
     Sweep = 1,
     ETargetingTraceType_MAX = 2,
 }
-

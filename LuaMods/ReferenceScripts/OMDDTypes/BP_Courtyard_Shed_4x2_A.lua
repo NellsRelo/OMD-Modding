@@ -29,6 +29,3 @@
 ---@field Wall_Bottom_Stone_Castle_Courtyard_4x2_C_SM UStaticMeshComponent
 ---@field trap_wall URSTTrapGridBoxComponent
 ABP_Courtyard_Shed_4x2_A_C = {}
-
-
-

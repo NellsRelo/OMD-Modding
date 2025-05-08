@@ -109,6 +109,3 @@
 ---@field Wall_Window_Resort_Adobe_4x2_B_SM2 UStaticMeshComponent
 ---@field trap_wall URSTTrapGridBoxComponent
 ABP_Resort_Hotel_Side_A_C = {}
-
-
-

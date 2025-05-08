@@ -122,6 +122,3 @@ FSolverTrailingData = {}
 ---@field MinSpeed float
 ---@field MinVolume float
 FSolverTrailingFilterSettings = {}
-
-
-

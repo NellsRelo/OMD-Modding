@@ -8,6 +8,3 @@
 ---@field Wall002 URSTTrapGridBoxComponent
 ---@field Wall001 URSTTrapGridBoxComponent
 AColumn_Sec_1x1x8_FB_C = {}
-
-
-

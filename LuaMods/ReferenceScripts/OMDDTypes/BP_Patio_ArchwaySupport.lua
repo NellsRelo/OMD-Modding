@@ -5,6 +5,3 @@
 ---@field Arch_1x4_FoundationBlock59_StaticMeshComponent0 UStaticMeshComponent
 ---@field SharedRoot USceneComponent
 ABP_Patio_ArchwaySupport_C = {}
-
-
-

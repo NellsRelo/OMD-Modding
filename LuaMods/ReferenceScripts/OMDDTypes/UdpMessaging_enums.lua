@@ -7,4 +7,3 @@ EUdpMessageFormat = {
     CborStandardEndianness = 4,
     EUdpMessageFormat_MAX = 5,
 }
-

@@ -165,33 +165,43 @@ IEnhancedInputSubsystemInterface = {}
 
 ---@param MappingName FName
 function IEnhancedInputSubsystemInterface:StopContinuousInputInjectionForPlayerMapping(MappingName) end
+
 ---@param Action UInputAction
 function IEnhancedInputSubsystemInterface:StopContinuousInputInjectionForAction(Action) end
+
 ---@param MappingName FName
 ---@param RawValue FInputActionValue
 ---@param Modifiers TArray<UInputModifier>
 ---@param Triggers TArray<UInputTrigger>
-function IEnhancedInputSubsystemInterface:StartContinuousInputInjectionForPlayerMapping(MappingName, RawValue, Modifiers, Triggers) end
+function IEnhancedInputSubsystemInterface:StartContinuousInputInjectionForPlayerMapping(MappingName, RawValue, Modifiers,
+                                                                                        Triggers) end
+
 ---@param Action UInputAction
 ---@param RawValue FInputActionValue
 ---@param Modifiers TArray<UInputModifier>
 ---@param Triggers TArray<UInputTrigger>
 function IEnhancedInputSubsystemInterface:StartContinuousInputInjectionForAction(Action, RawValue, Modifiers, Triggers) end
+
 ---@param Options FModifyContextOptions
 ---@param RebuildType EInputMappingRebuildType
 function IEnhancedInputSubsystemInterface:RequestRebuildControlMappings(Options, RebuildType) end
+
 ---@param Config UPlayerMappableInputConfig
 ---@param Options FModifyContextOptions
 function IEnhancedInputSubsystemInterface:RemovePlayerMappableConfig(Config, Options) end
+
 ---@param MappingContext UInputMappingContext
 ---@param Options FModifyContextOptions
 function IEnhancedInputSubsystemInterface:RemoveMappingContext(MappingContext, Options) end
+
 ---@param MappingName FName
 ---@param Options FModifyContextOptions
 ---@return int32
 function IEnhancedInputSubsystemInterface:RemoveAllPlayerMappedKeysForMapping(MappingName, Options) end
+
 ---@param Options FModifyContextOptions
 function IEnhancedInputSubsystemInterface:RemoveAllPlayerMappedKeys(Options) end
+
 ---@param PrioritizedActiveContexts TArray<UInputMappingContext>
 ---@param InputContext UInputMappingContext
 ---@param Action UInputAction
@@ -199,76 +209,95 @@ function IEnhancedInputSubsystemInterface:RemoveAllPlayerMappedKeys(Options) end
 ---@param OutIssues TArray<FMappingQueryIssue>
 ---@param BlockingIssues EMappingQueryIssue
 ---@return EMappingQueryResult
-function IEnhancedInputSubsystemInterface:QueryMapKeyInContextSet(PrioritizedActiveContexts, InputContext, Action, Key, OutIssues, BlockingIssues) end
+function IEnhancedInputSubsystemInterface:QueryMapKeyInContextSet(PrioritizedActiveContexts, InputContext, Action, Key,
+                                                                  OutIssues, BlockingIssues) end
+
 ---@param InputContext UInputMappingContext
 ---@param Action UInputAction
 ---@param Key FKey
 ---@param OutIssues TArray<FMappingQueryIssue>
 ---@param BlockingIssues EMappingQueryIssue
 ---@return EMappingQueryResult
-function IEnhancedInputSubsystemInterface:QueryMapKeyInActiveContextSet(InputContext, Action, Key, OutIssues, BlockingIssues) end
+function IEnhancedInputSubsystemInterface:QueryMapKeyInActiveContextSet(InputContext, Action, Key, OutIssues,
+                                                                        BlockingIssues) end
+
 ---@param Action UInputAction
 ---@return TArray<FKey>
 function IEnhancedInputSubsystemInterface:QueryKeysMappedToAction(Action) end
+
 ---@param Settings UEnhancedInputUserSettings
 function IEnhancedInputSubsystemInterface:OnUserSettingsChanged(Settings) end
+
 ---@param InNewProfile UEnhancedPlayerMappableKeyProfile
 function IEnhancedInputSubsystemInterface:OnUserKeyProfileChanged(InNewProfile) end
+
 ---@param MappingName FName
 ---@param KeySlot FPlayerMappableKeySlot
 ---@param Options FModifyContextOptions
 ---@return int32
 function IEnhancedInputSubsystemInterface:K2_RemovePlayerMappedKeyInSlot(MappingName, KeySlot, Options) end
+
 ---@param MappingName FName
 ---@param KeySlot FPlayerMappableKeySlot
 ---@return FKey
 function IEnhancedInputSubsystemInterface:K2_GetPlayerMappedKeyInSlot(MappingName, KeySlot) end
+
 ---@param MappingName FName
 ---@param NewKey FKey
 ---@param KeySlot FPlayerMappableKeySlot
 ---@param Options FModifyContextOptions
 ---@return int32
 function IEnhancedInputSubsystemInterface:K2_AddPlayerMappedKeyInSlot(MappingName, NewKey, KeySlot, Options) end
+
 ---@param MappingName FName
 ---@param Value FVector
 ---@param Modifiers TArray<UInputModifier>
 ---@param Triggers TArray<UInputTrigger>
 function IEnhancedInputSubsystemInterface:InjectInputVectorForPlayerMapping(MappingName, Value, Modifiers, Triggers) end
+
 ---@param Action UInputAction
 ---@param Value FVector
 ---@param Modifiers TArray<UInputModifier>
 ---@param Triggers TArray<UInputTrigger>
 function IEnhancedInputSubsystemInterface:InjectInputVectorForAction(Action, Value, Modifiers, Triggers) end
+
 ---@param MappingName FName
 ---@param RawValue FInputActionValue
 ---@param Modifiers TArray<UInputModifier>
 ---@param Triggers TArray<UInputTrigger>
 function IEnhancedInputSubsystemInterface:InjectInputForPlayerMapping(MappingName, RawValue, Modifiers, Triggers) end
+
 ---@param Action UInputAction
 ---@param RawValue FInputActionValue
 ---@param Modifiers TArray<UInputModifier>
 ---@param Triggers TArray<UInputTrigger>
 function IEnhancedInputSubsystemInterface:InjectInputForAction(Action, RawValue, Modifiers, Triggers) end
+
 ---@param MappingContext UInputMappingContext
 ---@param OutFoundPriority int32
 ---@return boolean
 function IEnhancedInputSubsystemInterface:HasMappingContext(MappingContext, OutFoundPriority) end
+
 ---@return UEnhancedInputUserSettings
 function IEnhancedInputSubsystemInterface:GetUserSettings() end
+
 ---@param MappingName FName
 ---@return TArray<FKey>
 function IEnhancedInputSubsystemInterface:GetAllPlayerMappedKeys(MappingName) end
+
 ---@return TArray<FEnhancedActionKeyMapping>
 function IEnhancedInputSubsystemInterface:GetAllPlayerMappableActionKeyMappings() end
+
 function IEnhancedInputSubsystemInterface:ClearAllMappings() end
+
 ---@param Config UPlayerMappableInputConfig
 ---@param Options FModifyContextOptions
 function IEnhancedInputSubsystemInterface:AddPlayerMappableConfig(Config, Options) end
+
 ---@param MappingContext UInputMappingContext
 ---@param Priority int32
 ---@param Options FModifyContextOptions
 function IEnhancedInputSubsystemInterface:AddMappingContext(MappingContext, Priority, Options) end
-
 
 ---@class UEnhancedInputActionDelegateBinding : UInputDelegateBinding
 ---@field InputActionDelegateBindings TArray<FBlueprintEnhancedInputActionBinding>
@@ -288,7 +317,6 @@ UEnhancedInputComponent = {}
 ---@param Action UInputAction
 ---@return FInputActionValue
 function UEnhancedInputComponent:GetBoundActionValue(Action) end
-
 
 ---@class UEnhancedInputDeveloperSettings : UDeveloperSettingsBackedByCVars
 ---@field DefaultMappingContexts TArray<FDefaultContextSetting>
@@ -314,61 +342,76 @@ UEnhancedInputLibrary = {}
 ---@param Context UInputMappingContext
 ---@param bForceImmediately boolean
 function UEnhancedInputLibrary:RequestRebuildControlMappingsUsingContext(Context, bForceImmediately) end
+
 ---@param X double
 ---@param Y double
 ---@param Z double
 ---@param ValueType EInputActionValueType
 ---@return FInputActionValue
 function UEnhancedInputLibrary:MakeInputActionValueOfType(X, Y, Z, ValueType) end
+
 ---@param X double
 ---@param Y double
 ---@param Z double
 ---@param MatchValueType FInputActionValue
 ---@return FInputActionValue
 function UEnhancedInputLibrary:MakeInputActionValue(X, Y, Z, MatchValueType) end
+
 ---@param ActionKeyMapping FEnhancedActionKeyMapping
 ---@return boolean
 function UEnhancedInputLibrary:IsActionKeyMappingPlayerMappable(ActionKeyMapping) end
+
 ---@return FPlayerMappableKeySlot
 function UEnhancedInputLibrary:GetThirdPlayerMappableKeySlot() end
+
 ---@return FPlayerMappableKeySlot
 function UEnhancedInputLibrary:GetSecondPlayerMappableKeySlot() end
+
 ---@param ActionKeyMapping FEnhancedActionKeyMapping
 ---@return UPlayerMappableKeySettings
 function UEnhancedInputLibrary:GetPlayerMappableKeySettings(ActionKeyMapping) end
+
 ---@param ActionKeyMapping FEnhancedActionKeyMapping
 ---@return FName
 function UEnhancedInputLibrary:GetMappingName(ActionKeyMapping) end
+
 ---@return FPlayerMappableKeySlot
 function UEnhancedInputLibrary:GetFourthPlayerMappableKeySlot() end
+
 ---@return FPlayerMappableKeySlot
 function UEnhancedInputLibrary:GetFirstPlayerMappableKeySlot() end
+
 ---@param Actor AActor
 ---@param Action UInputAction
 ---@return FInputActionValue
 function UEnhancedInputLibrary:GetBoundActionValue(Actor, Action) end
+
 ---@param ActionValue FInputActionValue
 ---@return FString
 function UEnhancedInputLibrary:Conv_InputActionValueToString(ActionValue) end
+
 ---@param InValue FInputActionValue
 ---@return boolean
 function UEnhancedInputLibrary:Conv_InputActionValueToBool(InValue) end
+
 ---@param ActionValue FInputActionValue
 ---@return FVector
 function UEnhancedInputLibrary:Conv_InputActionValueToAxis3D(ActionValue) end
+
 ---@param InValue FInputActionValue
 ---@return FVector2D
 function UEnhancedInputLibrary:Conv_InputActionValueToAxis2D(InValue) end
+
 ---@param InValue FInputActionValue
 ---@return double
 function UEnhancedInputLibrary:Conv_InputActionValueToAxis1D(InValue) end
+
 ---@param InActionValue FInputActionValue
 ---@param X double
 ---@param Y double
 ---@param Z double
 ---@param Type EInputActionValueType
 function UEnhancedInputLibrary:BreakInputActionValue(InActionValue, X, Y, Z, Type) end
-
 
 ---@class UEnhancedInputLocalPlayerSubsystem : ULocalPlayerSubsystem
 ---@field ControlMappingsRebuiltDelegate FEnhancedInputLocalPlayerSubsystemControlMappingsRebuiltDelegate
@@ -385,7 +428,6 @@ UEnhancedInputPlatformData = {}
 ---@param InContext UInputMappingContext
 ---@return UInputMappingContext
 function UEnhancedInputPlatformData:GetContextRedirect(InContext) end
-
 
 ---@class UEnhancedInputPlatformSettings : UPlatformSettings
 ---@field InputData TArray<TSoftClassPtr<UEnhancedInputPlatformData>>
@@ -407,57 +449,77 @@ UEnhancedInputUserSettings = {}
 ---@param MappingContexts TSet<UInputMappingContext>
 ---@return boolean
 function UEnhancedInputUserSettings:UnregisterInputMappingContexts(MappingContexts) end
+
 ---@param IMC UInputMappingContext
 ---@return boolean
 function UEnhancedInputUserSettings:UnregisterInputMappingContext(IMC) end
+
 ---@param InArgs FMapPlayerKeyArgs
 ---@param FailureReason FGameplayTagContainer
 function UEnhancedInputUserSettings:UnMapPlayerKey(InArgs, FailureReason) end
+
 ---@param InProfileId FGameplayTag
 ---@return boolean
 function UEnhancedInputUserSettings:SetKeyProfile(InProfileId) end
+
 function UEnhancedInputUserSettings:SaveSettings() end
+
 ---@param ProfileId FGameplayTag
 ---@param FailureReason FGameplayTagContainer
 function UEnhancedInputUserSettings:ResetKeyProfileToDefault(ProfileId, FailureReason) end
+
 ---@param InArgs FMapPlayerKeyArgs
 ---@param FailureReason FGameplayTagContainer
 function UEnhancedInputUserSettings:ResetAllPlayerKeysInRow(InArgs, FailureReason) end
+
 ---@param MappingContexts TSet<UInputMappingContext>
 ---@return boolean
 function UEnhancedInputUserSettings:RegisterInputMappingContexts(MappingContexts) end
+
 ---@param IMC UInputMappingContext
 ---@return boolean
 function UEnhancedInputUserSettings:RegisterInputMappingContext(IMC) end
+
 ---@param InArgs FMapPlayerKeyArgs
 ---@param FailureReason FGameplayTagContainer
 function UEnhancedInputUserSettings:MapPlayerKey(InArgs, FailureReason) end
+
 ---@param IMC UInputMappingContext
 function UEnhancedInputUserSettings:MappingContextRegisteredWithSettings__DelegateSignature(IMC) end
+
 ---@param NewProfile UEnhancedPlayerMappableKeyProfile
 function UEnhancedInputUserSettings:MappableKeyProfileChanged__DelegateSignature(NewProfile) end
+
 ---@param IMC UInputMappingContext
 ---@return boolean
 function UEnhancedInputUserSettings:IsMappingContextRegistered(IMC) end
+
 ---@param ProfileId FGameplayTag
 ---@return UEnhancedPlayerMappableKeyProfile
 function UEnhancedInputUserSettings:GetKeyProfileWithIdentifier(ProfileId) end
+
 ---@return FGameplayTag
 function UEnhancedInputUserSettings:GetCurrentKeyProfileIdentifier() end
+
 ---@return UEnhancedPlayerMappableKeyProfile
 function UEnhancedInputUserSettings:GetCurrentKeyProfile() end
+
 ---@param MappingName FName
 ---@return TSet<FPlayerKeyMapping>
 function UEnhancedInputUserSettings:FindMappingsInRow(MappingName) end
+
 ---@param Settings UEnhancedInputUserSettings
 function UEnhancedInputUserSettings:EnhancedInputUserSettingsChanged__DelegateSignature(Settings) end
+
 function UEnhancedInputUserSettings:EnhancedInputUserSettingsApplied__DelegateSignature() end
+
 ---@param InArgs FPlayerMappableKeyProfileCreationArgs
 ---@return UEnhancedPlayerMappableKeyProfile
 function UEnhancedInputUserSettings:CreateNewKeyProfile(InArgs) end
-function UEnhancedInputUserSettings:AsyncSaveSettings() end
-function UEnhancedInputUserSettings:ApplySettings() end
 
+function UEnhancedInputUserSettings:AsyncSaveSettings() end
+
+function UEnhancedInputUserSettings:ApplySettings() end
 
 ---@class UEnhancedInputWorldSubsystem : UWorldSubsystem
 ---@field PlayerInput UEnhancedPlayerInput
@@ -467,9 +529,9 @@ UEnhancedInputWorldSubsystem = {}
 ---@param Actor AActor
 ---@return boolean
 function UEnhancedInputWorldSubsystem:RemoveActorInputComponent(Actor) end
+
 ---@param Actor AActor
 function UEnhancedInputWorldSubsystem:AddActorInputComponent(Actor) end
-
 
 ---@class UEnhancedPlayerInput : UPlayerInput
 ---@field KeyConsumptionData TMap<UInputAction, FKeyConsumptionOptions>
@@ -492,38 +554,49 @@ UEnhancedPlayerMappableKeyProfile = {}
 
 ---@return FString
 function UEnhancedPlayerMappableKeyProfile:ToString() end
+
 ---@param NewDisplayName FText
 function UEnhancedPlayerMappableKeyProfile:SetDisplayName(NewDisplayName) end
+
 function UEnhancedPlayerMappableKeyProfile:ResetToDefault() end
+
 ---@param InMappingName FName
 function UEnhancedPlayerMappableKeyProfile:ResetMappingToDefault(InMappingName) end
+
 ---@param Options FPlayerMappableKeyQueryOptions
 ---@param OutKeys TArray<FKey>
 ---@return int32
 function UEnhancedPlayerMappableKeyProfile:QueryPlayerMappedKeys(Options, OutKeys) end
+
 ---@param OutKeyMapping FPlayerKeyMapping
 ---@param InArgs FMapPlayerKeyArgs
 function UEnhancedPlayerMappableKeyProfile:K2_FindKeyMapping(OutKeyMapping, InArgs) end
+
 ---@return FGameplayTag
 function UEnhancedPlayerMappableKeyProfile:GetProfileIdentifer() end
+
 ---@return FText
 function UEnhancedPlayerMappableKeyProfile:GetProfileDisplayName() end
+
 ---@return TMap<FName, FKeyMappingRow>
 function UEnhancedPlayerMappableKeyProfile:GetPlayerMappingRows() end
+
 ---@param InKey FKey
 ---@param OutMappingNames TArray<FName>
 ---@return int32
 function UEnhancedPlayerMappableKeyProfile:GetMappingNamesForKey(InKey, OutMappingNames) end
+
 ---@param MappingName FName
 ---@param OutKeys TArray<FKey>
 ---@return int32
 function UEnhancedPlayerMappableKeyProfile:GetMappedKeysInRow(MappingName, OutKeys) end
+
 function UEnhancedPlayerMappableKeyProfile:DumpProfileToLog() end
+
 ---@param PlayerMapping FPlayerKeyMapping
 ---@param Options FPlayerMappableKeyQueryOptions
 ---@return boolean
 function UEnhancedPlayerMappableKeyProfile:DoesMappingPassQueryOptions(PlayerMapping, Options) end
-
 
 ---@class UInputAction : UDataAsset
 ---@field ActionDescription FText
@@ -555,16 +628,19 @@ UInputMappingContext = {}
 ---@param Action UInputAction
 ---@param Key FKey
 function UInputMappingContext:UnmapKey(Action, Key) end
+
 ---@param Action UInputAction
 function UInputMappingContext:UnmapAllKeysFromAction(Action) end
+
 function UInputMappingContext:UnmapAll() end
+
 ---@param Action UInputAction
 function UInputMappingContext:UnmapAction(Action) end
+
 ---@param Action UInputAction
 ---@param ToKey FKey
 ---@return FEnhancedActionKeyMapping
 function UInputMappingContext:MapKey(Action, ToKey) end
-
 
 ---@class UInputModifier : UObject
 UInputModifier = {}
@@ -574,11 +650,11 @@ UInputModifier = {}
 ---@param DeltaTime float
 ---@return FInputActionValue
 function UInputModifier:ModifyRaw(PlayerInput, CurrentValue, DeltaTime) end
+
 ---@param SampleValue FInputActionValue
 ---@param FinalValue FInputActionValue
 ---@return FLinearColor
 function UInputModifier:GetVisualizationColor(SampleValue, FinalValue) end
-
 
 ---@class UInputModifierDeadZone : UInputModifier
 ---@field LowerThreshold float
@@ -652,12 +728,13 @@ UInputTrigger = {}
 ---@param DeltaTime float
 ---@return ETriggerState
 function UInputTrigger:UpdateState(PlayerInput, ModifiedValue, DeltaTime) end
+
 ---@param ForValue FInputActionValue
 ---@return boolean
 function UInputTrigger:IsActuated(ForValue) end
+
 ---@return ETriggerType
 function UInputTrigger:GetTriggerType() end
-
 
 ---@class UInputTriggerChordAction : UInputTrigger
 ---@field ChordAction UInputAction
@@ -733,25 +810,32 @@ UInputTriggerTimedBase = {}
 UPlayerMappableInputConfig = {}
 
 function UPlayerMappableInputConfig:ResetToDefault() end
+
 ---@return boolean
 function UPlayerMappableInputConfig:IsDeprecated() end
+
 ---@return TArray<FEnhancedActionKeyMapping>
 function UPlayerMappableInputConfig:GetPlayerMappableKeys() end
+
 ---@return UObject
 function UPlayerMappableInputConfig:GetMetadata() end
+
 ---@return TMap<UInputMappingContext, int32>
 function UPlayerMappableInputConfig:GetMappingContexts() end
+
 ---@param MappingName FName
 ---@return FEnhancedActionKeyMapping
 function UPlayerMappableInputConfig:GetMappingByName(MappingName) end
+
 ---@param InAction UInputAction
 ---@return TArray<FEnhancedActionKeyMapping>
 function UPlayerMappableInputConfig:GetKeysBoundToAction(InAction) end
+
 ---@return FText
 function UPlayerMappableInputConfig:GetDisplayName() end
+
 ---@return FName
 function UPlayerMappableInputConfig:GetConfigName() end
-
 
 ---@class UPlayerMappableKeySettings : UObject
 ---@field MetaData UObject
@@ -760,6 +844,3 @@ function UPlayerMappableInputConfig:GetConfigName() end
 ---@field DisplayCategory FText
 ---@field SupportedKeyProfiles FGameplayTagContainer
 UPlayerMappableKeySettings = {}
-
-
-

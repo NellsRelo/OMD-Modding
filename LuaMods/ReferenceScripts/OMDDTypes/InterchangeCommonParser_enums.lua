@@ -24,4 +24,3 @@ EInterchangeCurveTangentWeightMode = {
     WeightedBoth = 3,
     EInterchangeCurveTangentWeightMode_MAX = 4,
 }
-

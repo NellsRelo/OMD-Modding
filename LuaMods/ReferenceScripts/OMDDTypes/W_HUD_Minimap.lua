@@ -18,10 +18,12 @@ UW_HUD_Minimap_C = {}
 
 ---@return UWidgetAnimation
 function UW_HUD_Minimap_C:BP_GetOnShowAnimation() end
+
 function UW_HUD_Minimap_C:OnDifficultyChanged() end
+
 function UW_HUD_Minimap_C:Construct() end
+
 function UW_HUD_Minimap_C:Destruct() end
+
 ---@param EntryPoint int32
 function UW_HUD_Minimap_C:ExecuteUbergraph_W_HUD_Minimap(EntryPoint) end
-
-

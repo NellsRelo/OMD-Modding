@@ -61,4 +61,3 @@ EGeometryCollectionDebugDrawActorHideGeometry = {
     HideAll = 4,
     EGeometryCollectionDebugDrawActorHideGeometry_MAX = 5,
 }
-

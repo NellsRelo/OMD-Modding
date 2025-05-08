@@ -5,4 +5,3 @@ EHandleEvent = {
     ComponentUpdated = 2,
     Max = 3,
 }
-

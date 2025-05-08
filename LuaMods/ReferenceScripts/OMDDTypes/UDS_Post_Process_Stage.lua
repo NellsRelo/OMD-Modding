@@ -20,6 +20,3 @@
 ---@field DisableifSnowing_70_63462F7A45D418DF0033E496E5F1C2A3 boolean
 ---@field DisableifNotSnowing_72_5FBF6A2940E5085175DF21A4FB1E2444 boolean
 FUDS_Post_Process_Stage = {}
-
-
-

@@ -8,6 +8,3 @@
 ---@field TrapGrid USceneComponent
 ---@field Geo USceneComponent
 ABP_BackAlley_Sewer_CeilingGroup_G_C = {}
-
-
-

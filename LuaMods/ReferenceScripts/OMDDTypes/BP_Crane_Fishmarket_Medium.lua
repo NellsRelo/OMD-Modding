@@ -33,6 +33,3 @@
 ---@field Geo USceneComponent
 ---@field TrapGrid USceneComponent
 ABP_Crane_Fishmarket_Medium_C = {}
-
-
-

@@ -48,6 +48,3 @@
 ---@field ColumnBlock_BottomTile_1_FB2 UStaticMeshComponent
 ---@field Tower USceneComponent
 ACastle_Large_Tower_End_02_C = {}
-
-
-

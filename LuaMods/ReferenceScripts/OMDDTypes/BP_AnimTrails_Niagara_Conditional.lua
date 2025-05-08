@@ -11,5 +11,3 @@ UBP_AnimTrails_Niagara_Conditional_C = {}
 ---@param EventReference FAnimNotifyEventReference
 ---@return boolean
 function UBP_AnimTrails_Niagara_Conditional_C:Received_NotifyTick(MeshComp, Animation, FrameDeltaTime, EventReference) end
-
-

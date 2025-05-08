@@ -10,6 +10,3 @@
 ---@field Geo USceneComponent
 ---@field TrapGrid USceneComponent
 ABP_Planter_Castle_Stone_2x4x1_Grid_C = {}
-
-
-

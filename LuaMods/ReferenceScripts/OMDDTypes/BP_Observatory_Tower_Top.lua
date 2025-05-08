@@ -22,6 +22,3 @@
 ---@field RSTTrapGridBox URSTTrapGridBoxComponent
 ---@field TrapGrid USceneComponent
 ABP_Observatory_Tower_Top_C = {}
-
-
-

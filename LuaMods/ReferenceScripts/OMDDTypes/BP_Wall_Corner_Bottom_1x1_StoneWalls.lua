@@ -7,6 +7,3 @@
 ---@field Trap_Wall1 URSTTrapGridBoxComponent
 ---@field trap_wall URSTTrapGridBoxComponent
 ABP_Wall_Corner_Bottom_1x1_StoneWalls_C = {}
-
-
-

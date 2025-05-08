@@ -11,6 +11,3 @@
 ---@field SharedRoot USceneComponent
 ---@field DefaultSceneRoot USceneComponent
 APennant2_Arcane_BP_C = {}
-
-
-

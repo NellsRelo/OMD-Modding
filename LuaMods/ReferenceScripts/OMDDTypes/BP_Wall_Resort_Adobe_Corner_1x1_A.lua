@@ -5,6 +5,3 @@
 ---@field Wall_Stucco_4x2_A_SM UStaticMeshComponent
 ---@field trap_wall URSTTrapGridBoxComponent
 ABP_Wall_Resort_Adobe_Corner_1x1_A_C = {}
-
-
-

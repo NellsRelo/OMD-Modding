@@ -10,6 +10,10 @@ FAnimBlueprintGeneratedConstantData = {}
 
 
 
+---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
+FAnimBlueprintGeneratedMutableData = {}
+
+
 ---@class UABP_TrapUpgrade_Secondary_C : UAnimInstance
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance
@@ -23,7 +27,6 @@ UABP_TrapUpgrade_Secondary_C = {}
 ---@param InPose FPoseLink
 ---@param AnimGraph FPoseLink
 function UABP_TrapUpgrade_Secondary_C:AnimGraph(InPose, AnimGraph) end
+
 ---@param EntryPoint int32
 function UABP_TrapUpgrade_Secondary_C:ExecuteUbergraph_ABP_TrapUpgrade_Secondary(EntryPoint) end
-
-

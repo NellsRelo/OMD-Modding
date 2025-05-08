@@ -12,6 +12,3 @@
 ---@field Geometry USceneComponent
 ---@field TrapGrid USceneComponent
 AWall_Half_FB_2Trap_B_Merged_C = {}
-
-
-

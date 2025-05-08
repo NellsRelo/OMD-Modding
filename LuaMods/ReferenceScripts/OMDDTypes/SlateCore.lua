@@ -604,5 +604,3 @@ USlateWidgetStyleAsset = {}
 
 ---@class USlateWidgetStyleContainerBase : UObject
 USlateWidgetStyleContainerBase = {}
-
-

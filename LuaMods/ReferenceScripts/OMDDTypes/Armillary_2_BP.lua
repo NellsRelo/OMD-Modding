@@ -6,6 +6,3 @@
 ---@field Armillary_2_Base_SM UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 AArmillary_2_BP_C = {}
-
-
-

@@ -9,6 +9,3 @@
 ---@field Castle_Lamppost_C UStaticMeshComponent
 ---@field Geometry USceneComponent
 ABP_Resort_Lamppost_A_Unlit_C = {}
-
-
-

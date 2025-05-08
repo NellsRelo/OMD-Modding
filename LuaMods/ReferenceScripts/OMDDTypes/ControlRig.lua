@@ -18,9 +18,10 @@
 AControlRigControlActor = {}
 
 function AControlRigControlActor:ResetControlActor() end
-function AControlRigControlActor:Refresh() end
-function AControlRigControlActor:Clear() end
 
+function AControlRigControlActor:Refresh() end
+
+function AControlRigControlActor:Clear() end
 
 ---@class AControlRigShapeActor : AActor
 ---@field ActorRootComponent USceneComponent
@@ -36,33 +37,45 @@ AControlRigShapeActor = {}
 
 ---@param bInSelected boolean
 function AControlRigShapeActor:SetSelected(bInSelected) end
+
 ---@param bInSelectable boolean
 function AControlRigShapeActor:SetSelectable(bInSelectable) end
+
 ---@param bInHovered boolean
 function AControlRigShapeActor:SetHovered(bInHovered) end
+
 ---@param InTransform FTransform
 function AControlRigShapeActor:SetGlobalTransform(InTransform) end
+
 ---@param bInEnabled boolean
 function AControlRigShapeActor:SetEnabled(bInEnabled) end
+
 ---@param NewTransform FTransform
 function AControlRigShapeActor:OnTransformChanged(NewTransform) end
+
 ---@param bIsSelected boolean
 function AControlRigShapeActor:OnSelectionChanged(bIsSelected) end
+
 ---@param bIsManipulating boolean
 function AControlRigShapeActor:OnManipulatingChanged(bIsManipulating) end
+
 ---@param bIsSelected boolean
 function AControlRigShapeActor:OnHoveredChanged(bIsSelected) end
+
 ---@param bIsEnabled boolean
 function AControlRigShapeActor:OnEnabledChanged(bIsEnabled) end
+
 ---@return boolean
 function AControlRigShapeActor:IsSelectedInEditor() end
+
 ---@return boolean
 function AControlRigShapeActor:IsHovered() end
+
 ---@return boolean
 function AControlRigShapeActor:IsEnabled() end
+
 ---@return FTransform
 function AControlRigShapeActor:GetGlobalTransform() end
-
 
 ---@class FAimTarget
 ---@field Weight float
@@ -847,7 +860,7 @@ FRigLinearColorMetadata = {}
 
 
 ---@class FRigLocalAndGlobalTransform
----@field Local FRigComputedTransform
+---@field FRigComputedTransform
 ---@field Global FRigComputedTransform
 FRigLocalAndGlobalTransform = {}
 
@@ -4586,40 +4599,52 @@ UControlRig = {}
 
 ---@param InInteractionRigClass TSubclassOf<UControlRig>
 function UControlRig:SetInteractionRigClass(InInteractionRigClass) end
+
 ---@param InInteractionRig UControlRig
 function UControlRig:SetInteractionRig(InInteractionRig) end
+
 ---@param InControlName FName
 ---@param bSelect boolean
 function UControlRig:SelectControl(InControlName, bSelect) end
+
 function UControlRig:RequestConstruction() end
+
 ---@param Rig UControlRig
 ---@param Control FRigControlElement
 ---@param bSelected boolean
 function UControlRig:OnControlSelectedBP__DelegateSignature(Rig, Control, bSelected) end
+
 ---@param InControlName FName
 ---@return boolean
 function UControlRig:IsControlSelected(InControlName) end
+
 ---@return TSubclassOf<UControlRig>
 function UControlRig:GetInteractionRigClass() end
+
 ---@return UControlRig
 function UControlRig:GetInteractionRig() end
+
 ---@return AActor
 function UControlRig:GetHostingActor() end
+
 ---@return URigHierarchy
 function UControlRig:GetHierarchy() end
+
 ---@param Outer UObject
 ---@param OptionalClass TSubclassOf<UControlRig>
 ---@return TArray<UControlRig>
 function UControlRig:FindControlRigs(Outer, OptionalClass) end
+
 ---@return TArray<FName>
 function UControlRig:CurrentControlSelection() end
+
 ---@param Outer UObject
 ---@param ControlName FName
 ---@return UTransformableControlHandle
 function UControlRig:CreateTransformableControlHandle(Outer, ControlName) end
+
 ---@return boolean
 function UControlRig:ClearControlSelection() end
-
 
 ---@class UControlRigAnimInstance : UAnimInstance
 UControlRigAnimInstance = {}
@@ -4654,147 +4679,192 @@ UControlRigComponent = {}
 
 ---@param DeltaTime float
 function UControlRigComponent:Update(DeltaTime) end
+
 ---@param InObjectToBind UObject
 function UControlRigComponent:SetObjectBinding(InObjectToBind) end
+
 ---@param NewMappedElements TArray<FControlRigComponentMappedElement>
 function UControlRigComponent:SetMappedElements(NewMappedElements) end
+
 ---@param SpaceName FName
 ---@param InitialTransform FTransform
 ---@param Space EControlRigComponentSpace
 function UControlRigComponent:SetInitialSpaceTransform(SpaceName, InitialTransform, Space) end
+
 ---@param BoneName FName
 ---@param InitialTransform FTransform
 ---@param Space EControlRigComponentSpace
 ---@param bPropagateToChildren boolean
 function UControlRigComponent:SetInitialBoneTransform(BoneName, InitialTransform, Space, bPropagateToChildren) end
+
 ---@param ControlName FName
 ---@param Value FVector2D
 function UControlRigComponent:SetControlVector2D(ControlName, Value) end
+
 ---@param ControlName FName
 ---@param Value FTransform
 ---@param Space EControlRigComponentSpace
 function UControlRigComponent:SetControlTransform(ControlName, Value, Space) end
+
 ---@param ControlName FName
 ---@param Value FVector
 ---@param Space EControlRigComponentSpace
 function UControlRigComponent:SetControlScale(ControlName, Value, Space) end
+
 ---@param ControlName FName
 ---@param Value FRotator
 ---@param Space EControlRigComponentSpace
 function UControlRigComponent:SetControlRotator(ControlName, Value, Space) end
+
 ---@param InControlRigClass TSubclassOf<UControlRig>
 function UControlRigComponent:SetControlRigClass(InControlRigClass) end
+
 ---@param ControlName FName
 ---@param Value FVector
 ---@param Space EControlRigComponentSpace
 function UControlRigComponent:SetControlPosition(ControlName, Value, Space) end
+
 ---@param ControlName FName
 ---@param OffsetTransform FTransform
 ---@param Space EControlRigComponentSpace
 function UControlRigComponent:SetControlOffset(ControlName, OffsetTransform, Space) end
+
 ---@param ControlName FName
 ---@param Value int32
 function UControlRigComponent:SetControlInt(ControlName, Value) end
+
 ---@param ControlName FName
 ---@param Value float
 function UControlRigComponent:SetControlFloat(ControlName, Value) end
+
 ---@param ControlName FName
 ---@param Value boolean
 function UControlRigComponent:SetControlBool(ControlName, Value) end
+
 ---@param BoneName FName
 ---@param Transform FTransform
 ---@param Space EControlRigComponentSpace
 ---@param Weight float
 ---@param bPropagateToChildren boolean
 function UControlRigComponent:SetBoneTransform(BoneName, Transform, Space, Weight, bPropagateToChildren) end
+
 ---@param InSkeletalMesh USkeletalMesh
 function UControlRigComponent:SetBoneInitialTransformsFromSkeletalMesh(InSkeletalMesh) end
+
 ---@param Component UControlRigComponent
 function UControlRigComponent:OnPreInitialize(Component) end
+
 ---@param Component UControlRigComponent
 function UControlRigComponent:OnPreForwardsSolve(Component) end
+
 ---@param Component UControlRigComponent
 function UControlRigComponent:OnPreConstruction(Component) end
+
 ---@param Component UControlRigComponent
 function UControlRigComponent:OnPostInitialize(Component) end
+
 ---@param Component UControlRigComponent
 function UControlRigComponent:OnPostForwardsSolve(Component) end
+
 ---@param Component UControlRigComponent
 function UControlRigComponent:OnPostConstruction(Component) end
+
 function UControlRigComponent:Initialize() end
+
 ---@param SpaceName FName
 ---@param Space EControlRigComponentSpace
 ---@return FTransform
 function UControlRigComponent:GetSpaceTransform(SpaceName, Space) end
+
 ---@param SpaceName FName
 ---@param Space EControlRigComponentSpace
 ---@return FTransform
 function UControlRigComponent:GetInitialSpaceTransform(SpaceName, Space) end
+
 ---@param BoneName FName
 ---@param Space EControlRigComponentSpace
 ---@return FTransform
 function UControlRigComponent:GetInitialBoneTransform(BoneName, Space) end
+
 ---@param ElementType ERigElementType
 ---@return TArray<FName>
 function UControlRigComponent:GetElementNames(ElementType) end
+
 ---@param ControlName FName
 ---@return FVector2D
 function UControlRigComponent:GetControlVector2D(ControlName) end
+
 ---@param ControlName FName
 ---@param Space EControlRigComponentSpace
 ---@return FTransform
 function UControlRigComponent:GetControlTransform(ControlName, Space) end
+
 ---@param ControlName FName
 ---@param Space EControlRigComponentSpace
 ---@return FVector
 function UControlRigComponent:GetControlScale(ControlName, Space) end
+
 ---@param ControlName FName
 ---@param Space EControlRigComponentSpace
 ---@return FRotator
 function UControlRigComponent:GetControlRotator(ControlName, Space) end
+
 ---@return UControlRig
 function UControlRigComponent:GetControlRig() end
+
 ---@param ControlName FName
 ---@param Space EControlRigComponentSpace
 ---@return FVector
 function UControlRigComponent:GetControlPosition(ControlName, Space) end
+
 ---@param ControlName FName
 ---@param Space EControlRigComponentSpace
 ---@return FTransform
 function UControlRigComponent:GetControlOffset(ControlName, Space) end
+
 ---@param ControlName FName
 ---@return int32
 function UControlRigComponent:GetControlInt(ControlName) end
+
 ---@param ControlName FName
 ---@return float
 function UControlRigComponent:GetControlFloat(ControlName) end
+
 ---@param ControlName FName
 ---@return boolean
 function UControlRigComponent:GetControlBool(ControlName) end
+
 ---@param BoneName FName
 ---@param Space EControlRigComponentSpace
 ---@return FTransform
 function UControlRigComponent:GetBoneTransform(BoneName, Space) end
+
 ---@return float
 function UControlRigComponent:GetAbsoluteTime() end
+
 ---@param Name FName
 ---@param ElementType ERigElementType
 ---@return boolean
 function UControlRigComponent:DoesElementExist(Name, ElementType) end
+
 function UControlRigComponent:ClearMappedElements() end
+
 ---@return boolean
 function UControlRigComponent:CanExecute() end
+
 ---@param SkeletalMeshComponent USkeletalMeshComponent
 ---@param Bones TArray<FControlRigComponentMappedBone>
 ---@param Curves TArray<FControlRigComponentMappedCurve>
 function UControlRigComponent:AddMappedSkeletalMesh(SkeletalMeshComponent, Bones, Curves) end
+
 ---@param NewMappedElements TArray<FControlRigComponentMappedElement>
 function UControlRigComponent:AddMappedElements(NewMappedElements) end
+
 ---@param Components TArray<FControlRigComponentMappedComponent>
 function UControlRigComponent:AddMappedComponents(Components) end
+
 ---@param SkeletalMeshComponent USkeletalMeshComponent
 function UControlRigComponent:AddMappedCompleteSkeletalMesh(SkeletalMeshComponent) end
-
 
 ---@class UControlRigEditorSettings : URigVMEditorSettings
 UControlRigEditorSettings = {}
@@ -4832,26 +4902,31 @@ UControlRigPoseAsset = {}
 ---@param InControlRig UControlRig
 ---@param bDoMirror boolean
 function UControlRigPoseAsset:SelectControls(InControlRig, bDoMirror) end
+
 ---@param InControlRig UControlRig
 ---@param bUseAll boolean
 function UControlRigPoseAsset:SavePose(InControlRig, bUseAll) end
+
 ---@param CurrentName FName
 ---@param NewName FName
 function UControlRigPoseAsset:ReplaceControlName(CurrentName, NewName) end
+
 ---@param InControlRig UControlRig
 ---@param bDoKey boolean
 ---@param bDoMirror boolean
 function UControlRigPoseAsset:PastePose(InControlRig, bDoKey, bDoMirror) end
+
 ---@param InControlRig UControlRig
 ---@param OutPose FControlRigControlPose
 function UControlRigPoseAsset:GetCurrentPose(InControlRig, OutPose) end
+
 ---@return TArray<FName>
 function UControlRigPoseAsset:GetControlNames() end
+
 ---@param ControlRig UControlRig
 ---@param ControlName FName
 ---@return boolean
 function UControlRigPoseAsset:DoesMirrorMatch(ControlRig, ControlName) end
-
 
 ---@class UControlRigPoseMirrorSettings : UObject
 ---@field RightSide FString
@@ -4889,9 +4964,9 @@ UControlRigShapeLibraryLink = {}
 
 ---@param InShapeLibrary UControlRigShapeLibrary
 function UControlRigShapeLibraryLink:SetShapeLibrary(InShapeLibrary) end
+
 ---@return UControlRigShapeLibrary
 function UControlRigShapeLibraryLink:GetShapeLibrary() end
-
 
 ---@class UControlRigTestData : UObject
 ---@field ControlRigObjectPath FSoftObjectPath
@@ -4906,29 +4981,36 @@ UControlRigTestData = {}
 ---@param bGroundTruth boolean
 ---@return boolean
 function UControlRigTestData:SetupReplay(InControlRig, bGroundTruth) end
+
 function UControlRigTestData:ReleaseReplay() end
+
 ---@param InControlRig UControlRig
 ---@param InRecordingDuration double
 ---@return boolean
 function UControlRigTestData:Record(InControlRig, InRecordingDuration) end
+
 ---@return boolean
 function UControlRigTestData:IsReplaying() end
+
 ---@return boolean
 function UControlRigTestData:IsRecording() end
+
 ---@param bInput boolean
 ---@return FVector2D
 function UControlRigTestData:GetTimeRange(bInput) end
+
 ---@return EControlRigTestDataPlaybackMode
 function UControlRigTestData:GetPlaybackMode() end
+
 ---@param InSeconds double
 ---@param bInput boolean
 ---@return int32
 function UControlRigTestData:GetFrameIndexForTime(InSeconds, bInput) end
+
 ---@param InDesiredPackagePath FString
 ---@param InBlueprintPathName FString
 ---@return UControlRigTestData
 function UControlRigTestData:CreateNewAsset(InDesiredPackagePath, InBlueprintPathName) end
-
 
 ---@class UControlRigTransformWorkflowOptions : UControlRigWorkflowOptions
 ---@field TransformType ERigTransformType::Type
@@ -4937,7 +5019,6 @@ UControlRigTransformWorkflowOptions = {}
 ---@param InSubject UObject
 ---@return TArray<FRigVMUserWorkflow>
 function UControlRigTransformWorkflowOptions:ProvideWorkflows(InSubject) end
-
 
 ---@class UControlRigValidationPass : UObject
 UControlRigValidationPass = {}
@@ -4956,7 +5037,6 @@ UControlRigWorkflowOptions = {}
 
 ---@return boolean
 function UControlRigWorkflowOptions:EnsureAtLeastOneRigElementSelected() end
-
 
 ---@class UDefault__ControlRigBlueprintGeneratedClass
 UDefault__ControlRigBlueprintGeneratedClass = {}
@@ -5009,90 +5089,109 @@ URigHierarchy = {}
 ---@param InElementIndex int32
 ---@param bSetupUndo boolean
 function URigHierarchy:UnsetCurveValueByIndex(InElementIndex, bSetupUndo) end
+
 ---@param InKey FRigElementKey
 ---@param bSetupUndo boolean
 function URigHierarchy:UnsetCurveValue(InKey, bSetupUndo) end
+
 ---@param InChild FRigElementKey
 ---@param bInitial boolean
 ---@param bAffectChildren boolean
 ---@return boolean
 function URigHierarchy:SwitchToWorldSpace(InChild, bInitial, bAffectChildren) end
+
 ---@param InChild FRigElementKey
 ---@param InParent FRigElementKey
 ---@param bInitial boolean
 ---@param bAffectChildren boolean
 ---@return boolean
 function URigHierarchy:SwitchToParent(InChild, InParent, bInitial, bAffectChildren) end
+
 ---@param InChild FRigElementKey
 ---@param bInitial boolean
 ---@param bAffectChildren boolean
 ---@return boolean
 function URigHierarchy:SwitchToDefaultParent(InChild, bInitial, bAffectChildren) end
+
 ---@param InKeys TArray<FRigElementKey>
 ---@return TArray<FRigElementKey>
 function URigHierarchy:SortKeys(InKeys) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@param InValue FVector
 ---@return boolean
 function URigHierarchy:SetVectorMetadata(InItem, InMetadataName, InValue) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@param InValue TArray<FVector>
 ---@return boolean
 function URigHierarchy:SetVectorArrayMetadata(InItem, InMetadataName, InValue) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@param InValue FTransform
 ---@return boolean
 function URigHierarchy:SetTransformMetadata(InItem, InMetadataName, InValue) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@param InValue TArray<FTransform>
 ---@return boolean
 function URigHierarchy:SetTransformArrayMetadata(InItem, InMetadataName, InValue) end
+
 ---@param InItem FRigElementKey
 ---@param InTag FName
 ---@return boolean
 function URigHierarchy:SetTag(InItem, InTag) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@param InValue FRotator
 ---@return boolean
 function URigHierarchy:SetRotatorMetadata(InItem, InMetadataName, InValue) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@param InValue TArray<FRotator>
 ---@return boolean
 function URigHierarchy:SetRotatorArrayMetadata(InItem, InMetadataName, InValue) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@param InValue FRigElementKey
 ---@return boolean
 function URigHierarchy:SetRigElementKeyMetadata(InItem, InMetadataName, InValue) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@param InValue TArray<FRigElementKey>
 ---@return boolean
 function URigHierarchy:SetRigElementKeyArrayMetadata(InItem, InMetadataName, InValue) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@param InValue FQuat
 ---@return boolean
 function URigHierarchy:SetQuatMetadata(InItem, InMetadataName, InValue) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@param InValue TArray<FQuat>
 ---@return boolean
 function URigHierarchy:SetQuatArrayMetadata(InItem, InMetadataName, InValue) end
+
 ---@param InPose FRigPose
 function URigHierarchy:SetPose_ForBlueprint(InPose) end
+
 ---@param InChild FRigElementKey
 ---@param InWeights TArray<FRigElementWeight>
 ---@param bInitial boolean
 ---@param bAffectChildren boolean
 ---@return boolean
 function URigHierarchy:SetParentWeightArray(InChild, InWeights, bInitial, bAffectChildren) end
+
 ---@param InChild FRigElementKey
 ---@param InParent FRigElementKey
 ---@param InWeight FRigElementWeight
@@ -5100,23 +5199,28 @@ function URigHierarchy:SetParentWeightArray(InChild, InWeights, bInitial, bAffec
 ---@param bAffectChildren boolean
 ---@return boolean
 function URigHierarchy:SetParentWeight(InChild, InParent, InWeight, bInitial, bAffectChildren) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@param InValue FName
 ---@return boolean
 function URigHierarchy:SetNameMetadata(InItem, InMetadataName, InValue) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@param InValue TArray<FName>
 ---@return boolean
 function URigHierarchy:SetNameArrayMetadata(InItem, InMetadataName, InValue) end
+
 ---@param InElementIndex int32
 ---@param InTransform FTransform
 ---@param bInitial boolean
 ---@param bAffectChildren boolean
 ---@param bSetupUndo boolean
 ---@param bPrintPythonCommands boolean
-function URigHierarchy:SetLocalTransformByIndex(InElementIndex, InTransform, bInitial, bAffectChildren, bSetupUndo, bPrintPythonCommands) end
+function URigHierarchy:SetLocalTransformByIndex(InElementIndex, InTransform, bInitial, bAffectChildren, bSetupUndo,
+                                                bPrintPythonCommands) end
+
 ---@param InKey FRigElementKey
 ---@param InTransform FTransform
 ---@param bInitial boolean
@@ -5124,33 +5228,40 @@ function URigHierarchy:SetLocalTransformByIndex(InElementIndex, InTransform, bIn
 ---@param bSetupUndo boolean
 ---@param bPrintPythonCommands boolean
 function URigHierarchy:SetLocalTransform(InKey, InTransform, bInitial, bAffectChildren, bSetupUndo, bPrintPythonCommands) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@param InValue FLinearColor
 ---@return boolean
 function URigHierarchy:SetLinearColorMetadata(InItem, InMetadataName, InValue) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@param InValue TArray<FLinearColor>
 ---@return boolean
 function URigHierarchy:SetLinearColorArrayMetadata(InItem, InMetadataName, InValue) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@param InValue int32
 ---@return boolean
 function URigHierarchy:SetInt32Metadata(InItem, InMetadataName, InValue) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@param InValue TArray<int32>
 ---@return boolean
 function URigHierarchy:SetInt32ArrayMetadata(InItem, InMetadataName, InValue) end
+
 ---@param InElementIndex int32
 ---@param InTransform FTransform
 ---@param bInitial boolean
 ---@param bAffectChildren boolean
 ---@param bSetupUndo boolean
 ---@param bPrintPythonCommand boolean
-function URigHierarchy:SetGlobalTransformByIndex(InElementIndex, InTransform, bInitial, bAffectChildren, bSetupUndo, bPrintPythonCommand) end
+function URigHierarchy:SetGlobalTransformByIndex(InElementIndex, InTransform, bInitial, bAffectChildren, bSetupUndo,
+                                                 bPrintPythonCommand) end
+
 ---@param InKey FRigElementKey
 ---@param InTransform FTransform
 ---@param bInitial boolean
@@ -5158,497 +5269,630 @@ function URigHierarchy:SetGlobalTransformByIndex(InElementIndex, InTransform, bI
 ---@param bSetupUndo boolean
 ---@param bPrintPythonCommand boolean
 function URigHierarchy:SetGlobalTransform(InKey, InTransform, bInitial, bAffectChildren, bSetupUndo, bPrintPythonCommand) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@param InValue float
 ---@return boolean
 function URigHierarchy:SetFloatMetadata(InItem, InMetadataName, InValue) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@param InValue TArray<float>
 ---@return boolean
 function URigHierarchy:SetFloatArrayMetadata(InItem, InMetadataName, InValue) end
+
 ---@param InElementIndex int32
 ---@param InValue float
 ---@param bSetupUndo boolean
 function URigHierarchy:SetCurveValueByIndex(InElementIndex, InValue, bSetupUndo) end
+
 ---@param InKey FRigElementKey
 ---@param InValue float
 ---@param bSetupUndo boolean
 function URigHierarchy:SetCurveValue(InKey, InValue, bSetupUndo) end
+
 ---@param InElementIndex int32
 ---@param bVisibility boolean
 function URigHierarchy:SetControlVisibilityByIndex(InElementIndex, bVisibility) end
+
 ---@param InKey FRigElementKey
 ---@param bVisibility boolean
 function URigHierarchy:SetControlVisibility(InKey, bVisibility) end
+
 ---@param InElementIndex int32
 ---@param InValue FRigControlValue
 ---@param InValueType ERigControlValueType
 ---@param bSetupUndo boolean
 ---@param bPrintPythonCommands boolean
 function URigHierarchy:SetControlValueByIndex(InElementIndex, InValue, InValueType, bSetupUndo, bPrintPythonCommands) end
+
 ---@param InKey FRigElementKey
 ---@param InValue FRigControlValue
 ---@param InValueType ERigControlValueType
 ---@param bSetupUndo boolean
 ---@param bPrintPythonCommands boolean
 function URigHierarchy:SetControlValue(InKey, InValue, InValueType, bSetupUndo, bPrintPythonCommands) end
+
 ---@param InElementIndex int32
 ---@param InTransform FTransform
 ---@param bInitial boolean
 ---@param bSetupUndo boolean
 function URigHierarchy:SetControlShapeTransformByIndex(InElementIndex, InTransform, bInitial, bSetupUndo) end
+
 ---@param InKey FRigElementKey
 ---@param InTransform FTransform
 ---@param bInitial boolean
 ---@param bSetupUndo boolean
 function URigHierarchy:SetControlShapeTransform(InKey, InTransform, bInitial, bSetupUndo) end
+
 ---@param InElementIndex int32
 ---@param InSettings FRigControlSettings
 ---@param bSetupUndo boolean
 ---@param bForce boolean
 ---@param bPrintPythonCommands boolean
 function URigHierarchy:SetControlSettingsByIndex(InElementIndex, InSettings, bSetupUndo, bForce, bPrintPythonCommands) end
+
 ---@param InKey FRigElementKey
 ---@param InSettings FRigControlSettings
 ---@param bSetupUndo boolean
 ---@param bForce boolean
 ---@param bPrintPythonCommands boolean
 function URigHierarchy:SetControlSettings(InKey, InSettings, bSetupUndo, bForce, bPrintPythonCommands) end
+
 ---@param InElementIndex int32
 ---@param InRotator FRotator
 ---@param bInitial boolean
 ---@param bFixEulerFlips boolean
 function URigHierarchy:SetControlPreferredRotatorByIndex(InElementIndex, InRotator, bInitial, bFixEulerFlips) end
+
 ---@param InKey FRigElementKey
 ---@param InRotator FRotator
 ---@param bInitial boolean
 ---@param bFixEulerFlips boolean
 function URigHierarchy:SetControlPreferredRotator(InKey, InRotator, bInitial, bFixEulerFlips) end
+
 ---@param InElementIndex int32
 ---@param InRotationOrder EEulerRotationOrder
 function URigHierarchy:SetControlPreferredRotationOrderByIndex(InElementIndex, InRotationOrder) end
+
 ---@param InKey FRigElementKey
 ---@param InRotationOrder EEulerRotationOrder
 function URigHierarchy:SetControlPreferredRotationOrder(InKey, InRotationOrder) end
+
 ---@param InElementIndex int32
 ---@param InEulerAngles FVector
 ---@param InRotationOrder EEulerRotationOrder
 ---@param bInitial boolean
 ---@param bFixEulerFlips boolean
-function URigHierarchy:SetControlPreferredEulerAnglesByIndex(InElementIndex, InEulerAngles, InRotationOrder, bInitial, bFixEulerFlips) end
+function URigHierarchy:SetControlPreferredEulerAnglesByIndex(InElementIndex, InEulerAngles, InRotationOrder, bInitial,
+                                                             bFixEulerFlips) end
+
 ---@param InKey FRigElementKey
 ---@param InEulerAngles FVector
 ---@param InRotationOrder EEulerRotationOrder
 ---@param bInitial boolean
 ---@param bFixEulerFlips boolean
 function URigHierarchy:SetControlPreferredEulerAngles(InKey, InEulerAngles, InRotationOrder, bInitial, bFixEulerFlips) end
+
 ---@param InElementIndex int32
 ---@param InTransform FTransform
 ---@param bInitial boolean
 ---@param bAffectChildren boolean
 ---@param bSetupUndo boolean
 ---@param bPrintPythonCommands boolean
-function URigHierarchy:SetControlOffsetTransformByIndex(InElementIndex, InTransform, bInitial, bAffectChildren, bSetupUndo, bPrintPythonCommands) end
+function URigHierarchy:SetControlOffsetTransformByIndex(InElementIndex, InTransform, bInitial, bAffectChildren,
+                                                        bSetupUndo, bPrintPythonCommands) end
+
 ---@param InKey FRigElementKey
 ---@param InTransform FTransform
 ---@param bInitial boolean
 ---@param bAffectChildren boolean
 ---@param bSetupUndo boolean
 ---@param bPrintPythonCommands boolean
-function URigHierarchy:SetControlOffsetTransform(InKey, InTransform, bInitial, bAffectChildren, bSetupUndo, bPrintPythonCommands) end
+function URigHierarchy:SetControlOffsetTransform(InKey, InTransform, bInitial, bAffectChildren, bSetupUndo,
+                                                 bPrintPythonCommands) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@param InValue boolean
 ---@return boolean
 function URigHierarchy:SetBoolMetadata(InItem, InMetadataName, InValue) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@param InValue TArray<boolean>
 ---@return boolean
 function URigHierarchy:SetBoolArrayMetadata(InItem, InMetadataName, InValue) end
+
 ---@param InElement FRigElementKey
 ---@param InOffsetInSeconds float
 ---@param bAsynchronous boolean
 function URigHierarchy:SendAutoKeyEvent(InElement, InOffsetInSeconds, bAsynchronous) end
+
 function URigHierarchy:ResetToDefault() end
+
 ---@param InTypeFilter ERigElementType
 function URigHierarchy:ResetPoseToInitial(InTypeFilter) end
+
 function URigHierarchy:ResetCurveValues() end
+
 function URigHierarchy:Reset() end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@return boolean
 function URigHierarchy:RemoveMetadata(InItem, InMetadataName) end
+
 ---@param InItem FRigElementKey
 ---@return boolean
 function URigHierarchy:RemoveAllMetadata(InItem) end
+
 ---@return int32
 function URigHierarchy:Num() end
+
 ---@param InValue FVector2D
 ---@return FRigControlValue
 function URigHierarchy:MakeControlValueFromVector2D(InValue) end
+
 ---@param InValue FVector
 ---@return FRigControlValue
 function URigHierarchy:MakeControlValueFromVector(InValue) end
+
 ---@param InValue FTransformNoScale
 ---@return FRigControlValue
 function URigHierarchy:MakeControlValueFromTransformNoScale(InValue) end
+
 ---@param InValue FTransform
 ---@return FRigControlValue
 function URigHierarchy:MakeControlValueFromTransform(InValue) end
+
 ---@param InValue FRotator
 ---@return FRigControlValue
 function URigHierarchy:MakeControlValueFromRotator(InValue) end
+
 ---@param InValue int32
 ---@return FRigControlValue
 function URigHierarchy:MakeControlValueFromInt(InValue) end
+
 ---@param InValue float
 ---@return FRigControlValue
 function URigHierarchy:MakeControlValueFromFloat(InValue) end
+
 ---@param InValue FEulerTransform
 ---@return FRigControlValue
 function URigHierarchy:MakeControlValueFromEulerTransform(InValue) end
+
 ---@param InValue boolean
 ---@return FRigControlValue
 function URigHierarchy:MakeControlValueFromBool(InValue) end
+
 ---@param InElementIndex int32
 ---@return boolean
 function URigHierarchy:IsValidIndex(InElementIndex) end
+
 ---@param InIndex int32
 ---@return boolean
 function URigHierarchy:IsSelectedByIndex(InIndex) end
+
 ---@param InKey FRigElementKey
 ---@return boolean
 function URigHierarchy:IsSelected(InKey) end
+
 ---@param InKey FRigElementKey
 ---@return boolean
 function URigHierarchy:IsProcedural(InKey) end
+
 ---@param InChild FRigElementKey
 ---@param InParent FRigElementKey
 ---@return boolean
 function URigHierarchy:IsParentedTo(InChild, InParent) end
+
 ---@param InElementIndex int32
 ---@return boolean
 function URigHierarchy:IsCurveValueSetByIndex(InElementIndex) end
+
 ---@param InKey FRigElementKey
 ---@return boolean
 function URigHierarchy:IsCurveValueSet(InKey) end
+
 ---@return boolean
 function URigHierarchy:IsControllerAvailable() end
+
 ---@param InItem FRigElementKey
 ---@param InTag FName
 ---@return boolean
 function URigHierarchy:HasTag(InItem, InTag) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@param DefaultValue FVector
 ---@return FVector
 function URigHierarchy:GetVectorMetadata(InItem, InMetadataName, DefaultValue) end
+
 ---@param InValue FRigControlValue
 ---@return FVector
 function URigHierarchy:GetVectorFromControlValue(InValue) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@return TArray<FVector>
 function URigHierarchy:GetVectorArrayMetadata(InItem, InMetadataName) end
+
 ---@param InValue FRigControlValue
 ---@return FVector2D
 function URigHierarchy:GetVector2DFromControlValue(InValue) end
+
 ---@param InValue FRigControlValue
 ---@return FTransformNoScale
 function URigHierarchy:GetTransformNoScaleFromControlValue(InValue) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@param DefaultValue FTransform
 ---@return FTransform
 function URigHierarchy:GetTransformMetadata(InItem, InMetadataName, DefaultValue) end
+
 ---@param InValue FRigControlValue
 ---@return FTransform
 function URigHierarchy:GetTransformFromControlValue(InValue) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@return TArray<FTransform>
 function URigHierarchy:GetTransformArrayMetadata(InItem, InMetadataName) end
+
 ---@param InItem FRigElementKey
 ---@return TArray<FName>
 function URigHierarchy:GetTags(InItem) end
+
 ---@param InTypeFilter ERigElementType
 ---@return TArray<FRigElementKey>
 function URigHierarchy:GetSelectedKeys(InTypeFilter) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@param DefaultValue FRotator
 ---@return FRotator
 function URigHierarchy:GetRotatorMetadata(InItem, InMetadataName, DefaultValue) end
+
 ---@param InValue FRigControlValue
 ---@return FRotator
 function URigHierarchy:GetRotatorFromControlValue(InValue) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@return TArray<FRotator>
 function URigHierarchy:GetRotatorArrayMetadata(InItem, InMetadataName) end
+
 ---@return TArray<FRigElementKey>
 function URigHierarchy:GetRootElementKeys() end
+
 ---@param bTraverse boolean
 ---@return TArray<FRigElementKey>
 function URigHierarchy:GetRigidBodyKeys(bTraverse) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@param DefaultValue FRigElementKey
 ---@return FRigElementKey
 function URigHierarchy:GetRigElementKeyMetadata(InItem, InMetadataName, DefaultValue) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@return TArray<FRigElementKey>
 function URigHierarchy:GetRigElementKeyArrayMetadata(InItem, InMetadataName) end
+
 ---@param bTraverse boolean
 ---@return TArray<FRigElementKey>
 function URigHierarchy:GetReferenceKeys(bTraverse) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@param DefaultValue FQuat
 ---@return FQuat
 function URigHierarchy:GetQuatMetadata(InItem, InMetadataName, DefaultValue) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@return TArray<FQuat>
 function URigHierarchy:GetQuatArrayMetadata(InItem, InMetadataName) end
+
 ---@param InKey FRigElementKey
 ---@return FRigElementKey
 function URigHierarchy:GetPreviousParent(InKey) end
+
 ---@param InKey FRigElementKey
 ---@return FName
 function URigHierarchy:GetPreviousName(InKey) end
+
 ---@param bInitial boolean
 ---@return FRigPose
 function URigHierarchy:GetPose(bInitial) end
+
 ---@param InChild FRigElementKey
 ---@param bInitial boolean
 ---@return TArray<FRigElementWeight>
 function URigHierarchy:GetParentWeightArray(InChild, bInitial) end
+
 ---@param InChild FRigElementKey
 ---@param InParent FRigElementKey
 ---@param bInitial boolean
 ---@return FRigElementWeight
 function URigHierarchy:GetParentWeight(InChild, InParent, bInitial) end
+
 ---@param InElementIndex int32
 ---@param bInitial boolean
 ---@return FTransform
 function URigHierarchy:GetParentTransformByIndex(InElementIndex, bInitial) end
+
 ---@param InKey FRigElementKey
 ---@param bInitial boolean
 ---@return FTransform
 function URigHierarchy:GetParentTransform(InKey, bInitial) end
+
 ---@param InKey FRigElementKey
 ---@param bRecursive boolean
 ---@return TArray<FRigElementKey>
 function URigHierarchy:GetParents(InKey, bRecursive) end
+
 ---@param InKey FRigElementKey
 ---@return int32
 function URigHierarchy:GetNumberOfParents(InKey) end
+
 ---@param bTraverse boolean
 ---@return TArray<FRigElementKey>
 function URigHierarchy:GetNullKeys(bTraverse) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@param DefaultValue FName
 ---@return FName
 function URigHierarchy:GetNameMetadata(InItem, InMetadataName, DefaultValue) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@return TArray<FName>
 function URigHierarchy:GetNameArrayMetadata(InItem, InMetadataName) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@return ERigMetadataType
 function URigHierarchy:GetMetadataType(InItem, InMetadataName) end
+
 ---@param InItem FRigElementKey
 ---@return TArray<FName>
 function URigHierarchy:GetMetadataNames(InItem) end
+
 ---@param InElementIndex int32
 ---@param bInitial boolean
 ---@return FTransform
 function URigHierarchy:GetLocalTransformByIndex(InElementIndex, bInitial) end
+
 ---@param InKey FRigElementKey
 ---@param bInitial boolean
 ---@return FTransform
 function URigHierarchy:GetLocalTransform(InKey, bInitial) end
+
 ---@param InKey FRigElementKey
 ---@return int32
 function URigHierarchy:GetLocalIndex_ForBlueprint(InKey) end
+
 ---@param InElementIndex int32
 ---@param bInitial boolean
 ---@return FTransform
 function URigHierarchy:GetLocalControlShapeTransformByIndex(InElementIndex, bInitial) end
+
 ---@param InKey FRigElementKey
 ---@param bInitial boolean
 ---@return FTransform
 function URigHierarchy:GetLocalControlShapeTransform(InKey, bInitial) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@param DefaultValue FLinearColor
 ---@return FLinearColor
 function URigHierarchy:GetLinearColorMetadata(InItem, InMetadataName, DefaultValue) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@return TArray<FLinearColor>
 function URigHierarchy:GetLinearColorArrayMetadata(InItem, InMetadataName) end
+
 ---@param InElementIndices TArray<int32>
 ---@return TArray<FRigElementKey>
 function URigHierarchy:GetKeys(InElementIndices) end
+
 ---@param InElementIndex int32
 ---@return FRigElementKey
 function URigHierarchy:GetKey(InElementIndex) end
+
 ---@param InValue FRigControlValue
 ---@return int32
 function URigHierarchy:GetIntFromControlValue(InValue) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@param DefaultValue int32
 ---@return int32
 function URigHierarchy:GetInt32Metadata(InItem, InMetadataName, DefaultValue) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@return TArray<int32>
 function URigHierarchy:GetInt32ArrayMetadata(InItem, InMetadataName) end
+
 ---@param InKey FRigElementKey
 ---@return int32
 function URigHierarchy:GetIndex_ForBlueprint(InKey) end
+
 ---@param InElementIndex int32
 ---@param bInitial boolean
 ---@return FTransform
 function URigHierarchy:GetGlobalTransformByIndex(InElementIndex, bInitial) end
+
 ---@param InKey FRigElementKey
 ---@param bInitial boolean
 ---@return FTransform
 function URigHierarchy:GetGlobalTransform(InKey, bInitial) end
+
 ---@param InElementIndex int32
 ---@param bInitial boolean
 ---@return FTransform
 function URigHierarchy:GetGlobalControlShapeTransformByIndex(InElementIndex, bInitial) end
+
 ---@param InKey FRigElementKey
 ---@param bInitial boolean
 ---@return FTransform
 function URigHierarchy:GetGlobalControlShapeTransform(InKey, bInitial) end
+
 ---@param InElementIndex int32
 ---@param bInitial boolean
 ---@return FTransform
 function URigHierarchy:GetGlobalControlOffsetTransformByIndex(InElementIndex, bInitial) end
+
 ---@param InKey FRigElementKey
 ---@param bInitial boolean
 ---@return FTransform
 function URigHierarchy:GetGlobalControlOffsetTransform(InKey, bInitial) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@param DefaultValue float
 ---@return float
 function URigHierarchy:GetFloatMetadata(InItem, InMetadataName, DefaultValue) end
+
 ---@param InValue FRigControlValue
 ---@return float
 function URigHierarchy:GetFloatFromControlValue(InValue) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@return TArray<float>
 function URigHierarchy:GetFloatArrayMetadata(InItem, InMetadataName) end
+
 ---@param InKey FRigElementKey
 ---@return FRigElementKey
 function URigHierarchy:GetFirstParent(InKey) end
+
 ---@param InValue FRigControlValue
 ---@return FEulerTransform
 function URigHierarchy:GetEulerTransformFromControlValue(InValue) end
+
 ---@param InKey FRigElementKey
 ---@return FRigElementKey
 function URigHierarchy:GetDefaultParent(InKey) end
+
 ---@param InElementIndex int32
 ---@return float
 function URigHierarchy:GetCurveValueByIndex(InElementIndex) end
+
 ---@param InKey FRigElementKey
 ---@return float
 function URigHierarchy:GetCurveValue(InKey) end
+
 ---@return TArray<FRigElementKey>
 function URigHierarchy:GetCurveKeys() end
+
 ---@param InElementIndex int32
 ---@param InValueType ERigControlValueType
 ---@return FRigControlValue
 function URigHierarchy:GetControlValueByIndex(InElementIndex, InValueType) end
+
 ---@param InKey FRigElementKey
 ---@param InValueType ERigControlValueType
 ---@return FRigControlValue
 function URigHierarchy:GetControlValue(InKey, InValueType) end
+
 ---@param InElementIndex int32
 ---@param bInitial boolean
 ---@return FRotator
 function URigHierarchy:GetControlPreferredRotatorByIndex(InElementIndex, bInitial) end
+
 ---@param InKey FRigElementKey
 ---@param bInitial boolean
 ---@return FRotator
 function URigHierarchy:GetControlPreferredRotator(InKey, bInitial) end
+
 ---@param InElementIndex int32
 ---@param bFromSettings boolean
 ---@return EEulerRotationOrder
 function URigHierarchy:GetControlPreferredEulerRotationOrderByIndex(InElementIndex, bFromSettings) end
+
 ---@param InKey FRigElementKey
 ---@param bFromSettings boolean
 ---@return EEulerRotationOrder
 function URigHierarchy:GetControlPreferredEulerRotationOrder(InKey, bFromSettings) end
+
 ---@param InElementIndex int32
 ---@param InRotationOrder EEulerRotationOrder
 ---@param bInitial boolean
 ---@return FVector
 function URigHierarchy:GetControlPreferredEulerAnglesByIndex(InElementIndex, InRotationOrder, bInitial) end
+
 ---@param InKey FRigElementKey
 ---@param InRotationOrder EEulerRotationOrder
 ---@param bInitial boolean
 ---@return FVector
 function URigHierarchy:GetControlPreferredEulerAngles(InKey, InRotationOrder, bInitial) end
+
 ---@param bCreateIfNeeded boolean
 ---@return URigHierarchyController
 function URigHierarchy:GetController(bCreateIfNeeded) end
+
 ---@param bTraverse boolean
 ---@return TArray<FRigElementKey>
 function URigHierarchy:GetControlKeys(bTraverse) end
+
 ---@param InKey FRigElementKey
 ---@param bRecursive boolean
 ---@return TArray<FRigElementKey>
 function URigHierarchy:GetChildren(InKey, bRecursive) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@param DefaultValue boolean
 ---@return boolean
 function URigHierarchy:GetBoolMetadata(InItem, InMetadataName, DefaultValue) end
+
 ---@param InItem FRigElementKey
 ---@param InMetadataName FName
 ---@return TArray<boolean>
 function URigHierarchy:GetBoolArrayMetadata(InItem, InMetadataName) end
+
 ---@param bTraverse boolean
 ---@return TArray<FRigElementKey>
 function URigHierarchy:GetBoneKeys(bTraverse) end
+
 ---@param bTraverse boolean
 ---@return TArray<FRigElementKey>
 function URigHierarchy:GetAllKeys_ForBlueprint(bTraverse) end
+
 ---@param InKey FRigElementKey
 ---@return FRigNullElement
 function URigHierarchy:FindNull_ForBlueprintOnly(InKey) end
+
 ---@param InKey FRigElementKey
 ---@return FRigControlElement
 function URigHierarchy:FindControl_ForBlueprintOnly(InKey) end
+
 ---@param InKey FRigElementKey
 ---@return FRigBoneElement
 function URigHierarchy:FindBone_ForBlueprintOnly(InKey) end
+
 ---@param InHierarchy URigHierarchy
 ---@param bCurrent boolean
 ---@param bInitial boolean
 ---@param bWeights boolean
 ---@param bMatchPoseInGlobalIfNeeded boolean
 function URigHierarchy:CopyPose(InHierarchy, bCurrent, bInitial, bWeights, bMatchPoseInGlobalIfNeeded) end
+
 ---@param InHierarchy URigHierarchy
 function URigHierarchy:CopyHierarchy(InHierarchy) end
+
 ---@param InKey FRigElementKey
 ---@return boolean
 function URigHierarchy:Contains_ForBlueprint(InKey) end
-
 
 ---@class URigHierarchyController : UObject
 ---@field bReportWarningsAndErrors boolean
@@ -5659,6 +5903,7 @@ URigHierarchyController = {}
 ---@param bPrintPythonCommand boolean
 ---@return boolean
 function URigHierarchyController:SetSelection(InKeys, bPrintPythonCommand) end
+
 ---@param InChild FRigElementKey
 ---@param InParent FRigElementKey
 ---@param bMaintainGlobalTransform boolean
@@ -5666,8 +5911,10 @@ function URigHierarchyController:SetSelection(InKeys, bPrintPythonCommand) end
 ---@param bPrintPythonCommand boolean
 ---@return boolean
 function URigHierarchyController:SetParent(InChild, InParent, bMaintainGlobalTransform, bSetupUndo, bPrintPythonCommand) end
+
 ---@param InHierarchy URigHierarchy
 function URigHierarchyController:SetHierarchy(InHierarchy) end
+
 ---@param InControl FRigElementKey
 ---@param InDisplayName FName
 ---@param bRenameElement boolean
@@ -5675,22 +5922,26 @@ function URigHierarchyController:SetHierarchy(InHierarchy) end
 ---@param bPrintPythonCommand boolean
 ---@return FName
 function URigHierarchyController:SetDisplayName(InControl, InDisplayName, bRenameElement, bSetupUndo, bPrintPythonCommand) end
+
 ---@param InKey FRigElementKey
 ---@param InSettings FRigControlSettings
 ---@param bSetupUndo boolean
 ---@return boolean
 function URigHierarchyController:SetControlSettings(InKey, InSettings, bSetupUndo) end
+
 ---@param InKey FRigElementKey
 ---@param bSelect boolean
 ---@param bClearSelection boolean
 ---@return boolean
 function URigHierarchyController:SelectElement(InKey, bSelect, bClearSelection) end
+
 ---@param InElement FRigElementKey
 ---@param InIndex int32
 ---@param bSetupUndo boolean
 ---@param bPrintPythonCommand boolean
 ---@return boolean
 function URigHierarchyController:ReorderElement(InElement, InIndex, bSetupUndo, bPrintPythonCommand) end
+
 ---@param InElement FRigElementKey
 ---@param InName FName
 ---@param bSetupUndo boolean
@@ -5698,24 +5949,29 @@ function URigHierarchyController:ReorderElement(InElement, InIndex, bSetupUndo, 
 ---@param bClearSelection boolean
 ---@return FRigElementKey
 function URigHierarchyController:RenameElement(InElement, InName, bSetupUndo, bPrintPythonCommand, bClearSelection) end
+
 ---@param InChild FRigElementKey
 ---@param InParent FRigElementKey
 ---@param bMaintainGlobalTransform boolean
 ---@param bSetupUndo boolean
 ---@param bPrintPythonCommand boolean
 ---@return boolean
-function URigHierarchyController:RemoveParent(InChild, InParent, bMaintainGlobalTransform, bSetupUndo, bPrintPythonCommand) end
+function URigHierarchyController:RemoveParent(InChild, InParent, bMaintainGlobalTransform, bSetupUndo,
+                                              bPrintPythonCommand) end
+
 ---@param InElement FRigElementKey
 ---@param bSetupUndo boolean
 ---@param bPrintPythonCommand boolean
 ---@return boolean
 function URigHierarchyController:RemoveElement(InElement, bSetupUndo, bPrintPythonCommand) end
+
 ---@param InChild FRigElementKey
 ---@param bMaintainGlobalTransform boolean
 ---@param bSetupUndo boolean
 ---@param bPrintPythonCommand boolean
 ---@return boolean
 function URigHierarchyController:RemoveAllParents(InChild, bMaintainGlobalTransform, bSetupUndo, bPrintPythonCommand) end
+
 ---@param InKeys TArray<FRigElementKey>
 ---@param InSettings FRigVMMirrorSettings
 ---@param bSelectNewElements boolean
@@ -5723,13 +5979,16 @@ function URigHierarchyController:RemoveAllParents(InChild, bMaintainGlobalTransf
 ---@param bPrintPythonCommands boolean
 ---@return TArray<FRigElementKey>
 function URigHierarchyController:MirrorElements(InKeys, InSettings, bSelectNewElements, bSetupUndo, bPrintPythonCommands) end
+
 ---@param InContent FString
 ---@param bReplaceExistingElements boolean
 ---@param bSelectNewElements boolean
 ---@param bSetupUndo boolean
 ---@param bPrintPythonCommands boolean
 ---@return TArray<FRigElementKey>
-function URigHierarchyController:ImportFromText(InContent, bReplaceExistingElements, bSelectNewElements, bSetupUndo, bPrintPythonCommands) end
+function URigHierarchyController:ImportFromText(InContent, bReplaceExistingElements, bSelectNewElements, bSetupUndo,
+                                                bPrintPythonCommands) end
+
 ---@param InSkeleton USkeleton
 ---@param InNameSpace FName
 ---@param bSelectCurves boolean
@@ -5737,6 +5996,7 @@ function URigHierarchyController:ImportFromText(InContent, bReplaceExistingEleme
 ---@param bPrintPythonCommand boolean
 ---@return TArray<FRigElementKey>
 function URigHierarchyController:ImportCurves(InSkeleton, InNameSpace, bSelectCurves, bSetupUndo, bPrintPythonCommand) end
+
 ---@param InSkeleton USkeleton
 ---@param InNameSpace FName
 ---@param bReplaceExistingBones boolean
@@ -5745,28 +6005,37 @@ function URigHierarchyController:ImportCurves(InSkeleton, InNameSpace, bSelectCu
 ---@param bSetupUndo boolean
 ---@param bPrintPythonCommand boolean
 ---@return TArray<FRigElementKey>
-function URigHierarchyController:ImportBones(InSkeleton, InNameSpace, bReplaceExistingBones, bRemoveObsoleteBones, bSelectBones, bSetupUndo, bPrintPythonCommand) end
+function URigHierarchyController:ImportBones(InSkeleton, InNameSpace, bReplaceExistingBones, bRemoveObsoleteBones,
+                                             bSelectBones, bSetupUndo, bPrintPythonCommand) end
+
 ---@return URigHierarchy
 function URigHierarchyController:GetHierarchy() end
+
 ---@param InKey FRigElementKey
 ---@return FRigControlSettings
 function URigHierarchyController:GetControlSettings(InKey) end
+
 ---@param InKeys TArray<FRigElementKey>
 ---@return FString
 function URigHierarchyController:ExportToText(InKeys) end
+
 ---@return FString
 function URigHierarchyController:ExportSelectionToText() end
+
 ---@param InKeys TArray<FRigElementKey>
 ---@param bSelectNewElements boolean
 ---@param bSetupUndo boolean
 ---@param bPrintPythonCommands boolean
 ---@return TArray<FRigElementKey>
 function URigHierarchyController:DuplicateElements(InKeys, bSelectNewElements, bSetupUndo, bPrintPythonCommands) end
+
 ---@param InKey FRigElementKey
 ---@return boolean
 function URigHierarchyController:DeselectElement(InKey) end
+
 ---@return boolean
 function URigHierarchyController:ClearSelection() end
+
 ---@param InName FName
 ---@param InParent FRigElementKey
 ---@param InSettings FRigRigidBodySettings
@@ -5774,7 +6043,9 @@ function URigHierarchyController:ClearSelection() end
 ---@param bSetupUndo boolean
 ---@param bPrintPythonCommand boolean
 ---@return FRigElementKey
-function URigHierarchyController:AddRigidBody(InName, InParent, InSettings, InLocalTransform, bSetupUndo, bPrintPythonCommand) end
+function URigHierarchyController:AddRigidBody(InName, InParent, InSettings, InLocalTransform, bSetupUndo,
+                                              bPrintPythonCommand) end
+
 ---@param InChild FRigElementKey
 ---@param InParent FRigElementKey
 ---@param InWeight float
@@ -5782,6 +6053,7 @@ function URigHierarchyController:AddRigidBody(InName, InParent, InSettings, InLo
 ---@param bSetupUndo boolean
 ---@return boolean
 function URigHierarchyController:AddParent(InChild, InParent, InWeight, bMaintainGlobalTransform, bSetupUndo) end
+
 ---@param InName FName
 ---@param InParent FRigElementKey
 ---@param InTransform FTransform
@@ -5789,13 +6061,16 @@ function URigHierarchyController:AddParent(InChild, InParent, InWeight, bMaintai
 ---@param bSetupUndo boolean
 ---@param bPrintPythonCommand boolean
 ---@return FRigElementKey
-function URigHierarchyController:AddNull(InName, InParent, InTransform, bTransformInGlobal, bSetupUndo, bPrintPythonCommand) end
+function URigHierarchyController:AddNull(InName, InParent, InTransform, bTransformInGlobal, bSetupUndo,
+                                         bPrintPythonCommand) end
+
 ---@param InName FName
 ---@param InValue float
 ---@param bSetupUndo boolean
 ---@param bPrintPythonCommand boolean
 ---@return FRigElementKey
 function URigHierarchyController:AddCurve(InName, InValue, bSetupUndo, bPrintPythonCommand) end
+
 ---@param InName FName
 ---@param InParent FRigElementKey
 ---@param InSettings FRigControlSettings
@@ -5803,7 +6078,9 @@ function URigHierarchyController:AddCurve(InName, InValue, bSetupUndo, bPrintPyt
 ---@param bSetupUndo boolean
 ---@param bPrintPythonCommand boolean
 ---@return FRigElementKey
-function URigHierarchyController:AddControl_ForBlueprint(InName, InParent, InSettings, InValue, bSetupUndo, bPrintPythonCommand) end
+function URigHierarchyController:AddControl_ForBlueprint(InName, InParent, InSettings, InValue, bSetupUndo,
+                                                         bPrintPythonCommand) end
+
 ---@param InName FName
 ---@param InParent FRigElementKey
 ---@param InTransform FTransform
@@ -5812,20 +6089,19 @@ function URigHierarchyController:AddControl_ForBlueprint(InName, InParent, InSet
 ---@param bSetupUndo boolean
 ---@param bPrintPythonCommand boolean
 ---@return FRigElementKey
-function URigHierarchyController:AddBone(InName, InParent, InTransform, bTransformInGlobal, InBoneType, bSetupUndo, bPrintPythonCommand) end
+function URigHierarchyController:AddBone(InName, InParent, InTransform, bTransformInGlobal, InBoneType, bSetupUndo,
+                                         bPrintPythonCommand) end
+
 ---@param InName FName
 ---@param InParentControl FRigElementKey
 ---@param InSettings FRigControlSettings
 ---@param bSetupUndo boolean
 ---@param bPrintPythonCommand boolean
 ---@return FRigElementKey
-function URigHierarchyController:AddAnimationChannel_ForBlueprint(InName, InParentControl, InSettings, bSetupUndo, bPrintPythonCommand) end
-
+function URigHierarchyController:AddAnimationChannel_ForBlueprint(InName, InParentControl, InSettings, bSetupUndo,
+                                                                  bPrintPythonCommand) end
 
 ---@class UTransformableControlHandle : UTransformableHandle
 ---@field ControlRig TSoftObjectPtr<UControlRig>
 ---@field ControlName FName
 UTransformableControlHandle = {}
-
-
-

@@ -6,6 +6,3 @@
 ---@field Cylinder UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Blacksmith_WaterBarrel_B_C = {}
-
-
-

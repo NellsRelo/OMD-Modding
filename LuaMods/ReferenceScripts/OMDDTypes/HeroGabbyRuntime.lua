@@ -24,16 +24,19 @@ URSTGameplayAbility_HitScanBeam = {}
 ---@param TargetData FGameplayAbilityTargetDataHandle
 ---@param Key FPredictionKey
 function URSTGameplayAbility_HitScanBeam:Server_ProcessTargetData(TargetData, Key) end
+
 function URSTGameplayAbility_HitScanBeam:OnPeriodicTick() end
+
 function URSTGameplayAbility_HitScanBeam:OnMontageInterrupted() end
+
 function URSTGameplayAbility_HitScanBeam:OnMontageCompleted() end
+
 function URSTGameplayAbility_HitScanBeam:OnMontageCancelled() end
+
 function URSTGameplayAbility_HitScanBeam:OnMontageBlendOut() end
+
 ---@param TargetData FGameplayAbilityTargetDataHandle
 function URSTGameplayAbility_HitScanBeam:BP_ProcessTargetData(TargetData) end
 
-
 ---@class URSTGameplayCueTranslator_Gabby : UGameplayCueTranslator
 URSTGameplayCueTranslator_Gabby = {}
-
-

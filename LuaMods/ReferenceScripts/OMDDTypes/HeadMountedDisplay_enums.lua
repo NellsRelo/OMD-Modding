@@ -121,4 +121,3 @@ EXRVisualType = {
     Hand = 1,
     EXRVisualType_MAX = 2,
 }
-

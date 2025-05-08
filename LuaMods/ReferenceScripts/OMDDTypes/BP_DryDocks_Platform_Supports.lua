@@ -9,6 +9,3 @@
 ---@field Wall00 URSTTrapGridBoxComponent
 ---@field Trap USceneComponent
 ABP_DryDocks_Platform_Supports_C = {}
-
-
-

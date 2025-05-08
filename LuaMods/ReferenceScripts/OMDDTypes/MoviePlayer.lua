@@ -5,6 +5,3 @@
 ---@field bMoviesAreSkippable boolean
 ---@field StartupMovies TArray<FString>
 UMoviePlayerSettings = {}
-
-
-

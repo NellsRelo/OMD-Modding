@@ -11,8 +11,8 @@ ABP_IceLance_Projectile_C = {}
 ---@param OtherComp UPrimitiveComponent
 ---@param NormalImpulse FVector
 ---@param Hit FHitResult
-function ABP_IceLance_Projectile_C:BndEvt__BP_BouncingBall_Projectile_CollisionComponent_K2Node_ComponentBoundEvent_1_ComponentHitSignature__DelegateSignature(HitComponent, OtherActor, OtherComp, NormalImpulse, Hit) end
+function ABP_IceLance_Projectile_C:BndEvt__BP_BouncingBall_Projectile_CollisionComponent_K2Node_ComponentBoundEvent_1_ComponentHitSignature__DelegateSignature(
+    HitComponent, OtherActor, OtherComp, NormalImpulse, Hit) end
+
 ---@param EntryPoint int32
 function ABP_IceLance_Projectile_C:ExecuteUbergraph_BP_IceLance_Projectile(EntryPoint) end
-
-

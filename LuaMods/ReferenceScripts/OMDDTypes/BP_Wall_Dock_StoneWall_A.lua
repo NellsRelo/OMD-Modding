@@ -9,6 +9,3 @@
 ---@field Wall_StoneWall_Castle_4x2_SM UStaticMeshComponent
 ---@field Wall00 URSTTrapGridBoxComponent
 ABP_Wall_Dock_StoneWall_A_C = {}
-
-
-

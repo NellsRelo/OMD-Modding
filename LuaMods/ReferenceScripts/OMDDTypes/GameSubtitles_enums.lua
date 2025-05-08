@@ -32,4 +32,3 @@ ESubtitleDisplayTextSize = {
     ExtraLarge = 4,
     ESubtitleDisplayTextSize_MAX = 5,
 }
-

@@ -34,6 +34,10 @@ FAnimBlueprintGeneratedConstantData = {}
 
 
 
+---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
+FAnimBlueprintGeneratedMutableData = {}
+
+
 ---@class UABP_Rift_Crystal_C : UAnimInstance
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance
@@ -71,21 +75,31 @@ UABP_Rift_Crystal_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_Rift_Crystal_C:AnimGraph(AnimGraph) end
+
 function UABP_Rift_Crystal_C:OnReady_9762D5864683FD93352DBEA957B308AF() end
+
 function UABP_Rift_Crystal_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Rift_Crystal_AnimGraphNode_TransitionResult_0086DFCE4FEED0C95B855B8A9E9F46FB() end
+
 function UABP_Rift_Crystal_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Rift_Crystal_AnimGraphNode_TransitionResult_EE7D83C44D69D0BC315B8EA7512961EF() end
+
 function UABP_Rift_Crystal_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Rift_Crystal_AnimGraphNode_TransitionResult_C456C50848D4DF7C6208DEB56CAEAE74() end
+
 function UABP_Rift_Crystal_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Rift_Crystal_AnimGraphNode_TransitionResult_3CA4F59F4BB85D0046A1B0B03A25DDDF() end
+
 function UABP_Rift_Crystal_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Rift_Crystal_AnimGraphNode_TransitionResult_473F70594AC2F847940A34B6D9422F6C() end
+
 function UABP_Rift_Crystal_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Rift_Crystal_AnimGraphNode_TransitionResult_520AF54A4FD1E576CEC96B96CEBA09DC() end
+
 function UABP_Rift_Crystal_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Rift_Crystal_AnimGraphNode_TransitionResult_294584A4499A4DBB82A502BC1C7FFD37() end
+
 ---@param Value int32
 function UABP_Rift_Crystal_C:InitialRiftPointsSet(Value) end
+
 ---@param OldValue int32
 ---@param NewValue int32
 function UABP_Rift_Crystal_C:OnRiftPointsChanged(OldValue, NewValue) end
+
 function UABP_Rift_Crystal_C:BlueprintBeginPlay() end
+
 ---@param EntryPoint int32
 function UABP_Rift_Crystal_C:ExecuteUbergraph_ABP_Rift_Crystal(EntryPoint) end
-
-

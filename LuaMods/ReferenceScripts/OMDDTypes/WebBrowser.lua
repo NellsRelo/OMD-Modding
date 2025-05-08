@@ -10,5 +10,3 @@ FWebJSFunction = {}
 
 ---@class FWebJSResponse : FWebJSCallbackBase
 FWebJSResponse = {}
-
-

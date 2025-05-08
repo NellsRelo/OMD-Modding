@@ -68,12 +68,17 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field AnimGraphNode_StateMachine FAnimNode_StateMachine
 ---@field AnimGraphNode_Slot FAnimNode_Slot
 ---@field AbilityActive boolean
----@field CooldownActive boolean
+---@field ['Reset Sequence'] UAnimSequenceBase
+---@field IsResetting boolean
 UABP_Ballista_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_Ballista_C:AnimGraph(AnimGraph) end
+
+function UABP_Ballista_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Ballista_AnimGraphNode_TransitionResult_31F8FB3E4CE5851C7CD56FA2D844263F() end
+
+---@param DeltaTimeX float
+function UABP_Ballista_C:BlueprintUpdateAnimation(DeltaTimeX) end
+
 ---@param EntryPoint int32
 function UABP_Ballista_C:ExecuteUbergraph_ABP_Ballista(EntryPoint) end
-
-

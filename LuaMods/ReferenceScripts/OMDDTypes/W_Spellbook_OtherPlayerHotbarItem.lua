@@ -8,7 +8,6 @@ UW_Spellbook_OtherPlayerHotbarItem_C = {}
 
 ---@param Inventory_Item ARSTInventoryItemInstance
 function UW_Spellbook_OtherPlayerHotbarItem_C:SetInventoryItem(Inventory_Item) end
+
 ---@param EntryPoint int32
 function UW_Spellbook_OtherPlayerHotbarItem_C:ExecuteUbergraph_W_Spellbook_OtherPlayerHotbarItem(EntryPoint) end
-
-

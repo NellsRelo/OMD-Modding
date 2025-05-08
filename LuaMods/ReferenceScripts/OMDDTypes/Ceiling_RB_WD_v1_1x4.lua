@@ -10,6 +10,3 @@
 ---@field Wall_Sec_2_4_RB UStaticMeshComponent
 ---@field Ceiling00 URSTTrapGridBoxComponent
 ACeiling_RB_WD_v1_1x4_C = {}
-
-
-

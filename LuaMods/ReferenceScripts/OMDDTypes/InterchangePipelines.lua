@@ -197,49 +197,60 @@ UInterchangePipelineMeshesUtilities = {}
 
 ---@param Context FInterchangePipelineMeshesUtilitiesContext
 function UInterchangePipelineMeshesUtilities:SetContext(Context) end
+
 ---@param MeshInstanceUid FString
 ---@return boolean
 function UInterchangePipelineMeshesUtilities:IsValidMeshInstanceUid(MeshInstanceUid) end
+
 ---@param MeshGeometryUid FString
 ---@return boolean
 function UInterchangePipelineMeshesUtilities:IsValidMeshGeometryUid(MeshGeometryUid) end
+
 ---@param MeshInstanceUid FString
 ---@return FString
 function UInterchangePipelineMeshesUtilities:GetMeshInstanceSkeletonRootUid(MeshInstanceUid) end
+
 ---@param MeshInstanceUid FString
 ---@return FInterchangeMeshInstance
 function UInterchangePipelineMeshesUtilities:GetMeshInstanceByUid(MeshInstanceUid) end
+
 ---@param MeshGeometryUid FString
 ---@return FString
 function UInterchangePipelineMeshesUtilities:GetMeshGeometrySkeletonRootUid(MeshGeometryUid) end
+
 ---@param MeshGeometryUid FString
 ---@return FInterchangeMeshGeometry
 function UInterchangePipelineMeshesUtilities:GetMeshGeometryByUid(MeshGeometryUid) end
+
 ---@param MeshInstanceUids TArray<FString>
 function UInterchangePipelineMeshesUtilities:GetAllStaticMeshInstance(MeshInstanceUids) end
+
 ---@param MeshGeometryUids TArray<FString>
 function UInterchangePipelineMeshesUtilities:GetAllStaticMeshGeometry(MeshGeometryUids) end
+
 ---@param MeshInstanceUids TArray<FString>
 function UInterchangePipelineMeshesUtilities:GetAllSkinnedMeshInstance(MeshInstanceUids) end
+
 ---@param MeshGeometryUids TArray<FString>
 function UInterchangePipelineMeshesUtilities:GetAllSkinnedMeshGeometry(MeshGeometryUids) end
+
 ---@param MeshGeometryUid FString
 ---@param MeshInstanceUids TArray<FString>
 function UInterchangePipelineMeshesUtilities:GetAllMeshInstanceUidsUsingMeshGeometryUid(MeshGeometryUid, MeshInstanceUids) end
+
 ---@param MeshInstanceUids TArray<FString>
 function UInterchangePipelineMeshesUtilities:GetAllMeshInstanceUids(MeshInstanceUids) end
+
 ---@param MeshGeometryUids TArray<FString>
 function UInterchangePipelineMeshesUtilities:GetAllMeshGeometryNotInstanced(MeshGeometryUids) end
+
 ---@param MeshGeometryUids TArray<FString>
 function UInterchangePipelineMeshesUtilities:GetAllMeshGeometry(MeshGeometryUids) end
+
 ---@param BaseNodeContainer UInterchangeBaseNodeContainer
 ---@return UInterchangePipelineMeshesUtilities
 function UInterchangePipelineMeshesUtilities:CreateInterchangePipelineMeshesUtilities(BaseNodeContainer) end
 
-
 ---@class UMaterialXPipelineSettings : UDeveloperSettings
 ---@field PredefinedSurfaceShaders TMap<EInterchangeMaterialXShaders, FSoftObjectPath>
 UMaterialXPipelineSettings = {}
-
-
-

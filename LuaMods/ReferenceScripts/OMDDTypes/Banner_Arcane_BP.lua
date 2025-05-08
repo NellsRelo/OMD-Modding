@@ -7,6 +7,3 @@
 ---@field SharedRoot USceneComponent
 ---@field DefaultSceneRoot USceneComponent
 ABanner_Arcane_BP_C = {}
-
-
-

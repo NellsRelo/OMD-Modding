@@ -32,15 +32,17 @@ UCableComponent = {}
 ---@param Component USceneComponent
 ---@param SocketName FName
 function UCableComponent:SetAttachEndToComponent(Component, SocketName) end
+
 ---@param Actor AActor
 ---@param ComponentProperty FName
 ---@param SocketName FName
 function UCableComponent:SetAttachEndTo(Actor, ComponentProperty, SocketName) end
+
 ---@param Locations TArray<FVector>
 function UCableComponent:GetCableParticleLocations(Locations) end
+
 ---@return USceneComponent
 function UCableComponent:GetAttachedComponent() end
+
 ---@return AActor
 function UCableComponent:GetAttachedActor() end
-
-

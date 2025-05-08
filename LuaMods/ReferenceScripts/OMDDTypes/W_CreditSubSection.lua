@@ -13,8 +13,8 @@ UW_CreditSubSection_C = {}
 ---@param Justification ETextJustify::Type
 ---@param bAlphabetizeNames boolean
 function UW_CreditSubSection_C:NewFunction(InTextArray, Justification, bAlphabetizeNames) end
+
 function UW_CreditSubSection_C:Construct() end
+
 ---@param EntryPoint int32
 function UW_CreditSubSection_C:ExecuteUbergraph_W_CreditSubSection(EntryPoint) end
-
-

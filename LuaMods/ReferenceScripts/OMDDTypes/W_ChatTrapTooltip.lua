@@ -4,7 +4,6 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field Image_Background UImage
 ---@field Image_Thread UImage
----@field Overlay_25 UOverlay
 ---@field Portrait UImage
 ---@field PortraitMask URetainerBox
 ---@field ScaleBox_927 UScaleBox
@@ -16,10 +15,11 @@
 UW_ChatTrapTooltip_C = {}
 
 function UW_ChatTrapTooltip_C:SetPortrait() end
+
 ---@param PrimaryDataAsset UPrimaryDataAsset
 function UW_ChatTrapTooltip_C:BP_ConstructFromText(PrimaryDataAsset) end
+
 function UW_ChatTrapTooltip_C:BP_Refresh() end
+
 ---@param EntryPoint int32
 function UW_ChatTrapTooltip_C:ExecuteUbergraph_W_ChatTrapTooltip(EntryPoint) end
-
-

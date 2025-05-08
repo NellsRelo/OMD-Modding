@@ -4,4 +4,3 @@ ENiagaraDragCoefficientShapeMode = {
     NewEnumerator1 = 1,
     ENiagaraDragCoefficientShapeMode_MAX = 2,
 }
-

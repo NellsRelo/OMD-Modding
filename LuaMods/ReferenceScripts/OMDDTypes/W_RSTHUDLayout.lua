@@ -48,23 +48,32 @@ UW_RSTHUDLayout_C = {}
 
 ---@return int32
 function UW_RSTHUDLayout_C:BP_GetNPEStepsNum() end
+
 ---@return boolean
 function UW_RSTHUDLayout_C:BP_ShouldStartNPE() end
+
 function UW_RSTHUDLayout_C:BP_StartNPE() end
+
 function UW_RSTHUDLayout_C:BP_EndNPE() end
+
 ---@param Step int32
 function UW_RSTHUDLayout_C:BP_OnNPEStepEntered(Step) end
+
 ---@param Step int32
 function UW_RSTHUDLayout_C:BP_OnNPEStepExited(Step) end
+
 ---@param MyGeometry FGeometry
 ---@param InDeltaTime float
 function UW_RSTHUDLayout_C:Tick(MyGeometry, InDeltaTime) end
+
 function UW_RSTHUDLayout_C:BP_OnActivated() end
+
 function UW_RSTHUDLayout_C:BP_OnDeactivated() end
+
 function UW_RSTHUDLayout_C:OnMessageQueueChanged() end
+
 ---@param bIsShowing boolean
 function UW_RSTHUDLayout_C:OnLoadingScreenVisibilityChanged(bIsShowing) end
+
 ---@param EntryPoint int32
 function UW_RSTHUDLayout_C:ExecuteUbergraph_W_RSTHUDLayout(EntryPoint) end
-
-

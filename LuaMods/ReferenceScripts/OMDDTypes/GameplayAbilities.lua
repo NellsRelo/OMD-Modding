@@ -25,8 +25,8 @@ AAbilitySystemTestPawn = {}
 AGameplayAbilityTargetActor = {}
 
 function AGameplayAbilityTargetActor:ConfirmTargeting() end
-function AGameplayAbilityTargetActor:CancelTargeting() end
 
+function AGameplayAbilityTargetActor:CancelTargeting() end
 
 ---@class AGameplayAbilityTargetActor_ActorPlacement : AGameplayAbilityTargetActor_GroundTrace
 ---@field PlacedActorClass TObjectPtr<UClass>
@@ -73,17 +73,21 @@ AGameplayAbilityWorldReticle = {}
 ---@param ParamName FName
 ---@param Value FVector
 function AGameplayAbilityWorldReticle:SetReticleMaterialParamVector(ParamName, Value) end
+
 ---@param ParamName FName
 ---@param Value float
 function AGameplayAbilityWorldReticle:SetReticleMaterialParamFloat(ParamName, Value) end
+
 ---@param bNewValue boolean
 function AGameplayAbilityWorldReticle:OnValidTargetChanged(bNewValue) end
+
 ---@param bNewValue boolean
 function AGameplayAbilityWorldReticle:OnTargetingAnActor(bNewValue) end
+
 function AGameplayAbilityWorldReticle:OnParametersInitialized() end
+
 ---@param bFaceIn2D boolean
 function AGameplayAbilityWorldReticle:FaceTowardSource(bFaceIn2D) end
-
 
 ---@class AGameplayAbilityWorldReticle_ActorVisualization : AGameplayAbilityWorldReticle
 ---@field CollisionComponent UCapsuleComponent
@@ -112,26 +116,31 @@ AGameplayCueNotify_Actor = {}
 ---@param Parameters FGameplayCueParameters
 ---@return boolean
 function AGameplayCueNotify_Actor:WhileActive(MyTarget, Parameters) end
+
 ---@param MyTarget AActor
 ---@param Parameters FGameplayCueParameters
 ---@return boolean
 function AGameplayCueNotify_Actor:OnRemove(MyTarget, Parameters) end
+
 ---@param DestroyedActor AActor
 function AGameplayCueNotify_Actor:OnOwnerDestroyed(DestroyedActor) end
+
 ---@param MyTarget AActor
 ---@param Parameters FGameplayCueParameters
 ---@return boolean
 function AGameplayCueNotify_Actor:OnExecute(MyTarget, Parameters) end
+
 ---@param MyTarget AActor
 ---@param Parameters FGameplayCueParameters
 ---@return boolean
 function AGameplayCueNotify_Actor:OnActive(MyTarget, Parameters) end
+
 ---@param MyTarget AActor
 ---@param EventType EGameplayCueEvent::Type
 ---@param Parameters FGameplayCueParameters
 function AGameplayCueNotify_Actor:K2_HandleGameplayCue(MyTarget, EventType, Parameters) end
-function AGameplayCueNotify_Actor:K2_EndGameplayCue() end
 
+function AGameplayCueNotify_Actor:K2_EndGameplayCue() end
 
 ---@class AGameplayCueNotify_BurstLatent : AGameplayCueNotify_Actor
 ---@field DefaultSpawnCondition FGameplayCueNotify_SpawnCondition
@@ -144,7 +153,6 @@ AGameplayCueNotify_BurstLatent = {}
 ---@param Parameters FGameplayCueParameters
 ---@param SpawnResults FGameplayCueNotify_SpawnResult
 function AGameplayCueNotify_BurstLatent:OnBurst(Target, Parameters, SpawnResults) end
-
 
 ---@class AGameplayCueNotify_Looping : AGameplayCueNotify_Actor
 ---@field DefaultSpawnCondition FGameplayCueNotify_SpawnCondition
@@ -163,19 +171,21 @@ AGameplayCueNotify_Looping = {}
 ---@param Parameters FGameplayCueParameters
 ---@param SpawnResults FGameplayCueNotify_SpawnResult
 function AGameplayCueNotify_Looping:OnRemoval(Target, Parameters, SpawnResults) end
+
 ---@param Target AActor
 ---@param Parameters FGameplayCueParameters
 ---@param SpawnResults FGameplayCueNotify_SpawnResult
 function AGameplayCueNotify_Looping:OnRecurring(Target, Parameters, SpawnResults) end
+
 ---@param Target AActor
 ---@param Parameters FGameplayCueParameters
 ---@param SpawnResults FGameplayCueNotify_SpawnResult
 function AGameplayCueNotify_Looping:OnLoopingStart(Target, Parameters, SpawnResults) end
+
 ---@param Target AActor
 ---@param Parameters FGameplayCueParameters
 ---@param SpawnResults FGameplayCueNotify_SpawnResult
 function AGameplayCueNotify_Looping:OnApplication(Target, Parameters, SpawnResults) end
-
 
 ---@class FAbilityEndedData
 ---@field AbilityThatEnded UGameplayAbility
@@ -1196,10 +1206,10 @@ IAbilitySystemReplicationProxyInterface = {}
 IGameplayCueInterface = {}
 
 function IGameplayCueInterface:ForwardGameplayCueToParent() end
+
 ---@param EventType EGameplayCueEvent::Type
 ---@param Parameters FGameplayCueParameters
 function IGameplayCueInterface:BlueprintCustomHandler(EventType, Parameters) end
-
 
 ---@class ITickableAttributeSetInterface : IInterface
 ITickableAttributeSetInterface = {}
@@ -1216,7 +1226,6 @@ UAbilityAsync = {}
 
 function UAbilityAsync:EndAction() end
 
-
 ---@class UAbilityAsync_WaitAttributeChanged : UAbilityAsync
 ---@field Changed FAbilityAsync_WaitAttributeChangedChanged
 UAbilityAsync_WaitAttributeChanged = {}
@@ -1226,11 +1235,12 @@ UAbilityAsync_WaitAttributeChanged = {}
 ---@param OnlyTriggerOnce boolean
 ---@return UAbilityAsync_WaitAttributeChanged
 function UAbilityAsync_WaitAttributeChanged:WaitForAttributeChanged(TargetActor, Attribute, OnlyTriggerOnce) end
+
 ---@param Attribute FGameplayAttribute
 ---@param NewValue float
 ---@param OldValue float
-function UAbilityAsync_WaitAttributeChanged:AsyncWaitAttributeChangedDelegate__DelegateSignature(Attribute, NewValue, OldValue) end
-
+function UAbilityAsync_WaitAttributeChanged:AsyncWaitAttributeChangedDelegate__DelegateSignature(Attribute, NewValue,
+                                                                                                 OldValue) end
 
 ---@class UAbilityAsync_WaitGameplayEffectApplied : UAbilityAsync
 ---@field OnApplied FAbilityAsync_WaitGameplayEffectAppliedOnApplied
@@ -1243,12 +1253,15 @@ UAbilityAsync_WaitGameplayEffectApplied = {}
 ---@param TriggerOnce boolean
 ---@param ListenForPeriodicEffect boolean
 ---@return UAbilityAsync_WaitGameplayEffectApplied
-function UAbilityAsync_WaitGameplayEffectApplied:WaitGameplayEffectAppliedToActor(TargetActor, SourceFilter, SourceTagRequirements, TargetTagRequirements, TriggerOnce, ListenForPeriodicEffect) end
+function UAbilityAsync_WaitGameplayEffectApplied:WaitGameplayEffectAppliedToActor(TargetActor, SourceFilter,
+                                                                                  SourceTagRequirements,
+                                                                                  TargetTagRequirements, TriggerOnce,
+                                                                                  ListenForPeriodicEffect) end
+
 ---@param Source AActor
 ---@param SpecHandle FGameplayEffectSpecHandle
 ---@param ActiveHandle FActiveGameplayEffectHandle
 function UAbilityAsync_WaitGameplayEffectApplied:OnAppliedDelegate__DelegateSignature(Source, SpecHandle, ActiveHandle) end
-
 
 ---@class UAbilityAsync_WaitGameplayEvent : UAbilityAsync
 ---@field EventReceived FAbilityAsync_WaitGameplayEventEventReceived
@@ -1260,9 +1273,9 @@ UAbilityAsync_WaitGameplayEvent = {}
 ---@param OnlyMatchExact boolean
 ---@return UAbilityAsync_WaitGameplayEvent
 function UAbilityAsync_WaitGameplayEvent:WaitGameplayEventToActor(TargetActor, EventTag, OnlyTriggerOnce, OnlyMatchExact) end
+
 ---@param Payload FGameplayEventData
 function UAbilityAsync_WaitGameplayEvent:EventReceivedDelegate__DelegateSignature(Payload) end
-
 
 ---@class UAbilityAsync_WaitGameplayTag : UAbilityAsync
 UAbilityAsync_WaitGameplayTag = {}
@@ -1278,7 +1291,6 @@ UAbilityAsync_WaitGameplayTagAdded = {}
 ---@return UAbilityAsync_WaitGameplayTagAdded
 function UAbilityAsync_WaitGameplayTagAdded:WaitGameplayTagAddToActor(TargetActor, Tag, OnlyTriggerOnce) end
 
-
 ---@class UAbilityAsync_WaitGameplayTagQuery : UAbilityAsync
 ---@field Triggered FAbilityAsync_WaitGameplayTagQueryTriggered
 UAbilityAsync_WaitGameplayTagQuery = {}
@@ -1288,8 +1300,8 @@ UAbilityAsync_WaitGameplayTagQuery = {}
 ---@param TriggerCondition EWaitGameplayTagQueryTriggerCondition
 ---@param bOnlyTriggerOnce boolean
 ---@return UAbilityAsync_WaitGameplayTagQuery
-function UAbilityAsync_WaitGameplayTagQuery:WaitGameplayTagQueryOnActor(TargetActor, TagQuery, TriggerCondition, bOnlyTriggerOnce) end
-
+function UAbilityAsync_WaitGameplayTagQuery:WaitGameplayTagQueryOnActor(TargetActor, TagQuery, TriggerCondition,
+                                                                        bOnlyTriggerOnce) end
 
 ---@class UAbilityAsync_WaitGameplayTagRemoved : UAbilityAsync_WaitGameplayTag
 ---@field Removed FAbilityAsync_WaitGameplayTagRemovedRemoved
@@ -1301,7 +1313,6 @@ UAbilityAsync_WaitGameplayTagRemoved = {}
 ---@return UAbilityAsync_WaitGameplayTagRemoved
 function UAbilityAsync_WaitGameplayTagRemoved:WaitGameplayTagRemoveFromActor(TargetActor, Tag, OnlyTriggerOnce) end
 
-
 ---@class UAbilitySystemBlueprintLibrary : UBlueprintFunctionLibrary
 UAbilitySystemBlueprintLibrary = {}
 
@@ -1309,56 +1320,69 @@ UAbilitySystemBlueprintLibrary = {}
 ---@param Index int32
 ---@return boolean
 function UAbilitySystemBlueprintLibrary:TargetDataHasOrigin(TargetData, Index) end
+
 ---@param HitResult FGameplayAbilityTargetDataHandle
 ---@param Index int32
 ---@return boolean
 function UAbilitySystemBlueprintLibrary:TargetDataHasHitResult(HitResult, Index) end
+
 ---@param TargetData FGameplayAbilityTargetDataHandle
 ---@param Index int32
 ---@return boolean
 function UAbilitySystemBlueprintLibrary:TargetDataHasEndPoint(TargetData, Index) end
+
 ---@param TargetData FGameplayAbilityTargetDataHandle
 ---@param Index int32
 ---@return boolean
 function UAbilitySystemBlueprintLibrary:TargetDataHasActor(TargetData, Index) end
+
 ---@param SpecHandle FGameplayEffectSpecHandle
 ---@return FGameplayEffectSpecHandle
 function UAbilitySystemBlueprintLibrary:SetStackCountToMax(SpecHandle) end
+
 ---@param SpecHandle FGameplayEffectSpecHandle
 ---@param StackCount int32
 ---@return FGameplayEffectSpecHandle
 function UAbilitySystemBlueprintLibrary:SetStackCount(SpecHandle, StackCount) end
+
 ---@param SpecHandle FGameplayEffectSpecHandle
 ---@param Duration float
 ---@return FGameplayEffectSpecHandle
 function UAbilitySystemBlueprintLibrary:SetDuration(SpecHandle, Duration) end
+
 ---@param Actor AActor
 ---@param EventTag FGameplayTag
 ---@param Payload FGameplayEventData
 function UAbilitySystemBlueprintLibrary:SendGameplayEventToActor(Actor, EventTag, Payload) end
+
 ---@param Actor AActor
 ---@param GameplayTags FGameplayTagContainer
 ---@param bShouldReplicate boolean
 ---@return boolean
 function UAbilitySystemBlueprintLibrary:RemoveLooseGameplayTags(Actor, GameplayTags, bShouldReplicate) end
+
 ---@param AttributeA FGameplayAttribute
 ---@param AttributeB FGameplayAttribute
 ---@return boolean
 function UAbilitySystemBlueprintLibrary:NotEqual_GameplayAttributeGameplayAttribute(AttributeA, AttributeB) end
+
 ---@param A FGameplayAbilitySpecHandle
 ---@param B FGameplayAbilitySpecHandle
 ---@return boolean
 function UAbilitySystemBlueprintLibrary:NotEqual_GameplayAbilitySpecHandle(A, B) end
+
 ---@param A FActiveGameplayEffectHandle
 ---@param B FActiveGameplayEffectHandle
 ---@return boolean
 function UAbilitySystemBlueprintLibrary:NotEqual_ActiveGameplayEffectHandle(A, B) end
+
 ---@param InGameplayEffect UGameplayEffect
 ---@param InInstigator AActor
 ---@param InEffectCauser AActor
 ---@param InLevel float
 ---@return FGameplayEffectSpecHandle
 function UAbilitySystemBlueprintLibrary:MakeSpecHandle(InGameplayEffect, InInstigator, InEffectCauser, InLevel) end
+
 ---@param NormalizedMagnitude float
 ---@param RawMagnitude float
 ---@param EffectContext FGameplayEffectContextHandle
@@ -1378,7 +1402,16 @@ function UAbilitySystemBlueprintLibrary:MakeSpecHandle(InGameplayEffect, InInsti
 ---@param bReplicateLocationWhenUsingMinimalRepProxy boolean
 ---@param TagParameters TArray<FGameplayTagPair>
 ---@return FGameplayCueParameters
-function UAbilitySystemBlueprintLibrary:MakeGameplayCueParametersWithFloatParams(NormalizedMagnitude, RawMagnitude, EffectContext, MatchedTagName, OriginalTag, AggregatedSourceTags, AggregatedTargetTags, Location, Normal, Instigator, EffectCauser, SourceObject, PhysicalMaterial, GameplayEffectLevel, AbilityLevel, TargetAttachComponent, bReplicateLocationWhenUsingMinimalRepProxy, TagParameters) end
+function UAbilitySystemBlueprintLibrary:MakeGameplayCueParametersWithFloatParams(NormalizedMagnitude, RawMagnitude,
+                                                                                 EffectContext, MatchedTagName,
+                                                                                 OriginalTag, AggregatedSourceTags,
+                                                                                 AggregatedTargetTags, Location, Normal,
+                                                                                 Instigator, EffectCauser, SourceObject,
+                                                                                 PhysicalMaterial, GameplayEffectLevel,
+                                                                                 AbilityLevel, TargetAttachComponent,
+                                                                                 bReplicateLocationWhenUsingMinimalRepProxy,
+                                                                                 TagParameters) end
+
 ---@param NormalizedMagnitude float
 ---@param RawMagnitude float
 ---@param EffectContext FGameplayEffectContextHandle
@@ -1397,162 +1430,213 @@ function UAbilitySystemBlueprintLibrary:MakeGameplayCueParametersWithFloatParams
 ---@param TargetAttachComponent USceneComponent
 ---@param bReplicateLocationWhenUsingMinimalRepProxy boolean
 ---@return FGameplayCueParameters
-function UAbilitySystemBlueprintLibrary:MakeGameplayCueParameters(NormalizedMagnitude, RawMagnitude, EffectContext, MatchedTagName, OriginalTag, AggregatedSourceTags, AggregatedTargetTags, Location, Normal, Instigator, EffectCauser, SourceObject, PhysicalMaterial, GameplayEffectLevel, AbilityLevel, TargetAttachComponent, bReplicateLocationWhenUsingMinimalRepProxy) end
+function UAbilitySystemBlueprintLibrary:MakeGameplayCueParameters(NormalizedMagnitude, RawMagnitude, EffectContext,
+                                                                  MatchedTagName, OriginalTag, AggregatedSourceTags,
+                                                                  AggregatedTargetTags, Location, Normal, Instigator,
+                                                                  EffectCauser, SourceObject, PhysicalMaterial,
+                                                                  GameplayEffectLevel, AbilityLevel,
+                                                                  TargetAttachComponent,
+                                                                  bReplicateLocationWhenUsingMinimalRepProxy) end
+
 ---@param Filter FGameplayTargetDataFilter
 ---@param FilterActor AActor
 ---@return FGameplayTargetDataFilterHandle
 function UAbilitySystemBlueprintLibrary:MakeFilterHandle(Filter, FilterActor) end
+
 ---@param Attribute FGameplayAttribute
 ---@return boolean
 function UAbilitySystemBlueprintLibrary:IsValid(Attribute) end
+
 ---@param Parameters FGameplayCueParameters
 ---@return boolean
 function UAbilitySystemBlueprintLibrary:IsInstigatorLocallyControlledPlayer(Parameters) end
+
 ---@param Parameters FGameplayCueParameters
 ---@return boolean
 function UAbilitySystemBlueprintLibrary:IsInstigatorLocallyControlled(Parameters) end
+
 ---@param Parameters FGameplayCueParameters
 ---@return boolean
 function UAbilitySystemBlueprintLibrary:HasHitResult(Parameters) end
+
 ---@param TargetData FGameplayAbilityTargetDataHandle
 ---@param Index int32
 ---@return FTransform
 function UAbilitySystemBlueprintLibrary:GetTargetDataOrigin(TargetData, Index) end
+
 ---@param TargetData FGameplayAbilityTargetDataHandle
 ---@param Index int32
 ---@return FTransform
 function UAbilitySystemBlueprintLibrary:GetTargetDataEndPointTransform(TargetData, Index) end
+
 ---@param TargetData FGameplayAbilityTargetDataHandle
 ---@param Index int32
 ---@return FVector
 function UAbilitySystemBlueprintLibrary:GetTargetDataEndPoint(TargetData, Index) end
+
 ---@param Parameters FGameplayCueParameters
 ---@param Tag FGameplayTag
 ---@param OutVal float
 ---@return boolean
 function UAbilitySystemBlueprintLibrary:GetTagValue(Parameters, Tag, OutVal) end
+
 ---@param Parameters FGameplayCueParameters
 ---@return FVector
 function UAbilitySystemBlueprintLibrary:GetOrigin(Parameters) end
+
 ---@param SpecHandle FGameplayEffectSpecHandle
 ---@param Attribute FGameplayAttribute
 ---@return float
 function UAbilitySystemBlueprintLibrary:GetModifiedAttributeMagnitude(SpecHandle, Attribute) end
+
 ---@param Parameters FGameplayCueParameters
 ---@return FTransform
 function UAbilitySystemBlueprintLibrary:GetInstigatorTransform(Parameters) end
+
 ---@param Parameters FGameplayCueParameters
 ---@return AActor
 function UAbilitySystemBlueprintLibrary:GetInstigatorActor(Parameters) end
+
 ---@param HitResult FGameplayAbilityTargetDataHandle
 ---@param Index int32
 ---@return FHitResult
 function UAbilitySystemBlueprintLibrary:GetHitResultFromTargetData(HitResult, Index) end
+
 ---@param Parameters FGameplayCueParameters
 ---@return FHitResult
 function UAbilitySystemBlueprintLibrary:GetHitResult(Parameters) end
+
 ---@param EffectClass TSubclassOf<UGameplayEffect>
 ---@param DataType TSubclassOf<UGameplayEffectUIData>
 ---@return UGameplayEffectUIData
 function UAbilitySystemBlueprintLibrary:GetGameplayEffectUIData(EffectClass, DataType) end
+
 ---@param ActiveHandle FActiveGameplayEffectHandle
 ---@return UGameplayEffect
 function UAbilitySystemBlueprintLibrary:GetGameplayEffectFromActiveEffectHandle(ActiveHandle) end
+
 ---@param TargetActor AActor
 ---@param Parameters FGameplayCueParameters
 ---@param Location FVector
 ---@param Normal FVector
 ---@return boolean
 function UAbilitySystemBlueprintLibrary:GetGameplayCueEndLocationAndNormal(TargetActor, Parameters, Location, Normal) end
+
 ---@param TargetActor AActor
 ---@param Parameters FGameplayCueParameters
 ---@param Direction FVector
 ---@return boolean
 function UAbilitySystemBlueprintLibrary:GetGameplayCueDirection(TargetActor, Parameters, Direction) end
+
 ---@param AbilitySystem UAbilitySystemComponent
 ---@param AbilitySpecHandle FGameplayAbilitySpecHandle
 ---@param bIsInstance boolean
 ---@return UGameplayAbility
 function UAbilitySystemBlueprintLibrary:GetGameplayAbilityFromSpecHandle(AbilitySystem, AbilitySpecHandle, bIsInstance) end
+
 ---@param AbilitySystem UAbilitySystemComponent
 ---@param Attribute FGameplayAttribute
 ---@param bSuccessfullyFoundAttribute boolean
 ---@return float
-function UAbilitySystemBlueprintLibrary:GetFloatAttributeFromAbilitySystemComponent(AbilitySystem, Attribute, bSuccessfullyFoundAttribute) end
+function UAbilitySystemBlueprintLibrary:GetFloatAttributeFromAbilitySystemComponent(AbilitySystem, Attribute,
+                                                                                    bSuccessfullyFoundAttribute) end
+
 ---@param AbilitySystemComponent UAbilitySystemComponent
 ---@param Attribute FGameplayAttribute
 ---@param bSuccessfullyFoundAttribute boolean
 ---@return float
-function UAbilitySystemBlueprintLibrary:GetFloatAttributeBaseFromAbilitySystemComponent(AbilitySystemComponent, Attribute, bSuccessfullyFoundAttribute) end
+function UAbilitySystemBlueprintLibrary:GetFloatAttributeBaseFromAbilitySystemComponent(AbilitySystemComponent, Attribute,
+                                                                                        bSuccessfullyFoundAttribute) end
+
 ---@param Actor AActor
 ---@param Attribute FGameplayAttribute
 ---@param bSuccessfullyFoundAttribute boolean
 ---@return float
 function UAbilitySystemBlueprintLibrary:GetFloatAttributeBase(Actor, Attribute, bSuccessfullyFoundAttribute) end
+
 ---@param Actor AActor
 ---@param Attribute FGameplayAttribute
 ---@param bSuccessfullyFoundAttribute boolean
 ---@return float
 function UAbilitySystemBlueprintLibrary:GetFloatAttribute(Actor, Attribute, bSuccessfullyFoundAttribute) end
+
 ---@param SpecHandle FGameplayEffectSpecHandle
 ---@return FGameplayEffectContextHandle
 function UAbilitySystemBlueprintLibrary:GetEffectContext(SpecHandle) end
+
 ---@param Attribute FGameplayAttribute
 ---@return FString
 function UAbilitySystemBlueprintLibrary:GetDebugStringFromGameplayAttribute(Attribute) end
+
 ---@param TargetData FGameplayAbilityTargetDataHandle
 ---@return int32
 function UAbilitySystemBlueprintLibrary:GetDataCountFromTargetData(TargetData) end
+
 ---@param SpecHandle FGameplayEffectSpecHandle
 ---@return TArray<FGameplayEffectSpecHandle>
 function UAbilitySystemBlueprintLibrary:GetAllLinkedGameplayEffectSpecHandles(SpecHandle) end
+
 ---@param TargetData FGameplayAbilityTargetDataHandle
 ---@return TArray<AActor>
 function UAbilitySystemBlueprintLibrary:GetAllActorsFromTargetData(TargetData) end
+
 ---@param TargetData FGameplayAbilityTargetDataHandle
 ---@param Index int32
 ---@return TArray<AActor>
 function UAbilitySystemBlueprintLibrary:GetActorsFromTargetData(TargetData, Index) end
+
 ---@param Parameters FGameplayCueParameters
 ---@return int32
 function UAbilitySystemBlueprintLibrary:GetActorCount(Parameters) end
+
 ---@param Parameters FGameplayCueParameters
 ---@param Index int32
 ---@return AActor
 function UAbilitySystemBlueprintLibrary:GetActorByIndex(Parameters, Index) end
+
 ---@param ActiveHandle FActiveGameplayEffectHandle
 ---@return float
 function UAbilitySystemBlueprintLibrary:GetActiveGameplayEffectTotalDuration(ActiveHandle) end
+
 ---@param ActiveHandle FActiveGameplayEffectHandle
 ---@return float
 function UAbilitySystemBlueprintLibrary:GetActiveGameplayEffectStartTime(ActiveHandle) end
+
 ---@param ActiveHandle FActiveGameplayEffectHandle
 ---@return int32
 function UAbilitySystemBlueprintLibrary:GetActiveGameplayEffectStackLimitCount(ActiveHandle) end
+
 ---@param ActiveHandle FActiveGameplayEffectHandle
 ---@return int32
 function UAbilitySystemBlueprintLibrary:GetActiveGameplayEffectStackCount(ActiveHandle) end
+
 ---@param WorldContextObject UObject
 ---@param ActiveHandle FActiveGameplayEffectHandle
 ---@return float
 function UAbilitySystemBlueprintLibrary:GetActiveGameplayEffectRemainingDuration(WorldContextObject, ActiveHandle) end
+
 ---@param ActiveHandle FActiveGameplayEffectHandle
 ---@return float
 function UAbilitySystemBlueprintLibrary:GetActiveGameplayEffectExpectedEndTime(ActiveHandle) end
+
 ---@param ActiveHandle FActiveGameplayEffectHandle
 ---@return FString
 function UAbilitySystemBlueprintLibrary:GetActiveGameplayEffectDebugString(ActiveHandle) end
+
 ---@param Actor AActor
 ---@return UAbilitySystemComponent
 function UAbilitySystemBlueprintLibrary:GetAbilitySystemComponent(Actor) end
+
 ---@param TargetCueInterface TScriptInterface<IGameplayCueInterface>
 ---@param EventType EGameplayCueEvent::Type
 ---@param Parameters FGameplayCueParameters
 function UAbilitySystemBlueprintLibrary:ForwardGameplayCueToTarget(TargetCueInterface, EventType, Parameters) end
+
 ---@param TargetDataHandle FGameplayAbilityTargetDataHandle
 ---@param ActorFilterClass FGameplayTargetDataFilterHandle
 ---@return FGameplayAbilityTargetDataHandle
 function UAbilitySystemBlueprintLibrary:FilterTargetData(TargetDataHandle, ActorFilterClass) end
+
 ---@param AbilitySystem UAbilitySystemComponent
 ---@param Attribute FGameplayAttribute
 ---@param SourceTags FGameplayTagContainer
@@ -1560,75 +1644,96 @@ function UAbilitySystemBlueprintLibrary:FilterTargetData(TargetDataHandle, Actor
 ---@param BaseValue float
 ---@param bSuccess boolean
 ---@return float
-function UAbilitySystemBlueprintLibrary:EvaluateAttributeValueWithTagsAndBase(AbilitySystem, Attribute, SourceTags, TargetTags, BaseValue, bSuccess) end
+function UAbilitySystemBlueprintLibrary:EvaluateAttributeValueWithTagsAndBase(AbilitySystem, Attribute, SourceTags,
+                                                                              TargetTags, BaseValue, bSuccess) end
+
 ---@param AbilitySystem UAbilitySystemComponent
 ---@param Attribute FGameplayAttribute
 ---@param SourceTags FGameplayTagContainer
 ---@param TargetTags FGameplayTagContainer
 ---@param bSuccess boolean
 ---@return float
-function UAbilitySystemBlueprintLibrary:EvaluateAttributeValueWithTags(AbilitySystem, Attribute, SourceTags, TargetTags, bSuccess) end
+function UAbilitySystemBlueprintLibrary:EvaluateAttributeValueWithTags(AbilitySystem, Attribute, SourceTags, TargetTags,
+                                                                       bSuccess) end
+
 ---@param AttributeA FGameplayAttribute
 ---@param AttributeB FGameplayAttribute
 ---@return boolean
 function UAbilitySystemBlueprintLibrary:EqualEqual_GameplayAttributeGameplayAttribute(AttributeA, AttributeB) end
+
 ---@param A FGameplayAbilitySpecHandle
 ---@param B FGameplayAbilitySpecHandle
 ---@return boolean
 function UAbilitySystemBlueprintLibrary:EqualEqual_GameplayAbilitySpecHandle(A, B) end
+
 ---@param A FActiveGameplayEffectHandle
 ---@param B FActiveGameplayEffectHandle
 ---@return boolean
 function UAbilitySystemBlueprintLibrary:EqualEqual_ActiveGameplayEffectHandle(A, B) end
+
 ---@param EffectContext FGameplayEffectContextHandle
 ---@param Origin FVector
 function UAbilitySystemBlueprintLibrary:EffectContextSetOrigin(EffectContext, Origin) end
+
 ---@param EffectContext FGameplayEffectContextHandle
 ---@return boolean
 function UAbilitySystemBlueprintLibrary:EffectContextIsValid(EffectContext) end
+
 ---@param EffectContext FGameplayEffectContextHandle
 ---@return boolean
 function UAbilitySystemBlueprintLibrary:EffectContextIsInstigatorLocallyControlled(EffectContext) end
+
 ---@param EffectContext FGameplayEffectContextHandle
 ---@return boolean
 function UAbilitySystemBlueprintLibrary:EffectContextHasHitResult(EffectContext) end
+
 ---@param EffectContext FGameplayEffectContextHandle
 ---@return UObject
 function UAbilitySystemBlueprintLibrary:EffectContextGetSourceObject(EffectContext) end
+
 ---@param EffectContext FGameplayEffectContextHandle
 ---@return AActor
 function UAbilitySystemBlueprintLibrary:EffectContextGetOriginalInstigatorActor(EffectContext) end
+
 ---@param EffectContext FGameplayEffectContextHandle
 ---@return FVector
 function UAbilitySystemBlueprintLibrary:EffectContextGetOrigin(EffectContext) end
+
 ---@param EffectContext FGameplayEffectContextHandle
 ---@return AActor
 function UAbilitySystemBlueprintLibrary:EffectContextGetInstigatorActor(EffectContext) end
+
 ---@param EffectContext FGameplayEffectContextHandle
 ---@return FHitResult
 function UAbilitySystemBlueprintLibrary:EffectContextGetHitResult(EffectContext) end
+
 ---@param EffectContext FGameplayEffectContextHandle
 ---@return AActor
 function UAbilitySystemBlueprintLibrary:EffectContextGetEffectCauser(EffectContext) end
+
 ---@param EffectContext FGameplayEffectContextHandle
 ---@param HitResult FHitResult
 ---@param bReset boolean
 function UAbilitySystemBlueprintLibrary:EffectContextAddHitResult(EffectContext, HitResult, bReset) end
+
 ---@param TargetData FGameplayAbilityTargetDataHandle
 ---@param Index int32
 ---@param Actor AActor
 ---@return boolean
 function UAbilitySystemBlueprintLibrary:DoesTargetDataContainActor(TargetData, Index, Actor) end
+
 ---@param Parameters FGameplayCueParameters
 ---@param SourceTagReqs FGameplayTagRequirements
 ---@param TargetTagReqs FGameplayTagRequirements
 ---@return boolean
 function UAbilitySystemBlueprintLibrary:DoesGameplayCueMeetTagRequirements(Parameters, SourceTagReqs, TargetTagReqs) end
+
 ---@param InNewInstigator AActor
 ---@param InEffectCauser AActor
 ---@param GameplayEffectSpecHandle_Clone FGameplayEffectSpecHandle
 ---@return FGameplayEffectSpecHandle
 function UAbilitySystemBlueprintLibrary:CloneSpecHandle(InNewInstigator, InEffectCauser, GameplayEffectSpecHandle_Clone) end
+
 ---@param Parameters FGameplayCueParameters
 ---@param NormalizedMagnitude float
 ---@param RawMagnitude float
@@ -1648,65 +1753,85 @@ function UAbilitySystemBlueprintLibrary:CloneSpecHandle(InNewInstigator, InEffec
 ---@param TargetAttachComponent USceneComponent
 ---@param bReplicateLocationWhenUsingMinimalRepProxy boolean
 ---@param TagParameters TArray<FGameplayTagPair>
-function UAbilitySystemBlueprintLibrary:BreakGameplayCueParameters(Parameters, NormalizedMagnitude, RawMagnitude, EffectContext, MatchedTagName, OriginalTag, AggregatedSourceTags, AggregatedTargetTags, Location, Normal, Instigator, EffectCauser, SourceObject, PhysicalMaterial, GameplayEffectLevel, AbilityLevel, TargetAttachComponent, bReplicateLocationWhenUsingMinimalRepProxy, TagParameters) end
+function UAbilitySystemBlueprintLibrary:BreakGameplayCueParameters(Parameters, NormalizedMagnitude, RawMagnitude,
+                                                                   EffectContext, MatchedTagName, OriginalTag,
+                                                                   AggregatedSourceTags, AggregatedTargetTags, Location,
+                                                                   Normal, Instigator, EffectCauser, SourceObject,
+                                                                   PhysicalMaterial, GameplayEffectLevel, AbilityLevel,
+                                                                   TargetAttachComponent,
+                                                                   bReplicateLocationWhenUsingMinimalRepProxy,
+                                                                   TagParameters) end
+
 ---@param SpecHandle FGameplayEffectSpecHandle
 ---@param DataTag FGameplayTag
 ---@param Magnitude float
 ---@return FGameplayEffectSpecHandle
 function UAbilitySystemBlueprintLibrary:AssignTagSetByCallerMagnitude(SpecHandle, DataTag, Magnitude) end
+
 ---@param SpecHandle FGameplayEffectSpecHandle
 ---@param DataName FName
 ---@param Magnitude float
 ---@return FGameplayEffectSpecHandle
 function UAbilitySystemBlueprintLibrary:AssignSetByCallerMagnitude(SpecHandle, DataName, Magnitude) end
+
 ---@param TargetHandle FGameplayAbilityTargetDataHandle
 ---@param HandleToAdd FGameplayAbilityTargetDataHandle
 ---@return FGameplayAbilityTargetDataHandle
 function UAbilitySystemBlueprintLibrary:AppendTargetDataHandle(TargetHandle, HandleToAdd) end
+
 ---@param Actor AActor
 ---@param GameplayTags FGameplayTagContainer
 ---@param bShouldReplicate boolean
 ---@return boolean
 function UAbilitySystemBlueprintLibrary:AddLooseGameplayTags(Actor, GameplayTags, bShouldReplicate) end
+
 ---@param SpecHandle FGameplayEffectSpecHandle
 ---@param LinkedGameplayEffectSpec FGameplayEffectSpecHandle
 ---@return FGameplayEffectSpecHandle
 function UAbilitySystemBlueprintLibrary:AddLinkedGameplayEffectSpec(SpecHandle, LinkedGameplayEffectSpec) end
+
 ---@param SpecHandle FGameplayEffectSpecHandle
 ---@param LinkedGameplayEffect TSubclassOf<UGameplayEffect>
 ---@return FGameplayEffectSpecHandle
 function UAbilitySystemBlueprintLibrary:AddLinkedGameplayEffect(SpecHandle, LinkedGameplayEffect) end
+
 ---@param SpecHandle FGameplayEffectSpecHandle
 ---@param NewGameplayTags FGameplayTagContainer
 ---@return FGameplayEffectSpecHandle
 function UAbilitySystemBlueprintLibrary:AddGrantedTags(SpecHandle, NewGameplayTags) end
+
 ---@param SpecHandle FGameplayEffectSpecHandle
 ---@param NewGameplayTag FGameplayTag
 ---@return FGameplayEffectSpecHandle
 function UAbilitySystemBlueprintLibrary:AddGrantedTag(SpecHandle, NewGameplayTag) end
+
 ---@param SpecHandle FGameplayEffectSpecHandle
 ---@param NewGameplayTags FGameplayTagContainer
 ---@return FGameplayEffectSpecHandle
 function UAbilitySystemBlueprintLibrary:AddAssetTags(SpecHandle, NewGameplayTags) end
+
 ---@param SpecHandle FGameplayEffectSpecHandle
 ---@param NewGameplayTag FGameplayTag
 ---@return FGameplayEffectSpecHandle
 function UAbilitySystemBlueprintLibrary:AddAssetTag(SpecHandle, NewGameplayTag) end
+
 ---@param SourceLocation FGameplayAbilityTargetingLocationInfo
 ---@param TargetLocation FGameplayAbilityTargetingLocationInfo
 ---@return FGameplayAbilityTargetDataHandle
 function UAbilitySystemBlueprintLibrary:AbilityTargetDataFromLocations(SourceLocation, TargetLocation) end
+
 ---@param HitResult FHitResult
 ---@return FGameplayAbilityTargetDataHandle
 function UAbilitySystemBlueprintLibrary:AbilityTargetDataFromHitResult(HitResult) end
+
 ---@param ActorArray TArray<AActor>
 ---@param OneTargetPerHandle boolean
 ---@return FGameplayAbilityTargetDataHandle
 function UAbilitySystemBlueprintLibrary:AbilityTargetDataFromActorArray(ActorArray, OneTargetPerHandle) end
+
 ---@param Actor AActor
 ---@return FGameplayAbilityTargetDataHandle
 function UAbilitySystemBlueprintLibrary:AbilityTargetDataFromActor(Actor) end
-
 
 ---@class UAbilitySystemComponent : UGameplayTasksComponent
 ---@field DefaultStartingData TArray<FAttributeDefaults>
@@ -1741,288 +1866,397 @@ UAbilitySystemComponent = {}
 ---@param ActiveHandle FActiveGameplayEffectHandle
 ---@param NewSetByCallerValues TMap<FGameplayTag, float>
 function UAbilitySystemComponent:UpdateActiveGameplayEffectSetByCallerMagnitudes(ActiveHandle, NewSetByCallerValues) end
+
 ---@param ActiveHandle FActiveGameplayEffectHandle
 ---@param SetByCallerTag FGameplayTag
 ---@param NewValue float
 function UAbilitySystemComponent:UpdateActiveGameplayEffectSetByCallerMagnitude(ActiveHandle, SetByCallerTag, NewValue) end
+
 ---@param InAbilityToActivate TSubclassOf<UGameplayAbility>
 ---@param bAllowRemoteActivation boolean
 ---@return boolean
 function UAbilitySystemComponent:TryActivateAbilityByClass(InAbilityToActivate, bAllowRemoteActivation) end
+
 ---@param AbilityToActivate FGameplayAbilitySpecHandle
 ---@param bAllowRemoteActivation boolean
 ---@return boolean
 function UAbilitySystemComponent:TryActivateAbility(AbilityToActivate, bAllowRemoteActivation) end
+
 ---@param GameplayTagContainer FGameplayTagContainer
 ---@param bAllowRemoteActivation boolean
 ---@return boolean
 function UAbilitySystemComponent:TryActivateAbilitiesByTag(GameplayTagContainer, bAllowRemoteActivation) end
+
 function UAbilitySystemComponent:TargetConfirm() end
+
 function UAbilitySystemComponent:TargetCancel() end
+
 ---@param NewInhibit boolean
 function UAbilitySystemComponent:SetUserAbilityActivationInhibited(NewInhibit) end
+
 ---@param Query FGameplayEffectQuery
 ---@param NewLevel int32
 function UAbilitySystemComponent:SetActiveGameplayEffectLevelUsingQuery(Query, NewLevel) end
+
 ---@param ActiveHandle FActiveGameplayEffectHandle
 ---@param NewLevel int32
 function UAbilitySystemComponent:SetActiveGameplayEffectLevel(ActiveHandle, NewLevel) end
+
 ---@param AbilityToActivate FGameplayAbilitySpecHandle
 ---@param InputPressed boolean
 ---@param PredictionKey FPredictionKey
 ---@param TriggerEventData FGameplayEventData
-function UAbilitySystemComponent:ServerTryActivateAbilityWithEventData(AbilityToActivate, InputPressed, PredictionKey, TriggerEventData) end
+function UAbilitySystemComponent:ServerTryActivateAbilityWithEventData(AbilityToActivate, InputPressed, PredictionKey,
+                                                                       TriggerEventData) end
+
 ---@param AbilityToActivate FGameplayAbilitySpecHandle
 ---@param InputPressed boolean
 ---@param PredictionKey FPredictionKey
 function UAbilitySystemComponent:ServerTryActivateAbility(AbilityToActivate, InputPressed, PredictionKey) end
+
 ---@param AbilityHandle FGameplayAbilitySpecHandle
 ---@param AbilityOriginalPredictionKey FPredictionKey
 ---@param CurrentPredictionKey FPredictionKey
-function UAbilitySystemComponent:ServerSetReplicatedTargetDataCancelled(AbilityHandle, AbilityOriginalPredictionKey, CurrentPredictionKey) end
+function UAbilitySystemComponent:ServerSetReplicatedTargetDataCancelled(AbilityHandle, AbilityOriginalPredictionKey,
+                                                                        CurrentPredictionKey) end
+
 ---@param AbilityHandle FGameplayAbilitySpecHandle
 ---@param AbilityOriginalPredictionKey FPredictionKey
 ---@param ReplicatedTargetDataHandle FGameplayAbilityTargetDataHandle
 ---@param ApplicationTag FGameplayTag
 ---@param CurrentPredictionKey FPredictionKey
-function UAbilitySystemComponent:ServerSetReplicatedTargetData(AbilityHandle, AbilityOriginalPredictionKey, ReplicatedTargetDataHandle, ApplicationTag, CurrentPredictionKey) end
+function UAbilitySystemComponent:ServerSetReplicatedTargetData(AbilityHandle, AbilityOriginalPredictionKey,
+                                                               ReplicatedTargetDataHandle, ApplicationTag,
+                                                               CurrentPredictionKey) end
+
 ---@param EventType EAbilityGenericReplicatedEvent::Type
 ---@param AbilityHandle FGameplayAbilitySpecHandle
 ---@param AbilityOriginalPredictionKey FPredictionKey
 ---@param CurrentPredictionKey FPredictionKey
 ---@param VectorPayload FVector_NetQuantize100
-function UAbilitySystemComponent:ServerSetReplicatedEventWithPayload(EventType, AbilityHandle, AbilityOriginalPredictionKey, CurrentPredictionKey, VectorPayload) end
+function UAbilitySystemComponent:ServerSetReplicatedEventWithPayload(EventType, AbilityHandle,
+                                                                     AbilityOriginalPredictionKey, CurrentPredictionKey,
+                                                                     VectorPayload) end
+
 ---@param EventType EAbilityGenericReplicatedEvent::Type
 ---@param AbilityHandle FGameplayAbilitySpecHandle
 ---@param AbilityOriginalPredictionKey FPredictionKey
 ---@param CurrentPredictionKey FPredictionKey
-function UAbilitySystemComponent:ServerSetReplicatedEvent(EventType, AbilityHandle, AbilityOriginalPredictionKey, CurrentPredictionKey) end
+function UAbilitySystemComponent:ServerSetReplicatedEvent(EventType, AbilityHandle, AbilityOriginalPredictionKey,
+                                                          CurrentPredictionKey) end
+
 ---@param AbilityHandle FGameplayAbilitySpecHandle
 function UAbilitySystemComponent:ServerSetInputReleased(AbilityHandle) end
+
 ---@param AbilityHandle FGameplayAbilitySpecHandle
 function UAbilitySystemComponent:ServerSetInputPressed(AbilityHandle) end
+
 ---@param Strings TArray<FString>
 function UAbilitySystemComponent:ServerPrintDebug_RequestWithStrings(Strings) end
+
 function UAbilitySystemComponent:ServerPrintDebug_Request() end
+
 ---@param AbilityToEnd FGameplayAbilitySpecHandle
 ---@param ActivationInfo FGameplayAbilityActivationInfo
 ---@param PredictionKey FPredictionKey
 function UAbilitySystemComponent:ServerEndAbility(AbilityToEnd, ActivationInfo, PredictionKey) end
+
 ---@param ClientAnimMontage UAnimMontage
 ---@param InPlayRate float
 function UAbilitySystemComponent:ServerCurrentMontageSetPlayRate(ClientAnimMontage, InPlayRate) end
+
 ---@param ClientAnimMontage UAnimMontage
 ---@param ClientPosition float
 ---@param SectionName FName
 ---@param NextSectionName FName
-function UAbilitySystemComponent:ServerCurrentMontageSetNextSectionName(ClientAnimMontage, ClientPosition, SectionName, NextSectionName) end
+function UAbilitySystemComponent:ServerCurrentMontageSetNextSectionName(ClientAnimMontage, ClientPosition, SectionName,
+                                                                        NextSectionName) end
+
 ---@param ClientAnimMontage UAnimMontage
 ---@param SectionName FName
 function UAbilitySystemComponent:ServerCurrentMontageJumpToSectionName(ClientAnimMontage, SectionName) end
+
 ---@param AbilityToCancel FGameplayAbilitySpecHandle
 ---@param ActivationInfo FGameplayAbilityActivationInfo
 function UAbilitySystemComponent:ServerCancelAbility(AbilityToCancel, ActivationInfo) end
+
 ---@param BatchInfo FServerAbilityRPCBatch
 function UAbilitySystemComponent:ServerAbilityRPCBatch(BatchInfo) end
+
 ---@param GameplayEffect TSubclassOf<UGameplayEffect>
 ---@param InstigatorAbilitySystemComponent UAbilitySystemComponent
 ---@param StacksToRemove int32
-function UAbilitySystemComponent:RemoveActiveGameplayEffectBySourceEffect(GameplayEffect, InstigatorAbilitySystemComponent, StacksToRemove) end
+function UAbilitySystemComponent:RemoveActiveGameplayEffectBySourceEffect(GameplayEffect,
+                                                                          InstigatorAbilitySystemComponent,
+                                                                          StacksToRemove) end
+
 ---@param Handle FActiveGameplayEffectHandle
 ---@param StacksToRemove int32
 ---@return boolean
 function UAbilitySystemComponent:RemoveActiveGameplayEffect(Handle, StacksToRemove) end
+
 ---@param Tags FGameplayTagContainer
 ---@return int32
 function UAbilitySystemComponent:RemoveActiveEffectsWithTags(Tags) end
+
 ---@param Tags FGameplayTagContainer
 ---@return int32
 function UAbilitySystemComponent:RemoveActiveEffectsWithSourceTags(Tags) end
+
 ---@param Tags FGameplayTagContainer
 ---@return int32
 function UAbilitySystemComponent:RemoveActiveEffectsWithGrantedTags(Tags) end
+
 ---@param Tags FGameplayTagContainer
 ---@return int32
 function UAbilitySystemComponent:RemoveActiveEffectsWithAppliedTags(Tags) end
+
 ---@param InputID int32
 function UAbilitySystemComponent:ReleaseInputID(InputID) end
+
 ---@param InputID int32
 function UAbilitySystemComponent:PressInputID(InputID) end
+
 ---@param InActor AActor
 ---@param EndPlayReason EEndPlayReason::Type
 function UAbilitySystemComponent:OnSpawnedAttributesEndPlayed(InActor, EndPlayReason) end
+
 ---@param PreviousSpawnedAttributes TArray<UAttributeSet>
 function UAbilitySystemComponent:OnRep_SpawnedAttributes(PreviousSpawnedAttributes) end
+
 function UAbilitySystemComponent:OnRep_ServerDebugString() end
+
 function UAbilitySystemComponent:OnRep_ReplicatedAnimMontage() end
+
 function UAbilitySystemComponent:OnRep_OwningActor() end
+
 function UAbilitySystemComponent:OnRep_ClientDebugString() end
+
 function UAbilitySystemComponent:OnRep_ActivateAbilities() end
+
 ---@param InActor AActor
 function UAbilitySystemComponent:OnOwnerActorDestroyed(InActor) end
+
 ---@param InActor AActor
 function UAbilitySystemComponent:OnAvatarActorDestroyed(InActor) end
+
 ---@param GameplayCueTags FGameplayTagContainer
 ---@param PredictionKey FPredictionKey
 ---@param GameplayCueParameters FGameplayCueParameters
-function UAbilitySystemComponent:NetMulticast_InvokeGameplayCuesExecuted_WithParams(GameplayCueTags, PredictionKey, GameplayCueParameters) end
+function UAbilitySystemComponent:NetMulticast_InvokeGameplayCuesExecuted_WithParams(GameplayCueTags, PredictionKey,
+                                                                                    GameplayCueParameters) end
+
 ---@param GameplayCueTags FGameplayTagContainer
 ---@param PredictionKey FPredictionKey
 ---@param EffectContext FGameplayEffectContextHandle
 function UAbilitySystemComponent:NetMulticast_InvokeGameplayCuesExecuted(GameplayCueTags, PredictionKey, EffectContext) end
+
 ---@param GameplayCueTags FGameplayTagContainer
 ---@param PredictionKey FPredictionKey
 ---@param GameplayCueParameters FGameplayCueParameters
-function UAbilitySystemComponent:NetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams(GameplayCueTags, PredictionKey, GameplayCueParameters) end
+function UAbilitySystemComponent:NetMulticast_InvokeGameplayCuesAddedAndWhileActive_WithParams(GameplayCueTags,
+                                                                                               PredictionKey,
+                                                                                               GameplayCueParameters) end
+
 ---@param GameplayCueTag FGameplayTag
 ---@param PredictionKey FPredictionKey
 ---@param GameplayCueParameters FGameplayCueParameters
-function UAbilitySystemComponent:NetMulticast_InvokeGameplayCueExecuted_WithParams(GameplayCueTag, PredictionKey, GameplayCueParameters) end
+function UAbilitySystemComponent:NetMulticast_InvokeGameplayCueExecuted_WithParams(GameplayCueTag, PredictionKey,
+                                                                                   GameplayCueParameters) end
+
 ---@param Spec FGameplayEffectSpecForRPC
 ---@param PredictionKey FPredictionKey
 function UAbilitySystemComponent:NetMulticast_InvokeGameplayCueExecuted_FromSpec(Spec, PredictionKey) end
+
 ---@param GameplayCueTag FGameplayTag
 ---@param PredictionKey FPredictionKey
 ---@param EffectContext FGameplayEffectContextHandle
 function UAbilitySystemComponent:NetMulticast_InvokeGameplayCueExecuted(GameplayCueTag, PredictionKey, EffectContext) end
+
 ---@param GameplayCueTag FGameplayTag
 ---@param PredictionKey FPredictionKey
 ---@param GameplayCueParameters FGameplayCueParameters
-function UAbilitySystemComponent:NetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams(GameplayCueTag, PredictionKey, GameplayCueParameters) end
+function UAbilitySystemComponent:NetMulticast_InvokeGameplayCueAddedAndWhileActive_WithParams(GameplayCueTag,
+                                                                                              PredictionKey,
+                                                                                              GameplayCueParameters) end
+
 ---@param Spec FGameplayEffectSpecForRPC
 ---@param PredictionKey FPredictionKey
 function UAbilitySystemComponent:NetMulticast_InvokeGameplayCueAddedAndWhileActive_FromSpec(Spec, PredictionKey) end
+
 ---@param GameplayCueTag FGameplayTag
 ---@param PredictionKey FPredictionKey
 ---@param Parameters FGameplayCueParameters
 function UAbilitySystemComponent:NetMulticast_InvokeGameplayCueAdded_WithParams(GameplayCueTag, PredictionKey, Parameters) end
+
 ---@param GameplayCueTag FGameplayTag
 ---@param PredictionKey FPredictionKey
 ---@param EffectContext FGameplayEffectContextHandle
 function UAbilitySystemComponent:NetMulticast_InvokeGameplayCueAdded(GameplayCueTag, PredictionKey, EffectContext) end
+
 ---@param GameplayEffectClass TSubclassOf<UGameplayEffect>
 ---@param Level float
 ---@param Context FGameplayEffectContextHandle
 ---@return FGameplayEffectSpecHandle
 function UAbilitySystemComponent:MakeOutgoingSpec(GameplayEffectClass, Level, Context) end
+
 ---@return FGameplayEffectContextHandle
 function UAbilitySystemComponent:MakeEffectContext() end
+
 ---@param Attributes TSubclassOf<UAttributeSet>
 ---@param DataTable UDataTable
 function UAbilitySystemComponent:K2_InitStats(Attributes, DataTable) end
+
 ---@param AbilityClass TSubclassOf<UGameplayAbility>
 ---@param Level int32
 ---@param InputID int32
 ---@return FGameplayAbilitySpecHandle
 function UAbilitySystemComponent:K2_GiveAbilityAndActivateOnce(AbilityClass, Level, InputID) end
+
 ---@param AbilityClass TSubclassOf<UGameplayAbility>
 ---@param Level int32
 ---@param InputID int32
 ---@return FGameplayAbilitySpecHandle
 function UAbilitySystemComponent:K2_GiveAbility(AbilityClass, Level, InputID) end
+
 ---@param GameplayCueTag FGameplayTag
 ---@return boolean
 function UAbilitySystemComponent:IsGameplayCueActive(GameplayCueTag) end
+
 function UAbilitySystemComponent:InputConfirm() end
+
 function UAbilitySystemComponent:InputCancel() end
+
 ---@return boolean
 function UAbilitySystemComponent:GetUserAbilityActivationInhibited() end
+
 ---@param GameplayTag FGameplayTag
 ---@return int32
 function UAbilitySystemComponent:GetGameplayTagCount(GameplayTag) end
+
 ---@param Handle FActiveGameplayEffectHandle
 ---@param Attribute FGameplayAttribute
 ---@return float
 function UAbilitySystemComponent:GetGameplayEffectMagnitude(Handle, Attribute) end
+
 ---@param SoftSourceGameplayEffect TSoftClassPtr<UGameplayEffect>
 ---@param OptionalInstigatorFilterComponent UAbilitySystemComponent
 ---@param bEnforceOnGoingCheck boolean
 ---@return int32
-function UAbilitySystemComponent:GetGameplayEffectCount_IfLoaded(SoftSourceGameplayEffect, OptionalInstigatorFilterComponent, bEnforceOnGoingCheck) end
+function UAbilitySystemComponent:GetGameplayEffectCount_IfLoaded(SoftSourceGameplayEffect,
+                                                                 OptionalInstigatorFilterComponent, bEnforceOnGoingCheck) end
+
 ---@param SourceGameplayEffect TSubclassOf<UGameplayEffect>
 ---@param OptionalInstigatorFilterComponent UAbilitySystemComponent
 ---@param bEnforceOnGoingCheck boolean
 ---@return int32
-function UAbilitySystemComponent:GetGameplayEffectCount(SourceGameplayEffect, OptionalInstigatorFilterComponent, bEnforceOnGoingCheck) end
+function UAbilitySystemComponent:GetGameplayEffectCount(SourceGameplayEffect, OptionalInstigatorFilterComponent,
+                                                        bEnforceOnGoingCheck) end
+
 ---@param Attribute FGameplayAttribute
 ---@param bFound boolean
 ---@return float
 function UAbilitySystemComponent:GetGameplayAttributeValue(Attribute, bFound) end
+
 ---@param AttributeSetClass TSubclassOf<UAttributeSet>
 ---@return UAttributeSet
 function UAbilitySystemComponent:GetAttributeSet(AttributeSetClass) end
+
 ---@param OutAttributes TArray<FGameplayAttribute>
 function UAbilitySystemComponent:GetAllAttributes(OutAttributes) end
+
 ---@param OutAbilityHandles TArray<FGameplayAbilitySpecHandle>
 function UAbilitySystemComponent:GetAllAbilities(OutAbilityHandles) end
+
 ---@param Tags FGameplayTagContainer
 ---@return TArray<FActiveGameplayEffectHandle>
 function UAbilitySystemComponent:GetActiveEffectsWithAllTags(Tags) end
+
 ---@param Query FGameplayEffectQuery
 ---@return TArray<FActiveGameplayEffectHandle>
 function UAbilitySystemComponent:GetActiveEffects(Query) end
+
 ---@param OutAbilityHandles TArray<FGameplayAbilitySpecHandle>
 ---@param Tags FGameplayTagContainer
 ---@param bExactMatch boolean
 function UAbilitySystemComponent:FindAllAbilitiesWithTags(OutAbilityHandles, Tags, bExactMatch) end
+
 ---@param OutAbilityHandles TArray<FGameplayAbilitySpecHandle>
 ---@param InputID int32
 function UAbilitySystemComponent:FindAllAbilitiesWithInputID(OutAbilityHandles, InputID) end
+
 ---@param OutAbilityHandles TArray<FGameplayAbilitySpecHandle>
 ---@param Query FGameplayTagQuery
 function UAbilitySystemComponent:FindAllAbilitiesMatchingQuery(OutAbilityHandles, Query) end
+
 ---@param AbilityToActivate FGameplayAbilitySpecHandle
 function UAbilitySystemComponent:ClientTryActivateAbility(AbilityToActivate) end
+
 ---@param EventType EAbilityGenericReplicatedEvent::Type
 ---@param AbilityHandle FGameplayAbilitySpecHandle
 ---@param AbilityOriginalPredictionKey FPredictionKey
 function UAbilitySystemComponent:ClientSetReplicatedEvent(EventType, AbilityHandle, AbilityOriginalPredictionKey) end
+
 ---@param Strings TArray<FString>
 ---@param GameFlags int32
 function UAbilitySystemComponent:ClientPrintDebug_Response(Strings, GameFlags) end
+
 ---@param AbilityToEnd FGameplayAbilitySpecHandle
 ---@param ActivationInfo FGameplayAbilityActivationInfo
 function UAbilitySystemComponent:ClientEndAbility(AbilityToEnd, ActivationInfo) end
+
 ---@param AbilityToCancel FGameplayAbilitySpecHandle
 ---@param ActivationInfo FGameplayAbilityActivationInfo
 function UAbilitySystemComponent:ClientCancelAbility(AbilityToCancel, ActivationInfo) end
+
 ---@param AbilityToActivate FGameplayAbilitySpecHandle
 ---@param PredictionKey FPredictionKey
 ---@param TriggerEventData FGameplayEventData
-function UAbilitySystemComponent:ClientActivateAbilitySucceedWithEventData(AbilityToActivate, PredictionKey, TriggerEventData) end
+function UAbilitySystemComponent:ClientActivateAbilitySucceedWithEventData(AbilityToActivate, PredictionKey,
+                                                                           TriggerEventData) end
+
 ---@param AbilityToActivate FGameplayAbilitySpecHandle
 ---@param PredictionKey FPredictionKey
 function UAbilitySystemComponent:ClientActivateAbilitySucceed(AbilityToActivate, PredictionKey) end
+
 ---@param AbilityToActivate FGameplayAbilitySpecHandle
 ---@param PredictionKey int16
 function UAbilitySystemComponent:ClientActivateAbilityFailed(AbilityToActivate, PredictionKey) end
+
 ---@param InputID int32
 function UAbilitySystemComponent:ClearAllAbilitiesWithInputID(InputID) end
+
 function UAbilitySystemComponent:ClearAllAbilities() end
+
 ---@param Handle FGameplayAbilitySpecHandle
 function UAbilitySystemComponent:ClearAbility(Handle) end
+
 ---@param GameplayEffectClass TSubclassOf<UGameplayEffect>
 ---@param Target UAbilitySystemComponent
 ---@param Level float
 ---@param Context FGameplayEffectContextHandle
 ---@return FActiveGameplayEffectHandle
 function UAbilitySystemComponent:BP_ApplyGameplayEffectToTarget(GameplayEffectClass, Target, Level, Context) end
+
 ---@param GameplayEffectClass TSubclassOf<UGameplayEffect>
 ---@param Level float
 ---@param EffectContext FGameplayEffectContextHandle
 ---@return FActiveGameplayEffectHandle
 function UAbilitySystemComponent:BP_ApplyGameplayEffectToSelf(GameplayEffectClass, Level, EffectContext) end
+
 ---@param SpecHandle FGameplayEffectSpecHandle
 ---@param Target UAbilitySystemComponent
 ---@return FActiveGameplayEffectHandle
 function UAbilitySystemComponent:BP_ApplyGameplayEffectSpecToTarget(SpecHandle, Target) end
+
 ---@param SpecHandle FGameplayEffectSpecHandle
 ---@return FActiveGameplayEffectHandle
 function UAbilitySystemComponent:BP_ApplyGameplayEffectSpecToSelf(SpecHandle) end
+
 function UAbilitySystemComponent:AbilityConfirmOrCancel__DelegateSignature() end
+
 ---@param InputID int32
 function UAbilitySystemComponent:AbilityAbilityKey__DelegateSignature(InputID) end
-
 
 ---@class UAbilitySystemDebugHUDExtension : UObject
 UAbilitySystemDebugHUDExtension = {}
@@ -2130,8 +2364,11 @@ UAbilityTask_ApplyRootMotionConstantForce = {}
 ---@param ClampVelocityOnFinish float
 ---@param bEnableGravity boolean
 ---@return UAbilityTask_ApplyRootMotionConstantForce
-function UAbilityTask_ApplyRootMotionConstantForce:ApplyRootMotionConstantForce(OwningAbility, TaskInstanceName, WorldDirection, Strength, Duration, bIsAdditive, StrengthOverTime, VelocityOnFinishMode, SetVelocityOnFinish, ClampVelocityOnFinish, bEnableGravity) end
-
+function UAbilityTask_ApplyRootMotionConstantForce:ApplyRootMotionConstantForce(OwningAbility, TaskInstanceName,
+                                                                                WorldDirection, Strength, Duration,
+                                                                                bIsAdditive, StrengthOverTime,
+                                                                                VelocityOnFinishMode, SetVelocityOnFinish,
+                                                                                ClampVelocityOnFinish, bEnableGravity) end
 
 ---@class UAbilityTask_ApplyRootMotionJumpForce : UAbilityTask_ApplyRootMotion_Base
 ---@field OnFinish FAbilityTask_ApplyRootMotionJumpForceOnFinish
@@ -2149,7 +2386,9 @@ UAbilityTask_ApplyRootMotionJumpForce = {}
 
 ---@param Hit FHitResult
 function UAbilityTask_ApplyRootMotionJumpForce:OnLandedCallback(Hit) end
+
 function UAbilityTask_ApplyRootMotionJumpForce:Finish() end
+
 ---@param OwningAbility UGameplayAbility
 ---@param TaskInstanceName FName
 ---@param Rotation FRotator
@@ -2165,8 +2404,12 @@ function UAbilityTask_ApplyRootMotionJumpForce:Finish() end
 ---@param TimeMappingCurve UCurveFloat
 ---@param bAdditive boolean
 ---@return UAbilityTask_ApplyRootMotionJumpForce
-function UAbilityTask_ApplyRootMotionJumpForce:ApplyRootMotionJumpForce(OwningAbility, TaskInstanceName, Rotation, Distance, Height, Duration, MinimumLandedTriggerTime, bFinishOnLanded, VelocityOnFinishMode, SetVelocityOnFinish, ClampVelocityOnFinish, PathOffsetCurve, TimeMappingCurve, bAdditive) end
-
+function UAbilityTask_ApplyRootMotionJumpForce:ApplyRootMotionJumpForce(OwningAbility, TaskInstanceName, Rotation,
+                                                                        Distance, Height, Duration,
+                                                                        MinimumLandedTriggerTime, bFinishOnLanded,
+                                                                        VelocityOnFinishMode, SetVelocityOnFinish,
+                                                                        ClampVelocityOnFinish, PathOffsetCurve,
+                                                                        TimeMappingCurve, bAdditive) end
 
 ---@class UAbilityTask_ApplyRootMotionMoveToActorForce : UAbilityTask_ApplyRootMotion_Base
 ---@field OnFinished FAbilityTask_ApplyRootMotionMoveToActorForceOnFinished
@@ -2189,7 +2432,9 @@ UAbilityTask_ApplyRootMotionMoveToActorForce = {}
 ---@param OriginalTarget AActor
 ---@param NewTarget AActor
 function UAbilityTask_ApplyRootMotionMoveToActorForce:OnTargetActorSwapped(OriginalTarget, NewTarget) end
+
 function UAbilityTask_ApplyRootMotionMoveToActorForce:OnRep_TargetLocation() end
+
 ---@param OwningAbility UGameplayAbility
 ---@param TaskInstanceName FName
 ---@param TargetDataHandle FGameplayAbilityTargetDataHandle
@@ -2210,7 +2455,25 @@ function UAbilityTask_ApplyRootMotionMoveToActorForce:OnRep_TargetLocation() end
 ---@param ClampVelocityOnFinish float
 ---@param bDisableDestinationReachedInterrupt boolean
 ---@return UAbilityTask_ApplyRootMotionMoveToActorForce
-function UAbilityTask_ApplyRootMotionMoveToActorForce:ApplyRootMotionMoveToTargetDataActorForce(OwningAbility, TaskInstanceName, TargetDataHandle, TargetDataIndex, TargetActorIndex, TargetLocationOffset, OffsetAlignment, Duration, TargetLerpSpeedHorizontal, TargetLerpSpeedVertical, bSetNewMovementMode, MovementMode, bRestrictSpeedToExpected, PathOffsetCurve, TimeMappingCurve, VelocityOnFinishMode, SetVelocityOnFinish, ClampVelocityOnFinish, bDisableDestinationReachedInterrupt) end
+function UAbilityTask_ApplyRootMotionMoveToActorForce:ApplyRootMotionMoveToTargetDataActorForce(OwningAbility,
+                                                                                                TaskInstanceName,
+                                                                                                TargetDataHandle,
+                                                                                                TargetDataIndex,
+                                                                                                TargetActorIndex,
+                                                                                                TargetLocationOffset,
+                                                                                                OffsetAlignment, Duration,
+                                                                                                TargetLerpSpeedHorizontal,
+                                                                                                TargetLerpSpeedVertical,
+                                                                                                bSetNewMovementMode,
+                                                                                                MovementMode,
+                                                                                                bRestrictSpeedToExpected,
+                                                                                                PathOffsetCurve,
+                                                                                                TimeMappingCurve,
+                                                                                                VelocityOnFinishMode,
+                                                                                                SetVelocityOnFinish,
+                                                                                                ClampVelocityOnFinish,
+                                                                                                bDisableDestinationReachedInterrupt) end
+
 ---@param OwningAbility UGameplayAbility
 ---@param TaskInstanceName FName
 ---@param TargetActor AActor
@@ -2229,8 +2492,18 @@ function UAbilityTask_ApplyRootMotionMoveToActorForce:ApplyRootMotionMoveToTarge
 ---@param ClampVelocityOnFinish float
 ---@param bDisableDestinationReachedInterrupt boolean
 ---@return UAbilityTask_ApplyRootMotionMoveToActorForce
-function UAbilityTask_ApplyRootMotionMoveToActorForce:ApplyRootMotionMoveToActorForce(OwningAbility, TaskInstanceName, TargetActor, TargetLocationOffset, OffsetAlignment, Duration, TargetLerpSpeedHorizontal, TargetLerpSpeedVertical, bSetNewMovementMode, MovementMode, bRestrictSpeedToExpected, PathOffsetCurve, TimeMappingCurve, VelocityOnFinishMode, SetVelocityOnFinish, ClampVelocityOnFinish, bDisableDestinationReachedInterrupt) end
-
+function UAbilityTask_ApplyRootMotionMoveToActorForce:ApplyRootMotionMoveToActorForce(OwningAbility, TaskInstanceName,
+                                                                                      TargetActor, TargetLocationOffset,
+                                                                                      OffsetAlignment, Duration,
+                                                                                      TargetLerpSpeedHorizontal,
+                                                                                      TargetLerpSpeedVertical,
+                                                                                      bSetNewMovementMode, MovementMode,
+                                                                                      bRestrictSpeedToExpected,
+                                                                                      PathOffsetCurve, TimeMappingCurve,
+                                                                                      VelocityOnFinishMode,
+                                                                                      SetVelocityOnFinish,
+                                                                                      ClampVelocityOnFinish,
+                                                                                      bDisableDestinationReachedInterrupt) end
 
 ---@class UAbilityTask_ApplyRootMotionMoveToForce : UAbilityTask_ApplyRootMotion_Base
 ---@field OnTimedOut FAbilityTask_ApplyRootMotionMoveToForceOnTimedOut
@@ -2256,8 +2529,11 @@ UAbilityTask_ApplyRootMotionMoveToForce = {}
 ---@param SetVelocityOnFinish FVector
 ---@param ClampVelocityOnFinish float
 ---@return UAbilityTask_ApplyRootMotionMoveToForce
-function UAbilityTask_ApplyRootMotionMoveToForce:ApplyRootMotionMoveToForce(OwningAbility, TaskInstanceName, TargetLocation, Duration, bSetNewMovementMode, MovementMode, bRestrictSpeedToExpected, PathOffsetCurve, VelocityOnFinishMode, SetVelocityOnFinish, ClampVelocityOnFinish) end
-
+function UAbilityTask_ApplyRootMotionMoveToForce:ApplyRootMotionMoveToForce(OwningAbility, TaskInstanceName,
+                                                                            TargetLocation, Duration, bSetNewMovementMode,
+                                                                            MovementMode, bRestrictSpeedToExpected,
+                                                                            PathOffsetCurve, VelocityOnFinishMode,
+                                                                            SetVelocityOnFinish, ClampVelocityOnFinish) end
 
 ---@class UAbilityTask_ApplyRootMotionRadialForce : UAbilityTask_ApplyRootMotion_Base
 ---@field OnFinish FAbilityTask_ApplyRootMotionRadialForceOnFinish
@@ -2293,8 +2569,13 @@ UAbilityTask_ApplyRootMotionRadialForce = {}
 ---@param SetVelocityOnFinish FVector
 ---@param ClampVelocityOnFinish float
 ---@return UAbilityTask_ApplyRootMotionRadialForce
-function UAbilityTask_ApplyRootMotionRadialForce:ApplyRootMotionRadialForce(OwningAbility, TaskInstanceName, Location, LocationActor, Strength, Duration, Radius, bIsPush, bIsAdditive, bNoZForce, StrengthDistanceFalloff, StrengthOverTime, bUseFixedWorldDirection, FixedWorldDirection, VelocityOnFinishMode, SetVelocityOnFinish, ClampVelocityOnFinish) end
-
+function UAbilityTask_ApplyRootMotionRadialForce:ApplyRootMotionRadialForce(OwningAbility, TaskInstanceName, Location,
+                                                                            LocationActor, Strength, Duration, Radius,
+                                                                            bIsPush, bIsAdditive, bNoZForce,
+                                                                            StrengthDistanceFalloff, StrengthOverTime,
+                                                                            bUseFixedWorldDirection, FixedWorldDirection,
+                                                                            VelocityOnFinishMode, SetVelocityOnFinish,
+                                                                            ClampVelocityOnFinish) end
 
 ---@class UAbilityTask_ApplyRootMotion_Base : UAbilityTask
 ---@field ForceName FName
@@ -2308,9 +2589,9 @@ UAbilityTask_ApplyRootMotion_Base = {}
 
 ---@param NumTicks int32
 function UAbilityTask_ApplyRootMotion_Base:PostFinishedNetSyncDelay(NumTicks) end
+
 ---@return boolean
 function UAbilityTask_ApplyRootMotion_Base:IsFinished() end
-
 
 ---@class UAbilityTask_MoveToLocation : UAbilityTask
 ---@field OnTargetLocationReached FAbilityTask_MoveToLocationOnTargetLocationReached
@@ -2328,8 +2609,8 @@ UAbilityTask_MoveToLocation = {}
 ---@param OptionalInterpolationCurve UCurveFloat
 ---@param OptionalVectorInterpolationCurve UCurveVector
 ---@return UAbilityTask_MoveToLocation
-function UAbilityTask_MoveToLocation:MoveToLocation(OwningAbility, TaskInstanceName, Location, Duration, OptionalInterpolationCurve, OptionalVectorInterpolationCurve) end
-
+function UAbilityTask_MoveToLocation:MoveToLocation(OwningAbility, TaskInstanceName, Location, Duration,
+                                                    OptionalInterpolationCurve, OptionalVectorInterpolationCurve) end
 
 ---@class UAbilityTask_NetworkSyncPoint : UAbilityTask
 ---@field OnSync FAbilityTask_NetworkSyncPointOnSync
@@ -2339,8 +2620,8 @@ UAbilityTask_NetworkSyncPoint = {}
 ---@param SyncType EAbilityTaskNetSyncType
 ---@return UAbilityTask_NetworkSyncPoint
 function UAbilityTask_NetworkSyncPoint:WaitNetSync(OwningAbility, SyncType) end
-function UAbilityTask_NetworkSyncPoint:OnSignalCallback() end
 
+function UAbilityTask_NetworkSyncPoint:OnSignalCallback() end
 
 ---@class UAbilityTask_PlayMontageAndWait : UAbilityTask
 ---@field OnCompleted FAbilityTask_PlayMontageAndWaitOnCompleted
@@ -2359,14 +2640,19 @@ UAbilityTask_PlayMontageAndWait = {}
 ---@param bEndTask boolean
 ---@return boolean
 function UAbilityTask_PlayMontageAndWait:StopMontage(bEndTask) end
+
 function UAbilityTask_PlayMontageAndWait:OnMontageInterrupted() end
+
 ---@param Montage UAnimMontage
 ---@param bInterrupted boolean
 function UAbilityTask_PlayMontageAndWait:OnMontageEnded(Montage, bInterrupted) end
+
 ---@param Montage UAnimMontage
 ---@param bInterrupted boolean
 function UAbilityTask_PlayMontageAndWait:OnMontageBlendingOut(Montage, bInterrupted) end
+
 function UAbilityTask_PlayMontageAndWait:OnGameplayAbilityCancelled() end
+
 ---@param OwningAbility UGameplayAbility
 ---@param TaskInstanceName FName
 ---@param MontageToPlay UAnimMontage
@@ -2377,8 +2663,10 @@ function UAbilityTask_PlayMontageAndWait:OnGameplayAbilityCancelled() end
 ---@param StartTimeSeconds float
 ---@param bAllowInterruptAfterBlendOut boolean
 ---@return UAbilityTask_PlayMontageAndWait
-function UAbilityTask_PlayMontageAndWait:CreatePlayMontageAndWaitProxy(OwningAbility, TaskInstanceName, MontageToPlay, Rate, StartSection, bStopWhenAbilityEnds, AnimRootMotionTranslationScale, StartTimeSeconds, bAllowInterruptAfterBlendOut) end
-
+function UAbilityTask_PlayMontageAndWait:CreatePlayMontageAndWaitProxy(OwningAbility, TaskInstanceName, MontageToPlay,
+                                                                       Rate, StartSection, bStopWhenAbilityEnds,
+                                                                       AnimRootMotionTranslationScale, StartTimeSeconds,
+                                                                       bAllowInterruptAfterBlendOut) end
 
 ---@class UAbilityTask_Repeat : UAbilityTask
 ---@field OnPerformAction FAbilityTask_RepeatOnPerformAction
@@ -2391,7 +2679,6 @@ UAbilityTask_Repeat = {}
 ---@return UAbilityTask_Repeat
 function UAbilityTask_Repeat:RepeatAction(OwningAbility, TimeBetweenActions, TotalActionCount) end
 
-
 ---@class UAbilityTask_SpawnActor : UAbilityTask
 ---@field Success FAbilityTask_SpawnActorSuccess
 ---@field DidNotSpawn FAbilityTask_SpawnActorDidNotSpawn
@@ -2402,17 +2689,18 @@ UAbilityTask_SpawnActor = {}
 ---@param Class TSubclassOf<AActor>
 ---@return UAbilityTask_SpawnActor
 function UAbilityTask_SpawnActor:SpawnActor(OwningAbility, TargetData, Class) end
+
 ---@param OwningAbility UGameplayAbility
 ---@param TargetData FGameplayAbilityTargetDataHandle
 ---@param SpawnedActor AActor
 function UAbilityTask_SpawnActor:FinishSpawningActor(OwningAbility, TargetData, SpawnedActor) end
+
 ---@param OwningAbility UGameplayAbility
 ---@param TargetData FGameplayAbilityTargetDataHandle
 ---@param Class TSubclassOf<AActor>
 ---@param SpawnedActor AActor
 ---@return boolean
 function UAbilityTask_SpawnActor:BeginSpawningActor(OwningAbility, TargetData, Class, SpawnedActor) end
-
 
 ---@class UAbilityTask_StartAbilityState : UAbilityTask
 ---@field OnStateEnded FAbilityTask_StartAbilityStateOnStateEnded
@@ -2425,7 +2713,6 @@ UAbilityTask_StartAbilityState = {}
 ---@return UAbilityTask_StartAbilityState
 function UAbilityTask_StartAbilityState:StartAbilityState(OwningAbility, StateName, bEndCurrentState) end
 
-
 ---@class UAbilityTask_VisualizeTargeting : UAbilityTask
 ---@field TimeElapsed FAbilityTask_VisualizeTargetingTimeElapsed
 UAbilityTask_VisualizeTargeting = {}
@@ -2435,22 +2722,25 @@ UAbilityTask_VisualizeTargeting = {}
 ---@param TaskInstanceName FName
 ---@param Duration float
 ---@return UAbilityTask_VisualizeTargeting
-function UAbilityTask_VisualizeTargeting:VisualizeTargetingUsingActor(OwningAbility, TargetActor, TaskInstanceName, Duration) end
+function UAbilityTask_VisualizeTargeting:VisualizeTargetingUsingActor(OwningAbility, TargetActor, TaskInstanceName,
+                                                                      Duration) end
+
 ---@param OwningAbility UGameplayAbility
 ---@param Class TSubclassOf<AGameplayAbilityTargetActor>
 ---@param TaskInstanceName FName
 ---@param Duration float
 ---@return UAbilityTask_VisualizeTargeting
 function UAbilityTask_VisualizeTargeting:VisualizeTargeting(OwningAbility, Class, TaskInstanceName, Duration) end
+
 ---@param OwningAbility UGameplayAbility
 ---@param SpawnedActor AGameplayAbilityTargetActor
 function UAbilityTask_VisualizeTargeting:FinishSpawningActor(OwningAbility, SpawnedActor) end
+
 ---@param OwningAbility UGameplayAbility
 ---@param Class TSubclassOf<AGameplayAbilityTargetActor>
 ---@param SpawnedActor AGameplayAbilityTargetActor
 ---@return boolean
 function UAbilityTask_VisualizeTargeting:BeginSpawningActor(OwningAbility, Class, SpawnedActor) end
-
 
 ---@class UAbilityTask_WaitAbilityActivate : UAbilityTask
 ---@field OnActivate FAbilityTask_WaitAbilityActivateOnActivate
@@ -2461,23 +2751,29 @@ UAbilityTask_WaitAbilityActivate = {}
 ---@param IncludeTriggeredAbilities boolean
 ---@param TriggerOnce boolean
 ---@return UAbilityTask_WaitAbilityActivate
-function UAbilityTask_WaitAbilityActivate:WaitForAbilityActivateWithTagRequirements(OwningAbility, TagRequirements, IncludeTriggeredAbilities, TriggerOnce) end
+function UAbilityTask_WaitAbilityActivate:WaitForAbilityActivateWithTagRequirements(OwningAbility, TagRequirements,
+                                                                                    IncludeTriggeredAbilities,
+                                                                                    TriggerOnce) end
+
 ---@param OwningAbility UGameplayAbility
 ---@param Query FGameplayTagQuery
 ---@param IncludeTriggeredAbilities boolean
 ---@param TriggerOnce boolean
 ---@return UAbilityTask_WaitAbilityActivate
-function UAbilityTask_WaitAbilityActivate:WaitForAbilityActivate_Query(OwningAbility, Query, IncludeTriggeredAbilities, TriggerOnce) end
+function UAbilityTask_WaitAbilityActivate:WaitForAbilityActivate_Query(OwningAbility, Query, IncludeTriggeredAbilities,
+                                                                       TriggerOnce) end
+
 ---@param OwningAbility UGameplayAbility
 ---@param WithTag FGameplayTag
 ---@param WithoutTag FGameplayTag
 ---@param IncludeTriggeredAbilities boolean
 ---@param TriggerOnce boolean
 ---@return UAbilityTask_WaitAbilityActivate
-function UAbilityTask_WaitAbilityActivate:WaitForAbilityActivate(OwningAbility, WithTag, WithoutTag, IncludeTriggeredAbilities, TriggerOnce) end
+function UAbilityTask_WaitAbilityActivate:WaitForAbilityActivate(OwningAbility, WithTag, WithoutTag,
+                                                                 IncludeTriggeredAbilities, TriggerOnce) end
+
 ---@param ActivatedAbility UGameplayAbility
 function UAbilityTask_WaitAbilityActivate:OnAbilityActivate(ActivatedAbility) end
-
 
 ---@class UAbilityTask_WaitAbilityCommit : UAbilityTask
 ---@field OnCommit FAbilityTask_WaitAbilityCommitOnCommit
@@ -2488,15 +2784,16 @@ UAbilityTask_WaitAbilityCommit = {}
 ---@param TriggerOnce boolean
 ---@return UAbilityTask_WaitAbilityCommit
 function UAbilityTask_WaitAbilityCommit:WaitForAbilityCommit_Query(OwningAbility, Query, TriggerOnce) end
+
 ---@param OwningAbility UGameplayAbility
 ---@param WithTag FGameplayTag
 ---@param WithoutTage FGameplayTag
 ---@param TriggerOnce boolean
 ---@return UAbilityTask_WaitAbilityCommit
 function UAbilityTask_WaitAbilityCommit:WaitForAbilityCommit(OwningAbility, WithTag, WithoutTage, TriggerOnce) end
+
 ---@param ActivatedAbility UGameplayAbility
 function UAbilityTask_WaitAbilityCommit:OnAbilityCommit(ActivatedAbility) end
-
 
 ---@class UAbilityTask_WaitAttributeChange : UAbilityTask
 ---@field OnChange FAbilityTask_WaitAttributeChangeOnChange
@@ -2512,7 +2809,11 @@ UAbilityTask_WaitAttributeChange = {}
 ---@param TriggerOnce boolean
 ---@param OptionalExternalOwner AActor
 ---@return UAbilityTask_WaitAttributeChange
-function UAbilityTask_WaitAttributeChange:WaitForAttributeChangeWithComparison(OwningAbility, InAttribute, InWithTag, InWithoutTag, InComparisonType, InComparisonValue, TriggerOnce, OptionalExternalOwner) end
+function UAbilityTask_WaitAttributeChange:WaitForAttributeChangeWithComparison(OwningAbility, InAttribute, InWithTag,
+                                                                               InWithoutTag, InComparisonType,
+                                                                               InComparisonValue, TriggerOnce,
+                                                                               OptionalExternalOwner) end
+
 ---@param OwningAbility UGameplayAbility
 ---@param Attribute FGameplayAttribute
 ---@param WithSrcTag FGameplayTag
@@ -2520,8 +2821,8 @@ function UAbilityTask_WaitAttributeChange:WaitForAttributeChangeWithComparison(O
 ---@param TriggerOnce boolean
 ---@param OptionalExternalOwner AActor
 ---@return UAbilityTask_WaitAttributeChange
-function UAbilityTask_WaitAttributeChange:WaitForAttributeChange(OwningAbility, Attribute, WithSrcTag, WithoutSrcTag, TriggerOnce, OptionalExternalOwner) end
-
+function UAbilityTask_WaitAttributeChange:WaitForAttributeChange(OwningAbility, Attribute, WithSrcTag, WithoutSrcTag,
+                                                                 TriggerOnce, OptionalExternalOwner) end
 
 ---@class UAbilityTask_WaitAttributeChangeRatioThreshold : UAbilityTask
 ---@field OnChange FAbilityTask_WaitAttributeChangeRatioThresholdOnChange
@@ -2536,8 +2837,13 @@ UAbilityTask_WaitAttributeChangeRatioThreshold = {}
 ---@param bTriggerOnce boolean
 ---@param OptionalExternalOwner AActor
 ---@return UAbilityTask_WaitAttributeChangeRatioThreshold
-function UAbilityTask_WaitAttributeChangeRatioThreshold:WaitForAttributeChangeRatioThreshold(OwningAbility, AttributeNumerator, AttributeDenominator, ComparisonType, ComparisonValue, bTriggerOnce, OptionalExternalOwner) end
-
+function UAbilityTask_WaitAttributeChangeRatioThreshold:WaitForAttributeChangeRatioThreshold(OwningAbility,
+                                                                                             AttributeNumerator,
+                                                                                             AttributeDenominator,
+                                                                                             ComparisonType,
+                                                                                             ComparisonValue,
+                                                                                             bTriggerOnce,
+                                                                                             OptionalExternalOwner) end
 
 ---@class UAbilityTask_WaitAttributeChangeThreshold : UAbilityTask
 ---@field OnChange FAbilityTask_WaitAttributeChangeThresholdOnChange
@@ -2551,8 +2857,9 @@ UAbilityTask_WaitAttributeChangeThreshold = {}
 ---@param bTriggerOnce boolean
 ---@param OptionalExternalOwner AActor
 ---@return UAbilityTask_WaitAttributeChangeThreshold
-function UAbilityTask_WaitAttributeChangeThreshold:WaitForAttributeChangeThreshold(OwningAbility, Attribute, ComparisonType, ComparisonValue, bTriggerOnce, OptionalExternalOwner) end
-
+function UAbilityTask_WaitAttributeChangeThreshold:WaitForAttributeChangeThreshold(OwningAbility, Attribute,
+                                                                                   ComparisonType, ComparisonValue,
+                                                                                   bTriggerOnce, OptionalExternalOwner) end
 
 ---@class UAbilityTask_WaitCancel : UAbilityTask
 ---@field OnCancel FAbilityTask_WaitCancelOnCancel
@@ -2561,9 +2868,10 @@ UAbilityTask_WaitCancel = {}
 ---@param OwningAbility UGameplayAbility
 ---@return UAbilityTask_WaitCancel
 function UAbilityTask_WaitCancel:WaitCancel(OwningAbility) end
-function UAbilityTask_WaitCancel:OnLocalCancelCallback() end
-function UAbilityTask_WaitCancel:OnCancelCallback() end
 
+function UAbilityTask_WaitCancel:OnLocalCancelCallback() end
+
+function UAbilityTask_WaitCancel:OnCancelCallback() end
 
 ---@class UAbilityTask_WaitConfirm : UAbilityTask
 ---@field OnConfirm FAbilityTask_WaitConfirmOnConfirm
@@ -2572,9 +2880,9 @@ UAbilityTask_WaitConfirm = {}
 ---@param OwningAbility UGameplayAbility
 ---@return UAbilityTask_WaitConfirm
 function UAbilityTask_WaitConfirm:WaitConfirm(OwningAbility) end
+
 ---@param InAbility UGameplayAbility
 function UAbilityTask_WaitConfirm:OnConfirmCallback(InAbility) end
-
 
 ---@class UAbilityTask_WaitConfirmCancel : UAbilityTask
 ---@field OnConfirm FAbilityTask_WaitConfirmCancelOnConfirm
@@ -2584,11 +2892,14 @@ UAbilityTask_WaitConfirmCancel = {}
 ---@param OwningAbility UGameplayAbility
 ---@return UAbilityTask_WaitConfirmCancel
 function UAbilityTask_WaitConfirmCancel:WaitConfirmCancel(OwningAbility) end
-function UAbilityTask_WaitConfirmCancel:OnLocalConfirmCallback() end
-function UAbilityTask_WaitConfirmCancel:OnLocalCancelCallback() end
-function UAbilityTask_WaitConfirmCancel:OnConfirmCallback() end
-function UAbilityTask_WaitConfirmCancel:OnCancelCallback() end
 
+function UAbilityTask_WaitConfirmCancel:OnLocalConfirmCallback() end
+
+function UAbilityTask_WaitConfirmCancel:OnLocalCancelCallback() end
+
+function UAbilityTask_WaitConfirmCancel:OnConfirmCallback() end
+
+function UAbilityTask_WaitConfirmCancel:OnCancelCallback() end
 
 ---@class UAbilityTask_WaitDelay : UAbilityTask
 ---@field OnFinish FAbilityTask_WaitDelayOnFinish
@@ -2599,7 +2910,6 @@ UAbilityTask_WaitDelay = {}
 ---@return UAbilityTask_WaitDelay
 function UAbilityTask_WaitDelay:WaitDelay(OwningAbility, Time) end
 
-
 ---@class UAbilityTask_WaitGameplayEffectApplied : UAbilityTask
 ---@field ExternalOwner UAbilitySystemComponent
 UAbilityTask_WaitGameplayEffectApplied = {}
@@ -2608,7 +2918,6 @@ UAbilityTask_WaitGameplayEffectApplied = {}
 ---@param SpecApplied FGameplayEffectSpec
 ---@param ActiveHandle FActiveGameplayEffectHandle
 function UAbilityTask_WaitGameplayEffectApplied:OnApplyGameplayEffectCallback(Target, SpecApplied, ActiveHandle) end
-
 
 ---@class UAbilityTask_WaitGameplayEffectApplied_Self : UAbilityTask_WaitGameplayEffectApplied
 ---@field OnApplied FAbilityTask_WaitGameplayEffectApplied_SelfOnApplied
@@ -2622,7 +2931,12 @@ UAbilityTask_WaitGameplayEffectApplied_Self = {}
 ---@param OptionalExternalOwner AActor
 ---@param ListenForPeriodicEffect boolean
 ---@return UAbilityTask_WaitGameplayEffectApplied_Self
-function UAbilityTask_WaitGameplayEffectApplied_Self:WaitGameplayEffectAppliedToSelf_Query(OwningAbility, SourceFilter, SourceTagQuery, TargetTagQuery, TriggerOnce, OptionalExternalOwner, ListenForPeriodicEffect) end
+function UAbilityTask_WaitGameplayEffectApplied_Self:WaitGameplayEffectAppliedToSelf_Query(OwningAbility, SourceFilter,
+                                                                                           SourceTagQuery, TargetTagQuery,
+                                                                                           TriggerOnce,
+                                                                                           OptionalExternalOwner,
+                                                                                           ListenForPeriodicEffect) end
+
 ---@param OwningAbility UGameplayAbility
 ---@param SourceFilter FGameplayTargetDataFilterHandle
 ---@param SourceTagRequirements FGameplayTagRequirements
@@ -2631,8 +2945,11 @@ function UAbilityTask_WaitGameplayEffectApplied_Self:WaitGameplayEffectAppliedTo
 ---@param OptionalExternalOwner AActor
 ---@param ListenForPeriodicEffect boolean
 ---@return UAbilityTask_WaitGameplayEffectApplied_Self
-function UAbilityTask_WaitGameplayEffectApplied_Self:WaitGameplayEffectAppliedToSelf(OwningAbility, SourceFilter, SourceTagRequirements, TargetTagRequirements, TriggerOnce, OptionalExternalOwner, ListenForPeriodicEffect) end
-
+function UAbilityTask_WaitGameplayEffectApplied_Self:WaitGameplayEffectAppliedToSelf(OwningAbility, SourceFilter,
+                                                                                     SourceTagRequirements,
+                                                                                     TargetTagRequirements, TriggerOnce,
+                                                                                     OptionalExternalOwner,
+                                                                                     ListenForPeriodicEffect) end
 
 ---@class UAbilityTask_WaitGameplayEffectApplied_Target : UAbilityTask_WaitGameplayEffectApplied
 ---@field OnApplied FAbilityTask_WaitGameplayEffectApplied_TargetOnApplied
@@ -2646,7 +2963,14 @@ UAbilityTask_WaitGameplayEffectApplied_Target = {}
 ---@param OptionalExternalOwner AActor
 ---@param ListenForPeriodicEffect boolean
 ---@return UAbilityTask_WaitGameplayEffectApplied_Target
-function UAbilityTask_WaitGameplayEffectApplied_Target:WaitGameplayEffectAppliedToTarget_Query(OwningAbility, SourceFilter, SourceTagQuery, TargetTagQuery, TriggerOnce, OptionalExternalOwner, ListenForPeriodicEffect) end
+function UAbilityTask_WaitGameplayEffectApplied_Target:WaitGameplayEffectAppliedToTarget_Query(OwningAbility,
+                                                                                               SourceFilter,
+                                                                                               SourceTagQuery,
+                                                                                               TargetTagQuery,
+                                                                                               TriggerOnce,
+                                                                                               OptionalExternalOwner,
+                                                                                               ListenForPeriodicEffect) end
+
 ---@param OwningAbility UGameplayAbility
 ---@param TargetFilter FGameplayTargetDataFilterHandle
 ---@param SourceTagRequirements FGameplayTagRequirements
@@ -2655,8 +2979,12 @@ function UAbilityTask_WaitGameplayEffectApplied_Target:WaitGameplayEffectApplied
 ---@param OptionalExternalOwner AActor
 ---@param ListenForPeriodicEffects boolean
 ---@return UAbilityTask_WaitGameplayEffectApplied_Target
-function UAbilityTask_WaitGameplayEffectApplied_Target:WaitGameplayEffectAppliedToTarget(OwningAbility, TargetFilter, SourceTagRequirements, TargetTagRequirements, TriggerOnce, OptionalExternalOwner, ListenForPeriodicEffects) end
-
+function UAbilityTask_WaitGameplayEffectApplied_Target:WaitGameplayEffectAppliedToTarget(OwningAbility, TargetFilter,
+                                                                                         SourceTagRequirements,
+                                                                                         TargetTagRequirements,
+                                                                                         TriggerOnce,
+                                                                                         OptionalExternalOwner,
+                                                                                         ListenForPeriodicEffects) end
 
 ---@class UAbilityTask_WaitGameplayEffectBlockedImmunity : UAbilityTask
 ---@field bLocked FAbilityTask_WaitGameplayEffectBlockedImmunityBLocked
@@ -2669,8 +2997,11 @@ UAbilityTask_WaitGameplayEffectBlockedImmunity = {}
 ---@param OptionalExternalTarget AActor
 ---@param OnlyTriggerOnce boolean
 ---@return UAbilityTask_WaitGameplayEffectBlockedImmunity
-function UAbilityTask_WaitGameplayEffectBlockedImmunity:WaitGameplayEffectBlockedByImmunity(OwningAbility, SourceTagRequirements, TargetTagRequirements, OptionalExternalTarget, OnlyTriggerOnce) end
-
+function UAbilityTask_WaitGameplayEffectBlockedImmunity:WaitGameplayEffectBlockedByImmunity(OwningAbility,
+                                                                                            SourceTagRequirements,
+                                                                                            TargetTagRequirements,
+                                                                                            OptionalExternalTarget,
+                                                                                            OnlyTriggerOnce) end
 
 ---@class UAbilityTask_WaitGameplayEffectRemoved : UAbilityTask
 ---@field OnRemoved FAbilityTask_WaitGameplayEffectRemovedOnRemoved
@@ -2681,9 +3012,9 @@ UAbilityTask_WaitGameplayEffectRemoved = {}
 ---@param Handle FActiveGameplayEffectHandle
 ---@return UAbilityTask_WaitGameplayEffectRemoved
 function UAbilityTask_WaitGameplayEffectRemoved:WaitForGameplayEffectRemoved(OwningAbility, Handle) end
+
 ---@param InGameplayEffectRemovalInfo FGameplayEffectRemovalInfo
 function UAbilityTask_WaitGameplayEffectRemoved:OnGameplayEffectRemoved(InGameplayEffectRemovalInfo) end
-
 
 ---@class UAbilityTask_WaitGameplayEffectStackChange : UAbilityTask
 ---@field OnChange FAbilityTask_WaitGameplayEffectStackChangeOnChange
@@ -2694,11 +3025,11 @@ UAbilityTask_WaitGameplayEffectStackChange = {}
 ---@param Handle FActiveGameplayEffectHandle
 ---@return UAbilityTask_WaitGameplayEffectStackChange
 function UAbilityTask_WaitGameplayEffectStackChange:WaitForGameplayEffectStackChange(OwningAbility, Handle) end
+
 ---@param Handle FActiveGameplayEffectHandle
 ---@param NewCount int32
 ---@param OldCount int32
 function UAbilityTask_WaitGameplayEffectStackChange:OnGameplayEffectStackChange(Handle, NewCount, OldCount) end
-
 
 ---@class UAbilityTask_WaitGameplayEvent : UAbilityTask
 ---@field EventReceived FAbilityTask_WaitGameplayEventEventReceived
@@ -2711,8 +3042,8 @@ UAbilityTask_WaitGameplayEvent = {}
 ---@param OnlyTriggerOnce boolean
 ---@param OnlyMatchExact boolean
 ---@return UAbilityTask_WaitGameplayEvent
-function UAbilityTask_WaitGameplayEvent:WaitGameplayEvent(OwningAbility, EventTag, OptionalExternalTarget, OnlyTriggerOnce, OnlyMatchExact) end
-
+function UAbilityTask_WaitGameplayEvent:WaitGameplayEvent(OwningAbility, EventTag, OptionalExternalTarget,
+                                                          OnlyTriggerOnce, OnlyMatchExact) end
 
 ---@class UAbilityTask_WaitGameplayTag : UAbilityTask
 ---@field OptionalExternalTarget UAbilitySystemComponent
@@ -2721,7 +3052,6 @@ UAbilityTask_WaitGameplayTag = {}
 ---@param Tag FGameplayTag
 ---@param NewCount int32
 function UAbilityTask_WaitGameplayTag:GameplayTagCallback(Tag, NewCount) end
-
 
 ---@class UAbilityTask_WaitGameplayTagAdded : UAbilityTask_WaitGameplayTag
 ---@field Added FAbilityTask_WaitGameplayTagAddedAdded
@@ -2732,8 +3062,8 @@ UAbilityTask_WaitGameplayTagAdded = {}
 ---@param InOptionalExternalTarget AActor
 ---@param OnlyTriggerOnce boolean
 ---@return UAbilityTask_WaitGameplayTagAdded
-function UAbilityTask_WaitGameplayTagAdded:WaitGameplayTagAdd(OwningAbility, Tag, InOptionalExternalTarget, OnlyTriggerOnce) end
-
+function UAbilityTask_WaitGameplayTagAdded:WaitGameplayTagAdd(OwningAbility, Tag, InOptionalExternalTarget,
+                                                              OnlyTriggerOnce) end
 
 ---@class UAbilityTask_WaitGameplayTagQuery : UAbilityTask
 ---@field Triggered FAbilityTask_WaitGameplayTagQueryTriggered
@@ -2746,11 +3076,12 @@ UAbilityTask_WaitGameplayTagQuery = {}
 ---@param TriggerCondition EWaitGameplayTagQueryTriggerCondition
 ---@param bOnlyTriggerOnce boolean
 ---@return UAbilityTask_WaitGameplayTagQuery
-function UAbilityTask_WaitGameplayTagQuery:WaitGameplayTagQuery(OwningAbility, TagQuery, InOptionalExternalTarget, TriggerCondition, bOnlyTriggerOnce) end
+function UAbilityTask_WaitGameplayTagQuery:WaitGameplayTagQuery(OwningAbility, TagQuery, InOptionalExternalTarget,
+                                                                TriggerCondition, bOnlyTriggerOnce) end
+
 ---@param Tag FGameplayTag
 ---@param NewCount int32
 function UAbilityTask_WaitGameplayTagQuery:UpdateTargetTags(Tag, NewCount) end
-
 
 ---@class UAbilityTask_WaitGameplayTagRemoved : UAbilityTask_WaitGameplayTag
 ---@field Removed FAbilityTask_WaitGameplayTagRemovedRemoved
@@ -2761,8 +3092,8 @@ UAbilityTask_WaitGameplayTagRemoved = {}
 ---@param InOptionalExternalTarget AActor
 ---@param OnlyTriggerOnce boolean
 ---@return UAbilityTask_WaitGameplayTagRemoved
-function UAbilityTask_WaitGameplayTagRemoved:WaitGameplayTagRemove(OwningAbility, Tag, InOptionalExternalTarget, OnlyTriggerOnce) end
-
+function UAbilityTask_WaitGameplayTagRemoved:WaitGameplayTagRemove(OwningAbility, Tag, InOptionalExternalTarget,
+                                                                   OnlyTriggerOnce) end
 
 ---@class UAbilityTask_WaitInputPress : UAbilityTask
 ---@field OnPress FAbilityTask_WaitInputPressOnPress
@@ -2772,8 +3103,8 @@ UAbilityTask_WaitInputPress = {}
 ---@param bTestAlreadyPressed boolean
 ---@return UAbilityTask_WaitInputPress
 function UAbilityTask_WaitInputPress:WaitInputPress(OwningAbility, bTestAlreadyPressed) end
-function UAbilityTask_WaitInputPress:OnPressCallback() end
 
+function UAbilityTask_WaitInputPress:OnPressCallback() end
 
 ---@class UAbilityTask_WaitInputRelease : UAbilityTask
 ---@field OnRelease FAbilityTask_WaitInputReleaseOnRelease
@@ -2783,8 +3114,8 @@ UAbilityTask_WaitInputRelease = {}
 ---@param bTestAlreadyReleased boolean
 ---@return UAbilityTask_WaitInputRelease
 function UAbilityTask_WaitInputRelease:WaitInputRelease(OwningAbility, bTestAlreadyReleased) end
-function UAbilityTask_WaitInputRelease:OnReleaseCallback() end
 
+function UAbilityTask_WaitInputRelease:OnReleaseCallback() end
 
 ---@class UAbilityTask_WaitMovementModeChange : UAbilityTask
 ---@field OnChange FAbilityTask_WaitMovementModeChangeOnChange
@@ -2794,11 +3125,11 @@ UAbilityTask_WaitMovementModeChange = {}
 ---@param PrevMovementMode EMovementMode
 ---@param PreviousCustomMode uint8
 function UAbilityTask_WaitMovementModeChange:OnMovementModeChange(Character, PrevMovementMode, PreviousCustomMode) end
+
 ---@param OwningAbility UGameplayAbility
 ---@param NewMode EMovementMode
 ---@return UAbilityTask_WaitMovementModeChange
 function UAbilityTask_WaitMovementModeChange:CreateWaitMovementModeChange(OwningAbility, NewMode) end
-
 
 ---@class UAbilityTask_WaitOverlap : UAbilityTask
 ---@field OnOverlap FAbilityTask_WaitOverlapOnOverlap
@@ -2807,13 +3138,13 @@ UAbilityTask_WaitOverlap = {}
 ---@param OwningAbility UGameplayAbility
 ---@return UAbilityTask_WaitOverlap
 function UAbilityTask_WaitOverlap:WaitForOverlap(OwningAbility) end
+
 ---@param HitComp UPrimitiveComponent
 ---@param OtherActor AActor
 ---@param OtherComp UPrimitiveComponent
 ---@param NormalImpulse FVector
 ---@param Hit FHitResult
 function UAbilityTask_WaitOverlap:OnHitCallback(HitComp, OtherActor, OtherComp, NormalImpulse, Hit) end
-
 
 ---@class UAbilityTask_WaitTargetData : UAbilityTask
 ---@field ValidData FAbilityTask_WaitTargetDataValidData
@@ -2827,30 +3158,37 @@ UAbilityTask_WaitTargetData = {}
 ---@param ConfirmationType EGameplayTargetingConfirmation::Type
 ---@param TargetActor AGameplayAbilityTargetActor
 ---@return UAbilityTask_WaitTargetData
-function UAbilityTask_WaitTargetData:WaitTargetDataUsingActor(OwningAbility, TaskInstanceName, ConfirmationType, TargetActor) end
+function UAbilityTask_WaitTargetData:WaitTargetDataUsingActor(OwningAbility, TaskInstanceName, ConfirmationType,
+                                                              TargetActor) end
+
 ---@param OwningAbility UGameplayAbility
 ---@param TaskInstanceName FName
 ---@param ConfirmationType EGameplayTargetingConfirmation::Type
 ---@param Class TSubclassOf<AGameplayAbilityTargetActor>
 ---@return UAbilityTask_WaitTargetData
 function UAbilityTask_WaitTargetData:WaitTargetData(OwningAbility, TaskInstanceName, ConfirmationType, Class) end
+
 function UAbilityTask_WaitTargetData:OnTargetDataReplicatedCancelledCallback() end
+
 ---@param Data FGameplayAbilityTargetDataHandle
 ---@param ActivationTag FGameplayTag
 function UAbilityTask_WaitTargetData:OnTargetDataReplicatedCallback(Data, ActivationTag) end
+
 ---@param Data FGameplayAbilityTargetDataHandle
 function UAbilityTask_WaitTargetData:OnTargetDataReadyCallback(Data) end
+
 ---@param Data FGameplayAbilityTargetDataHandle
 function UAbilityTask_WaitTargetData:OnTargetDataCancelledCallback(Data) end
+
 ---@param OwningAbility UGameplayAbility
 ---@param SpawnedActor AGameplayAbilityTargetActor
 function UAbilityTask_WaitTargetData:FinishSpawningActor(OwningAbility, SpawnedActor) end
+
 ---@param OwningAbility UGameplayAbility
 ---@param Class TSubclassOf<AGameplayAbilityTargetActor>
 ---@param SpawnedActor AGameplayAbilityTargetActor
 ---@return boolean
 function UAbilityTask_WaitTargetData:BeginSpawningActor(OwningAbility, Class, SpawnedActor) end
-
 
 ---@class UAbilityTask_WaitVelocityChange : UAbilityTask
 ---@field OnVelocityChage FAbilityTask_WaitVelocityChangeOnVelocityChage
@@ -2862,7 +3200,6 @@ UAbilityTask_WaitVelocityChange = {}
 ---@param MinimumMagnitude float
 ---@return UAbilityTask_WaitVelocityChange
 function UAbilityTask_WaitVelocityChange:CreateWaitVelocityChange(OwningAbility, Direction, MinimumMagnitude) end
-
 
 ---@class UAdditionalEffectsGameplayEffectComponent : UGameplayEffectComponent
 ---@field bOnApplicationCopyDataFromOriginalSpec boolean
@@ -2950,150 +3287,205 @@ UGameplayAbility = {}
 
 ---@param bShouldBlockAbilities boolean
 function UGameplayAbility:SetShouldBlockOtherAbilities(bShouldBlockAbilities) end
+
 ---@param bCanBeCanceled boolean
 function UGameplayAbility:SetCanBeCanceled(bCanBeCanceled) end
+
 ---@param EventTag FGameplayTag
 ---@param Payload FGameplayEventData
 function UGameplayAbility:SendGameplayEvent(EventTag, Payload) end
+
 function UGameplayAbility:RemoveGrantedByEffect() end
+
 ---@param OverrideBlendOutTime float
 function UGameplayAbility:MontageStop(OverrideBlendOutTime) end
+
 ---@param FromSectionName FName
 ---@param ToSectionName FName
 function UGameplayAbility:MontageSetNextSectionName(FromSectionName, ToSectionName) end
+
 ---@param SectionName FName
 function UGameplayAbility:MontageJumpToSection(SectionName) end
+
 ---@param SocketName FName
 ---@return FGameplayAbilityTargetingLocationInfo
 function UGameplayAbility:MakeTargetLocationInfoFromOwnerSkeletalMeshComponent(SocketName) end
+
 ---@return FGameplayAbilityTargetingLocationInfo
 function UGameplayAbility:MakeTargetLocationInfoFromOwnerActor() end
+
 ---@param GameplayEffectClass TSubclassOf<UGameplayEffect>
 ---@param Level float
 ---@return FGameplayEffectSpecHandle
 function UGameplayAbility:MakeOutgoingGameplayEffectSpec(GameplayEffectClass, Level) end
+
 ---@param ActorInfo FGameplayAbilityActorInfo
 ---@param Payload FGameplayEventData
 ---@return boolean
 function UGameplayAbility:K2_ShouldAbilityRespondToEvent(ActorInfo, Payload) end
+
 ---@param GameplayCueTag FGameplayTag
 function UGameplayAbility:K2_RemoveGameplayCue(GameplayCueTag) end
+
 ---@param bWasCancelled boolean
 function UGameplayAbility:K2_OnEndAbility(bWasCancelled) end
+
 ---@return boolean
 function UGameplayAbility:K2_HasAuthority() end
+
 ---@param GameplayCueTag FGameplayTag
 ---@param GameplayCueParameters FGameplayCueParameters
 function UGameplayAbility:K2_ExecuteGameplayCueWithParams(GameplayCueTag, GameplayCueParameters) end
+
 ---@param GameplayCueTag FGameplayTag
 ---@param Context FGameplayEffectContextHandle
 function UGameplayAbility:K2_ExecuteGameplayCue(GameplayCueTag, Context) end
+
 function UGameplayAbility:K2_EndAbilityLocally() end
+
 function UGameplayAbility:K2_EndAbility() end
+
 function UGameplayAbility:K2_CommitExecute() end
+
 ---@param BroadcastCommitEvent boolean
 ---@return boolean
 function UGameplayAbility:K2_CommitAbilityCost(BroadcastCommitEvent) end
+
 ---@param BroadcastCommitEvent boolean
 ---@param ForceCooldown boolean
 ---@return boolean
 function UGameplayAbility:K2_CommitAbilityCooldown(BroadcastCommitEvent, ForceCooldown) end
+
 ---@return boolean
 function UGameplayAbility:K2_CommitAbility() end
+
 ---@return boolean
 function UGameplayAbility:K2_CheckAbilityCost() end
+
 ---@return boolean
 function UGameplayAbility:K2_CheckAbilityCooldown() end
+
 function UGameplayAbility:K2_CancelAbility() end
+
 ---@param ActorInfo FGameplayAbilityActorInfo
 ---@param Handle FGameplayAbilitySpecHandle
 ---@param RelevantTags FGameplayTagContainer
 ---@return boolean
 function UGameplayAbility:K2_CanActivateAbility(ActorInfo, Handle, RelevantTags) end
+
 ---@param EffectSpecHandle FGameplayEffectSpecHandle
 ---@param TargetData FGameplayAbilityTargetDataHandle
 ---@return TArray<FActiveGameplayEffectHandle>
 function UGameplayAbility:K2_ApplyGameplayEffectSpecToTarget(EffectSpecHandle, TargetData) end
+
 ---@param EffectSpecHandle FGameplayEffectSpecHandle
 ---@return FActiveGameplayEffectHandle
 function UGameplayAbility:K2_ApplyGameplayEffectSpecToOwner(EffectSpecHandle) end
+
 ---@param GameplayCueTag FGameplayTag
 ---@param GameplayCueParameter FGameplayCueParameters
 ---@param bRemoveOnAbilityEnd boolean
 function UGameplayAbility:K2_AddGameplayCueWithParams(GameplayCueTag, GameplayCueParameter, bRemoveOnAbilityEnd) end
+
 ---@param GameplayCueTag FGameplayTag
 ---@param Context FGameplayEffectContextHandle
 ---@param bRemoveOnAbilityEnd boolean
 function UGameplayAbility:K2_AddGameplayCue(GameplayCueTag, Context, bRemoveOnAbilityEnd) end
+
 ---@param EventData FGameplayEventData
 function UGameplayAbility:K2_ActivateAbilityFromEvent(EventData) end
+
 function UGameplayAbility:K2_ActivateAbility() end
+
 ---@return boolean
 function UGameplayAbility:IsPredictingClient() end
+
 ---@return boolean
 function UGameplayAbility:IsLocallyControlled() end
+
 function UGameplayAbility:InvalidateClientPredictionKey() end
+
 ---@param Handle FGameplayAbilitySpecHandle
 ---@param ActorInfo FGameplayAbilityActorInfo
 ---@return UObject
 function UGameplayAbility:GetSourceObject_BP(Handle, ActorInfo) end
+
 ---@return USkeletalMeshComponent
 function UGameplayAbility:GetOwningComponentFromActorInfo() end
+
 ---@return AActor
 function UGameplayAbility:GetOwningActorFromActorInfo() end
+
 ---@return FGameplayEffectContextHandle
 function UGameplayAbility:GetGrantedByEffectContext() end
+
 ---@return UObject
 function UGameplayAbility:GetCurrentSourceObject() end
+
 ---@return UAnimMontage
 function UGameplayAbility:GetCurrentMontage() end
+
 ---@return float
 function UGameplayAbility:GetCooldownTimeRemaining() end
+
 ---@param OptionalTargetData FGameplayAbilityTargetDataHandle
 ---@return FGameplayEffectContextHandle
 function UGameplayAbility:GetContextFromOwner(OptionalTargetData) end
+
 ---@return AActor
 function UGameplayAbility:GetAvatarActorFromActorInfo() end
+
 ---@return FGameplayAbilityActorInfo
 function UGameplayAbility:GetActorInfo() end
+
 ---@return UAbilitySystemComponent
 function UGameplayAbility:GetAbilitySystemComponentFromActorInfo() end
+
 ---@param Handle FGameplayAbilitySpecHandle
 ---@param ActorInfo FGameplayAbilityActorInfo
 ---@return int32
 function UGameplayAbility:GetAbilityLevel_BP(Handle, ActorInfo) end
+
 ---@return int32
 function UGameplayAbility:GetAbilityLevel() end
+
 ---@param InstanceName FName
 function UGameplayAbility:EndTaskByInstanceName(InstanceName) end
+
 ---@param OptionalStateNameToEnd FName
 function UGameplayAbility:EndAbilityState(OptionalStateNameToEnd) end
+
 ---@param InstanceName FName
 ---@param bEndTask boolean
 function UGameplayAbility:ConfirmTaskByInstanceName(InstanceName, bEndTask) end
+
 ---@param InstanceName FName
 function UGameplayAbility:CancelTaskByInstanceName(InstanceName) end
+
 ---@param Handle FActiveGameplayEffectHandle
 ---@param StacksToRemove int32
 function UGameplayAbility:BP_RemoveGameplayEffectFromOwnerWithHandle(Handle, StacksToRemove) end
+
 ---@param WithGrantedTags FGameplayTagContainer
 ---@param StacksToRemove int32
 function UGameplayAbility:BP_RemoveGameplayEffectFromOwnerWithGrantedTags(WithGrantedTags, StacksToRemove) end
+
 ---@param WithAssetTags FGameplayTagContainer
 ---@param StacksToRemove int32
 function UGameplayAbility:BP_RemoveGameplayEffectFromOwnerWithAssetTags(WithAssetTags, StacksToRemove) end
+
 ---@param TargetData FGameplayAbilityTargetDataHandle
 ---@param GameplayEffectClass TSubclassOf<UGameplayEffect>
 ---@param GameplayEffectLevel int32
 ---@param Stacks int32
 ---@return TArray<FActiveGameplayEffectHandle>
 function UGameplayAbility:BP_ApplyGameplayEffectToTarget(TargetData, GameplayEffectClass, GameplayEffectLevel, Stacks) end
+
 ---@param GameplayEffectClass TSubclassOf<UGameplayEffect>
 ---@param GameplayEffectLevel int32
 ---@param Stacks int32
 ---@return FActiveGameplayEffectHandle
 function UGameplayAbility:BP_ApplyGameplayEffectToOwner(GameplayEffectClass, GameplayEffectLevel, Stacks) end
-
 
 ---@class UGameplayAbilityBlueprint : UBlueprint
 UGameplayAbilityBlueprint = {}
@@ -3126,18 +3518,20 @@ UGameplayCueFunctionLibrary = {}
 ---@param GameplayCueTag FGameplayTag
 ---@param Parameters FGameplayCueParameters
 function UGameplayCueFunctionLibrary:RemoveGameplayCueOnActor(Target, GameplayCueTag, Parameters) end
+
 ---@param HitResult FHitResult
 ---@return FGameplayCueParameters
 function UGameplayCueFunctionLibrary:MakeGameplayCueParametersFromHitResult(HitResult) end
+
 ---@param Target AActor
 ---@param GameplayCueTag FGameplayTag
 ---@param Parameters FGameplayCueParameters
 function UGameplayCueFunctionLibrary:ExecuteGameplayCueOnActor(Target, GameplayCueTag, Parameters) end
+
 ---@param Target AActor
 ---@param GameplayCueTag FGameplayTag
 ---@param Parameters FGameplayCueParameters
 function UGameplayCueFunctionLibrary:AddGameplayCueOnActor(Target, GameplayCueTag, Parameters) end
-
 
 ---@class UGameplayCueManager : UDataAsset
 ---@field RuntimeGameplayCueObjectLibrary FGameplayCueObjectLibrary
@@ -3162,7 +3556,6 @@ UGameplayCueNotify_Burst = {}
 ---@param SpawnResults FGameplayCueNotify_SpawnResult
 function UGameplayCueNotify_Burst:OnBurst(Target, Parameters, SpawnResults) end
 
-
 ---@class UGameplayCueNotify_HitImpact : UGameplayCueNotify_Static
 ---@field Sound USoundBase
 ---@field ParticleSystem UParticleSystem
@@ -3180,23 +3573,26 @@ UGameplayCueNotify_Static = {}
 ---@param Parameters FGameplayCueParameters
 ---@return boolean
 function UGameplayCueNotify_Static:WhileActive(MyTarget, Parameters) end
+
 ---@param MyTarget AActor
 ---@param Parameters FGameplayCueParameters
 ---@return boolean
 function UGameplayCueNotify_Static:OnRemove(MyTarget, Parameters) end
+
 ---@param MyTarget AActor
 ---@param Parameters FGameplayCueParameters
 ---@return boolean
 function UGameplayCueNotify_Static:OnExecute(MyTarget, Parameters) end
+
 ---@param MyTarget AActor
 ---@param Parameters FGameplayCueParameters
 ---@return boolean
 function UGameplayCueNotify_Static:OnActive(MyTarget, Parameters) end
+
 ---@param MyTarget AActor
 ---@param EventType EGameplayCueEvent::Type
 ---@param Parameters FGameplayCueParameters
 function UGameplayCueNotify_Static:K2_HandleGameplayCue(MyTarget, EventType, Parameters) end
-
 
 ---@class UGameplayCueSet : UDataAsset
 ---@field GameplayCueData TArray<FGameplayCueNotifyData>
@@ -3272,7 +3668,6 @@ UGameplayEffectCustomApplicationRequirement = {}
 ---@return boolean
 function UGameplayEffectCustomApplicationRequirement:CanApplyGameplayEffect(GameplayEffect, Spec, ASC) end
 
-
 ---@class UGameplayEffectExecutionCalculation : UGameplayEffectCalculation
 ---@field bRequiresPassedInTags boolean
 UGameplayEffectExecutionCalculation = {}
@@ -3280,7 +3675,6 @@ UGameplayEffectExecutionCalculation = {}
 ---@param ExecutionParams FGameplayEffectCustomExecutionParameters
 ---@param OutExecutionOutput FGameplayEffectCustomExecutionOutput
 function UGameplayEffectExecutionCalculation:Execute(ExecutionParams, OutExecutionOutput) end
-
 
 ---@class UGameplayEffectUIData : UGameplayEffectComponent
 UGameplayEffectUIData = {}
@@ -3302,36 +3696,44 @@ UGameplayModMagnitudeCalculation = {}
 ---@param TargetTags FGameplayTagContainer
 ---@return float
 function UGameplayModMagnitudeCalculation:K2_GetCapturedAttributeMagnitude(EffectSpec, Attribute, SourceTags, TargetTags) end
+
 ---@param EffectSpec FGameplayEffectSpec
 ---@return FGameplayTagContainer
 function UGameplayModMagnitudeCalculation:GetTargetSpecTags(EffectSpec) end
+
 ---@param EffectSpec FGameplayEffectSpec
 ---@return FGameplayTagContainer
 function UGameplayModMagnitudeCalculation:GetTargetAggregatedTags(EffectSpec) end
+
 ---@param EffectSpec FGameplayEffectSpec
 ---@return FGameplayTagContainer
 function UGameplayModMagnitudeCalculation:GetTargetActorTags(EffectSpec) end
+
 ---@param EffectSpec FGameplayEffectSpec
 ---@return FGameplayTagContainer
 function UGameplayModMagnitudeCalculation:GetSourceSpecTags(EffectSpec) end
+
 ---@param EffectSpec FGameplayEffectSpec
 ---@return FGameplayTagContainer
 function UGameplayModMagnitudeCalculation:GetSourceAggregatedTags(EffectSpec) end
+
 ---@param EffectSpec FGameplayEffectSpec
 ---@return FGameplayTagContainer
 function UGameplayModMagnitudeCalculation:GetSourceActorTags(EffectSpec) end
+
 ---@param EffectSpec FGameplayEffectSpec
 ---@param Tag FGameplayTag
 ---@return float
 function UGameplayModMagnitudeCalculation:GetSetByCallerMagnitudeByTag(EffectSpec, Tag) end
+
 ---@param EffectSpec FGameplayEffectSpec
 ---@param MagnitudeName FName
 ---@return float
 function UGameplayModMagnitudeCalculation:GetSetByCallerMagnitudeByName(EffectSpec, MagnitudeName) end
+
 ---@param Spec FGameplayEffectSpec
 ---@return float
 function UGameplayModMagnitudeCalculation:CalculateBaseMagnitude(Spec) end
-
 
 ---@class UGameplayTagReponseTable : UDataAsset
 ---@field Entries TArray<FGameplayTagResponseTableEntry>
@@ -3342,7 +3744,6 @@ UGameplayTagReponseTable = {}
 ---@param ASC UAbilitySystemComponent
 ---@param idx int32
 function UGameplayTagReponseTable:TagResponseEvent(Tag, NewCount, ASC, idx) end
-
 
 ---@class UImmunityGameplayEffectComponent : UGameplayEffectComponent
 ---@field ImmunityQueries TArray<FGameplayEffectQuery>
@@ -3362,7 +3763,6 @@ UMovieSceneGameplayCueTrack = {}
 
 ---@param InGameplayCueTrackHandler FSetSequencerTrackHandlerInGameplayCueTrackHandler
 function UMovieSceneGameplayCueTrack:SetSequencerTrackHandler(InGameplayCueTrackHandler) end
-
 
 ---@class UMovieSceneGameplayCueTriggerSection : UMovieSceneHookSection
 ---@field Channel FMovieSceneGameplayCueChannel
@@ -3387,6 +3787,3 @@ UTargetTagRequirementsGameplayEffectComponent = {}
 ---@class UTargetTagsGameplayEffectComponent : UGameplayEffectComponent
 ---@field InheritableGrantedTagsContainer FInheritedTagContainer
 UTargetTagsGameplayEffectComponent = {}
-
-
-

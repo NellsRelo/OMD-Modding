@@ -5,6 +5,3 @@
 ---@field Trap_Wall1 URSTTrapGridBoxComponent
 ---@field trap_wall URSTTrapGridBoxComponent
 ABP_Colosseum_WallBottom_LobbyTrim_4x2_A_C = {}
-
-
-

@@ -23,6 +23,3 @@
 ---@field TrapGrid USceneComponent
 ---@field Geo USceneComponent
 ABP_FishMarket_SewerEntrance_C = {}
-
-
-

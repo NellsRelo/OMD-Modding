@@ -16,6 +16,3 @@
 ---@field Archway_Wall_SM UStaticMeshComponent
 ---@field Archway_Wall_Base_SM UStaticMeshComponent
 AArchway_1x2_C = {}
-
-
-

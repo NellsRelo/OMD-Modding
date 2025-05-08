@@ -7,12 +7,15 @@
 ABP_AcidGeyser_C = {}
 
 function ABP_AcidGeyser_C:BP_IsSoldChanged() end
-ABP_AcidGeyser_C['Update FX'] = function() end
+
+ABP_AcidGeyser_C['Update FX'] = function(self,) end
 function ABP_AcidGeyser_C:BP_IsBeingPlacedChanged() end
+
 function ABP_AcidGeyser_C:BP_AvailableChargesChanged() end
+
 function ABP_AcidGeyser_C:BP_IsPlacementValidChanged() end
+
 function ABP_AcidGeyser_C:ReceiveBeginPlay() end
+
 ---@param EntryPoint int32
 function ABP_AcidGeyser_C:ExecuteUbergraph_BP_AcidGeyser(EntryPoint) end
-
-

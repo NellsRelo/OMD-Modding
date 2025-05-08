@@ -48,4 +48,3 @@ EWaveTableSamplingMode = {
     COUNT = 2,
     EWaveTableSamplingMode_MAX = 3,
 }
-

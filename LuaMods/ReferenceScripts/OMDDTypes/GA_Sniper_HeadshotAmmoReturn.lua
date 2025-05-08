@@ -6,8 +6,6 @@
 UGA_Sniper_HeadshotAmmoReturn_C = {}
 
 ---@param Payload FRSTDamageMessage
-UGA_Sniper_HeadshotAmmoReturn_C['Process Event'] = function(Payload) end
+UGA_Sniper_HeadshotAmmoReturn_C['Process Event'] = function(self, Payload) end
 ---@param EntryPoint int32
 function UGA_Sniper_HeadshotAmmoReturn_C:ExecuteUbergraph_GA_Sniper_HeadshotAmmoReturn(EntryPoint) end
-
-

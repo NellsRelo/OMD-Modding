@@ -6,5 +6,3 @@ UW_Interaction_Prompt_Difficulty_C = {}
 
 ---@param EntryPoint int32
 function UW_Interaction_Prompt_Difficulty_C:ExecuteUbergraph_W_Interaction_Prompt_Difficulty(EntryPoint) end
-
-

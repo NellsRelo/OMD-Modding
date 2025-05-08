@@ -31,6 +31,3 @@ UMovieSceneGeometryCollectionSection = {}
 ---@class UMovieSceneGeometryCollectionTrack : UMovieSceneNameableTrack
 ---@field AnimationSections TArray<UMovieSceneSection>
 UMovieSceneGeometryCollectionTrack = {}
-
-
-

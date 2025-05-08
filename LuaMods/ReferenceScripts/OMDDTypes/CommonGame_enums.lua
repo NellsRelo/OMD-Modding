@@ -23,4 +23,3 @@ ELocalMultiplayerInteractionMode = {
     Simultaneous = 2,
     ELocalMultiplayerInteractionMode_MAX = 3,
 }
-

@@ -5,6 +5,3 @@
 ---@field Wall01 URSTTrapGridBoxComponent
 ---@field Wall00 URSTTrapGridBoxComponent
 AWall_FB_2x2_Angle_v2_C = {}
-
-
-

@@ -38,4 +38,3 @@ EInterchangeVertexColorImportOption = {
     IVCIO_Override = 2,
     IVCIO_MAX = 3,
 }
-

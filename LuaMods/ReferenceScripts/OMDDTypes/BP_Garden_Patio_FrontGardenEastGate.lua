@@ -6,6 +6,3 @@
 ---@field Decal2 UDecalComponent
 ---@field Decal1 UDecalComponent
 ABP_Garden_Patio_FrontGardenEastGate_C = {}
-
-
-

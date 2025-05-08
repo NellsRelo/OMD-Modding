@@ -7,6 +7,3 @@
 ---@field Trap_Wall1 URSTTrapGridBoxComponent
 ---@field trap_wall URSTTrapGridBoxComponent
 ABP_Wall_Bottom_Endcap_2x4_SM_C = {}
-
-
-

@@ -43,8 +43,8 @@ UABP_Orc_Light_Secondary_C = {}
 ---@param InPose FPoseLink
 ---@param AnimGraph FPoseLink
 function UABP_Orc_Light_Secondary_C:AnimGraph(InPose, AnimGraph) end
+
 function UABP_Orc_Light_Secondary_C:BlueprintBeginPlay() end
+
 ---@param EntryPoint int32
 function UABP_Orc_Light_Secondary_C:ExecuteUbergraph_ABP_Orc_Light_Secondary(EntryPoint) end
-
-

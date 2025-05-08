@@ -15,6 +15,3 @@
 ---@field DisplayCase_WoodFloor_2x2_SM UStaticMeshComponent
 ---@field RSTTrapGridBox2 URSTTrapGridBoxComponent
 ABP_DisplayCase_2x2_SquareGlass_Trappable_Base_A_C = {}
-
-
-

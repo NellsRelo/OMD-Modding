@@ -6,4 +6,3 @@ ENiagaraVertexSamplingMode = {
     NewEnumerator8 = 3,
     ENiagaraVertexSamplingMode_MAX = 4,
 }
-

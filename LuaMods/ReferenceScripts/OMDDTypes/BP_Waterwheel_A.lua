@@ -7,6 +7,3 @@
 ---@field SM_Waterwheel_A UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Waterwheel_A_C = {}
-
-
-

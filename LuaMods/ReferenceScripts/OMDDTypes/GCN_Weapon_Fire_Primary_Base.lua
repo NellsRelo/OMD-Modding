@@ -8,5 +8,3 @@ UGCN_Weapon_Fire_Primary_Base_C = {}
 ---@param Parameters FGameplayCueParameters
 ---@param SpawnResults FGameplayCueNotify_SpawnResult
 function UGCN_Weapon_Fire_Primary_Base_C:OnBurst(Target, Parameters, SpawnResults) end
-
-

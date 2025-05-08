@@ -153,4 +153,3 @@ EWindowVisibility = {
     SelfHitTestInvisible = 1,
     EWindowVisibility_MAX = 2,
 }
-

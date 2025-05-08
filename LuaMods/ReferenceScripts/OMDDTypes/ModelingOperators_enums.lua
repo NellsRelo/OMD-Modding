@@ -175,4 +175,3 @@ EUVProjectionMethod = {
     ExpMap = 3,
     EUVProjectionMethod_MAX = 4,
 }
-

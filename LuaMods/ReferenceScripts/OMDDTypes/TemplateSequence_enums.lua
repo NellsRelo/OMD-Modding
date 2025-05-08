@@ -5,4 +5,3 @@ ETemplateSectionPropertyScaleType = {
     TransformPropertyRotationOnly = 2,
     ETemplateSectionPropertyScaleType_MAX = 3,
 }
-

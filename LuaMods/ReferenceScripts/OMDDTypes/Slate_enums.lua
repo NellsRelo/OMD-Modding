@@ -179,4 +179,3 @@ EVirtualKeyboardTrigger = {
     OnAllFocusEvents = 1,
     EVirtualKeyboardTrigger_MAX = 2,
 }
-

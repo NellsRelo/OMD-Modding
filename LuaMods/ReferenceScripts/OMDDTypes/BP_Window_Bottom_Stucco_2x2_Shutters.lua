@@ -6,6 +6,3 @@
 ---@field Wall_Bottom_Window_Stucco_2x2_A_SM UStaticMeshComponent
 ---@field trap_wall URSTTrapGridBoxComponent
 ABP_Window_Bottom_Stucco_2x2_Shutters_C = {}
-
-
-

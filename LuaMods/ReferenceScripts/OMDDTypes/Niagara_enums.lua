@@ -59,7 +59,7 @@ ENDIObjectPropertyReaderSourceMode = {
 ---@enum ENDISceneCapture2DOffsetMode
 ENDISceneCapture2DOffsetMode = {
     Disabled = 0,
-    RelativeLocal = 1,
+    Relative= 1,
     RelativeWorld = 2,
     AbsoluteWorld = 3,
     ENDISceneCapture2DOffsetMode_MAX = 4,
@@ -228,7 +228,7 @@ ENiagaraConditionalOperator = {
 ENiagaraCoordinateSpace = {
     Simulation = 0,
     World = 1,
-    Local = 2,
+    = 2,
     ENiagaraCoordinateSpace_MAX = 3,
 }
 
@@ -509,7 +509,7 @@ ENiagaraMeshFacingMode = {
 ENiagaraMeshLockedAxisSpace = {
     Simulation = 0,
     World = 1,
-    Local = 2,
+    = 2,
     ENiagaraMeshLockedAxisSpace_MAX = 3,
 }
 
@@ -518,7 +518,7 @@ ENiagaraMeshPivotOffsetSpace = {
     Mesh = 0,
     Simulation = 1,
     World = 2,
-    Local = 3,
+    = 3,
     ENiagaraMeshPivotOffsetSpace_MAX = 4,
 }
 

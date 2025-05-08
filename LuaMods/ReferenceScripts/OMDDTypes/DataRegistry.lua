@@ -96,54 +96,65 @@ UDataRegistrySubsystem = {}
 ---@param B FDataRegistryType
 ---@return boolean
 function UDataRegistrySubsystem:NotEqual_DataRegistryType(A, B) end
+
 ---@param A FDataRegistryId
 ---@param B FDataRegistryId
 ---@return boolean
 function UDataRegistrySubsystem:NotEqual_DataRegistryId(A, B) end
+
 ---@param DataRegistryType FDataRegistryType
 ---@return boolean
 function UDataRegistrySubsystem:IsValidDataRegistryType(DataRegistryType) end
+
 ---@param DataRegistryId FDataRegistryId
 ---@return boolean
 function UDataRegistrySubsystem:IsValidDataRegistryId(DataRegistryId) end
+
 ---@param ItemId FDataRegistryId
 ---@param ResolvedLookup FDataRegistryLookup
 ---@param OutItem FTableRowBase
 ---@return boolean
 function UDataRegistrySubsystem:GetCachedItemFromLookupBP(ItemId, ResolvedLookup, OutItem) end
+
 ---@param ItemId FDataRegistryId
 ---@param OutItem FTableRowBase
 ---@return boolean
 function UDataRegistrySubsystem:GetCachedItemBP(ItemId, OutItem) end
+
 ---@param ItemId FDataRegistryId
 ---@param OutResult EDataRegistrySubsystemGetItemResult
 ---@param OutItem FTableRowBase
 function UDataRegistrySubsystem:FindCachedItemBP(ItemId, OutResult, OutItem) end
+
 ---@param ItemId FDataRegistryId
 ---@param InputValue float
 ---@param DefaultValue float
 ---@param OutResult EDataRegistrySubsystemGetItemResult
 ---@param OutValue float
 function UDataRegistrySubsystem:EvaluateDataRegistryCurve(ItemId, InputValue, DefaultValue, OutResult, OutValue) end
+
 ---@param A FDataRegistryType
 ---@param B FDataRegistryType
 ---@return boolean
 function UDataRegistrySubsystem:EqualEqual_DataRegistryType(A, B) end
+
 ---@param A FDataRegistryId
 ---@param B FDataRegistryId
 ---@return boolean
 function UDataRegistrySubsystem:EqualEqual_DataRegistryId(A, B) end
+
 ---@param DataRegistryType FDataRegistryType
 ---@return FString
 function UDataRegistrySubsystem:Conv_DataRegistryTypeToString(DataRegistryType) end
+
 ---@param DataRegistryId FDataRegistryId
 ---@return FString
 function UDataRegistrySubsystem:Conv_DataRegistryIdToString(DataRegistryId) end
+
 ---@param ItemId FDataRegistryId
 ---@param AcquireCallback FAcquireItemBPAcquireCallback
 ---@return boolean
 function UDataRegistrySubsystem:AcquireItemBP(ItemId, AcquireCallback) end
-
 
 ---@class UMetaDataRegistrySource : UDataRegistrySource
 ---@field AssetUsage EMetaDataRegistrySourceAssetUsage
@@ -164,6 +175,3 @@ UMetaDataRegistrySource_CurveTable = {}
 ---@field CreatedSource TSubclassOf<UDataRegistrySource_DataTable>
 ---@field TableRules FDataRegistrySource_DataTableRules
 UMetaDataRegistrySource_DataTable = {}
-
-
-

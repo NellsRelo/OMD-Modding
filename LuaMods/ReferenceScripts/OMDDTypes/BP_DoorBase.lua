@@ -52,23 +52,37 @@
 ABP_DoorBase_C = {}
 
 function ABP_DoorBase_C:UserConstructionScript() end
+
 function ABP_DoorBase_C:Timeline__FinishedFunc() end
+
 function ABP_DoorBase_C:Timeline__UpdateFunc() end
+
 function ABP_DoorBase_C:Timeline__DamageParticleTrigger__EventFunc() end
+
 function ABP_DoorBase_C:Timeline_Decal_Fade_In__FinishedFunc() end
+
 function ABP_DoorBase_C:Timeline_Decal_Fade_In__UpdateFunc() end
+
 function ABP_DoorBase_C:DissolveTimeline__FinishedFunc() end
+
 function ABP_DoorBase_C:DissolveTimeline__UpdateFunc() end
+
 function ABP_DoorBase_C:ReceiveBeginPlay() end
+
 ---@param DeltaSeconds float
 function ABP_DoorBase_C:ReceiveTick(DeltaSeconds) end
+
 ---@param BreakEvent FChaosBreakEvent
-function ABP_DoorBase_C:BndEvt__BP_DoorBase_GeometryCollection_K2Node_ComponentBoundEvent_1_OnChaosBreakEvent__DelegateSignature(BreakEvent) end
+function ABP_DoorBase_C:BndEvt__BP_DoorBase_GeometryCollection_K2Node_ComponentBoundEvent_1_OnChaosBreakEvent__DelegateSignature(
+    BreakEvent) end
+
 function ABP_DoorBase_C:DoorAnim() end
+
 function ABP_DoorBase_C:ChaosActivation() end
+
 ---@param CollisionInfo FChaosPhysicsCollisionInfo
-function ABP_DoorBase_C:BndEvt__ChaosBreakable_GeometryCollection_K2Node_ComponentBoundEvent_0_OnChaosPhysicsCollision__DelegateSignature(CollisionInfo) end
+function ABP_DoorBase_C:BndEvt__ChaosBreakable_GeometryCollection_K2Node_ComponentBoundEvent_0_OnChaosPhysicsCollision__DelegateSignature(
+    CollisionInfo) end
+
 ---@param EntryPoint int32
 function ABP_DoorBase_C:ExecuteUbergraph_BP_DoorBase(EntryPoint) end
-
-

@@ -9,6 +9,4 @@ FAnimBlueprintGeneratedConstantData = {}
 UABP_Hero_Sniper_C = {}
 
 ---@param AimOffset UBlendSpace
-UABP_Hero_Sniper_C['Get Aim Offset Asset'] = function(AimOffset) end
-
-
+UABP_Hero_Sniper_C['Get Aim Offset Asset'] = function(self, AimOffset) end

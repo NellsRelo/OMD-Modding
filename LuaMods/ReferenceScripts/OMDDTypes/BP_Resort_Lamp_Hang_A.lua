@@ -7,6 +7,3 @@
 ---@field PointLight UPointLightComponent
 ---@field Geometry USceneComponent
 ABP_Resort_Lamp_Hang_A_C = {}
-
-
-

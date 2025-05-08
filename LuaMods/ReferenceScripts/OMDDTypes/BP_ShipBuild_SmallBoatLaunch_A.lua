@@ -6,6 +6,3 @@
 ---@field Geo USceneComponent
 ---@field SharedRoot USceneComponent
 ABP_ShipBuild_SmallBoatLaunch_A_C = {}
-
-
-

@@ -7,6 +7,3 @@
 ---@field Box_Collision UBoxComponent
 ---@field Ceiling00 URSTTrapGridBoxComponent
 ACeiling_WoodPlank_3x3_C = {}
-
-
-

@@ -11,6 +11,3 @@
 ---@field SM_Library_Books_2x3_Merge UStaticMeshComponent
 ---@field Geo_Shelf USceneComponent
 ABP_Library_Bookshelf_2x3_Restricted_Doorway_C = {}
-
-
-

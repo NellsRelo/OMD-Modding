@@ -12,15 +12,19 @@
 UW_ThreadMenu_ThreadDisplay_C = {}
 
 function UW_ThreadMenu_ThreadDisplay_C:SetupImages() end
+
 function UW_ThreadMenu_ThreadDisplay_C:SetupTooltip() end
+
 function UW_ThreadMenu_ThreadDisplay_C:Construct() end
+
 ---@param MyGeometry FGeometry
 ---@param MouseEvent FPointerEvent
 function UW_ThreadMenu_ThreadDisplay_C:OnMouseEnter(MyGeometry, MouseEvent) end
+
 ---@param MouseEvent FPointerEvent
 function UW_ThreadMenu_ThreadDisplay_C:OnMouseLeave(MouseEvent) end
+
 function UW_ThreadMenu_ThreadDisplay_C:BP_SynchronizeProperties() end
+
 ---@param EntryPoint int32
 function UW_ThreadMenu_ThreadDisplay_C:ExecuteUbergraph_W_ThreadMenu_ThreadDisplay(EntryPoint) end
-
-

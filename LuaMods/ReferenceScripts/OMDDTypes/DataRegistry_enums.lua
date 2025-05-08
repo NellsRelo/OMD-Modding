@@ -36,4 +36,3 @@ EMetaDataRegistrySourceAssetUsage = {
     SearchAndRegisterAssets = 3,
     EMetaDataRegistrySourceAssetUsage_MAX = 4,
 }
-

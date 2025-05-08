@@ -6,6 +6,3 @@
 ---@field RSTAimAssistTargetPelvis URSTAimAssistTargetComponent
 ---@field RSTRangedFirePoint URSTRangedFirePointComponent
 ABP_Hellbat_Fire_C = {}
-
-
-

@@ -12,6 +12,3 @@
 ---@field TrapGrid USceneComponent
 ---@field Collision USceneComponent
 ABP_Warehouse_Column_1_1_4_WoodSupports_C = {}
-
-
-

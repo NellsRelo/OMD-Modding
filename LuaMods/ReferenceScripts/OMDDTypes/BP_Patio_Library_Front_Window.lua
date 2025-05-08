@@ -21,6 +21,3 @@
 ---@field ['M_Proto_Roof_SS_45-deg_Half588_StaticMeshComponent0'] UStaticMeshComponent
 ---@field SharedRoot USceneComponent
 ABP_Patio_Library_Front_Window_C = {}
-
-
-

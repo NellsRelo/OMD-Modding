@@ -35,7 +35,7 @@
 ---@field Stair_1x4_StoneWallBlock_SM2 UStaticMeshComponent
 ---@field BP_Vista_City_F UChildActorComponent
 ---@field BP_Vista_City_E UChildActorComponent
----@field BluePrints USceneComponent
+---@field Blueprints USceneComponent
 ---@field Crenellation_Coastal_EndCap_SM8 UStaticMeshComponent
 ---@field Crenellation_Coastal_EndCap_SM6 UStaticMeshComponent
 ---@field Wall_Bottom_4x05_StoneWall_SM2 UStaticMeshComponent
@@ -44,6 +44,3 @@
 ---@field Stair_2x4_StoneWallBlock_SM UStaticMeshComponent
 ---@field Geo USceneComponent
 ABP_Vista_Observatory_City_C = {}
-
-
-

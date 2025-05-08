@@ -65,6 +65,3 @@
 ---@field Geo USceneComponent
 ---@field DefaultSceneRoot USceneComponent
 AHub_RiftDais_C = {}
-
-
-

@@ -64,5 +64,3 @@ UClothingSimulationInteractorNv = {}
 
 ---@param InStiffness float
 function UClothingSimulationInteractorNv:SetAnimDriveDamperStiffness(InStiffness) end
-
-

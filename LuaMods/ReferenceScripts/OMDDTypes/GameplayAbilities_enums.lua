@@ -140,7 +140,7 @@ EGameplayCueNotify_EffectPlaySpace = {
 EGameplayCueNotify_LocallyControlledPolicy = {
     Always = 0,
     LocalOnly = 1,
-    NotLocal = 2,
+    Not = 2,
     EGameplayCueNotify_MAX = 3,
 }
 
@@ -335,4 +335,3 @@ EWaitGameplayTagQueryTriggerCondition = {
     WhenFalse = 1,
     EWaitGameplayTagQueryTriggerCondition_MAX = 2,
 }
-

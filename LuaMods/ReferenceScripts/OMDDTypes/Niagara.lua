@@ -7,11 +7,12 @@ ANiagaraActor = {}
 
 ---@param bShouldDestroyOnSystemFinish boolean
 function ANiagaraActor:SetDestroyOnSystemFinish(bShouldDestroyOnSystemFinish) end
+
 ---@param FinishedComponent UNiagaraComponent
 function ANiagaraActor:OnNiagaraSystemFinished(FinishedComponent) end
+
 ---@return boolean
 function ANiagaraActor:GetDestroyOnSystemFinish() end
-
 
 ---@class ANiagaraLensEffectBase : ANiagaraActor
 ---@field DesiredRelativeTransform FTransform
@@ -36,10 +37,10 @@ ANiagaraPreviewBase = {}
 
 ---@param InSystem UNiagaraSystem
 function ANiagaraPreviewBase:SetSystem(InSystem) end
+
 ---@param InXAxisText FText
 ---@param InYAxisText FText
 function ANiagaraPreviewBase:SetLabelText(InXAxisText, InYAxisText) end
-
 
 ---@class ANiagaraPreviewGrid : AActor
 ---@field System UNiagaraSystem
@@ -56,12 +57,14 @@ ANiagaraPreviewGrid = {}
 
 ---@param bPaused boolean
 function ANiagaraPreviewGrid:SetPaused(bPaused) end
+
 ---@param OutPreviews TArray<UNiagaraComponent>
 function ANiagaraPreviewGrid:GetPreviews(OutPreviews) end
+
 function ANiagaraPreviewGrid:DeactivatePreviews() end
+
 ---@param bReset boolean
 function ANiagaraPreviewGrid:ActivatePreviews(bReset) end
-
 
 ---@class FBasicParticleData
 ---@field Position FVector
@@ -1771,7 +1774,6 @@ INiagaraParticleCallbackHandler = {}
 ---@param SimulationPositionOffset FVector
 function INiagaraParticleCallbackHandler:ReceiveParticleData(Data, NiagaraSystem, SimulationPositionOffset) end
 
-
 ---@class INiagaraPhysicsAssetDICollectorInterface : IInterface
 INiagaraPhysicsAssetDICollectorInterface = {}
 
@@ -1792,6 +1794,7 @@ UAsyncNiagaraCaptureSimCache = {}
 
 ---@param bSuccess boolean
 function UAsyncNiagaraCaptureSimCache:OnCaptureComplete__DelegateSignature(bSuccess) end
+
 ---@param SimCache UNiagaraSimCache
 ---@param CreateParameters FNiagaraSimCacheCreateParameters
 ---@param NiagaraComponent UNiagaraComponent
@@ -1800,7 +1803,10 @@ function UAsyncNiagaraCaptureSimCache:OnCaptureComplete__DelegateSignature(bSucc
 ---@param bAdvanceSimulation boolean
 ---@param AdvanceDeltaTime float
 ---@return UAsyncNiagaraCaptureSimCache
-function UAsyncNiagaraCaptureSimCache:CaptureNiagaraSimCacheUntilComplete(SimCache, CreateParameters, NiagaraComponent, OutSimCache, CaptureRate, bAdvanceSimulation, AdvanceDeltaTime) end
+function UAsyncNiagaraCaptureSimCache:CaptureNiagaraSimCacheUntilComplete(SimCache, CreateParameters, NiagaraComponent,
+                                                                          OutSimCache, CaptureRate, bAdvanceSimulation,
+                                                                          AdvanceDeltaTime) end
+
 ---@param SimCache UNiagaraSimCache
 ---@param CreateParameters FNiagaraSimCacheCreateParameters
 ---@param NiagaraComponent UNiagaraComponent
@@ -1810,15 +1816,18 @@ function UAsyncNiagaraCaptureSimCache:CaptureNiagaraSimCacheUntilComplete(SimCac
 ---@param bAdvanceSimulation boolean
 ---@param AdvanceDeltaTime float
 ---@return UAsyncNiagaraCaptureSimCache
-function UAsyncNiagaraCaptureSimCache:CaptureNiagaraSimCacheMultiFrame(SimCache, CreateParameters, NiagaraComponent, OutSimCache, NumFrames, CaptureRate, bAdvanceSimulation, AdvanceDeltaTime) end
+function UAsyncNiagaraCaptureSimCache:CaptureNiagaraSimCacheMultiFrame(SimCache, CreateParameters, NiagaraComponent,
+                                                                       OutSimCache, NumFrames, CaptureRate,
+                                                                       bAdvanceSimulation, AdvanceDeltaTime) end
+
 ---@param SimCache UNiagaraSimCache
 ---@param CreateParameters FNiagaraSimCacheCreateParameters
 ---@param NiagaraComponent UNiagaraComponent
 ---@param CaptureParameters FNiagaraSimCacheCaptureParameters
 ---@param OutSimCache UNiagaraSimCache
 ---@return UAsyncNiagaraCaptureSimCache
-function UAsyncNiagaraCaptureSimCache:CaptureNiagaraSimCache(SimCache, CreateParameters, NiagaraComponent, CaptureParameters, OutSimCache) end
-
+function UAsyncNiagaraCaptureSimCache:CaptureNiagaraSimCache(SimCache, CreateParameters, NiagaraComponent,
+                                                             CaptureParameters, OutSimCache) end
 
 ---@class UMovieSceneNiagaraBoolParameterTrack : UMovieSceneNiagaraParameterTrack
 UMovieSceneNiagaraBoolParameterTrack = {}
@@ -1951,14 +1960,17 @@ UNiagaraBaselineController = {}
 
 ---@return boolean
 function UNiagaraBaselineController:OnTickTest() end
+
 ---@param DeltaTime float
 function UNiagaraBaselineController:OnOwnerTick(DeltaTime) end
+
 ---@param Stats FNiagaraPerfBaselineStats
 function UNiagaraBaselineController:OnEndTest(Stats) end
+
 function UNiagaraBaselineController:OnBeginTest() end
+
 ---@return UNiagaraSystem
 function UNiagaraBaselineController:GetSystem() end
-
 
 ---@class UNiagaraBaselineController_Basic : UNiagaraBaselineController
 ---@field NumInstances int32
@@ -1997,206 +2009,286 @@ UNiagaraComponent = {}
 ---@param InVariableName FName
 ---@param InValue FVector4
 function UNiagaraComponent:SetVariableVec4(InVariableName, InValue) end
+
 ---@param InVariableName FName
 ---@param InValue FVector
 function UNiagaraComponent:SetVariableVec3(InVariableName, InValue) end
+
 ---@param InVariableName FName
 ---@param InValue FVector2D
 function UNiagaraComponent:SetVariableVec2(InVariableName, InValue) end
+
 ---@param InVariableName FName
 ---@param TextureRenderTarget UTextureRenderTarget
 function UNiagaraComponent:SetVariableTextureRenderTarget(InVariableName, TextureRenderTarget) end
+
 ---@param InVariableName FName
 ---@param Texture UTexture
 function UNiagaraComponent:SetVariableTexture(InVariableName, Texture) end
+
 ---@param InVariableName FName
 ---@param InValue UStaticMesh
 function UNiagaraComponent:SetVariableStaticMesh(InVariableName, InValue) end
+
 ---@param InVariableName FName
 ---@param InValue FQuat
 function UNiagaraComponent:SetVariableQuat(InVariableName, InValue) end
+
 ---@param InVariableName FName
 ---@param InValue FVector
 function UNiagaraComponent:SetVariablePosition(InVariableName, InValue) end
+
 ---@param InVariableName FName
 ---@param Object UObject
 function UNiagaraComponent:SetVariableObject(InVariableName, Object) end
+
 ---@param InVariableName FName
 ---@param InValue FMatrix
 function UNiagaraComponent:SetVariableMatrix(InVariableName, InValue) end
+
 ---@param InVariableName FName
 ---@param Object UMaterialInterface
 function UNiagaraComponent:SetVariableMaterial(InVariableName, Object) end
+
 ---@param InVariableName FName
 ---@param InValue FLinearColor
 function UNiagaraComponent:SetVariableLinearColor(InVariableName, InValue) end
+
 ---@param InVariableName FName
 ---@param InValue int32
 function UNiagaraComponent:SetVariableInt(InVariableName, InValue) end
+
 ---@param InVariableName FName
 ---@param InValue float
 function UNiagaraComponent:SetVariableFloat(InVariableName, InValue) end
+
 ---@param InVariableName FName
 ---@param InValue boolean
 function UNiagaraComponent:SetVariableBool(InVariableName, InValue) end
+
 ---@param InVariableName FName
 ---@param Actor AActor
 function UNiagaraComponent:SetVariableActor(InVariableName, Actor) end
+
 ---@param NewTickBehavior ENiagaraTickBehavior
 function UNiagaraComponent:SetTickBehavior(NewTickBehavior) end
+
 ---@param LocalBounds FBox
 function UNiagaraComponent:SetSystemFixedBounds(LocalBounds) end
+
 ---@param SimCache UNiagaraSimCache
 ---@param bResetSystem boolean
 function UNiagaraComponent:SetSimCache(SimCache, bResetSystem) end
+
 ---@param InSeekDelta float
 function UNiagaraComponent:SetSeekDelta(InSeekDelta) end
+
 ---@param bInRenderingEnabled boolean
 function UNiagaraComponent:SetRenderingEnabled(bInRenderingEnabled) end
+
 ---@param NewRandomSeedOffset int32
 function UNiagaraComponent:SetRandomSeedOffset(NewRandomSeedOffset) end
+
 ---@param bEnablePreviewLODDistance boolean
 ---@param PreviewLODDistance float
 ---@param PreviewMaxDistance float
 function UNiagaraComponent:SetPreviewLODDistance(bEnablePreviewLODDistance, PreviewLODDistance, PreviewMaxDistance) end
+
 ---@param bInPaused boolean
 function UNiagaraComponent:SetPaused(bInPaused) end
+
 ---@param Mode ENiagaraOcclusionQueryMode
 function UNiagaraComponent:SetOcclusionQueryMode(Mode) end
+
 ---@param InVariableName FString
 ---@param InValue FVector4
 function UNiagaraComponent:SetNiagaraVariableVec4(InVariableName, InValue) end
+
 ---@param InVariableName FString
 ---@param InValue FVector
 function UNiagaraComponent:SetNiagaraVariableVec3(InVariableName, InValue) end
+
 ---@param InVariableName FString
 ---@param InValue FVector2D
 function UNiagaraComponent:SetNiagaraVariableVec2(InVariableName, InValue) end
+
 ---@param InVariableName FString
 ---@param InValue FQuat
 function UNiagaraComponent:SetNiagaraVariableQuat(InVariableName, InValue) end
+
 ---@param InVariableName FString
 ---@param InValue FVector
 function UNiagaraComponent:SetNiagaraVariablePosition(InVariableName, InValue) end
+
 ---@param InVariableName FString
 ---@param Object UObject
 function UNiagaraComponent:SetNiagaraVariableObject(InVariableName, Object) end
+
 ---@param InVariableName FString
 ---@param InValue FMatrix
 function UNiagaraComponent:SetNiagaraVariableMatrix(InVariableName, InValue) end
+
 ---@param InVariableName FString
 ---@param InValue FLinearColor
 function UNiagaraComponent:SetNiagaraVariableLinearColor(InVariableName, InValue) end
+
 ---@param InVariableName FString
 ---@param InValue int32
 function UNiagaraComponent:SetNiagaraVariableInt(InVariableName, InValue) end
+
 ---@param InVariableName FString
 ---@param InValue float
 function UNiagaraComponent:SetNiagaraVariableFloat(InVariableName, InValue) end
+
 ---@param InVariableName FString
 ---@param InValue boolean
 function UNiagaraComponent:SetNiagaraVariableBool(InVariableName, InValue) end
+
 ---@param InVariableName FString
 ---@param Actor AActor
 function UNiagaraComponent:SetNiagaraVariableActor(InVariableName, Actor) end
+
 ---@param InMaxTime float
 function UNiagaraComponent:SetMaxSimTime(InMaxTime) end
+
 ---@param bLock boolean
 function UNiagaraComponent:SetLockDesiredAgeDeltaTimeToSeekDelta(bLock) end
+
 ---@param bEnableDebug boolean
 function UNiagaraComponent:SetGpuComputeDebug(bEnableDebug) end
+
 ---@param bInForceSolo boolean
 function UNiagaraComponent:SetForceSolo(bInForceSolo) end
+
 ---@param bIsPlayerEffect boolean
 function UNiagaraComponent:SetForceLocalPlayerEffect(bIsPlayerEffect) end
+
 ---@param EmitterName FName
 ---@param LocalBounds FBox
 function UNiagaraComponent:SetEmitterFixedBounds(EmitterName, LocalBounds) end
+
 ---@param InDesiredAge float
 function UNiagaraComponent:SetDesiredAge(InDesiredAge) end
+
 ---@param Dilation float
 function UNiagaraComponent:SetCustomTimeDilation(Dilation) end
+
 ---@param bInCanRenderWhileSeeking boolean
 function UNiagaraComponent:SetCanRenderWhileSeeking(bInCanRenderWhileSeeking) end
+
 ---@param bInAutoDestroy boolean
 function UNiagaraComponent:SetAutoDestroy(bInAutoDestroy) end
+
 ---@param InAsset UNiagaraSystem
 ---@param bResetExistingOverrideParameters boolean
 function UNiagaraComponent:SetAsset(InAsset, bResetExistingOverrideParameters) end
+
 ---@param bAllow boolean
 function UNiagaraComponent:SetAllowScalability(bAllow) end
+
 ---@param InAgeUpdateMode ENiagaraAgeUpdateMode
 function UNiagaraComponent:SetAgeUpdateMode(InAgeUpdateMode) end
+
 ---@param InDesiredAge float
 function UNiagaraComponent:SeekToDesiredAge(InDesiredAge) end
+
 function UNiagaraComponent:ResetSystem() end
+
 function UNiagaraComponent:ReinitializeSystem() end
+
 ---@return boolean
 function UNiagaraComponent:IsPaused() end
+
 function UNiagaraComponent:InitForPerformanceBaseline() end
+
 ---@return ENiagaraTickBehavior
 function UNiagaraComponent:GetTickBehavior() end
+
 ---@return FBox
 function UNiagaraComponent:GetSystemFixedBounds() end
+
 ---@return UNiagaraSimCache
 function UNiagaraComponent:GetSimCache() end
+
 ---@return float
 function UNiagaraComponent:GetSeekDelta() end
+
 ---@return int32
 function UNiagaraComponent:GetRandomSeedOffset() end
+
 ---@return boolean
 function UNiagaraComponent:GetPreviewLODDistanceEnabled() end
+
 ---@return float
 function UNiagaraComponent:GetPreviewLODDistance() end
+
 ---@return ENiagaraOcclusionQueryMode
 function UNiagaraComponent:GetOcclusionQueryMode() end
+
 ---@param InEmitterName FString
 ---@param InValueName FString
 ---@return TArray<FVector>
 function UNiagaraComponent:GetNiagaraParticleValueVec3_DebugOnly(InEmitterName, InValueName) end
+
 ---@param InEmitterName FString
 ---@param InValueName FString
 ---@return TArray<float>
 function UNiagaraComponent:GetNiagaraParticleValues_DebugOnly(InEmitterName, InValueName) end
+
 ---@param InEmitterName FString
 ---@return TArray<FVector>
 function UNiagaraComponent:GetNiagaraParticlePositions_DebugOnly(InEmitterName) end
+
 ---@return float
 function UNiagaraComponent:GetMaxSimTime() end
+
 ---@return boolean
 function UNiagaraComponent:GetLockDesiredAgeDeltaTimeToSeekDelta() end
+
 ---@return boolean
 function UNiagaraComponent:GetForceSolo() end
+
 ---@return boolean
 function UNiagaraComponent:GetForceLocalPlayerEffect() end
+
 ---@param EmitterName FName
 ---@return FBox
 function UNiagaraComponent:GetEmitterFixedBounds(EmitterName) end
+
 ---@return float
 function UNiagaraComponent:GetDesiredAge() end
+
 ---@param Name FString
 ---@return UNiagaraDataInterface
 function UNiagaraComponent:GetDataInterface(Name) end
+
 ---@return float
 function UNiagaraComponent:GetCustomTimeDilation() end
+
 ---@return UNiagaraSystem
 function UNiagaraComponent:GetAsset() end
+
 ---@return boolean
 function UNiagaraComponent:GetAllowScalability() end
+
 ---@return ENiagaraAgeUpdateMode
 function UNiagaraComponent:GetAgeUpdateMode() end
+
 function UNiagaraComponent:ClearSystemFixedBounds() end
+
 ---@param bResetSystem boolean
 function UNiagaraComponent:ClearSimCache(bResetSystem) end
+
 ---@param EmitterName FName
 function UNiagaraComponent:ClearEmitterFixedBounds(EmitterName) end
+
 ---@param SimulateTime float
 ---@param TickDeltaSeconds float
 function UNiagaraComponent:AdvanceSimulationByTime(SimulateTime, TickDeltaSeconds) end
+
 ---@param TickCount int32
 ---@param TickDeltaSeconds float
 function UNiagaraComponent:AdvanceSimulation(TickCount, TickDeltaSeconds) end
-
 
 ---@class UNiagaraComponentPool : UObject
 ---@field WorldParticleSystemPools TMap<UNiagaraSystem, FNCPool>
@@ -2237,7 +2329,6 @@ UNiagaraDIRigidMeshCollisionFunctionLibrary = {}
 ---@param SourceActors TArray<AActor>
 function UNiagaraDIRigidMeshCollisionFunctionLibrary:SetSourceActors(NiagaraSystem, OverrideName, SourceActors) end
 
-
 ---@class UNiagaraDataChannel : UObject
 ---@field Variables TArray<FNiagaraVariable>
 ---@field bKeepPreviousFrameData boolean
@@ -2261,9 +2352,9 @@ UNiagaraDataChannelHandler = {}
 
 ---@return UNiagaraDataChannelWriter
 function UNiagaraDataChannelHandler:GetDataChannelWriter() end
+
 ---@return UNiagaraDataChannelReader
 function UNiagaraDataChannelHandler:GetDataChannelReader() end
-
 
 ---@class UNiagaraDataChannelHandler_Global : UNiagaraDataChannelHandler
 UNiagaraDataChannelHandler_Global = {}
@@ -2288,18 +2379,21 @@ UNiagaraDataChannelLibrary = {}
 ---@param bVisibleToCPU boolean
 ---@param bVisibleToGPU boolean
 ---@return UNiagaraDataChannelWriter
-function UNiagaraDataChannelLibrary:WriteToNiagaraDataChannel(WorldContextObject, Channel, SearchParams, Count, bVisibleToGame, bVisibleToCPU, bVisibleToGPU) end
+function UNiagaraDataChannelLibrary:WriteToNiagaraDataChannel(WorldContextObject, Channel, SearchParams, Count,
+                                                              bVisibleToGame, bVisibleToCPU, bVisibleToGPU) end
+
 ---@param WorldContextObject UObject
 ---@param Channel UNiagaraDataChannelAsset
 ---@param SearchParams FNiagaraDataChannelSearchParameters
 ---@param bReadPreviousFrame boolean
 ---@return UNiagaraDataChannelReader
-function UNiagaraDataChannelLibrary:ReadFromNiagaraDataChannel(WorldContextObject, Channel, SearchParams, bReadPreviousFrame) end
+function UNiagaraDataChannelLibrary:ReadFromNiagaraDataChannel(WorldContextObject, Channel, SearchParams,
+                                                               bReadPreviousFrame) end
+
 ---@param WorldContextObject UObject
 ---@param Channel UNiagaraDataChannelAsset
 ---@return UNiagaraDataChannelHandler
 function UNiagaraDataChannelLibrary:GetNiagaraDataChannel(WorldContextObject, Channel) end
-
 
 ---@class UNiagaraDataChannelReader : UObject
 ---@field Owner UNiagaraDataChannelHandler
@@ -2309,45 +2403,54 @@ UNiagaraDataChannelReader = {}
 ---@param Index int32
 ---@return FVector4
 function UNiagaraDataChannelReader:ReadVector4(VarName, Index) end
+
 ---@param VarName FName
 ---@param Index int32
 ---@return FVector2D
 function UNiagaraDataChannelReader:ReadVector2D(VarName, Index) end
+
 ---@param VarName FName
 ---@param Index int32
 ---@return FVector
 function UNiagaraDataChannelReader:ReadVector(VarName, Index) end
+
 ---@param VarName FName
 ---@param Index int32
 ---@return FQuat
 function UNiagaraDataChannelReader:ReadQuat(VarName, Index) end
+
 ---@param VarName FName
 ---@param Index int32
 ---@return FVector
 function UNiagaraDataChannelReader:ReadPosition(VarName, Index) end
+
 ---@param VarName FName
 ---@param Index int32
 ---@return FLinearColor
 function UNiagaraDataChannelReader:ReadLinearColor(VarName, Index) end
+
 ---@param VarName FName
 ---@param Index int32
 ---@return int32
 function UNiagaraDataChannelReader:ReadInt(VarName, Index) end
+
 ---@param VarName FName
 ---@param Index int32
 ---@return double
 function UNiagaraDataChannelReader:ReadFloat(VarName, Index) end
+
 ---@param VarName FName
 ---@param Index int32
 ---@return boolean
 function UNiagaraDataChannelReader:ReadBool(VarName, Index) end
+
 ---@return int32
 function UNiagaraDataChannelReader:Num() end
+
 ---@param SearchParams FNiagaraDataChannelSearchParameters
 ---@param bReadPrevFrameData boolean
 ---@return boolean
 function UNiagaraDataChannelReader:InitAccess(SearchParams, bReadPrevFrameData) end
-
 
 ---@class UNiagaraDataChannelWriter : UObject
 ---@field Owner UNiagaraDataChannelHandler
@@ -2357,44 +2460,55 @@ UNiagaraDataChannelWriter = {}
 ---@param Index int32
 ---@param InData FVector4
 function UNiagaraDataChannelWriter:WriteVector4(VarName, Index, InData) end
+
 ---@param VarName FName
 ---@param Index int32
 ---@param InData FVector2D
 function UNiagaraDataChannelWriter:WriteVector2D(VarName, Index, InData) end
+
 ---@param VarName FName
 ---@param Index int32
 ---@param InData FVector
 function UNiagaraDataChannelWriter:WriteVector(VarName, Index, InData) end
+
 ---@param VarName FName
 ---@param Index int32
 ---@param InData FNiagaraSpawnInfo
 function UNiagaraDataChannelWriter:WriteSpawnInfo(VarName, Index, InData) end
+
 ---@param VarName FName
 ---@param Index int32
 ---@param InData FQuat
 function UNiagaraDataChannelWriter:WriteQuat(VarName, Index, InData) end
+
 ---@param VarName FName
 ---@param Index int32
 ---@param InData FVector
 function UNiagaraDataChannelWriter:WritePosition(VarName, Index, InData) end
+
 ---@param VarName FName
 ---@param Index int32
 ---@param InData FLinearColor
 function UNiagaraDataChannelWriter:WriteLinearColor(VarName, Index, InData) end
+
 ---@param VarName FName
 ---@param Index int32
 ---@param InData int32
 function UNiagaraDataChannelWriter:WriteInt(VarName, Index, InData) end
+
 ---@param VarName FName
 ---@param Index int32
 ---@param InData double
 function UNiagaraDataChannelWriter:WriteFloat(VarName, Index, InData) end
+
 ---@param VarName FName
 ---@param Index int32
 ---@param InData boolean
 function UNiagaraDataChannelWriter:WriteBool(VarName, Index, InData) end
+
 ---@return int32
 function UNiagaraDataChannelWriter:Num() end
+
 ---@param SearchParams FNiagaraDataChannelSearchParameters
 ---@param Count int32
 ---@param bVisibleToGame boolean
@@ -2402,7 +2516,6 @@ function UNiagaraDataChannelWriter:Num() end
 ---@param bVisibleToGPU boolean
 ---@return boolean
 function UNiagaraDataChannelWriter:InitWrite(SearchParams, Count, bVisibleToGame, bVisibleToCPU, bVisibleToGPU) end
-
 
 ---@class UNiagaraDataChannel_Global : UNiagaraDataChannel
 UNiagaraDataChannel_Global = {}
@@ -2493,215 +2606,270 @@ UNiagaraDataInterfaceArrayFunctionLibrary = {}
 ---@param Index int32
 ---@param Value FVector
 ---@param bSizeToFit boolean
-function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayVectorValue(NiagaraSystem, OverrideName, Index, Value, bSizeToFit) end
+function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayVectorValue(NiagaraSystem, OverrideName, Index, Value,
+                                                                              bSizeToFit) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@param Index int32
 ---@param Value FVector4
 ---@param bSizeToFit boolean
-function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayVector4Value(NiagaraSystem, OverrideName, Index, Value, bSizeToFit) end
+function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayVector4Value(NiagaraSystem, OverrideName, Index, Value,
+                                                                               bSizeToFit) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@param ArrayData TArray<FVector4>
 function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayVector4(NiagaraSystem, OverrideName, ArrayData) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@param Index int32
 ---@param Value FVector2D
 ---@param bSizeToFit boolean
-function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayVector2DValue(NiagaraSystem, OverrideName, Index, Value, bSizeToFit) end
+function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayVector2DValue(NiagaraSystem, OverrideName, Index, Value,
+                                                                                bSizeToFit) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@param ArrayData TArray<FVector2D>
 function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayVector2D(NiagaraSystem, OverrideName, ArrayData) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@param ArrayData TArray<FVector>
 function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayVector(NiagaraSystem, OverrideName, ArrayData) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@param Index int32
 ---@param Value int32
 ---@param bSizeToFit boolean
-function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayUInt8Value(NiagaraSystem, OverrideName, Index, Value, bSizeToFit) end
+function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayUInt8Value(NiagaraSystem, OverrideName, Index, Value,
+                                                                             bSizeToFit) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@param ArrayData TArray<int32>
 function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayUInt8(NiagaraSystem, OverrideName, ArrayData) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@param Index int32
 ---@param Value FQuat
 ---@param bSizeToFit boolean
-function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayQuatValue(NiagaraSystem, OverrideName, Index, Value, bSizeToFit) end
+function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayQuatValue(NiagaraSystem, OverrideName, Index, Value,
+                                                                            bSizeToFit) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@param ArrayData TArray<FQuat>
 function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayQuat(NiagaraSystem, OverrideName, ArrayData) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@param Index int32
 ---@param Value FVector
 ---@param bSizeToFit boolean
-function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayPositionValue(NiagaraSystem, OverrideName, Index, Value, bSizeToFit) end
+function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayPositionValue(NiagaraSystem, OverrideName, Index, Value,
+                                                                                bSizeToFit) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@param ArrayData TArray<FVector>
 function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayPosition(NiagaraSystem, OverrideName, ArrayData) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@param Index int32
 ---@param Value FMatrix
 ---@param bSizeToFit boolean
 ---@param bApplyLWCRebase boolean
-function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayMatrixValue(NiagaraSystem, OverrideName, Index, Value, bSizeToFit, bApplyLWCRebase) end
+function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayMatrixValue(NiagaraSystem, OverrideName, Index, Value,
+                                                                              bSizeToFit, bApplyLWCRebase) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@param ArrayData TArray<FMatrix>
 ---@param bApplyLWCRebase boolean
-function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayMatrix(NiagaraSystem, OverrideName, ArrayData, bApplyLWCRebase) end
+function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayMatrix(NiagaraSystem, OverrideName, ArrayData,
+                                                                         bApplyLWCRebase) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@param Index int32
 ---@param Value int32
 ---@param bSizeToFit boolean
-function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayInt32Value(NiagaraSystem, OverrideName, Index, Value, bSizeToFit) end
+function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayInt32Value(NiagaraSystem, OverrideName, Index, Value,
+                                                                             bSizeToFit) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@param ArrayData TArray<int32>
 function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayInt32(NiagaraSystem, OverrideName, ArrayData) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@param Index int32
 ---@param Value float
 ---@param bSizeToFit boolean
-function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayFloatValue(NiagaraSystem, OverrideName, Index, Value, bSizeToFit) end
+function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayFloatValue(NiagaraSystem, OverrideName, Index, Value,
+                                                                             bSizeToFit) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@param ArrayData TArray<float>
 function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayFloat(NiagaraSystem, OverrideName, ArrayData) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@param Index int32
 ---@param Value FLinearColor
 ---@param bSizeToFit boolean
-function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayColorValue(NiagaraSystem, OverrideName, Index, Value, bSizeToFit) end
+function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayColorValue(NiagaraSystem, OverrideName, Index, Value,
+                                                                             bSizeToFit) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@param ArrayData TArray<FLinearColor>
 function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayColor(NiagaraSystem, OverrideName, ArrayData) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@param Index int32
 ---@param Value boolean
 ---@param bSizeToFit boolean
-function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayBoolValue(NiagaraSystem, OverrideName, Index, Value, bSizeToFit) end
+function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayBoolValue(NiagaraSystem, OverrideName, Index, Value,
+                                                                            bSizeToFit) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@param ArrayData TArray<boolean>
 function UNiagaraDataInterfaceArrayFunctionLibrary:SetNiagaraArrayBool(NiagaraSystem, OverrideName, ArrayData) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@param Index int32
 ---@return FVector
 function UNiagaraDataInterfaceArrayFunctionLibrary:GetNiagaraArrayVectorValue(NiagaraSystem, OverrideName, Index) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@param Index int32
 ---@return FVector4
 function UNiagaraDataInterfaceArrayFunctionLibrary:GetNiagaraArrayVector4Value(NiagaraSystem, OverrideName, Index) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@return TArray<FVector4>
 function UNiagaraDataInterfaceArrayFunctionLibrary:GetNiagaraArrayVector4(NiagaraSystem, OverrideName) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@param Index int32
 ---@return FVector2D
 function UNiagaraDataInterfaceArrayFunctionLibrary:GetNiagaraArrayVector2DValue(NiagaraSystem, OverrideName, Index) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@return TArray<FVector2D>
 function UNiagaraDataInterfaceArrayFunctionLibrary:GetNiagaraArrayVector2D(NiagaraSystem, OverrideName) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@return TArray<FVector>
 function UNiagaraDataInterfaceArrayFunctionLibrary:GetNiagaraArrayVector(NiagaraSystem, OverrideName) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@param Index int32
 ---@return int32
 function UNiagaraDataInterfaceArrayFunctionLibrary:GetNiagaraArrayUInt8Value(NiagaraSystem, OverrideName, Index) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@return TArray<int32>
 function UNiagaraDataInterfaceArrayFunctionLibrary:GetNiagaraArrayUInt8(NiagaraSystem, OverrideName) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@param Index int32
 ---@return FQuat
 function UNiagaraDataInterfaceArrayFunctionLibrary:GetNiagaraArrayQuatValue(NiagaraSystem, OverrideName, Index) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@return TArray<FQuat>
 function UNiagaraDataInterfaceArrayFunctionLibrary:GetNiagaraArrayQuat(NiagaraSystem, OverrideName) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@param Index int32
 ---@return FVector
 function UNiagaraDataInterfaceArrayFunctionLibrary:GetNiagaraArrayPositionValue(NiagaraSystem, OverrideName, Index) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@return TArray<FVector>
 function UNiagaraDataInterfaceArrayFunctionLibrary:GetNiagaraArrayPosition(NiagaraSystem, OverrideName) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@param Index int32
 ---@param bApplyLWCRebase boolean
 ---@return FMatrix
-function UNiagaraDataInterfaceArrayFunctionLibrary:GetNiagaraArrayMatrixValue(NiagaraSystem, OverrideName, Index, bApplyLWCRebase) end
+function UNiagaraDataInterfaceArrayFunctionLibrary:GetNiagaraArrayMatrixValue(NiagaraSystem, OverrideName, Index,
+                                                                              bApplyLWCRebase) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@param bApplyLWCRebase boolean
 ---@return TArray<FMatrix>
 function UNiagaraDataInterfaceArrayFunctionLibrary:GetNiagaraArrayMatrix(NiagaraSystem, OverrideName, bApplyLWCRebase) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@param Index int32
 ---@return int32
 function UNiagaraDataInterfaceArrayFunctionLibrary:GetNiagaraArrayInt32Value(NiagaraSystem, OverrideName, Index) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@return TArray<int32>
 function UNiagaraDataInterfaceArrayFunctionLibrary:GetNiagaraArrayInt32(NiagaraSystem, OverrideName) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@param Index int32
 ---@return float
 function UNiagaraDataInterfaceArrayFunctionLibrary:GetNiagaraArrayFloatValue(NiagaraSystem, OverrideName, Index) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@return TArray<float>
 function UNiagaraDataInterfaceArrayFunctionLibrary:GetNiagaraArrayFloat(NiagaraSystem, OverrideName) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@param Index int32
 ---@return FLinearColor
 function UNiagaraDataInterfaceArrayFunctionLibrary:GetNiagaraArrayColorValue(NiagaraSystem, OverrideName, Index) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@return TArray<FLinearColor>
 function UNiagaraDataInterfaceArrayFunctionLibrary:GetNiagaraArrayColor(NiagaraSystem, OverrideName) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@param Index int32
 ---@return boolean
 function UNiagaraDataInterfaceArrayFunctionLibrary:GetNiagaraArrayBoolValue(NiagaraSystem, OverrideName, Index) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FName
 ---@return TArray<boolean>
 function UNiagaraDataInterfaceArrayFunctionLibrary:GetNiagaraArrayBool(NiagaraSystem, OverrideName) end
-
 
 ---@class UNiagaraDataInterfaceArrayInt32 : UNiagaraDataInterfaceArray
 ---@field IntData TArray<int32>
@@ -2932,22 +3100,24 @@ UNiagaraDataInterfaceGrid2DCollection = {}
 ---@param SizeX int32
 ---@param SizeY int32
 function UNiagaraDataInterfaceGrid2DCollection:GetTextureSize(Component, SizeX, SizeY) end
+
 ---@param Component UNiagaraComponent
 ---@param SizeX int32
 ---@param SizeY int32
 function UNiagaraDataInterfaceGrid2DCollection:GetRawTextureSize(Component, SizeX, SizeY) end
+
 ---@param Component UNiagaraComponent
 ---@param Dest UTextureRenderTarget2D
 ---@param AttributeIndex int32
 ---@return boolean
 function UNiagaraDataInterfaceGrid2DCollection:FillTexture2D(Component, Dest, AttributeIndex) end
+
 ---@param Component UNiagaraComponent
 ---@param Dest UTextureRenderTarget2D
 ---@param TilesX int32
 ---@param TilesY int32
 ---@return boolean
 function UNiagaraDataInterfaceGrid2DCollection:FillRawTexture2D(Component, Dest, TilesX, TilesY) end
-
 
 ---@class UNiagaraDataInterfaceGrid2DCollectionReader : UNiagaraDataInterfaceGrid2DCollection
 ---@field EmitterName FString
@@ -2979,16 +3149,19 @@ UNiagaraDataInterfaceGrid3DCollection = {}
 ---@param SizeY int32
 ---@param SizeZ int32
 function UNiagaraDataInterfaceGrid3DCollection:GetTextureSize(Component, SizeX, SizeY, SizeZ) end
+
 ---@param Component UNiagaraComponent
 ---@param SizeX int32
 ---@param SizeY int32
 ---@param SizeZ int32
 function UNiagaraDataInterfaceGrid3DCollection:GetRawTextureSize(Component, SizeX, SizeY, SizeZ) end
+
 ---@param Component UNiagaraComponent
 ---@param Dest UVolumeTexture
 ---@param AttributeIndex int32
 ---@return boolean
 function UNiagaraDataInterfaceGrid3DCollection:FillVolumeTexture(Component, Dest, AttributeIndex) end
+
 ---@param Component UNiagaraComponent
 ---@param Dest UVolumeTexture
 ---@param TilesX int32
@@ -2996,7 +3169,6 @@ function UNiagaraDataInterfaceGrid3DCollection:FillVolumeTexture(Component, Dest
 ---@param TileZ int32
 ---@return boolean
 function UNiagaraDataInterfaceGrid3DCollection:FillRawVolumeTexture(Component, Dest, TilesX, TilesY, TileZ) end
-
 
 ---@class UNiagaraDataInterfaceGrid3DCollectionReader : UNiagaraDataInterfaceGrid3DCollection
 ---@field EmitterName FString
@@ -3151,8 +3323,8 @@ UNiagaraDataInterfaceSceneCapture2D = {}
 ---@param NiagaraSystem UNiagaraComponent
 ---@param ParameterName FName
 ---@param ShowOnlyActors TArray<AActor>
-function UNiagaraDataInterfaceSceneCapture2D:SetSceneCapture2DManagedShowOnlyActors(NiagaraSystem, ParameterName, ShowOnlyActors) end
-
+function UNiagaraDataInterfaceSceneCapture2D:SetSceneCapture2DManagedShowOnlyActors(NiagaraSystem, ParameterName,
+                                                                                    ShowOnlyActors) end
 
 ---@class UNiagaraDataInterfaceSimCacheReader : UNiagaraDataInterface
 ---@field SimCacheBinding FNiagaraUserParameterBinding
@@ -3189,7 +3361,6 @@ UNiagaraDataInterfaceSkeletalMesh = {}
 ---@param InSource AActor
 ---@param Reason EEndPlayReason::Type
 function UNiagaraDataInterfaceSkeletalMesh:OnSourceEndPlay(InSource, Reason) end
-
 
 ---@class UNiagaraDataInterfaceSparseVolumeTexture : UNiagaraDataInterface
 ---@field SparseVolumeTexture USparseVolumeTexture
@@ -3231,11 +3402,12 @@ UNiagaraDataInterfaceStaticMesh = {}
 ---@param NiagaraSystem UNiagaraComponent
 ---@param UserParameterName FName
 ---@param NewInstanceIndex int32
-function UNiagaraDataInterfaceStaticMesh:SetNiagaraStaticMeshDIInstanceIndex(NiagaraSystem, UserParameterName, NewInstanceIndex) end
+function UNiagaraDataInterfaceStaticMesh:SetNiagaraStaticMeshDIInstanceIndex(NiagaraSystem, UserParameterName,
+                                                                             NewInstanceIndex) end
+
 ---@param InSource AActor
 ---@param Reason EEndPlayReason::Type
 function UNiagaraDataInterfaceStaticMesh:OnSourceEndPlay(InSource, Reason) end
-
 
 ---@class UNiagaraDataInterfaceTexture : UNiagaraDataInterface
 ---@field Texture UTexture
@@ -3256,8 +3428,8 @@ UNiagaraDataInterfaceUObjectPropertyReader = {}
 ---@param UserParameterName FName
 ---@param GraphName FName
 ---@param RemapName FName
-function UNiagaraDataInterfaceUObjectPropertyReader:SetUObjectReaderPropertyRemap(NiagaraComponent, UserParameterName, GraphName, RemapName) end
-
+function UNiagaraDataInterfaceUObjectPropertyReader:SetUObjectReaderPropertyRemap(NiagaraComponent, UserParameterName,
+                                                                                  GraphName, RemapName) end
 
 ---@class UNiagaraDataInterfaceVector2DCurve : UNiagaraDataInterfaceCurveBase
 ---@field XCurve FRichCurve
@@ -3385,6 +3557,7 @@ UNiagaraFunctionLibrary = {}
 ---@param SpawnParams FFXSystemSpawnParameters
 ---@return UNiagaraComponent
 function UNiagaraFunctionLibrary:SpawnSystemAttachedWithParams(SpawnParams) end
+
 ---@param SystemTemplate UNiagaraSystem
 ---@param AttachToComponent USceneComponent
 ---@param AttachPointName FName
@@ -3396,10 +3569,14 @@ function UNiagaraFunctionLibrary:SpawnSystemAttachedWithParams(SpawnParams) end
 ---@param PoolingMethod ENCPoolMethod
 ---@param bPreCullCheck boolean
 ---@return UNiagaraComponent
-function UNiagaraFunctionLibrary:SpawnSystemAttached(SystemTemplate, AttachToComponent, AttachPointName, Location, Rotation, LocationType, bAutoDestroy, bAutoActivate, PoolingMethod, bPreCullCheck) end
+function UNiagaraFunctionLibrary:SpawnSystemAttached(SystemTemplate, AttachToComponent, AttachPointName, Location,
+                                                     Rotation, LocationType, bAutoDestroy, bAutoActivate, PoolingMethod,
+                                                     bPreCullCheck) end
+
 ---@param SpawnParams FFXSystemSpawnParameters
 ---@return UNiagaraComponent
 function UNiagaraFunctionLibrary:SpawnSystemAtLocationWithParams(SpawnParams) end
+
 ---@param WorldContextObject UObject
 ---@param SystemTemplate UNiagaraSystem
 ---@param Location FVector
@@ -3410,62 +3587,79 @@ function UNiagaraFunctionLibrary:SpawnSystemAtLocationWithParams(SpawnParams) en
 ---@param PoolingMethod ENCPoolMethod
 ---@param bPreCullCheck boolean
 ---@return UNiagaraComponent
-function UNiagaraFunctionLibrary:SpawnSystemAtLocation(WorldContextObject, SystemTemplate, Location, Rotation, Scale, bAutoDestroy, bAutoActivate, PoolingMethod, bPreCullCheck) end
+function UNiagaraFunctionLibrary:SpawnSystemAtLocation(WorldContextObject, SystemTemplate, Location, Rotation, Scale,
+                                                       bAutoDestroy, bAutoActivate, PoolingMethod, bPreCullCheck) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FString
 ---@param Texture UVolumeTexture
 function UNiagaraFunctionLibrary:SetVolumeTextureObject(NiagaraSystem, OverrideName, Texture) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FString
 ---@param Texture UTexture
 function UNiagaraFunctionLibrary:SetTextureObject(NiagaraSystem, OverrideName, Texture) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FString
 ---@param Texture UTexture2DArray
 function UNiagaraFunctionLibrary:SetTexture2DArrayObject(NiagaraSystem, OverrideName, Texture) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FString
 ---@param SamplingRegions TArray<FName>
 function UNiagaraFunctionLibrary:SetSkeletalMeshDataInterfaceSamplingRegions(NiagaraSystem, OverrideName, SamplingRegions) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FString
 ---@param FilteredSockets TArray<FName>
 function UNiagaraFunctionLibrary:SetSkeletalMeshDataInterfaceFilteredSockets(NiagaraSystem, OverrideName, FilteredSockets) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FString
 ---@param FilteredBones TArray<FName>
 function UNiagaraFunctionLibrary:SetSkeletalMeshDataInterfaceFilteredBones(NiagaraSystem, OverrideName, FilteredBones) end
+
 ---@param WorldContextObject UObject
 ---@param Primitive UPrimitiveComponent
 ---@param CollisionGroup int32
-function UNiagaraFunctionLibrary:SetComponentNiagaraGPURayTracedCollisionGroup(WorldContextObject, Primitive, CollisionGroup) end
+function UNiagaraFunctionLibrary:SetComponentNiagaraGPURayTracedCollisionGroup(WorldContextObject, Primitive,
+                                                                               CollisionGroup) end
+
 ---@param WorldContextObject UObject
 ---@param Actor AActor
 ---@param CollisionGroup int32
 function UNiagaraFunctionLibrary:SetActorNiagaraGPURayTracedCollisionGroup(WorldContextObject, Actor, CollisionGroup) end
+
 ---@param WorldContextObject UObject
 ---@param CollisionGroup int32
 function UNiagaraFunctionLibrary:ReleaseNiagaraGPURayTracedCollisionGroup(WorldContextObject, CollisionGroup) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FString
 ---@param StaticMeshComponent UStaticMeshComponent
-function UNiagaraFunctionLibrary:OverrideSystemUserVariableStaticMeshComponent(NiagaraSystem, OverrideName, StaticMeshComponent) end
+function UNiagaraFunctionLibrary:OverrideSystemUserVariableStaticMeshComponent(NiagaraSystem, OverrideName,
+                                                                               StaticMeshComponent) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FString
 ---@param StaticMesh UStaticMesh
 function UNiagaraFunctionLibrary:OverrideSystemUserVariableStaticMesh(NiagaraSystem, OverrideName, StaticMesh) end
+
 ---@param NiagaraSystem UNiagaraComponent
 ---@param OverrideName FString
 ---@param SkeletalMeshComponent USkeletalMeshComponent
-function UNiagaraFunctionLibrary:OverrideSystemUserVariableSkeletalMeshComponent(NiagaraSystem, OverrideName, SkeletalMeshComponent) end
+function UNiagaraFunctionLibrary:OverrideSystemUserVariableSkeletalMeshComponent(NiagaraSystem, OverrideName,
+                                                                                 SkeletalMeshComponent) end
+
 ---@param WorldContextObject UObject
 ---@param Collection UNiagaraParameterCollection
 ---@return UNiagaraParameterCollectionInstance
 function UNiagaraFunctionLibrary:GetNiagaraParameterCollection(WorldContextObject, Collection) end
+
 ---@param WorldContextObject UObject
 ---@return int32
 function UNiagaraFunctionLibrary:AcquireNiagaraGPURayTracedCollisionGroup(WorldContextObject) end
-
 
 ---@class UNiagaraLightRendererProperties : UNiagaraRendererProperties
 ---@field SourceMode ENiagaraRendererSourceDataMode
@@ -3563,52 +3757,66 @@ UNiagaraParameterCollectionInstance = {}
 ---@param InVariableName FString
 ---@param InValue FVector
 function UNiagaraParameterCollectionInstance:SetVectorParameter(InVariableName, InValue) end
+
 ---@param InVariableName FString
 ---@param InValue FVector4
 function UNiagaraParameterCollectionInstance:SetVector4Parameter(InVariableName, InValue) end
+
 ---@param InVariableName FString
 ---@param InValue FVector2D
 function UNiagaraParameterCollectionInstance:SetVector2DParameter(InVariableName, InValue) end
+
 ---@param InVariableName FString
 ---@param InValue FQuat
 function UNiagaraParameterCollectionInstance:SetQuatParameter(InVariableName, InValue) end
+
 ---@param InVariableName FString
 ---@param InValue int32
 function UNiagaraParameterCollectionInstance:SetIntParameter(InVariableName, InValue) end
+
 ---@param InVariableName FString
 ---@param InValue float
 function UNiagaraParameterCollectionInstance:SetFloatParameter(InVariableName, InValue) end
+
 ---@param InVariableName FString
 ---@param InValue FLinearColor
 function UNiagaraParameterCollectionInstance:SetColorParameter(InVariableName, InValue) end
+
 ---@param InVariableName FString
 ---@param InValue boolean
 function UNiagaraParameterCollectionInstance:SetBoolParameter(InVariableName, InValue) end
+
 ---@param InVariableName FString
 ---@return FVector
 function UNiagaraParameterCollectionInstance:GetVectorParameter(InVariableName) end
+
 ---@param InVariableName FString
 ---@return FVector4
 function UNiagaraParameterCollectionInstance:GetVector4Parameter(InVariableName) end
+
 ---@param InVariableName FString
 ---@return FVector2D
 function UNiagaraParameterCollectionInstance:GetVector2DParameter(InVariableName) end
+
 ---@param InVariableName FString
 ---@return FQuat
 function UNiagaraParameterCollectionInstance:GetQuatParameter(InVariableName) end
+
 ---@param InVariableName FString
 ---@return int32
 function UNiagaraParameterCollectionInstance:GetIntParameter(InVariableName) end
+
 ---@param InVariableName FString
 ---@return float
 function UNiagaraParameterCollectionInstance:GetFloatParameter(InVariableName) end
+
 ---@param InVariableName FString
 ---@return FLinearColor
 function UNiagaraParameterCollectionInstance:GetColorParameter(InVariableName) end
+
 ---@param InVariableName FString
 ---@return boolean
 function UNiagaraParameterCollectionInstance:GetBoolParameter(InVariableName) end
-
 
 ---@class UNiagaraParameterDefinitionsBase : UObject
 UNiagaraParameterDefinitionsBase = {}
@@ -3626,12 +3834,12 @@ UNiagaraPreviewAxis = {}
 
 ---@return int32
 function UNiagaraPreviewAxis:Num() end
+
 ---@param PreviewComponent UNiagaraComponent
 ---@param PreviewIndex int32
 ---@param bIsXAxis boolean
 ---@param OutLabelText FString
 function UNiagaraPreviewAxis:ApplyToPreview(PreviewComponent, PreviewIndex, bIsXAxis, OutLabelText) end
-
 
 ---@class UNiagaraPreviewAxis_InterpParamBase : UNiagaraPreviewAxis
 ---@field Param FName
@@ -3766,7 +3974,6 @@ UNiagaraScript = {}
 
 function UNiagaraScript:RaiseOnGPUCompilationComplete() end
 
-
 ---@class UNiagaraScriptSourceBase : UObject
 UNiagaraScriptSourceBase = {}
 
@@ -3830,78 +4037,95 @@ UNiagaraSimCache = {}
 ---@param EmitterName FName
 ---@param FrameIndex int32
 function UNiagaraSimCache:ReadVectorAttribute(OutValues, AttributeName, EmitterName, FrameIndex) end
+
 ---@param OutValues TArray<FVector4>
 ---@param AttributeName FName
 ---@param EmitterName FName
 ---@param FrameIndex int32
 function UNiagaraSimCache:ReadVector4Attribute(OutValues, AttributeName, EmitterName, FrameIndex) end
+
 ---@param OutValues TArray<FVector2D>
 ---@param AttributeName FName
 ---@param EmitterName FName
 ---@param FrameIndex int32
 function UNiagaraSimCache:ReadVector2Attribute(OutValues, AttributeName, EmitterName, FrameIndex) end
+
 ---@param OutValues TArray<FQuat>
 ---@param Quat FQuat
 ---@param AttributeName FName
 ---@param EmitterName FName
 ---@param FrameIndex int32
 function UNiagaraSimCache:ReadQuatAttributeWithRebase(OutValues, Quat, AttributeName, EmitterName, FrameIndex) end
+
 ---@param OutValues TArray<FQuat>
 ---@param AttributeName FName
 ---@param EmitterName FName
 ---@param bLocalSpaceToWorld boolean
 ---@param FrameIndex int32
 function UNiagaraSimCache:ReadQuatAttribute(OutValues, AttributeName, EmitterName, bLocalSpaceToWorld, FrameIndex) end
+
 ---@param OutValues TArray<FVector>
 ---@param Transform FTransform
 ---@param AttributeName FName
 ---@param EmitterName FName
 ---@param FrameIndex int32
 function UNiagaraSimCache:ReadPositionAttributeWithRebase(OutValues, Transform, AttributeName, EmitterName, FrameIndex) end
+
 ---@param OutValues TArray<FVector>
 ---@param AttributeName FName
 ---@param EmitterName FName
 ---@param bLocalSpaceToWorld boolean
 ---@param FrameIndex int32
 function UNiagaraSimCache:ReadPositionAttribute(OutValues, AttributeName, EmitterName, bLocalSpaceToWorld, FrameIndex) end
+
 ---@param OutValues TArray<int32>
 ---@param AttributeName FName
 ---@param EmitterName FName
 ---@param FrameIndex int32
 function UNiagaraSimCache:ReadIntAttribute(OutValues, AttributeName, EmitterName, FrameIndex) end
+
 ---@param OutValues TArray<FNiagaraID>
 ---@param AttributeName FName
 ---@param EmitterName FName
 ---@param FrameIndex int32
 function UNiagaraSimCache:ReadIDAttribute(OutValues, AttributeName, EmitterName, FrameIndex) end
+
 ---@param OutValues TArray<float>
 ---@param AttributeName FName
 ---@param EmitterName FName
 ---@param FrameIndex int32
 function UNiagaraSimCache:ReadFloatAttribute(OutValues, AttributeName, EmitterName, FrameIndex) end
+
 ---@param OutValues TArray<FLinearColor>
 ---@param AttributeName FName
 ---@param EmitterName FName
 ---@param FrameIndex int32
 function UNiagaraSimCache:ReadColorAttribute(OutValues, AttributeName, EmitterName, FrameIndex) end
+
 ---@return boolean
 function UNiagaraSimCache:IsEmpty() end
+
 ---@return boolean
 function UNiagaraSimCache:IsCacheValid() end
+
 ---@return float
 function UNiagaraSimCache:GetStartSeconds() end
+
 ---@return int32
 function UNiagaraSimCache:GetNumFrames() end
+
 ---@return int32
 function UNiagaraSimCache:GetNumEmitters() end
+
 ---@return TArray<FName>
 function UNiagaraSimCache:GetEmitterNames() end
+
 ---@param EmitterIndex int32
 ---@return FName
 function UNiagaraSimCache:GetEmitterName(EmitterIndex) end
+
 ---@return ENiagaraSimCacheAttributeCaptureMode
 function UNiagaraSimCache:GetAttributeCaptureMode() end
-
 
 ---@class UNiagaraSimCacheFunctionLibrary : UBlueprintFunctionLibrary
 UNiagaraSimCacheFunctionLibrary = {}
@@ -3909,6 +4133,7 @@ UNiagaraSimCacheFunctionLibrary = {}
 ---@param WorldContextObject UObject
 ---@return UNiagaraSimCache
 function UNiagaraSimCacheFunctionLibrary:CreateNiagaraSimCache(WorldContextObject) end
+
 ---@param SimCache UNiagaraSimCache
 ---@param CreateParameters FNiagaraSimCacheCreateParameters
 ---@param NiagaraComponent UNiagaraComponent
@@ -3916,8 +4141,9 @@ function UNiagaraSimCacheFunctionLibrary:CreateNiagaraSimCache(WorldContextObjec
 ---@param bAdvanceSimulation boolean
 ---@param AdvanceDeltaTime float
 ---@return boolean
-function UNiagaraSimCacheFunctionLibrary:CaptureNiagaraSimCacheImmediate(SimCache, CreateParameters, NiagaraComponent, OutSimCache, bAdvanceSimulation, AdvanceDeltaTime) end
-
+function UNiagaraSimCacheFunctionLibrary:CaptureNiagaraSimCacheImmediate(SimCache, CreateParameters, NiagaraComponent,
+                                                                         OutSimCache, bAdvanceSimulation,
+                                                                         AdvanceDeltaTime) end
 
 ---@class UNiagaraSimulationStageBase : UNiagaraMergeable
 ---@field Script UNiagaraScript
@@ -4086,6 +4312,3 @@ UNiagaraVolumeRendererProperties = {}
 ---@field FrameRangeStart int32
 ---@field FrameRangeEnd int32
 UVolumeCache = {}
-
-
-

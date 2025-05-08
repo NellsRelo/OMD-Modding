@@ -5,4 +5,3 @@ RSTWidgetDisplayState = {
     NewEnumerator2 = 2,
     RSTWidgetDisplayState_MAX = 3,
 }
-

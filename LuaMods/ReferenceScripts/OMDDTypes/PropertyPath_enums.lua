@@ -6,4 +6,3 @@ EPropertyPathTestEnum = {
     Four = 3,
     EPropertyPathTestEnum_MAX = 4,
 }
-

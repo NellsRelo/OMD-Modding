@@ -5,4 +5,3 @@ ENiagaraArraySamplingMode = {
     NewEnumerator2 = 2,
     ENiagaraArraySamplingMode_MAX = 3,
 }
-

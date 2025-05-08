@@ -4,6 +4,3 @@
 ---@field NS_Warhero_Priestess_Projectile UNiagaraComponent
 ---@field Projectile_LP UAudioComponent
 ABP_Projectile_Warhero_Priestess_C = {}
-
-
-

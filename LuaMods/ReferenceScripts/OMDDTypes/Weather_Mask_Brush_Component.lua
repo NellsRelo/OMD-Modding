@@ -10,9 +10,7 @@ UWeather_Mask_Brush_Component_C = {}
 ---@param Location FVector
 ---@param Mask FVector2D
 ---@param Cancel_All_Masks boolean
-UWeather_Mask_Brush_Component_C['Calculate Masking At Location'] = function(Location, Mask, Cancel_All_Masks) end
+UWeather_Mask_Brush_Component_C['Calculate Masking At Location'] = function(self, Location, Mask, Cancel_All_Masks) end
 ---@param Runtime boolean
 ---@param UDW AUltra_Dynamic_Weather_C
-UWeather_Mask_Brush_Component_C['Prepare for Drawing'] = function(Runtime, UDW) end
-
-
+UWeather_Mask_Brush_Component_C['Prepare for Drawing'] = function(self, Runtime, UDW) end

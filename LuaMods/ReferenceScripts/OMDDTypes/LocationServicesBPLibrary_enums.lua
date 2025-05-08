@@ -8,4 +8,3 @@ ELocationAccuracy = {
     LA_Navigation = 5,
     LA_MAX = 6,
 }
-

@@ -7,8 +7,8 @@
 ABP_DamageProjectile_Hellbat_Healer_C = {}
 
 function ABP_DamageProjectile_Hellbat_Healer_C:ReceiveBeginPlay() end
+
 function ABP_DamageProjectile_Hellbat_Healer_C:ReceiveDestroyed() end
+
 ---@param EntryPoint int32
 function ABP_DamageProjectile_Hellbat_Healer_C:ExecuteUbergraph_BP_DamageProjectile_Hellbat_Healer(EntryPoint) end
-
-

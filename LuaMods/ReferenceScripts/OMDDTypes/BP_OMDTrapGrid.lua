@@ -5,6 +5,3 @@
 ---@field GridStartBottomLeft FVector
 ---@field GridColor FLinearColor
 ABP_OMDTrapGrid_C = {}
-
-
-

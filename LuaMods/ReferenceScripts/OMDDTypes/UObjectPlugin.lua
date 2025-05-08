@@ -9,6 +9,3 @@ FMyPluginStruct = {}
 ---@class UMyPluginObject : UObject
 ---@field MyStruct FMyPluginStruct
 UMyPluginObject = {}
-
-
-

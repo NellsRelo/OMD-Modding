@@ -9,14 +9,13 @@
 UW_PurchaseMenu_TextDisplay_Base_C = {}
 
 function UW_PurchaseMenu_TextDisplay_Base_C:BP_SynchronizeProperties() end
+
 ---@param Background_Texture UTexture2D
-UW_PurchaseMenu_TextDisplay_Base_C['Set Background'] = function(Background_Texture) end
-UW_PurchaseMenu_TextDisplay_Base_C['Refresh Background Image'] = function() end
+UW_PurchaseMenu_TextDisplay_Base_C['Set Background'] = function(self, Background_Texture) end
+UW_PurchaseMenu_TextDisplay_Base_C['Refresh Background Image'] = function(self,) end
 ---@param InText FText
-UW_PurchaseMenu_TextDisplay_Base_C['Set NPC Name'] = function(InText) end
+UW_PurchaseMenu_TextDisplay_Base_C['Set NPC Name'] = function(self, InText) end
 ---@param InText FText
-UW_PurchaseMenu_TextDisplay_Base_C['Set NPC Text'] = function(InText) end
+UW_PurchaseMenu_TextDisplay_Base_C['Set NPC Text'] = function(self, InText) end
 ---@param EntryPoint int32
 function UW_PurchaseMenu_TextDisplay_Base_C:ExecuteUbergraph_W_PurchaseMenu_TextDisplay_Base(EntryPoint) end
-
-

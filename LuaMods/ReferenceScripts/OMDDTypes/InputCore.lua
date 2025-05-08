@@ -8,5 +8,3 @@ FKey = {}
 
 ---@class UInputCoreTypes : UObject
 UInputCoreTypes = {}
-
-

@@ -6,4 +6,3 @@ UDS_RandomWeatherTiming = {
     NewEnumerator2 = 3,
     UDS_MAX = 4,
 }
-

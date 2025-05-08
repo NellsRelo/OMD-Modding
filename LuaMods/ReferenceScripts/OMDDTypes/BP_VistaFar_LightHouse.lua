@@ -11,6 +11,3 @@
 ---@field Fortress_Coastal_TowerSquareMed_3x_Windowed_SM UStaticMeshComponent
 ---@field Geo USceneComponent
 ABP_VistaFar_LightHouse_C = {}
-
-
-

@@ -40,7 +40,9 @@ UKismetProceduralMeshLibrary = {}
 ---@param OutOtherHalfProcMesh UProceduralMeshComponent
 ---@param CapOption EProcMeshSliceCapOption
 ---@param CapMaterial UMaterialInterface
-function UKismetProceduralMeshLibrary:SliceProceduralMesh(InProcMesh, PlanePosition, PlaneNormal, bCreateOtherHalf, OutOtherHalfProcMesh, CapOption, CapMaterial) end
+function UKismetProceduralMeshLibrary:SliceProceduralMesh(InProcMesh, PlanePosition, PlaneNormal, bCreateOtherHalf,
+                                                          OutOtherHalfProcMesh, CapOption, CapMaterial) end
+
 ---@param InMesh UStaticMesh
 ---@param LODIndex int32
 ---@param SectionIndex int32
@@ -49,7 +51,9 @@ function UKismetProceduralMeshLibrary:SliceProceduralMesh(InProcMesh, PlanePosit
 ---@param Normals TArray<FVector>
 ---@param UVs TArray<FVector2D>
 ---@param Tangents TArray<FProcMeshTangent>
-function UKismetProceduralMeshLibrary:GetSectionFromStaticMesh(InMesh, LODIndex, SectionIndex, Vertices, Triangles, Normals, UVs, Tangents) end
+function UKismetProceduralMeshLibrary:GetSectionFromStaticMesh(InMesh, LODIndex, SectionIndex, Vertices, Triangles,
+                                                               Normals, UVs, Tangents) end
+
 ---@param InProcMesh UProceduralMeshComponent
 ---@param SectionIndex int32
 ---@param Vertices TArray<FVector>
@@ -57,7 +61,9 @@ function UKismetProceduralMeshLibrary:GetSectionFromStaticMesh(InMesh, LODIndex,
 ---@param Normals TArray<FVector>
 ---@param UVs TArray<FVector2D>
 ---@param Tangents TArray<FProcMeshTangent>
-function UKismetProceduralMeshLibrary:GetSectionFromProceduralMesh(InProcMesh, SectionIndex, Vertices, Triangles, Normals, UVs, Tangents) end
+function UKismetProceduralMeshLibrary:GetSectionFromProceduralMesh(InProcMesh, SectionIndex, Vertices, Triangles, Normals,
+                                                                   UVs, Tangents) end
+
 ---@param BoxRadius FVector
 ---@param Vertices TArray<FVector>
 ---@param Triangles TArray<int32>
@@ -65,6 +71,7 @@ function UKismetProceduralMeshLibrary:GetSectionFromProceduralMesh(InProcMesh, S
 ---@param UVs TArray<FVector2D>
 ---@param Tangents TArray<FProcMeshTangent>
 function UKismetProceduralMeshLibrary:GenerateBoxMesh(BoxRadius, Vertices, Triangles, Normals, UVs, Tangents) end
+
 ---@param NumX int32
 ---@param NumY int32
 ---@param Triangles TArray<int32>
@@ -72,11 +79,13 @@ function UKismetProceduralMeshLibrary:GenerateBoxMesh(BoxRadius, Vertices, Trian
 ---@param UVs TArray<FVector2D>
 ---@param GridSpacing float
 function UKismetProceduralMeshLibrary:CreateGridMeshWelded(NumX, NumY, Triangles, Vertices, UVs, GridSpacing) end
+
 ---@param NumX int32
 ---@param NumY int32
 ---@param bWinding boolean
 ---@param Triangles TArray<int32>
 function UKismetProceduralMeshLibrary:CreateGridMeshTriangles(NumX, NumY, bWinding, Triangles) end
+
 ---@param NumX int32
 ---@param NumY int32
 ---@param Triangles TArray<int32>
@@ -85,24 +94,27 @@ function UKismetProceduralMeshLibrary:CreateGridMeshTriangles(NumX, NumY, bWindi
 ---@param UV1s TArray<FVector2D>
 ---@param GridSpacing float
 function UKismetProceduralMeshLibrary:CreateGridMeshSplit(NumX, NumY, Triangles, Vertices, UVs, UV1s, GridSpacing) end
+
 ---@param StaticMeshComponent UStaticMeshComponent
 ---@param LODIndex int32
 ---@param ProcMeshComponent UProceduralMeshComponent
 ---@param bCreateCollision boolean
-function UKismetProceduralMeshLibrary:CopyProceduralMeshFromStaticMeshComponent(StaticMeshComponent, LODIndex, ProcMeshComponent, bCreateCollision) end
+function UKismetProceduralMeshLibrary:CopyProceduralMeshFromStaticMeshComponent(StaticMeshComponent, LODIndex,
+                                                                                ProcMeshComponent, bCreateCollision) end
+
 ---@param Triangles TArray<int32>
 ---@param Vert0 int32
 ---@param Vert1 int32
 ---@param Vert2 int32
 ---@param Vert3 int32
 function UKismetProceduralMeshLibrary:ConvertQuadToTriangles(Triangles, Vert0, Vert1, Vert2, Vert3) end
+
 ---@param Vertices TArray<FVector>
 ---@param Triangles TArray<int32>
 ---@param UVs TArray<FVector2D>
 ---@param Normals TArray<FVector>
 ---@param Tangents TArray<FProcMeshTangent>
 function UKismetProceduralMeshLibrary:CalculateTangentsForMesh(Vertices, Triangles, UVs, Normals, Tangents) end
-
 
 ---@class UProceduralMeshComponent : UMeshComponent
 ---@field bUseComplexAsSimpleCollision boolean
@@ -124,7 +136,9 @@ UProceduralMeshComponent = {}
 ---@param VertexColors TArray<FLinearColor>
 ---@param Tangents TArray<FProcMeshTangent>
 ---@param bSRGBConversion boolean
-function UProceduralMeshComponent:UpdateMeshSection_LinearColor(SectionIndex, Vertices, Normals, UV0, UV1, UV2, UV3, VertexColors, Tangents, bSRGBConversion) end
+function UProceduralMeshComponent:UpdateMeshSection_LinearColor(SectionIndex, Vertices, Normals, UV0, UV1, UV2, UV3,
+                                                                VertexColors, Tangents, bSRGBConversion) end
+
 ---@param SectionIndex int32
 ---@param Vertices TArray<FVector>
 ---@param Normals TArray<FVector>
@@ -132,14 +146,18 @@ function UProceduralMeshComponent:UpdateMeshSection_LinearColor(SectionIndex, Ve
 ---@param VertexColors TArray<FColor>
 ---@param Tangents TArray<FProcMeshTangent>
 function UProceduralMeshComponent:UpdateMeshSection(SectionIndex, Vertices, Normals, UV0, VertexColors, Tangents) end
+
 ---@param SectionIndex int32
 ---@param bNewVisibility boolean
 function UProceduralMeshComponent:SetMeshSectionVisible(SectionIndex, bNewVisibility) end
+
 ---@param SectionIndex int32
 ---@return boolean
 function UProceduralMeshComponent:IsMeshSectionVisible(SectionIndex) end
+
 ---@return int32
 function UProceduralMeshComponent:GetNumSections() end
+
 ---@param SectionIndex int32
 ---@param Vertices TArray<FVector>
 ---@param Triangles TArray<int32>
@@ -152,7 +170,10 @@ function UProceduralMeshComponent:GetNumSections() end
 ---@param Tangents TArray<FProcMeshTangent>
 ---@param bCreateCollision boolean
 ---@param bSRGBConversion boolean
-function UProceduralMeshComponent:CreateMeshSection_LinearColor(SectionIndex, Vertices, Triangles, Normals, UV0, UV1, UV2, UV3, VertexColors, Tangents, bCreateCollision, bSRGBConversion) end
+function UProceduralMeshComponent:CreateMeshSection_LinearColor(SectionIndex, Vertices, Triangles, Normals, UV0, UV1, UV2,
+                                                                UV3, VertexColors, Tangents, bCreateCollision,
+                                                                bSRGBConversion) end
+
 ---@param SectionIndex int32
 ---@param Vertices TArray<FVector>
 ---@param Triangles TArray<int32>
@@ -161,12 +182,15 @@ function UProceduralMeshComponent:CreateMeshSection_LinearColor(SectionIndex, Ve
 ---@param VertexColors TArray<FColor>
 ---@param Tangents TArray<FProcMeshTangent>
 ---@param bCreateCollision boolean
-function UProceduralMeshComponent:CreateMeshSection(SectionIndex, Vertices, Triangles, Normals, UV0, VertexColors, Tangents, bCreateCollision) end
+function UProceduralMeshComponent:CreateMeshSection(SectionIndex, Vertices, Triangles, Normals, UV0, VertexColors,
+                                                    Tangents, bCreateCollision) end
+
 ---@param SectionIndex int32
 function UProceduralMeshComponent:ClearMeshSection(SectionIndex) end
+
 function UProceduralMeshComponent:ClearCollisionConvexMeshes() end
+
 function UProceduralMeshComponent:ClearAllMeshSections() end
+
 ---@param ConvexVerts TArray<FVector>
 function UProceduralMeshComponent:AddCollisionConvexMesh(ConvexVerts) end
-
-

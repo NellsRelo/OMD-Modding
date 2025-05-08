@@ -49,6 +49,3 @@ URigVMMemory_Literal = {}
 ---@field RigVMModel___CollectionItems_1_Collection FRigElementKeyCollection
 ---@field RigVMModel___RigUnit_ItemArray_1_Items__IO TArray<FRigElementKey>
 URigVMMemory_Work = {}
-
-
-

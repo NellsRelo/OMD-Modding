@@ -13,9 +13,9 @@
 UGA_Death_Elemental_Water_Orb_C = {}
 
 function UGA_Death_Elemental_Water_Orb_C:BP_OnDeathFinished() end
+
 ---@param EventData FGameplayEventData
 function UGA_Death_Elemental_Water_Orb_C:K2_ActivateAbilityFromEvent(EventData) end
+
 ---@param EntryPoint int32
 function UGA_Death_Elemental_Water_Orb_C:ExecuteUbergraph_GA_Death_Elemental_Water_Orb(EntryPoint) end
-
-

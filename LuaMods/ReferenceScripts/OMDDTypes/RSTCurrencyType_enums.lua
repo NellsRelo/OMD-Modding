@@ -5,4 +5,3 @@ RSTCurrencyType = {
     NewEnumerator2 = 2,
     RSTCurrencyType_MAX = 3,
 }
-

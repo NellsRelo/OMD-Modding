@@ -10,7 +10,6 @@ UW_GenericKeywordToolTip_C = {}
 
 ---@param TooltipData FRSTKeywordToolTipData
 function UW_GenericKeywordToolTip_C:BP_ConstructFromText(TooltipData) end
+
 ---@param EntryPoint int32
 function UW_GenericKeywordToolTip_C:ExecuteUbergraph_W_GenericKeywordToolTip(EntryPoint) end
-
-

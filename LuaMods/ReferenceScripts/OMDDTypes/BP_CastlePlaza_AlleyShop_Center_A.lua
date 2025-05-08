@@ -66,6 +66,3 @@
 ---@field TrapGrid USceneComponent
 ---@field Geo USceneComponent
 ABP_CastlePlaza_AlleyShop_Center_A_C = {}
-
-
-

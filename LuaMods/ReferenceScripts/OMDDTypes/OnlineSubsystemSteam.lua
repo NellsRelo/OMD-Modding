@@ -12,5 +12,3 @@ USteamNetConnection = {}
 
 ---@class USteamNetDriver : UIpNetDriver
 USteamNetDriver = {}
-
-

@@ -5,6 +5,3 @@
 ---@field Box_Collision UBoxComponent
 ---@field Floor00 URSTTrapGridBoxComponent
 AFloor_FS_3x1_C = {}
-
-
-

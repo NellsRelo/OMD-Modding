@@ -10,21 +10,22 @@ AGCNL_Character_Daggers_Special_Trail_C = {}
 
 ---@param Comp USceneComponent
 ---@return FBox
-AGCNL_Character_Daggers_Special_Trail_C['Make Oriented Box'] = function(Comp) end
+AGCNL_Character_Daggers_Special_Trail_C['Make Oriented Box'] = function(self, Comp) end
 ---@param Target AActor
 ---@param Parameters FGameplayCueParameters
 ---@param SpawnResults FGameplayCueNotify_SpawnResult
 function AGCNL_Character_Daggers_Special_Trail_C:OnLoopingStart(Target, Parameters, SpawnResults) end
+
 ---@param DeltaSeconds float
 function AGCNL_Character_Daggers_Special_Trail_C:ReceiveTick(DeltaSeconds) end
+
 ---@param bForce boolean
-AGCNL_Character_Daggers_Special_Trail_C['Update Bounds'] = function(bForce) end
+AGCNL_Character_Daggers_Special_Trail_C['Update Bounds'] = function(self, bForce) end
 ---@param Target AActor
 ---@param Parameters FGameplayCueParameters
 ---@param SpawnResults FGameplayCueNotify_SpawnResult
 function AGCNL_Character_Daggers_Special_Trail_C:OnRemoval(Target, Parameters, SpawnResults) end
-AGCNL_Character_Daggers_Special_Trail_C['Refresh Particle Bounds'] = function() end
+
+AGCNL_Character_Daggers_Special_Trail_C['Refresh Particle Bounds'] = function(self,) end
 ---@param EntryPoint int32
 function AGCNL_Character_Daggers_Special_Trail_C:ExecuteUbergraph_GCNL_Character_Daggers_Special_Trail(EntryPoint) end
-
-

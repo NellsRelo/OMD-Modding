@@ -436,4 +436,3 @@ FAIDistanceType = {
     DistanceZ = 2,
     MAX = 3,
 }
-

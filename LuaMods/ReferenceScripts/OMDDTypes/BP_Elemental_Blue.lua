@@ -11,7 +11,6 @@
 ABP_Elemental_Blue_C = {}
 
 function ABP_Elemental_Blue_C:BP_OnDeathStarted() end
+
 ---@param EntryPoint int32
 function ABP_Elemental_Blue_C:ExecuteUbergraph_BP_Elemental_Blue(EntryPoint) end
-
-

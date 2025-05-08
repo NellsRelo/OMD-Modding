@@ -17,48 +17,63 @@
 ALevelSequenceActor = {}
 
 function ALevelSequenceActor:ShowBurnin() end
+
 ---@param InSequence ULevelSequence
 function ALevelSequenceActor:SetSequence(InSequence) end
+
 ---@param ReplicatePlayback boolean
 function ALevelSequenceActor:SetReplicatePlayback(ReplicatePlayback) end
+
 ---@param BindingTag FName
 ---@param Actors TArray<AActor>
 ---@param bAllowBindingsFromAsset boolean
 function ALevelSequenceActor:SetBindingByTag(BindingTag, Actors, bAllowBindingsFromAsset) end
+
 ---@param Binding FMovieSceneObjectBindingID
 ---@param Actors TArray<AActor>
 ---@param bAllowBindingsFromAsset boolean
 function ALevelSequenceActor:SetBinding(Binding, Actors, bAllowBindingsFromAsset) end
+
 function ALevelSequenceActor:ResetBindings() end
+
 ---@param Binding FMovieSceneObjectBindingID
 function ALevelSequenceActor:ResetBinding(Binding) end
+
 ---@param Tag FName
 ---@param Actor AActor
 function ALevelSequenceActor:RemoveBindingByTag(Tag, Actor) end
+
 ---@param Binding FMovieSceneObjectBindingID
 ---@param Actor AActor
 function ALevelSequenceActor:RemoveBinding(Binding, Actor) end
+
 function ALevelSequenceActor:OnLevelSequenceLoaded__DelegateSignature() end
+
 function ALevelSequenceActor:HideBurnin() end
+
 ---@return ULevelSequencePlayer
 function ALevelSequenceActor:GetSequencePlayer() end
+
 ---@return ULevelSequence
 function ALevelSequenceActor:GetSequence() end
+
 ---@param Tag FName
 ---@return TArray<FMovieSceneObjectBindingID>
 function ALevelSequenceActor:FindNamedBindings(Tag) end
+
 ---@param Tag FName
 ---@return FMovieSceneObjectBindingID
 function ALevelSequenceActor:FindNamedBinding(Tag) end
+
 ---@param BindingTag FName
 ---@param Actor AActor
 ---@param bAllowBindingsFromAsset boolean
 function ALevelSequenceActor:AddBindingByTag(BindingTag, Actor, bAllowBindingsFromAsset) end
+
 ---@param Binding FMovieSceneObjectBindingID
 ---@param Actor AActor
 ---@param bAllowBindingsFromAsset boolean
 function ALevelSequenceActor:AddBinding(Binding, Actor, bAllowBindingsFromAsset) end
-
 
 ---@class ALevelSequenceMediaController : AActor
 ---@field Sequence ALevelSequenceActor
@@ -68,13 +83,16 @@ ALevelSequenceMediaController = {}
 
 ---@param DesyncThresholdSeconds float
 function ALevelSequenceMediaController:SynchronizeToServer(DesyncThresholdSeconds) end
+
 function ALevelSequenceMediaController:Play() end
+
 function ALevelSequenceMediaController:OnRep_ServerStartTimeSeconds() end
+
 ---@return ALevelSequenceActor
 function ALevelSequenceMediaController:GetSequence() end
+
 ---@return UMediaComponent
 function ALevelSequenceMediaController:GetMediaComponent() end
-
 
 ---@class AReplicatedLevelSequenceActor : ALevelSequenceActor
 AReplicatedLevelSequenceActor = {}
@@ -190,16 +208,18 @@ ULevelSequence = {}
 
 ---@param InClass UClass
 function ULevelSequence:RemoveMetaDataByClass(InClass) end
+
 ---@param InClass UClass
 ---@return UObject
 function ULevelSequence:FindOrAddMetaDataByClass(InClass) end
+
 ---@param InClass UClass
 ---@return UObject
 function ULevelSequence:FindMetaDataByClass(InClass) end
+
 ---@param InMetaData UObject
 ---@return UObject
 function ULevelSequence:CopyMetaData(InMetaData) end
-
 
 ---@class ULevelSequenceAnimSequenceLink : UAssetUserData
 ---@field AnimSequenceLinks TArray<FLevelSequenceAnimSequenceLinkItem>
@@ -214,9 +234,9 @@ ULevelSequenceBurnIn = {}
 
 ---@param InSettings UObject
 function ULevelSequenceBurnIn:SetSettings(InSettings) end
+
 ---@return TSubclassOf<ULevelSequenceBurnInInitSettings>
 function ULevelSequenceBurnIn:GetSettingsClass() end
-
 
 ---@class ULevelSequenceBurnInInitSettings : UObject
 ULevelSequenceBurnInInitSettings = {}
@@ -231,7 +251,6 @@ ULevelSequenceBurnInOptions = {}
 ---@param InBurnInClass FSoftClassPath
 function ULevelSequenceBurnInOptions:SetBurnIn(InBurnInClass) end
 
-
 ---@class ULevelSequenceDirector : UObject
 ---@field Player ULevelSequencePlayer
 ---@field SubSequenceID int32
@@ -239,27 +258,34 @@ function ULevelSequenceBurnInOptions:SetBurnIn(InBurnInClass) end
 ULevelSequenceDirector = {}
 
 function ULevelSequenceDirector:OnCreated() end
+
 ---@return UMovieSceneSequence
 function ULevelSequenceDirector:GetSequence() end
+
 ---@return FQualifiedFrameTime
 function ULevelSequenceDirector:GetRootSequenceTime() end
+
 ---@return FQualifiedFrameTime
 function ULevelSequenceDirector:GetMasterSequenceTime() end
+
 ---@return FQualifiedFrameTime
 function ULevelSequenceDirector:GetCurrentTime() end
+
 ---@param ObjectBinding FMovieSceneObjectBindingID
 ---@return TArray<UObject>
 function ULevelSequenceDirector:GetBoundObjects(ObjectBinding) end
+
 ---@param ObjectBinding FMovieSceneObjectBindingID
 ---@return UObject
 function ULevelSequenceDirector:GetBoundObject(ObjectBinding) end
+
 ---@param ObjectBinding FMovieSceneObjectBindingID
 ---@return TArray<AActor>
 function ULevelSequenceDirector:GetBoundActors(ObjectBinding) end
+
 ---@param ObjectBinding FMovieSceneObjectBindingID
 ---@return AActor
 function ULevelSequenceDirector:GetBoundActor(ObjectBinding) end
-
 
 ---@class ULevelSequencePlayer : UMovieSceneSequencePlayer
 ---@field OnCameraCut FLevelSequencePlayerOnCameraCut
@@ -267,6 +293,7 @@ ULevelSequencePlayer = {}
 
 ---@return UCameraComponent
 function ULevelSequencePlayer:GetActiveCameraComponent() end
+
 ---@param WorldContextObject UObject
 ---@param LevelSequence ULevelSequence
 ---@param Settings FMovieSceneSequencePlaybackSettings
@@ -274,13 +301,9 @@ function ULevelSequencePlayer:GetActiveCameraComponent() end
 ---@return ULevelSequencePlayer
 function ULevelSequencePlayer:CreateLevelSequencePlayer(WorldContextObject, LevelSequence, Settings, OutActor) end
 
-
 ---@class ULevelSequenceProjectSettings : UDeveloperSettings
 ---@field bDefaultLockEngineToDisplayRate boolean
 ---@field DefaultDisplayRate FString
 ---@field DefaultTickResolution FString
 ---@field DefaultClockSource EUpdateClockSource
 ULevelSequenceProjectSettings = {}
-
-
-

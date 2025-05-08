@@ -87,6 +87,3 @@
 ---@field Fortress_Coastal_TowerSquareMed_3x_Windowed_SM UStaticMeshComponent
 ---@field Geo USceneComponent
 ABP_FishMarket_SideCastle_C = {}
-
-
-

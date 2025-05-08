@@ -55,6 +55,10 @@
     "Key":"",
     "Value":"GameplayTagContainer"
   },
+  "LocationToDeathHeatMapBrush":{
+    "Key":"IntVector2",
+    "Value":""
+  },
   "LinkedModifierObjects":{
     "Key":"Guid",
     "Value":""

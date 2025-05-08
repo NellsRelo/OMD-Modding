@@ -4,4 +4,3 @@ ENiagaraSocketSamplingMode = {
     NewEnumerator5 = 1,
     ENiagaraSocketSamplingMode_MAX = 2,
 }
-

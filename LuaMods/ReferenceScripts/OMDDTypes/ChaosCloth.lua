@@ -71,53 +71,66 @@ UChaosClothingInteractor = {}
 ---@param AirDensity float
 ---@param WindVelocity FVector
 function UChaosClothingInteractor:SetWind(Drag, Lift, AirDensity, WindVelocity) end
+
 ---@param LinearVelocityScale FVector
 ---@param AngularVelocityScale float
 ---@param FictitiousAngularScale float
 function UChaosClothingInteractor:SetVelocityScale(LinearVelocityScale, AngularVelocityScale, FictitiousAngularScale) end
+
 ---@param Pressure FVector2D
 function UChaosClothingInteractor:SetPressure(Pressure) end
+
 ---@param EdgeStiffness float
 ---@param BendingStiffness float
 ---@param AreaStiffness float
 function UChaosClothingInteractor:SetMaterialLinear(EdgeStiffness, BendingStiffness, AreaStiffness) end
+
 ---@param EdgeStiffness FVector2D
 ---@param BendingStiffness FVector2D
 ---@param AreaStiffness FVector2D
 function UChaosClothingInteractor:SetMaterial(EdgeStiffness, BendingStiffness, AreaStiffness) end
+
 ---@param TetherStiffness float
 ---@param TetherScale float
 function UChaosClothingInteractor:SetLongRangeAttachmentLinear(TetherStiffness, TetherScale) end
+
 ---@param TetherStiffness FVector2D
 ---@param TetherScale FVector2D
 function UChaosClothingInteractor:SetLongRangeAttachment(TetherStiffness, TetherScale) end
+
 ---@param GravityScale float
 ---@param bIsGravityOverridden boolean
 ---@param GravityOverride FVector
 function UChaosClothingInteractor:SetGravity(GravityScale, bIsGravityOverridden, GravityOverride) end
+
 ---@param DampingCoefficient float
 ---@param LocalDampingCoefficient float
 function UChaosClothingInteractor:SetDamping(DampingCoefficient, LocalDampingCoefficient) end
+
 ---@param CollisionThickness float
 ---@param FrictionCoefficient float
 ---@param bUseCCD boolean
 ---@param SelfCollisionThickness float
 function UChaosClothingInteractor:SetCollision(CollisionThickness, FrictionCoefficient, bUseCCD, SelfCollisionThickness) end
+
 ---@param bEnabled boolean
 function UChaosClothingInteractor:SetBackstop(bEnabled) end
+
 ---@param AnimDriveStiffness float
 function UChaosClothingInteractor:SetAnimDriveLinear(AnimDriveStiffness) end
+
 ---@param AnimDriveStiffness FVector2D
 ---@param AnimDriveDamping FVector2D
 function UChaosClothingInteractor:SetAnimDrive(AnimDriveStiffness, AnimDriveDamping) end
+
 ---@param DragCoefficient float
 ---@param LiftCoefficient float
 ---@param WindVelocity FVector
 function UChaosClothingInteractor:SetAerodynamics(DragCoefficient, LiftCoefficient, WindVelocity) end
+
 ---@param bReset boolean
 ---@param bTeleport boolean
 function UChaosClothingInteractor:ResetAndTeleport(bReset, bTeleport) end
-
 
 ---@class UChaosClothingSimulationFactory : UClothingSimulationFactory
 UChaosClothingSimulationFactory = {}
@@ -125,5 +138,3 @@ UChaosClothingSimulationFactory = {}
 
 ---@class UChaosClothingSimulationInteractor : UClothingSimulationInteractor
 UChaosClothingSimulationInteractor = {}
-
-

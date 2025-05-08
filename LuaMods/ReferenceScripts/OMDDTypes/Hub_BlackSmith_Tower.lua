@@ -80,6 +80,3 @@
 ---@field Wall_2x05_Crenel_StoneWall_Trimmed_SM UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 AHub_BlackSmith_Tower_C = {}
-
-
-

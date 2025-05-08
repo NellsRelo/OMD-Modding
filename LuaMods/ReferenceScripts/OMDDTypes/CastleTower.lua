@@ -69,6 +69,3 @@
 ---@field SharedRoot USceneComponent
 ---@field DefaultSceneRoot USceneComponent
 ACastleTower_C = {}
-
-
-

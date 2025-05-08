@@ -5,6 +5,3 @@
 ---@field BP_Jungle_Fruit_Coconut_02_C_Breakable UChildActorComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Coconut_Table_C_Breakable_C = {}
-
-
-

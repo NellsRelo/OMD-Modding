@@ -95,7 +95,7 @@
 ---@field Floor_2x2_Plaza_PatternA_Square_SM UStaticMeshComponent
 ---@field Wall_Garden_Planter_B_StoneWall3 UStaticMeshComponent
 ---@field BP_Vista_City_C UChildActorComponent
----@field BluePrints USceneComponent
+---@field Blueprints USceneComponent
 ---@field Crenellation_Coastal_EndCap_SM8 UStaticMeshComponent
 ---@field Fortress_Coastal_BigWallEnd_B_16x5_SM UStaticMeshComponent
 ---@field Floor_4x4_Plaza_PatternD_SM9 UStaticMeshComponent
@@ -122,6 +122,3 @@
 ---@field Statue_Warhero_Knight_A1 UStaticMeshComponent
 ---@field Geo USceneComponent
 ABP_Vista_City_South_C = {}
-
-
-

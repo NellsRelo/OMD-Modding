@@ -51,6 +51,3 @@
 ---@field Geo USceneComponent
 ---@field TrapGrid USceneComponent
 ABP_Garden_BossCinematic_A_C = {}
-
-
-

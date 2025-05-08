@@ -14,6 +14,3 @@
 ---@field ['Show Trace Debugs'] boolean
 ---@field ['Occlusion Behavior Under Water'] UDS_Occlusion_Water_Behavior::Type
 UUDS_OcclusionSettings_C = {}
-
-
-

@@ -37,7 +37,7 @@ EREditorDialogueScope = {
     None = 0,
     Concept = 1,
     Global = 2,
-    Local = 3,
+    = 3,
     Inherited = 4,
     EREditorDialogueScope_MAX = 5,
 }

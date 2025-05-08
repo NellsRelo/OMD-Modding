@@ -6,9 +6,10 @@
 ABP_WallScorcher_C = {}
 
 function ABP_WallScorcher_C:ReceiveBeginPlay() end
+
 function ABP_WallScorcher_C:BP_IsBeingPlacedChanged() end
+
 function ABP_WallScorcher_C:BP_IsSoldChanged() end
+
 ---@param EntryPoint int32
 function ABP_WallScorcher_C:ExecuteUbergraph_BP_WallScorcher(EntryPoint) end
-
-

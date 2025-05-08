@@ -23,6 +23,3 @@ AArchVisCharacter = {}
 ---@field WalkingSpeed float
 ---@field WalkingAcceleration float
 UArchVisCharMovementComponent = {}
-
-
-

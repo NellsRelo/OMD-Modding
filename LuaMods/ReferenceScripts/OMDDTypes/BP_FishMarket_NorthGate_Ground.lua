@@ -27,6 +27,3 @@
 ---@field TrapGrid USceneComponent
 ---@field Geo USceneComponent
 ABP_FishMarket_NorthGate_Ground_C = {}
-
-
-

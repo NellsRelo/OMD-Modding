@@ -5,6 +5,3 @@
 ---@field Damage double
 ---@field ['Critical Hit Chnace'] double
 ABP_PushTrap_ItemInstance_C = {}
-
-
-

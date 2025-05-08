@@ -45,6 +45,3 @@
 ---@field Temp USceneComponent
 ---@field TrapGrid USceneComponent
 ABP_Observatory_Tower_Half_Top_C = {}
-
-
-

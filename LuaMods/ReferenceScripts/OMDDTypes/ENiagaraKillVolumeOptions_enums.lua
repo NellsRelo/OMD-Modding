@@ -7,4 +7,3 @@ ENiagaraKillVolumeOptions = {
     NewEnumerator4 = 4,
     ENiagaraKillVolumeOptions_MAX = 5,
 }
-

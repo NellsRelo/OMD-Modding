@@ -23,20 +23,20 @@ UUIExtensionHandleFunctions = {}
 
 ---@param Handle FUIExtensionHandle
 function UUIExtensionHandleFunctions:Unregister(Handle) end
+
 ---@param Handle FUIExtensionHandle
 ---@return boolean
 function UUIExtensionHandleFunctions:IsValid(Handle) end
-
 
 ---@class UUIExtensionPointHandleFunctions : UBlueprintFunctionLibrary
 UUIExtensionPointHandleFunctions = {}
 
 ---@param Handle FUIExtensionPointHandle
 function UUIExtensionPointHandleFunctions:Unregister(Handle) end
+
 ---@param Handle FUIExtensionPointHandle
 ---@return boolean
 function UUIExtensionPointHandleFunctions:IsValid(Handle) end
-
 
 ---@class UUIExtensionPointWidget : UDynamicEntryBoxBase
 ---@field ExtensionPointTag FGameplayTag
@@ -49,48 +49,55 @@ UUIExtensionPointWidget = {}
 
 ---@param InExtensionPointTag FGameplayTag
 function UUIExtensionPointWidget:SetExtensionPointTag(InExtensionPointTag) end
+
 ---@param DataItem UObject
 ---@return TSubclassOf<UUserWidget>
 function UUIExtensionPointWidget:OnGetWidgetClassForData__DelegateSignature(DataItem) end
+
 ---@param Widget UUserWidget
 ---@param DataItem UObject
 function UUIExtensionPointWidget:OnConfigureWidgetForData__DelegateSignature(Widget, DataItem) end
-
 
 ---@class UUIExtensionSubsystem : UWorldSubsystem
 UUIExtensionSubsystem = {}
 
 ---@param ExtensionPointHandle FUIExtensionPointHandle
 function UUIExtensionSubsystem:UnregisterExtensionPoint(ExtensionPointHandle) end
+
 ---@param ExtensionHandle FUIExtensionHandle
 function UUIExtensionSubsystem:UnregisterExtension(ExtensionHandle) end
+
 ---@param ExtensionPointTag FGameplayTag
 ---@param ExtensionPointTagMatchType EUIExtensionPointMatch
 ---@param AllowedDataClasses TArray<UClass>
 ---@param ExtensionCallback FK2_RegisterExtensionPointExtensionCallback
 ---@return FUIExtensionPointHandle
-function UUIExtensionSubsystem:K2_RegisterExtensionPoint(ExtensionPointTag, ExtensionPointTagMatchType, AllowedDataClasses, ExtensionCallback) end
+function UUIExtensionSubsystem:K2_RegisterExtensionPoint(ExtensionPointTag, ExtensionPointTagMatchType,
+                                                         AllowedDataClasses, ExtensionCallback) end
+
 ---@param ExtensionPointTag FGameplayTag
 ---@param WidgetClass TSubclassOf<UUserWidget>
 ---@param ContextObject UObject
 ---@param Priority int32
 ---@return FUIExtensionHandle
-function UUIExtensionSubsystem:K2_RegisterExtensionAsWidgetForContext(ExtensionPointTag, WidgetClass, ContextObject, Priority) end
+function UUIExtensionSubsystem:K2_RegisterExtensionAsWidgetForContext(ExtensionPointTag, WidgetClass, ContextObject,
+                                                                      Priority) end
+
 ---@param ExtensionPointTag FGameplayTag
 ---@param WidgetClass TSubclassOf<UUserWidget>
 ---@param Priority int32
 ---@return FUIExtensionHandle
 function UUIExtensionSubsystem:K2_RegisterExtensionAsWidget(ExtensionPointTag, WidgetClass, Priority) end
+
 ---@param ExtensionPointTag FGameplayTag
 ---@param ContextObject UObject
 ---@param Data UObject
 ---@param Priority int32
 ---@return FUIExtensionHandle
 function UUIExtensionSubsystem:K2_RegisterExtensionAsDataForContext(ExtensionPointTag, ContextObject, Data, Priority) end
+
 ---@param ExtensionPointTag FGameplayTag
 ---@param Data UObject
 ---@param Priority int32
 ---@return FUIExtensionHandle
 function UUIExtensionSubsystem:K2_RegisterExtensionAsData(ExtensionPointTag, Data, Priority) end
-
-

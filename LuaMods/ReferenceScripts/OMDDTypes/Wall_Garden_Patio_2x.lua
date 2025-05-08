@@ -7,6 +7,3 @@
 ---@field Wall01 URSTTrapGridBoxComponent
 ---@field Wall00 URSTTrapGridBoxComponent
 AWall_Garden_Patio_2x_C = {}
-
-
-

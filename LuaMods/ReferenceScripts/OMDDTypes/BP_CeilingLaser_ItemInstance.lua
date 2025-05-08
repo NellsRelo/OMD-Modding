@@ -6,6 +6,3 @@
 ---@field AbilityDuration double
 ---@field ['Critical Hit Chance'] double
 ABP_CeilingLaser_ItemInstance_C = {}
-
-
-

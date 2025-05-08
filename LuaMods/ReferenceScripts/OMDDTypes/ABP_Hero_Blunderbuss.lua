@@ -6,5 +6,3 @@ FAnimBlueprintGeneratedConstantData = {}
 
 ---@class UABP_Hero_Blunderbuss_C : UABP_RSTPlayerCharacter_HeroBase_C
 UABP_Hero_Blunderbuss_C = {}
-
-

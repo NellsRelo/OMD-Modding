@@ -63,6 +63,3 @@
 ---@field Wood_Square_600W_A_NoTaper_Light43_StaticMeshComponent0 UStaticMeshComponent
 ---@field SharedRoot USceneComponent
 ABP_Dome_F_Group_C = {}
-
-
-

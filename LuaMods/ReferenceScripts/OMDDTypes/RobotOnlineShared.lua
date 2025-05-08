@@ -2,5 +2,3 @@
 
 ---@class IROnlinePlayerInterface : IInterface
 IROnlinePlayerInterface = {}
-
-

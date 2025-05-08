@@ -40,6 +40,3 @@ UInterchangeResultTextureWarning = {}
 ---@field Text FText
 ---@field MaterialName FString
 UInterchangeResultTextureWarning_TextureFileDoNotExist = {}
-
-
-

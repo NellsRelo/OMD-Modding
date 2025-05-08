@@ -1,12 +1,9 @@
 ---@meta
 
 ---@class ABP_WallTorch_SAND_A_Off_C : AActor
----@field Box UBoxComponent
----@field Lighting_Torch_Cage UStaticMeshComponent
----@field Lighting_Torch_WoodHandle UStaticMeshComponent
 ---@field AmbEmitter_Torch_LP_SC UAudioComponent
----@field Lighting_WallCrystal_Holder_SM UStaticMeshComponent
----@field Metal_PostBase_B UStaticMeshComponent
+---@field Lighting_Torch_Wall_Wood UStaticMeshComponent
+---@field Box UBoxComponent
 ---@field DefaultSceneRoot USceneComponent
 ---@field StaticLightColorDefault FLinearColor
 ---@field MoveableLightColorDefault FLinearColor
@@ -18,7 +15,3 @@
 ---@field WallBaseVisible boolean
 ---@field WallBaseNotVisible boolean
 ABP_WallTorch_SAND_A_Off_C = {}
-
-function ABP_WallTorch_SAND_A_Off_C:UserConstructionScript() end
-
-

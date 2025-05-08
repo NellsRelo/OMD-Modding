@@ -4,6 +4,3 @@
 ---@field BackgroundBrush FSlateBrush
 ---@field ForegroundBrush FSlateBrush
 UCommonPreLoadScreenSettings = {}
-
-
-

@@ -14,42 +14,51 @@
 ABP_Rift_Barricade_C = {}
 
 ---@param bValid boolean
-ABP_Rift_Barricade_C['Valid for Additional Effects'] = function(bValid) end
+ABP_Rift_Barricade_C['Valid for Additional Effects'] = function(self, bValid) end
 ---@param Trap ARSTTrap
 ---@param bValid boolean
-ABP_Rift_Barricade_C['Filter Adjacent Trap'] = function(Trap, bValid) end
+ABP_Rift_Barricade_C['Filter Adjacent Trap'] = function(self, Trap, bValid) end
 ---@param OverlappedComponent UPrimitiveComponent
 ---@param OtherActor AActor
 ---@param OtherComp UPrimitiveComponent
 ---@param OtherBodyIndex int32
 ---@param bFromSweep boolean
 ---@param SweepResult FHitResult
-function ABP_Rift_Barricade_C:BndEvt__BP_Rift_Barricade_QueryBox1_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex, bFromSweep, SweepResult) end
+function ABP_Rift_Barricade_C:BndEvt__BP_Rift_Barricade_QueryBox1_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(
+    OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex, bFromSweep, SweepResult) end
+
 ---@param OverlappedComponent UPrimitiveComponent
 ---@param OtherActor AActor
 ---@param OtherComp UPrimitiveComponent
 ---@param OtherBodyIndex int32
-function ABP_Rift_Barricade_C:BndEvt__BP_Rift_Barricade_QueryBox1_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex) end
+function ABP_Rift_Barricade_C:BndEvt__BP_Rift_Barricade_QueryBox1_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(
+    OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex) end
+
 ---@param OverlappedComponent UPrimitiveComponent
 ---@param OtherActor AActor
 ---@param OtherComp UPrimitiveComponent
 ---@param OtherBodyIndex int32
 ---@param bFromSweep boolean
 ---@param SweepResult FHitResult
-function ABP_Rift_Barricade_C:BndEvt__BP_Rift_Barricade_QueryBox2_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex, bFromSweep, SweepResult) end
+function ABP_Rift_Barricade_C:BndEvt__BP_Rift_Barricade_QueryBox2_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(
+    OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex, bFromSweep, SweepResult) end
+
 ---@param OverlappedComponent UPrimitiveComponent
 ---@param OtherActor AActor
 ---@param OtherComp UPrimitiveComponent
 ---@param OtherBodyIndex int32
-function ABP_Rift_Barricade_C:BndEvt__BP_Rift_Barricade_QueryBox2_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature(OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex) end
+function ABP_Rift_Barricade_C:BndEvt__BP_Rift_Barricade_QueryBox2_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature(
+    OverlappedComponent, OtherActor, OtherComp, OtherBodyIndex) end
+
 ---@param Actor AActor
-ABP_Rift_Barricade_C['Try Apply Additional Effects'] = function(Actor) end
+ABP_Rift_Barricade_C['Try Apply Additional Effects'] = function(self, Actor) end
 ---@param Trap ARSTTrap
 function ABP_Rift_Barricade_C:AddAdjacentTrap(Trap) end
+
 ---@param Trap ARSTTrap
 function ABP_Rift_Barricade_C:RemoveAdjacentTrap(Trap) end
+
 function ABP_Rift_Barricade_C:BP_IsSoldChanged() end
+
 ---@param EntryPoint int32
 function ABP_Rift_Barricade_C:ExecuteUbergraph_BP_Rift_Barricade(EntryPoint) end
-
-

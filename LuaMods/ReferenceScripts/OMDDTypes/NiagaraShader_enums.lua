@@ -49,4 +49,3 @@ FNiagaraCompileEventSource = {
     ScriptDependency = 1,
     FNiagaraCompileEventSource_MAX = 2,
 }
-

@@ -13,6 +13,3 @@
 ---@field DefaultProxy FString
 ---@field UseDefaultProxy boolean
 UImgMediaSettings = {}
-
-
-

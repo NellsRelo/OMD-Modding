@@ -39,6 +39,3 @@
 ---@field Column_Square_Stone_Castle_Courtyard_1x4_A1 UStaticMeshComponent
 ---@field Column_Square_Stone_Castle_Courtyard_1x4_A UStaticMeshComponent
 ABP_Vista_Stone_Castle_Courtyard_Tower_A_C = {}
-
-
-

@@ -9,5 +9,3 @@ ABP_Hellbat_Baby_C = {}
 
 ---@return USceneComponent
 function ABP_Hellbat_Baby_C:GetHomingComponent() end
-
-

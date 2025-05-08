@@ -7,5 +7,3 @@ UGCN_Rift_Lightning_Fire_C = {}
 ---@param Parameters FGameplayCueParameters
 ---@param SpawnResults FGameplayCueNotify_SpawnResult
 function UGCN_Rift_Lightning_Fire_C:OnBurst(Target, Parameters, SpawnResults) end
-
-

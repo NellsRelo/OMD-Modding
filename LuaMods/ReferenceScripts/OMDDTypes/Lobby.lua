@@ -9,32 +9,43 @@ ALobbyBeaconClient = {}
 ---@param InUniqueId FUniqueNetIdRepl
 ---@param InPartyOwnerId FUniqueNetIdRepl
 function ALobbyBeaconClient:ServerSetPartyOwner(InUniqueId, InPartyOwnerId) end
+
 function ALobbyBeaconClient:ServerNotifyJoiningServer() end
+
 ---@param InSessionId FString
 ---@param InUniqueId FUniqueNetIdRepl
 ---@param UrlString FString
 function ALobbyBeaconClient:ServerLoginPlayer(InSessionId, InUniqueId, UrlString) end
+
 ---@param PlayerToKick FUniqueNetIdRepl
 ---@param Reason FText
 function ALobbyBeaconClient:ServerKickPlayer(PlayerToKick, Reason) end
+
 function ALobbyBeaconClient:ServerDisconnectFromLobby() end
+
 ---@param Msg FString
 function ALobbyBeaconClient:ServerCheat(Msg) end
+
 ---@param KickReason FText
 function ALobbyBeaconClient:ClientWasKicked(KickReason) end
+
 ---@param Settings FJoinabilitySettings
 function ALobbyBeaconClient:ClientSetInviteFlags(Settings) end
+
 ---@param InUniqueId FUniqueNetIdRepl
 function ALobbyBeaconClient:ClientPlayerLeft(InUniqueId) end
+
 ---@param newPlayerName FText
 ---@param InUniqueId FUniqueNetIdRepl
 function ALobbyBeaconClient:ClientPlayerJoined(newPlayerName, InUniqueId) end
+
 ---@param InUniqueId FUniqueNetIdRepl
 ---@param bWasSuccessful boolean
 function ALobbyBeaconClient:ClientLoginComplete(InUniqueId, bWasSuccessful) end
-function ALobbyBeaconClient:ClientJoinGame() end
-function ALobbyBeaconClient:ClientAckJoiningServer() end
 
+function ALobbyBeaconClient:ClientJoinGame() end
+
+function ALobbyBeaconClient:ClientAckJoiningServer() end
 
 ---@class ALobbyBeaconHost : AOnlineBeaconHostObject
 ---@field LobbyStateClass TSoftClassPtr<ALobbyBeaconState>
@@ -52,9 +63,10 @@ ALobbyBeaconHost = {}
 ALobbyBeaconPlayerState = {}
 
 function ALobbyBeaconPlayerState:OnRep_UniqueId() end
-function ALobbyBeaconPlayerState:OnRep_PartyOwner() end
-function ALobbyBeaconPlayerState:OnRep_InLobby() end
 
+function ALobbyBeaconPlayerState:OnRep_PartyOwner() end
+
+function ALobbyBeaconPlayerState:OnRep_InLobby() end
 
 ---@class ALobbyBeaconState : AInfo
 ---@field MaxPlayers int32
@@ -65,8 +77,8 @@ function ALobbyBeaconPlayerState:OnRep_InLobby() end
 ALobbyBeaconState = {}
 
 function ALobbyBeaconState:OnRep_WaitForPlayersTimeRemaining() end
-function ALobbyBeaconState:OnRep_LobbyStarted() end
 
+function ALobbyBeaconState:OnRep_LobbyStarted() end
 
 ---@class FLobbyPlayerStateActorInfo : FFastArraySerializerItem
 ---@field LobbyPlayerState ALobbyBeaconPlayerState
@@ -78,6 +90,3 @@ FLobbyPlayerStateActorInfo = {}
 ---@field Players TArray<FLobbyPlayerStateActorInfo>
 ---@field ParentState ALobbyBeaconState
 FLobbyPlayerStateInfoArray = {}
-
-
-

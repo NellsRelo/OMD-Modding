@@ -58,6 +58,3 @@
 ---@field Geometry USceneComponent
 ---@field TrapGrid USceneComponent
 ABP_Garden_Wall_Ivy_A_Merged_C = {}
-
-
-

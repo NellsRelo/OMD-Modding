@@ -6,4 +6,3 @@ ENiagaraFrictionMergeType = {
     NewEnumerator3 = 3,
     ENiagaraFrictionMergeType_MAX = 4,
 }
-

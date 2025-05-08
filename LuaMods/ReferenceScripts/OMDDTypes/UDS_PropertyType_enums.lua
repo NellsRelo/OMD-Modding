@@ -12,4 +12,3 @@ UDS_PropertyType = {
     NewEnumerator14 = 9,
     UDS_MAX = 10,
 }
-

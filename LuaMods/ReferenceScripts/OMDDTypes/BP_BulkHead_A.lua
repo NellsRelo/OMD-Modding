@@ -11,6 +11,3 @@
 ---@field Geo USceneComponent
 ---@field TrapGrid USceneComponent
 ABP_BulkHead_A_C = {}
-
-
-

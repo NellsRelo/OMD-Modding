@@ -10,11 +10,10 @@ UW_PurchaseMenu_Videos_C = {}
 ---@param AllVideos TArray<URSTVideoDefinition>
 ---@param SortedVideos TArray<URSTVideoDefinition>
 function UW_PurchaseMenu_Videos_C:SortVideos(AllVideos, SortedVideos) end
+
 ---@param Object UObject
-UW_PurchaseMenu_Videos_C['On Object Selected'] = function(Object) end
-UW_PurchaseMenu_Videos_C['Perform Yes Button Clicked'] = function() end
-UW_PurchaseMenu_Videos_C['Load Grid Objects'] = function() end
+UW_PurchaseMenu_Videos_C['On Object Selected'] = function(self, Object) end
+UW_PurchaseMenu_Videos_C['Perform Yes Button Clicked'] = function(self,) end
+UW_PurchaseMenu_Videos_C['Load Grid Objects'] = function(self,) end
 ---@param EntryPoint int32
 function UW_PurchaseMenu_Videos_C:ExecuteUbergraph_W_PurchaseMenu_Videos(EntryPoint) end
-
-

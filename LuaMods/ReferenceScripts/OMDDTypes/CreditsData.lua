@@ -7,6 +7,3 @@
 ---@field bAlphabetizeNames_12_4B6A9692464B31BC63E484A428A35EFE boolean
 ---@field Justification_15_85FD03A24664402C8E170EB81F0E793B ETextJustify::Type
 FCreditsData = {}
-
-
-

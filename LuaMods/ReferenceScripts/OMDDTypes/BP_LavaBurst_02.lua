@@ -7,7 +7,6 @@
 ABP_LavaBurst_02_C = {}
 
 function ABP_LavaBurst_02_C:ReceiveBeginPlay() end
+
 ---@param EntryPoint int32
 function ABP_LavaBurst_02_C:ExecuteUbergraph_BP_LavaBurst_02(EntryPoint) end
-
-

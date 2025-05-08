@@ -54,6 +54,3 @@
 ---@field Geo_Shelf USceneComponent
 ---@field Box_Collision_Middle UBoxComponent
 ABP_Library_Bookshelf_RestrictedSection_C = {}
-
-
-

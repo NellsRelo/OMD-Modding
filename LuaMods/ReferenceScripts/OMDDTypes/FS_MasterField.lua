@@ -131,27 +131,37 @@ AFS_MasterField_C = {}
 
 ---@param OutputPin UNoiseField
 function AFS_MasterField_C:CalculateNoise(OutputPin) end
+
 ---@param FalloffType EFieldFalloffType
 ---@param FalloffMinMax FVector2D
 ---@param OperatorFieldOut UOperatorField
 function AFS_MasterField_C:FalloffShapeSwitch(FalloffType, FalloffMinMax, OperatorFieldOut) end
+
 function AFS_MasterField_C:MakeDynamic_EnableNonGC() end
+
 function AFS_MasterField_C:InitializeFieldVariables() end
+
 function AFS_MasterField_C:DisplayTextSetup() end
+
 function AFS_MasterField_C:ForceMultiplier() end
+
 function AFS_MasterField_C:SetVisibility() end
+
 ---@param Magnitude double
 ---@param FalloffType EFieldFalloffType
 ---@param FalloffMinMax FVector2D
 ---@param OperatorField UOperatorField
 ---@param CullingField UCullingField
 function AFS_MasterField_C:FalloffAndCullSwitch_Main(Magnitude, FalloffType, FalloffMinMax, OperatorField, CullingField) end
+
 function AFS_MasterField_C:UserConstructionScript() end
+
 function AFS_MasterField_C:CE_Trigger() end
+
 ---@param DeltaSeconds float
 function AFS_MasterField_C:ReceiveTick(DeltaSeconds) end
+
 function AFS_MasterField_C:ReceiveBeginPlay() end
+
 ---@param EntryPoint int32
 function AFS_MasterField_C:ExecuteUbergraph_FS_MasterField(EntryPoint) end
-
-

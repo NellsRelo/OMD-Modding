@@ -7,6 +7,3 @@
 ---@field Trap_Wall1 URSTTrapGridBoxComponent
 ---@field trap_wall URSTTrapGridBoxComponent
 ABP_Wall_Resort_Bricks_4x1_Half_B_C = {}
-
-
-

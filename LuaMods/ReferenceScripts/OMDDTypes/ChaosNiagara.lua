@@ -75,5 +75,3 @@ UNiagaraDataInterfaceGeometryCollection = {}
 
 ---@class UNiagaraDataInterfacePhysicsField : UNiagaraDataInterface
 UNiagaraDataInterfacePhysicsField = {}
-
-

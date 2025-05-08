@@ -6,6 +6,3 @@
 ---@field Proto_Dome_RiftRoom_C UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Dome_RiftRoom_C = {}
-
-
-

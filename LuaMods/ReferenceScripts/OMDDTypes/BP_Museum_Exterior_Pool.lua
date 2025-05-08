@@ -6,17 +6,11 @@
 ---@field Wall_Sec_2_2_V2_RB27 UStaticMeshComponent
 ---@field Stair_2x4_StoneWallBlock_SM UStaticMeshComponent
 ---@field SM_MERGED_Garden_Railing_A11 UStaticMeshComponent
----@field SM_MERGED_Garden_Railing_A10 UStaticMeshComponent
 ---@field SM_MERGED_Garden_Railing_A9 UStaticMeshComponent
----@field SM_MERGED_Garden_Railing_A8 UStaticMeshComponent
 ---@field SM_MERGED_Garden_Railing_A7 UStaticMeshComponent
----@field SM_MERGED_Garden_Railing_A6 UStaticMeshComponent
----@field SM_MERGED_Garden_Railing_A5 UStaticMeshComponent
 ---@field SM_MERGED_Garden_Railing_A4 UStaticMeshComponent
----@field SM_MERGED_Garden_Railing_A3 UStaticMeshComponent
 ---@field SM_MERGED_Garden_Railing_A2 UStaticMeshComponent
 ---@field SM_MERGED_Garden_Railing_A1 UStaticMeshComponent
----@field SM_MERGED_Garden_Railing_A UStaticMeshComponent
 ---@field Wall_Sec_2_2_V2_RB26 UStaticMeshComponent
 ---@field Wall_Sec_2_2_V2_RB25 UStaticMeshComponent
 ---@field Wall_Sec_2_2_V2_RB24 UStaticMeshComponent
@@ -134,6 +128,3 @@
 ---@field TrapGrid USceneComponent
 ---@field Wall_Sec_2_2_V2_RB1 UStaticMeshComponent
 ABP_Museum_Exterior_Pool_C = {}
-
-
-

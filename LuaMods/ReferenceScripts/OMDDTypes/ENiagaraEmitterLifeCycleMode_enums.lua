@@ -4,4 +4,3 @@ ENiagaraEmitterLifeCycleMode = {
     NewEnumerator1 = 1,
     ENiagaraEmitterLifeCycleMode_MAX = 2,
 }
-

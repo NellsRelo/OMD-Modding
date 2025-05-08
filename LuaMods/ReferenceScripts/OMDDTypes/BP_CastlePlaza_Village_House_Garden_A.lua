@@ -83,6 +83,3 @@
 ---@field Collision USceneComponent
 ---@field Geo USceneComponent
 ABP_CastlePlaza_Village_House_Garden_A_C = {}
-
-
-

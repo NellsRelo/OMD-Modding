@@ -14,4 +14,3 @@ EVectorVMOperandLocation = {
     Num = 2,
     EVectorVMOperandLocation_MAX = 3,
 }
-

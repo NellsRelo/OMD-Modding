@@ -24,20 +24,20 @@
 ---@field ['Using AMB Materials'] boolean
 ARain_Drip_Spline_C = {}
 
-ARain_Drip_Spline_C['Update Weather Parameters'] = function() end
-ARain_Drip_Spline_C['📘 Rain Drip Spline'] = function() end
+ARain_Drip_Spline_C['Update Weather Parameters'] = function(self,) end
+ARain_Drip_Spline_C['📘 Rain Drip Spline'] = function(self,) end
 ---@param Out double
-ARain_Drip_Spline_C['Spawn Rate'] = function(Out) end
-ARain_Drip_Spline_C['Update Static Niagara Parameters'] = function() end
-ARain_Drip_Spline_C['Create Curve Data'] = function() end
+ARain_Drip_Spline_C['Spawn Rate'] = function(self, Out) end
+ARain_Drip_Spline_C['Update Static Niagara Parameters'] = function(self,) end
+ARain_Drip_Spline_C['Create Curve Data'] = function(self,) end
 function ARain_Drip_Spline_C:UserConstructionScript() end
-ARain_Drip_Spline_C['UDW Instant Update'] = function() end
-ARain_Drip_Spline_C['UDW Ending Play'] = function() end
+
+ARain_Drip_Spline_C['UDW Instant Update'] = function(self,) end
+ARain_Drip_Spline_C['UDW Ending Play'] = function(self,) end
 ---@param UDW AUltra_Dynamic_Weather_C
-ARain_Drip_Spline_C['UDW Starting Up'] = function(UDW) end
+ARain_Drip_Spline_C['UDW Starting Up'] = function(self, UDW) end
 function ARain_Drip_Spline_C:ReceiveBeginPlay() end
-ARain_Drip_Spline_C['UDW Editor Update'] = function() end
+
+ARain_Drip_Spline_C['UDW Editor Update'] = function(self,) end
 ---@param EntryPoint int32
 function ARain_Drip_Spline_C:ExecuteUbergraph_Rain_Drip_Spline(EntryPoint) end
-
-

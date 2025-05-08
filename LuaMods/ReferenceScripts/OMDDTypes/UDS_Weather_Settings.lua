@@ -17,10 +17,8 @@
 UUDS_Weather_Settings_C = {}
 
 ---@param Sources TMap<UUDS_Weather_Settings_C, double>
-UUDS_Weather_Settings_C['Get State Sources'] = function(Sources) end
+UUDS_Weather_Settings_C['Get State Sources'] = function(self, Sources) end
 ---@param Alpha double
 ---@param UDS AUltra_Dynamic_Sky_C
 ---@param UDW AUltra_Dynamic_Weather_C
-UUDS_Weather_Settings_C['Custom Weather Behavior'] = function(Alpha, UDS, UDW) end
-
-
+UUDS_Weather_Settings_C['Custom Weather Behavior'] = function(self, Alpha, UDS, UDW) end

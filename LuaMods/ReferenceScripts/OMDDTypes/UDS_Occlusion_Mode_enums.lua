@@ -5,4 +5,3 @@ UDS_Occlusion_Mode = {
     NewEnumerator2 = 2,
     UDS_Occlusion_MAX = 3,
 }
-

@@ -104,29 +104,34 @@ URDialogueBlueprintLibrary = {}
 ---@param Value FString
 ---@return FRDialogueFactValue
 function URDialogueBlueprintLibrary:MakeStringFact(Value) end
+
 ---@param Value int64
 ---@return FRDialogueFactValue
 function URDialogueBlueprintLibrary:MakeIntegerFact(Value) end
+
 ---@param Value double
 ---@return FRDialogueFactValue
 function URDialogueBlueprintLibrary:MakeFloatFact(Value) end
+
 ---@param ConceptName FRDialogueConcept
 ---@return FRDialogueQuery
 function URDialogueBlueprintLibrary:MakeDialogueQuery(ConceptName) end
+
 ---@param Value boolean
 ---@return FRDialogueFactValue
 function URDialogueBlueprintLibrary:MakeBooleanFact(Value) end
+
 ---@param Query FRDialogueQuery
 ---@param FactName FName
 ---@param FactValue FRDialogueFactValue
 ---@return FRDialogueQuery
 function URDialogueBlueprintLibrary:AddValueFactToQuery(Query, FactName, FactValue) end
+
 ---@param Query FRDialogueQuery
 ---@param FactName FName
 ---@param GameplayTags FGameplayTagContainer
 ---@return FRDialogueQuery
 function URDialogueBlueprintLibrary:AddGameplayTagFactToQuery(Query, FactName, GameplayTags) end
-
 
 ---@class URDialogueComponent : UGameFrameworkComponent
 ---@field Ruleset URDialogueRuleset
@@ -135,29 +140,34 @@ URDialogueComponent = {}
 
 ---@param InDialogueRuleset URDialogueRuleset
 function URDialogueComponent:SetDialogueRuleset(InDialogueRuleset) end
+
 ---@param ConceptName FName
 ---@param RuleId FGuid
 ---@param ResponseIndex int32
 function URDialogueComponent:Server_PlayResponse(ConceptName, RuleId, ResponseIndex) end
+
 ---@param Query FRDialogueQuery
 ---@param OtherComponent URDialogueComponent
 ---@param bReplicated boolean
 function URDialogueComponent:RequestDialogueFromOtherComponent(Query, OtherComponent, bReplicated) end
+
 ---@param Query FRDialogueQuery
 ---@param bReplicated boolean
 function URDialogueComponent:RequestDialogue(Query, bReplicated) end
+
 ---@param ConceptName FName
 ---@param RuleId FGuid
 ---@param ResponseIndex int32
 function URDialogueComponent:NetMulticast_PlayResponse(ConceptName, RuleId, ResponseIndex) end
+
 ---@param Actor AActor
 ---@return URDialogueComponent
 function URDialogueComponent:FindDialogueComponent(Actor) end
+
 ---@param ConceptName FName
 ---@param RuleId FGuid
 ---@param ResponseIndex int32
 function URDialogueComponent:Client_PlayResponse(ConceptName, RuleId, ResponseIndex) end
-
 
 ---@class URDialogueManager : UObject
 URDialogueManager = {}
@@ -344,6 +354,3 @@ UREditorDialogueResponseMapping = {}
 ---@field Chance double
 ---@field bOnce boolean
 UREditorDialogueRuleEntry = {}
-
-
-

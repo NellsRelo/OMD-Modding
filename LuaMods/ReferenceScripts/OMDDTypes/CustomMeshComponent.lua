@@ -14,8 +14,8 @@ UCustomMeshComponent = {}
 ---@param Triangles TArray<FCustomMeshTriangle>
 ---@return boolean
 function UCustomMeshComponent:SetCustomMeshTriangles(Triangles) end
+
 function UCustomMeshComponent:ClearCustomMeshTriangles() end
+
 ---@param Triangles TArray<FCustomMeshTriangle>
 function UCustomMeshComponent:AddCustomMeshTriangles(Triangles) end
-
-

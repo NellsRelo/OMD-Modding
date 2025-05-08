@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABP_BuildingExtrude_Resort_A_C : ABP_OMDTrapGrid_C
+---@field WoodPlank_4x1_Floor_A1 UStaticMeshComponent
 ---@field Wall_Resort_Adobe_4x2_B_SM5 UStaticMeshComponent
 ---@field Wood_Square_900W_A_light_NoTaper2 UStaticMeshComponent
 ---@field Wood_Square_900W_A_light_NoTaper1 UStaticMeshComponent
@@ -105,6 +106,3 @@
 ---@field Crenel_TrimA_SM2 UStaticMeshComponent
 ---@field trap_wall URSTTrapGridBoxComponent
 ABP_BuildingExtrude_Resort_A_C = {}
-
-
-

@@ -7,6 +7,3 @@
 ---@field WhiteSquares USceneComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Gardens_Patio_ChessBoard_C = {}
-
-
-

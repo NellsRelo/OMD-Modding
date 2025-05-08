@@ -5,4 +5,3 @@ ENiagaraWindOffsetMode = {
     NewEnumerator2 = 2,
     ENiagaraWindOffsetMode_MAX = 3,
 }
-

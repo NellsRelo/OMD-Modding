@@ -4,6 +4,3 @@
 ---@field RSTTrapGridBox URSTTrapGridBoxComponent
 ---@field PictureFrame_03 UStaticMeshComponent
 ABP_Painting_SharkIsle_Landscape_C = {}
-
-
-

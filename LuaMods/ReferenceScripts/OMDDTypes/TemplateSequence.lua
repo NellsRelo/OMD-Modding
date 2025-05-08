@@ -9,16 +9,19 @@ ATemplateSequenceActor = {}
 
 ---@param InSequence UTemplateSequence
 function ATemplateSequenceActor:SetSequence(InSequence) end
+
 ---@param Actor AActor
 ---@param bOverridesDefault boolean
 function ATemplateSequenceActor:SetBinding(Actor, bOverridesDefault) end
+
 ---@return UTemplateSequence
 function ATemplateSequenceActor:LoadSequence() end
+
 ---@return UTemplateSequencePlayer
 function ATemplateSequenceActor:GetSequencePlayer() end
+
 ---@return UTemplateSequence
 function ATemplateSequenceActor:GetSequence() end
-
 
 ---@class FTemplateSectionPropertyScale
 ---@field ObjectBinding FGuid
@@ -105,13 +108,14 @@ USequenceCameraShakeTestUtil = {}
 ---@param OutPPBlendWeight float
 ---@return boolean
 function USequenceCameraShakeTestUtil:GetPostProcessBlendCache(PlayerController, PPIndex, OutPPSettings, OutPPBlendWeight) end
+
 ---@param PlayerController APlayerController
 ---@return FMinimalViewInfo
 function USequenceCameraShakeTestUtil:GetLastFrameCameraCachePOV(PlayerController) end
+
 ---@param PlayerController APlayerController
 ---@return FMinimalViewInfo
 function USequenceCameraShakeTestUtil:GetCameraCachePOV(PlayerController) end
-
 
 ---@class UTemplateSequence : UMovieSceneSequence
 ---@field MovieScene UMovieScene
@@ -130,7 +134,6 @@ UTemplateSequencePlayer = {}
 ---@param OutActor ATemplateSequenceActor
 ---@return UTemplateSequencePlayer
 function UTemplateSequencePlayer:CreateTemplateSequencePlayer(WorldContextObject, TemplateSequence, Settings, OutActor) end
-
 
 ---@class UTemplateSequencePropertyScalingEvaluatorSystem : UMovieSceneEntitySystem
 UTemplateSequencePropertyScalingEvaluatorSystem = {}
@@ -152,5 +155,3 @@ UTemplateSequenceSystem = {}
 
 ---@class UTemplateSequenceTrack : UMovieSceneSubTrack
 UTemplateSequenceTrack = {}
-
-

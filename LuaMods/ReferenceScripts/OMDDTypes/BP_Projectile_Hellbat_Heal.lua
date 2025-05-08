@@ -15,8 +15,11 @@ ABP_Projectile_Hellbat_Heal_C = {}
 
 ---@param ImpactLoc FVector
 function ABP_Projectile_Hellbat_Heal_C:DoAOEDamage(ImpactLoc) end
+
 function ABP_Projectile_Hellbat_Heal_C:ReceiveBeginPlay() end
+
 function ABP_Projectile_Hellbat_Heal_C:ReceiveDestroyed() end
+
 ---@param MyComp UPrimitiveComponent
 ---@param Other AActor
 ---@param OtherComp UPrimitiveComponent
@@ -25,8 +28,8 @@ function ABP_Projectile_Hellbat_Heal_C:ReceiveDestroyed() end
 ---@param HitNormal FVector
 ---@param NormalImpulse FVector
 ---@param Hit FHitResult
-function ABP_Projectile_Hellbat_Heal_C:ReceiveHit(MyComp, Other, OtherComp, bSelfMoved, HitLocation, HitNormal, NormalImpulse, Hit) end
+function ABP_Projectile_Hellbat_Heal_C:ReceiveHit(MyComp, Other, OtherComp, bSelfMoved, HitLocation, HitNormal,
+                                                  NormalImpulse, Hit) end
+
 ---@param EntryPoint int32
 function ABP_Projectile_Hellbat_Heal_C:ExecuteUbergraph_BP_Projectile_Hellbat_Heal(EntryPoint) end
-
-

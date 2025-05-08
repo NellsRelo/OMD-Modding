@@ -4,6 +4,3 @@
 ---@field Ceiling_Manor_Wood_2x3_A_SM UStaticMeshComponent
 ---@field trap_wall URSTTrapGridBoxComponent
 ABP_Ceiling_Manor_Wood_2x3_A_C = {}
-
-
-

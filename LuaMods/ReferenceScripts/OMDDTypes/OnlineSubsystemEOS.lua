@@ -40,5 +40,3 @@ UEOSSettings = {}
 
 ---@class UNetDriverEOS : UNetDriverEOSBase
 UNetDriverEOS = {}
-
-

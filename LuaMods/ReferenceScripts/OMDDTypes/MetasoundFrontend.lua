@@ -296,62 +296,75 @@ UMetasoundParameterPack = {}
 ---@param OnlyIfExists boolean
 ---@return ESetParamResult
 function UMetasoundParameterPack:SetTrigger(ParameterName, OnlyIfExists) end
+
 ---@param ParameterName FName
 ---@param InValue FString
 ---@param OnlyIfExists boolean
 ---@return ESetParamResult
 function UMetasoundParameterPack:SetString(ParameterName, InValue, OnlyIfExists) end
+
 ---@param ParameterName FName
 ---@param InValue int32
 ---@param OnlyIfExists boolean
 ---@return ESetParamResult
 function UMetasoundParameterPack:SetInt(ParameterName, InValue, OnlyIfExists) end
+
 ---@param ParameterName FName
 ---@param InValue float
 ---@param OnlyIfExists boolean
 ---@return ESetParamResult
 function UMetasoundParameterPack:SetFloat(ParameterName, InValue, OnlyIfExists) end
+
 ---@param ParameterName FName
 ---@param InValue boolean
 ---@param OnlyIfExists boolean
 ---@return ESetParamResult
 function UMetasoundParameterPack:SetBool(ParameterName, InValue, OnlyIfExists) end
+
 ---@return UMetasoundParameterPack
 function UMetasoundParameterPack:MakeMetasoundParameterPack() end
+
 ---@param ParameterName FName
 ---@return boolean
 function UMetasoundParameterPack:HasTrigger(ParameterName) end
+
 ---@param ParameterName FName
 ---@return boolean
 function UMetasoundParameterPack:HasString(ParameterName) end
+
 ---@param ParameterName FName
 ---@return boolean
 function UMetasoundParameterPack:HasInt(ParameterName) end
+
 ---@param ParameterName FName
 ---@return boolean
 function UMetasoundParameterPack:HasFloat(ParameterName) end
+
 ---@param ParameterName FName
 ---@return boolean
 function UMetasoundParameterPack:HasBool(ParameterName) end
+
 ---@param ParameterName FName
 ---@param Result ESetParamResult
 ---@return boolean
 function UMetasoundParameterPack:GetTrigger(ParameterName, Result) end
+
 ---@param ParameterName FName
 ---@param Result ESetParamResult
 ---@return FString
 function UMetasoundParameterPack:GetString(ParameterName, Result) end
+
 ---@param ParameterName FName
 ---@param Result ESetParamResult
 ---@return int32
 function UMetasoundParameterPack:GetInt(ParameterName, Result) end
+
 ---@param ParameterName FName
 ---@param Result ESetParamResult
 ---@return float
 function UMetasoundParameterPack:GetFloat(ParameterName, Result) end
+
 ---@param ParameterName FName
 ---@param Result ESetParamResult
 ---@return boolean
 function UMetasoundParameterPack:GetBool(ParameterName, Result) end
-
-

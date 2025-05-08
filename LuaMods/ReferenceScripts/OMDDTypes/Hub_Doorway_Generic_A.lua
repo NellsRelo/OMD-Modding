@@ -9,6 +9,3 @@
 ---@field Geometry USceneComponent
 ---@field TrapGrid USceneComponent
 AHub_Doorway_Generic_A_C = {}
-
-
-

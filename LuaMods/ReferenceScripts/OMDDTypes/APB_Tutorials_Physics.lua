@@ -10,6 +10,10 @@ FAnimBlueprintGeneratedConstantData = {}
 
 
 
+---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
+FAnimBlueprintGeneratedMutableData = {}
+
+
 ---@class UAPB_Tutorials_Physics_C : UAnimInstance
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance
@@ -24,7 +28,6 @@ UAPB_Tutorials_Physics_C = {}
 ---@param InPose FPoseLink
 ---@param AnimGraph FPoseLink
 function UAPB_Tutorials_Physics_C:AnimGraph(InPose, AnimGraph) end
+
 ---@param EntryPoint int32
 function UAPB_Tutorials_Physics_C:ExecuteUbergraph_APB_Tutorials_Physics(EntryPoint) end
-
-

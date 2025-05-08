@@ -11,13 +11,17 @@ ABP_PoisonFlower_C = {}
 ---@param OutLocation FVector
 ---@param OutRotation FRotator
 function ABP_PoisonFlower_C:BP_GetActorEyesViewPoint(OutLocation, OutRotation) end
+
 ---@return boolean
 function ABP_PoisonFlower_C:HasValidTarget() end
+
 function ABP_PoisonFlower_C:UpdateTarget() end
+
 function ABP_PoisonFlower_C:EnablePerception() end
+
 function ABP_PoisonFlower_C:ReceiveBeginPlay() end
+
 function ABP_PoisonFlower_C:BP_IsBeingPlacedChanged() end
+
 ---@param EntryPoint int32
 function ABP_PoisonFlower_C:ExecuteUbergraph_BP_PoisonFlower(EntryPoint) end
-
-

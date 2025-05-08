@@ -17,12 +17,15 @@ UW_NPE_Tooltip_C = {}
 
 ---@param IsDesignTime boolean
 function UW_NPE_Tooltip_C:PreConstruct(IsDesignTime) end
+
 function UW_NPE_Tooltip_C:Construct() end
+
 function UW_NPE_Tooltip_C:BP_OnClicked() end
+
 function UW_NPE_Tooltip_C:Destruct() end
+
 ---@param InVisibility ESlateVisibility
 function UW_NPE_Tooltip_C:OnVisChanged(InVisibility) end
+
 ---@param EntryPoint int32
 function UW_NPE_Tooltip_C:ExecuteUbergraph_W_NPE_Tooltip(EntryPoint) end
-
-

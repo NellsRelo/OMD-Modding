@@ -75,6 +75,3 @@
 ---@field Wood_Door_D_Light_Cut_Merge2 UStaticMeshComponent
 ---@field Geo USceneComponent
 ABP_Vista_City_A_C = {}
-
-
-

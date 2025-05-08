@@ -7,7 +7,6 @@
 ABP_FloatingTowers_WPO_C = {}
 
 function ABP_FloatingTowers_WPO_C:ReceiveBeginPlay() end
+
 ---@param EntryPoint int32
 function ABP_FloatingTowers_WPO_C:ExecuteUbergraph_BP_FloatingTowers_WPO(EntryPoint) end
-
-

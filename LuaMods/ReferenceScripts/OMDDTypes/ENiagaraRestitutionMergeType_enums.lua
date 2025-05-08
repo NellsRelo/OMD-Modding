@@ -6,4 +6,3 @@ ENiagaraRestitutionMergeType = {
     NewEnumerator2 = 3,
     ENiagaraRestitutionMergeType_MAX = 4,
 }
-

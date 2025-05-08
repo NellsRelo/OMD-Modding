@@ -8,5 +8,3 @@ UGA_SpikeWall_Fire_C = {}
 ---@param LaunchVelocity double
 ---@return float
 function UGA_SpikeWall_Fire_C:GetAdjustedLaunchVelocity(AiCharacter, LaunchDirection, LaunchVelocity) end
-
-

@@ -5,4 +5,3 @@ EFieldShapeType = {
     NewEnumerator2 = 2,
     EFieldShapeType_MAX = 3,
 }
-

@@ -44,6 +44,3 @@
 ---@field Wall002 URSTTrapGridBoxComponent
 ---@field Wall001 URSTTrapGridBoxComponent
 AButtress_FB_A_C = {}
-
-
-

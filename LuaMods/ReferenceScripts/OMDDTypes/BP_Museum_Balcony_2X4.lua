@@ -18,6 +18,3 @@
 ---@field Geo USceneComponent
 ---@field TrapGrid USceneComponent
 ABP_Museum_Balcony_2X4_C = {}
-
-
-

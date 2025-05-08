@@ -200,6 +200,3 @@ FRigUnit_TransformFromControlRigSpline = {}
 ---@field SecondaryAxis FVector
 ---@field Transform FTransform
 FRigUnit_TransformFromControlRigSpline2 = {}
-
-
-

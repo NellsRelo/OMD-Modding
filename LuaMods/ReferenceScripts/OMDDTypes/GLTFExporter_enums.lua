@@ -53,4 +53,3 @@ EGLTFTextureImageFormat = {
     JPEG = 2,
     EGLTFTextureImageFormat_MAX = 3,
 }
-

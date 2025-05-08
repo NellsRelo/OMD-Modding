@@ -8,6 +8,3 @@
 ---@field Wall002 URSTTrapGridBoxComponent
 ---@field Wall001 URSTTrapGridBoxComponent
 ABP_Column_Square_Manor_1x1_A_C = {}
-
-
-

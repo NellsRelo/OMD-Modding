@@ -10,6 +10,3 @@
 ---@field Wall_2x1_StairSide_StoneWall_SM1 UStaticMeshComponent
 ---@field Wall00 URSTTrapGridBoxComponent
 AWall_RB_Angle_1x1_C = {}
-
-
-

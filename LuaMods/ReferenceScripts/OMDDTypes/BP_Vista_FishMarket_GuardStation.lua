@@ -75,6 +75,3 @@
 ---@field Collision USceneComponent
 ---@field Geo USceneComponent
 ABP_Vista_FishMarket_GuardStation_C = {}
-
-
-

@@ -15,14 +15,13 @@
 ---@field bShowMilestoneDisplay boolean
 UW_PurchaseMenu_Details_Thread_C = {}
 
-UW_PurchaseMenu_Details_Thread_C['Init Thread Bounds'] = function() end
-UW_PurchaseMenu_Details_Thread_C['Init Display'] = function() end
+UW_PurchaseMenu_Details_Thread_C['Init Thread Bounds'] = function(self,) end
+UW_PurchaseMenu_Details_Thread_C['Init Display'] = function(self,) end
 ---@param Thread URSTMetaThreadDefinition
-UW_PurchaseMenu_Details_Thread_C['Init Cost Display'] = function(Thread) end
+UW_PurchaseMenu_Details_Thread_C['Init Cost Display'] = function(self, Thread) end
 ---@param Thread URSTMetaThreadDefinition
-UW_PurchaseMenu_Details_Thread_C['Init Thread Unlock Display'] = function(Thread) end
+UW_PurchaseMenu_Details_Thread_C['Init Thread Unlock Display'] = function(self, Thread) end
 function UW_PurchaseMenu_Details_Thread_C:BP_SynchronizeProperties() end
+
 ---@param EntryPoint int32
 function UW_PurchaseMenu_Details_Thread_C:ExecuteUbergraph_W_PurchaseMenu_Details_Thread(EntryPoint) end
-
-

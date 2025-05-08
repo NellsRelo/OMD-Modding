@@ -7,6 +7,3 @@
 ---@field SpotLight USpotLightComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_RoyalFigure_Base_C = {}
-
-
-

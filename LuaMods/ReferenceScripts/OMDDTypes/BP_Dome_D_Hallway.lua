@@ -48,6 +48,3 @@
 ---@field Crenel_TrimB_SM12 UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Dome_D_Hallway_C = {}
-
-
-

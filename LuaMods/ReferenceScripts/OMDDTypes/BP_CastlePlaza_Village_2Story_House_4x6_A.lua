@@ -54,6 +54,3 @@
 ---@field ['Wall_4x2_Wainscot_White-Brick-Seablue_SM_Door-Window_Union_-Wood_Window_SM_Union'] UStaticMeshComponent
 ---@field Geo USceneComponent
 ABP_CastlePlaza_Village_2Story_House_4x6_A_C = {}
-
-
-

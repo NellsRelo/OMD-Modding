@@ -19,6 +19,3 @@
 ---@field Ceiling URSTTrapGridBoxComponent
 ---@field Floor_1x2_PatternC1_SM UStaticMeshComponent
 ABP_Gardens_Planter_1x2_A_C = {}
-
-
-

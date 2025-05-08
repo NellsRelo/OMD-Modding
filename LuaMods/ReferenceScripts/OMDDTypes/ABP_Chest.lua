@@ -20,6 +20,10 @@ FAnimBlueprintGeneratedConstantData = {}
 
 
 
+---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
+FAnimBlueprintGeneratedMutableData = {}
+
+
 ---@class UABP_Chest_C : URSTAnimInstance
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance
@@ -36,7 +40,6 @@ UABP_Chest_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_Chest_C:AnimGraph(AnimGraph) end
+
 ---@param EntryPoint int32
 function UABP_Chest_C:ExecuteUbergraph_ABP_Chest(EntryPoint) end
-
-

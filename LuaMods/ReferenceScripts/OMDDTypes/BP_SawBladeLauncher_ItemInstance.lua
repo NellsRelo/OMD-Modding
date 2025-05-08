@@ -6,6 +6,3 @@
 ---@field ProjectileLifeSpan double
 ---@field ['Critical Hit Chance'] double
 ABP_SawBladeLauncher_ItemInstance_C = {}
-
-
-

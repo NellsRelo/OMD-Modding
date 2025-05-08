@@ -16,20 +16,29 @@ UW_ScoreSummary_C = {}
 
 ---@return UWidget
 function UW_ScoreSummary_C:GetScrollRecipient() end
+
 function UW_ScoreSummary_C:DrawStatCategories() end
+
 ---@return UWidget
 function UW_ScoreSummary_C:BP_GetDesiredFocusTarget() end
+
 function UW_ScoreSummary_C:Construct() end
+
 ---@param CurrentOffset float
-function UW_ScoreSummary_C:BndEvt__W_RSTOptionsMenu_OptionsBox_K2Node_ComponentBoundEvent_2_OnUserScrolledEvent__DelegateSignature(CurrentOffset) end
+function UW_ScoreSummary_C:BndEvt__W_RSTOptionsMenu_OptionsBox_K2Node_ComponentBoundEvent_2_OnUserScrolledEvent__DelegateSignature(
+    CurrentOffset) end
+
 function UW_ScoreSummary_C:RefreshScrollbar() end
+
 ---@param Value float
-function UW_ScoreSummary_C:BndEvt__W_ScoreSummary_ScrollSlider_K2Node_ComponentBoundEvent_1_OnFloatValueChangedEvent__DelegateSignature(Value) end
-UW_ScoreSummary_C['BndEvt__W_ScoreSummary_W_ExitMenuButton_K2Node_ComponentBoundEvent_0_On Button Clicked__DelegateSignature'] = function() end
+function UW_ScoreSummary_C:BndEvt__W_ScoreSummary_ScrollSlider_K2Node_ComponentBoundEvent_1_OnFloatValueChangedEvent__DelegateSignature(
+    Value) end
+
+UW_ScoreSummary_C['BndEvt__W_ScoreSummary_W_ExitMenuButton_K2Node_ComponentBoundEvent_0_On Button Clicked__DelegateSignature'] = function(
+    self,) end
 ---@param MyGeometry FGeometry
 ---@param InDeltaTime float
 function UW_ScoreSummary_C:Tick(MyGeometry, InDeltaTime) end
+
 ---@param EntryPoint int32
 function UW_ScoreSummary_C:ExecuteUbergraph_W_ScoreSummary(EntryPoint) end
-
-

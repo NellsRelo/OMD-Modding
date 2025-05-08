@@ -10,16 +10,23 @@
 ---@field ['Ping Id'] int32
 ---@field MaximumLifespan float
 ---@field RiftIdleAbilityTag FGameplayTag
+---@field ['Communication Option'] URSTCommunicationDefinition
+---@field AbilityToActivate TSubclassOf<UGameplayAbility>
+---@field TransitionGameplayCueTag FGameplayTag
+---@field CanBeKilledAfterSpawningStarts boolean
+---@field ShowMeshAfterSpawningStarts boolean
 ABP_UnstableRift_C = {}
 
 function ABP_UnstableRift_C:EnableRiftIdle() end
-function ABP_UnstableRift_C:StartSpawning() end
-ABP_UnstableRift_C['Remove Ping'] = function() end
+
+function ABP_UnstableRift_C:ReceiveBeginPlay() end
+
+ABP_UnstableRift_C['Remove Ping'] = function(self,) end
 ---@param EndPlayReason EEndPlayReason::Type
 function ABP_UnstableRift_C:ReceiveEndPlay(EndPlayReason) end
-ABP_UnstableRift_C['Add Ping'] = function() end
-function ABP_UnstableRift_C:ReceiveBeginPlay() end
+
+ABP_UnstableRift_C['Add Ping'] = function(self,) end
+function ABP_UnstableRift_C:StartSpawning() end
+
 ---@param EntryPoint int32
 function ABP_UnstableRift_C:ExecuteUbergraph_BP_UnstableRift(EntryPoint) end
-
-

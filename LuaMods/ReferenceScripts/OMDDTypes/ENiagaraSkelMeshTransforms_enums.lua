@@ -7,4 +7,3 @@ ENiagaraSkelMeshTransforms = {
     NewEnumerator4 = 4,
     ENiagaraSkelMeshTransforms_MAX = 5,
 }
-

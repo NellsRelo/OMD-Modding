@@ -5,4 +5,3 @@ UDS_ControlPointMode = {
     NewEnumerator2 = 2,
     UDS_MAX = 3,
 }
-

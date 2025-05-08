@@ -8,6 +8,3 @@
 ---@field Column_Octo_2x2_StoneWall_SM UStaticMeshComponent
 ---@field Column_OctoTaper_2x2_StoneWall_SM UStaticMeshComponent
 ACastle_2x2_Tower_FB_Tall_noTG_C = {}
-
-
-

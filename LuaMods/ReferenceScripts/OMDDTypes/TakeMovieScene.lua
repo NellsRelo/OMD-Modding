@@ -25,6 +25,3 @@ UMovieSceneTakeSettings = {}
 ---@class UMovieSceneTakeTrack : UMovieSceneNameableTrack
 ---@field Sections TArray<UMovieSceneSection>
 UMovieSceneTakeTrack = {}
-
-
-

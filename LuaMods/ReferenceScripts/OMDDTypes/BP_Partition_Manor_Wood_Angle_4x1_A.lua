@@ -6,6 +6,3 @@
 ---@field Wall0021 URSTTrapGridBoxComponent
 ---@field Wall001 URSTTrapGridBoxComponent
 ABP_Partition_Manor_Wood_Angle_4x1_A_C = {}
-
-
-

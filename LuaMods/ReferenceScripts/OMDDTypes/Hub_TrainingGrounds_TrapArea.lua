@@ -78,6 +78,3 @@
 ---@field Warehouse_4x4_Wall_WoodWork_SM2 UStaticMeshComponent
 ---@field Warehouse_4x4_Wall_WoodWork_SM UStaticMeshComponent
 AHub_TrainingGrounds_TrapArea_C = {}
-
-
-

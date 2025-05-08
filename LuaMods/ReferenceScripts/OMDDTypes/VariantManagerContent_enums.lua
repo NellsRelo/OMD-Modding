@@ -11,4 +11,3 @@ EPropertyValueCategory = {
     Option = 128,
     EPropertyValueCategory_MAX = 129,
 }
-

@@ -4,4 +4,3 @@ ENiagaraAerodynamicDragPivotMode = {
     NewEnumerator1 = 1,
     ENiagaraAerodynamicDragPivotMode_MAX = 2,
 }
-

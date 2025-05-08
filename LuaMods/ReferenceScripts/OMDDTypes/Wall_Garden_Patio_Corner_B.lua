@@ -8,6 +8,3 @@
 ---@field Geometry USceneComponent
 ---@field TrapGrid USceneComponent
 AWall_Garden_Patio_Corner_B_C = {}
-
-
-

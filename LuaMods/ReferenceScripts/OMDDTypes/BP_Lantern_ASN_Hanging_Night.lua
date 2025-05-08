@@ -6,6 +6,3 @@
 ---@field SM_signboard_Metal_Long UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Lantern_ASN_Hanging_Night_C = {}
-
-
-

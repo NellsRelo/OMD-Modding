@@ -10,6 +10,3 @@
 ---@field Proto_Dome_Large UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Dome_Large_NoCap_C = {}
-
-
-

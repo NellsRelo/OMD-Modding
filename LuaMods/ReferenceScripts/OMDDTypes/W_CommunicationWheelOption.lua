@@ -8,7 +8,6 @@
 UW_CommunicationWheelOption_C = {}
 
 function UW_CommunicationWheelOption_C:Construct() end
+
 ---@param EntryPoint int32
 function UW_CommunicationWheelOption_C:ExecuteUbergraph_W_CommunicationWheelOption(EntryPoint) end
-
-

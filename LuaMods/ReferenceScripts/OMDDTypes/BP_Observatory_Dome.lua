@@ -11,6 +11,3 @@
 ---@field Observatory_Dome_Base_A_Optimized_SM UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_Observatory_Dome_C = {}
-
-
-

@@ -10,8 +10,6 @@ UW_AbilityDetail_C = {}
 
 ---@param AbilityUIData URSTAbilityUIData
 ---@param InputAction UInputAction
-UW_AbilityDetail_C['Init Display'] = function(AbilityUIData, InputAction) end
+UW_AbilityDetail_C['Init Display'] = function(self, AbilityUIData, InputAction) end
 ---@param EntryPoint int32
 function UW_AbilityDetail_C:ExecuteUbergraph_W_AbilityDetail(EntryPoint) end
-
-

@@ -60,4 +60,3 @@ EResonanceRenderMode = {
     RoomEffectsOnly = 4,
     EResonanceRenderMode_MAX = 5,
 }
-

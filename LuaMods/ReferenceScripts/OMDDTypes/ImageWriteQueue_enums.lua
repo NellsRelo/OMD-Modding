@@ -6,4 +6,3 @@ EDesiredImageFormat = {
     EXR = 3,
     EDesiredImageFormat_MAX = 4,
 }
-

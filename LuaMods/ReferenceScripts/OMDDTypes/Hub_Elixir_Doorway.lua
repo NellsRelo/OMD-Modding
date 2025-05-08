@@ -117,6 +117,3 @@
 ---@field Geometry USceneComponent
 ---@field TrapGrid USceneComponent
 AHub_Elixir_Doorway_C = {}
-
-
-

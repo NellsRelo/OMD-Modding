@@ -7,6 +7,3 @@
 ---@field trap_wall URSTTrapGridBoxComponent
 ---@field Observatory_Building_01 UStaticMeshComponent
 ABP_Observatory_Building_A_C = {}
-
-
-

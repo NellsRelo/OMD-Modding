@@ -6,4 +6,3 @@ EAFSActiveType = {
     Combined = 3,
     EAFSActiveType_MAX = 4,
 }
-

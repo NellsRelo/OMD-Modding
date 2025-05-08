@@ -6,6 +6,3 @@
 ---@field CombatCapsuleCharge URSTCombatCapsuleComponent
 ---@field CombatCapsule URSTCombatCapsuleComponent
 ABP_Ogre_Heavy_C = {}
-
-
-

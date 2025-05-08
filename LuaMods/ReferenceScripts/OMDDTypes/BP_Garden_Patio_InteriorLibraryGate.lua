@@ -5,6 +5,3 @@
 ---@field Gate_Gazebo_C_SM1 UStaticMeshComponent
 ---@field Gate_Gazebo_C_SM UStaticMeshComponent
 ABP_Garden_Patio_InteriorLibraryGate_C = {}
-
-
-

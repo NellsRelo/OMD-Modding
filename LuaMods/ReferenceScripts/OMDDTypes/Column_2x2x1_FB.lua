@@ -11,6 +11,3 @@
 ---@field Wall_Middle_02 URSTTrapGridBoxComponent
 ---@field Wall_Middle_01 URSTTrapGridBoxComponent
 AColumn_2x2x1_FB_C = {}
-
-
-

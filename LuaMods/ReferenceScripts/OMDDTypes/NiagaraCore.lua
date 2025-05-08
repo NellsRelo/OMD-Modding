@@ -19,5 +19,3 @@ UNiagaraDataInterfaceBase = {}
 
 ---@class UNiagaraMergeable : UObject
 UNiagaraMergeable = {}
-
-

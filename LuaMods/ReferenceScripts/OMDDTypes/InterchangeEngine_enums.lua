@@ -5,4 +5,3 @@ EInterchangePipelineConfigurationDialogResult = {
     ImportAll = 2,
     EInterchangePipelineConfigurationDialogResult_MAX = 3,
 }
-

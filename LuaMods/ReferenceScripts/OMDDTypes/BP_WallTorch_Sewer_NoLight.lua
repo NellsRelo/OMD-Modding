@@ -1,10 +1,8 @@
 ---@meta
 
 ---@class ABP_WallTorch_Sewer_NoLight_C : AActor
----@field Lighting_Torch_Cage UStaticMeshComponent
+---@field Lighting_Torch_Wall_Wood UStaticMeshComponent
 ---@field Box UBoxComponent
----@field Lighting_Torch_WoodHandle UStaticMeshComponent
----@field Lighting_WallCrystal_Holder_SM UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ---@field StaticLightColorDefault FLinearColor
 ---@field MoveableLightColorDefault FLinearColor
@@ -16,6 +14,3 @@
 ---@field WallBaseVisible boolean
 ---@field WallBaseNotVisible boolean
 ABP_WallTorch_Sewer_NoLight_C = {}
-
-
-

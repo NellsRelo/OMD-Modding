@@ -67,11 +67,17 @@ FAnimBlueprintGeneratedMutableData = {}
 ---@field AnimGraphNode_SequencePlayer FAnimNode_SequencePlayer
 ---@field AnimGraphNode_StateResult FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine FAnimNode_StateMachine
+---@field ['Reset Sequence'] UAnimSequenceBase
+---@field IsResetting boolean
 UABP_IceLance_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_IceLance_C:AnimGraph(AnimGraph) end
+
+function UABP_IceLance_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_IceLance_AnimGraphNode_TransitionResult_44E19E1646C5399556EBDA92FC6D2696() end
+
+---@param DeltaTimeX float
+function UABP_IceLance_C:BlueprintUpdateAnimation(DeltaTimeX) end
+
 ---@param EntryPoint int32
 function UABP_IceLance_C:ExecuteUbergraph_ABP_IceLance(EntryPoint) end
-
-

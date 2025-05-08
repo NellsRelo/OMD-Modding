@@ -8,6 +8,3 @@ UNetConnectionEOS = {}
 ---@field bIsPassthrough boolean
 ---@field bIsUsingP2PSockets boolean
 UNetDriverEOSBase = {}
-
-
-

@@ -86,6 +86,3 @@
 ---@field P_Oven_Embers2_ParticleSystemComponent0 UParticleSystemComponent
 ---@field FX USceneComponent
 ABP_Kitchen_Dining_Oven_C = {}
-
-
-

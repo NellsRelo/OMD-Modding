@@ -9,7 +9,6 @@
 UUDS_Occlusion_Portal_C = {}
 
 function UUDS_Occlusion_Portal_C:ReceiveBeginPlay() end
+
 ---@param EntryPoint int32
 function UUDS_Occlusion_Portal_C:ExecuteUbergraph_UDS_Occlusion_Portal(EntryPoint) end
-
-

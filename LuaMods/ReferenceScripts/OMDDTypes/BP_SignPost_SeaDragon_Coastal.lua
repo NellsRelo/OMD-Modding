@@ -7,6 +7,3 @@
 ---@field SignPost_Coastal_A_SM UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ABP_SignPost_SeaDragon_Coastal_C = {}
-
-
-

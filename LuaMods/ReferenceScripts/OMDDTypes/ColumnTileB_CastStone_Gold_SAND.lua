@@ -7,6 +7,3 @@
 ---@field ColumnTileB_CastStone_Mid UStaticMeshComponent
 ---@field ColumnTileB_CastStone_Base UStaticMeshComponent
 AColumnTileB_CastStone_Gold_SAND_C = {}
-
-
-

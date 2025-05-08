@@ -16,6 +16,3 @@
 ---@field Foliage USceneComponent
 ---@field Geo USceneComponent
 ABP_Vista_Castle_CoveredWalk_C = {}
-
-
-

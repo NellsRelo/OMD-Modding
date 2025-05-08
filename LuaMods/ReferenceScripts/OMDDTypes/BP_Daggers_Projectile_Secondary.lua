@@ -10,5 +10,3 @@ ABP_Daggers_Projectile_Secondary_C = {}
 
 ---@return UNiagaraSystem
 function ABP_Daggers_Projectile_Secondary_C:GetTrailSystemInternal() end
-
-

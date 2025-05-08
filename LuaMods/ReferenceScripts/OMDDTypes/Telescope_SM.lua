@@ -6,6 +6,3 @@
 ---@field Telescope_Head UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 ATelescope_SM_C = {}
-
-
-

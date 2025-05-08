@@ -9,5 +9,3 @@ UABP_Gnoll_Sniper_C = {}
 
 ---@param WorldLocation FVector
 function UABP_Gnoll_Sniper_C:SetAimTarget(WorldLocation) end
-
-

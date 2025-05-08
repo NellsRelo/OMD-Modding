@@ -4,6 +4,3 @@
 ---@field CurveSourceBindingName FName
 ---@field CurveSyncOffset float
 UAudioCurveSourceComponent = {}
-
-
-

@@ -17,5 +17,3 @@ UImageWriteBlueprintLibrary = {}
 ---@param Filename FString
 ---@param Options FImageWriteOptions
 function UImageWriteBlueprintLibrary:ExportToDisk(Texture, Filename, Options) end
-
-

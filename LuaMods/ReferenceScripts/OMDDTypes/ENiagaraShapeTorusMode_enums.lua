@@ -4,4 +4,3 @@ ENiagaraShapeTorusMode = {
     NewEnumerator1 = 1,
     ENiagaraShapeTorusMode_MAX = 2,
 }
-

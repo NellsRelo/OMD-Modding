@@ -10,6 +10,4 @@ FAnimBlueprintGeneratedConstantData = {}
 UABP_Hero_Max_C = {}
 
 ---@param AimOffset UBlendSpace
-UABP_Hero_Max_C['Get Aim Offset Asset'] = function(AimOffset) end
-
-
+UABP_Hero_Max_C['Get Aim Offset Asset'] = function(self, AimOffset) end

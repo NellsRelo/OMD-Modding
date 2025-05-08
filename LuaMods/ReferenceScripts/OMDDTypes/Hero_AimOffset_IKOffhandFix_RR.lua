@@ -44,7 +44,7 @@ URigVMMemory_Literal = {}
 ---@field RigVMModel___TwoBoneIKSimplePerItem_CachedEffectorItemIndex TArray<FCachedRigElement>
 ---@field RigVMModel___TwoBoneIKSimplePerItem_CachedPoleVectorSpaceIndex TArray<FCachedRigElement>
 ---@field RigVMModel___RigVMFunction_MathQuaternionSwingTwist_Twist FQuat
----@field RigVMModel___Make_Relative_1_Local FQuat
+---@field RigVMModel___Make_Relative_1_FQuat
 ---@field RigVMModel___RigUnit_GetTransform_3_1_1_Transform FTransform
 ---@field RigVMModel___RigUnit_GetTransform_3_1_1_CachedIndex TArray<FCachedRigElement>
 ---@field RigVMModel___Make_Relative_1_Parent FQuat
@@ -58,6 +58,3 @@ URigVMMemory_Literal = {}
 ---@field RigVMModel___Make_Absolute_Parent__IO FTransform
 ---@field RigVMModel___RigUnit_SetTransform_1_CachedIndex TArray<FCachedRigElement>
 URigVMMemory_Work = {}
-
-
-

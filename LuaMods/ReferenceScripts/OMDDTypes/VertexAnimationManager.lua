@@ -148,7 +148,6 @@ IVANotifyInterface = {}
 ---@return boolean
 function IVANotifyInterface:Received_VertexAnimationNotify(MeshComp) end
 
-
 ---@class IVANotifyStateInterface : IInterface
 IVANotifyStateInterface = {}
 
@@ -156,14 +155,15 @@ IVANotifyStateInterface = {}
 ---@param FrameDeltaTime float
 ---@return boolean
 function IVANotifyStateInterface:Received_VertexAnimationNotifyTick(MeshComp, FrameDeltaTime) end
+
 ---@param MeshComp USceneComponent
 ---@return boolean
 function IVANotifyStateInterface:Received_VertexAnimationNotifyEnd(MeshComp) end
+
 ---@param MeshComp USceneComponent
 ---@param TotalDuration float
 ---@return boolean
 function IVANotifyStateInterface:Received_VertexAnimationNotifyBegin(MeshComp, TotalDuration) end
-
 
 ---@class UVAHISMController : UVAISMControllerAbstract
 ---@field InstancedComponent UHierarchicalInstancedStaticMeshComponent
@@ -171,7 +171,6 @@ UVAHISMController = {}
 
 ---@return UHierarchicalInstancedStaticMeshComponent
 function UVAHISMController:GetHierarchicalInstancedComponent() end
-
 
 ---@class UVAISMController : UVAISMControllerAbstract
 ---@field InstancedComponent UInstancedStaticMeshComponent
@@ -193,35 +192,45 @@ UVAISMControllerAbstract = {}
 
 ---@param InTransform FTransform
 function UVAISMControllerAbstract:UpdateInstanceTransformDeferred(InTransform) end
+
 ---@param InTransform FTransform
 ---@param bMarkRenderStateDirty boolean
 function UVAISMControllerAbstract:UpdateInstanceTransform(InTransform, bMarkRenderStateDirty) end
+
 ---@param Variation FName
 function UVAISMControllerAbstract:SetVariationByName(Variation) end
+
 ---@param Component UVARuntimeComponent
 function UVAISMControllerAbstract:SetRuntimeComponent(Component) end
+
 ---@param InComponent UInstancedStaticMeshComponent
 function UVAISMControllerAbstract:SetInstancedComponent(InComponent) end
+
 ---@param CustomDataIndex int32
 ---@param CustomDataValue float
 ---@param bMarkRenderStateDirty boolean
 ---@return boolean
 function UVAISMControllerAbstract:SetCustomDataValue(CustomDataIndex, CustomDataValue, bMarkRenderStateDirty) end
+
 ---@param InCustomData TArray<float>
 ---@param bMarkRenderStateDirty boolean
 ---@return boolean
 function UVAISMControllerAbstract:SetCustomData(InCustomData, bMarkRenderStateDirty) end
+
 ---@return UInstancedStaticMeshComponent
 function UVAISMControllerAbstract:NewInstancedComponent() end
+
 ---@return TArray<FName>
 function UVAISMControllerAbstract:GetVariationNames() end
+
 ---@return TArray<FName>
 function UVAISMControllerAbstract:GetRuntimeComponentNames() end
+
 ---@return UVARuntimeComponent
 function UVAISMControllerAbstract:GetRuntimeComponent() end
+
 ---@return UInstancedStaticMeshComponent
 function UVAISMControllerAbstract:GetInstancedComponent() end
-
 
 ---@class UVAInstancedManager : UObject
 ---@field Component UInstancedStaticMeshComponent
@@ -236,7 +245,6 @@ UVANotifyHandler = {}
 
 ---@return USceneComponent
 function UVANotifyHandler:GetOwningComponent() end
-
 
 ---@class UVANotifyState_TimedNiagaraEffect : UAnimNotifyState_TimedNiagaraEffect
 ---@field PoolMethod ENCPoolMethod
@@ -253,25 +261,32 @@ UVARuntimeBPLibrary = {}
 
 ---@param InComponent USkeletalMeshComponent
 function UVARuntimeBPLibrary:UpdateAnimationBlueprint(InComponent) end
+
 ---@param InComponent USceneComponent
 ---@param InTransform FTransform
 function UVARuntimeBPLibrary:SetWorldTransform(InComponent, InTransform) end
+
 ---@param SkeletalMeshComponent USkeletalMeshComponent
 function UVARuntimeBPLibrary:RagDollStart(SkeletalMeshComponent) end
+
 ---@param SkeletalMeshComponent USkeletalMeshComponent
 ---@param InSceneComponent USceneComponent
 function UVARuntimeBPLibrary:RagdollReset(SkeletalMeshComponent, InSceneComponent) end
+
 ---@return FString
 function UVARuntimeBPLibrary:GetPrimaryGPUBrand() end
+
 ---@return float
 function UVARuntimeBPLibrary:GetDeltaTime() end
+
 ---@return FString
 function UVARuntimeBPLibrary:GetCPUBrand() end
+
 ---@return float
 function UVARuntimeBPLibrary:GetAverageMS() end
+
 ---@return float
 function UVARuntimeBPLibrary:GetAverageFPS() end
-
 
 ---@class UVARuntimeComponent : UActorComponent
 ---@field OnRootMotion FVARuntimeComponentOnRootMotion
@@ -304,62 +319,91 @@ function UVARuntimeBPLibrary:GetAverageFPS() end
 UVARuntimeComponent = {}
 
 function UVARuntimeComponent:UpdateAnimationBlueprint() end
+
 function UVARuntimeComponent:Stop() end
+
 ---@param TimePlayed float
 function UVARuntimeComponent:SetTimePlayed(TimePlayed) end
+
 function UVARuntimeComponent:SetSkeletalMeshOn() end
+
 function UVARuntimeComponent:SetSkeletalMeshOff() end
+
 function UVARuntimeComponent:SetRagdollOn() end
+
 function UVARuntimeComponent:SetRagdollOff() end
+
 ---@param SyncMarkerName FName
 ---@return boolean
 function UVARuntimeComponent:SetPositionToSyncMarker(SyncMarkerName) end
+
 ---@param Position float
 function UVARuntimeComponent:SetPosition(Position) end
+
 ---@param Rate float
 function UVARuntimeComponent:SetPlayRate(Rate) end
+
 ---@param InAnimationIndex int32
 ---@return boolean
 function UVARuntimeComponent:SetAnimationIndex(InAnimationIndex) end
+
 ---@param InAnimationName FName
 ---@return boolean
 function UVARuntimeComponent:SetAnimationByName(InAnimationName) end
+
 function UVARuntimeComponent:ResumeWorld() end
+
 function UVARuntimeComponent:Resume() end
+
 function UVARuntimeComponent:Reset() end
+
 ---@param InAnimationName FName
 ---@return boolean
 function UVARuntimeComponent:PlayAnimationByName(InAnimationName) end
+
 ---@param InAnimationIndex int32
 ---@return boolean
 function UVARuntimeComponent:PlayAnimation(InAnimationIndex) end
+
 function UVARuntimeComponent:Play() end
+
 function UVARuntimeComponent:PauseWorld() end
+
 function UVARuntimeComponent:Pause() end
+
 ---@return boolean
 function UVARuntimeComponent:IsPlaying() end
+
 ---@return boolean
 function UVARuntimeComponent:IsPaused() end
+
 ---@return TArray<FName>
 function UVARuntimeComponent:GetVariationNames() end
+
 ---@return float
 function UVARuntimeComponent:GetTimePlayed() end
+
 ---@return USceneComponent
 function UVARuntimeComponent:GetRootComponent() end
+
 ---@return float
 function UVARuntimeComponent:GetPosition() end
+
 ---@return float
 function UVARuntimeComponent:GetPlayRate() end
+
 ---@return USceneComponent
 function UVARuntimeComponent:GetOuterSceneComponent() end
+
 ---@return UAnimInstance
 function UVARuntimeComponent:GetAnimInstance() end
+
 ---@return TArray<FName>
 function UVARuntimeComponent:GetAnimationNames() end
+
 ---@param InComponent UPoseableMeshComponent
 ---@param BoneSpace EBoneSpaces::Type
 function UVARuntimeComponent:CopyToPoseableMeshComponent(InComponent, BoneSpace) end
-
 
 ---@class UVASMComponent : UStaticMeshComponent
 ---@field RuntimeComponentName FName
@@ -369,15 +413,18 @@ UVASMComponent = {}
 
 ---@param Variation FName
 function UVASMComponent:SetVariationByName(Variation) end
+
 ---@param Component UVARuntimeComponent
 function UVASMComponent:SetRuntimeComponent(Component) end
+
 ---@return TArray<FName>
 function UVASMComponent:GetVariationNames() end
+
 ---@return TArray<FName>
 function UVASMComponent:GetRuntimeComponentNames() end
+
 ---@return UVARuntimeComponent
 function UVASMComponent:GetRuntimeComponent() end
-
 
 ---@class UVAVariations : UObject
 ---@field Variations TMap<FName, FVAVariationData>
@@ -391,10 +438,11 @@ UVAVariations = {}
 UVAWorldSubsystem = {}
 
 function UVAWorldSubsystem:Resume() end
+
 function UVAWorldSubsystem:Pause() end
+
 ---@param bForceUpdate boolean
 function UVAWorldSubsystem:BatchUpdateInstancesTransforms(bForceUpdate) end
-
 
 ---@class UVertexAnimationAssetUserData : UAssetUserData
 ---@field Profile UVertexAnimationProfile
@@ -450,6 +498,3 @@ UVertexAnimationAssetUserData = {}
 ---@field bWedgeIndicesUnique boolean
 ---@field Guid FGuid
 UVertexAnimationProfile = {}
-
-
-

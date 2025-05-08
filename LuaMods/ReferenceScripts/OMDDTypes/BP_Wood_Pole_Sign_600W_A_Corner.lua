@@ -15,6 +15,3 @@
 ---@field Wood_Plank_300W_A_Light UStaticMeshComponent
 ---@field Geometry USceneComponent
 ABP_Wood_Pole_Sign_600W_A_Corner_C = {}
-
-
-

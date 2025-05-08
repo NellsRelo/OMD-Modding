@@ -115,6 +115,3 @@
 ---@field Wall_2x05_Crenel_StoneWall_Trimmed_SM UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
 AHub_Elixir_Tower_Top_C = {}
-
-
-

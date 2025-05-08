@@ -46,6 +46,3 @@
 ---@field ['Domer_B_1x3_Blue-Wood-White_SM_Union'] UStaticMeshComponent
 ---@field Geometry USceneComponent
 ABP_CastlePlaza_Village_TowerSmall_C_C = {}
-
-
-

@@ -22,6 +22,10 @@ FAnimBlueprintGeneratedConstantData = {}
 
 
 
+---@class FAnimBlueprintGeneratedMutableData : FAnimBlueprintMutableData
+FAnimBlueprintGeneratedMutableData = {}
+
+
 ---@class UABP_OrcCannon_C : URSTAnimInstanceTrap_Ballista
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field AnimBlueprintExtension_PropertyAccess FAnimSubsystemInstance
@@ -45,7 +49,6 @@ UABP_OrcCannon_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_OrcCannon_C:AnimGraph(AnimGraph) end
+
 ---@param EntryPoint int32
 function UABP_OrcCannon_C:ExecuteUbergraph_ABP_OrcCannon(EntryPoint) end
-
-

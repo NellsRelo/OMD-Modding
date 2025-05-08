@@ -7,7 +7,6 @@
 UW_RSTSpellbook_SwitcherButton_C = {}
 
 function UW_RSTSpellbook_SwitcherButton_C:BP_SynchronizeProperties() end
+
 ---@param EntryPoint int32
 function UW_RSTSpellbook_SwitcherButton_C:ExecuteUbergraph_W_RSTSpellbook_SwitcherButton(EntryPoint) end
-
-

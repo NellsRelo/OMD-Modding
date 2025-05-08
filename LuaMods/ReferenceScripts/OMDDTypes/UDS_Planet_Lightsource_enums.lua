@@ -5,4 +5,3 @@ UDS_Planet_Lightsource = {
     NewEnumerator2 = 2,
     UDS_Planet_MAX = 3,
 }
-

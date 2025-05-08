@@ -6,4 +6,3 @@ UDS_Season = {
     NewEnumerator3 = 3,
     UDS_MAX = 4,
 }
-

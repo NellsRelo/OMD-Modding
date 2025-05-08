@@ -7,6 +7,3 @@
 ---@field Wall002 URSTTrapGridBoxComponent
 ---@field Wall001 URSTTrapGridBoxComponent
 AColumnBlock_1_2_RB_C = {}
-
-
-

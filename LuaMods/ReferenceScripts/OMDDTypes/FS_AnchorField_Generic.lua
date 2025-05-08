@@ -38,13 +38,15 @@
 AFS_AnchorField_Generic_C = {}
 
 function AFS_AnchorField_Generic_C:AnchorDebugSetup() end
+
 ---@param UniformInt UUniformInteger
 ---@param CullingField UCullingField
-AFS_AnchorField_Generic_C['Falloff Field Switch'] = function(UniformInt, CullingField) end
+AFS_AnchorField_Generic_C['Falloff Field Switch'] = function(self, UniformInt, CullingField) end
 function AFS_AnchorField_Generic_C:SetFalloffVisibility() end
+
 function AFS_AnchorField_Generic_C:UserConstructionScript() end
+
 function AFS_AnchorField_Generic_C:ReceiveBeginPlay() end
+
 ---@param EntryPoint int32
 function AFS_AnchorField_Generic_C:ExecuteUbergraph_FS_AnchorField_Generic(EntryPoint) end
-
-

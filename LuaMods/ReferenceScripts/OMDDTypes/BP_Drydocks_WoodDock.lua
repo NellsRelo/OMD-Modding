@@ -25,6 +25,3 @@
 ---@field StaticMesh USceneComponent
 ---@field SharedRoot USceneComponent
 ABP_Drydocks_WoodDock_C = {}
-
-
-

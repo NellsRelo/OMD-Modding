@@ -6,4 +6,3 @@ UDS_VolRT_Mode = {
     NewEnumerator3 = 3,
     UDS_VolRT_MAX = 4,
 }
-

@@ -9,7 +9,5 @@
 ---@field ['Cancel Masks Above'] boolean
 AWeather_Mask_Brush_C = {}
 
-AWeather_Mask_Brush_C['📘 Weather Mask Tools'] = function() end
+AWeather_Mask_Brush_C['📘 Weather Mask Tools'] = function(self,) end
 function AWeather_Mask_Brush_C:UserConstructionScript() end
-
-
