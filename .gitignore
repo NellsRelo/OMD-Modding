@@ -5,6 +5,7 @@ PakMods/OMD3/*
 PakMods/OMDD/*
 LuaMods/Mods/shared/UEHelpers
 Output
+build
 *.exe
 *.bat
 *.ini
