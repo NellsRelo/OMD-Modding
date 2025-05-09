@@ -3,13 +3,14 @@ local Retrieve = {}
 
 function Retrieve.GetKismetGuidLibrary(ForceInvalidateCache)
   return Utils.CacheDefaultObject("/Script/Engine.Default__KismetGuidLibrary", "OMDLib_KismetGuidLibrary",
-  ForceInvalidateCache)
+    ForceInvalidateCache)
 end
 
 function Retrieve.GetDelegateProperty(ForceInvalidateCache)
   return Utils.CacheDefaultObject("/Script/CoreUObject.DelegateProperty", "OMDLib_DelegateProperty",
-  ForceInvalidateCache)
+    ForceInvalidateCache)
 end
+
 --- Return the Game User Settings
 --- @return UOMDGameUserSettings|UGameUserSettings|nil
 function Retrieve.GetGameUserSettings()
@@ -60,20 +61,27 @@ function Retrieve.GetPlayerCharacter()
     Utils.findInstanceOf("PlayerCharacter")
 end
 
+--- Return player state
+--- @return ARSTPlayerCharacter|APlayerCharacter
+function Retrieve.GetPlayerCharacter()
+  return Utils.findInstanceOf("RSTPlayerCharacter") or
+    Utils.findInstanceOf("PlayerCharacter")
+end
+
 --- Retrieves the global Asset Registry instance.
 -- This function uses the `AssetRegistryHelpers` to obtain a reference
 -- to the `AssetRegistry` object, ensuring it is valid before returning it.
--- 
+--
 -- @return assetRegistry The Asset Registry object if found and valid, otherwise `nil`.
 function Retrieve.GetAssetRegistry()
   local UAssetRegistryHelpers = StaticFindObject("/Script/AssetRegistry.Default__AssetRegistryHelpers")
   if not UAssetRegistryHelpers or not UAssetRegistryHelpers:IsValid() then
-      return nil
+    return nil
   end
 
   local assetRegistry = UAssetRegistryHelpers:GetAssetRegistry()
   if not assetRegistry or (type(assetRegistry) == "nil") or not assetRegistry:IsValid() then
-      return nil
+    return nil
   end
   return assetRegistry
 end
