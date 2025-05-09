@@ -86,54 +86,53 @@ end
 
 --- Checks if the game is currently in the HUB.
 -- @return boolean True if the game is in the HUB, false otherwise.
-local function Utils.IsInHub()
-    local gameState = Utils.findInstanceOf("RSTGameStateBase")
-    return gameState and gameState:IsValid() and gameState.bIsHUB
+function Utils.IsInHub()
+  local gameState = Utils.findInstanceOf("RSTGameStateBase")
+  return gameState and gameState:IsValid() and gameState.bIsHUB
 end
 
 --- Retrieves the current run seed.
--- The function first attempts to get the seed from `RSTSessionMissionSubsystem`, 
+-- The function first attempts to get the seed from `RSTSessionMissionSubsystem`,
 -- and if not available, it falls back to `RSTGameStateBase`.
 -- @return integer The current run seed, or -1 if unavailable.
-local function Utils.GetCurrentRunSeed()
-    local missionSubsystem = Utils.findInstanceOf("RSTSessionMissionSubsystem")
+function Utils.GetCurrentRunSeed()
+  local missionSubsystem = Utils.findInstanceOf("RSTSessionMissionSubsystem")
 
-    if missionSubsystem and missionSubsystem:IsValid() then
-        return missionSubsystem:GetCurrentSeed()
-    end
+  if missionSubsystem and missionSubsystem:IsValid() then
+    return missionSubsystem:GetCurrentSeed()
+  end
 
-    local gameState = Utils.findInstanceOf("RSTGameStateBase")
+  local gameState = Utils.findInstanceOf("RSTGameStateBase")
 
-    if gameState and gameState:IsValid() then
-        return gameState.SessionMissionSeed
-    end
+  if gameState and gameState:IsValid() then
+    return gameState.SessionMissionSeed
+  end
 
-    return -1
+  return -1
 end
 
 --- A constant table containing all available hero internal codes.
 --- These codes represent unique identifiers for each hero character.
 local ALL_HERO_CODES = {
-    "Character.Hero.Daggers",
-    "Character.Hero.Sniper",
-    "Character.Hero.Max",
-    "Character.Hero.Hammer",
-    "Character.Hero.Crossbow",
-    "Character.Hero.Wand",
-    "Character.Hero.Blunderbuss",
-    "Character.Hero.Gabby"
+  "Character.Hero.Daggers",
+  "Character.Hero.Sniper",
+  "Character.Hero.Max",
+  "Character.Hero.Hammer",
+  "Character.Hero.Crossbow",
+  "Character.Hero.Wand",
+  "Character.Hero.Blunderbuss",
+  "Character.Hero.Gabby"
 }
 
 --- Returns a list of all hero internal codes.
 -- @return table A copy of the list of hero internal codes.
-local function Utils.GetAllHeroCodes()
-    -- Return a shallow copy to prevent external modifications to the constant
-    local copy = {}
-    for i, code in ipairs(ALL_HERO_CODES) do
-        copy[i] = code
-    end
-    return copy
+function Utils.GetAllHeroCodes()
+  -- Return a shallow copy to prevent external modifications to the constant
+  local copy = {}
+  for i, code in ipairs(ALL_HERO_CODES) do
+    copy[i] = code
+  end
+  return copy
 end
-
 
 return Utils
